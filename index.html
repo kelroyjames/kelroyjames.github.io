@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kelroy James — supply chain assurance, governance, risk and compliance. Seventeen years in Defence logistics, working on the seam between physical supply chains and the functions that assure them.">
+<meta property="og:title" content="Kelroy James">
+<meta property="og:description" content="Supply chain assurance, governance, risk and compliance. A record is not the reality it describes.">
+<meta property="og:type" content="website">
+<title>Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EDEEF0;
+    --surface:#FFFFFF;
+    --surface-2:#F4F5F7;
+    --ink:#131C28;
+    --ink-2:#3A4753;
+    --muted:#6B7885;
+    --rule:#D4D8DD;
+    --rule-soft:#E4E7EA;
+    --brass:#8A6A2F;
+    --brass-soft:#F2ECDF;
+    --navy:#24405C;
+    --navy-soft:#E4EAF1;
+    --shadow:0 1px 2px rgba(19,28,40,.06), 0 10px 30px rgba(19,28,40,.06);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0B1119;
+      --surface:#131B24;
+      --surface-2:#18212B;
+      --ink:#E2E7EC;
+      --ink-2:#B4C0CB;
+      --muted:#828F9B;
+      --rule:#27333F;
+      --rule-soft:#1F2A34;
+      --brass:#C9A257;
+      --brass-soft:#2A2317;
+      --navy:#83A6C7;
+      --navy-soft:#182533;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0B1119;--surface:#131B24;--surface-2:#18212B;--ink:#E2E7EC;--ink-2:#B4C0CB;
+    --muted:#828F9B;--rule:#27333F;--rule-soft:#1F2A34;--brass:#C9A257;--brass-soft:#2A2317;
+    --navy:#83A6C7;--navy-soft:#182533;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+  /* ============ nav ============ */
+  .nav{border-bottom:1px solid var(--rule);background:var(--surface);position:sticky;top:0;z-index:20}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:15px;padding-bottom:15px}
+  .mark{font-family:Spectral,Georgia,serif;font-weight:700;font-size:1.06rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+  .mark span{color:var(--brass)}
+  .nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+  .nav a.lnk{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--muted);text-decoration:none;
+  }
+  .nav a.lnk:hover{color:var(--brass)}
+
+  /* ============ hero ============ */
+  .hero{background:var(--surface);border-bottom:1px solid var(--rule)}
+  .hero .wrap{padding:76px 26px 62px;display:grid;grid-template-columns:1fr;gap:40px}
+  @media(min-width:920px){.hero .wrap{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:64px;padding-top:92px;padding-bottom:78px}}
+  .kicker{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--brass);margin:0 0 22px;
+  }
+  h1{
+    font-family:Spectral,Georgia,serif;font-weight:700;
+    font-size:clamp(2.3rem,5.2vw,3.7rem);line-height:1.05;letter-spacing:-.02em;
+    margin:0 0 24px;text-wrap:balance;
+  }
+  .hero .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.08rem,2vw,1.32rem);line-height:1.5;color:var(--ink-2);margin:0 0 20px;max-width:56ch}
+  .hero p.sub{margin:0;max-width:58ch;color:var(--ink-2);font-size:15.5px}
+  .facts{align-self:start;border-top:2px solid var(--brass);padding-top:20px;display:flex;flex-direction:column;gap:16px}
+  .fact{display:flex;flex-direction:column;gap:2px}
+  .fact dt{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .fact dd{margin:0;font-size:14.5px;color:var(--ink)}
+
+  /* ============ generic section ============ */
+  section{padding:66px 0}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin:0 0 30px;padding-bottom:13px;border-bottom:1px solid var(--rule)}
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.72rem;font-weight:700;margin:0;letter-spacing:-.012em}
+  .sec-head .note{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:auto;white-space:nowrap}
+  .intro-p{max-width:66ch;color:var(--ink-2);margin:0 0 32px;font-size:16.5px}
+
+  /* ============ work ============ */
+  .work{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:840px){.work{grid-template-columns:repeat(2,1fr)}}
+  .card{
+    background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);
+    display:flex;flex-direction:column;text-decoration:none;color:inherit;
+  }
+  .card .top-band{height:3px;background:var(--brass)}
+  .card.alt .top-band{background:var(--navy)}
+  .card .inner{padding:26px 26px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .card .type{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .card h3{font-family:Spectral,Georgia,serif;font-size:1.33rem;font-weight:600;margin:0;line-height:1.25}
+  .card p{margin:0;font-size:14.8px;color:var(--ink-2);line-height:1.58}
+  .card .go{
+    margin-top:auto;padding-top:16px;font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--brass);
+  }
+  .card.alt .go{color:var(--navy)}
+  @media(prefers-reduced-motion:no-preference){
+    .card{transition:transform .18s ease, border-color .18s ease}
+    .card:hover{transform:translateY(-2px);border-color:var(--brass)}
+  }
+
+  /* ============ writing ============ */
+  .writing{display:flex;flex-direction:column}
+  .piece{
+    display:grid;grid-template-columns:1fr;gap:6px;
+    padding:22px 0;border-bottom:1px solid var(--rule-soft);
+  }
+  @media(min-width:800px){
+    .piece{grid-template-columns:132px minmax(0,1fr) 118px;gap:26px;align-items:baseline}
+  }
+  .piece .status{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .piece .status.live{color:var(--brass)}
+  .piece h3{font-family:Spectral,Georgia,serif;font-size:1.14rem;font-weight:600;margin:0 0 5px;line-height:1.32}
+  .piece p{margin:0;font-size:14.5px;color:var(--ink-2);max-width:66ch}
+  .piece .series{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--muted);
+  }
+
+  /* ============ thesis band ============ */
+  .band{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .band .wrap{padding:60px 26px}
+  .thesis{
+    font-family:Spectral,Georgia,serif;font-size:clamp(1.4rem,3vw,2rem);
+    line-height:1.35;font-weight:600;margin:0 0 22px;max-width:24ch;text-wrap:balance;
+  }
+  .band-cols{display:grid;grid-template-columns:1fr;gap:26px;margin-top:34px}
+  @media(min-width:800px){.band-cols{grid-template-columns:repeat(3,1fr);gap:38px}}
+  .band-cols h4{font-family:Spectral,Georgia,serif;font-size:1.04rem;margin:0 0 7px;font-weight:600}
+  .band-cols p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+  .band > .wrap > p.lead{max-width:60ch;color:var(--ink-2);margin:0;font-size:16px}
+
+  /* ============ background ============ */
+  .bg-grid{display:grid;grid-template-columns:1fr;gap:34px}
+  @media(min-width:840px){.bg-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px}}
+  .bg-block h3{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.15em;
+    text-transform:uppercase;color:var(--muted);margin:0 0 16px;
+    padding-bottom:9px;border-bottom:1px solid var(--rule);
+  }
+  .bg-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+  .bg-list li{display:flex;flex-direction:column;gap:2px}
+  .bg-list .t{font-size:15px;color:var(--ink);font-weight:500}
+  .bg-list .d{font-size:13.5px;color:var(--muted)}
+  .bg-list .d em{font-style:normal;color:var(--brass)}
+  .prose p{max-width:64ch;color:var(--ink-2);margin:0 0 15px;font-size:15.5px}
+  .prose p:last-child{margin-bottom:0}
+
+  /* ============ contact ============ */
+  .contact{background:var(--surface-2);border-top:1px solid var(--rule)}
+  .contact .wrap{padding:60px 26px}
+  .contact h2{font-family:Spectral,Georgia,serif;font-size:1.72rem;margin:0 0 14px;font-weight:700}
+  .contact p{max-width:58ch;color:var(--ink-2);margin:0 0 24px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{
+    display:inline-block;padding:11px 22px;text-decoration:none;
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    border:1px solid var(--ink);color:var(--ink);background:transparent;
+  }
+  .btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+  @media(prefers-reduced-motion:no-preference){.btn{transition:background .16s ease,color .16s ease}}
+  .btn:hover{background:var(--brass);border-color:var(--brass);color:#fff}
+
+  footer{padding:34px 0 56px}
+  footer p{font-size:12.5px;color:var(--muted);max-width:74ch;margin:0 0 10px;line-height:1.6}
+</style>
+</head>
+<body>
+<style>*{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<nav class="nav">
+  <div class="wrap">
+    <a class="mark" href="#top">Kelroy James<span>.</span></a>
+    <ul>
+      <li><a class="lnk" href="#work">Work</a></li>
+      <li><a class="lnk" href="#writing">Writing</a></li>
+      <li><a class="lnk" href="#background">Background</a></li>
+      <li><a class="lnk" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Supply chain assurance · Governance, risk and compliance</p>
+      <h1>A record is not the reality it describes.</h1>
+      <p class="lede">I have spent seventeen years operating controls in Defence logistics. Nobody ever called them controls.</p>
+      <p class="sub">I work on the seam between physical supply chains and the governance functions that are supposed to assure them: asset accountability, supplier due diligence, trade compliance and the growing problem of AI-enabled decisions nobody can trace. I write about where that seam fails, and I build the tools I wish I had been handed.</p>
+    </div>
+    <dl class="facts">
+      <div class="fact"><dt>Current</dt><dd>Petty Officer (Supply Chain), Royal Navy</dd></div>
+      <div class="fact"><dt>Focus</dt><dd>Assurance, third-party risk, AI governance</dd></div>
+      <div class="fact"><dt>Reading for</dt><dd>MSc Supply Chain and Logistics Management</dd></div>
+      <div class="fact"><dt>Available</dt><dd>From 2028, on resettlement</dd></div>
+    </dl>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head"><h2>Work</h2><span class="note">Open method, not case files</span></div>
+    <p class="intro-p">Reference material I have built and put in the open. Both are generalised from my own academic and professional work, and neither contains client, supplier or organisational detail.</p>
+    <div class="work">
+
+      <a class="card" href="/osint-supplier-verification.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Framework · Third-party risk</span>
+          <h3>OSINT Supplier Verification</h3>
+          <p>A seven-stage open-source verification sequence for the case where a supplier's paperwork is complete, its certifications are valid, and something has stopped adding up. Runs from corporate structure through to synthesis, with a confidence grading key and the legal constraints it operates under.</p>
+          <span class="go">Open the framework →</span>
+        </div>
+      </a>
+
+      <a class="card alt" href="/same-control-two-vocabularies.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Reference · Skills translation</span>
+          <h3>Same Control, Two Vocabularies</h3>
+          <p>Nine things military logisticians do every week, described in the language a civilian assurance function would use, mapped against ISO 27001, ISO 19011, COSO and the Three Lines Model. Built for service leavers who cannot name what they have already been doing.</p>
+          <span class="go">Open the table →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <p class="thesis">Accreditation is not assurance.</p>
+    <p class="lead">A certificate establishes evidence within a defined scope. It does not establish that the control worked, that the record matches the asset, or that the supplier can do the thing it has promised. Most of my work sits in the distance between those two positions.</p>
+    <div class="band-cols">
+      <div>
+        <h4>Physical custody</h4>
+        <p>Asset accountability, reconciliation, custody transfer and the discipline of testing the ledger rather than reproducing it.</p>
+      </div>
+      <div>
+        <h4>Third-party risk</h4>
+        <p>Intelligence-led supplier due diligence, sub-tier visibility and the limits of what a completed questionnaire can tell you.</p>
+      </div>
+      <div>
+        <h4>Regulated movement</h4>
+        <p>Trade compliance and export control, where the evidence is created by logistics people who do not think of themselves as running controls.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="writing">
+  <div class="wrap">
+    <div class="sec-head"><h2>Writing</h2><span class="note">In preparation</span></div>
+    <p class="intro-p">Three arguments, all of them versions of the same one. Links go live as each piece publishes.</p>
+    <div class="writing">
+
+      <article class="piece">
+        <span class="status">In preparation</span>
+        <div>
+          <h3>Recognition Before Retraining</h3>
+          <p>Just over half of UK veterans have taken a job below the level of their last military role, and one of the two most cited reasons is employers failing to recognise transferable skills. Defence has now built the instrument that could fix that, and is using it only for internal workforce planning.</p>
+        </div>
+        <span class="series">Skills · 1 of 2</span>
+      </article>
+
+      <article class="piece">
+        <span class="status">In preparation</span>
+        <div>
+          <h3>Talent Should Flow Both Ways</h3>
+          <p>The Defence Industrial Strategy commits to a Skills Passport. The MOD is already running a pilot that hires on industry experience rather than previous rank. The strategy does not mention the pilot, and the pilot does not mention the strategy.</p>
+        </div>
+        <span class="series">Skills · 2 of 2</span>
+      </article>
+
+      <article class="piece">
+        <span class="status">In preparation</span>
+        <div>
+          <h3>The Convergence of Cyber-GRC and Physical Logistics</h3>
+          <p>A regulator recently found that a defence prime's export control exposure ran through the gap between a supply chain team that did not hold the regulatory knowledge and a file transfer system that did not carry the warning. Each function could have reported itself compliant.</p>
+        </div>
+        <span class="series">Assurance</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="background">
+  <div class="wrap">
+    <div class="sec-head"><h2>Background</h2><span class="note">Evidence before credentials</span></div>
+    <div class="bg-grid">
+
+      <div class="prose">
+        <p>I started as a meter reader for the national electricity utility in St Vincent and spent twelve years there, finishing in planning and GIS. I led the GPS geo-tagging of the island's grid infrastructure, and that dataset went on to underpin an enterprise mapping system that won an Esri Special Achievement in GIS award.</p>
+        <p>I joined the Royal Navy and have spent more than seventeen years in Defence logistics: supply accounts, stocktaking, supersession and handover, fleet logistics inspection, transport safety and remedial action. It was presented to me as logistics. It took a postgraduate degree and a set of audit qualifications before I recognised it as governance, risk and compliance, which is a large part of why I now write about the translation problem.</p>
+        <p>I also founded a development programme for junior rates that was adopted as a standing programme by Engineering Support Group 1 and recognised with a Royal Navy Inclusivity Award.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:34px">
+        <div class="bg-block">
+          <h3>Study</h3>
+          <ul class="bg-list">
+            <li><span class="t">MSc Supply Chain and Logistics Management</span><span class="d">University of Lincoln · <em>in progress</em>, dissertation 2027</span></li>
+            <li><span class="t">MITx MicroMasters, Supply Chain Management</span><span class="d">SC0x–SC4x complete · final exam 2026</span></li>
+            <li><span class="t">Open-Source Intelligence; Penetration Testing</span><span class="d">University of Abertay, via SaluteMyJob</span></li>
+          </ul>
+        </div>
+        <div class="bg-block">
+          <h3>Certification</h3>
+          <ul class="bg-list">
+            <li><span class="t">ISO/IEC 27001, 42001 and 27701 Lead Auditor</span><span class="d">Information security, AI management, privacy</span></li>
+            <li><span class="t">FellowMSA</span><span class="d">Fellow of Management Systems Auditing</span></li>
+            <li><span class="t">CompTIA PenTest+</span><span class="d">Valid to 2027</span></li>
+          </ul>
+        </div>
+        <div class="bg-block">
+          <h3>Programmes</h3>
+          <ul class="bg-list">
+            <li><span class="t">1SL Richmond Fellowship</span><span class="d">2025–26</span></li>
+            <li><span class="t">Percy Hobart Fellowship</span><span class="d">2022</span></li>
+            <li><span class="t">AWS Community Builder</span><span class="d">Fourth consecutive year</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>I am interested in defence supply chain assurance, supplier risk and resilience, trade compliance and export control, operational GRC and third-party risk. If that is your world, I would rather learn from you than pitch at you.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://www.linkedin.com/">LinkedIn</a>
+      <a class="btn" href="mailto:hello@example.com">Email</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
+    <p>© Kelroy James</p>
+  </div>
+</footer>
+
+</body>
+</html>

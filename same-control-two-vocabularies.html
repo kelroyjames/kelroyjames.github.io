@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nine Defence logistics activities mapped to their assurance and audit equivalents.">
+<style>*{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div style="max-width:1100px;margin:0 auto;padding:22px 26px 0">
+<a href="/" style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#6B7885">&#8592; Kelroy James</a>
+</div>
+<title>Same Control, Two Vocabularies</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EEF1EF;
+    --surface:#FFFFFF;
+    --surface-2:#F4F7F5;
+    --ink:#16211D;
+    --ink-2:#3C4C46;
+    --muted:#68786F;
+    --rule:#D2DAD5;
+    --rule-soft:#E2E8E4;
+    --accent:#245C4A;
+    --accent-soft:#E0EDE7;
+    --counter:#7A4A1E;
+    --counter-soft:#F3EAE0;
+    --shadow:0 1px 2px rgba(22,33,29,.06), 0 8px 24px rgba(22,33,29,.05);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0D1411;
+      --surface:#151F1A;
+      --surface-2:#1A2621;
+      --ink:#E4EAE6;
+      --ink-2:#B6C4BD;
+      --muted:#84948B;
+      --rule:#293831;
+      --rule-soft:#212E28;
+      --accent:#6FB097;
+      --accent-soft:#172C24;
+      --counter:#C8935F;
+      --counter-soft:#2A2018;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0D1411;
+    --surface:#151F1A;
+    --surface-2:#1A2621;
+    --ink:#E4EAE6;
+    --ink-2:#B6C4BD;
+    --muted:#84948B;
+    --rule:#293831;
+    --rule-soft:#212E28;
+    --accent:#6FB097;
+    --accent-soft:#172C24;
+    --counter:#C8935F;
+    --counter-soft:#2A2018;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  header.top{background:var(--surface);border-bottom:1px solid var(--rule)}
+  header.top .wrap{padding:56px 24px 42px;display:flex;flex-direction:column;gap:26px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .eyebrow .tick{color:var(--accent)}
+  h1{
+    font-family:Spectral,Georgia,serif;font-weight:700;
+    font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.015em;
+    margin:0;text-wrap:balance;max-width:18ch;
+  }
+  .standfirst{
+    font-family:Spectral,Georgia,serif;font-size:clamp(1.05rem,1.9vw,1.26rem);
+    line-height:1.55;color:var(--ink-2);max-width:62ch;margin:0;
+  }
+  .byline{
+    display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:20px;
+    border-top:1px solid var(--rule-soft);font-size:13.5px;color:var(--muted);
+  }
+  .byline b{color:var(--ink-2);font-weight:600}
+
+  .intro{padding:50px 0 6px}
+  .intro p{margin:0 0 16px;max-width:66ch}
+  .intro p:last-child{margin-bottom:0}
+  .intro em{font-style:italic;color:var(--ink)}
+
+  .sec-head{
+    display:flex;align-items:baseline;gap:16px;margin:54px 0 8px;
+    padding-bottom:12px;border-bottom:1px solid var(--rule);
+  }
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.6rem;font-weight:700;margin:0}
+  .sec-head .count{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin-left:auto;white-space:nowrap;
+  }
+
+  .colkey{
+    display:none;gap:0;margin-top:18px;
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--muted);
+  }
+  @media(min-width:900px){
+    .colkey{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);gap:0 22px;padding:0 22px 10px}
+  }
+
+  .rows{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .row{
+    background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);
+    display:grid;grid-template-columns:1fr;
+  }
+  @media(min-width:900px){
+    .row{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);}
+  }
+  .cell{padding:20px 22px}
+  @media(min-width:900px){
+    .cell + .cell{border-left:1px solid var(--rule-soft)}
+  }
+  @media(max-width:899px){
+    .cell + .cell{border-top:1px solid var(--rule-soft)}
+  }
+  .cell .mini{
+    display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:9px;
+  }
+  @media(min-width:900px){.cell .mini{display:none}}
+  .term{
+    font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;
+    margin:0 0 6px;line-height:1.3;
+  }
+  .cell.left .term{color:var(--ink)}
+  .cell.right .term{color:var(--accent)}
+  .cell p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.55}
+  .cell.mid{background:var(--surface-2)}
+  .cell.mid p{color:var(--ink-2);font-size:14.5px}
+  .frames{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
+  .frame{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;padding:3px 8px;
+    background:var(--accent-soft);color:var(--accent);white-space:nowrap;
+  }
+
+  .caution{
+    margin-top:56px;background:var(--surface);border:1px solid var(--rule);
+    border-left:3px solid var(--counter);padding:26px 28px;box-shadow:var(--shadow);
+  }
+  .caution h3{font-family:Spectral,Georgia,serif;font-size:1.22rem;margin:0 0 10px;font-weight:600}
+  .caution p{margin:0 0 12px;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+  .caution p:last-child{margin-bottom:0}
+
+  .how{margin-top:52px}
+  .how-grid{display:grid;grid-template-columns:1fr;gap:24px}
+  @media(min-width:780px){.how-grid{grid-template-columns:repeat(3,1fr);gap:34px}}
+  .step h4{font-family:Spectral,Georgia,serif;font-size:1.06rem;margin:0 0 7px;font-weight:600}
+  .step .n{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
+    color:var(--accent);display:block;margin-bottom:8px;
+  }
+  .step p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+
+  footer{margin-top:60px;padding:40px 0 64px;border-top:1px solid var(--rule)}
+  footer p{font-size:13px;color:var(--muted);line-height:1.65;max-width:72ch;margin:0 0 13px}
+  footer b{color:var(--ink-2);font-weight:600}
+  a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  @media(prefers-reduced-motion:no-preference){
+    .row{transition:border-color .18s ease}
+    .row:hover{border-color:var(--accent)}
+  }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow"><span class="tick">◆</span><span>Translation aid</span><span>Defence logistics → GRC</span><span>Public frameworks only</span></div>
+    <h1>Same control, two vocabularies</h1>
+    <p class="standfirst">Nine things military logisticians do every week, described in the language a civilian assurance function would use for them. The environment changes. The control logic does not.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>Royal Navy supply chain, 17 years</span>
+      <span>Mapped against published standards</span>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <p>Just over half of UK veterans say they have at some point taken a job below the level of their last military role, and one of the two most cited reasons is that the employer did not recognise their transferable skills. I do not think that is mainly an employer problem. It is a translation problem, and it runs in both directions: the individual cannot name what they did, and the recruiter has no way to price it.</p>
+    <p>This table is my attempt at one direction of that translation. The left column is what the work is called on a unit. The middle is what the control is actually doing. The right is what the same activity is called in an assurance, audit or risk function, with the published frameworks where it lives.</p>
+    <p>It is deliberately generic. Nothing here describes any particular organisation's procedures, and everything on the right can be checked against a public standard. <em>If you have done the thing on the left, you have operated the control on the right. The vocabulary is the only thing you are missing.</em></p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="sec-head">
+    <h2>The mapping</h2>
+    <span class="count">Nine controls</span>
+  </div>
+
+  <div class="colkey">
+    <span>What it is called on a unit</span>
+    <span>What the control is doing</span>
+    <span>What an assurance function calls it</span>
+  </div>
+
+  <div class="rows">
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Logistics inspection</p><p>A scheduled, tiered inspection against a published standard, conducted by a body outside the unit being inspected.</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Independent testing of whether declared compliance matches observed practice, producing evidence a higher authority relies on, with findings tracked to closure.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Second and third line assurance</p><p>Internal audit and independent control testing, with a defined finding lifecycle.</p><div class="frames"><span class="frame">IIA Three Lines</span><span class="frame">ISO 19011</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Stores accounting and stocktaking</p><p>Maintaining the account, counting physical holdings on a cycle, and investigating why the count and the record disagree.</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Periodic verification that the recorded asset state matches the physical one, with variances investigated rather than adjusted away.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Asset accountability and reconciliation</p><p>Inventory integrity, existence testing, variance investigation and inventory of assets.</p><div class="frames"><span class="frame">ISO/IEC 27001 A.5.9</span><span class="frame">COSO control activities</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Supersession and handover</p><p>Formal transfer of an account between two named individuals, with a certificate signed by both and retained.</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Accountability passes explicitly rather than by assumption, and at least two people are on record for the state of the account at the point of transfer.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Custody transfer and segregation of duties</p><p>Documented handover of control ownership; dual authorisation at the point of change.</p><div class="frames"><span class="frame">ISO/IEC 27001 A.5.3</span><span class="frame">COSO</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Dangerous goods and transport safety</p><p>Classifying, documenting and moving regulated cargo under statutory requirements, with named competent persons.</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Legal obligations attach to the movement itself, and the evidence of compliance is created by the people doing the moving.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Statutory compliance and chain of custody</p><p>Regulated goods handling, competent person regimes and traceable custody records.</p><div class="frames"><span class="frame">CDG / ADR</span><span class="frame">ISO 9001 clause 8</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Supervising contractors</p><p>Overseeing external parties working on your equipment or in your space, to your standard, on your timeline.</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Risk that sits outside the organisation is managed through what the contract requires and what the supervision actually verifies.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Third-party risk and contract governance</p><p>Supplier relationship security, performance monitoring and right-to-audit provisions.</p><div class="frames"><span class="frame">ISO/IEC 27001 A.5.19–A.5.22</span><span class="frame">NCSC supply chain</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Technical publication and data control</p><p>Ensuring the version of the document in use is the current one, and that controlled information reaches only those entitled to it.</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Configuration and classification are the same discipline applied to information: the right version, to the right people, with a record of who holds it.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Information classification and access control</p><p>Classification schemes, document control, need-to-know access, and export control where technical data is involved.</p><div class="frames"><span class="frame">ISO/IEC 27001 A.5.12</span><span class="frame">ECJU code of practice</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Write-off and exception authority</p><p>Losses and discrepancies above a threshold cannot be cleared locally, and must be authorised at a defined level.</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Materiality decides who is allowed to make the decision, and the escalation itself creates the audit trail.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Delegated authority and exception reporting</p><p>Authority matrices, materiality thresholds and escalation routes for exceptions.</p><div class="frames"><span class="frame">COSO</span><span class="frame">Scheme of delegation</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Remedial action tracking</p><p>Findings from an inspection are assigned an owner and a date, and are followed up until they are closed.</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>A finding that is recorded but never closed is not a control. Closure has to be evidenced by someone other than the person who caused it.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Corrective action and finding closure</p><p>Root cause analysis, corrective and preventive action, and management review of open findings.</p><div class="frames"><span class="frame">ISO 19011</span><span class="frame">ISO 9001 clause 10</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Sustaining output under disruption</p><p>Keeping a platform supported when the supply chain, the schedule or the manning does not do what the plan assumed.</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Continuity is tested by the disruption, not by the plan. What matters is what degraded gracefully and what stopped.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Operational resilience and continuity</p><p>Business continuity management, impact tolerance and single-point-of-failure analysis.</p><div class="frames"><span class="frame">ISO 22301</span><span class="frame">Operational resilience</span></div></div>
+    </article>
+
+  </div>
+
+  <div class="caution">
+    <h3>What this table is not</h3>
+    <p>It is a translation aid for people describing their own experience. It is not a compliance mapping, and no organisation should treat a row here as evidence that a requirement has been met. The frameworks named are pointers to where the equivalent control is written down, not claims of conformity.</p>
+    <p>It also runs one way. Knowing that a handover certificate is a custody transfer control does not mean a logistician can walk into an internal audit function, any more than an auditor could run a stores account. What it means is that the underlying reasoning transfers, and that the training gap is usually narrower than either side assumes.</p>
+    <p>And a caution I would apply to my own argument: naming a control is not evidence that it worked. A record is not the reality it describes. The value of this table is in helping someone ask better questions about their own experience, not in letting them assert more.</p>
+  </div>
+
+  <div class="how">
+    <div class="sec-head"><h2>How to use it</h2><span class="count">Recognition before retraining</span></div>
+    <div class="how-grid">
+      <div class="step"><span class="n">FIRST</span><h4>Record what you did</h4><p>Scope, scale, complexity, decision-making authority and consequence of failure. Not the job title, and not the course you attended. What you were accountable for, and what happened if it went wrong.</p></div>
+      <div class="step"><span class="n">THEN</span><h4>Find the reference point</h4><p>Map that against a published standard, control model or competency framework. The right column is a starting set. The point is to find the language your target sector already uses, not to adopt mine.</p></div>
+      <div class="step"><span class="n">ONLY THEN</span><h4>Choose the training</h4><p>Identify the gaps that are genuinely gaps, as opposed to gaps in vocabulary, and close those. A qualification should open a door. It should not shrink the room behind it.</p></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>Sources and scope.</b> The right-hand column references publicly available standards and frameworks: ISO/IEC 27001:2022, ISO 9001, ISO 19011, ISO 22301, the COSO internal control framework, the IIA Three Lines Model, the Export Control Joint Unit compliance code of practice and NCSC supply chain guidance. The veteran underemployment figures are from the Veterans' Survey 2022, published by ONS and analysed by Government. The left-hand column describes generic logistics activity common to any organisation holding and moving accountable assets.</p>
+    <p><b>Not official.</b> Views are my own and are based on general observations about logistics assurance and skills recognition. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing here reproduces any organisation's internal policy, procedure or assurance output.</p>
+  </div>
+</footer>
+
+</body>
+</html>

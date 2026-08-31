@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A seven-stage open-source verification sequence for supplier due diligence.">
+<style>*{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div style="max-width:1100px;margin:0 auto;padding:22px 26px 0">
+<a href="/" style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#6B7885">&#8592; Kelroy James</a>
+</div>
+<title>OSINT Supplier Verification</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EDF0F3;
+    --surface:#FFFFFF;
+    --surface-2:#F5F7F9;
+    --ink:#15202B;
+    --ink-2:#3D4C59;
+    --muted:#697887;
+    --rule:#D3DAE1;
+    --rule-soft:#E3E8ED;
+    --accent:#1B5C87;
+    --accent-soft:#E2EDF4;
+    --signal:#9A6410;
+    --signal-soft:#F6EEDF;
+    --verify:#2C6A5A;
+    --verify-soft:#E1EFEA;
+    --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+    --maxw:1080px;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0E141A;
+      --surface:#161F28;
+      --surface-2:#1B252F;
+      --ink:#E5EAEF;
+      --ink-2:#B9C4CE;
+      --muted:#8593A0;
+      --rule:#2A3742;
+      --rule-soft:#222E38;
+      --accent:#74AAD0;
+      --accent-soft:#1A2C3A;
+      --signal:#D9A652;
+      --signal-soft:#2E2617;
+      --verify:#6FB49F;
+      --verify-soft:#172A25;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#74AAD0;
+    --accent-soft:#1A2C3A;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --verify:#6FB49F;
+    --verify-soft:#172A25;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    background:var(--surface);
+    border-bottom:1px solid var(--rule);
+  }
+  .masthead .wrap{
+    display:flex;flex-direction:column;gap:28px;
+    padding-top:56px;padding-bottom:44px;
+  }
+  .eyebrow{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .eyebrow .tick{color:var(--accent)}
+  h1{
+    font-family:Spectral,Georgia,serif;
+    font-weight:700;
+    font-size:clamp(2.1rem,4.6vw,3.35rem);
+    line-height:1.08;
+    letter-spacing:-.015em;
+    margin:0;
+    text-wrap:balance;
+    max-width:19ch;
+  }
+  .standfirst{
+    font-family:Spectral,Georgia,serif;
+    font-size:clamp(1.05rem,1.9vw,1.28rem);
+    line-height:1.55;
+    color:var(--ink-2);
+    max-width:62ch;
+    margin:0;
+  }
+  .byline{
+    display:flex;flex-wrap:wrap;gap:10px 28px;
+    padding-top:22px;border-top:1px solid var(--rule-soft);
+    font-size:13.5px;color:var(--muted);
+  }
+  .byline b{color:var(--ink-2);font-weight:600}
+
+  /* ---------- premise ---------- */
+  .premise{padding:52px 0 8px}
+  .premise .wrap{display:grid;grid-template-columns:1fr;gap:26px}
+  @media(min-width:860px){
+    .premise .wrap{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:52px}
+  }
+  .premise p{margin:0 0 16px;max-width:64ch}
+  .premise p:last-child{margin-bottom:0}
+  .pull{
+    background:var(--surface);
+    border:1px solid var(--rule);
+    border-left:3px solid var(--signal);
+    padding:22px 24px;
+    align-self:start;
+    box-shadow:var(--shadow);
+  }
+  .pull .q{
+    font-family:Spectral,Georgia,serif;
+    font-size:1.3rem;line-height:1.35;font-weight:600;
+    margin:0 0 10px;text-wrap:balance;
+  }
+  .pull .a{font-size:14px;color:var(--muted);margin:0}
+
+  /* ---------- section headings ---------- */
+  .sec-head{
+    display:flex;align-items:baseline;gap:16px;
+    margin:56px 0 26px;
+    padding-bottom:12px;
+    border-bottom:1px solid var(--rule);
+  }
+  .sec-head h2{
+    font-family:Spectral,Georgia,serif;
+    font-size:1.65rem;font-weight:700;margin:0;letter-spacing:-.01em;
+  }
+  .sec-head .count{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin-left:auto;white-space:nowrap;
+  }
+
+  /* ---------- stages ---------- */
+  .stages{display:flex;flex-direction:column;gap:14px}
+  .stage{
+    background:var(--surface);
+    border:1px solid var(--rule);
+    box-shadow:var(--shadow);
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:800px){
+    .stage{grid-template-columns:76px minmax(0,1.55fr) minmax(0,1fr)}
+  }
+  .stage .num{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:13px;font-weight:500;
+    color:var(--accent);
+    background:var(--surface-2);
+    border-bottom:1px solid var(--rule-soft);
+    padding:18px 22px;
+    display:flex;align-items:flex-start;
+  }
+  @media(min-width:800px){
+    .stage .num{
+      border-bottom:none;border-right:1px solid var(--rule-soft);
+      justify-content:center;padding:24px 0;
+    }
+  }
+  .stage .body{padding:22px 24px}
+  @media(min-width:800px){.stage .body{padding:24px 26px}}
+  .stage h3{
+    font-family:Spectral,Georgia,serif;
+    font-size:1.18rem;font-weight:600;margin:0 0 4px;letter-spacing:-.005em;
+  }
+  .stage .aim{
+    font-size:13.5px;color:var(--muted);margin:0 0 16px;
+  }
+  .stage ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px}
+  .stage li{
+    position:relative;padding-left:19px;font-size:14.5px;color:var(--ink-2);line-height:1.5;
+  }
+  .stage li::before{
+    content:"";position:absolute;left:0;top:.62em;
+    width:7px;height:1px;background:var(--accent);
+  }
+  .stage .side{
+    padding:0 24px 22px;
+    display:flex;flex-direction:column;gap:18px;
+  }
+  @media(min-width:800px){
+    .stage .side{
+      padding:24px 26px;
+      border-left:1px solid var(--rule-soft);
+    }
+  }
+  .lbl{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--muted);display:block;margin-bottom:9px;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px;
+    padding:3px 8px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    border:1px solid transparent;
+    white-space:nowrap;
+  }
+  .output{
+    font-size:13.5px;color:var(--ink-2);line-height:1.5;
+    padding-left:11px;border-left:2px solid var(--verify);
+  }
+
+  /* ---------- confidence key ---------- */
+  .grades{display:grid;grid-template-columns:1fr;gap:12px}
+  @media(min-width:720px){.grades{grid-template-columns:repeat(3,1fr)}}
+  .grade{
+    background:var(--surface);border:1px solid var(--rule);
+    padding:20px 22px;box-shadow:var(--shadow);
+  }
+  .grade .tag{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;
+    letter-spacing:.13em;text-transform:uppercase;
+    display:inline-block;padding:3px 9px;margin-bottom:12px;
+  }
+  .g-hi .tag{background:var(--verify-soft);color:var(--verify)}
+  .g-mid .tag{background:var(--signal-soft);color:var(--signal)}
+  .g-low .tag{background:var(--surface-2);color:var(--muted)}
+  .grade h4{font-family:Spectral,Georgia,serif;font-size:1.02rem;margin:0 0 7px;font-weight:600}
+  .grade p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.5}
+
+  /* ---------- discipline band ---------- */
+  .band{
+    background:var(--surface);
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    margin-top:60px;padding:48px 0;
+  }
+  .band-grid{display:grid;grid-template-columns:1fr;gap:26px}
+  @media(min-width:760px){.band-grid{grid-template-columns:repeat(2,1fr);gap:36px 52px}}
+  .rule-item h4{
+    font-family:Spectral,Georgia,serif;font-size:1.08rem;margin:0 0 7px;font-weight:600;
+  }
+  .rule-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55;max-width:52ch}
+
+  /* ---------- footer ---------- */
+  footer{padding:44px 0 64px}
+  footer .note{
+    font-size:13px;color:var(--muted);line-height:1.6;max-width:70ch;margin:0 0 14px;
+  }
+  footer .note b{color:var(--ink-2);font-weight:600}
+  .refs{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);
+    line-height:1.9;margin:22px 0 0;padding-top:18px;border-top:1px solid var(--rule);
+  }
+  a{color:var(--accent)}
+  a:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  @media(prefers-reduced-motion:no-preference){
+    .stage{transition:border-color .18s ease}
+    .stage:hover{border-color:var(--accent)}
+  }
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="tick">◆</span>
+      <span>Method note</span>
+      <span>Third-party due diligence</span>
+      <span>Open sources only</span>
+    </div>
+    <h1>Verifying a supplier who is telling you the truth about the wrong things</h1>
+    <p class="standfirst">A seven-stage open-source verification sequence for the case where a supplier's paperwork is complete, its certifications are valid, and something about the relationship has stopped adding up.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>Derived from ACQ501 Open-Source Intelligence, University of Abertay</span>
+      <span>Method generalised; no client or supplier identified</span>
+    </div>
+  </div>
+</header>
+
+<section class="premise">
+  <div class="wrap">
+    <div>
+      <p>Most third-party risk processes are built to catch a supplier who fails to produce evidence. They are much weaker against a supplier who produces all of it.</p>
+      <p>A completed questionnaire and a valid certificate each establish something real, within a defined scope. Neither establishes that the operation described in them exists in the place it claims to, is run by the people named on it, or is financially able to do the thing you are buying.</p>
+      <p>This sequence exists for the gap between those two positions. It runs in a deliberate order, because each stage narrows what the next one has to look for: corporate identity establishes who you are actually dealing with, geography tests whether the operation is where it says it is, and the financial and documentary stages test whether it can do what it has promised. Running them out of order produces a pile of findings rather than a line of reasoning.</p>
+      <p>Every stage below draws on publicly available sources. Roughly nine in ten useful facts in a corporate intelligence picture are already public; the discipline is in ordering them, not in obtaining them.</p>
+    </div>
+    <aside class="pull">
+      <p class="q">A signal is not a conclusion.</p>
+      <p class="a">A director change, a virtual office, an overdue filing: each has an innocent explanation far more often than not. Findings are corroborated, graded and tested before they touch a procurement decision.</p>
+    </aside>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="sec-head">
+    <h2>The sequence</h2>
+    <span class="count">Seven stages — order matters</span>
+  </div>
+
+  <div class="stages">
+
+    <article class="stage">
+      <div class="num">01</div>
+      <div class="body">
+        <h3>Corporate structure</h3>
+        <p class="aim">Establish baseline legitimacy before looking for discrepancies.</p>
+        <ul>
+          <li>Confirm registration status and incorporation date against the statutory register</li>
+          <li>Identify every director and person of significant control</li>
+          <li>Read the filing history for lateness, resignations and recent restructuring</li>
+          <li>Cross-reference the registered office against the trading address given to you</li>
+          <li>Check that recorded activity codes match what the supplier says it does</li>
+        </ul>
+      </div>
+      <div class="side">
+        <div><span class="lbl">Sources</span>
+          <div class="chips"><span class="chip">Companies House</span><span class="chip">OpenCorporates</span><span class="chip">Company Check</span></div>
+        </div>
+        <div><span class="lbl">Output</span>
+          <p class="output">Registration verification with full filing and officer history. The authoritative baseline everything later is measured against.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="num">02</div>
+      <div class="body">
+        <h3>Address and physical presence</h3>
+        <p class="aim">Test whether the operation exists where it claims to exist.</p>
+        <ul>
+          <li>Compare the registered office, the trading address and the address on correspondence</li>
+          <li>Assess physical existence through historical street imagery rather than current imagery alone</li>
+          <li>Check how many other businesses are registered at the same address</li>
+          <li>Verify business rates registration with the local authority</li>
+          <li>Examine property ownership records for the site</li>
+        </ul>
+      </div>
+      <div class="side">
+        <div><span class="lbl">Sources</span>
+          <div class="chips"><span class="chip">Land Registry</span><span class="chip">192.com</span><span class="chip">Street imagery (historical)</span><span class="chip">Rates register</span></div>
+        </div>
+        <div><span class="lbl">Output</span>
+          <p class="output">Location assessment recording what is verifiable, what is not, and the difference between the two.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="num">03</div>
+      <div class="body">
+        <h3>Directors and officers</h3>
+        <p class="aim">Establish that the people representing the company are the people who control it.</p>
+        <ul>
+          <li>Map every director and controller against the contacts you have actually dealt with</li>
+          <li>Verify professional history and any claimed credentials or registrations</li>
+          <li>Map other directorships and company affiliations for concentration and conflict</li>
+          <li>Assess online presence for consistency with the professional history claimed</li>
+          <li>Record where claimed personnel and verified personnel do not overlap</li>
+        </ul>
+      </div>
+      <div class="side">
+        <div><span class="lbl">Sources</span>
+          <div class="chips"><span class="chip">Director search</span><span class="chip">OpenCorporates</span><span class="chip">Professional registers</span><span class="chip">LinkedIn</span></div>
+        </div>
+        <div><span class="lbl">Output</span>
+          <p class="output">Relationship map showing who controls the entity and how they connect to other interests.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="num">04</div>
+      <div class="body">
+        <h3>Digital infrastructure</h3>
+        <p class="aim">Where the systems actually sit, as distinct from where the letterhead says.</p>
+        <ul>
+          <li>Registration records and name server distribution for every associated domain</li>
+          <li>Hosting geography, certificate detail and platform from technical infrastructure lookups</li>
+          <li>Historical site captures, to detect changes in claims over time</li>
+          <li>Message header routing and originating addresses across the correspondence you hold</li>
+          <li>Sender authentication records, and number type and carrier geography for stated contact numbers</li>
+        </ul>
+      </div>
+      <div class="side">
+        <div><span class="lbl">Sources</span>
+          <div class="chips"><span class="chip">WHOIS</span><span class="chip">DNS lookups</span><span class="chip">Shodan</span><span class="chip">Wayback Machine</span><span class="chip">Header analysis</span><span class="chip">Number lookup</span></div>
+        </div>
+        <div><span class="lbl">Output</span>
+          <p class="output">Infrastructure picture mapping where systems, mail and telephony physically resolve, against the geography claimed.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="num">05</div>
+      <div class="body">
+        <h3>Documentary authenticity</h3>
+        <p class="aim">Test the documents themselves, not only the facts they assert.</p>
+        <ul>
+          <li>Validate format and security features against the issuing authority's current template</li>
+          <li>Check temporal consistency across issue dates, expiry dates and stated history</li>
+          <li>Read file metadata on any digital copy for creation date and origin</li>
+          <li>Cross-reference document content against the corporate record already established</li>
+        </ul>
+      </div>
+      <div class="side">
+        <div><span class="lbl">Sources</span>
+          <div class="chips"><span class="chip">Issuing-authority templates</span><span class="chip">Metadata inspection</span><span class="chip">Document verification services</span></div>
+        </div>
+        <div><span class="lbl">Output</span>
+          <p class="output">Authenticity assessment for each document received, with any inconsistency described rather than characterised.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="num">06</div>
+      <div class="body">
+        <h3>Financial capability</h3>
+        <p class="aim">Whether the supplier can sustain the obligation, not only whether it wants to.</p>
+        <ul>
+          <li>Filed accounts, and whether filing has been timely and consistent</li>
+          <li>Credit history and payment behaviour toward other counterparties</li>
+          <li>County court judgments and other registered financial events</li>
+          <li>Indicators of stress: late payment, charges, changes in banking arrangements</li>
+          <li>Scale of the obligation you are placing against the balance sheet carrying it</li>
+        </ul>
+      </div>
+      <div class="side">
+        <div><span class="lbl">Sources</span>
+          <div class="chips"><span class="chip">Filed accounts</span><span class="chip">Credit reference</span><span class="chip">CCJ registry</span></div>
+        </div>
+        <div><span class="lbl">Output</span>
+          <p class="output">Financial risk assessment stating capability and fragility separately. A solvent supplier can still be a single point of failure.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="num">07</div>
+      <div class="body">
+        <h3>Synthesis</h3>
+        <p class="aim">Build the hypothesis, then try to break it.</p>
+        <ul>
+          <li>Consolidate findings across all six preceding stages onto one timeline</li>
+          <li>Identify correlations, and just as deliberately identify where stages agree</li>
+          <li>Form an explicit hypothesis about how the supplier actually operates</li>
+          <li>Test that hypothesis against the evidence that would disconfirm it</li>
+          <li>Grade each finding by confidence and record what would change the grade</li>
+        </ul>
+      </div>
+      <div class="side">
+        <div><span class="lbl">Sources</span>
+          <div class="chips"><span class="chip">Relationship mapping</span><span class="chip">Timeline analysis</span><span class="chip">OSINT Framework</span></div>
+        </div>
+        <div><span class="lbl">Output</span>
+          <p class="output">A graded assessment with a stated hypothesis, the evidence for it, and the evidence that would overturn it.</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="sec-head">
+    <h2>Grading a finding</h2>
+    <span class="count">Before it reaches a decision</span>
+  </div>
+
+  <div class="grades">
+    <div class="grade g-hi">
+      <span class="tag">Corroborated</span>
+      <h4>Two independent sources</h4>
+      <p>Confirmed against sources that do not derive from each other. Safe to carry into a recommendation, with the sources named.</p>
+    </div>
+    <div class="grade g-mid">
+      <span class="tag">Indicative</span>
+      <h4>Single source, consistent</h4>
+      <p>One reliable source, not contradicted elsewhere. Directs further enquiry. Does not on its own support an adverse conclusion.</p>
+    </div>
+    <div class="grade g-low">
+      <span class="tag">Unresolved</span>
+      <h4>Absence, or conflict</h4>
+      <p>Sources disagree, or expected evidence is missing. Recorded as an open question. Absence of evidence is reported as absence, never as a finding.</p>
+    </div>
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head" style="margin-top:0">
+      <h2>The constraints this runs under</h2>
+      <span class="count">Set before collection begins</span>
+    </div>
+    <div class="band-grid">
+      <div class="rule-item">
+        <h4>Purpose defined first</h4>
+        <p>The question being answered is written down before any collection starts. Collection without a stated purpose becomes surveillance of a commercial counterparty, and produces findings nobody can act on.</p>
+      </div>
+      <div class="rule-item">
+        <h4>Public sources only</h4>
+        <p>Publicly available information, accessed as any member of the public would. No circumvention of access controls, consistent with the Computer Misuse Act.</p>
+      </div>
+      <div class="rule-item">
+        <h4>Proportionate to the risk</h4>
+        <p>Depth matched to the value and criticality of what is being bought. A commodity supplier does not warrant stage seven; a sole-source critical component supplier warrants all of it.</p>
+      </div>
+      <div class="rule-item">
+        <h4>Personal data minimised</h4>
+        <p>Individuals appear only where their role in the entity makes them relevant, under UK GDPR. The subject is the company. Directors are in scope because they control it, not because they are findable.</p>
+      </div>
+      <div class="rule-item">
+        <h4>Sources and dates recorded</h4>
+        <p>Every finding carries its source and the date it was retrieved. Company records change; an assessment without dates cannot be reviewed, defended or repeated.</p>
+      </div>
+      <div class="rule-item">
+        <h4>It directs, it does not replace</h4>
+        <p>This is the layer that tells formal due diligence where to look. It is not a substitute for contractual assurance, audit rights, financial verification or, where relevant, export control screening.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="note"><b>On provenance.</b> This framework was developed for ACQ501 Open-Source Intelligence at the University of Abertay, studied through SaluteMyJob, and applied in a supplier assessment annex for the Procurement module of an MSc in Supply Chain and Logistics Management at the University of Lincoln. The methodology is reproduced here in generalised form. No client, supplier or case detail is included.</p>
+    <p class="note"><b>Not advice.</b> Views are my own and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Anyone applying this should take their own legal and data protection advice on their jurisdiction and circumstances.</p>
+    <p class="refs">
+      Castillo et al. (2018), supply chain integrity · Hassan &amp; Hijazi (2018), corporate intelligence gathering · Bazzell (2022), open source verification of individuals · Pastor-Galindo et al. (2020), OSINT sources and geography · Gordon &amp; Willox (2003), identity documents and fraud · Oerlemans &amp; Langenhuijzen (2024), legal boundaries of OSINT · Häußler (2021), proportionality and ethics
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
