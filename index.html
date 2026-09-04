@@ -487,8 +487,8 @@
 
 <section id="thought-leadership">
   <div class="wrap">
-    <div class="sec-head"><h2>Thought Leadership</h2><span class="note">Pan-Defence Skills Series</span></div>
-    <p class="intro-p">Two published arguments and two in development, all of them versions of the same one: Defence produces capable people who operate controls, manage risk and assure compliance — and consistently fails to describe them in a language the civilian market can read.</p>
+    <div class="sec-head"><h2>Thought Leadership</h2><span class="note">Defence · GRC · Assurance</span></div>
+    <p class="intro-p">Three published arguments and one in development, all versions of the same one: the people who move the material, protect the data and assure the controls are often the same people — and the frameworks that govern them rarely know it.</p>
 
     <!-- ARTICLE 1 -->
     <div class="article-embed">
@@ -662,17 +662,106 @@
       </div>
     </div>
 
-    <!-- PLACEHOLDERS for articles 3 and 4 -->
-    <div class="writing">
-      <article class="piece">
-        <span class="status">Coming soon</span>
-        <div>
-          <h3>The Convergence of Cyber-GRC and Physical Logistics</h3>
-          <p>A regulator recently found that a defence prime's export control exposure ran through the gap between a supply chain team that did not hold the regulatory knowledge and a file transfer system that did not carry the warning. Each function could have reported itself compliant.</p>
+    <!-- ARTICLE 3 -->
+    <div class="article-embed">
+      <div class="top-band"></div>
+      <img class="article-img" src="/images/articles/export-control-supply-chain.png" alt="Aerospace supply chain due diligence — supplier certification, export and import compliance checks in a global logistics context">
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="article-status">Published</span>
+          <span class="article-series">Assurance · Supply Chain GRC</span>
         </div>
-        <span class="series">Assurance</span>
-      </article>
+        <h3 class="article-title">The Convergence of Cyber-GRC and Physical Logistics</h3>
+        <p class="article-subtitle">Why siloed supply chain assurance creates blind spots, and what a recent export control settlement revealed about where they form.</p>
+        <p class="article-standfirst">In August 2026 the United States Department of State concluded a $36 million settlement with BAE Systems, Inc., resolving 104 alleged violations of the Arms Export Control Act and ITAR. The charging letter records that the supply chain team did not fully understand the export control regulations under which it was operating, and that the secure file transfer system did not display export control warnings before technical data was sent. Those are not two separate failures.</p>
 
+        <div class="article-text">
+          <p>The remedial measures have been widely discussed. The causes have received rather less attention, and they are the more instructive part. The supply chain team did not fully understand the regulations under which it was operating. The secure file transfer system did not display export control warnings before technical data was sent. Thirty-eight of the alleged violations involved technical data reaching a proscribed destination.</p>
+          <p>I recognised the shape of that immediately, having spent eighteen years on one side of precisely that seam. Those are not two separate failures; they are a single failure observed from two directions, in which the people moving the material did not hold the regulatory knowledge whilst the system moving the data did not carry the control. Each function could have reported itself compliant within its own scope.</p>
+
+          <h3>Two green dashboards</h3>
+          <p>In many enterprise risk frameworks, digital and physical operations are managed as separate worlds.</p>
+          <p>Cybersecurity and governance teams work upon ISO/IEC 27001 scopes, vendor assessments, access control and zero-trust architectures. Across the corridor, or upon an industrial site some distance away, trade compliance and logistics teams work upon customs declarations, controlled goods requirements, hazardous cargo documentation, freight forwarding contracts and inventory records. The board receives separate updates from each. The cyber dashboard is green. The logistics metrics are green.</p>
+          <p>The enterprise nonetheless remains exposed to single points of failure, inventory loss, operational disruption and regulatory enforcement, because risk does not respect organisational swimlanes. Where physical logistics and cyber governance operate independently, they create an assurance blind spot in which neither function holds visibility over the whole chain of custody.</p>
+
+          <h3>The blind spot</h3>
+          <p>A modern supply chain is an interconnected socio-technical system, and an operational failure rarely remains confined to either software or physical transport.</p>
+          <p>Consider a tier-two component supplier suffering a ransomware attack. Its infrastructure is isolated and the buyer's corporate systems remain uncompromised; however, manufacturing stops, a maintenance schedule slips, and contractual consequences follow. The cyber incident has become a readiness problem.</p>
+          <p>Consider the reverse. An inventory ledger records five hundred critical replacement units in stock, whilst handovers, transport conditions and incomplete records have produced undocumented damage and unrecorded scrap. The digital system reports full operational readiness whilst physical capability has quietly degraded, and the record and the reality have diverged.</p>
+        </div>
+
+        <button class="article-toggle" onclick="var exp=this.nextElementSibling;exp.classList.toggle('open');this.textContent=exp.classList.contains('open')?'Collapse ↑':'Continue reading →'" aria-expanded="false">Continue reading →</button>
+
+        <div class="article-expand">
+          <div class="article-text">
+            <p>Consider, additionally, the supplier who submits a completed questionnaire and holds valid certifications. An adversarial review of its sub-tier dependencies, statutory filings and ownership signals identifies concentration risk together with indicators of export control exposure — none of which the vendor portal was designed to look for.</p>
+            <p>None of this suggests that a questionnaire or a certificate is worthless, since each provides evidence within a defined scope. Establishing resilience, transparency and continuing compliance is a different matter altogether. Treating supplier risk as a digital problem ignores the physical realities of global logistics, whilst treating logistics as a physical transport task ignores the data integrity requirements and regulatory obligations which now sit inside it.</p>
+
+            <h3>Unified assurance</h3>
+            <p>Bridging the divide requires treating physical custody, trade compliance and digital security as connected elements of one control environment — what I describe as unified supply chain governance, that being my own shorthand rather than an established category.</p>
+            <p>The objective is to understand the dependencies between them. A cyber incident can halt physical production; an inaccurate inventory record can create a false impression of readiness; and a trade compliance failure can prevent a lawful movement even where the item is physically available. A failure in one layer creates consequences in the others.</p>
+            <p>I should be careful with the word unified, however, since some separations are controls rather than accidents. Export control judgement is frequently held structurally apart from commercial and logistics pressure, precisely so that a shipment deadline cannot lean upon a classification decision, and segregation of duties is a deliberate silo which exists for good reason. What I am arguing for is visibility across the interfaces, together with a board view which shows the dependency between them, rather than merged functions under a single owner. A single integrated dashboard would amount to a larger version of the problem described above.</p>
+
+            <h3>Testing the ledger</h3>
+            <p>Information security governance uses logging, access reviews and control testing. Physical logistics requires the equivalent: risk-based first-line monitoring, the purpose of which is not frequency for its own sake.</p>
+            <p>Rolling physical verification should test the digital ledger rather than reproduce it, thereby reducing the latency between the recorded asset state and the physical condition. What one is looking for is the moment at which the control environment drifted away from operational reality.</p>
+            <p>The National Cyber Security Centre's guidance on mapping your supply chain recommends that organisations build an up-to-date understanding of their supplier network, prioritise the suppliers, systems and services which are critical to the organisation, and record sub-tier relationships alongside the assurance evidence held for each. That is ongoing oversight rather than reliance upon a single assessment, and the same logic applies to physical holdings.</p>
+
+            <h3>Adversarial diligence</h3>
+            <p>Third-party risk management cannot rest upon self-attestation. An intelligence-led approach evaluates corporate filings, ownership signals, operational footprint, key-person dependency, financial indicators and sub-tier relationships, and it asks what would disconfirm the supplier's stated position rather than looking only for what confirms it.</p>
+            <p>That is a separate matter from treating every anomaly as misconduct. A director change, a virtual office or an overdue filing may have an entirely innocent explanation; a signal is not a conclusion, and findings require corroboration, grading by confidence and testing against further evidence before they influence a procurement decision. In particular, the purpose should be defined before collection begins, sources and dates recorded, personal information excluded unless genuinely relevant, and the exercise kept proportionate to the supplier risk question at hand.</p>
+            <p>Applied properly, open-source work surfaces single points of failure, hidden sub-tier dependencies, key-person and concentration risk, financial stress indicators, governance changes, and gaps between stated capability and available evidence. These findings do not replace formal due diligence. They direct it.</p>
+
+            <h3>Custody and licence</h3>
+            <p>The relationship between logistics and governance becomes clearest in trade compliance.</p>
+            <p>United Kingdom strategic export controls apply to goods, software and technology, including data, information and technical assistance, as well as to brokering services, and it is the exporter's responsibility to check whether items require a licence. That responsibility cannot sit entirely within a legal or export control department, however, since answering it requires knowing what the item is, how it is classified, where it is located, who can access it, where it is going, who the end user is and which authorisation applies. It further requires knowing whether licence conditions are being followed, whether technical data is moving alongside the physical item, and whether a subcontractor introduces exposure which nobody has assessed. Every one of those questions depends upon logistics data, supplier records, configuration control, access management, shipment information and accountable people.</p>
+            <p>A warehouse can release the correct item to the correct destination and compliance can still fail, because the classification was wrong, a licence condition was misunderstood, technical data moved without authorisation, or the end user was never properly assessed. The physical flow and the information flow have to remain aligned, and that alignment is nobody's job by default.</p>
+            <p>The Export Control Joint Unit's voluntary compliance code of practice recommends documented procedures, a named responsible person at director level, training matched to the audience, record keeping which produces an adequate audit trail, and a programme of regular internal audit. Those are ordinary governance requirements. What makes them a logistics problem is that almost all of the evidence needed to satisfy them is created through logistics, procurement, engineering and supplier management activity, by people who do not generally think of themselves as operating controls.</p>
+            <p>Which returns the argument to where it began. The BAE Systems, Inc. remedial package addresses resources, oversight, procedures, training, systems and continuing compliance capability rather than procedures alone, and that is a logistics assurance lesson as much as an export control one. A process is unlikely to remain effective where the people operating it lack the authority, resources, understanding or continuity to maintain it.</p>
+
+            <h3>Independent challenge</h3>
+            <p>Unified assurance does not remove the need for independent assessment. Operational teams sit closest to the process and ought to identify issues fastest; however, people who operate a control may become accustomed to its weaknesses, or confident in evidence which has never been properly challenged.</p>
+            <p>Operational monitoring supported by proportionate independent challenge is therefore stronger than either alone. Evidence should be generated throughout the operating cycle and tested at the appropriate level — which reduces the risk of an organisation preparing for an inspection whilst failing to maintain the capability that the inspection exists to assess.</p>
+
+            <h3>Where this comes from</h3>
+            <p>I have spent more than eighteen years in Defence logistics, working with supply accounts, stocktaking, supersession and handover, logistics inspection, transport safety requirements and remedial action. None of it was ever described to me as governance, risk and compliance, although all of it was, and it took a postgraduate degree together with a set of audit qualifications before I recognised as much.</p>
+            <p>The most useful question I learned to ask was not whether a process had been completed. It was whether the process had protected the objective it existed to serve — which is the point at which logistics assurance becomes governance in the physical world.</p>
+
+            <h3>The test</h3>
+            <p>Siloed assurance asks whether each function is operating within its own requirements, which is necessary without being sufficient, since the more important question is whether the interfaces between functions are controlled.</p>
+            <p>When reviewing a logistics or supply chain control environment, I would therefore ask: whether the inventory record matches the physical asset and how that is tested; whether the supplier record reflects current ownership and sub-tier structure; whether the export classification matches the configuration and the technical data; whether the shipment record aligns with the licence and the end-user information; whether the cyber risk assessment includes the logistics systems upon which the operational process depends; what happens when two sources disagree and who decides whether an exception is material; how quickly the organisation would know that a control had failed; and whether the process could continue if the person who designed it were to leave.</p>
+            <p>Those answers reveal considerably more than a dashboard, a certificate or a completed form, since they show whether the organisation has built a reporting process or a dependable decision-support capability.</p>
+
+            <h3>Closing</h3>
+            <p>The controls in logistics are not new, and the underlying activities have existed for decades. What is changing is the need to recognise them as part of a wider governance, risk and assurance system, as defence supply chains grow more complex, trade controls more demanding, and operational timelines shorter.</p>
+            <p>The question is no longer whether an organisation holds a policy, a certificate, a supplier record or a completed inspection. It is whether its people, processes, information, assets and suppliers are aligned closely enough to deliver the required capability when conditions change — and organisations which treat that alignment as an assurance problem before a regulator does could find the experience considerably less expensive than the alternative.</p>
+
+            <p class="article-disclaimer">The views expressed here are my own and are based on general observations about logistics assurance, procurement, supply chain resilience, trade compliance and governance. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</p>
+
+            <div class="article-refs">
+              <h4>References</h4>
+              <ol>
+                <li>United States Department of State, Bureau of Political-Military Affairs — <a href="https://www.state.gov/releases/bureau-of-political-military-affairs/2026/08/u-s-department-of-state-concludes-36-million-settlement-resolving-export-violations-by-bae-systems-inc-bae/" target="_blank" rel="noopener">Settlement concluding alleged export violations by BAE Systems, Inc., August 2026</a></li>
+                <li>Directorate of Defense Trade Controls — Proposed charging letter and consent agreement in the same matter</li>
+                <li>National Cyber Security Centre — <a href="https://www.ncsc.gov.uk/guidance/mapping-your-supply-chain" target="_blank" rel="noopener">Mapping your supply chain (NCSC guidance)</a></li>
+                <li><a href="https://www.gov.uk/guidance/uk-strategic-export-controls" target="_blank" rel="noopener">UK strategic export controls guidance (GOV.UK)</a></li>
+                <li>Export Control Joint Unit — <a href="https://www.gov.uk/government/publications/export-control-compliance-code-of-practice" target="_blank" rel="noopener">Compliance code of practice for export licensing, December 2022</a></li>
+                <li>ISO/IEC 27001:2022 — Information security management systems</li>
+                <li>ISO/IEC 42001:2023 — Artificial intelligence management systems</li>
+                <li>The Institute of Internal Auditors — <a href="https://www.theiia.org/en/standards/three-lines-model/" target="_blank" rel="noopener">The IIA's Three Lines Model, 2020</a></li>
+                <li>ISO 19011:2018 — Guidelines for auditing management systems</li>
+                <li>National Institute of Standards and Technology — <a href="https://csrc.nist.gov/publications/detail/sp/800-161/rev-1/final" target="_blank" rel="noopener">SP 800-161 Revision 1: Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations, 2022</a></li>
+                <li>Ghadge, A., Weiß, M., Caldwell, N. &amp; Wilding, R. (2020) — <a href="https://doi.org/10.1108/SCM-10-2019-0399" target="_blank" rel="noopener">"Managing cyber risk in supply chains: a review and research agenda." Supply Chain Management: An International Journal</a></li>
+                <li><a href="https://www.emerald.com/ijpdlm/article/54/11/1/1233945/Cyber-risk-management-strategies-and-integration" target="_blank" rel="noopener">Cyber-risk management strategies and integration. International Journal of Physical Distribution &amp; Logistics Management, 54(11), 2024</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLACEHOLDER for article 4 (previously published) -->
+    <div class="writing">
       <article class="piece">
         <span class="status">Coming soon</span>
         <div>
