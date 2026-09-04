@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building an Organic Logistics Movement Capability — Kelroy James</title>
+  <meta name="description" content="Designing and delivering end-to-end movement governance, customs compliance, and inventory tracking for high-readiness multinational deployments from greenfield.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --ink:#131c28;--ink-2:#475569;--muted:#64748b;--surface:#ffffff;--bg:#f8fafc;
+    --rule:#e2e8f0;--brass:#b8860b;--brass-soft:#faf8f3;--shadow:0 1px 3px rgba(19,28,40,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Public Sans",sans-serif;background:var(--bg);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  
+  /* header */
+  .site-header{background:var(--surface);border-bottom:1px solid var(--rule);padding:18px 0;position:sticky;top:0;z-index:100}
+  .site-header .wrap{display:flex;justify-content:space-between;align-items:center}
+  .site-header .logo{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
+  .site-header nav{display:flex;gap:28px}
+  .site-header a{font-size:14px;color:var(--ink-2);text-decoration:none;transition:color .2s}
+  .site-header a:hover{color:var(--brass)}
+  
+  /* case study header */
+  .cs-hero{background:linear-gradient(135deg,#131c28 0%,#1e3a5f 100%);color:white;padding:80px 0 60px}
+  .cs-breadcrumb{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px;opacity:.8}
+  .cs-breadcrumb a{color:white;text-decoration:none}
+  .cs-breadcrumb a:hover{text-decoration:underline}
+  .cs-title{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:18px;max-width:24ch}
+  .cs-subtitle{font-size:1.15rem;opacity:.9;margin-bottom:32px;max-width:56ch;line-height:1.5}
+  .cs-meta{display:flex;gap:40px;flex-wrap:wrap}
+  .cs-meta-item{display:flex;flex-direction:column;gap:4px}
+  .cs-meta-label{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
+  .cs-meta-value{font-size:15px;font-weight:600}
+  
+  /* impact banner */
+  .impact-banner{background:var(--brass-soft);border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);padding:40px 0}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+  .impact-item{text-align:center}
+  .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
+  .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+  
+  /* content */
+  .cs-content{background:var(--surface);padding:60px 0}
+  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .cs-toc{position:sticky;top:100px;height:fit-content}
+  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc ul{list-style:none}
+  .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
+  .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
+  
+  .cs-section{margin-bottom:48px}
+  .cs-section h2{font-family:Spectral,Georgia,serif;font-size:1.8rem;font-weight:700;margin-bottom:16px;color:var(--ink)}
+  .cs-section h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:32px 0 12px;color:var(--ink)}
+  .cs-section p{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:16px;max-width:68ch}
+  .cs-section ul{margin:16px 0 16px 20px}
+  .cs-section li{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:8px}
+  .cs-section strong{color:var(--ink);font-weight:600}
+  
+  .highlight-box{background:var(--brass-soft);border-left:4px solid var(--brass);padding:24px;margin:28px 0;border-radius:4px}
+  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin-bottom:10px}
+  .highlight-box p{margin-bottom:8px}
+  .highlight-box p:last-child{margin-bottom:0}
+  
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:20px 0}
+  .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:13px;font-weight:500;border-radius:4px;box-shadow:var(--shadow)}
+  
+  .outcome-list{list-style:none;margin:20px 0}
+  .outcome-list li{padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--rule)}
+  .outcome-list li:last-child{border-bottom:none}
+  .outcome-list li:before{content:"✓";position:absolute;left:0;top:12px;color:var(--brass);font-size:1.3rem;font-weight:bold}
+  
+  /* footer */
+  .cs-footer{background:var(--surface);border-top:1px solid var(--rule);padding:40px 0}
+  .cs-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  .cs-footer a{color:var(--brass);text-decoration:none;font-weight:600}
+  .cs-footer a:hover{text-decoration:underline}
+  
+  @media(max-width:640px){
+    .cs-hero{padding:50px 0 40px}
+    .impact-grid{grid-template-columns:1fr 1fr}
+    .impact-number{font-size:2rem}
+  }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo">Kelroy James</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#work">Work</a>
+      <a href="/#background">Background</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="cs-hero">
+  <div class="wrap">
+    <div class="cs-breadcrumb">
+      <a href="/">Kelroy James</a> / <a href="/#work">Case Studies</a> / Logistics Movement Capability
+    </div>
+    <h1 class="cs-title">Building an Organic Logistics Movement Capability</h1>
+    <p class="cs-subtitle">Designing and delivering end-to-end movement governance, customs compliance, and inventory tracking for high-readiness multinational deployments from greenfield.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Timeline</span>
+        <span class="cs-meta-value">Apr 2017 – Dec 2017 (9 months)</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Role</span>
+        <span class="cs-meta-value">Project Lead & Compliance Designer</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Organization</span>
+        <span class="cs-meta-value">Royal Navy (Fleet Diving Squadron HQ)</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Methodology</span>
+        <span class="cs-meta-value">PRINCE2 Project Governance</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="impact-banner">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number">Zero</div>
+        <div class="impact-label">Financial Liability Exposure</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">100%</div>
+        <div class="impact-label">Operational Deployments Tracked</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">HMRC</div>
+        <div class="impact-label">Customs Compliance Achieved</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">Baltic</div>
+        <div class="impact-label">Multinational Exercise Validation</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cs-content">
+  <div class="wrap">
+    <div class="content-grid">
+      
+      <aside class="cs-toc">
+        <h4>Contents</h4>
+        <ul>
+          <li><a href="#challenge">Challenge</a></li>
+          <li><a href="#governance">Project Governance</a></li>
+          <li><a href="#compliance">Regulatory Compliance</a></li>
+          <li><a href="#delivery">Delivery & Validation</a></li>
+          <li><a href="#outcomes">Outcomes</a></li>
+          <li><a href="#transferable">Transferable Value</a></li>
+        </ul>
+      </aside>
+
+      <main>
+        
+        <section class="cs-section" id="challenge">
+          <h2>The Challenge</h2>
+          <p>A high-readiness unit deploying globally shouldn't depend on someone else's systems to know where its equipment is. That dependency created operational risk: when external tracking systems failed or access was delayed, the unit had no organic capability to account for equipment in transit or confirm arrival.</p>
+          
+          <div class="highlight-box">
+            <h4>The Strategic Problem</h4>
+            <p>Closing this gap meant building a movement organization from nothing: governance, infrastructure, procedures, and the customs compliance that underpinned it all. The project had to deliver end-to-end capability within the deployment cycle, not as a future-state aspiration.</p>
+          </div>
+
+          <p><strong>Specific Challenges:</strong></p>
+          <ul>
+            <li><strong>No existing infrastructure:</strong> Unit had no organic consignment tracking system or movement management capability</li>
+            <li><strong>External system dependency:</strong> Relied on external organizations for equipment visibility, creating operational risk</li>
+            <li><strong>Customs compliance gap:</strong> International deployments exposed the unit to financial liability without documented HMRC compliance</li>
+            <li><strong>Concurrent deployments:</strong> High operational tempo required capability to track multiple concurrent movements across different theaters</li>
+            <li><strong>Multinational context:</strong> Deployments involved NATO partners, requiring compatibility with allied tracking systems and customs regimes</li>
+            <li><strong>Contractor integration:</strong> Hardware installation required coordination with external contractors while maintaining operational readiness</li>
+          </ul>
+
+          <h3>Rob Jones' Assessment (Project OIC)</h3>
+          <p>Rob Jones (now Project Manager at Thales, then Officer in Charge) described this project context in his LinkedIn recommendation:</p>
+          <blockquote style="border-left:3px solid var(--brass);padding-left:20px;margin:20px 0;font-style:italic;color:var(--ink-2)">
+            "His application of the defence procurement model and capability to network with all stakeholders to achieve the required outcome is second to none. If I needed a supervisor to deliver a general defence task then he could always be relied on to deliver and didn't let the unit down."
+          </blockquote>
+          <p>This project was the operational proof of that assessment.</p>
+        </section>
+
+        <section class="cs-section" id="governance">
+          <h2>Project Governance (PRINCE2)</h2>
+          
+          <h3>Project Initiation Document (PID)</h3>
+          <p>Authored comprehensive PID following PRINCE2 methodology, establishing formal governance for the full delivery lifecycle.</p>
+
+          <p><strong>PID Components:</strong></p>
+
+          <p><strong>1. Stakeholder Mapping (Power/Interest Matrix)</strong></p>
+          <ul>
+            <li><strong>High Power, High Interest:</strong> Unit Command, HMRC liaison, NATO exercise coordinators</li>
+            <li><strong>High Power, Low Interest:</strong> Fleet Diving Group Command, Defence Equipment & Support (DE&S) procurement</li>
+            <li><strong>Low Power, High Interest:</strong> Diving team leaders (end users), contractor project managers</li>
+            <li><strong>Low Power, Low Interest:</strong> Wider supply chain community (monitor for lessons learned)</li>
+          </ul>
+
+          <p><strong>2. PESTLE Analysis</strong></p>
+          <ul>
+            <li><strong>Political:</strong> NATO interoperability requirements, allied exercise commitments</li>
+            <li><strong>Economic:</strong> Budget constraints, contractor cost control, financial liability exposure</li>
+            <li><strong>Social:</strong> User adoption, cultural shift from external dependency to organic ownership</li>
+            <li><strong>Technological:</strong> Tracking system compatibility, hardware installation constraints</li>
+            <li><strong>Legal:</strong> HMRC customs requirements, JSP 800/916 compliance, data protection</li>
+            <li><strong>Environmental:</strong> Baltic sea conditions, equipment ruggedization requirements</li>
+          </ul>
+
+          <p><strong>3. SWOT Analysis</strong></p>
+          <ul>
+            <li><strong>Strengths:</strong> Greenfield opportunity, command support, PRINCE2-trained project lead</li>
+            <li><strong>Weaknesses:</strong> No existing infrastructure, limited in-house technical expertise</li>
+            <li><strong>Opportunities:</strong> Establish best practice for other high-readiness units, reduce financial liability</li>
+            <li><strong>Threats:</strong> Deployment schedule pressure, contractor delays, budget overrun risk</li>
+          </ul>
+
+          <p><strong>4. Technical Risk Management</strong></p>
+          <p>Identified and mitigated risks across technology integration, contractor performance, user adoption, and compliance validation:</p>
+          <ul>
+            <li>Hardware failure in field conditions → Ruggedized equipment specification, redundancy planning</li>
+            <li>Contractor installation delays → Fixed-price contract with liquidated damages clause</li>
+            <li>User resistance to new procedures → Early engagement, training programme, champion identification</li>
+            <li>Customs compliance uncertainty → HMRC liaison established, legal review of SOPs</li>
+          </ul>
+
+          <h3>Contractor Integration</h3>
+          <p>Managed contractor relationship for hardware installation while maintaining unit operational readiness:</p>
+          <ul>
+            <li>Defined technical specifications and acceptance criteria in contract</li>
+            <li>Coordinated installation windows around deployment schedule</li>
+            <li>Conducted Factory Acceptance Testing (FAT) before field deployment</li>
+            <li>Managed change control process for scope variations</li>
+          </ul>
+        </section>
+
+        <section class="cs-section" id="compliance">
+          <h2>Regulatory Controls Design</h2>
+
+          <h3>The Compliance Problem</h3>
+          <p>International movements carry financial liability if customs requirements aren't met. Equipment moving between countries without proper documentation exposes the organization to tax, duty, and penalty charges. For a high-readiness unit deploying frequently, this risk compounded with every movement.</p>
+
+          <div class="highlight-box">
+            <h4>Regulatory Framework Integration</h4>
+            <p>Designed Standard Operating Procedures (SOPs) that aligned unit movements with three regulatory regimes simultaneously:</p>
+            <ul style="margin-top:12px">
+              <li><strong>HMRC Customs Requirements:</strong> UK customs authority for international goods movements</li>
+              <li><strong>JSP 800 (Defence Movements):</strong> Ministry of Defence movements policy and procedures</li>
+              <li><strong>JSP 916 (Tax and Duty):</strong> Financial liability management for international movements</li>
+            </ul>
+          </div>
+
+          <h3>SOP Design Approach</h3>
+          <p>Created SOPs that embedded compliance into the movement process rather than treating it as a separate audit activity:</p>
+
+          <p><strong>1. Pre-Movement Compliance Checklist</strong></p>
+          <ul>
+            <li>Customs documentation requirements by destination country</li>
+            <li>Duty relief eligibility assessment (temporary export vs. permanent transfer)</li>
+            <li>Commodity classification and valuation</li>
+            <li>Export license requirements (dual-use goods screening)</li>
+          </ul>
+
+          <p><strong>2. Movement Execution Controls</strong></p>
+          <ul>
+            <li>Consignment manifest generation (linking inventory system to customs declaration)</li>
+            <li>Packing list verification (declared vs. actual contents)</li>
+            <li>Seal integrity protocols (tamper-evident packaging for customs inspection)</li>
+            <li>Carrier instruction and documentation handover</li>
+          </ul>
+
+          <p><strong>3. Post-Movement Reconciliation</strong></p>
+          <ul>
+            <li>Receipt confirmation and discrepancy reporting</li>
+            <li>Customs clearance evidence retention</li>
+            <li>Temporary export return tracking (ensuring duty-free equipment returns to UK)</li>
+            <li>Financial liability closure (confirming no outstanding duty exposure)</li>
+          </ul>
+
+          <h3>Outcome: Auditable Compliance Position</h3>
+          <p>The unit gained an auditable compliance position it hadn't previously held. In the event of HMRC or MoD inspection, the unit could demonstrate:</p>
+          <ul>
+            <li>Documentary evidence of customs compliance for every international movement</li>
+            <li>Alignment with JSP 800 and JSP 916 policy requirements</li>
+            <li>Zero financial liability exposure from improper movements</li>
+            <li>Segregation of duties and approval controls preventing unauthorized movements</li>
+          </ul>
+        </section>
+
+        <section class="cs-section" id="delivery">
+          <h2>Delivery & Operational Validation</h2>
+
+          <h3>Infrastructure Installation</h3>
+          <p>Installed organic consignment tracking infrastructure with contractor support:</p>
+          <ul>
+            <li>Hardware deployment: ruggedized tracking units, scanning equipment, mobile connectivity</li>
+            <li>System integration: linking tracking platform to unit inventory database</li>
+            <li>User training: movement coordinators, diving team leaders, command staff</li>
+            <li>Documentation: user manuals, troubleshooting guides, escalation procedures</li>
+          </ul>
+
+          <h3>Field Validation: Baltic & European Theatre Deployments</h3>
+          <p>The true test of any movement capability is whether it works under operational conditions, not just in trial. Proved the capability across multinational exercise deployments in the Baltic and wider European theatre.</p>
+
+          <div class="highlight-box">
+            <h4>Operational Validation Criteria</h4>
+            <ul style="margin-top:12px">
+              <li><strong>Real-time visibility:</strong> Command staff could track equipment location and status during transit</li>
+              <li><strong>Concurrent deployments:</strong> System handled multiple simultaneous movements across different countries</li>
+              <li><strong>Customs clearance:</strong> All movements cleared customs without delay or financial penalty</li>
+              <li><strong>User adoption:</strong> Diving teams used the system organically, without constant oversight</li>
+              <li><strong>System resilience:</strong> Hardware functioned in Baltic sea conditions (salt spray, humidity, temperature variation)</li>
+            </ul>
+          </div>
+
+          <p><strong>Specific Deployment Scenarios Validated:</strong></p>
+          <ul>
+            <li>UK → Poland (NATO exercise): multi-vehicle convoy with mixed cargo (diving equipment, vehicles, consumables)</li>
+            <li>Poland → Estonia (forward deployment): cross-border transit through multiple EU customs regimes</li>
+            <li>Return movements: temporary export return to UK, confirming duty-free status maintained</li>
+            <li>Emergency resupply: expedited movement of critical equipment with accelerated customs clearance</li>
+          </ul>
+
+          <h3>Outcome: Organic Capability Delivered</h3>
+          <p>The unit gained end-to-end inventory visibility and the ability to sustain concurrent high-readiness deployments on its own infrastructure, with regulatory assurance built into the movement process rather than checked after it.</p>
+
+          <p>This meant:</p>
+          <ul>
+            <li><strong>Operational independence:</strong> No longer dependent on external systems for equipment visibility</li>
+            <li><strong>Command confidence:</strong> Real-time situational awareness of equipment location and status</li>
+            <li><strong>Financial assurance:</strong> Zero liability exposure from non-compliant movements</li>
+            <li><strong>Scalability:</strong> Capability to handle increased operational tempo without infrastructure failure</li>
+          </ul>
+        </section>
+
+        <section class="cs-section" id="outcomes">
+          <h2>Measurable Outcomes</h2>
+
+          <ul class="outcome-list">
+            <li><strong>Zero financial liability exposure achieved</strong> — All international movements compliant with HMRC, JSP 800, and JSP 916; no duty charges or penalties incurred</li>
+            <li><strong>100% operational deployment tracking</strong> — Every movement from project go-live tracked through organic system, proving capability under operational pressure</li>
+            <li><strong>Multinational exercise validation (Baltic theatre)</strong> — System field-tested across NATO partner movements, demonstrating interoperability and resilience</li>
+            <li><strong>PRINCE2 project governance delivered on time and budget</strong> — PID-documented scope delivered within 9-month timeline and approved budget envelope</li>
+            <li><strong>Contractor integration successful</strong> — Hardware installation completed without operational impact; FAT and UAT acceptance criteria met</li>
+            <li><strong>SOP suite adopted as unit policy</strong> — Customs compliance SOPs embedded in unit standing orders, ensuring sustainability beyond project closure</li>
+            <li><strong>Organic capability independence</strong> — Unit no longer dependent on external systems for equipment visibility during deployments</li>
+            <li><strong>Concurrent deployment capability</strong> — Infrastructure scaled to handle multiple simultaneous movements across different theaters</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4>Rob Jones' Validation</h4>
+            <p>From Rob Jones' LinkedIn recommendation (OIC during this project):</p>
+            <blockquote style="font-style:italic;margin-top:12px">
+              "Of all the logistics specialists I worked with over 12 years if I could select one to support my engineers on the ground it would be Kelroy. He could always be relied on to deliver and didn't let the unit down."
+            </blockquote>
+            <p style="margin-top:12px">This project was the proof: greenfield capability delivery, from governance to operational validation, with zero failures.</p>
+          </div>
+        </section>
+
+        <section class="cs-section" id="transferable">
+          <h2>Transferable Value to Civilian Roles</h2>
+
+          <h3>Skills Demonstrated</h3>
+          <div class="tools-grid">
+            <div class="tool-tag">PRINCE2 Governance</div>
+            <div class="tool-tag">Capability Delivery</div>
+            <div class="tool-tag">Customs Compliance</div>
+            <div class="tool-tag">Risk Management</div>
+            <div class="tool-tag">Stakeholder Mapping</div>
+            <div class="tool-tag">PESTLE Analysis</div>
+            <div class="tool-tag">SWOT Analysis</div>
+            <div class="tool-tag">Contractor Integration</div>
+            <div class="tool-tag">SOP Design</div>
+            <div class="tool-tag">Regulatory Alignment</div>
+            <div class="tool-tag">Process Design</div>
+            <div class="tool-tag">User Training</div>
+          </div>
+
+          <h3>Civilian Sector Applications</h3>
+
+          <p><strong>Supply Chain Manager / Logistics Operations Manager:</strong></p>
+          <ul>
+            <li>Designing movement capabilities for organizations with international operations</li>
+            <li>Building customs compliance processes for cross-border trade</li>
+            <li>Implementing inventory tracking systems with regulatory requirements integration</li>
+            <li>Managing contractor relationships for infrastructure projects</li>
+          </ul>
+
+          <p><strong>Project Manager (Infrastructure / Systems Implementation):</strong></p>
+          <ul>
+            <li>PRINCE2 project governance for greenfield capability delivery</li>
+            <li>Stakeholder management using power/interest matrix and structured engagement</li>
+            <li>Risk management through PESTLE, SWOT, and technical risk registers</li>
+            <li>Contractor integration and acceptance testing (FAT/UAT)</li>
+          </ul>
+
+          <p><strong>Compliance Manager (Trade / Export Control):</strong></p>
+          <ul>
+            <li>Designing SOPs that embed regulatory requirements into operational processes</li>
+            <li>Aligning multiple regulatory regimes (customs, tax, trade policy) into coherent controls</li>
+            <li>Building auditable compliance positions with documentary evidence trails</li>
+            <li>Managing financial liability exposure from international movements</li>
+          </ul>
+
+          <p><strong>Management Consultant (Capability Development):</strong></p>
+          <ul>
+            <li>Diagnosing dependency vulnerabilities (reliance on external systems)</li>
+            <li>Designing organic capabilities that reduce operational risk</li>
+            <li>Delivering complex projects with PRINCE2 methodology in high-pressure environments</li>
+            <li>Validating capability under real-world conditions, not just trial scenarios</li>
+          </ul>
+
+          <h3>Why This Project Matters for Civilian Transition</h3>
+
+          <p>This project demonstrates the full lifecycle of capability delivery in a regulated, high-stakes environment:</p>
+
+          <ul>
+            <li><strong>Greenfield delivery:</strong> Built from nothing to operational capability in 9 months</li>
+            <li><strong>Regulatory complexity:</strong> Integrated HMRC, JSP 800, JSP 916 into coherent SOPs</li>
+            <li><strong>Stakeholder management:</strong> Navigated command, contractors, NATO partners, customs authorities</li>
+            <li><strong>Operational validation:</strong> Proved capability under real-world pressure, not just trial conditions</li>
+            <li><strong>Financial assurance:</strong> Delivered zero liability exposure through systematic compliance design</li>
+          </ul>
+
+          <p>For civilian employers, this translates directly to:</p>
+          <ul>
+            <li>Infrastructure project delivery (systems implementation, process re-engineering)</li>
+            <li>Trade compliance programmes (export control, customs, duty management)</li>
+            <li>Supply chain resilience (reducing external dependencies, building organic capabilities)</li>
+            <li>PRINCE2 governance (formal project management in regulated sectors)</li>
+          </ul>
+
+          <p>The skills are commercial-grade. Only the sector differs.</p>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+</div>
+
+<div class="cs-footer">
+  <div class="wrap">
+    <div>
+      <a href="/#work">← Back to all case studies</a>
+    </div>
+    <div>
+      <a href="/#contact">Discuss this project →</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
