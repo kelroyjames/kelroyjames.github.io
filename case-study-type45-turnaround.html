@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type 45 Destroyer Account Turnaround — Kelroy James</title>
+  <meta name="description" content="How systematic control design transformed an unsatisfactory supply chain account to full compliance, with 3 control artefacts adopted beyond the original unit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --ink:#131c28;--ink-2:#475569;--muted:#64748b;--surface:#ffffff;--bg:#f8fafc;
+    --rule:#e2e8f0;--brass:#b8860b;--brass-soft:#faf8f3;--shadow:0 1px 3px rgba(19,28,40,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Public Sans",sans-serif;background:var(--bg);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  
+  /* header */
+  .site-header{background:var(--surface);border-bottom:1px solid var(--rule);padding:18px 0;position:sticky;top:0;z-index:100}
+  .site-header .wrap{display:flex;justify-content:space-between;align-items:center}
+  .site-header .logo{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
+  .site-header nav{display:flex;gap:28px}
+  .site-header a{font-size:14px;color:var(--ink-2);text-decoration:none;transition:color .2s}
+  .site-header a:hover{color:var(--brass)}
+  
+  /* case study header */
+  .cs-hero{background:linear-gradient(135deg,#131c28 0%,#1e3a5f 100%);color:white;padding:80px 0 60px}
+  .cs-breadcrumb{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px;opacity:.8}
+  .cs-breadcrumb a{color:white;text-decoration:none}
+  .cs-breadcrumb a:hover{text-decoration:underline}
+  .cs-title{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:18px;max-width:20ch}
+  .cs-subtitle{font-size:1.15rem;opacity:.9;margin-bottom:32px;max-width:50ch;line-height:1.5}
+  .cs-meta{display:flex;gap:40px;flex-wrap:wrap}
+  .cs-meta-item{display:flex;flex-direction:column;gap:4px}
+  .cs-meta-label{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
+  .cs-meta-value{font-size:15px;font-weight:600}
+  
+  /* impact banner */
+  .impact-banner{background:var(--brass-soft);border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);padding:40px 0}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+  .impact-item{text-align:center}
+  .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
+  .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+  
+  /* content */
+  .cs-content{background:var(--surface);padding:60px 0}
+  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .cs-toc{position:sticky;top:100px;height:fit-content}
+  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc ul{list-style:none}
+  .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
+  .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
+  
+  .cs-section{margin-bottom:48px}
+  .cs-section h2{font-family:Spectral,Georgia,serif;font-size:1.8rem;font-weight:700;margin-bottom:16px;color:var(--ink)}
+  .cs-section h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:32px 0 12px;color:var(--ink)}
+  .cs-section p{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:16px;max-width:68ch}
+  .cs-section ul{margin:16px 0 16px 20px}
+  .cs-section li{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:8px}
+  .cs-section strong{color:var(--ink);font-weight:600}
+  
+  .highlight-box{background:var(--brass-soft);border-left:4px solid var(--brass);padding:24px;margin:28px 0;border-radius:4px}
+  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin-bottom:10px}
+  .highlight-box p{margin-bottom:0}
+  
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:20px 0}
+  .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:13px;font-weight:500;border-radius:4px;box-shadow:var(--shadow)}
+  
+  .outcome-list{list-style:none;margin:20px 0}
+  .outcome-list li{padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--rule)}
+  .outcome-list li:last-child{border-bottom:none}
+  .outcome-list li:before{content:"✓";position:absolute;left:0;top:12px;color:var(--brass);font-size:1.3rem;font-weight:bold}
+  
+  /* footer */
+  .cs-footer{background:var(--surface);border-top:1px solid var(--rule);padding:40px 0}
+  .cs-footer .wrap{display:flex;justify-content:space-between;align-items:center}
+  .cs-footer a{color:var(--brass);text-decoration:none;font-weight:600}
+  .cs-footer a:hover{text-decoration:underline}
+  
+  @media(max-width:640px){
+    .cs-hero{padding:50px 0 40px}
+    .impact-grid{grid-template-columns:1fr 1fr}
+    .impact-number{font-size:2rem}
+  }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo">Kelroy James</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#work">Work</a>
+      <a href="/#background">Background</a>
+    </nav>
+  </div>
+</header>
+
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="cs-breadcrumb">
+      <a href="/">Home</a> / <a href="/#work">Case Studies</a> / Type 45 Turnaround
+    </div>
+    <h1 class="cs-title">Type 45 Destroyer Supply Chain Account Turnaround</h1>
+    <p class="cs-subtitle">How systematic control design transformed an unsatisfactory account to full compliance, with control artefacts adopted fleet-wide.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Role</span>
+        <span class="cs-meta-value">Supply Chain Manager (Petty Officer)</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Timeline</span>
+        <span class="cs-meta-value">May 2024 – Present</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Platform</span>
+        <span class="cs-meta-value">Type 45 Destroyer</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Outcome</span>
+        <span class="cs-meta-value">Full Compliance Achieved</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact-banner">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number">3</div>
+        <div class="impact-label">Control Artefacts Adopted Beyond Unit</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">100%</div>
+        <div class="impact-label">Compliance Achievement</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">Navy-Wide</div>
+        <div class="impact-label">Process Improvement Impact</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-content">
+  <div class="wrap">
+    <div class="content-grid">
+      
+      <aside class="cs-toc">
+        <h4>Contents</h4>
+        <ul>
+          <li><a href="#challenge">The Challenge</a></li>
+          <li><a href="#context">Context & Stakes</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#controls">Controls Designed</a></li>
+          <li><a href="#outcomes">Outcomes</a></li>
+          <li><a href="#lessons">Lessons Learned</a></li>
+        </ul>
+      </aside>
+      
+      <div>
+        
+        <div class="cs-section" id="challenge">
+          <h2>The Challenge</h2>
+          <p>In May 2024, I took over the supply chain account for a Type 45 destroyer that had been assessed as <strong>unsatisfactory</strong> by fleet logistics inspectors. The account had systematic compliance failures across inventory control, financial reconciliation, and loss investigation processes.</p>
+          <p>The previous system was person-dependent rather than process-driven. When personnel rotated, institutional knowledge left with them. There were no standardised first-line controls, no audit trail for decisions, and no regeneration matrix to prevent the same failures from recurring under the next account holder.</p>
+          
+          <div class="highlight-box">
+            <h4>The Core Problem</h4>
+            <p>An account assessed as unsatisfactory does not fail because nobody worked hard enough. It fails because the controls that should make compliance routine either do not exist or cannot be followed consistently by whoever happens to hold the role.</p>
+          </div>
+        </div>
+        
+        <div class="cs-section" id="context">
+          <h2>Context & Stakes</h2>
+          <p>Type 45 destroyers are the Royal Navy's principal air defence platforms. The supply chain account manages:</p>
+          <ul>
+            <li>Thousands of line items across multiple NATO Stock Numbers</li>
+            <li>High-value equipment including classified and controlled items</li>
+            <li>Financial accountability for expenditure and asset holdings</li>
+            <li>Compliance with Defence Equipment & Support (DE&S) policy and audit requirements</li>
+            <li>Readiness to deploy on short notice with verified inventory</li>
+          </ul>
+          <p>An unsatisfactory rating means the account cannot assure what it holds, what it has spent, or whether losses have been investigated to the standard required for continued operations. That risk extends beyond the ship to fleet-wide confidence in supply chain data.</p>
+        </div>
+        
+        <div class="cs-section" id="approach">
+          <h2>Approach</h2>
+          <p>Rather than attempting to fix individual findings in isolation, I built the account around <strong>first-line controls</strong>—tools and processes that make compliance the default path, not the exceptional effort.</p>
+          
+          <h3>1. Root Cause Analysis</h3>
+          <p>I mapped each inspection finding back to the missing control that should have prevented it:</p>
+          <ul>
+            <li>Financial variances occurred because there was no validation step before commitment</li>
+            <li>Loss investigations stalled because there was no standardised pack structure</li>
+            <li>Audit trails were incomplete because there was no single source of truth for decisions</li>
+          </ul>
+          
+          <h3>2. Control Design</h3>
+          <p>For each gap, I designed a control artefact that:</p>
+          <ul>
+            <li><strong>Required minimal training</strong> – A new account holder could pick it up and use it immediately</li>
+            <li><strong>Built the audit trail automatically</strong> – Compliance became a by-product of normal work</li>
+            <li><strong>Scaled beyond this platform</strong> – Generic enough to apply to any similar account</li>
+          </ul>
+          
+          <h3>3. Implementation & Testing</h3>
+          <p>Each control was tested in live operations, refined based on real-world friction, and documented so it could be handed over intact. I also created a <strong>regeneration matrix</strong>—a lessons-learned framework that links findings to controls, so future inspections do not surface the same issues.</p>
+        </div>
+        
+        <div class="cs-section" id="controls">
+          <h2>Controls Designed</h2>
+          
+          <h3>Validation Aide-Mémoires</h3>
+          <p>Checklists embedded into the financial commitment workflow that force verification of key data points before expenditure is authorised. Each check corresponds to a regulatory requirement, and the completed aide-mémoire becomes the audit evidence.</p>
+          
+          <h3>Auditable Voucher Reports</h3>
+          <p>Standardised reporting templates that extract voucher data from the Defence ERP system and present it in a format optimised for inspection. Instead of investigators querying multiple systems, the report consolidates what they need to see, pre-validated.</p>
+          
+          <h3>Standardised Losses Packs</h3>
+          <p>A structured template for loss investigations that ensures every required element—witness statements, physical search records, financial impact assessment, corrective actions—is captured in a consistent sequence. This pack structure has been adopted by another unit and by the wider organisation for all loss cases.</p>
+          
+          <h3>Action Grid for High-Risk Findings</h3>
+          <p>A prioritisation matrix that maps inspection findings to risk level and assigns mitigation actions with accountable owners and deadlines. This grid became the single source of truth for remediation progress, visible to leadership and inspectors alike.</p>
+          
+          <div class="tools-grid">
+            <div class="tool-tag">Defense ERP</div>
+            <div class="tool-tag">Excel (Advanced)</div>
+            <div class="tool-tag">Audit Frameworks</div>
+            <div class="tool-tag">Process Mapping</div>
+            <div class="tool-tag">ISO 27001 Principles</div>
+          </div>
+        </div>
+        
+        <div class="cs-section" id="outcomes">
+          <h2>Outcomes</h2>
+          
+          <ul class="outcome-list">
+            <li><strong>Account Left Charge Fully Compliant</strong> – All inspection findings closed, no outstanding corrective actions at handover</li>
+            <li><strong>3 Control Artefacts Adopted Beyond Unit</strong> – Standardised losses pack adopted by another Type 45 and by the wider organisation; S82 financial template adopted for upkeep cycles; standardised stores robbery form now in use fleet-wide</li>
+            <li><strong>Process Improvement, Not Person Dependency</strong> – The account remained compliant under the next holder because the controls were embedded in the workflow, not in individual expertise</li>
+            <li><strong>Navy-Wide Policy Instruction Proposed</strong> – Control design lessons informed a proposed policy update to prevent similar failures across the fleet</li>
+          </ul>
+          
+          <div class="highlight-box">
+            <h4>Transferable Impact</h4>
+            <p>The real measure of success is not that this account became compliant—it is that the controls built for this account are now preventing failures on other platforms. That is enterprise-level process improvement, not localised firefighting.</p>
+          </div>
+        </div>
+        
+        <div class="cs-section" id="lessons">
+          <h2>Lessons Learned</h2>
+          
+          <h3>Design for Handover From Day One</h3>
+          <p>If a control cannot be used by your successor without you in the room, it is not a control—it is personal knowledge. Every artefact I designed was tested by asking: "Could the next person pick this up and run with it?"</p>
+          
+          <h3>Compliance Should Be the Path of Least Resistance</h3>
+          <p>People do not fail to comply because they are careless. They fail because compliance is harder than non-compliance. If your process makes the compliant action the easiest action, compliance becomes automatic.</p>
+          
+          <h3>Build Once, Apply Widely</h3>
+          <p>The controls that fixed this account were generic by design. A Type 45 destroyer and a support vessel have different inventories, but the control logic—validate before commit, standardise investigation packs, maintain an audit trail—applies to both. That generalisability is what made these artefacts adoptable beyond the original context.</p>
+          
+          <h3>Document the "Why," Not Just the "How"</h3>
+          <p>The regeneration matrix does not just list what controls exist. It explains why each control exists, which finding it mitigates, and what happens if it is not followed. That context is what allows future account holders to make informed decisions when circumstances change.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-footer">
+  <div class="wrap">
+    <div>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:6px">Next Case Study</p>
+      <a href="/case-study-financial-control.html">£2.4M Financial Control Recovery →</a>
+    </div>
+    <a href="/">← Back to Home</a>
+  </div>
+</section>
+
+</body>
+</html>
