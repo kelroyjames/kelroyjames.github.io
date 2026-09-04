@@ -70,8 +70,21 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .masthead{
   background:var(--surface);
   border-bottom:1px solid var(--rule);
-  padding:48px 0 44px;
+  padding:0;
   margin-bottom:52px;
+  position:relative;
+}
+.featured-image{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+@media(min-width:800px){
+  .featured-image{height:420px}
+}
+.masthead-content{
+  padding:48px 0 44px;
 }
 .eyebrow{
   font-family:"IBM Plex Mono",ui-monospace,monospace;
@@ -195,7 +208,8 @@ footer p{
 </div>
 
 <header class="masthead">
-  <div class="wrap">
+  <img src="/images/articles/trade-finance-header.jpg" alt="Global blockchain network" class="featured-image">
+  <div class="wrap masthead-content">
     <div class="eyebrow">
       <span class="tick">◆</span>
       <span>Trade Finance</span>

@@ -72,7 +72,9 @@
   }
   .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 
-  header.top{background:var(--surface);border-bottom:1px solid var(--rule)}
+  header.top{background:var(--surface);border-bottom:1px solid var(--rule);position:relative}
+  .featured-image{width:100%;height:320px;object-fit:cover;display:block}
+  @media(min-width:800px){.featured-image{height:420px}}
   header.top .wrap{padding:56px 24px 42px;display:flex;flex-direction:column;gap:26px}
   .eyebrow{
     font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
@@ -184,6 +186,7 @@
 </style>
 
 <header class="top">
+  <img src="/images/articles/same-control-header.jpg" alt="Bridge connecting two perspectives" class="featured-image">
   <div class="wrap">
     <div class="eyebrow"><span class="tick">◆</span><span>Translation aid</span><span>Defence logistics → GRC</span><span>Public frameworks only</span></div>
     <h1>Same control, two vocabularies</h1>
