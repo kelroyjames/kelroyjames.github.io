@@ -224,6 +224,25 @@
   .prose p{max-width:64ch;color:var(--ink-2);margin:0 0 15px;font-size:15.5px}
   .prose p:last-child{margin-bottom:0}
 
+  /* ============ testimonials ============ */
+  .testimonials{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .testimonial-card{
+    background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--brass);
+    box-shadow:var(--shadow);padding:32px 30px 28px;display:flex;flex-direction:column;gap:20px;
+  }
+  .testimonial-quote{
+    font-family:Spectral,Georgia,serif;font-size:1.08rem;line-height:1.65;
+    color:var(--ink-2);margin:0;font-style:italic;
+  }
+  .testimonial-quote::before{content:"\201C";font-size:2.2rem;color:var(--brass);line-height:0;margin-right:6px;vertical-align:-0.4em}
+  .testimonial-footer{display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid var(--rule-soft)}
+  .testimonial-author{font-size:15px;font-weight:600;color:var(--ink);margin:0}
+  .testimonial-role{font-size:13.5px;color:var(--muted);margin:0}
+  .testimonial-context{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--brass);margin:6px 0 0;
+  }
+
   /* ============ contact ============ */
   .contact{background:var(--surface-2);border-top:1px solid var(--rule)}
   .contact .wrap{padding:60px 26px}
@@ -253,6 +272,7 @@
       <li><a class="lnk" href="/skills-expertise.html">Skills</a></li>
       <li><a class="lnk" href="#writing">Writing</a></li>
       <li><a class="lnk" href="#background">Background</a></li>
+      <li><a class="lnk" href="#testimonials">Testimonials</a></li>
       <li><a class="lnk" href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -517,6 +537,23 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="sec-head"><h2>What Others Say</h2><span class="note">Professional recommendations</span></div>
+    <p class="intro-p">Testimonials from colleagues and supervisors who have seen the work first-hand.</p>
+    
+    <div class="testimonial-card">
+      <p class="testimonial-quote">I had the privilege of being the Officer in Charge of Kelroy's unit at the Fleet Diving Squadron Headquarters. He was diligent, efficient and passionate about his work in a way that enthused those around him. Of all the logistics specialists I worked with over 12 years if I could select one to support my engineers on the ground it would be Kelroy. His application of the defence procurement model and capability to network with all stakeholders to achieve the required outcome is second to none and if I needed a supervisor to deliver a general defence task then he could always be relied on to deliver and didn't let the unit down. He's also fluent in 'pongo' and managed to seamlessly engage with colleagues from other branches, services and even countries with a smile on his face and top feedback. If you have critical logistics needs, this is the man you need to manage it!</p>
+      <div class="testimonial-footer">
+        <p class="testimonial-author">Rob Jones CEng MIET FCMI</p>
+        <p class="testimonial-role">Project Manager at Thales</p>
+        <p class="testimonial-context">Officer in Charge · Fleet Diving Squadron HQ</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
