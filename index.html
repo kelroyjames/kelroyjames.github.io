@@ -89,7 +89,19 @@
   }
   .hero .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.08rem,2vw,1.32rem);line-height:1.5;color:var(--ink-2);margin:0 0 20px;max-width:56ch}
   .hero p.sub{margin:0;max-width:58ch;color:var(--ink-2);font-size:15.5px}
-  .facts{align-self:start;border-top:2px solid var(--brass);padding-top:20px;display:flex;flex-direction:column;gap:16px}
+  .hero-visual{display:flex;flex-direction:column;gap:32px}
+  .headshot-placeholder{
+    width:200px;height:200px;border-radius:50%;overflow:hidden;
+    background:var(--surface-2);border:3px solid var(--brass);
+    box-shadow:var(--shadow);align-self:center;position:relative;
+  }
+  .headshot-placeholder svg{width:100%;height:100%}
+  .upload-note{
+    position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);
+    font-size:11px;color:var(--muted);white-space:nowrap;
+    font-family:"IBM Plex Mono",monospace;letter-spacing:.05em;
+  }
+  .facts{align-self:start;border-top:2px solid var(--brass);padding-top:20px;display:flex;flex-direction:column;gap:16px;width:100%}
   .fact{display:flex;flex-direction:column;gap:2px}
   .fact dt{
     font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;
@@ -169,6 +181,9 @@
     text-transform:uppercase;color:var(--muted);margin:0 0 16px;
     padding-bottom:9px;border-bottom:1px solid var(--rule);
   }
+  .cert-badges{display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+  .cert-badge{width:80px;height:80px;object-fit:contain;filter:grayscale(0%);transition:transform .2s ease}
+  .cert-badge:hover{transform:scale(1.1)}
   .bg-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
   .bg-list li{display:flex;flex-direction:column;gap:2px}
   .bg-list .t{font-size:15px;color:var(--ink);font-weight:500}
@@ -218,12 +233,22 @@
       <p class="lede">I have spent seventeen years operating controls in Defence logistics. Nobody ever called them controls.</p>
       <p class="sub">I work on the seam between physical supply chains and the governance functions that are supposed to assure them: asset accountability, supplier due diligence, trade compliance and the growing problem of AI-enabled decisions nobody can trace. I write about where that seam fails, and I build the tools I wish I had been handed.</p>
     </div>
-    <dl class="facts">
-      <div class="fact"><dt>Current</dt><dd>Petty Officer (Supply Chain), Royal Navy</dd></div>
-      <div class="fact"><dt>Focus</dt><dd>Assurance, inventory and asset management, AI governance</dd></div>
-      <div class="fact"><dt>Reading for</dt><dd>MSc Supply Chain and Logistics Management</dd></div>
-      <div class="fact"><dt>Available</dt><dd>From 2028, on resettlement</dd></div>
-    </dl>
+    <div class="hero-visual">
+      <div class="headshot-placeholder">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="95" fill="var(--surface-2)" stroke="var(--brass)" stroke-width="2"/>
+          <circle cx="100" cy="75" r="30" fill="var(--brass)" opacity="0.3"/>
+          <path d="M 50 150 Q 100 120 150 150" fill="var(--brass)" opacity="0.3"/>
+        </svg>
+        <p class="upload-note">Add your professional headshot here</p>
+      </div>
+      <dl class="facts">
+        <div class="fact"><dt>Current</dt><dd>Petty Officer (Supply Chain), Royal Navy</dd></div>
+        <div class="fact"><dt>Focus</dt><dd>Assurance, inventory and asset management, AI governance</dd></div>
+        <div class="fact"><dt>Reading for</dt><dd>MSc Supply Chain and Logistics Management</dd></div>
+        <div class="fact"><dt>Available</dt><dd>From 2028, on resettlement</dd></div>
+      </dl>
+    </div>
   </div>
 </header>
 
@@ -337,6 +362,10 @@
         </div>
         <div class="bg-block">
           <h3>Certification</h3>
+          <div class="cert-badges">
+            <img src="/images/badges/iso-27001.png" alt="ISO 27001 Certified" class="cert-badge">
+            <img src="/images/badges/comptia-pentest.png" alt="CompTIA PenTest+" class="cert-badge">
+          </div>
           <ul class="bg-list">
             <li><span class="t">ISO/IEC 27001, 42001 and 27701 Lead Auditor</span><span class="d">Information security, AI management, privacy</span></li>
             <li><span class="t">FellowMSA</span><span class="d">Fellow of Management Systems Auditing</span></li>

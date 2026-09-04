@@ -86,6 +86,16 @@
   .masthead{
     background:var(--surface);
     border-bottom:1px solid var(--rule);
+    position:relative;
+  }
+  .featured-image{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    display:block;
+  }
+  @media(min-width:800px){
+    .featured-image{height:420px}
   }
   .masthead .wrap{
     display:flex;flex-direction:column;gap:28px;
@@ -288,6 +298,7 @@
 </style>
 
 <header class="masthead">
+  <img src="/images/articles/osint-header.jpg" alt="Investigation and verification" class="featured-image">
   <div class="wrap">
     <div class="eyebrow">
       <span class="tick">◆</span>
