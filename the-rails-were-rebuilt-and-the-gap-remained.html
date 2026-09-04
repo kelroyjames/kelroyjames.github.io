@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An examination of decentralised finance, trade documentation, and the persistent global trade finance gap.">
+<title>The rails were rebuilt, and the gap remained — Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3;
+  --surface:#FFFFFF;
+  --surface-2:#F5F7F9;
+  --ink:#15202B;
+  --ink-2:#3D4C59;
+  --muted:#697887;
+  --rule:#D3DAE1;
+  --rule-soft:#E3E8ED;
+  --accent:#1B5C87;
+  --accent-soft:#E2EDF4;
+  --signal:#9A6410;
+  --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#74AAD0;
+    --accent-soft:#1A2C3A;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* top nav */
+.topnav{padding:22px 0 0;margin-bottom:44px}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:#6B7885;
+}
+.topnav a:hover{color:var(--accent)}
+
+/* masthead */
+.masthead{
+  background:var(--surface);
+  border-bottom:1px solid var(--rule);
+  padding:48px 0 44px;
+  margin-bottom:52px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:0 0 20px;
+  text-wrap:balance;
+  max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;
+  font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;
+  padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+/* article body */
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.65rem;font-weight:700;
+  margin:56px 0 18px;
+  letter-spacing:-.012em;
+}
+.prose h3{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.32rem;font-weight:600;
+  margin:42px 0 14px;
+  letter-spacing:-.008em;
+}
+.prose h4{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.12rem;font-weight:600;
+  margin:32px 0 10px;
+}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose blockquote{
+  border-left:3px solid var(--accent);
+  padding-left:20px;
+  margin:26px 0;
+  font-style:italic;
+  color:var(--ink-2);
+}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+
+/* references section */
+.references{
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  margin-top:56px;
+}
+.references h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.45rem;font-weight:700;
+  margin:0 0 20px;
+}
+.references h3,.references h4{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:24px 0 12px;
+  font-weight:500;
+}
+.references ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+}
+.references li{
+  margin-bottom:10px;
+  font-size:14px;
+  line-height:1.6;
+  padding-left:14px;
+  position:relative;
+}
+.references li::before{
+  content:"—";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+
+footer{
+  padding:34px 0 56px;
+  border-top:1px solid var(--rule);
+}
+footer p{
+  font-size:12.5px;color:var(--muted);
+  max-width:70ch;margin:0 0 10px;
+  line-height:1.6;
+}
+</style>
+</head>
+<body>
+<div class="wrap topnav">
+  <a href="/">&#8592; Kelroy James</a>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="tick">◆</span>
+      <span>Trade Finance</span>
+      <span>DeFi</span>
+      <span>Infrastructure</span>
+    </div>
+    <h1>The rails were rebuilt, and the gap remained</h1>
+    <p class="standfirst">Some years ago, a building society in Saint Vincent lost correspondent banking. The experience drew me towards blockchain. Three years is long enough for that argument to be tested.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>January 2026</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>Some years ago, the building society that held my mortgage in Saint Vincent lost its correspondent banking relationship. The stated concern was money-laundering risk.</p>
+
+<p>The practical effect was simple: from several thousand miles away, I could no longer deposit a cheque. Payments were not merely slower, and charges had not merely risen. The ordinary means by which a person puts money into an account had ceased to exist.</p>
+
+<p>So far as I could tell, nobody had assessed me individually. Nor had anyone determined whether that particular building society's controls were adequate. A decision had been made about a jurisdiction, an institution of a certain size, and the economics of maintaining the relationship. Everyone within the perimeter of that decision bore its consequences.</p>
+
+<p>At the time, the experience drew me towards blockchain. In January 2023, <em>Trade Finance Global</em> published an article I wrote with Brian Canup arguing that decentralised finance and digital trade infrastructure might reduce the cost of participating in international trade. Three years is long enough for such an argument to be tested. In this case, the test has been instructive.</p>
+
+<h4>The original argument</h4>
+
+<p>The case rested on three observations.</p>
+
+<p>First, trade remained dependent on documents that were often still paper-based: bills of lading, bills of exchange, letters of credit and the rest of the documentary machinery that supports the movement of goods.</p>
+
+<p>Second, cross-border payments were expensive. Currency conversion, intermediary charges, compliance requirements and operational friction fell hardest on smaller firms and smaller financial institutions.</p>
+
+<p>Third, the benefits of globalisation had not been evenly distributed. The premise of the 2023 article was that better trade infrastructure could lower barriers to entry and widen access to trade finance, particularly for businesses and economies that conventional banking had left at the margins.</p>
+
+<p>We proposed decentralised finance as part of the answer. We were careful not to treat it as a settled category. DeFi is neither a precise legal term nor a single technical architecture. We used it in the broad sense: financial services delivered through networks in which participants, intermediaries and users may be distributed across jurisdictions rather than concentrated within a conventional institution.</p>
+
+<p>The diagnosis was not wholly wrong. The proposed mechanism was.</p>
+
+<h4>What has held</h4>
+
+<p>The documentation problem is being addressed, though law has mattered as much as technology.</p>
+
+<p>The UK's Electronic Trade Documents Act 2023 came into force on 20 September 2023. It provides that qualifying electronic trade documents can have the same legal effect as their paper equivalents under English law. Crucially, the Act addresses the old legal difficulty that electronic documents could not be "possessed" in the way that paper bills of lading and similar instruments could. It does not make every digital document legally effective by default. The document must meet statutory conditions and be used within a reliable system that can establish its identity, integrity and exclusive control. <a href="https://www.cliffordchance.com/briefings/2023/08/uk-electronic-trade-documents-act-2023--a-further-step-towards-p.html">The Act's operation and commencement are usefully summarised here.</a></p>
+
+<p>That change matters. It removes an important legal obstacle to the use of electronic transferable records in trade and trade finance. It also sits alongside the wider adoption of the UNCITRAL Model Law on Electronic Transferable Records, which has supplied a common legal model for jurisdictions seeking to recognise such records.</p>
+
+<p>Settlement has moved too. Tokenised deposits and stablecoins are no longer peripheral subjects. They are being examined and deployed by banks, payment providers and public institutions. The direction of travel identified in 2023 was therefore broadly right: trade documentation is becoming digital, and money is increasingly being represented and moved through programmable systems.</p>
+
+<p>But the route taken has not been decentralised in the sense we anticipated.</p>
+
+<h4>What has not</h4>
+
+<p>The infrastructure now being built is largely based on tokenised deposits issued by regulated banks, and on stablecoins issued by regulated or licensed entities. Participants are identified. Access is controlled. Compliance, credit, liquidity and operational risk remain within familiar institutional structures.</p>
+
+<p>This is not simply a case of an idea arriving early. The institutions that decentralised finance was expected to displace have instead built or adopted much of the new infrastructure.</p>
+
+<p>J.P. Morgan's Kinexys business is an example of that direction: a major bank using tokenised money and distributed-ledger infrastructure for institutional clients. More striking still was Swift's announcement in July 2026 that its blockchain-based ledger was ready for initial use. The project is intended to support cross-border payments using bank-issued tokenised deposits, with 17 banks across six continents preparing to pilot live transactions. The participating banks include BNP Paribas, Citi, HSBC, Standard Chartered, UBS and Wells Fargo. <a href="https://www.swift.com/news-events/press-releases/swifts-blockchain-ledger-ready-use-17-banks-set-pioneer-tokenised-cross-border-payments-trusted-global-infrastructure">Swift's announcement and full participant list are here.</a></p>
+
+<p>The point is not that these initiatives are insignificant. They are significant precisely because they show where the technology is being adopted. The banks, networks and messaging systems once described as likely victims of disintermediation are integrating the technology into their own operating models.</p>
+
+<p>The technology has advanced. The governance model attached to the original DeFi thesis has not become the dominant model for mainstream cross-border finance.</p>
+
+<h4>Absorbed, not displaced</h4>
+
+<p>The expectation among many blockchain advocates was borrowed from familiar accounts of disruption. A superior technology arrives; incumbents are too slow, too wedded to the old model, or too constrained by legacy systems to respond. The market reorganises around the newcomer.</p>
+
+<p>That analogy works best where the incumbent's advantage is easily reproduced. Blockbuster had store networks. BlackBerry had a keyboard, devices and an email service. Those advantages could be overtaken by better technology and better product design.</p>
+
+<p>Banking is different. A bank's position rests not only on its systems but on its licence, capital, balance sheet, correspondent network, supervisory history and compliance operation. Those assets exist because of regulation as much as market power. A new entrant can build payment software quickly. It cannot rapidly acquire a banking licence, regulatory capital, an established network of correspondents or a record of supervisory trust.</p>
+
+<p>Where the protective moat is regulatory, technology is often absorbed by the incumbent rather than used to displace it.</p>
+
+<p>That is the weakness in the earlier argument. DeFi proposed to remove intermediaries whose central function was not merely moving information or value, but bearing regulatory obligations. Removing the intermediary does not remove the obligation. Customer due diligence, sanctions screening, transaction monitoring, dispute resolution, capital requirements and accountability must still be carried by someone. The entity that does so becomes an intermediary, whatever name it gives itself.</p>
+
+<p>That conclusion should not be overstated. Stablecoin networks have created substantial activity outside traditional banking, and the payment-rail layer may be less dependent on banks than it once was. It is still too early to declare a final settlement. The narrower claim is stronger: in regulated finance, incumbents have been well placed to absorb the technology because they already possess the licences, capital and compliance capacity that the technology does not provide.</p>
+
+<h4>The gap that did not move</h4>
+
+<p>The more important test is not whether banks adopted blockchain. It is whether the changes altered access to trade finance.</p>
+
+<p>The Asian Development Bank's <em>Global Trade Finance Gap Survey</em>, published in December 2025, estimated the global trade finance gap at $2.5 trillion—the same headline figure reported for 2023. The subsequent January 2026 ADB release describes the survey as drawing on responses collected from 2023 to 2025 from more than 110 trade-finance providers. It reports that the $2.5 trillion gap represented roughly 10% of global trade in 2025, down from 10.6%, but unchanged in absolute terms. <a href="https://www.adb.org/publications/adb-global-trade-finance-gap-survey">The survey publication is here.</a> <a href="https://www.adb.org/news/demand-trade-finance-rise-amid-supply-chain-realignment-adb-report">ADB's January 2026 release is here.</a></p>
+
+<p>The figure should be interpreted cautiously. A stable aggregate number does not prove that digital documentation or faster settlement have had no effect. The gap is influenced by trade volumes, demand, economic conditions, currency markets, bank balance sheets and survey methodology. Nor is it a direct measure of the quality of payment infrastructure.</p>
+
+<p>Still, the persistence of the gap is important. It suggests that digitising documents and accelerating settlement, worthwhile though both are, do not by themselves resolve the reasons why finance is withheld.</p>
+
+<p>The ADB survey also complicates any account that treats compliance as the sole problem. Its findings point to funding constraints, country and counterparty risk, profitability thresholds and capital costs as major considerations for trade-finance providers. It reports trade-finance rejection rates of 41% for SMEs and 40% for large and mid-cap corporates—a result that deserves further examination rather than an easy conclusion about improved access. The issue is not simply that smaller firms are rejected more often. It is that risk appetite appears constrained across a broad range of prospective clients.</p>
+
+<p>The binding constraint has not shifted towards settlement. It remains one of funding, risk and economics.</p>
+
+<h4>The cost of knowing</h4>
+
+<p>That brings the argument back to correspondent banking.</p>
+
+<p>Withdrawal from correspondent relationships is better understood as a portfolio-level risk decision than as a failure of payment technology. A correspondent bank must decide whether the expected revenue from a respondent institution justifies the cost of maintaining the relationship to the standard expected by regulators, auditors and its own risk function.</p>
+
+<p>That cost can include due diligence on the respondent bank and its customers, sanctions and politically exposed person screening, transaction monitoring, periodic review, data remediation and investigation when concerns arise. It must be assessed against the revenue from a particular corridor, as well as the potential cost of a regulatory failure.</p>
+
+<p>For a small institution in a small jurisdiction, the calculation may be unfavourable even where there is no allegation of individual wrongdoing.</p>
+
+<p>Nothing material in that calculation is resolved merely because a bill of lading becomes electronic. Nor is it necessarily resolved because a payment can settle in seconds. Faster movement of value does not establish whether a counterparty is legitimate, adequately controlled, financially sound or worth the cost of onboarding.</p>
+
+<p>This is why the 2023 argument addressed the visible part of the problem rather than the binding constraint. Settlement was technical, tangible and amenable to redesign. The harder issue was the cost of knowing enough about an unfamiliar institution, business or transaction to support a decision to finance it.</p>
+
+<h4>Where the argument now leads</h4>
+
+<p>If the cost of assessing unfamiliar counterparties is part of the constraint, then reducing that cost is useful work.</p>
+
+<p>Much of the problem is structural. Capital treatment, enforcement risk, sanctions exposure, access to dollar liquidity and institutional risk appetite are matters for regulators, policymakers and financial institutions. Better due diligence cannot substitute for reform in those areas.</p>
+
+<p>But method matters as well.</p>
+
+<p>Well-designed, intelligence-led due diligence can help direct scarce human attention. Public-source research can verify corporate registration, map ownership and control, test claims of physical presence, examine digital infrastructure and review available financial information. Used properly, these techniques do not replace formal due diligence or justify automated approval. They help prioritise it.</p>
+
+<p>The objective is not to lower standards. It is to avoid spending the same amount of expensive investigative effort on every file regardless of the available evidence. A strong early assessment may identify straightforward cases quickly, flag cases requiring deeper review and expose indicators that would otherwise be missed.</p>
+
+<p>This is less dramatic than redesigning global finance. It is also closer to the economic problem.</p>
+
+<h4>What I would tell myself</h4>
+
+<p>My earlier conclusion followed from a real experience. A small institution in a small country had lost access to a necessary banking channel, and the apparent answer was a system with fewer intermediaries.</p>
+
+<p>That was understandable, but incomplete. The intermediaries had not withdrawn because the pipes were slow. They withdrew because the cost of maintaining sufficient confidence in the relationship exceeded the value of keeping it.</p>
+
+<p>The lesson is not that infrastructure does not matter. Electronic trade documents, better payment systems and tokenised forms of money can reduce friction, cost and delay. They should continue to be developed.</p>
+
+<p>But infrastructure is not the same thing as inclusion.</p>
+
+<p>The work most likely to improve the position of the small importer, small financial institution or small economy may not look like a new financial architecture. It may look like better evidence, better assessment and a lower cost of understanding who is on the other side of a transaction.</p>
+
+<p>That is less fashionable than disintermediation. It may also be more useful.</p>
+
+<p><em>The views expressed here are my own and are based on general observations about trade finance, third-party risk and financial inclusion. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</em></p>
+
+<div class="references">
+<h2>References</h2>
+
+<h4>Primary article</h4>
+<ul>
+<li>James, K. and Canup, B., "DeFi in trade finance: fulfilling the promise of globalisation", <em>Trade Finance Global</em>, 12 January 2023.</li>
+</ul>
+
+<h4>Trade-finance data</h4>
+<ul>
+<li>Asian Development Bank, <a href="https://www.adb.org/publications/adb-global-trade-finance-gap-survey"><em>ADB Global Trade Finance Gap Survey</em></a>, December 2025.</li>
+<li>Asian Development Bank, <a href="https://www.adb.org/news/demand-trade-finance-rise-amid-supply-chain-realignment-adb-report">"Demand for Trade Finance to Rise Amid Supply Chain Realignment—ADB Report"</a>, 15 January 2026.</li>
+<li>World Trade Organization, <em>Trade finance and SMEs: bridging the gaps in provision</em>.</li>
+<li>McKinsey & Company, <em>Reconceiving the global trade finance ecosystem</em>.</li>
+<li>McKinsey & Company, <em>The multi-billion dollar paper jam: unlocking trade by digitalizing documentation</em>.</li>
+</ul>
+
+<h4>Correspondent banking and de-risking</h4>
+<ul>
+<li>International Monetary Fund, <em>The Withdrawal of Correspondent Banking Relationships: A Case for Policy Action</em>, Staff Discussion Note SDN/16/06, June 2016.</li>
+<li>Financial Stability Board, <em>Correspondent Banking Data Report</em>, July 2017, and subsequent updates.</li>
+<li>Financial Conduct Authority, <em>International perspectives on de-risking</em>, Research Note, September 2023.</li>
+<li>United States Department of the Treasury, <em>The Department of the Treasury's De-risking Strategy</em>, April 2023.</li>
+<li>International Finance Corporation, <em>Anti-Money-Laundering and Countering the Financing of Terrorism: Good Practice Note</em>.</li>
+<li>Centre for Strategic and International Studies, <em>Is There a "New Normal" for De-Risking in the Caribbean?</em></li>
+<li>"'De-Risking', De-Banking and Denials of Bank Services: An Over-Compliance Dilemma?", in <em>Financial Crime and the Law</em>, Springer, 2024.</li>
+</ul>
+
+<h4>Digital trade documentation</h4>
+<ul>
+<li><a href="https://www.cliffordchance.com/briefings/2023/08/uk-electronic-trade-documents-act-2023--a-further-step-towards-p.html">Electronic Trade Documents Act 2023: legal recognition of electronic trade documents from 20 September 2023</a>.</li>
+<li>UNCITRAL, <em>Model Law on Electronic Transferable Records</em>, 2017.</li>
+</ul>
+
+<h4>Tokenisation and settlement</h4>
+<ul>
+<li>Swift, <a href="https://www.swift.com/news-events/press-releases/swifts-blockchain-ledger-ready-use-17-banks-set-pioneer-tokenised-cross-border-payments-trusted-global-infrastructure">"Swift's blockchain ledger ready for use as 17 banks set to pioneer tokenised cross-border payments on trusted global infrastructure"</a>, 9 July 2026.</li>
+<li>J.P. Morgan, <em>Deposit Tokens: A Foundation for Stable Digital Money</em>, Kinexys.</li>
+<li>J.P. Morgan, "JPM Coin (JPMD) USD deposit token available for institutional clients", Payments Newsroom.</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p>Kelroy James · 2026 · Content may be freely reproduced for non-commercial use with attribution</p>
+  </div>
+</footer>
+
+</body>
+</html>
