@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palantir Foundry Inventory Application — Kelroy James</title>
+  <meta name="description" content="Co-developing a fleet-wide inventory interrogation application with prime contractor and DE&S teams to enable real-time visibility and ground-truth validation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --ink:#131c28;--ink-2:#475569;--muted:#64748b;--surface:#ffffff;--bg:#f8fafc;
+    --rule:#e2e8f0;--brass:#b8860b;--brass-soft:#faf8f3;--shadow:0 1px 3px rgba(19,28,40,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Public Sans",sans-serif;background:var(--bg);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  
+  .site-header{background:var(--surface);border-bottom:1px solid var(--rule);padding:18px 0;position:sticky;top:0;z-index:100}
+  .site-header .wrap{display:flex;justify-content:space-between;align-items:center}
+  .site-header .logo{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
+  .site-header nav{display:flex;gap:28px}
+  .site-header a{font-size:14px;color:var(--ink-2);text-decoration:none;transition:color .2s}
+  .site-header a:hover{color:var(--brass)}
+  
+  .cs-hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:white;padding:80px 0 60px}
+  .cs-breadcrumb{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px;opacity:.8}
+  .cs-breadcrumb a{color:white;text-decoration:none}
+  .cs-breadcrumb a:hover{text-decoration:underline}
+  .cs-title{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:18px;max-width:22ch}
+  .cs-subtitle{font-size:1.15rem;opacity:.9;margin-bottom:32px;max-width:50ch;line-height:1.5}
+  .cs-meta{display:flex;gap:40px;flex-wrap:wrap}
+  .cs-meta-item{display:flex;flex-direction:column;gap:4px}
+  .cs-meta-label{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
+  .cs-meta-value{font-size:15px;font-weight:600}
+  
+  .impact-banner{background:var(--brass-soft);border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);padding:40px 0}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+  .impact-item{text-align:center}
+  .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
+  .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+  
+  .cs-content{background:var(--surface);padding:60px 0}
+  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .cs-toc{position:sticky;top:100px;height:fit-content}
+  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc ul{list-style:none}
+  .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
+  .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
+  
+  .cs-section{margin-bottom:48px}
+  .cs-section h2{font-family:Spectral,Georgia,serif;font-size:1.8rem;font-weight:700;margin-bottom:16px;color:var(--ink)}
+  .cs-section h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:32px 0 12px;color:var(--ink)}
+  .cs-section p{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:16px;max-width:68ch}
+  .cs-section ul{margin:16px 0 16px 20px}
+  .cs-section li{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:8px}
+  .cs-section strong{color:var(--ink);font-weight:600}
+  
+  .highlight-box{background:var(--brass-soft);border-left:4px solid var(--brass);padding:24px;margin:28px 0;border-radius:4px}
+  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin-bottom:10px}
+  .highlight-box p{margin-bottom:0}
+  
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:20px 0}
+  .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:13px;font-weight:500;border-radius:4px;box-shadow:var(--shadow)}
+  
+  .outcome-list{list-style:none;margin:20px 0}
+  .outcome-list li{padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--rule)}
+  .outcome-list li:last-child{border-bottom:none}
+  .outcome-list li:before{content:"✓";position:absolute;left:0;top:12px;color:var(--brass);font-size:1.3rem;font-weight:bold}
+  
+  .cs-footer{background:var(--surface);border-top:1px solid var(--rule);padding:40px 0}
+  .cs-footer .wrap{display:flex;justify-content:space-between;align-items:center}
+  .cs-footer a{color:var(--brass);text-decoration:none;font-weight:600}
+  .cs-footer a:hover{text-decoration:underline}
+  
+  @media(max-width:640px){
+    .cs-hero{padding:50px 0 40px}
+    .impact-grid{grid-template-columns:1fr 1fr}
+    .impact-number{font-size:2rem}
+  }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo">Kelroy James</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#work">Work</a>
+      <a href="/#background">Background</a>
+    </nav>
+  </div>
+</header>
+
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="cs-breadcrumb">
+      <a href="/">Home</a> / <a href="/#work">Case Studies</a> / Palantir Foundry Application
+    </div>
+    <h1 class="cs-title">Palantir Foundry Inventory Interrogation Application</h1>
+    <p class="cs-subtitle">Co-developing a fleet-wide digital transformation capability with prime contractor and Defence Equipment & Support teams.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Role</span>
+        <span class="cs-meta-value">Co-Developer with Prime Contractor & DE&S</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Timeline</span>
+        <span class="cs-meta-value">2024 – Present</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Platform</span>
+        <span class="cs-meta-value">Palantir Foundry</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Scope</span>
+        <span class="cs-meta-value">Fleet-Wide Rollout</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact-banner">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number">Fleet-Wide</div>
+        <div class="impact-label">Rollout Scoped</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">Real-Time</div>
+        <div class="impact-label">Inventory Visibility</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">Enterprise</div>
+        <div class="impact-label">Digital Transformation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-content">
+  <div class="wrap">
+    <div class="content-grid">
+      
+      <aside class="cs-toc">
+        <h4>Contents</h4>
+        <ul>
+          <li><a href="#challenge">The Challenge</a></li>
+          <li><a href="#context">Context & Scale</a></li>
+          <li><a href="#approach">Development Approach</a></li>
+          <li><a href="#capabilities">Application Capabilities</a></li>
+          <li><a href="#outcomes">Outcomes</a></li>
+          <li><a href="#lessons">Lessons Learned</a></li>
+        </ul>
+      </aside>
+      
+      <div>
+        
+        <div class="cs-section" id="challenge">
+          <h2>The Challenge</h2>
+          <p>Royal Navy inventory management operates across multiple disconnected systems: the Defence ERP for holdings and transactions, local spreadsheets for operational tracking, and platform-specific databases for technical information. When a decision-maker needs to know what the fleet holds, where it is held, and whether the record matches reality, there is no single system that can answer that question in real time.</p>
+          <p>The lack of integrated visibility creates several operational risks:</p>
+          <ul>
+            <li><strong>Duplicate procurement</strong> – If you cannot see what another platform holds, you may procure items that already exist within the fleet</li>
+            <li><strong>Asset stranding</strong> – High-value items sit unused on one platform while another platform cannot deploy because it lacks the same item</li>
+            <li><strong>Audit failures</strong> – Inspectors require ground-truth validation of inventory, but there is no efficient way to cross-check ERP data against physical holdings at scale</li>
+            <li><strong>Delayed decision-making</strong> – Commanders need real-time inventory visibility to make readiness decisions, but data extraction and consolidation from multiple systems takes days</li>
+          </ul>
+          
+          <div class="highlight-box">
+            <h4>The Core Problem</h4>
+            <p>The Royal Navy does not lack inventory data. It lacks a unified interrogation layer that can query across systems, validate against ground truth, and present actionable insights in real time. That is not an ERP problem—it is a data integration and visualisation problem.</p>
+          </div>
+        </div>
+        
+        <div class="cs-section" id="context">
+          <h2>Context & Scale</h2>
+          <p>Defence inventory management is not like commercial supply chains. The Royal Navy manages:</p>
+          <ul>
+            <li>Hundreds of thousands of line items across tens of thousands of NATO Stock Numbers</li>
+            <li>Assets ranging from consumables to multi-million-pound systems</li>
+            <li>Platforms operating globally, often without continuous network connectivity</li>
+            <li>Regulatory requirements for audit trails, export control, and safety-critical items</li>
+            <li>Personnel rotations every 18–24 months, requiring systems that do not depend on individual expertise</li>
+          </ul>
+          <p>Previous attempts at inventory visibility relied on static reports extracted from the ERP and manually consolidated. By the time the report was complete, the data was already outdated. What was needed was a <strong>living interrogation capability</strong>—a system that could query current data, cross-reference multiple sources, and flag discrepancies for investigation.</p>
+          
+          <p>Palantir Foundry was selected as the platform because it is designed for exactly this use case: integrating data from multiple legacy systems, applying validation logic, and presenting the results through a user-configurable interface. My role was to represent the operational user perspective in the development process—to ensure the application solved real-world problems, not just technical ones.</p>
+        </div>
+        
+        <div class="cs-section" id="approach">
+          <h2>Development Approach</h2>
+          
+          <h3>Collaborative Co-Development</h3>
+          <p>The application was developed as a partnership between:</p>
+          <ul>
+            <li><strong>Prime contractor project team</strong> – Provided Palantir Foundry expertise, data engineering, and integration architecture</li>
+            <li><strong>Defence Equipment & Support (DE&S)</strong> – Defined enterprise requirements, data governance standards, and approval pathways</li>
+            <li><strong>Operational users (my role)</strong> – Identified use cases, tested functionality, and validated that the application addressed real-world operational needs</li>
+          </ul>
+          <p>This tri-party model ensured the application was technically sound, policy-compliant, and operationally useful—a balance that is often difficult to achieve in defence digital transformation projects.</p>
+          
+          <h3>Ground-Truth Validation Protocols</h3>
+          <p>One of the most critical design decisions was how to handle <strong>ground-truth validation</strong>—the process of verifying that what the ERP system says you hold actually exists in the physical location it claims.</p>
+          <p>We established protocols that:</p>
+          <ul>
+            <li>Flag high-value or high-risk items for physical verification based on configurable thresholds</li>
+            <li>Allow users to record verification outcomes directly in Foundry, creating an audit trail separate from the ERP</li>
+            <li>Highlight discrepancies between ERP records and ground-truth findings for investigation</li>
+            <li>Generate verification task lists optimised by physical location to minimise time spent walking the platform</li>
+          </ul>
+          <p>This capability addresses one of the longstanding weaknesses in defence inventory management: the assumption that the ERP record is correct unless proven otherwise. Foundry inverts that assumption—it treats the ERP as a claim that requires validation, not as truth.</p>
+          
+          <h3>Iterative User Testing</h3>
+          <p>Development followed an iterative model. The contractor team would build a capability, I would test it against real operational scenarios, and we would refine based on what worked and what did not. This cycle repeated until the application could handle the edge cases that routinely break theoretical designs—partial deliveries, supersession chains, items in transit, and holdings held on behalf of other units.</p>
+        </div>
+        
+        <div class="cs-section" id="capabilities">
+          <h2>Application Capabilities</h2>
+          
+          <h3>Cross-System Inventory Interrogation</h3>
+          <p>The application integrates data from the Defence ERP, local tracking systems, and maintenance records to provide a unified view of what the fleet holds. Users can query by platform, by item, by location, or by financial value, and the system returns real-time results rather than requiring a manual data extraction process.</p>
+          
+          <h3>Discrepancy Detection & Flagging</h3>
+          <p>The application automatically flags discrepancies between what the ERP claims and what ground-truth validation has confirmed. Flags are prioritised by value, by operational criticality, and by regulatory risk, so that investigation effort is directed where it matters most.</p>
+          
+          <h3>Visual Dashboards for Decision-Makers</h3>
+          <p>Senior decision-makers do not need transactional detail—they need summary insights. The application provides dashboards that show inventory health at a glance: holdings by value, verification status, outstanding discrepancies, and trend analysis over time.</p>
+          
+          <h3>Audit-Ready Reporting</h3>
+          <p>One of the design requirements was that the application must generate reports suitable for external audit. Every query, every validation action, and every discrepancy resolution is logged with a timestamp and a user ID, creating an audit trail that meets defence assurance standards.</p>
+          
+          <div class="tools-grid">
+            <div class="tool-tag">Palantir Foundry</div>
+            <div class="tool-tag">Defense ERP Integration</div>
+            <div class="tool-tag">Data Validation</div>
+            <div class="tool-tag">Agile Development</div>
+            <div class="tool-tag">User-Centred Design</div>
+          </div>
+        </div>
+        
+        <div class="cs-section" id="outcomes">
+          <h2>Outcomes</h2>
+          
+          <ul class="outcome-list">
+            <li><strong>Working Application Delivered</strong> – The application is operational and in use for inventory interrogation and ground-truth validation on trial platforms</li>
+            <li><strong>Fleet-Wide Rollout Scoped</strong> – Based on trial results, the application has been scoped for rollout across the fleet, pending approval and resource allocation</li>
+            <li><strong>Real-Time Visibility Achieved</strong> – Users can now query inventory holdings in real time rather than waiting for static reports to be manually extracted and consolidated</li>
+            <li><strong>Ground-Truth Validation Framework Established</strong> – The protocols developed for this application set the standard for how inventory validation should be conducted across defence platforms</li>
+            <li><strong>Data-Driven Decision-Making Enabled</strong> – Commanders now have access to dashboards that show inventory status, discrepancies, and trends, enabling faster and more informed readiness decisions</li>
+            <li><strong>Audit Compliance Improved</strong> – The audit trail generated by the application addresses one of the most common inspection findings: the inability to demonstrate that inventory records have been validated against physical holdings</li>
+          </ul>
+          
+          <div class="highlight-box">
+            <h4>Enterprise-Scale Digital Transformation</h4>
+            <p>This is not a platform-specific tool. It is an enterprise capability. The application architecture is designed to scale across the fleet, and the data governance model ensures that insights are available to decision-makers at every level—from the platform stores accountant conducting a physical check to the fleet commander assessing overall readiness.</p>
+          </div>
+        </div>
+        
+        <div class="cs-section" id="lessons">
+          <h2>Lessons Learned</h2>
+          
+          <h3>Operational Users Must Be Part of Development, Not Just Consulted</h3>
+          <p>Many defence digital projects fail because the people who will use the system are consulted after it has been designed. By the time they see it, fundamental architectural decisions have been made that cannot easily be changed. In this project, operational users were co-developers from the start, which meant the application was shaped by real-world needs rather than theoretical requirements.</p>
+          
+          <h3>Ground Truth is Not an ERP Field</h3>
+          <p>The ERP tells you what the ledger says you hold. It does not tell you whether what the ledger says is actually there. That distinction is often lost in inventory management projects, which treat ERP data as truth. Foundry was designed on the premise that the ERP is a claim, and ground-truth validation is the test of that claim.</p>
+          
+          <h3>Integration is Harder Than Anyone Admits</h3>
+          <p>The technical challenge of extracting, transforming, and loading data from legacy defence systems into Foundry was significant. The systems were not designed to be integrated, and data quality varied widely. The contractor team spent months building the integration layer, and even then, edge cases continued to surface during testing. Anyone planning a similar project should budget more time for integration than the technical specification suggests.</p>
+          
+          <h3>Iterative Development Works, Even in Defence</h3>
+          <p>Defence procurement has a reputation for waterfall projects: specify everything up front, build to specification, deliver at the end. This project followed an iterative model—build a capability, test it, refine it, repeat. That approach allowed us to adapt to real-world complexity rather than trying to specify it all in advance. It works, but it requires stakeholders to accept that the final product will evolve rather than being fully defined at the start.</p>
+          
+          <h3>Scale is Both the Opportunity and the Risk</h3>
+          <p>The fleet-wide rollout represents significant value—real-time inventory visibility across all platforms would fundamentally change how the Royal Navy manages readiness. But scale also multiplies risk. If the application fails at enterprise scale, the disruption is proportional. That is why the trial phase was critical—it allowed us to identify and fix failure modes before they affected the entire fleet.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-footer">
+  <div class="wrap">
+    <div>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:6px">More Case Studies</p>
+      <a href="/case-study-type45-turnaround.html">Type 45 Destroyer Account Turnaround</a>
+    </div>
+    <a href="/">← Back to Home</a>
+  </div>
+</section>
+
+</body>
+</html>
