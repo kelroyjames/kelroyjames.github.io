@@ -166,7 +166,7 @@ PRINCE2 principles | Agile methodologies | Stakeholder analysis | Change impact 
 
 Seeking senior roles in **supply chain assurance**, **GRC management**, **management consulting**, or **operational risk** where systematic controls, risk-based thinking, and the discipline of testing the ledger (not reproducing it) create measurable business value.
 
-**Available from 2028 (resettlement)**
+**Available from April 2028 (resettlement)**
 
 ---
 
