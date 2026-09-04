@@ -7,6 +7,9 @@
 <style>*{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
 <div style="max-width:1100px;margin:0 auto;padding:22px 26px 0">
 <a href="/" style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#6B7885">&#8592; Kelroy James</a>
 </div>
@@ -82,10 +85,46 @@
   }
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 
+  /* ---------- reading progress ---------- */
+  .reading-progress{
+    position:fixed;top:0;left:0;right:0;height:4px;
+    background:var(--rule-soft);z-index:100;
+  }
+  .reading-progress-bar{
+    height:100%;background:var(--accent);width:0%;
+    transition:width .1s ease;
+  }
+  .reading-meta{
+    display:flex;gap:20px;flex-wrap:wrap;
+    font-size:13px;color:var(--muted);margin-top:10px;
+  }
+  .share-buttons{
+    display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;
+  }
+  .share-btn{
+    padding:7px 14px;font-size:11.5px;
+    font-family:"IBM Plex Mono",monospace;
+    letter-spacing:.1em;text-transform:uppercase;
+    background:var(--surface-2);border:1px solid var(--rule);
+    color:var(--ink-2);text-decoration:none;
+    transition:all .2s ease;cursor:pointer;
+  }
+  .share-btn:hover{background:var(--verify);color:#fff;border-color:var(--verify)}
+
   /* ---------- masthead ---------- */
   .masthead{
     background:var(--surface);
     border-bottom:1px solid var(--rule);
+    position:relative;
+  }
+  .featured-image{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    display:block;
+  }
+  @media(min-width:800px){
+    .featured-image{height:420px}
   }
   .masthead .wrap{
     display:flex;flex-direction:column;gap:28px;
@@ -288,6 +327,7 @@
 </style>
 
 <header class="masthead">
+  <img src="/images/articles/osint-header.jpg" alt="Investigation and verification" class="featured-image">
   <div class="wrap">
     <div class="eyebrow">
       <span class="tick">◆</span>
@@ -301,6 +341,15 @@
       <span><b>Kelroy James</b></span>
       <span>Derived from ACQ501 Open-Source Intelligence, University of Abertay</span>
       <span>Method generalised; no client or supplier identified</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 12 min read</span>
+      <span>🔍 7-stage framework</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.github.io/osint-supplier-verification.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.github.io/osint-supplier-verification.html&text=OSINT%20Supplier%20Verification%20Framework" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=OSINT Supplier Verification Framework&body=Check out this framework: https://kelroyjames.github.io/osint-supplier-verification.html" class="share-btn">Share via Email</a>
     </div>
   </div>
 </header>
@@ -558,6 +607,16 @@
     </p>
   </div>
 </footer>
+
+<script>
+// Reading progress indicator
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
 
 </body>
 </html>
