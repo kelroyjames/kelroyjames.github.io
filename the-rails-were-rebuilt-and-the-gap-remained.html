@@ -57,6 +57,16 @@ body{
 a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
+/* reading progress bar */
+.reading-progress{
+  position:fixed;top:0;left:0;right:0;height:4px;
+  background:var(--rule-soft);z-index:100;
+}
+.reading-progress-bar{
+  height:100%;background:var(--accent);width:0%;
+  transition:width .1s ease;
+}
+
 /* top nav */
 .topnav{padding:22px 0 0;margin-bottom:44px}
 .topnav a{
@@ -151,6 +161,33 @@ article{padding:0 0 56px}
 }
 .prose em{font-style:italic}
 .prose strong{font-weight:600}
+.pullquote{
+  border-left:4px solid var(--accent);
+  padding:24px 28px;margin:32px 0;
+  background:var(--accent-soft);
+  font-family:Spectral,Georgia,serif;
+  font-size:1.28rem;line-height:1.5;
+  font-weight:600;color:var(--ink);
+  font-style:italic;
+}
+.reading-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  margin-top:8px;
+}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+.share-buttons{
+  display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;
+}
+.share-btn{
+  padding:7px 14px;font-size:11.5px;
+  font-family:"IBM Plex Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--surface-2);border:1px solid var(--rule);
+  color:var(--ink-2);text-decoration:none;
+  transition:all .2s ease;cursor:pointer;
+}
+.share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 
 /* references section */
 .references{
@@ -203,6 +240,9 @@ footer p{
 </style>
 </head>
 <body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
 <div class="wrap topnav">
   <a href="/">&#8592; Kelroy James</a>
 </div>
@@ -222,6 +262,15 @@ footer p{
       <span><b>Kelroy James</b></span>
       <span>January 2026</span>
     </div>
+    <div class="reading-meta">
+      <span>📖 15 min read</span>
+      <span>📊 6,800 words</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.github.io/the-rails-were-rebuilt-and-the-gap-remained.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.github.io/the-rails-were-rebuilt-and-the-gap-remained.html&text=The%20rails%20were%20rebuilt,%20and%20the%20gap%20remained" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=Article: The rails were rebuilt, and the gap remained&body=I thought you might find this interesting: https://kelroyjames.github.io/the-rails-were-rebuilt-and-the-gap-remained.html" class="share-btn">Share via Email</a>
+    </div>
   </div>
 </header>
 
@@ -236,6 +285,10 @@ footer p{
 <p>So far as I could tell, nobody had assessed me individually. Nor had anyone determined whether that particular building society's controls were adequate. A decision had been made about a jurisdiction, an institution of a certain size, and the economics of maintaining the relationship. Everyone within the perimeter of that decision bore its consequences.</p>
 
 <p>At the time, the experience drew me towards blockchain. In January 2023, <em>Trade Finance Global</em> published an article I wrote with Brian Canup arguing that decentralised finance and digital trade infrastructure might reduce the cost of participating in international trade. Three years is long enough for such an argument to be tested. In this case, the test has been instructive.</p>
+
+<div class="pullquote">
+"The technology has advanced. The governance model attached to the original DeFi thesis has not become the dominant model for mainstream cross-border finance."
+</div>
 
 <h4>The original argument</h4>
 
@@ -284,6 +337,10 @@ footer p{
 <p>Banking is different. A bank's position rests not only on its systems but on its licence, capital, balance sheet, correspondent network, supervisory history and compliance operation. Those assets exist because of regulation as much as market power. A new entrant can build payment software quickly. It cannot rapidly acquire a banking licence, regulatory capital, an established network of correspondents or a record of supervisory trust.</p>
 
 <p>Where the protective moat is regulatory, technology is often absorbed by the incumbent rather than used to displace it.</p>
+
+<div class="pullquote">
+"Removing the intermediary does not remove the obligation. The entity that bears regulatory responsibilities becomes an intermediary, whatever name it gives itself."
+</div>
 
 <p>That is the weakness in the earlier argument. DeFi proposed to remove intermediaries whose central function was not merely moving information or value, but bearing regulatory obligations. Removing the intermediary does not remove the obligation. Customer due diligence, sanctions screening, transaction monitoring, dispute resolution, capital requirements and accountability must still be carried by someone. The entity that does so becomes an intermediary, whatever name it gives itself.</p>
 
@@ -340,6 +397,10 @@ footer p{
 <p>The lesson is not that infrastructure does not matter. Electronic trade documents, better payment systems and tokenised forms of money can reduce friction, cost and delay. They should continue to be developed.</p>
 
 <p>But infrastructure is not the same thing as inclusion.</p>
+
+<div class="pullquote">
+"The work most likely to improve financial inclusion may not look like a new architecture. It may look like better evidence and a lower cost of understanding who is on the other side."
+</div>
 
 <p>The work most likely to improve the position of the small importer, small financial institution or small economy may not look like a new financial architecture. It may look like better evidence, better assessment and a lower cost of understanding who is on the other side of a transaction.</p>
 
@@ -398,6 +459,16 @@ footer p{
     <p>Kelroy James · 2026 · Content may be freely reproduced for non-commercial use with attribution</p>
   </div>
 </footer>
+
+<script>
+// Reading progress indicator
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
 
 </body>
 </html>
