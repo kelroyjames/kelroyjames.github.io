@@ -160,6 +160,38 @@
     text-transform:uppercase;color:var(--muted);
   }
 
+  /* ============ impact metrics ============ */
+  .impact{background:var(--brass-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--brass);padding:48px 0}
+  .impact .wrap{max-width:1100px}
+  .impact-head{text-align:center;margin-bottom:38px}
+  .impact-head h2{
+    font-family:Spectral,Georgia,serif;font-size:clamp(1.6rem,3vw,2.2rem);
+    font-weight:700;margin:0 0 10px;color:var(--ink);
+  }
+  .impact-head p{font-size:15px;color:var(--ink-2);margin:0}
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-bottom:32px}
+  .metric{
+    background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+    padding:24px 20px;text-align:center;box-shadow:var(--shadow);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .metric:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(19,28,40,.12)}
+  .metric-value{
+    font-family:Spectral,Georgia,serif;font-size:clamp(2rem,4vw,3rem);
+    font-weight:700;color:var(--brass);margin:0 0 4px;line-height:1;
+  }
+  .metric-label{
+    font-family:"Public Sans",sans-serif;font-size:13px;
+    color:var(--ink-2);font-weight:500;text-transform:uppercase;letter-spacing:.05em;
+  }
+  .awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:28px}
+  .award-item{
+    background:var(--surface);border-left:3px solid var(--brass);
+    padding:14px 18px;border-radius:3px;
+  }
+  .award-title{font-size:14.5px;font-weight:600;color:var(--ink);margin:0 0 3px}
+  .award-org{font-size:12.5px;color:var(--muted);margin:0}
+
   /* ============ thesis band ============ */
   .band{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
   .band .wrap{padding:60px 26px}
@@ -230,8 +262,8 @@
     <div>
       <p class="kicker">Supply chain assurance · Governance, risk and compliance</p>
       <h1>A record is not the reality it describes.</h1>
-      <p class="lede">I have spent seventeen years operating controls in Defence logistics. Nobody ever called them controls.</p>
-      <p class="sub">I work on the seam between physical supply chains and the governance functions that are supposed to assure them: asset accountability, supplier due diligence, trade compliance and the growing problem of AI-enabled decisions nobody can trace. I write about where that seam fails, and I build the tools I wish I had been handed.</p>
+      <p class="lede">I close the gap between what the ledger says and what is actually there.</p>
+      <p class="sub">For eighteen years across Defence, maritime aviation and critical infrastructure I have operated inside mandated assurance frameworks, high-consequence transport regimes and internal control cycles. Outside Defence that discipline is called supply chain assurance, enterprise risk, and governance, risk and compliance. The question is always the same: Does the record match the reality, and how would you know if it stopped?</p>
     </div>
     <div class="hero-visual">
       <div class="headshot-placeholder">
@@ -246,6 +278,70 @@
     </div>
   </div>
 </header>
+
+<section class="impact">
+  <div class="wrap">
+    <div class="impact-head">
+      <h2>Proven Business Impact</h2>
+      <p>18 years delivering measurable results in high-stakes environments</p>
+    </div>
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-value">£2.4M</div>
+        <div class="metric-label">Misallocated Funds Identified & Corrected</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">£250K</div>
+        <div class="metric-label">Saved Through Lean Maintenance Trial</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">100%</div>
+        <div class="metric-label">Compliance Achievement Rate</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">3</div>
+        <div class="metric-label">Control Artefacts Adopted Fleet-Wide</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">80%</div>
+        <div class="metric-label">Financial Liability Reduction</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">18</div>
+        <div class="metric-label">Years Defense Logistics Experience</div>
+      </div>
+    </div>
+    <div class="impact-head">
+      <h2 style="font-size:1.6rem;margin-top:24px">Awards & Recognition</h2>
+    </div>
+    <div class="awards-grid">
+      <div class="award-item">
+        <p class="award-title">Chief Naval Logistics Officer's Award</p>
+        <p class="award-org">Royal Navy, 2018 — Coaching, Mentoring & Training</p>
+      </div>
+      <div class="award-item">
+        <p class="award-title">Herbert Lott Naval Trust Fund Efficiency Award</p>
+        <p class="award-org">Royal Navy, 2019</p>
+      </div>
+      <div class="award-item">
+        <p class="award-title">Royal Navy Inclusivity Award for Innovation</p>
+        <p class="award-org">Royal Navy, 2023 — Inaugural Recipient</p>
+      </div>
+      <div class="award-item">
+        <p class="award-title">Richmond Fellow</p>
+        <p class="award-org">Royal Navy Strategic Studies Centre, 2025–2026</p>
+      </div>
+      <div class="award-item">
+        <p class="award-title">Percy Hobart Fellowship</p>
+        <p class="award-org">Digital Transformation, 2022</p>
+      </div>
+      <div class="award-item">
+        <p class="award-title">Employee of the Year</p>
+        <p class="award-org">St Vincent Electricity Services, Caribbean</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="work">
   <div class="wrap">
@@ -342,7 +438,8 @@
 
       <div class="prose">
         <p>I started as a meter reader for the national electricity utility in St Vincent and spent twelve years there, finishing in planning and GIS. I led the GPS geo-tagging of the island's grid infrastructure, and that dataset went on to underpin an enterprise mapping system that won an Esri Special Achievement in GIS award.</p>
-        <p>I joined the Royal Navy and have spent more than seventeen years in Defence logistics: supply accounts, stocktaking, supersession and handover, fleet logistics inspection, transport safety and remedial action. It was presented to me as logistics. It took a postgraduate degree and a set of audit qualifications before I recognised it as governance, risk and compliance, which is a large part of why I now write about the translation problem.</p>
+        <p>I joined the Royal Navy and have spent eighteen years in Defence logistics: supply accounts, stocktaking, supersession and handover, fleet logistics inspection, transport safety and remedial action. It was presented to me as logistics. It took a postgraduate degree and a set of audit qualifications before I recognised it as governance, risk and compliance, which is a large part of why I now write about the translation problem.</p>
+        <p>Most recently I took over a Type 45 destroyer supply chain account that had been assessed as unsatisfactory. I designed the first-line controls that brought it to full compliance, identified and corrected £2.4M in misallocated expenditure, and co-developed a fleet-wide inventory interrogation application in Palantir Foundry with DE&S and prime contractor project teams.</p>
         <p>I also founded a development programme for junior rates that was adopted as a standing programme by Engineering Support Group 1 and recognised with a Royal Navy Inclusivity Award.</p>
       </div>
 
@@ -350,9 +447,12 @@
         <div class="bg-block">
           <h3>Study</h3>
           <ul class="bg-list">
-            <li><span class="t">MSc Supply Chain and Logistics Management</span><span class="d">University of Lincoln · <em>in progress</em>, dissertation 2027</span></li>
+            <li><span class="t">MSc Supply Chain and Logistics Management</span><span class="d">University of Lincoln · <em>in progress</em> (Distinction track), dissertation 2027</span></li>
             <li><span class="t">MITx MicroMasters, Supply Chain Management</span><span class="d">SC0x–SC4x complete · final exam 2026</span></li>
-            <li><span class="t">Open-Source Intelligence; Penetration Testing</span><span class="d">University of Abertay, via SaluteMyJob</span></li>
+            <li><span class="t">BSc (Hons) Logistics and Operations Management</span><span class="d">Completed</span></li>
+            <li><span class="t">FdSc Logistics Management</span><span class="d">University of Lincoln</span></li>
+            <li><span class="t">Professional Award in Cyber Security & OSINT</span><span class="d">University of Abertay, 2023–2025</span></li>
+            <li><span class="t">Professional Certificate in Web3</span><span class="d">University of Nicosia, 2024–2025</span></li>
           </ul>
         </div>
         <div class="bg-block">
