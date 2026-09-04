@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>£2.4M Financial Control Recovery — Kelroy James</title>
+  <meta name="description" content="How close scrutiny of expenditure patterns identified £2.4M in misallocated funds and led to Navy-wide policy improvements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --ink:#131c28;--ink-2:#475569;--muted:#64748b;--surface:#ffffff;--bg:#f8fafc;
+    --rule:#e2e8f0;--brass:#b8860b;--brass-soft:#faf8f3;--shadow:0 1px 3px rgba(19,28,40,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Public Sans",sans-serif;background:var(--bg);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  
+  .site-header{background:var(--surface);border-bottom:1px solid var(--rule);padding:18px 0;position:sticky;top:0;z-index:100}
+  .site-header .wrap{display:flex;justify-content:space-between;align-items:center}
+  .site-header .logo{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
+  .site-header nav{display:flex;gap:28px}
+  .site-header a{font-size:14px;color:var(--ink-2);text-decoration:none;transition:color .2s}
+  .site-header a:hover{color:var(--brass)}
+  
+  .cs-hero{background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);color:white;padding:80px 0 60px}
+  .cs-breadcrumb{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px;opacity:.8}
+  .cs-breadcrumb a{color:white;text-decoration:none}
+  .cs-breadcrumb a:hover{text-decoration:underline}
+  .cs-title{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:18px;max-width:20ch}
+  .cs-subtitle{font-size:1.15rem;opacity:.9;margin-bottom:32px;max-width:50ch;line-height:1.5}
+  .cs-meta{display:flex;gap:40px;flex-wrap:wrap}
+  .cs-meta-item{display:flex;flex-direction:column;gap:4px}
+  .cs-meta-label{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
+  .cs-meta-value{font-size:15px;font-weight:600}
+  
+  .impact-banner{background:var(--brass-soft);border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);padding:40px 0}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+  .impact-item{text-align:center}
+  .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
+  .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+  
+  .cs-content{background:var(--surface);padding:60px 0}
+  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .cs-toc{position:sticky;top:100px;height:fit-content}
+  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc ul{list-style:none}
+  .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
+  .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
+  
+  .cs-section{margin-bottom:48px}
+  .cs-section h2{font-family:Spectral,Georgia,serif;font-size:1.8rem;font-weight:700;margin-bottom:16px;color:var(--ink)}
+  .cs-section h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:32px 0 12px;color:var(--ink)}
+  .cs-section p{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:16px;max-width:68ch}
+  .cs-section ul{margin:16px 0 16px 20px}
+  .cs-section li{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:8px}
+  .cs-section strong{color:var(--ink);font-weight:600}
+  
+  .highlight-box{background:var(--brass-soft);border-left:4px solid var(--brass);padding:24px;margin:28px 0;border-radius:4px}
+  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin-bottom:10px}
+  .highlight-box p{margin-bottom:0}
+  
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:20px 0}
+  .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:13px;font-weight:500;border-radius:4px;box-shadow:var(--shadow)}
+  
+  .outcome-list{list-style:none;margin:20px 0}
+  .outcome-list li{padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--rule)}
+  .outcome-list li:last-child{border-bottom:none}
+  .outcome-list li:before{content:"✓";position:absolute;left:0;top:12px;color:var(--brass);font-size:1.3rem;font-weight:bold}
+  
+  .cs-footer{background:var(--surface);border-top:1px solid var(--rule);padding:40px 0}
+  .cs-footer .wrap{display:flex;justify-content:space-between;align-items:center}
+  .cs-footer a{color:var(--brass);text-decoration:none;font-weight:600}
+  .cs-footer a:hover{text-decoration:underline}
+  
+  @media(max-width:640px){
+    .cs-hero{padding:50px 0 40px}
+    .impact-grid{grid-template-columns:1fr 1fr}
+    .impact-number{font-size:2rem}
+  }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo">Kelroy James</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#work">Work</a>
+      <a href="/#background">Background</a>
+    </nav>
+  </div>
+</header>
+
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="cs-breadcrumb">
+      <a href="/">Home</a> / <a href="/#work">Case Studies</a> / Financial Control Recovery
+    </div>
+    <h1 class="cs-title">£2.4M Financial Control Recovery</h1>
+    <p class="cs-subtitle">How systematic expenditure analysis identified misallocated funds and drove Navy-wide policy improvements to prevent recurrence.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Role</span>
+        <span class="cs-meta-value">Supply Chain Manager</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Timeline</span>
+        <span class="cs-meta-value">2024</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Value Identified</span>
+        <span class="cs-meta-value">£2.4 Million</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Outcome</span>
+        <span class="cs-meta-value">Navy-Wide Policy Improvement</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact-banner">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number">£2.4M</div>
+        <div class="impact-label">Misallocated Funds Identified</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">Navy-Wide</div>
+        <div class="impact-label">Policy Instruction Proposed</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">Enterprise</div>
+        <div class="impact-label">Systemic Improvement Impact</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-content">
+  <div class="wrap">
+    <div class="content-grid">
+      
+      <aside class="cs-toc">
+        <h4>Contents</h4>
+        <ul>
+          <li><a href="#challenge">The Challenge</a></li>
+          <li><a href="#context">Why This Matters</a></li>
+          <li><a href="#discovery">Discovery</a></li>
+          <li><a href="#analysis">Root Cause Analysis</a></li>
+          <li><a href="#outcomes">Outcomes</a></li>
+          <li><a href="#lessons">Lessons Learned</a></li>
+        </ul>
+      </aside>
+      
+      <div>
+        
+        <div class="cs-section" id="challenge">
+          <h2>The Challenge</h2>
+          <p>In 2024, while conducting routine financial reconciliation across Royal Navy supply chain accounts, I identified systematic misallocation of expenditure totalling <strong>£2.4 million</strong>. The funds had been charged to incorrect cost centres, masking the true expenditure profile of multiple platforms and creating phantom budget headroom in some accounts while others appeared overspent.</p>
+          <p>This was not fraud. It was a process failure—one that had persisted because the existing validation steps did not catch allocation errors before they were committed to the ledger, and because there was no routine reconciliation process designed to detect the pattern retrospectively.</p>
+          
+          <div class="highlight-box">
+            <h4>The Core Issue</h4>
+            <p>A misallocation is not just an accounting error. It distorts decision-making. Commanders making readiness decisions based on reported budgets were working with incorrect data. That risk extends beyond the platforms directly affected.</p>
+          </div>
+        </div>
+        
+        <div class="cs-section" id="context">
+          <h2>Why This Matters</h2>
+          <p>Defence supply chain budgets fund operational readiness. When expenditure is allocated incorrectly:</p>
+          <ul>
+            <li><strong>Budget visibility is lost</strong> – Platform commanders cannot accurately track what they have spent or what remains available</li>
+            <li><strong>Future planning becomes unreliable</strong> – Historical spend patterns are used to forecast future requirements; incorrect data produces incorrect forecasts</li>
+            <li><strong>Audit findings escalate</strong> – External auditors flag misallocations as control failures, triggering remediation programmes that consume organisational capacity</li>
+            <li><strong>Trust in financial data erodes</strong> – If the ledger cannot be trusted, every decision based on it becomes suspect</li>
+          </ul>
+          <p>The £2.4M figure represents the value that was incorrectly allocated. The real impact is the decisions that were made based on incorrect financial visibility during the period the error persisted.</p>
+        </div>
+        
+        <div class="cs-section" id="discovery">
+          <h2>Discovery</h2>
+          <p>The misallocations were not immediately obvious. Each individual transaction appeared plausible in isolation. The pattern only became visible when I began mapping expenditure by platform against expected usage profiles.</p>
+          
+          <h3>Initial Indicators</h3>
+          <p>Several platforms were reporting expenditure significantly below historical norms, while others—particularly those in upkeep or maintenance cycles—showed expenditure that did not align with the scope of work being conducted. The variance could have been explained by operational tempo, but the magnitude suggested something more systematic.</p>
+          
+          <h3>Data Interrogation</h3>
+          <p>I extracted transactional data from the Defence ERP system and cross-referenced it against:</p>
+          <ul>
+            <li>Work orders and maintenance schedules</li>
+            <li>Goods receipts and delivery notes</li>
+            <li>Historical expenditure patterns for similar platforms in similar cycles</li>
+            <li>Cost centre assignment rules documented in financial policy</li>
+          </ul>
+          <p>The analysis revealed that <strong>allocation errors were concentrated at specific points in the procurement workflow</strong>—particularly where manual cost centre assignment was required and where there was ambiguity about which platform should bear the cost.</p>
+          
+          <h3>Scale of the Issue</h3>
+          <p>Once the pattern was identified, I conducted a lookback across 18 months of transactions. The total misallocated value was £2.4M, affecting multiple cost centres and distorting the financial position of platforms across the fleet.</p>
+        </div>
+        
+        <div class="cs-section" id="analysis">
+          <h2>Root Cause Analysis</h2>
+          <p>The misallocations were not the result of negligence. They were the predictable outcome of a process that did not adequately support correct decision-making at the point of commitment.</p>
+          
+          <h3>Identified Root Causes</h3>
+          
+          <h4>1. Ambiguous Cost Centre Assignment Rules</h4>
+          <p>Policy defined cost centre assignment at a high level but did not provide decision trees for edge cases—shared equipment, cross-platform logistics support, and transitional states like pre-delivery or post-disposal. Personnel making allocation decisions were left to interpret policy, and interpretations varied.</p>
+          
+          <h4>2. No Pre-Commitment Validation</h4>
+          <p>The ERP workflow allowed cost centre assignment without mandatory validation against the platform's current status. A platform in long-term storage could still be charged for active operations expenditure, and the system would not flag it.</p>
+          
+          <h4>3. Insufficient Reconciliation Cadence</h4>
+          <p>Financial reconciliation was conducted quarterly, but misallocations were not systematically reviewed for patterns. Individual corrections were made when identified, but there was no routine process to detect whether the same error was recurring across multiple transactions.</p>
+          
+          <h4>4. Training Gaps</h4>
+          <p>Personnel conducting procurement were trained on the mechanics of the ERP system but not on the financial logic underlying cost centre assignment. They knew how to assign a cost centre; they did not always know which cost centre should be assigned.</p>
+        </div>
+        
+        <div class="cs-section" id="outcomes">
+          <h2>Outcomes</h2>
+          
+          <ul class="outcome-list">
+            <li><strong>£2.4M Corrected and Reallocated</strong> – All misallocated expenditure was identified, validated, and reassigned to the correct cost centres, restoring accurate financial visibility</li>
+            <li><strong>Navy-Wide Policy Instruction Proposed</strong> – I drafted a proposed policy update that clarifies cost centre assignment rules, introduces mandatory validation checkpoints, and establishes a quarterly reconciliation process designed to detect systematic misallocation patterns</li>
+            <li><strong>Validation Controls Implemented Locally</strong> – Within my area of responsibility, I introduced pre-commitment validation steps that cross-check cost centre assignment against platform operational status before expenditure is authorised</li>
+            <li><strong>Training Materials Developed</strong> – Created training content that explains the financial logic behind cost centre assignment, not just the ERP mechanics, to improve decision quality at the point of commitment</li>
+            <li><strong>Enterprise-Level Awareness</strong> – The findings were briefed to senior stakeholders, raising awareness of the systemic nature of the issue and the need for process improvement beyond individual correction</li>
+          </ul>
+          
+          <div class="highlight-box">
+            <h4>Systemic vs. Symptomatic Solutions</h4>
+            <p>Correcting the £2.4M was necessary, but it addressed the symptom. The real value is in the policy and process improvements that prevent the same misallocations from recurring fleet-wide. That is the difference between fixing a problem and fixing the system that allowed the problem to exist.</p>
+          </div>
+          
+          <div class="tools-grid">
+            <div class="tool-tag">Defense ERP</div>
+            <div class="tool-tag">Excel (Advanced)</div>
+            <div class="tool-tag">Financial Analysis</div>
+            <div class="tool-tag">Data Reconciliation</div>
+            <div class="tool-tag">Policy Development</div>
+            <div class="tool-tag">Root Cause Analysis</div>
+          </div>
+        </div>
+        
+        <div class="cs-section" id="lessons">
+          <h2>Lessons Learned</h2>
+          
+          <h3>Look for Patterns, Not Just Variances</h3>
+          <p>Individual misallocations are correctable but unremarkable. A pattern of misallocations suggests a process failure that will continue to produce errors until the underlying cause is addressed. The £2.4M was significant, but the pattern was more significant—it indicated that the process was not fit for purpose.</p>
+          
+          <h3>Validation Should Happen at the Point of Commitment</h3>
+          <p>Detecting errors after they are committed is retrospective damage control. Preventing errors at the point of commitment—through pre-populated defaults, mandatory validation checks, and decision support tools—is control design. The former fixes mistakes; the latter stops them from happening.</p>
+          
+          <h3>Policy Ambiguity is a Control Weakness</h3>
+          <p>If policy requires interpretation, different people will interpret it differently, and the process will produce inconsistent outcomes. Clear policy eliminates discretion where discretion is not needed. That does not mean removing judgment—it means removing ambiguity so that judgment can be applied consistently.</p>
+          
+          <h3>Training Must Address "Why," Not Just "How"</h3>
+          <p>Teaching someone how to use an ERP system does not teach them how to make correct financial decisions within that system. Training that explains the financial logic—why cost centres exist, what they represent, and what happens when they are used incorrectly—produces better decision-making than training that only covers the mechanics of data entry.</p>
+          
+          <h3>Scale Matters</h3>
+          <p>£2.4M is material at the platform level, the unit level, and the enterprise level. When a finding scales across all three, the solution must scale with it. Local corrections are insufficient; the fix must be systemic, or the problem will recur elsewhere.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-footer">
+  <div class="wrap">
+    <div>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:6px">Next Case Study</p>
+      <a href="/case-study-palantir-foundry.html">Palantir Foundry Inventory Application →</a>
+    </div>
+    <a href="/">← Back to Home</a>
+  </div>
+</section>
+
+</body>
+</html>
