@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naval Assurance Modernisation & Enterprise GRC Framework — Kelroy James</title>
+  <meta name="description" content="Re-engineering deck-plate assurance across three Fleet Logistics Inspections through integrated ISO governance, Lean Six Sigma, and Three Lines of Defence architecture.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --ink:#131c28;--ink-2:#475569;--muted:#64748b;--surface:#ffffff;--bg:#f8fafc;
+    --rule:#e2e8f0;--brass:#b8860b;--brass-soft:#faf8f3;--shadow:0 1px 3px rgba(19,28,40,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Public Sans",sans-serif;background:var(--bg);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  
+  /* header */
+  .site-header{background:var(--surface);border-bottom:1px solid var(--rule);padding:18px 0;position:sticky;top:0;z-index:100}
+  .site-header .wrap{display:flex;justify-content:space-between;align-items:center}
+  .site-header .logo{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
+  .site-header nav{display:flex;gap:28px}
+  .site-header a{font-size:14px;color:var(--ink-2);text-decoration:none;transition:color .2s}
+  .site-header a:hover{color:var(--brass)}
+  
+  /* case study header */
+  .cs-hero{background:linear-gradient(135deg,#131c28 0%,#1e3a5f 100%);color:white;padding:80px 0 60px}
+  .cs-breadcrumb{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px;opacity:.8}
+  .cs-breadcrumb a{color:white;text-decoration:none}
+  .cs-breadcrumb a:hover{text-decoration:underline}
+  .cs-title{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:18px;max-width:28ch}
+  .cs-subtitle{font-size:1.15rem;opacity:.9;margin-bottom:32px;max-width:56ch;line-height:1.5}
+  .cs-meta{display:flex;gap:40px;flex-wrap:wrap}
+  .cs-meta-item{display:flex;flex-direction:column;gap:4px}
+  .cs-meta-label{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
+  .cs-meta-value{font-size:15px;font-weight:600}
+  
+  /* impact banner */
+  .impact-banner{background:var(--brass-soft);border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);padding:40px 0}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+  .impact-item{text-align:center}
+  .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
+  .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+  
+  /* content */
+  .cs-content{background:var(--surface);padding:60px 0}
+  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .cs-toc{position:sticky;top:100px;height:fit-content}
+  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc ul{list-style:none}
+  .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
+  .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
+  
+  .cs-section{margin-bottom:48px}
+  .cs-section h2{font-family:Spectral,Georgia,serif;font-size:1.8rem;font-weight:700;margin-bottom:16px;color:var(--ink)}
+  .cs-section h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:32px 0 12px;color:var(--ink)}
+  .cs-section p{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:16px;max-width:68ch}
+  .cs-section ul{margin:16px 0 16px 20px}
+  .cs-section li{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:8px}
+  .cs-section strong{color:var(--ink);font-weight:600}
+  
+  .highlight-box{background:var(--brass-soft);border-left:4px solid var(--brass);padding:24px;margin:28px 0;border-radius:4px}
+  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin-bottom:10px}
+  .highlight-box p{margin-bottom:8px}
+  .highlight-box p:last-child{margin-bottom:0}
+  
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:20px 0}
+  .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:13px;font-weight:500;border-radius:4px;box-shadow:var(--shadow)}
+  
+  .outcome-list{list-style:none;margin:20px 0}
+  .outcome-list li{padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--rule)}
+  .outcome-list li:last-child{border-bottom:none}
+  .outcome-list li:before{content:"✓";position:absolute;left:0;top:12px;color:var(--brass);font-size:1.3rem;font-weight:bold}
+  
+  /* footer */
+  .cs-footer{background:var(--surface);border-top:1px solid var(--rule);padding:40px 0}
+  .cs-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  .cs-footer a{color:var(--brass);text-decoration:none;font-weight:600}
+  .cs-footer a:hover{text-decoration:underline}
+  
+  @media(max-width:640px){
+    .cs-hero{padding:50px 0 40px}
+    .impact-grid{grid-template-columns:1fr 1fr}
+    .impact-number{font-size:2rem}
+  }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo">Kelroy James</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#work">Work</a>
+      <a href="/#background">Background</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="cs-hero">
+  <div class="wrap">
+    <div class="cs-breadcrumb">
+      <a href="/">Kelroy James</a> / <a href="/#work">Case Studies</a> / Naval Assurance Modernisation
+    </div>
+    <h1 class="cs-title">Naval Assurance Modernisation & Enterprise GRC Framework</h1>
+    <p class="cs-subtitle">Re-engineering deck-plate assurance across three Fleet Logistics Inspections through integrated ISO governance, Lean Six Sigma, and Three Lines of Defence architecture.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Timeline</span>
+        <span class="cs-meta-value">Mar 2025 – Jul 2026 (16 months)</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Role</span>
+        <span class="cs-meta-value">GRC Framework Lead</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Organization</span>
+        <span class="cs-meta-value">Royal Navy</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Scope</span>
+        <span class="cs-meta-value">Enterprise-level transformation</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="impact-banner">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number">£2.4M</div>
+        <div class="impact-label">Misallocated Expenditure Identified</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">100%</div>
+        <div class="impact-label">Compliance Achievement</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">3</div>
+        <div class="impact-label">Fleet Logistics Inspections (15 months)</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">75%</div>
+        <div class="impact-label">MSc Distinction (Org Leadership)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cs-content">
+  <div class="wrap">
+    <div class="content-grid">
+      
+      <aside class="cs-toc">
+        <h4>Contents</h4>
+        <ul>
+          <li><a href="#challenge">Challenge</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#implementation">Implementation</a></li>
+          <li><a href="#institutionalization">Institutionalization</a></li>
+          <li><a href="#outcomes">Outcomes</a></li>
+          <li><a href="#transferable">Transferable Value</a></li>
+        </ul>
+      </aside>
+
+      <main>
+        
+        <section class="cs-section" id="challenge">
+          <h2>The Challenge</h2>
+          <p>Operational gaps across three Fleet Logistics Inspections (FLIs) in 15 months revealed systemic deficiencies in deck-plate assurance. The existing approach relied on position power rather than systematic controls, creating compliance gaps that couldn't be sustained through personnel changes.</p>
+          
+          <div class="highlight-box">
+            <h4>The Core Problem</h4>
+            <p>Traditional naval assurance relied on the person, not the process. When that person left, the controls failed. The challenge was to design transferable governance that worked independently of who was in the role.</p>
+          </div>
+
+          <p><strong>Specific Challenges:</strong></p>
+          <ul>
+            <li><strong>Inspection failure pattern:</strong> Three FLIs in 15 months exposed recurring control weaknesses</li>
+            <li><strong>Compliance gaps:</strong> Significant deficiencies inherited from previous management</li>
+            <li><strong>Person-dependent controls:</strong> Assurance relied on individual expertise, not documented processes</li>
+            <li><strong>No governance framework:</strong> Royal Navy BRd 93 standards existed but lacked systematic implementation methodology</li>
+            <li><strong>Cultural resistance:</strong> Junior ratings not positioned as first-line risk owners in Three Lines of Defence model</li>
+          </ul>
+
+          <h3>Strategic Context</h3>
+          <p>Rather than treating this as a compliance remediation exercise, I recognized it as an opportunity to apply commercial governance frameworks to military logistics. The question was: could ISO governance standards, Lean Six Sigma, and Three Lines of Defence architecture close the gap between policy and practice at the operational level?</p>
+        </section>
+
+        <section class="cs-section" id="approach">
+          <h2>Approach & Methodology</h2>
+          
+          <h3>Greenfield Continuous Improvement Strategy</h3>
+          <p>Adopted a greenfield approach rather than attempting to fix inherited broken processes. This meant designing new control mechanisms from first principles, grounded in commercial governance standards and academic change management theory.</p>
+
+          <div class="highlight-box">
+            <h4>Power Model Selection: Expert & Referent Over Position</h4>
+            <p>Applied French & Raven's power taxonomy strategically. Rather than relying on rank (position power), built influence through demonstrated expertise (expert power) and cultural engagement (referent power). This was critical for embedding change that would survive leadership turnover.</p>
+          </div>
+
+          <h3>Integrated Governance Framework</h3>
+          <p>Combined four complementary standards to create a comprehensive assurance system:</p>
+
+          <ul>
+            <li><strong>ISO 42001 (AI Management):</strong> Governance for analytics dashboard and data-driven decision-making</li>
+            <li><strong>ISO 27001 (Information Security):</strong> Controls for financial data integrity and access management</li>
+            <li><strong>ISO 27701 (Privacy):</strong> Personnel data protection in performance tracking systems</li>
+            <li><strong>Lean Six Sigma Green Belt:</strong> Process efficiency, waste elimination, continuous improvement discipline</li>
+          </ul>
+
+          <p>Mapped these frameworks against Royal Navy BRd 93 logistics standards to demonstrate that commercial governance and military compliance were describing the same controls in different vocabularies.</p>
+
+          <h3>Three Lines of Defence Architecture</h3>
+          <p>Re-positioned deck-plate roles within the 3LoD model:</p>
+          <ul>
+            <li><strong>1st Line (Risk Ownership):</strong> Junior ratings as first-line risk owners, not just task executors</li>
+            <li><strong>2nd Line (Oversight):</strong> NCO/SNCO layer providing policy guidance and exception management</li>
+            <li><strong>3rd Line (Assurance):</strong> Fleet Logistics Inspection as independent verification mechanism</li>
+          </ul>
+
+          <h3>Change Management Theory</h3>
+          <p>Grounded the transformation in academic organizational change frameworks to ensure sustainability beyond my tenure. This became the basis for MSc-level research validating the approach.</p>
+        </section>
+
+        <section class="cs-section" id="implementation">
+          <h2>Implementation: Control Mechanisms</h2>
+
+          <h3>New Control Mechanisms Established</h3>
+          
+          <p><strong>1. Standardised Loss Validation Routines</strong></p>
+          <p>Designed systematic protocols for investigating and documenting inventory discrepancies. Moved from ad-hoc "find the lost item" efforts to structured root-cause analysis using 5 Whys and fishbone diagrams.</p>
+
+          <p><strong>2. Voucher Assurance Controls</strong></p>
+          <p>Created financial transaction verification processes that caught the £2.4M misallocation. Established segregation of duties, approval hierarchies, and exception reporting thresholds.</p>
+
+          <p><strong>3. Enterprise Analytics Dashboard</strong></p>
+          <p>Co-designed custom dashboard providing real-time visibility into:</p>
+          <ul>
+            <li>Stock variance trends by category and location</li>
+            <li>Financial liability exposure by account line</li>
+            <li>Compliance status against BRd 93 requirements</li>
+            <li>Control effectiveness metrics (detection rate, closure time, recurrence)</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4>The £2.4M Discovery</h4>
+            <p>The analytics dashboard surfaced spending patterns that didn't align with operational activity. Systematic voucher analysis revealed £2.4M in misallocated expenditure across multiple account lines. This wasn't fraud—it was systemic control failure where transactions were recorded against incorrect budget codes, creating both financial liability and inventory discrepancies.</p>
+            <p>Recovery required coordinating with finance teams, validating actual usage, correcting ledger entries, and establishing preventive controls to stop recurrence.</p>
+          </div>
+
+          <h3>Infrastructure Resilience Business Case</h3>
+          <p>Drafted business case for infrastructure upgrades to support the new control environment. Demonstrated ROI through risk reduction, efficiency gains, and inspection readiness. Business case approved and funded.</p>
+
+          <h3>Inspection Recovery</h3>
+          <p>Outcome: Full compliance rating on subsequent Fleet Logistics Inspection. Inspection report noted the transformation from unsatisfactory to compliant and highlighted control mechanisms as transferable best practice.</p>
+        </section>
+
+        <section class="cs-section" id="institutionalization">
+          <h2>Institutionalization: Scaling Beyond the Individual</h2>
+
+          <p>The critical test of any assurance framework is whether it survives the departure of the person who designed it. To institutionalize this transformation, I operated on three parallel tracks: policy adoption, academic validation, and divisional awareness.</p>
+
+          <h3>1. Policy Adoption: Junior Ratings Empowerment Day</h3>
+          <p>Designed and piloted "JR Empowerment Day" to reframe junior ratings as 1st Line Risk Owners in the Three Lines of Defence model, not just task executors following senior direction.</p>
+
+          <p><strong>Programme Structure:</strong></p>
+          <ul>
+            <li>Explained 3LoD architecture in operational context (not corporate theory)</li>
+            <li>Mapped daily tasks to control objectives (showed them they were already running controls)</li>
+            <li>Taught exception escalation protocols (when to escalate vs. resolve locally)</li>
+            <li>Demonstrated how their observations fed into risk management decisions</li>
+          </ul>
+
+          <p><strong>Cultural Shift:</strong> From "I'm told what to do" to "I own this process and escalate when control boundaries are breached."</p>
+
+          <p><strong>Outcome:</strong> Initiative formally adopted as Departmental Policy. Now runs as standing programme, not one-off training event. This is the institutional lock-in: the cultural change is now policy-mandated and resourced.</p>
+
+          <h3>2. Academic Validation: MSc Research</h3>
+          <p>Validated the transformation academically through two MSc dissertations, ensuring the approach was grounded in peer-reviewed theory and reproducible by others:</p>
+
+          <p><strong>MSc Organisational Leadership & Change (75% Distinction):</strong></p>
+          <ul>
+            <li>Research title: "Reframing Junior Ratings as First-Line Risk Owners: A Three Lines of Defence Cultural Change Model"</li>
+            <li>Validated JR Empowerment Day using Kotter's 8-step change model and French & Raven's power taxonomy</li>
+            <li>Demonstrated that expert and referent power were more effective than position power for embedding cultural change</li>
+            <li>Produced transferable change management framework for similar military-to-civilian governance transitions</li>
+          </ul>
+
+          <p><strong>MSc Decision Support (71% Distinction):</strong></p>
+          <ul>
+            <li>Research focus: "Modularisation of Royal Navy Training Pipelines: Optimising Force Generation Through Decision Analytics"</li>
+            <li>Analysed how training pipeline design impacts operational readiness and skills availability</li>
+            <li>Developed decision support framework for balancing throughput, quality, and adaptability</li>
+            <li>Findings applicable to corporate capability development and workforce planning</li>
+          </ul>
+
+          <h3>3. Divisional Awareness: GRC Skills Mapping</h3>
+          <p>Presented integrated GRC/Lean Six Sigma skills-mapping to Engineering Support Group leadership. Demonstrated how naval logistics checks map directly to corporate GRC roles (compliance analyst, internal auditor, risk manager, quality assurance specialist).</p>
+
+          <p><strong>Strategic Impact:</strong> This addresses the military-to-civilian transition gap. Service leavers can now articulate their experience in corporate governance language, and civilian employers can recognize the commercial value of military logistics discipline.</p>
+        </section>
+
+        <section class="cs-section" id="outcomes">
+          <h2>Measurable Outcomes</h2>
+
+          <ul class="outcome-list">
+            <li><strong>£2.4M misallocated expenditure identified and corrected</strong> — Voucher assurance controls caught systemic budget code errors; full recovery executed through ledger corrections and preventive controls</li>
+            <li><strong>Unsatisfactory → Fully Compliant inspection rating</strong> — Fleet Logistics Inspection outcome transformed through systematic control design, not person-dependent effort</li>
+            <li><strong>3 Fleet Logistics Inspections navigated in 15 months</strong> — High operational tempo provided multiple validation cycles for the new control framework</li>
+            <li><strong>Enterprise analytics dashboard operational</strong> — Real-time visibility into compliance status, financial exposure, and control effectiveness; scoped for wider fleet adoption</li>
+            <li><strong>Departmental policy adoption (JR Empowerment Day)</strong> — Cultural change initiative embedded as standing programme, ensuring sustainability beyond individual tenure</li>
+            <li><strong>Two MSc dissertations (75% and 71% Distinction)</strong> — Academic validation of the transformation methodology, producing transferable frameworks</li>
+            <li><strong>Infrastructure resilience business case approved</strong> — Investment secured for system upgrades supporting the new control environment</li>
+            <li><strong>Divisional awareness established</strong> — Engineering Support Group leadership now recognizes GRC/LSS skills as transferable to civilian roles</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4>The Transferability Test</h4>
+            <p>The true measure of success: when I departed the role, the controls continued to function. The subsequent FLI (conducted after my departure) maintained the Fully Compliant rating. This confirms the framework was process-driven, not person-dependent.</p>
+          </div>
+        </section>
+
+        <section class="cs-section" id="transferable">
+          <h2>Transferable Value to Civilian Roles</h2>
+
+          <h3>Skills Demonstrated</h3>
+          <div class="tools-grid">
+            <div class="tool-tag">Enterprise Risk Management</div>
+            <div class="tool-tag">ISO 27001/42001/27701</div>
+            <div class="tool-tag">Lean Six Sigma</div>
+            <div class="tool-tag">3LoD Architecture</div>
+            <div class="tool-tag">Change Management</div>
+            <div class="tool-tag">Data Analytics</div>
+            <div class="tool-tag">Policy Development</div>
+            <div class="tool-tag">Process Design</div>
+            <div class="tool-tag">Financial Control</div>
+            <div class="tool-tag">Academic Research</div>
+            <div class="tool-tag">Stakeholder Engagement</div>
+            <div class="tool-tag">Continuous Improvement</div>
+          </div>
+
+          <h3>Civilian Sector Applications</h3>
+
+          <p><strong>GRC Manager / Head of Compliance:</strong></p>
+          <ul>
+            <li>Designing enterprise GRC frameworks integrating multiple standards (ISO, SOC 2, GDPR)</li>
+            <li>Building Three Lines of Defence architectures that distribute risk ownership appropriately</li>
+            <li>Establishing financial controls and audit trails that detect misallocation or fraud</li>
+            <li>Creating policy that embeds cultural change, not just compliance checklists</li>
+          </ul>
+
+          <p><strong>Management Consultant (Governance & Process Improvement):</strong></p>
+          <ul>
+            <li>Diagnosing where controls are person-dependent and designing transferable processes</li>
+            <li>Applying academic change management theory to real-world transformations</li>
+            <li>Integrating multiple governance frameworks into coherent operating models</li>
+            <li>Delivering measurable ROI through risk reduction and efficiency gains</li>
+          </ul>
+
+          <p><strong>Supply Chain Assurance / Operational Risk:</strong></p>
+          <ul>
+            <li>Designing inventory and financial reconciliation controls at enterprise scale</li>
+            <li>Building analytics dashboards that surface variance patterns and control effectiveness</li>
+            <li>Establishing loss validation routines and root-cause analysis disciplines</li>
+            <li>Linking operational controls to regulatory requirements (sector-specific compliance)</li>
+          </ul>
+
+          <h3>The Translation Challenge This Project Solves</h3>
+          <p>Military logistics professionals often struggle to translate their experience into civilian governance language. This project demonstrates that the skills are identical—only the vocabulary differs:</p>
+
+          <ul>
+            <li><strong>"Fleet Logistics Inspection"</strong> = Internal audit / regulatory inspection</li>
+            <li><strong>"BRd 93 compliance"</strong> = ISO 9001 / sector-specific regulatory compliance</li>
+            <li><strong>"Voucher assurance"</strong> = Financial controls / SOX compliance</li>
+            <li><strong>"Stock variance protocol"</strong> = Inventory reconciliation / shrinkage management</li>
+            <li><strong>"Junior ratings as 1st Line Risk Owners"</strong> = Embedded control ownership / risk-aware culture</li>
+          </ul>
+
+          <p>By mapping military assurance to ISO frameworks and Three Lines of Defence, I've created a bridge that allows civilian employers to see the commercial value of Defence logistics expertise.</p>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+</div>
+
+<div class="cs-footer">
+  <div class="wrap">
+    <div>
+      <a href="/#work">← Back to all case studies</a>
+    </div>
+    <div>
+      <a href="/#contact">Discuss this project →</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
