@@ -161,6 +161,38 @@
     text-transform:uppercase;color:var(--muted);
   }
 
+  /* ============ article embeds ============ */
+  .article-embed{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);margin-bottom:42px}
+  .article-embed .top-band{height:3px;background:var(--brass)}
+  .article-img{width:100%;height:240px;object-fit:cover;object-position:center;display:block}
+  .article-body{padding:28px 32px 24px}
+  .article-series{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--brass);margin:0 0 12px;display:block}
+  .article-title{font-family:Spectral,Georgia,serif;font-size:1.55rem;font-weight:700;line-height:1.2;margin:0 0 6px;letter-spacing:-.012em}
+  .article-subtitle{font-size:13.5px;color:var(--muted);font-style:italic;margin:0 0 18px;font-family:Spectral,Georgia,serif}
+  .article-standfirst{font-family:Spectral,Georgia,serif;font-size:1.05rem;line-height:1.55;color:var(--ink-2);margin:0 0 24px;border-left:3px solid var(--brass);padding-left:18px;max-width:70ch}
+  .article-text{font-size:15.5px;line-height:1.72;color:var(--ink-2)}
+  .article-text p{margin:0 0 18px}
+  .article-text h3{font-family:Spectral,Georgia,serif;font-size:1.18rem;font-weight:700;color:var(--ink);margin:28px 0 10px;letter-spacing:-.01em}
+  .article-text h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px}
+  .article-text ul{margin:0 0 18px;padding-left:22px;display:flex;flex-direction:column;gap:4px}
+  .article-text li{font-size:15.5px;color:var(--ink-2);line-height:1.6}
+  .article-expand{display:none}
+  .article-expand.open{display:block}
+  .article-toggle{
+    margin-top:8px;background:none;border:1px solid var(--brass);color:var(--brass);
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    padding:9px 18px;cursor:pointer;transition:all .18s ease;
+  }
+  .article-toggle:hover{background:var(--brass);color:var(--surface)}
+  .article-refs{margin-top:28px;padding-top:20px;border-top:1px solid var(--rule-soft)}
+  .article-refs h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  .article-refs ol{padding-left:18px;display:flex;flex-direction:column;gap:6px}
+  .article-refs li{font-size:13px;color:var(--ink-2);line-height:1.5}
+  .article-refs a{color:var(--navy);font-size:13px}
+  .article-disclaimer{font-size:12.5px;color:var(--muted);font-style:italic;margin:24px 0 0;max-width:72ch}
+  .article-meta{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+  .article-status{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--surface);background:var(--brass);padding:3px 10px}
+
   /* ============ impact metrics ============ */
   .impact{background:var(--brass-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--brass);padding:48px 0}
   .impact .wrap{max-width:1100px}
@@ -455,30 +487,185 @@
 
 <section id="thought-leadership">
   <div class="wrap">
-    <div class="sec-head"><h2>Thought Leadership</h2><span class="note">In preparation</span></div>
-    <p class="intro-p">Three arguments, all of them versions of the same one. Links go live as each piece publishes.</p>
+    <div class="sec-head"><h2>Thought Leadership</h2><span class="note">Pan-Defence Skills Series</span></div>
+    <p class="intro-p">Two published arguments and two in development, all of them versions of the same one: Defence produces capable people who operate controls, manage risk and assure compliance — and consistently fails to describe them in a language the civilian market can read.</p>
+
+    <!-- ARTICLE 1 -->
+    <div class="article-embed">
+      <div class="top-band"></div>
+      <img class="article-img" src="/images/articles/defence-skills-transition.jpg" alt="Service leavers at Defence Equipment and Support — illustrating military-to-civilian career transition">
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="article-status">Published</span>
+          <span class="article-series">Skills Framework · 1 of 2</span>
+        </div>
+        <h3 class="article-title">Recognition Before Retraining</h3>
+        <p class="article-subtitle">Why the Pan-Defence Skills Framework Is the Missing Piece in Service Leaver Transition</p>
+        <p class="article-standfirst">Just over half of UK veterans — 52.5% — say they have taken a job below the level of their last military role. One of the two most cited reasons was that employers did not recognise their transferable skills. Defence has now built the instrument that could fix this, and is currently using it only for internal workforce planning.</p>
+
+        <div class="article-text">
+          <p>That figure comes from the Veterans' Survey 2022, published by the Office for National Statistics and analysed by Government. The two most cited reasons were that no other jobs were available, and that the employer did not recognise transferable military skills.</p>
+          <p>I want to focus on the second reason, because it is the one Defence can actually do something about.</p>
+
+          <h3>The problem is translation, not capability</h3>
+          <p>Resettlement is often framed as a training question. Which course should I take? Which qualification will an employer accept? Which sector is hiring?</p>
+          <p>Those are reasonable questions. They are simply the second question.</p>
+          <p>The first question should be: what level have I already been operating at, and what would a civilian organisation call it?</p>
+          <p>When that question is skipped, capable people enter the labour market as though they are starting again.</p>
+          <p>I have seen a Warrant Officer with two decades of operational service, whose last role involved managing the regeneration of a Type 45 destroyer, complete an 18th Edition electrical wiring course during resettlement. The qualification itself is entirely legitimate and, for the right destination, exactly the right choice.</p>
+          <p>But regenerating a complex warship involves programme coordination, contractor and supplier management, configuration and asset governance, safety and regulatory assurance, resource planning, risk management, quality control and delivery against operational deadlines.</p>
+          <p>If none of that is named, it does not travel. The individual arrives in the civilian market carrying a single narrow label instead of the capability behind it.</p>
+        </div>
+
+        <button class="article-toggle" onclick="var exp=this.nextElementSibling;exp.classList.toggle('open');this.textContent=exp.classList.contains('open')?'Collapse ↑':'Continue reading →'" aria-expanded="false">Continue reading →</button>
+
+        <div class="article-expand">
+          <div class="article-text">
+            <p>The survey data reflects this pattern. Veterans who served below officer rank were significantly more likely to report skills-related underemployment than those who served as officers — 56.1% compared with 42.4%. Among Royal Navy veterans the figure was 52.8%.</p>
+            <p>Senior non-commissioned capability is precisely the capability the civilian market struggles to read.</p>
+
+            <h3>Why this is not a criticism of resettlement provision</h3>
+            <p>The Career Transition Partnership provides real and valuable support, including transferable skills identification, CV development, employment guidance and vocational training across engineering, health and safety, IT, management, transport and logistics, electrotechnical work and skilled trades.</p>
+            <p>The breadth is genuine. Project management, cyber, safety and the trades are all appropriate destinations for many people.</p>
+            <p>The limitation is structural rather than cultural. A course catalogue cannot, on its own, establish the level at which an individual has already worked. Two people may both select an engineering course. One is entering the profession. The other has spent years directing engineering outputs, contractors, safety cases and operational availability.</p>
+            <p>Their training needs are not the same. Without a shared way of describing capability, they are treated as though they are.</p>
+
+            <h3>What the Pan-Defence Skills Framework changes</h3>
+            <p>Defence has now built the missing infrastructure.</p>
+            <p>The Pan-Defence Skills Framework, introduced from 2024, is a Whole Force approach to identifying, defining, managing and deploying skills. It is described by Defence as a single common language for skills, knowledge, experience and behaviours, and it applies to Regulars, Reservists and civil servants alike.</p>
+            <p>It is not a policy document sitting on a shelf. Personnel access an individual skills profile through an app, claim skills, and have them validated by their reporting officer or line manager. The validation process also accounts for skill fade in cases where qualifications or experience are not recent.</p>
+            <p>Senior officers involved in the rollout have described it as a shift away from a purely rank-based view of what a person can do. As one put it, Defence may start employing people according to the skillset it needs rather than the rank historically attached to a role.</p>
+            <p>That is a significant statement. And it has an obvious external consequence that has not yet been fully exploited.</p>
+            <p>If Defence can now describe capability in a common language internally, it can also describe it in a language employers understand externally.</p>
+
+            <h3>From workforce management tool to translation layer</h3>
+            <p>The framework was not designed solely as a transition tool. But the 2021 Defence and Security Industrial Strategy was explicit that the Pan-Defence Skills Framework would make it easier for people to move between government and industry.</p>
+            <p>Movement between sectors requires mutual intelligibility. A skills profile that is meaningful only inside Defence cannot support that movement.</p>
+            <p>Used properly, a validated skills profile should let a service leaver answer a much better set of questions before selecting any course: What level of responsibility have I actually held? What assets, people, budgets or programmes have I been accountable for? What risks did I own, and what controls did I operate or oversee? What would a civilian organisation call that capability? Which gaps are genuine, and which are only gaps in vocabulary?</p>
+            <p>The output is different. Instead of "maintained stores records and prepared the unit for inspection", the individual can evidence that they operated a first-line internal control regime, maintained asset accountability, resolved discrepancies and supported independent assurance.</p>
+            <p>The activity has not changed. The description has.</p>
+
+            <h3>What good translation looks like</h3>
+            <p>Defence capability translates more readily than most people assume.</p>
+            <p>Fleet logistics inspection and tiered assurance map to operational assurance, internal controls and audit readiness. Stores account management maps to asset governance, inventory integrity and reconciliation. Supersession and handover boards map to custody transfer and segregation of duties. Transport safety and dangerous goods responsibilities map to statutory compliance and chain of custody assurance. Supervising contractors maps to third-party risk and contract governance. Sustaining output through disruption maps to operational resilience and continuity planning.</p>
+            <p>The environment changes. The control logic does not.</p>
+            <p>Speaking personally, after more than seventeen years in Defence logistics I did not initially describe my own work as governance, risk and compliance. It was presented to me as logistics. Only when I studied it through a civilian framework — alongside postgraduate work in supply chain management and professional development in management systems, cyber and AI governance — did the equivalence become obvious.</p>
+            <p>I should not have needed a Master's degree to discover that. Nor should anyone else.</p>
+
+            <h3>The practical ask</h3>
+            <p>I am not arguing that every service leaver is a latent assurance professional, or that vocational courses should be discouraged.</p>
+            <p>I am arguing for a change in sequence.</p>
+            <p>First, record capability using the framework Defence has already built, including scope, scale, complexity, decision-making authority and consequence of failure. Second, map that capability against recognised civilian reference points such as management system standards, internal control models, engineering and programme competency frameworks and professional registration routes. Third, identify only the gaps that genuinely need closing, then select training accordingly.</p>
+            <p>A qualification should open a door. It should not shrink the room behind it.</p>
+            <p>Defence has spent years developing people who govern assets, test controls, manage risk, assure compliance and protect capability under pressure. The Pan-Defence Skills Framework finally gives those people a way to name it.</p>
+            <p>If we use it only for internal workforce planning, we will have built a translation engine and left it switched off.</p>
+
+            <p class="article-disclaimer">The views expressed here are my own and are based on general observations about military transition, skills recognition and Defence workforce development. They do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</p>
+
+            <div class="article-refs">
+              <h4>References</h4>
+              <ol>
+                <li><a href="https://www.gov.uk/government/publications/employment-analysis-of-uk-armed-forces-veterans/employment-skills-and-volunteering-uk-armed-forces-veterans-uk-veterans-survey-2022" target="_blank" rel="noopener">Employment, skills and volunteering, UK armed forces veterans — Veterans' Survey 2022 (GOV.UK / ONS)</a></li>
+                <li><a href="https://www.forcesnews.com/services/tri-service/common-language-new-transferable-skills-app-shifting-defence-focus-rank" target="_blank" rel="noopener">The new transferable skills app shifting Defence focus from rank to skills (Forces News)</a></li>
+                <li><a href="https://assets.publishing.service.gov.uk/media/65ce3f834239310011b7b8aa/JSP_822_V7.0__Vol_8_V3.0_-_Skills_and_Accreditation.odt" target="_blank" rel="noopener">JSP 822 Volume 8: Skills and Accreditation in Defence (GOV.UK)</a></li>
+                <li><a href="https://assets.publishing.service.gov.uk/media/60590e988fa8f545d879f0aa/Defence_and_Security_Industrial_Strategy_-_FINAL.pdf" target="_blank" rel="noopener">Defence and Security Industrial Strategy, 2021 (GOV.UK)</a></li>
+                <li><a href="https://www.gov.uk/guidance/career-transition-partnership" target="_blank" rel="noopener">Career Transition Partnership guidance (GOV.UK)</a></li>
+                <li><a href="https://www.gov.uk/government/publications/veterans-strategy/veterans-strategy" target="_blank" rel="noopener">Veterans Strategy (GOV.UK)</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARTICLE 2 -->
+    <div class="article-embed">
+      <div class="top-band"></div>
+      <img class="article-img" src="/images/articles/defence-industry-talent.webp" alt="Aerospace and defence industry workforce — illustrating talent mobility between MOD, industry and the Reserves">
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="article-status">Published</span>
+          <span class="article-series">Skills Framework · 2 of 2</span>
+        </div>
+        <h3 class="article-title">Talent Should Flow Both Ways</h3>
+        <p class="article-subtitle">The Pan-Defence Skills Framework as a Defence Industrial Strategy Tool</p>
+        <p class="article-standfirst">Regular Armed Forces numbers are down 8% since 2022. The ambition is to grow the Reserves by 20%. The defence industrial base is expanding. None of that works if experienced professionals have to enter at the bottom. The MOD is already piloting an alternative, and most people have not noticed.</p>
+
+        <div class="article-text">
+          <p>Most discussion of Defence skills frameworks focuses on getting people out well.</p>
+          <p>The more strategically interesting question is how we get experienced people in, and how we keep moving them between the Ministry of Defence, the defence industry and the Reserves without treating each move as a fresh start.</p>
+          <p>The UK now has both the strategic driver and the technical mechanism to do this. They are not yet fully connected.</p>
+
+          <h3>The driver</h3>
+          <p>The 2025 Defence Industrial Strategy is unambiguous about the workforce challenge. It commits £182 million to strengthen the future skills of the workforce, and states plainly that Government will make it easier and faster for members of the Armed Forces and workers in other industries to move into the defence sector.</p>
+          <p>Critically, it also commits to making it easier to transfer into and across defence mid-career by scoping the development of a Defence Skills Passport. That passport is intended to build on the Ministry of Defence's industry-benchmarked Pan-Defence skills work and on ZigZag Careers, creating a digital record of an individual's skills that enables smoother identification and transfer between the Armed Forces, defence industry and those looking to enter from neighbouring industries.</p>
+          <p>The pressure behind this is real. Analysis of the Strategic Defence Review notes that Regular Armed Forces numbers declined by 8% since 2022, that shortages now affect military, civil service and industrial roles across manufacturing, engineering and advanced technology, and that Defence supports over 239,000 jobs. The Review also commits to boosting Reserve numbers by 20% when funding allows, alongside a whole force, skills-based approach.</p>
+          <p>You cannot expand the Reserves by a fifth, staff a growing industrial base and simultaneously insist that experienced professionals begin at the bottom of a rank ladder.</p>
+        </div>
+
+        <button class="article-toggle" onclick="var exp=this.nextElementSibling;exp.classList.toggle('open');this.textContent=exp.classList.contains('open')?'Collapse ↑':'Continue reading →'" aria-expanded="false">Continue reading →</button>
+
+        <div class="article-expand">
+          <div class="article-text">
+            <h3>The mechanism</h3>
+            <p>The Pan-Defence Skills Framework already provides the architecture.</p>
+            <p>It was designed as a Whole Force approach covering Regulars, Reservists and civil servants, giving Defence a single common language for skills, knowledge, experience and behaviours, with individual validated skills profiles held digitally.</p>
+            <p>Two features matter enormously for talent mobility.</p>
+            <p>First, it captures skills acquired outside Defence. Personnel are encouraged to log capability from their civilian lives — from language proficiency to professional qualifications — which was previously either passed by word of mouth or lost entirely. Senior officers leading the rollout have highlighted Reservists specifically, noting that they hold a wealth of experience from outside Defence that is potentially very valuable.</p>
+            <p>Second, it decouples capability from rank as the primary organising principle. Defence has openly discussed employing people according to the skillset required rather than the rank conventionally attached to a role.</p>
+            <p>That is the foundation for genuine lateral entry.</p>
+
+            <h3>It is already being piloted</h3>
+            <p>This is not hypothetical. The ZigZag Career Pathway is a skills-focused pilot designed to bring talented professionals into the Armed Forces in fixed-term roles that match their expertise, and it explicitly breaks away from the conventional military career ladder.</p>
+            <p>It is open to civilians with no prior service, to veterans returning, and to Reservists seeking a more flexible contribution, with minimal military training required and a tailored induction.</p>
+            <p>The language on entry level is direct. For veterans and current reservists, the pathway offers roles that reflect industry experience rather than previous rank, so that individuals can re-engage at an appropriate level and make the most of hard-earned skills.</p>
+            <p>Advertised ZigZag roles have included cyber threat intelligence and digital support posts at specified grades. This is a working proof of concept for capability-based entry.</p>
+
+            <h3>The strategic case for making this systematic</h3>
+            <p>Treat the framework as an enterprise-wide talent market rather than an internal HR system, and several things become possible.</p>
+            <p>Defence can buy scarce expertise it cannot grow at pace. Cyber, data, AI assurance, systems engineering, nuclear skills, trade compliance and complex programme delivery are contested across the whole economy. Sourcing a mid-career specialist through a Reserve or fixed-term route at a level proportionate to their capability is faster than training one for a decade.</p>
+            <p>Industry gains a legible talent pool. At present a defence prime reading a Service CV is performing an act of interpretation. A validated, industry-benchmarked skills record removes that friction and reduces the risk premium employers apply to military candidates.</p>
+            <p>Retention improves. People are more likely to stay in an enterprise where they can move without penalty than one where every transition costs them status. A skills passport makes a career that moves between MOD, industry and the Reserves a rational choice rather than a gamble.</p>
+            <p>Assurance and oversight capability improves on both sides. Someone who has operated first-line controls inside Defence, then worked in commercial supply chain governance or export control, then returned as a Reservist, understands both the regulator's expectation and the operator's reality. That combination is rare and increasingly valuable given the enforcement risk now attached to export control and supply chain compliance in the sector.</p>
+            <p>Sovereign capability becomes less fragile. Skills held by one organisation and invisible to the rest of the enterprise are single points of failure.</p>
+
+            <h3>What needs to be true for this to work</h3>
+            <p>I would not overstate where we are. Two things need honest treatment.</p>
+            <p>First, the Defence Skills Passport is being scoped, not delivered. The strategy commits to scoping an initial framework, operating concept and pilot opportunities through sector-wide consultation supported by industry early adopters. That is the right start, but scoping is not implementation, and the value only appears when industry recognises the record as authoritative.</p>
+            <p>Second, capability-based entry is not a route around standards. Professional registration, security clearance, competence assurance and safety qualification requirements exist for good reasons and should be met in full. The argument is narrower and more defensible: prior demonstrated capability should be assessed before anyone is treated as a beginner.</p>
+            <p>That distinction matters. Recognition of prior capability is not a shortcut. It is an accuracy improvement.</p>
+
+            <h3>The question to ask</h3>
+            <p>Defence has historically asked what skills it needs and how to train them.</p>
+            <p>The better question is how Defence makes skills visible, portable and recognisable as people move between Service, industry and the wider economy — in both directions and more than once.</p>
+            <p>The Pan-Defence Skills Framework, the ZigZag pilot and the proposed Defence Skills Passport are three parts of the same answer. They currently sit in different places, owned by different parts of the enterprise, with different levels of maturity.</p>
+            <p>Joining them up is not a technology problem. It is a decision about whether we regard a career as a ladder or as a network.</p>
+            <p>Given the scale of the recruitment, retention and industrial capacity challenge in front of us, a network looks considerably more useful.</p>
+
+            <p class="article-disclaimer">The views expressed here are my own and are based on general observations about Defence workforce policy, skills recognition and industrial strategy. They do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</p>
+
+            <div class="article-refs">
+              <h4>References</h4>
+              <ol>
+                <li><a href="https://assets.publishing.service.gov.uk/media/68bea3fc223d92d088f01d69/Defence_Industrial_Strategy_2025_-_Making_Defence_an_Engine_for_Growth.pdf" target="_blank" rel="noopener">Defence Industrial Strategy 2025: Making Defence an Engine for Growth (GOV.UK)</a></li>
+                <li><a href="https://www.gov.uk/government/news/major-skills-boost-at-the-heart-of-transformative-new-defence-industrial-strategy" target="_blank" rel="noopener">Major skills boost at the heart of transformative new Defence Industrial Strategy (GOV.UK)</a></li>
+                <li><a href="https://www.findforcesjobs.mod.gov.uk/vx/candidate/cms/ZigZag%20Career%20Pathways" target="_blank" rel="noopener">ZigZag Career Pathways (MOD, Find Forces Jobs)</a></li>
+                <li><a href="https://www.forcesnews.com/services/tri-service/common-language-new-transferable-skills-app-shifting-defence-focus-rank" target="_blank" rel="noopener">The new transferable skills app shifting Defence focus from rank to skills (Forces News)</a></li>
+                <li><a href="https://assets.publishing.service.gov.uk/media/60590e988fa8f545d879f0aa/Defence_and_Security_Industrial_Strategy_-_FINAL.pdf" target="_blank" rel="noopener">Defence and Security Industrial Strategy, 2021 (GOV.UK)</a></li>
+                <li><a href="https://policyconnect.org.uk/blog/war-fighting-ready-workforce-tackling-uk-defence-skills-shortages-2025-strategic-defence/" target="_blank" rel="noopener">A "War-fighting Ready" Workforce? Tackling UK Defence Skills Shortages (Policy Connect)</a></li>
+                <li><a href="https://www.gov.uk/government/publications/the-strategic-defence-review-2025-making-britain-safer-secure-at-home-strong-abroad/the-strategic-defence-review-2025-making-britain-safer-secure-at-home-strong-abroad" target="_blank" rel="noopener">The Strategic Defence Review 2025: Making Britain Safer (GOV.UK)</a></li>
+                <li><a href="https://assets.publishing.service.gov.uk/media/683d6964fd325db61c5ff289/Sector_skills_needs_assessments_Defence.pdf" target="_blank" rel="noopener">Sector skills needs assessments: Defence (GOV.UK)</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLACEHOLDERS for articles 3 and 4 -->
     <div class="writing">
-
       <article class="piece">
-        <span class="status">In preparation</span>
-        <div>
-          <h3>Recognition Before Retraining</h3>
-          <p>Just over half of UK veterans have taken a job below the level of their last military role, and one of the two most cited reasons is employers failing to recognise transferable skills. Defence has now built the instrument that could fix that, and is using it only for internal workforce planning.</p>
-        </div>
-        <span class="series">Skills · 1 of 2</span>
-      </article>
-
-      <article class="piece">
-        <span class="status">In preparation</span>
-        <div>
-          <h3>Talent Should Flow Both Ways</h3>
-          <p>The Defence Industrial Strategy commits to a Skills Passport. The MOD is already running a pilot that hires on industry experience rather than previous rank. The strategy does not mention the pilot, and the pilot does not mention the strategy.</p>
-        </div>
-        <span class="series">Skills · 2 of 2</span>
-      </article>
-
-      <article class="piece">
-        <span class="status">In preparation</span>
+        <span class="status">Coming soon</span>
         <div>
           <h3>The Convergence of Cyber-GRC and Physical Logistics</h3>
           <p>A regulator recently found that a defence prime's export control exposure ran through the gap between a supply chain team that did not hold the regulatory knowledge and a file transfer system that did not carry the warning. Each function could have reported itself compliant.</p>
@@ -486,7 +673,16 @@
         <span class="series">Assurance</span>
       </article>
 
+      <article class="piece">
+        <span class="status">Coming soon</span>
+        <div>
+          <h3>Previously Published</h3>
+          <p>A fourth piece from the archive — to be added shortly.</p>
+        </div>
+        <span class="series">Archive</span>
+      </article>
     </div>
+
   </div>
 </section>
 
