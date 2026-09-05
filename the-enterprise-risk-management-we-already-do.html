@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Corporate risk management is being rewired around decisions, dependencies and judgement. Operational institutions have worked that way for decades, under other names.">
+<title>The Enterprise Risk Management We Already Do — Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3;
+  --surface:#FFFFFF;
+  --surface-2:#F5F7F9;
+  --ink:#15202B;
+  --ink-2:#3D4C59;
+  --muted:#697887;
+  --rule:#D3DAE1;
+  --rule-soft:#E3E8ED;
+  --accent:#8A6A2F;
+  --accent-soft:#F2ECDF;
+  --signal:#9A6410;
+  --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* reading progress bar */
+.reading-progress{
+  position:fixed;top:0;left:0;right:0;height:4px;
+  background:var(--rule-soft);z-index:100;
+}
+.reading-progress-bar{
+  height:100%;background:var(--accent);width:0%;
+  transition:width .1s ease;
+}
+
+/* top nav */
+.topnav{padding:22px 0 0;margin-bottom:44px}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:#6B7885;
+}
+.topnav a:hover{color:var(--accent)}
+
+/* masthead */
+.masthead{
+  background:var(--surface);
+  border-bottom:1px solid var(--rule);
+  padding:0;
+  margin-bottom:52px;
+  position:relative;
+}
+.featured-image{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+@media(min-width:800px){
+  .featured-image{height:420px}
+}
+.masthead-content{
+  padding:48px 0 44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:0 0 20px;
+  text-wrap:balance;
+  max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;
+  font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;
+  padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+/* article body */
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.65rem;font-weight:700;
+  margin:56px 0 18px;
+  letter-spacing:-.012em;
+}
+.prose h3{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.32rem;font-weight:600;
+  margin:42px 0 14px;
+  letter-spacing:-.008em;
+}
+.prose h4{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.12rem;font-weight:600;
+  margin:32px 0 10px;
+}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose blockquote{
+  border-left:3px solid var(--accent);
+  padding-left:20px;
+  margin:26px 0;
+  font-style:italic;
+  color:var(--ink-2);
+}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+.pullquote{
+  border-left:4px solid var(--accent);
+  padding:24px 28px;margin:32px 0;
+  background:var(--accent-soft);
+  font-family:Spectral,Georgia,serif;
+  font-size:1.28rem;line-height:1.5;
+  font-weight:600;color:var(--ink);
+  font-style:italic;
+}
+.reading-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  margin-top:8px;
+}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+.share-buttons{
+  display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;
+}
+.share-btn{
+  padding:7px 14px;font-size:11.5px;
+  font-family:"IBM Plex Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--surface-2);border:1px solid var(--rule);
+  color:var(--ink-2);text-decoration:none;
+  transition:all .2s ease;cursor:pointer;
+}
+.share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* references section */
+.references{
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  margin-top:56px;
+}
+.references h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.45rem;font-weight:700;
+  margin:0 0 20px;
+}
+.references h3,.references h4{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:24px 0 12px;
+  font-weight:500;
+}
+.references ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+}
+.references li{
+  margin-bottom:10px;
+  font-size:14px;
+  line-height:1.6;
+  padding-left:14px;
+  position:relative;
+}
+.references li::before{
+  content:"—";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+
+footer{
+  padding:34px 0 56px;
+  border-top:1px solid var(--rule);
+}
+footer p{
+  font-size:12.5px;color:var(--muted);
+  max-width:70ch;margin:0 0 10px;
+  line-height:1.6;
+}
+</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div class="wrap topnav">
+  <a href="/writing.html">&#8592; Writing</a>
+</div>
+
+<header class="masthead">
+  <img src="/images/articles/erm-header.jpg" alt="Bridge watchkeeping and command decision-making at sea — illustrating enterprise risk management exercised at the point of decision" class="featured-image">
+  <div class="wrap masthead-content">
+    <div class="eyebrow">
+      <span class="tick">◆</span>
+      <span>Assurance</span>
+      <span>Enterprise Risk</span>
+      <span>GRC</span>
+    </div>
+    <h1>The Enterprise Risk Management We Already Do</h1>
+    <p class="standfirst">Corporate risk management is being rewired around decisions, dependencies and judgement. Operational institutions have worked that way for decades, under other names.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>September 2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 8 min read</span>
+      <span>📊 1,620 words</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.github.io/the-enterprise-risk-management-we-already-do.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.github.io/the-enterprise-risk-management-we-already-do.html&text=The%20Enterprise%20Risk%20Management%20We%20Already%20Do" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=Article: The Enterprise Risk Management We Already Do&body=I thought you might find this interesting: https://kelroyjames.github.io/the-enterprise-risk-management-we-already-do.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>In August 2026, PwC UK published an insight paper titled "Rewiring Enterprise Risk Management." Its argument is that ERM has drifted into something process-led and backward-looking, in which risks are classified, reviewed on a cycle and reported through governance after the decisions that created them have already been taken. Its proposed correction rests on three shifts: starting with decisions rather than risk registers, preparing for how disruption actually moves rather than attempting to forecast every event, and using artificial intelligence to sharpen human judgement rather than to replace it.</p>
+
+<p>I read it twice. Not because the argument was difficult, but because each of the three shifts described something I have watched operate at sea for eighteen years. It was simply never called enterprise risk management.</p>
+
+<p>This is the third piece I have written on the same underlying theme. The first argued that accreditation tests a supplier's legitimacy on a given day. However, it does not test resilience, and the fragility tends to sit in the lower tiers where accreditation looks least closely. The second read the BAE Systems, Inc. settlement beyond its headline figure and found a regulator describing compliance failure at scale as substantially a failure of people, from which it follows that career paths and competence are themselves compliance controls. The pattern across all three is consistent: the frameworks that corporate risk management is now formalising describe practices that operational institutions have exercised for decades under different vocabulary. Those institutions did not develop them because a standard required it. They developed them because the consequences of not having them were immediate.</p>
+
+<h4>Risk at the point of decision</h4>
+
+<p>The first shift is the most consequential. The gap PwC identify is between where risk is created (in decisions, formal and informal) and where risk is reviewed, which is too often afterwards, on a reporting cycle, once momentum has become difficult to reverse. Their correction is to place risk expertise into the moments where choices are actually being made.</p>
+
+<p>A warship cannot operate any other way. Command decisions at sea do not wait for a quarterly committee, and the risk judgement is exercised at the point of decision or it is not exercised at all. The operational planning process exists precisely to force assumptions into the open before commitment, and the brief-back, in which a subordinate states the plan and its risks back to the commander, is a challenge built into the decision rather than appended to it afterwards. In first-line assurance practice the same logic applies: a findings register that feeds decisions within the operating cycle, while the consequences remain cheap to change, is doing risk work. A register compiled for a report is doing something else.</p>
+
+<p>The critique cuts both ways, however, and it would be dishonest to present it otherwise. Defence assurance also contains exactly the pattern PwC warn against: the periodic inspection that examines compliance after the fact, and the annual audit cycle that reports on decisions long since locked in. Consequently the lesson is not that Defence has nothing to learn here. It is that the decision-focused model already exists in the operational half of these institutions, and the work is to extend it into the assurance half.</p>
+
+<h4>Minimum viable is not a new idea at sea</h4>
+
+<p>The second shift introduces what PwC term the Minimum Viable Company: the smallest set of services, processes and dependencies that must continue working for an organisation to remain viable under severe stress. Rather than attempting to predict every disruption, leaders define what must be protected, preserved and restored when several things fail at once.</p>
+
+<p>Every ship's company already carries this concept, because damage control depends upon it. When a ship takes damage nobody attempts to save everything simultaneously. The priorities are to float, to move and to fight, in that order, and every drill rehearses the dependencies beneath those three outcomes. Readiness states, mission-essential equipment schedules and minimum manning requirements are all expressions of the question PwC are now asking boards to answer. Having led a supply chain department through regeneration to readiness for sea, I would add that returning a warship to operational capability is precisely an exercise in rebuilding to a defined minimum viability and then beyond it, dependency by dependency, each tested under stress before it is trusted.</p>
+
+<p>What strikes me most is the timing. Royal Navy policy direction put the minimum-viable question to its own bureaucracy at the start of this year, some months before corporate risk thinking arrived at the same lens, asking of compliance itself which checks genuinely protect safety and operational effectiveness and which persist because a process once demanded them. The two applications also presuppose one another. An organisation can only reduce its checking safely if it already knows which dependencies genuinely bear upon its viability. Conversely, once the minimum viable organisation has been defined, the natural next step is to reduce the assurance burden around everything outside it. One is the concept and the other is its implementation consequence, and on this occasion the operational institution reached the implementation first.</p>
+
+<h4>Human-led, AI-amplified</h4>
+
+<p>The third shift holds that AI should extend the reach and imagination of risk functions, detecting weak signals, testing assumptions and generating scenarios at pace, whilst the consequential judgements remain human, since those involve ambiguity, incomplete information and behaviour under pressure.</p>
+
+<p>This is the settlement the maritime domain reached long ago. The sensor picture has grown enormously; the officer of the watch still decides. The value of AI in risk work is a wider field of view rather than the impression of automated certainty, and the assurance question which follows is the one I find most interesting: how does an organisation evidence that the tools amplifying its judgement are themselves trustworthy?</p>
+
+<p>The gap here is measurable. EY's 2026 global technology executive survey reported that around a quarter of technology executives had enterprise-wide AI governance and ethical oversight in place for agentic AI, and roughly a third had ensured high-quality, accessible and governed data, at a point when more than three quarters expected AI investment to rise by at least twenty per cent over the following year. Capability is therefore scaling considerably faster than the governance wrapped around it. That is the space in which ISO/IEC 42001 and, in Defence, JSP 936 earn their place, since both exist to make trustworthiness demonstrable rather than assumed.</p>
+
+<h4>Behaviours rather than slogans</h4>
+
+<p>PwC close by asking risk functions to abandon vague talk of risk culture in favour of specific observable behaviours: whether leaders invite challenge early enough, whether weak signals are escalated, and whether assumptions are tested whilst there is still time to change course.</p>
+
+<p>I would add one distinction to that, drawn from a year spent making this argument within the supply chain profession: the difference between compliance as behaviour and compliance as understanding. A checklist can be completed without being understood, and a unit can pass an inspection whilst holding no clear view of the risk the inspection exists to detect. A behaviour, by contrast, can be observed, coached and improved. Near-miss reporting, brief-backs and the willingness to let a junior rate stop a process they believe to be wrong are all behavioural interventions, and they long predate the language now used to describe them.</p>
+
+<p>Underneath that sits a condition which no framework supplies. Assurance runs on data, and data is entered by people. Where an individual believes that reporting a problem honestly will cost them, the system receives a compliance performance rather than the truth, and every downstream analytic, every AI-derived insight and every credential resting on that record inherits the error. Psychological safety is therefore not a welfare consideration sitting alongside assurance. It is a precondition of it.</p>
+
+<h4>Two-way traffic</h4>
+
+<p>None of this claims that Defence has already solved what industry is still discovering. The honest conclusion is narrower. Corporate risk management is rewiring itself towards practices that institutions operating under immediate consequence developed from necessity, and the learning ought therefore to flow in both directions. Defence can adopt the discipline of naming, measuring and maturing what it currently does by instinct, since a practice which is never named is never taught, never assured and never improved deliberately. Industry, in turn, can study institutions in which risk management was never optional and in which the feedback loop was rarely longer than a watch.</p>
+
+<p>The vocabulary matters more than it appears to. Practitioners who cannot name what they are doing cannot defend it, transfer it, or recognise it when a consultancy sells it back to them under a different label. That, more than any individual framework, is what I think the convergence is really telling us.</p>
+
+<p><em>The views expressed here are my own and are based on general observations about enterprise risk, logistics assurance and governance. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</em></p>
+
+<div class="references">
+<h2>References</h2>
+<ul>
+<li>PwC UK, Rewiring Enterprise Risk Management, insight paper, August 2026.</li>
+<li>EY, Five shifts reshaping the agentic AI economy in 2026, drawing on the EY global technology executive survey, 2026.</li>
+<li>ISO/IEC 42001:2023, Artificial intelligence management systems.</li>
+<li>JSP 936, Dependable Artificial Intelligence in Defence (GOV.UK).</li>
+<li>The Institute of Internal Auditors, The IIA's Three Lines Model, 2020.</li>
+<li>Edmondson, A. (1999), "Psychological Safety and Learning Behavior in Work Teams," <em>Administrative Science Quarterly</em>.</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p>Kelroy James · 2026 · Content may be freely reproduced for non-commercial use with attribution</p>
+  </div>
+</footer>
+
+<script>
+// Reading progress indicator
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
