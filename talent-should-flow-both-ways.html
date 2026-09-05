@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Pan-Defence Skills Framework as a Defence Industrial Strategy tool.">
+<title>Talent Should Flow Both Ways — Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3;
+  --surface:#FFFFFF;
+  --surface-2:#F5F7F9;
+  --ink:#15202B;
+  --ink-2:#3D4C59;
+  --muted:#697887;
+  --rule:#D3DAE1;
+  --rule-soft:#E3E8ED;
+  --accent:#8A6A2F;
+  --accent-soft:#F2ECDF;
+  --signal:#9A6410;
+  --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* reading progress bar */
+.reading-progress{
+  position:fixed;top:0;left:0;right:0;height:4px;
+  background:var(--rule-soft);z-index:100;
+}
+.reading-progress-bar{
+  height:100%;background:var(--accent);width:0%;
+  transition:width .1s ease;
+}
+
+/* top nav */
+.topnav{padding:22px 0 0;margin-bottom:44px}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:#6B7885;
+}
+.topnav a:hover{color:var(--accent)}
+
+/* masthead */
+.masthead{
+  background:var(--surface);
+  border-bottom:1px solid var(--rule);
+  padding:0;
+  margin-bottom:52px;
+  position:relative;
+}
+.featured-image{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+@media(min-width:800px){
+  .featured-image{height:420px}
+}
+.masthead-content{
+  padding:48px 0 44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:0 0 20px;
+  text-wrap:balance;
+  max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;
+  font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;
+  padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+/* article body */
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.65rem;font-weight:700;
+  margin:56px 0 18px;
+  letter-spacing:-.012em;
+}
+.prose h3{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.32rem;font-weight:600;
+  margin:42px 0 14px;
+  letter-spacing:-.008em;
+}
+.prose h4{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.12rem;font-weight:600;
+  margin:32px 0 10px;
+}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose blockquote{
+  border-left:3px solid var(--accent);
+  padding-left:20px;
+  margin:26px 0;
+  font-style:italic;
+  color:var(--ink-2);
+}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+.pullquote{
+  border-left:4px solid var(--accent);
+  padding:24px 28px;margin:32px 0;
+  background:var(--accent-soft);
+  font-family:Spectral,Georgia,serif;
+  font-size:1.28rem;line-height:1.5;
+  font-weight:600;color:var(--ink);
+  font-style:italic;
+}
+.reading-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  margin-top:8px;
+}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+.share-buttons{
+  display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;
+}
+.share-btn{
+  padding:7px 14px;font-size:11.5px;
+  font-family:"IBM Plex Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--surface-2);border:1px solid var(--rule);
+  color:var(--ink-2);text-decoration:none;
+  transition:all .2s ease;cursor:pointer;
+}
+.share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* references section */
+.references{
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  margin-top:56px;
+}
+.references h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.45rem;font-weight:700;
+  margin:0 0 20px;
+}
+.references h3,.references h4{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:24px 0 12px;
+  font-weight:500;
+}
+.references ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+}
+.references li{
+  margin-bottom:10px;
+  font-size:14px;
+  line-height:1.6;
+  padding-left:14px;
+  position:relative;
+}
+.references li::before{
+  content:"—";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+
+footer{
+  padding:34px 0 56px;
+  border-top:1px solid var(--rule);
+}
+footer p{
+  font-size:12.5px;color:var(--muted);
+  max-width:70ch;margin:0 0 10px;
+  line-height:1.6;
+}
+</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div class="wrap topnav">
+  <a href="/writing.html">&#8592; Writing</a>
+</div>
+
+<header class="masthead">
+  <img src="/images/articles/defence-industry-talent.webp" alt="Aerospace and defence industry workforce — illustrating talent mobility between MOD, industry and the Reserves" class="featured-image">
+  <div class="wrap masthead-content">
+    <div class="eyebrow">
+      <span class="tick">◆</span>
+      <span>Skills Framework</span>
+      <span>2 of 2</span>
+      <span>Industrial Strategy</span>
+    </div>
+    <h1>Talent Should Flow Both Ways</h1>
+    <p class="standfirst">The Pan-Defence Skills Framework as a Defence Industrial Strategy tool.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 6 min read</span>
+      <span>📊 1,175 words</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.github.io/talent-should-flow-both-ways.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.github.io/talent-should-flow-both-ways.html&text=Talent%20Should%20Flow%20Both%20Ways" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=Article: Talent Should Flow Both Ways&body=I thought you might find this interesting: https://kelroyjames.github.io/talent-should-flow-both-ways.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>Regular Armed Forces numbers are down 8% since 2022. The ambition is to grow the Reserves by 20%. The defence industrial base is expanding. None of that works if experienced professionals have to enter at the bottom. The MOD is already piloting an alternative, and most people have not noticed.</p>
+
+<p>Most discussion of Defence skills frameworks focuses on getting people out well.</p>
+
+<p>The more strategically interesting question is how we get experienced people in, and how we keep moving them between the Ministry of Defence, the defence industry and the Reserves without treating each move as a fresh start.</p>
+
+<p>The UK now has both the strategic driver and the technical mechanism to do this. They are not yet fully connected.</p>
+
+<h4>The driver</h4>
+
+<p>The 2025 Defence Industrial Strategy is unambiguous about the workforce challenge. It commits £182 million to strengthen the future skills of the workforce, and states plainly that Government will make it easier and faster for members of the Armed Forces and workers in other industries to move into the defence sector.</p>
+
+<p>Critically, it also commits to making it easier to transfer into and across defence mid-career by scoping the development of a Defence Skills Passport. That passport is intended to build on the Ministry of Defence's industry-benchmarked Pan-Defence skills work and on ZigZag Careers, creating a digital record of an individual's skills that enables smoother identification and transfer between the Armed Forces, defence industry and those looking to enter from neighbouring industries.</p>
+
+<p>The pressure behind this is real. Analysis of the Strategic Defence Review notes that Regular Armed Forces numbers declined by 8% since 2022, that shortages now affect military, civil service and industrial roles across manufacturing, engineering and advanced technology, and that Defence supports over 239,000 jobs. The Review also commits to boosting Reserve numbers by 20% when funding allows, alongside a whole force, skills-based approach.</p>
+
+<p>You cannot expand the Reserves by a fifth, staff a growing industrial base and simultaneously insist that experienced professionals begin at the bottom of a rank ladder.</p>
+
+<h4>The mechanism</h4>
+
+<p>The Pan-Defence Skills Framework already provides the architecture.</p>
+
+<p>It was designed as a Whole Force approach covering Regulars, Reservists and civil servants, giving Defence a single common language for skills, knowledge, experience and behaviours, with individual validated skills profiles held digitally.</p>
+
+<p>Two features matter enormously for talent mobility.</p>
+
+<p>First, it captures skills acquired outside Defence. Personnel are encouraged to log capability from their civilian lives, from language proficiency to professional qualifications, which was previously either passed by word of mouth or lost entirely. Senior officers leading the rollout have highlighted Reservists specifically, noting that they hold a wealth of experience from outside Defence that is potentially very valuable.</p>
+
+<p>Second, it decouples capability from rank as the primary organising principle. Defence has openly discussed employing people according to the skillset required rather than the rank conventionally attached to a role.</p>
+
+<p>That is the foundation for genuine lateral entry.</p>
+
+<h4>It is already being piloted</h4>
+
+<p>This is not hypothetical. The ZigZag Career Pathway is a skills-focused pilot designed to bring talented professionals into the Armed Forces in fixed-term roles that match their expertise, and it explicitly breaks away from the conventional military career ladder.</p>
+
+<p>It is open to civilians with no prior service, to veterans returning, and to Reservists seeking a more flexible contribution, with minimal military training required and a tailored induction.</p>
+
+<p>The language on entry level is direct. For veterans and current reservists, the pathway offers roles that reflect industry experience rather than previous rank, so that individuals can re-engage at an appropriate level and make the most of hard-earned skills.</p>
+
+<p>Advertised ZigZag roles have included cyber threat intelligence and digital support posts at specified grades. This is a working proof of concept for capability-based entry.</p>
+
+<h4>The strategic case for making this systematic</h4>
+
+<p>Treat the framework as an enterprise-wide talent market rather than an internal HR system, and several things become possible.</p>
+
+<p>Defence can buy scarce expertise it cannot grow at pace. Cyber, data, AI assurance, systems engineering, nuclear skills, trade compliance and complex programme delivery are contested across the whole economy. Sourcing a mid-career specialist through a Reserve or fixed-term route at a level proportionate to their capability is faster than training one for a decade.</p>
+
+<p>Industry gains a legible talent pool. At present a defence prime reading a Service CV is performing an act of interpretation. A validated, industry-benchmarked skills record removes that friction and reduces the risk premium employers apply to military candidates.</p>
+
+<p>Retention improves. People are more likely to stay in an enterprise where they can move without penalty than one where every transition costs them status. A skills passport makes a career that moves between MOD, industry and the Reserves a rational choice rather than a gamble.</p>
+
+<p>Assurance and oversight capability improves on both sides. Someone who has operated first-line controls inside Defence, then worked in commercial supply chain governance or export control, then returned as a Reservist, understands both the regulator's expectation and the operator's reality. That combination is rare and increasingly valuable given the enforcement risk now attached to export control and supply chain compliance in the sector.</p>
+
+<p>Sovereign capability becomes less fragile. Skills held by one organisation and invisible to the rest of the enterprise are single points of failure.</p>
+
+<h4>What needs to be true for this to work</h4>
+
+<p>I would not overstate where we are. Two things need honest treatment.</p>
+
+<p>First, the Defence Skills Passport is being scoped, not delivered. The strategy commits to scoping an initial framework, operating concept and pilot opportunities through sector-wide consultation supported by industry early adopters. That is the right start, but scoping is not implementation, and the value only appears when industry recognises the record as authoritative.</p>
+
+<p>Second, capability-based entry is not a route around standards. Professional registration, security clearance, competence assurance and safety qualification requirements exist for good reasons and should be met in full. The argument is narrower and more defensible: prior demonstrated capability should be assessed before anyone is treated as a beginner.</p>
+
+<p>That distinction matters. Recognition of prior capability is not a shortcut. It is an accuracy improvement.</p>
+
+<h4>The question to ask</h4>
+
+<p>Defence has historically asked what skills it needs and how to train them.</p>
+
+<p>The better question is how Defence makes skills visible, portable and recognisable as people move between Service, industry and the wider economy — in both directions and more than once.</p>
+
+<p>The Pan-Defence Skills Framework, the ZigZag pilot and the proposed Defence Skills Passport are three parts of the same answer. They currently sit in different places, owned by different parts of the enterprise, with different levels of maturity.</p>
+
+<p>Joining them up is not a technology problem. It is a decision about whether we regard a career as a ladder or as a network.</p>
+
+<p>Given the scale of the recruitment, retention and industrial capacity challenge in front of us, a network looks considerably more useful.</p>
+
+<p><em>The views expressed here are my own and are based on general observations about Defence workforce policy, skills recognition and industrial strategy. They do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</em></p>
+
+<div class="references">
+<h2>References</h2>
+<ul>
+<li><a href="https://assets.publishing.service.gov.uk/media/68bea3fc223d92d088f01d69/Defence_Industrial_Strategy_2025_-_Making_Defence_an_Engine_for_Growth.pdf">Defence Industrial Strategy 2025: Making Defence an Engine for Growth</a> (GOV.UK).</li>
+<li><a href="https://www.gov.uk/government/news/major-skills-boost-at-the-heart-of-transformative-new-defence-industrial-strategy">Major skills boost at the heart of transformative new Defence Industrial Strategy</a> (GOV.UK).</li>
+<li><a href="https://www.findforcesjobs.mod.gov.uk/vx/candidate/cms/ZigZag%20Career%20Pathways">ZigZag Career Pathways</a> (MOD, Find Forces Jobs).</li>
+<li><a href="https://www.forcesnews.com/services/tri-service/common-language-new-transferable-skills-app-shifting-defence-focus-rank">The new transferable skills app shifting Defence focus from rank to skills</a> (Forces News).</li>
+<li><a href="https://assets.publishing.service.gov.uk/media/60590e988fa8f545d879f0aa/Defence_and_Security_Industrial_Strategy_-_FINAL.pdf">Defence and Security Industrial Strategy, 2021</a> (GOV.UK).</li>
+<li><a href="https://policyconnect.org.uk/blog/war-fighting-ready-workforce-tackling-uk-defence-skills-shortages-2025-strategic-defence/">A "War-fighting Ready" Workforce? Tackling UK Defence Skills Shortages</a> (Policy Connect).</li>
+<li><a href="https://www.gov.uk/government/publications/the-strategic-defence-review-2025-making-britain-safer-secure-at-home-strong-abroad/the-strategic-defence-review-2025-making-britain-safer-secure-at-home-strong-abroad">The Strategic Defence Review 2025: Making Britain Safer</a> (GOV.UK).</li>
+<li><a href="https://assets.publishing.service.gov.uk/media/683d6964fd325db61c5ff289/Sector_skills_needs_assessments_Defence.pdf">Sector skills needs assessments: Defence</a> (GOV.UK).</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p>Kelroy James · 2026 · Content may be freely reproduced for non-commercial use with attribution</p>
+  </div>
+</footer>
+
+<script>
+// Reading progress indicator
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>

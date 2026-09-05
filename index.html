@@ -185,7 +185,11 @@
   }
   .piece .status.live{color:var(--brass)}
   .piece h3{font-family:Spectral,Georgia,serif;font-size:1.14rem;font-weight:600;margin:0 0 5px;line-height:1.32}
-  .piece p{margin:0;font-size:14.5px;color:var(--ink-2);max-width:66ch}
+  .piece h3 a{color:var(--ink);text-decoration:none}
+  .piece h3 a:hover{color:var(--brass)}
+  .piece p{margin:0 0 6px;font-size:14.5px;color:var(--ink-2);max-width:66ch}
+  .piece .go{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);text-decoration:none}
+  .piece .go:hover{color:var(--navy)}
   .piece .series{
     font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
     text-transform:uppercase;color:var(--muted);
@@ -333,7 +337,7 @@
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.nextElementSibling;var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
     <ul>
       <li><a class="lnk" href="#work">Work</a></li>
-      <li><a class="lnk" href="#Insights">Writing</a></li>
+      <li><a class="lnk" href="/writing.html">Writing</a></li>
       <li><a class="lnk" href="#background">Background</a></li>
       <li><a class="lnk cta" href="#contact">Contact</a></li>
     </ul>
@@ -500,413 +504,53 @@
 <section id="Insights">
   <div class="wrap">
     <div class="sec-head"><h2>Insights</h2><span class="note">Defence · GRC · Supply Chain Assurance</span></div>
-    <p class="intro-p">The people who move the material, protect the data and assure the controls are often the same people — and the frameworks that govern them rarely know it.</p>
-  <!-- ARTICLE 1 -->
-    <div class="article-embed">
-      <div class="top-band"></div>
-      <img class="article-img" src="/images/articles/trade-finance-header.jpg" alt="Global blockchain network and trade finance infrastructure — illustrating decentralised finance rails for cross-border payments">
-      <div class="article-body">
-        <div class="article-meta">
-          <span class="article-status">Published</span>
-          <span class="article-series">Trade Finance · DeFi &amp; Correspondent Banking</span>
+    <p class="intro-p">The people who move the material, protect the data and assure the controls are often the same people, and the frameworks that govern them rarely know it.</p>
+
+    <div class="writing">
+
+      <div class="piece">
+        <span class="status live">Published</span>
+        <div>
+          <h3><a href="/the-rails-were-rebuilt-and-the-gap-remained.html">The Rails Were Rebuilt, and the Gap Remained</a></h3>
+          <p>Three years after arguing that decentralised finance would widen access to trade finance, what actually got built, and what the data now shows.</p>
+          <a class="go" href="/the-rails-were-rebuilt-and-the-gap-remained.html">Read the essay →</a>
         </div>
-        <h3 class="article-title">The Rails Were Rebuilt, and the Gap Remained</h3>
-        <p class="article-subtitle">Three years after arguing that decentralised finance would widen access to trade finance, what actually got built — and what the data now shows.</p>
-        <p class="article-standfirst">Some years ago, a building society in Saint Vincent lost correspondent banking. The experience drew me towards blockchain. Three years is long enough for that argument to be tested.</p>
-
-        <div class="article-text">
-          <p>Some years ago, the building society that held my mortgage in Saint Vincent lost its correspondent banking relationship. The stated concern was money-laundering risk.</p>
-          <p>The practical effect was simple: from several thousand miles away, I could no longer deposit a cheque. Payments were not merely slower, and charges had not merely risen. The ordinary means by which a person puts money into an account had ceased to exist.</p>
-          <p>So far as I could tell, nobody had assessed me individually. Nor had anyone determined whether that particular building society's controls were adequate. A decision had been made about a jurisdiction, an institution of a certain size, and the economics of maintaining the relationship. Everyone within the perimeter of that decision bore its consequences.</p>
-          <p>At the time, the experience drew me towards blockchain. In January 2023, <em>Trade Finance Global</em> published an article I wrote with Brian Canup arguing that decentralised finance and digital trade infrastructure might reduce the cost of participating in international trade. Three years is long enough for such an argument to be tested. In this case, the test has been instructive.</p>
-
-          <p class="article-standfirst">"The technology has advanced. The governance model attached to the original DeFi thesis has not become the dominant model for mainstream cross-border finance."</p>
-
-          <h3>The original argument</h3>
-          <p>The case rested on three observations.</p>
-          <p>First, trade remained dependent on documents that were often still paper-based: bills of lading, bills of exchange, letters of credit and the rest of the documentary machinery that supports the movement of goods.</p>
-          <p>Second, cross-border payments were expensive. Currency conversion, intermediary charges, compliance requirements and operational friction fell hardest on smaller firms and smaller financial institutions.</p>
-          <p>Third, the benefits of globalisation had not been evenly distributed. The premise of the 2023 article was that better trade infrastructure could lower barriers to entry and widen access to trade finance, particularly for businesses and economies that conventional banking had left at the margins.</p>
-          <p>We proposed decentralised finance as part of the answer. We were careful not to treat it as a settled category. DeFi is neither a precise legal term nor a single technical architecture. We used it in the broad sense: financial services delivered through networks in which participants, intermediaries and users may be distributed across jurisdictions rather than concentrated within a conventional institution.</p>
-          <p>The diagnosis was not wholly wrong. The proposed mechanism was.</p>
-        </div>
-
-        <button class="article-toggle" onclick="var exp=this.nextElementSibling;var open=exp.classList.toggle('open');this.textContent=open?'Collapse ↑':'Continue reading →';this.setAttribute('aria-expanded',open)" aria-expanded="false">Continue reading →</button>
-
-        <div class="article-expand">
-          <div class="article-text">
-            <h3>What has held</h3>
-            <p>The documentation problem is being addressed, though law has mattered as much as technology.</p>
-            <p>The UK's Electronic Trade Documents Act 2023 came into force on 20 September 2023. It provides that qualifying electronic trade documents can have the same legal effect as their paper equivalents under English law. Crucially, the Act addresses the old legal difficulty that electronic documents could not be "possessed" in the way that paper bills of lading and similar instruments could. It does not make every digital document legally effective by default. The document must meet statutory conditions and be used within a reliable system that can establish its identity, integrity and exclusive control. <a href="https://www.cliffordchance.com/briefings/2023/08/uk-electronic-trade-documents-act-2023--a-further-step-towards-p.html" target="_blank" rel="noopener">The Act's operation and commencement are usefully summarised here.</a></p>
-            <p>That change matters. It removes an important legal obstacle to the use of electronic transferable records in trade and trade finance. It also sits alongside the wider adoption of the UNCITRAL Model Law on Electronic Transferable Records, which has supplied a common legal model for jurisdictions seeking to recognise such records.</p>
-            <p>Settlement has moved too. Tokenised deposits and stablecoins are no longer peripheral subjects. They are being examined and deployed by banks, payment providers and public institutions. The direction of travel identified in 2023 was therefore broadly right: trade documentation is becoming digital, and money is increasingly being represented and moved through programmable systems.</p>
-            <p>But the route taken has not been decentralised in the sense we anticipated.</p>
-
-            <h3>What has not</h3>
-            <p>The infrastructure now being built is largely based on tokenised deposits issued by regulated banks, and on stablecoins issued by regulated or licensed entities. Participants are identified. Access is controlled. Compliance, credit, liquidity and operational risk remain within familiar institutional structures.</p>
-            <p>This is not simply a case of an idea arriving early. The institutions that decentralised finance was expected to displace have instead built or adopted much of the new infrastructure.</p>
-            <p>J.P. Morgan's Kinexys business is an example of that direction: a major bank using tokenised money and distributed-ledger infrastructure for institutional clients. More striking still was Swift's announcement in July 2026 that its blockchain-based ledger was ready for initial use. The project is intended to support cross-border payments using bank-issued tokenised deposits, with 17 banks across six continents preparing to pilot live transactions. The participating banks include BNP Paribas, Citi, HSBC, Standard Chartered, UBS and Wells Fargo. <a href="https://www.swift.com/news-events/press-releases/swifts-blockchain-ledger-ready-use-17-banks-set-pioneer-tokenised-cross-border-payments-trusted-global-infrastructure" target="_blank" rel="noopener">Swift's announcement and full participant list are here.</a></p>
-            <p>The point is not that these initiatives are insignificant. They are significant precisely because they show where the technology is being adopted. The banks, networks and messaging systems once described as likely victims of disintermediation are integrating the technology into their own operating models.</p>
-            <p>The technology has advanced. The governance model attached to the original DeFi thesis has not become the dominant model for mainstream cross-border finance.</p>
-
-            <h3>Absorbed, not displaced</h3>
-            <p>The expectation among many blockchain advocates was borrowed from familiar accounts of disruption. A superior technology arrives; incumbents are too slow, too wedded to the old model, or too constrained by legacy systems to respond. The market reorganises around the newcomer.</p>
-            <p>That analogy works best where the incumbent's advantage is easily reproduced. Blockbuster had store networks. BlackBerry had a keyboard, devices and an email service. Those advantages could be overtaken by better technology and better product design.</p>
-            <p>Banking is different. A bank's position rests not only on its systems but on its licence, capital, balance sheet, correspondent network, supervisory history and compliance operation. Those assets exist because of regulation as much as market power. A new entrant can build payment software quickly. It cannot rapidly acquire a banking licence, regulatory capital, an established network of correspondents or a record of supervisory trust.</p>
-            <p>Where the protective moat is regulatory, technology is often absorbed by the incumbent rather than used to displace it.</p>
-
-            <p class="article-standfirst">"Removing the intermediary does not remove the obligation. The entity that bears regulatory responsibilities becomes an intermediary, whatever name it gives itself."</p>
-
-            <p>That is the weakness in the earlier argument. DeFi proposed to remove intermediaries whose central function was not merely moving information or value, but bearing regulatory obligations. Removing the intermediary does not remove the obligation. Customer due diligence, sanctions screening, transaction monitoring, dispute resolution, capital requirements and accountability must still be carried by someone. The entity that does so becomes an intermediary, whatever name it gives itself.</p>
-            <p>That conclusion should not be overstated. Stablecoin networks have created substantial activity outside traditional banking, and the payment-rail layer may be less dependent on banks than it once was. It is still too early to declare a final settlement. The narrower claim is stronger: in regulated finance, incumbents have been well placed to absorb the technology because they already possess the licences, capital and compliance capacity that the technology does not provide.</p>
-
-            <h3>The gap that did not move</h3>
-            <p>The more important test is not whether banks adopted blockchain. It is whether the changes altered access to trade finance.</p>
-            <p>The Asian Development Bank's <em>Global Trade Finance Gap Survey</em>, published in December 2025, estimated the global trade finance gap at $2.5 trillion—the same headline figure reported for 2023. The subsequent January 2026 ADB release describes the survey as drawing on responses collected from 2023 to 2025 from more than 110 trade-finance providers. It reports that the $2.5 trillion gap represented roughly 10% of global trade in 2025, down from 10.6%, but unchanged in absolute terms. <a href="https://www.adb.org/publications/adb-global-trade-finance-gap-survey" target="_blank" rel="noopener">The survey publication is here.</a> <a href="https://www.adb.org/news/demand-trade-finance-rise-amid-supply-chain-realignment-adb-report" target="_blank" rel="noopener">ADB's January 2026 release is here.</a></p>
-            <p>The figure should be interpreted cautiously. A stable aggregate number does not prove that digital documentation or faster settlement have had no effect. The gap is influenced by trade volumes, demand, economic conditions, currency markets, bank balance sheets and survey methodology. Nor is it a direct measure of the quality of payment infrastructure.</p>
-            <p>Still, the persistence of the gap is important. It suggests that digitising documents and accelerating settlement, worthwhile though both are, do not by themselves resolve the reasons why finance is withheld.</p>
-            <p>The ADB survey also complicates any account that treats compliance as the sole problem. Its findings point to funding constraints, country and counterparty risk, profitability thresholds and capital costs as major considerations for trade-finance providers. It reports trade-finance rejection rates of 41% for SMEs and 40% for large and mid-cap corporates—a result that deserves further examination rather than an easy conclusion about improved access. The issue is not simply that smaller firms are rejected more often. It is that risk appetite appears constrained across a broad range of prospective clients.</p>
-            <p>The binding constraint has not shifted towards settlement. It remains one of funding, risk and economics.</p>
-
-            <h3>The cost of knowing</h3>
-            <p>That brings the argument back to correspondent banking.</p>
-            <p>Withdrawal from correspondent relationships is better understood as a portfolio-level risk decision than as a failure of payment technology. A correspondent bank must decide whether the expected revenue from a respondent institution justifies the cost of maintaining the relationship to the standard expected by regulators, auditors and its own risk function.</p>
-            <p>That cost can include due diligence on the respondent bank and its customers, sanctions and politically exposed person screening, transaction monitoring, periodic review, data remediation and investigation when concerns arise. It must be assessed against the revenue from a particular corridor, as well as the potential cost of a regulatory failure.</p>
-            <p>For a small institution in a small jurisdiction, the calculation may be unfavourable even where there is no allegation of individual wrongdoing.</p>
-            <p>Nothing material in that calculation is resolved merely because a bill of lading becomes electronic. Nor is it necessarily resolved because a payment can settle in seconds. Faster movement of value does not establish whether a counterparty is legitimate, adequately controlled, financially sound or worth the cost of onboarding.</p>
-            <p>This is why the 2023 argument addressed the visible part of the problem rather than the binding constraint. Settlement was technical, tangible and amenable to redesign. The harder issue was the cost of knowing enough about an unfamiliar institution, business or transaction to support a decision to finance it.</p>
-
-            <h3>Where the argument now leads</h3>
-            <p>If the cost of assessing unfamiliar counterparties is part of the constraint, then reducing that cost is useful work.</p>
-            <p>Much of the problem is structural. Capital treatment, enforcement risk, sanctions exposure, access to dollar liquidity and institutional risk appetite are matters for regulators, policymakers and financial institutions. Better due diligence cannot substitute for reform in those areas.</p>
-            <p>But method matters as well.</p>
-            <p>Well-designed, intelligence-led due diligence can help direct scarce human attention. Public-source research can verify corporate registration, map ownership and control, test claims of physical presence, examine digital infrastructure and review available financial information. Used properly, these techniques do not replace formal due diligence or justify automated approval. They help prioritise it.</p>
-            <p>The objective is not to lower standards. It is to avoid spending the same amount of expensive investigative effort on every file regardless of the available evidence. A strong early assessment may identify straightforward cases quickly, flag cases requiring deeper review and expose indicators that would otherwise be missed.</p>
-            <p>This is less dramatic than redesigning global finance. It is also closer to the economic problem.</p>
-
-            <h3>What I would tell myself</h3>
-            <p>My earlier conclusion followed from a real experience. A small institution in a small country had lost access to a necessary banking channel, and the apparent answer was a system with fewer intermediaries.</p>
-            <p>That was understandable, but incomplete. The intermediaries had not withdrawn because the pipes were slow. They withdrew because the cost of maintaining sufficient confidence in the relationship exceeded the value of keeping it.</p>
-            <p>The lesson is not that infrastructure does not matter. Electronic trade documents, better payment systems and tokenised forms of money can reduce friction, cost and delay. They should continue to be developed.</p>
-            <p>But infrastructure is not the same thing as inclusion.</p>
-
-            <p class="article-standfirst">"The work most likely to improve financial inclusion may not look like a new architecture. It may look like better evidence and a lower cost of understanding who is on the other side."</p>
-
-            <p>The work most likely to improve the position of the small importer, small financial institution or small economy may not look like a new financial architecture. It may look like better evidence, better assessment and a lower cost of understanding who is on the other side of a transaction.</p>
-            <p>That is less fashionable than disintermediation. It may also be more useful.</p>
-
-            <p class="article-disclaimer">The views expressed here are my own and are based on general observations about trade finance, third-party risk and financial inclusion. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</p>
-
-            <div class="article-refs">
-              <h4>References</h4>
-              <ol>
-                <li>James, K. and Canup, B., "DeFi in trade finance: fulfilling the promise of globalisation", <em>Trade Finance Global</em>, 12 January 2023.</li>
-                <li>Asian Development Bank — <a href="https://www.adb.org/publications/adb-global-trade-finance-gap-survey" target="_blank" rel="noopener">ADB Global Trade Finance Gap Survey, December 2025</a></li>
-                <li>Asian Development Bank — <a href="https://www.adb.org/news/demand-trade-finance-rise-amid-supply-chain-realignment-adb-report" target="_blank" rel="noopener">"Demand for Trade Finance to Rise Amid Supply Chain Realignment — ADB Report", 15 January 2026</a></li>
-                <li>World Trade Organization — <em>Trade finance and SMEs: bridging the gaps in provision</em></li>
-                <li>McKinsey &amp; Company — <em>Reconceiving the global trade finance ecosystem</em></li>
-                <li>McKinsey &amp; Company — <em>The multi-billion dollar paper jam: unlocking trade by digitalizing documentation</em></li>
-                <li>International Monetary Fund — <em>The Withdrawal of Correspondent Banking Relationships: A Case for Policy Action</em>, Staff Discussion Note SDN/16/06, June 2016</li>
-                <li>Financial Stability Board — <em>Correspondent Banking Data Report</em>, July 2017, and subsequent updates</li>
-                <li>Financial Conduct Authority — <em>International perspectives on de-risking</em>, Research Note, September 2023</li>
-                <li>United States Department of the Treasury — <em>The Department of the Treasury's De-risking Strategy</em>, April 2023</li>
-                <li>International Finance Corporation — <em>Anti-Money-Laundering and Countering the Financing of Terrorism: Good Practice Note</em></li>
-                <li>Centre for Strategic and International Studies — <em>Is There a "New Normal" for De-Risking in the Caribbean?</em></li>
-                <li>"'De-Risking', De-Banking and Denials of Bank Services: An Over-Compliance Dilemma?", in <em>Financial Crime and the Law</em>, Springer, 2024</li>
-                <li><a href="https://www.cliffordchance.com/briefings/2023/08/uk-electronic-trade-documents-act-2023--a-further-step-towards-p.html" target="_blank" rel="noopener">Electronic Trade Documents Act 2023: legal recognition of electronic trade documents from 20 September 2023</a></li>
-                <li>UNCITRAL — <em>Model Law on Electronic Transferable Records</em>, 2017</li>
-                <li>Swift — <a href="https://www.swift.com/news-events/press-releases/swifts-blockchain-ledger-ready-use-17-banks-set-pioneer-tokenised-cross-border-payments-trusted-global-infrastructure" target="_blank" rel="noopener">"Swift's blockchain ledger ready for use as 17 banks set to pioneer tokenised cross-border payments on trusted global infrastructure", 9 July 2026</a></li>
-                <li>J.P. Morgan — <em>Deposit Tokens: A Foundation for Stable Digital Money</em>, Kinexys</li>
-                <li>J.P. Morgan — "JPM Coin (JPMD) USD deposit token available for institutional clients", Payments Newsroom</li>
-              </ol>
-            </div>
-          </div>
-        </div>
+        <span class="series">Trade Finance</span>
       </div>
+
+      <div class="piece">
+        <span class="status live">Published</span>
+        <div>
+          <h3><a href="/convergence-of-cyber-grc-and-physical-logistics.html">The Convergence of Cyber-GRC and Physical Logistics</a></h3>
+          <p>Why siloed supply chain assurance creates blind spots, and what a recent export control settlement revealed about where they form.</p>
+          <a class="go" href="/convergence-of-cyber-grc-and-physical-logistics.html">Read the essay →</a>
+        </div>
+        <span class="series">Assurance · GRC</span>
+      </div>
+
+      <div class="piece">
+        <span class="status live">Published</span>
+        <div>
+          <h3><a href="/recognition-before-retraining.html">Recognition Before Retraining</a></h3>
+          <p>Why the Pan-Defence Skills Framework is the missing piece in service leaver transition.</p>
+          <a class="go" href="/recognition-before-retraining.html">Read the essay →</a>
+        </div>
+        <span class="series">Skills Framework · 1 of 2</span>
+      </div>
+
+      <div class="piece">
+        <span class="status live">Published</span>
+        <div>
+          <h3><a href="/talent-should-flow-both-ways.html">Talent Should Flow Both Ways</a></h3>
+          <p>The Pan-Defence Skills Framework as a Defence Industrial Strategy tool.</p>
+          <a class="go" href="/talent-should-flow-both-ways.html">Read the essay →</a>
+        </div>
+        <span class="series">Skills Framework · 2 of 2</span>
+      </div>
+
     </div>
 
-    <!-- ARTICLE 2 -->
-    <div class="article-embed">
-      <div class="top-band"></div>
-      <img class="article-img" src="/images/articles/export-control-supply-chain.png" alt="Aerospace supply chain due diligence — supplier certification, export and import compliance checks in a global logistics context">
-      <div class="article-body">
-        <div class="article-meta">
-          <span class="article-status">Published</span>
-          <span class="article-series">Assurance · Supply Chain GRC</span>
-        </div>
-        <h3 class="article-title">The Convergence of Cyber-GRC and Physical Logistics</h3>
-        <p class="article-subtitle">Why siloed supply chain assurance creates blind spots, and what a recent export control settlement revealed about where they form.</p>
-        <p class="article-standfirst">In August 2026 the United States Department of State concluded a $36 million settlement with BAE Systems, Inc., resolving 104 alleged violations of the Arms Export Control Act and ITAR. The charging letter records that the supply chain team did not fully understand the export control regulations under which it was operating, and that the secure file transfer system did not display export control warnings before technical data was sent. Those are not two separate failures.</p>
-
-        <div class="article-text">
-          <p>The remedial measures have been widely discussed. The causes have received rather less attention, and they are the more instructive part. The supply chain team did not fully understand the regulations under which it was operating. The secure file transfer system did not display export control warnings before technical data was sent. Thirty-eight of the alleged violations involved technical data reaching a proscribed destination.</p>
-          <p>I recognised the shape of that immediately, having spent eighteen years on one side of precisely that seam. Those are not two separate failures. They are a single failure observed from two directions, in which the people moving the material did not hold the regulatory knowledge whilst the system moving the data did not carry the control. Each function could have reported itself compliant within its own scope.</p>
-
-          <h3>Two green dashboards</h3>
-          <p>In many enterprise risk frameworks, digital and physical operations are managed as separate worlds.</p>
-          <p>Cybersecurity and governance teams work upon ISO/IEC 27001 scopes, vendor assessments, access control and zero-trust architectures. Across the corridor, or upon an industrial site some distance away, trade compliance and logistics teams work upon customs declarations, controlled goods requirements, hazardous cargo documentation, freight forwarding contracts and inventory records. The board receives separate updates from each. The cyber dashboard is green. The logistics metrics are green.</p>
-          <p>The enterprise nonetheless remains exposed to single points of failure, inventory loss, operational disruption and regulatory enforcement, because risk does not respect organisational swimlanes. Where physical logistics and cyber governance operate independently, they create an assurance blind spot in which neither function holds visibility over the whole chain of custody.</p>
-
-          <h3>The blind spot</h3>
-          <p>A modern supply chain is an interconnected socio-technical system, and an operational failure rarely remains confined to either software or physical transport.</p>
-          <p>Consider a tier-two component supplier suffering a ransomware attack. Its infrastructure is isolated and the buyer's corporate systems remain uncompromised. However, manufacturing stops, a maintenance schedule slips, and contractual consequences follow. The cyber incident has become a readiness problem.</p>
-          <p>Consider the reverse. An inventory ledger records five hundred critical replacement units in stock, whilst handovers, transport conditions and incomplete records have produced undocumented damage and unrecorded scrap. The digital system reports full operational readiness whilst physical capability has quietly degraded, and the record and the reality have diverged.</p>
-        </div>
-
-        <button class="article-toggle" onclick="var exp=this.nextElementSibling;var open=exp.classList.toggle('open');this.textContent=open?'Collapse ↑':'Continue reading →';this.setAttribute('aria-expanded',open)" aria-expanded="false">Continue reading →</button>
-
-        <div class="article-expand">
-          <div class="article-text">
-            <p>Consider, additionally, the supplier who submits a completed questionnaire and holds valid certifications. An adversarial review of its sub-tier dependencies, statutory filings and ownership signals identifies concentration risk together with indicators of export control exposure that the vendor portal was never designed to look for.</p>
-            <p>None of this suggests that a questionnaire or a certificate is worthless, since each provides evidence within a defined scope. Establishing resilience, transparency and continuing compliance is a different matter altogether. Treating supplier risk as a digital problem ignores the physical realities of global logistics, whilst treating logistics as a physical transport task ignores the data integrity requirements and regulatory obligations which now sit inside it.</p>
-
-            <h3>Unified assurance</h3>
-            <p>Bridging the divide requires treating physical custody, trade compliance and digital security as connected elements of one control environment — what I describe as unified supply chain governance, that being my own shorthand rather than an established category.</p>
-            <p>The objective is to understand the dependencies between them. A cyber incident can halt physical production. An inaccurate inventory record can create a false impression of readiness. A trade compliance failure can prevent a lawful movement even where the item is physically available. A failure in one layer creates consequences in the others.</p>
-            <p>I should be careful with the word unified, however, since some separations are controls rather than accidents. Export control judgement is frequently held structurally apart from commercial and logistics pressure, precisely so that a shipment deadline cannot lean upon a classification decision, and segregation of duties is a deliberate silo which exists for good reason. What I am arguing for is visibility across the interfaces, together with a board view which shows the dependency between them, rather than merged functions under a single owner. A single integrated dashboard would amount to a larger version of the problem described above.</p>
-
-            <h3>Testing the ledger</h3>
-            <p>Information security governance uses logging, access reviews and control testing. Physical logistics requires the equivalent: risk-based first-line monitoring, the purpose of which is not frequency for its own sake.</p>
-            <p>Rolling physical verification should test the digital ledger rather than reproduce it, thereby reducing the latency between the recorded asset state and the physical condition. What one is looking for is the moment at which the control environment drifted away from operational reality.</p>
-            <p>The National Cyber Security Centre's guidance on mapping your supply chain recommends that organisations build an up-to-date understanding of their supplier network, prioritise the suppliers, systems and services which are critical to the organisation, and record sub-tier relationships alongside the assurance evidence held for each. That is ongoing oversight rather than reliance upon a single assessment, and the same logic applies to physical holdings.</p>
-
-            <h3>Adversarial diligence</h3>
-            <p>Third-party risk management cannot rest upon self-attestation. An intelligence-led approach evaluates corporate filings, ownership signals, operational footprint, key-person dependency, financial indicators and sub-tier relationships, and it asks what would disconfirm the supplier's stated position rather than looking only for what confirms it.</p>
-            <p>That is a separate matter from treating every anomaly as misconduct. A director change, a virtual office or an overdue filing may have an entirely innocent explanation. A signal is not a conclusion, and findings require corroboration, grading by confidence and testing against further evidence before they influence a procurement decision. In particular, the purpose should be defined before collection begins, sources and dates recorded, personal information excluded unless genuinely relevant, and the exercise kept proportionate to the supplier risk question at hand.</p>
-            <p>Applied properly, open-source work surfaces single points of failure, hidden sub-tier dependencies, key-person and concentration risk, financial stress indicators, governance changes, and gaps between stated capability and available evidence. These findings do not replace formal due diligence. They direct it.</p>
-
-            <h3>Custody and licence</h3>
-            <p>The relationship between logistics and governance becomes clearest in trade compliance.</p>
-            <p>United Kingdom strategic export controls apply to goods, software and technology, including data, information and technical assistance, as well as to brokering services, and it is the exporter's responsibility to check whether items require a licence. That responsibility cannot sit entirely within a legal or export control department, however, since answering it requires knowing what the item is, how it is classified, where it is located, who can access it, where it is going, who the end user is and which authorisation applies. It further requires knowing whether licence conditions are being followed, whether technical data is moving alongside the physical item, and whether a subcontractor introduces exposure which nobody has assessed. Every one of those questions depends upon logistics data, supplier records, configuration control, access management, shipment information and accountable people.</p>
-            <p>A warehouse can release the correct item to the correct destination and compliance can still fail, because the classification was wrong, a licence condition was misunderstood, technical data moved without authorisation, or the end user was never properly assessed. The physical flow and the information flow have to remain aligned, and that alignment is nobody's job by default.</p>
-            <p>The Export Control Joint Unit's voluntary compliance code of practice recommends documented procedures, a named responsible person at director level, training matched to the audience, record keeping which produces an adequate audit trail, and a programme of regular internal audit. Those are ordinary governance requirements. What makes them a logistics problem is that almost all of the evidence needed to satisfy them is created through logistics, procurement, engineering and supplier management activity, by people who do not generally think of themselves as operating controls.</p>
-            <p>Which returns the argument to where it began. The BAE Systems, Inc. remedial package addresses resources, oversight, procedures, training, systems and continuing compliance capability rather than procedures alone, and that is a logistics assurance lesson as much as an export control one. A process is unlikely to remain effective where the people operating it lack the authority, resources, understanding or continuity to maintain it.</p>
-
-            <h3>Independent challenge</h3>
-            <p>Unified assurance does not remove the need for independent assessment. Operational teams sit closest to the process and ought to identify issues fastest. However, people who operate a control may become accustomed to its weaknesses, or confident in evidence which has never been properly challenged.</p>
-            <p>Operational monitoring supported by proportionate independent challenge is therefore stronger than either alone. Evidence should be generated throughout the operating cycle and tested at the appropriate level. This reduces the risk of an organisation preparing for an inspection whilst failing to maintain the capability that the inspection exists to assess.</p>
-
-            <h3>Where this comes from</h3>
-            <p>I have spent more than eighteen years in Defence logistics, working with supply accounts, stocktaking, supersession and handover, logistics inspection, transport safety requirements and remedial action. None of it was ever described to me as governance, risk and compliance, although all of it was, and it took a postgraduate degree together with a set of audit qualifications before I recognised as much.</p>
-            <p>The most useful question I learned to ask was not whether a process had been completed. It was whether the process had protected the objective it existed to serve — which is the point at which logistics assurance becomes governance in the physical world.</p>
-
-            <h3>The test</h3>
-            <p>Siloed assurance asks whether each function is operating within its own requirements, which is necessary without being sufficient, since the more important question is whether the interfaces between functions are controlled.</p>
-            <p>When reviewing a logistics or supply chain control environment, I would therefore ask:</p>
-            <ul>
-              <li>Whether the inventory record matches the physical asset, and how that is tested</li>
-              <li>Whether the supplier record reflects current ownership and sub-tier structure</li>
-              <li>Whether the export classification matches the configuration and the technical data</li>
-              <li>Whether the shipment record aligns with the licence and the end-user information</li>
-              <li>Whether the cyber risk assessment includes the logistics systems the operational process depends on</li>
-              <li>What happens when two sources disagree, and who decides whether an exception is material</li>
-              <li>How quickly the organisation would know that a control had failed</li>
-              <li>Whether the process could continue if the person who designed it were to leave</li>
-            </ul>
-            <p>Those answers reveal considerably more than a dashboard, a certificate or a completed form, since they show whether the organisation has built a reporting process or a dependable decision-support capability.</p>
-
-            <h3>Closing</h3>
-            <p>The controls in logistics are not new, and the underlying activities have existed for decades. What is changing is the need to recognise them as part of a wider governance, risk and assurance system, as defence supply chains grow more complex, trade controls more demanding, and operational timelines shorter.</p>
-            <p>The question is no longer whether an organisation holds a policy, a certificate, a supplier record or a completed inspection. It is whether its people, processes, information, assets and suppliers are aligned closely enough to deliver the required capability when conditions change. Organisations which treat that alignment as an assurance problem before a regulator does could find the experience considerably less expensive than the alternative.</p>
-
-            <p class="article-disclaimer">The views expressed here are my own and are based on general observations about logistics assurance, procurement, supply chain resilience, trade compliance and governance. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</p>
-
-            <div class="article-refs">
-              <h4>References</h4>
-              <ol>
-                <li>United States Department of State, Bureau of Political-Military Affairs — <a href="https://www.state.gov/releases/bureau-of-political-military-affairs/2026/08/u-s-department-of-state-concludes-36-million-settlement-resolving-export-violations-by-bae-systems-inc-bae/" target="_blank" rel="noopener">Settlement concluding alleged export violations by BAE Systems, Inc., August 2026</a></li>
-                <li>Directorate of Defense Trade Controls — Proposed charging letter and consent agreement in the same matter</li>
-                <li>National Cyber Security Centre — <a href="https://www.ncsc.gov.uk/guidance/mapping-your-supply-chain" target="_blank" rel="noopener">Mapping your supply chain (NCSC guidance)</a></li>
-                <li><a href="https://www.gov.uk/guidance/uk-strategic-export-controls" target="_blank" rel="noopener">UK strategic export controls guidance (GOV.UK)</a></li>
-                <li>Export Control Joint Unit — <a href="https://www.gov.uk/government/publications/export-control-compliance-code-of-practice" target="_blank" rel="noopener">Compliance code of practice for export licensing, December 2022</a></li>
-                <li>ISO/IEC 27001:2022 — Information security management systems</li>
-                <li>ISO/IEC 42001:2023 — Artificial intelligence management systems</li>
-                <li>The Institute of Internal Auditors — <a href="https://www.theiia.org/en/standards/three-lines-model/" target="_blank" rel="noopener">The IIA's Three Lines Model, 2020</a></li>
-                <li>ISO 19011:2018 — Guidelines for auditing management systems</li>
-                <li>National Institute of Standards and Technology — <a href="https://csrc.nist.gov/publications/detail/sp/800-161/rev-1/final" target="_blank" rel="noopener">SP 800-161 Revision 1: Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations, 2022</a></li>
-                <li>Ghadge, A., Weiß, M., Caldwell, N. &amp; Wilding, R. (2020) — <a href="https://doi.org/10.1108/SCM-10-2019-0399" target="_blank" rel="noopener">"Managing cyber risk in supply chains: a review and research agenda." Supply Chain Management: An International Journal</a></li>
-                <li><a href="https://www.emerald.com/ijpdlm/article/54/11/1/1233945/Cyber-risk-management-strategies-and-integration" target="_blank" rel="noopener">Cyber-risk management strategies and integration. International Journal of Physical Distribution &amp; Logistics Management, 54(11), 2024</a></li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-   <!-- ARTICLE 3 -->
-    <div class="article-embed">
-      <div class="top-band"></div>
-      <img class="article-img" src="/images/articles/defence-skills-transition.jpg" alt="Service leavers at Defence Equipment and Support — illustrating military-to-civilian career transition">
-      <div class="article-body">
-        <div class="article-meta">
-          <span class="article-status">Published</span>
-          <span class="article-series">Skills Framework · 1 of 2</span>
-        </div>
-        <h3 class="article-title">Recognition Before Retraining</h3>
-        <p class="article-subtitle">Why the Pan-Defence Skills Framework Is the Missing Piece in Service Leaver Transition</p>
-        <p class="article-standfirst">In a recent resettlement brief, I sat behind a Warrant Officer with two decades of operational service whose last job had been the regeneration of a Type 45 destroyer, and who had just enrolled on an 18th Edition electrical wiring course. None of the programme coordination, contractor management, safety assurance or risk management behind that job was written down anywhere a civilian employer would find it. The course was not the mistake. The mistake was the order in which it was chosen.</p>
-
-        <div class="article-text">
-          <p>The qualification is entirely legitimate and, for the right destination, exactly the right choice. However, regenerating a warship involves programme coordination, contractor and supplier management, configuration and asset governance, safety and regulatory assurance, resource planning, risk management, quality control and delivery against operational deadlines. None of that was written down anywhere a civilian employer would find it. Now, eighteen years into a career in Defence logistics, having studied the same work through postgraduate supply chain management and professional development in management systems, cyber and AI governance, I would say the course was not the mistake. The mistake was the order in which it was chosen.</p>
-
-          <h3>The second question</h3>
-          <p>Resettlement is habitually framed as a training question. Which course should I take, which qualification will an employer accept, and which sector is hiring?</p>
-          <p>Those are reasonable questions. They are also, in every case, the second question. The first should be: what level have I already been operating at, and what would a civilian organisation call it? Where that question is skipped, capable people can enter the labour market as though they were starting again.</p>
-          <p>The survey evidence points the same way. Analysis of the Veterans' Survey 2022, published on GOV.UK in April 2025 using data collected by the Office for National Statistics, found:</p>
-          <ul>
-            <li>Just over half of veterans, an uncomfortable 52.5%, had at some point taken a job at a lower experience or skill level than their last role in the UK armed forces.</li>
-            <li>The two most commonly cited reasons were that no other jobs were available, and that employers did not recognise transferable military skills.</li>
-            <li>Veterans who served in ranks below officer were considerably more likely to report skills-related underemployment than those who served as officers, at 56.1% against 42.4%.</li>
-            <li>Among Royal Navy veterans, the figure stood at 52.8%.</li>
-          </ul>
-          <p>These figures carry a caveat that ought to be stated rather than buried: the Veterans' Survey 2022 is classified as official statistics in development, published as research, and it used a self-select sample with acknowledged representativeness bias. Consequently, the percentages are indicative of a pattern rather than a precise measurement of it. The pattern itself, however, is corroborated by anyone who has sat through a resettlement brief, and it is the second of those two cited reasons that Defence can actually do something about, because employer recognition begins with what Defence itself chooses to record.</p>
-          <p><em>Senior non-commissioned capability is precisely the capability the civilian market struggles to read.</em></p>
-        </div>
-
-        <button class="article-toggle" onclick="var exp=this.nextElementSibling;var open=exp.classList.toggle('open');this.textContent=open?'Collapse ↑':'Continue reading →';this.setAttribute('aria-expanded',open)" aria-expanded="false">Continue reading →</button>
-
-        <div class="article-expand">
-          <div class="article-text">
-            <h3>Structural limits</h3>
-            <p>The Career Transition Partnership provides real and valuable support, including transferable skills identification, CV development, employment guidance and vocational training across engineering, health and safety, IT, management, transport and logistics, electrotechnical work and skilled trades. The breadth is genuine, and project management, cyber, safety and the trades are all appropriate destinations for many people.</p>
-            <p>The limitation is structural rather than cultural. A course catalogue cannot, on its own, establish the level at which an individual has already worked. For example, two people may both select an engineering course, one entering the profession for the first time and the other having spent years directing engineering outputs, contractors, safety cases and operational availability. Their training needs are not remotely the same. Without a shared way of describing capability, though, they are nonetheless treated as though they were.</p>
-
-            <h3>A common language</h3>
-            <p>Defence has now built the missing infrastructure.</p>
-            <p>The Pan-Defence Skills Framework, rolled out from 2024, is a Whole Force approach to identifying, defining, managing and deploying skills, described by Defence as a single common language for skills, knowledge, experience and behaviours, and applying to Regulars, Reservists and civil servants alike.</p>
-            <p>It is not a policy document sitting on a shelf. Personnel access an individual skills profile through an app, claim skills against it, and have those skills validated by their reporting officer or line manager. The validation process even accounts for skill fade, where a qualification or a period of experience was gained some time ago. Senior officers involved in the rollout have described it as a move away from a purely rank-based view of what a person can do, suggesting that Defence may in time employ people according to the skillset it needs rather than the rank historically attached to a role.</p>
-            <p>That is a significant statement, and it carries an external consequence that has not yet been fully exploited. If Defence can now describe capability in a common language internally, it could describe that capability in a language employers understand externally.</p>
-
-            <h3>Outward facing</h3>
-            <p>The framework was not designed solely as a transition tool. However, the 2021 Defence and Security Industrial Strategy was explicit that the Pan-Defence Skills Framework would make it easier for people to move between government and industry, and that ambition has not weakened under the 2025 Defence Industrial Strategy and its accompanying skills package.</p>
-            <p>Movement between sectors requires mutual intelligibility. Thus a skills profile that is meaningful only inside Defence cannot, on its own, support that movement.</p>
-            <p>Used properly, a validated skills profile should allow a service leaver to establish, before selecting any course at all:</p>
-            <ul>
-              <li>What level of responsibility they have actually held</li>
-              <li>What assets, people, budgets or programmes they have been accountable for</li>
-              <li>What risks they owned and what controls they operated or oversaw</li>
-              <li>What evidence they produced and who relied upon it</li>
-              <li>Most usefully, which of their apparent gaps are genuine and which are only gaps in vocabulary</li>
-            </ul>
-            <p>The output is different in kind. Instead of "maintained stores records and prepared the unit for inspection", the individual can evidence that they operated a first-line internal control regime, maintained asset accountability, resolved discrepancies and supported independent assurance. The underlying activity is identical; only the description has been recovered.</p>
-
-            <h3>Reading across</h3>
-            <p>Defence capability translates more readily than most people assume. Fleet logistics inspection and tiered assurance read across to operational assurance, internal controls and audit readiness. Stores account management reads across to asset governance, inventory integrity and reconciliation. Supersession and handover boards read across to custody transfer and segregation of duties. Transport safety and dangerous goods responsibilities read across to statutory compliance and chain of custody assurance. Supervising contractors reads across to third-party risk and contract governance, and sustaining output through disruption reads across to operational resilience and continuity planning. In each case the environment changes whilst the control logic does not.</p>
-            <p>Speaking personally, I did not initially describe my own work as governance, risk and compliance, because it was presented to me throughout as logistics. Only when I examined it through a civilian framework did the equivalence become obvious, and I should not have needed a Master's degree to discover it. Nor, thereafter, should anyone else.</p>
-
-            <h3>A change of sequence</h3>
-            <p>I am not arguing that every service leaver is a latent assurance professional, nor that vocational courses should be discouraged. I am arguing for a change in sequence.</p>
-            <p>Capability should first be recorded using the framework Defence has already built, including scope, scale, complexity, decision-making authority and consequence of failure. That record should then be mapped against recognised civilian reference points — management system standards, internal control models, engineering and programme competency frameworks, and professional registration routes. Only then should the remaining gaps be identified and training selected to close them.</p>
-            <p>Defence has spent years developing people who govern assets, test controls, manage risk, assure compliance and protect capability under considerable pressure, and the Pan-Defence Skills Framework finally gives those people a way to name it. Used outwardly as well as inwardly, it could measurably reduce the proportion of service leavers who take the first job that will have them rather than the job they are already qualified to do.</p>
-
-            <p class="article-disclaimer">The views expressed here are my own and are based on general observations about military transition, skills recognition and Defence workforce development. They do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</p>
-
-            <div class="article-refs">
-              <h4>References</h4>
-              <ol>
-                <li><a href="https://www.gov.uk/government/publications/employment-analysis-of-uk-armed-forces-veterans/employment-skills-and-volunteering-uk-armed-forces-veterans-uk-veterans-survey-2022" target="_blank" rel="noopener">Employment, skills and volunteering, UK armed forces veterans, UK: Veterans' Survey 2022 (GOV.UK, 23 April 2025)</a></li>
-                <li><a href="https://www.ons.gov.uk/" target="_blank" rel="noopener">Veterans' Survey 2022, demographic overview and coverage analysis (ONS, December 2023)</a></li>
-                <li><a href="https://www.forcesnews.com/services/tri-service/common-language-new-transferable-skills-app-shifting-defence-focus-rank" target="_blank" rel="noopener">The new transferable skills app shifting Defence focus from rank to skills (Forces News)</a></li>
-                <li><a href="https://assets.publishing.service.gov.uk/media/65ce3f834239310011b7b8aa/JSP_822_V7.0__Vol_8_V3.0_-_Skills_and_Accreditation.odt" target="_blank" rel="noopener">JSP 822 Volume 8: Skills and Accreditation in Defence (GOV.UK)</a></li>
-                <li><a href="https://assets.publishing.service.gov.uk/media/60590e988fa8f545d879f0aa/Defence_and_Security_Industrial_Strategy_-_FINAL.pdf" target="_blank" rel="noopener">Defence and Security Industrial Strategy, March 2021 (GOV.UK)</a></li>
-                <li><a href="https://www.gov.uk/government/publications/defence-industrial-strategy" target="_blank" rel="noopener">Defence Industrial Strategy, 2025 (GOV.UK)</a></li>
-                <li><a href="https://www.gov.uk/guidance/career-transition-partnership" target="_blank" rel="noopener">Career Transition Partnership guidance (GOV.UK)</a></li>
-                <li><a href="https://www.gov.uk/government/publications/veterans-strategy/veterans-strategy" target="_blank" rel="noopener">Veterans Strategy (GOV.UK)</a></li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ARTICLE 4 -->
-    <div class="article-embed">
-      <div class="top-band"></div>
-      <img class="article-img" src="/images/articles/defence-industry-talent.webp" alt="Aerospace and defence industry workforce — illustrating talent mobility between MOD, industry and the Reserves">
-      <div class="article-body">
-        <div class="article-meta">
-          <span class="article-status">Published</span>
-          <span class="article-series">Skills Framework · 2 of 2</span>
-        </div>
-        <h3 class="article-title">Talent Should Flow Both Ways</h3>
-        <p class="article-subtitle">The Pan-Defence Skills Framework as a Defence Industrial Strategy Tool</p>
-        <p class="article-standfirst">Regular Armed Forces numbers are down 8% since 2022. The ambition is to grow the Reserves by 20%. The defence industrial base is expanding. None of that works if experienced professionals have to enter at the bottom. The MOD is already piloting an alternative, and most people have not noticed.</p>
-
-        <div class="article-text">
-          <p>Most discussion of Defence skills frameworks focuses on getting people out well.</p>
-          <p>The more strategically interesting question is how we get experienced people in, and how we keep moving them between the Ministry of Defence, the defence industry and the Reserves without treating each move as a fresh start.</p>
-          <p>The UK now has both the strategic driver and the technical mechanism to do this. They are not yet fully connected.</p>
-
-          <h3>The driver</h3>
-          <p>The 2025 Defence Industrial Strategy is unambiguous about the workforce challenge. It commits £182 million to strengthen the future skills of the workforce, and states plainly that Government will make it easier and faster for members of the Armed Forces and workers in other industries to move into the defence sector.</p>
-          <p>Critically, it also commits to making it easier to transfer into and across defence mid-career by scoping the development of a Defence Skills Passport. That passport is intended to build on the Ministry of Defence's industry-benchmarked Pan-Defence skills work and on ZigZag Careers, creating a digital record of an individual's skills that enables smoother identification and transfer between the Armed Forces, defence industry and those looking to enter from neighbouring industries.</p>
-          <p>The pressure behind this is real. Analysis of the Strategic Defence Review notes that Regular Armed Forces numbers declined by 8% since 2022, that shortages now affect military, civil service and industrial roles across manufacturing, engineering and advanced technology, and that Defence supports over 239,000 jobs. The Review also commits to boosting Reserve numbers by 20% when funding allows, alongside a whole force, skills-based approach.</p>
-          <p>You cannot expand the Reserves by a fifth, staff a growing industrial base and simultaneously insist that experienced professionals begin at the bottom of a rank ladder.</p>
-        </div>
-
-        <button class="article-toggle" onclick="var exp=this.nextElementSibling;var open=exp.classList.toggle('open');this.textContent=open?'Collapse ↑':'Continue reading →';this.setAttribute('aria-expanded',open)" aria-expanded="false">Continue reading →</button>
-
-        <div class="article-expand">
-          <div class="article-text">
-            <h3>The mechanism</h3>
-            <p>The Pan-Defence Skills Framework already provides the architecture.</p>
-            <p>It was designed as a Whole Force approach covering Regulars, Reservists and civil servants, giving Defence a single common language for skills, knowledge, experience and behaviours, with individual validated skills profiles held digitally.</p>
-            <p>Two features matter enormously for talent mobility.</p>
-            <p>First, it captures skills acquired outside Defence. Personnel are encouraged to log capability from their civilian lives, from language proficiency to professional qualifications, which was previously either passed by word of mouth or lost entirely. Senior officers leading the rollout have highlighted Reservists specifically, noting that they hold a wealth of experience from outside Defence that is potentially very valuable.</p>
-            <p>Second, it decouples capability from rank as the primary organising principle. Defence has openly discussed employing people according to the skillset required rather than the rank conventionally attached to a role.</p>
-            <p>That is the foundation for genuine lateral entry.</p>
-
-            <h3>It is already being piloted</h3>
-            <p>This is not hypothetical. The ZigZag Career Pathway is a skills-focused pilot designed to bring talented professionals into the Armed Forces in fixed-term roles that match their expertise, and it explicitly breaks away from the conventional military career ladder.</p>
-            <p>It is open to civilians with no prior service, to veterans returning, and to Reservists seeking a more flexible contribution, with minimal military training required and a tailored induction.</p>
-            <p>The language on entry level is direct. For veterans and current reservists, the pathway offers roles that reflect industry experience rather than previous rank, so that individuals can re-engage at an appropriate level and make the most of hard-earned skills.</p>
-            <p>Advertised ZigZag roles have included cyber threat intelligence and digital support posts at specified grades. This is a working proof of concept for capability-based entry.</p>
-
-            <h3>The strategic case for making this systematic</h3>
-            <p>Treat the framework as an enterprise-wide talent market rather than an internal HR system, and several things become possible.</p>
-            <p>Defence can buy scarce expertise it cannot grow at pace. Cyber, data, AI assurance, systems engineering, nuclear skills, trade compliance and complex programme delivery are contested across the whole economy. Sourcing a mid-career specialist through a Reserve or fixed-term route at a level proportionate to their capability is faster than training one for a decade.</p>
-            <p>Industry gains a legible talent pool. At present a defence prime reading a Service CV is performing an act of interpretation. A validated, industry-benchmarked skills record removes that friction and reduces the risk premium employers apply to military candidates.</p>
-            <p>Retention improves. People are more likely to stay in an enterprise where they can move without penalty than one where every transition costs them status. A skills passport makes a career that moves between MOD, industry and the Reserves a rational choice rather than a gamble.</p>
-            <p>Assurance and oversight capability improves on both sides. Someone who has operated first-line controls inside Defence, then worked in commercial supply chain governance or export control, then returned as a Reservist, understands both the regulator's expectation and the operator's reality. That combination is rare and increasingly valuable given the enforcement risk now attached to export control and supply chain compliance in the sector.</p>
-            <p>Sovereign capability becomes less fragile. Skills held by one organisation and invisible to the rest of the enterprise are single points of failure.</p>
-
-            <h3>What needs to be true for this to work</h3>
-            <p>I would not overstate where we are. Two things need honest treatment.</p>
-            <p>First, the Defence Skills Passport is being scoped, not delivered. The strategy commits to scoping an initial framework, operating concept and pilot opportunities through sector-wide consultation supported by industry early adopters. That is the right start, but scoping is not implementation, and the value only appears when industry recognises the record as authoritative.</p>
-            <p>Second, capability-based entry is not a route around standards. Professional registration, security clearance, competence assurance and safety qualification requirements exist for good reasons and should be met in full. The argument is narrower and more defensible: prior demonstrated capability should be assessed before anyone is treated as a beginner.</p>
-            <p>That distinction matters. Recognition of prior capability is not a shortcut. It is an accuracy improvement.</p>
-
-            <h3>The question to ask</h3>
-            <p>Defence has historically asked what skills it needs and how to train them.</p>
-            <p>The better question is how Defence makes skills visible, portable and recognisable as people move between Service, industry and the wider economy — in both directions and more than once.</p>
-            <p>The Pan-Defence Skills Framework, the ZigZag pilot and the proposed Defence Skills Passport are three parts of the same answer. They currently sit in different places, owned by different parts of the enterprise, with different levels of maturity.</p>
-            <p>Joining them up is not a technology problem. It is a decision about whether we regard a career as a ladder or as a network.</p>
-            <p>Given the scale of the recruitment, retention and industrial capacity challenge in front of us, a network looks considerably more useful.</p>
-
-            <p class="article-disclaimer">The views expressed here are my own and are based on general observations about Defence workforce policy, skills recognition and industrial strategy. They do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</p>
-
-            <div class="article-refs">
-              <h4>References</h4>
-              <ol>
-                <li><a href="https://assets.publishing.service.gov.uk/media/68bea3fc223d92d088f01d69/Defence_Industrial_Strategy_2025_-_Making_Defence_an_Engine_for_Growth.pdf" target="_blank" rel="noopener">Defence Industrial Strategy 2025: Making Defence an Engine for Growth (GOV.UK)</a></li>
-                <li><a href="https://www.gov.uk/government/news/major-skills-boost-at-the-heart-of-transformative-new-defence-industrial-strategy" target="_blank" rel="noopener">Major skills boost at the heart of transformative new Defence Industrial Strategy (GOV.UK)</a></li>
-                <li><a href="https://www.findforcesjobs.mod.gov.uk/vx/candidate/cms/ZigZag%20Career%20Pathways" target="_blank" rel="noopener">ZigZag Career Pathways (MOD, Find Forces Jobs)</a></li>
-                <li><a href="https://www.forcesnews.com/services/tri-service/common-language-new-transferable-skills-app-shifting-defence-focus-rank" target="_blank" rel="noopener">The new transferable skills app shifting Defence focus from rank to skills (Forces News)</a></li>
-                <li><a href="https://assets.publishing.service.gov.uk/media/60590e988fa8f545d879f0aa/Defence_and_Security_Industrial_Strategy_-_FINAL.pdf" target="_blank" rel="noopener">Defence and Security Industrial Strategy, 2021 (GOV.UK)</a></li>
-                <li><a href="https://policyconnect.org.uk/blog/war-fighting-ready-workforce-tackling-uk-defence-skills-shortages-2025-strategic-defence/" target="_blank" rel="noopener">A "War-fighting Ready" Workforce? Tackling UK Defence Skills Shortages (Policy Connect)</a></li>
-                <li><a href="https://www.gov.uk/government/publications/the-strategic-defence-review-2025-making-britain-safer-secure-at-home-strong-abroad/the-strategic-defence-review-2025-making-britain-safer-secure-at-home-strong-abroad" target="_blank" rel="noopener">The Strategic Defence Review 2025: Making Britain Safer (GOV.UK)</a></li>
-                <li><a href="https://assets.publishing.service.gov.uk/media/683d6964fd325db61c5ff289/Sector_skills_needs_assessments_Defence.pdf" target="_blank" rel="noopener">Sector skills needs assessments: Defence (GOV.UK)</a></li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  
-    
-
+    <p class="intro-p" style="margin-top:24px;margin-bottom:0"><a href="/writing.html">See all writing and get new essays by email →</a></p>
   </div>
 </section>
 
