@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Why the Pan-Defence Skills Framework is the missing piece in service leaver transition.">
+<title>Recognition Before Retraining — Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3;
+  --surface:#FFFFFF;
+  --surface-2:#F5F7F9;
+  --ink:#15202B;
+  --ink-2:#3D4C59;
+  --muted:#697887;
+  --rule:#D3DAE1;
+  --rule-soft:#E3E8ED;
+  --accent:#8A6A2F;
+  --accent-soft:#F2ECDF;
+  --signal:#9A6410;
+  --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* reading progress bar */
+.reading-progress{
+  position:fixed;top:0;left:0;right:0;height:4px;
+  background:var(--rule-soft);z-index:100;
+}
+.reading-progress-bar{
+  height:100%;background:var(--accent);width:0%;
+  transition:width .1s ease;
+}
+
+/* top nav */
+.topnav{padding:22px 0 0;margin-bottom:44px}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:#6B7885;
+}
+.topnav a:hover{color:var(--accent)}
+
+/* masthead */
+.masthead{
+  background:var(--surface);
+  border-bottom:1px solid var(--rule);
+  padding:0;
+  margin-bottom:52px;
+  position:relative;
+}
+.featured-image{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+@media(min-width:800px){
+  .featured-image{height:420px}
+}
+.masthead-content{
+  padding:48px 0 44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:0 0 20px;
+  text-wrap:balance;
+  max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;
+  font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;
+  padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+/* article body */
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.65rem;font-weight:700;
+  margin:56px 0 18px;
+  letter-spacing:-.012em;
+}
+.prose h3{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.32rem;font-weight:600;
+  margin:42px 0 14px;
+  letter-spacing:-.008em;
+}
+.prose h4{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.12rem;font-weight:600;
+  margin:32px 0 10px;
+}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose blockquote{
+  border-left:3px solid var(--accent);
+  padding-left:20px;
+  margin:26px 0;
+  font-style:italic;
+  color:var(--ink-2);
+}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+.pullquote{
+  border-left:4px solid var(--accent);
+  padding:24px 28px;margin:32px 0;
+  background:var(--accent-soft);
+  font-family:Spectral,Georgia,serif;
+  font-size:1.28rem;line-height:1.5;
+  font-weight:600;color:var(--ink);
+  font-style:italic;
+}
+.reading-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  margin-top:8px;
+}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+.share-buttons{
+  display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;
+}
+.share-btn{
+  padding:7px 14px;font-size:11.5px;
+  font-family:"IBM Plex Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--surface-2);border:1px solid var(--rule);
+  color:var(--ink-2);text-decoration:none;
+  transition:all .2s ease;cursor:pointer;
+}
+.share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* references section */
+.references{
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  margin-top:56px;
+}
+.references h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.45rem;font-weight:700;
+  margin:0 0 20px;
+}
+.references h3,.references h4{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:24px 0 12px;
+  font-weight:500;
+}
+.references ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+}
+.references li{
+  margin-bottom:10px;
+  font-size:14px;
+  line-height:1.6;
+  padding-left:14px;
+  position:relative;
+}
+.references li::before{
+  content:"—";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+
+footer{
+  padding:34px 0 56px;
+  border-top:1px solid var(--rule);
+}
+footer p{
+  font-size:12.5px;color:var(--muted);
+  max-width:70ch;margin:0 0 10px;
+  line-height:1.6;
+}
+</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div class="wrap topnav">
+  <a href="/writing.html">&#8592; Writing</a>
+</div>
+
+<header class="masthead">
+  <img src="/images/articles/defence-skills-transition.jpg" alt="Service leavers at Defence Equipment and Support — illustrating military-to-civilian career transition" class="featured-image">
+  <div class="wrap masthead-content">
+    <div class="eyebrow">
+      <span class="tick">◆</span>
+      <span>Skills Framework</span>
+      <span>1 of 2</span>
+      <span>Service Transition</span>
+    </div>
+    <h1>Recognition Before Retraining</h1>
+    <p class="standfirst">Why the Pan-Defence Skills Framework is the missing piece in service leaver transition.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 7 min read</span>
+      <span>📊 1,380 words</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.github.io/recognition-before-retraining.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.github.io/recognition-before-retraining.html&text=Recognition%20Before%20Retraining" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=Article: Recognition Before Retraining&body=I thought you might find this interesting: https://kelroyjames.github.io/recognition-before-retraining.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>In a recent resettlement brief, I sat behind a Warrant Officer with two decades of operational service whose last job had been the regeneration of a Type 45 destroyer, and who had just enrolled on an 18th Edition electrical wiring course. None of the programme coordination, contractor management, safety assurance or risk management behind that job was written down anywhere a civilian employer would find it. The course was not the mistake. The mistake was the order in which it was chosen.</p>
+
+<p>The qualification is entirely legitimate and, for the right destination, exactly the right choice. However, regenerating a warship involves programme coordination, contractor and supplier management, configuration and asset governance, safety and regulatory assurance, resource planning, risk management, quality control and delivery against operational deadlines. None of that was written down anywhere a civilian employer would find it. Now, eighteen years into a career in Defence logistics, having studied the same work through postgraduate supply chain management and professional development in management systems, cyber and AI governance, I would say the course was not the mistake. The mistake was the order in which it was chosen.</p>
+
+<h4>The second question</h4>
+
+<p>Resettlement is habitually framed as a training question. Which course should I take, which qualification will an employer accept, and which sector is hiring?</p>
+
+<p>Those are reasonable questions. They are also, in every case, the second question. The first should be: what level have I already been operating at, and what would a civilian organisation call it? Where that question is skipped, capable people can enter the labour market as though they were starting again.</p>
+
+<p>The survey evidence points the same way. Analysis of the Veterans' Survey 2022, published on GOV.UK in April 2025 using data collected by the Office for National Statistics, found:</p>
+
+<ul>
+<li>Just over half of veterans, an uncomfortable 52.5%, had at some point taken a job at a lower experience or skill level than their last role in the UK armed forces.</li>
+<li>The two most commonly cited reasons were that no other jobs were available, and that employers did not recognise transferable military skills.</li>
+<li>Veterans who served in ranks below officer were considerably more likely to report skills-related underemployment than those who served as officers, at 56.1% against 42.4%.</li>
+<li>Among Royal Navy veterans, the figure stood at 52.8%.</li>
+</ul>
+
+<p>These figures carry a caveat that ought to be stated rather than buried: the Veterans' Survey 2022 is classified as official statistics in development, published as research, and it used a self-select sample with acknowledged representativeness bias. Consequently, the percentages are indicative of a pattern rather than a precise measurement of it. The pattern itself, however, is corroborated by anyone who has sat through a resettlement brief, and it is the second of those two cited reasons that Defence can actually do something about, because employer recognition begins with what Defence itself chooses to record.</p>
+
+<div class="pullquote">
+Senior non-commissioned capability is precisely the capability the civilian market struggles to read.
+</div>
+
+<h4>Structural limits</h4>
+
+<p>The Career Transition Partnership provides real and valuable support, including transferable skills identification, CV development, employment guidance and vocational training across engineering, health and safety, IT, management, transport and logistics, electrotechnical work and skilled trades. The breadth is genuine, and project management, cyber, safety and the trades are all appropriate destinations for many people.</p>
+
+<p>The limitation is structural rather than cultural. A course catalogue cannot, on its own, establish the level at which an individual has already worked. For example, two people may both select an engineering course, one entering the profession for the first time and the other having spent years directing engineering outputs, contractors, safety cases and operational availability. Their training needs are not remotely the same. Without a shared way of describing capability, though, they are nonetheless treated as though they were.</p>
+
+<h4>A common language</h4>
+
+<p>Defence has now built the missing infrastructure.</p>
+
+<p>The Pan-Defence Skills Framework, rolled out from 2024, is a Whole Force approach to identifying, defining, managing and deploying skills, described by Defence as a single common language for skills, knowledge, experience and behaviours, and applying to Regulars, Reservists and civil servants alike.</p>
+
+<p>It is not a policy document sitting on a shelf. Personnel access an individual skills profile through an app, claim skills against it, and have those skills validated by their reporting officer or line manager. The validation process even accounts for skill fade, where a qualification or a period of experience was gained some time ago. Senior officers involved in the rollout have described it as a move away from a purely rank-based view of what a person can do, suggesting that Defence may in time employ people according to the skillset it needs rather than the rank historically attached to a role.</p>
+
+<p>That is a significant statement, and it carries an external consequence that has not yet been fully exploited. If Defence can now describe capability in a common language internally, it could describe that capability in a language employers understand externally.</p>
+
+<h4>Outward facing</h4>
+
+<p>The framework was not designed solely as a transition tool. However, the 2021 Defence and Security Industrial Strategy was explicit that the Pan-Defence Skills Framework would make it easier for people to move between government and industry, and that ambition has not weakened under the 2025 Defence Industrial Strategy and its accompanying skills package.</p>
+
+<p>Movement between sectors requires mutual intelligibility. Thus a skills profile that is meaningful only inside Defence cannot, on its own, support that movement.</p>
+
+<p>Used properly, a validated skills profile should allow a service leaver to establish, before selecting any course at all:</p>
+
+<ul>
+<li>What level of responsibility they have actually held</li>
+<li>What assets, people, budgets or programmes they have been accountable for</li>
+<li>What risks they owned and what controls they operated or oversaw</li>
+<li>What evidence they produced and who relied upon it</li>
+<li>Most usefully, which of their apparent gaps are genuine and which are only gaps in vocabulary</li>
+</ul>
+
+<p>The output is different in kind. Instead of "maintained stores records and prepared the unit for inspection", the individual can evidence that they operated a first-line internal control regime, maintained asset accountability, resolved discrepancies and supported independent assurance. The underlying activity is identical; only the description has been recovered.</p>
+
+<h4>Reading across</h4>
+
+<p>Defence capability translates more readily than most people assume. Fleet logistics inspection and tiered assurance read across to operational assurance, internal controls and audit readiness. Stores account management reads across to asset governance, inventory integrity and reconciliation. Supersession and handover boards read across to custody transfer and segregation of duties. Transport safety and dangerous goods responsibilities read across to statutory compliance and chain of custody assurance. Supervising contractors reads across to third-party risk and contract governance, and sustaining output through disruption reads across to operational resilience and continuity planning. In each case the environment changes whilst the control logic does not.</p>
+
+<p>Speaking personally, I did not initially describe my own work as governance, risk and compliance, because it was presented to me throughout as logistics. Only when I examined it through a civilian framework did the equivalence become obvious, and I should not have needed a Master's degree to discover it. Nor, thereafter, should anyone else.</p>
+
+<h4>A change of sequence</h4>
+
+<p>I am not arguing that every service leaver is a latent assurance professional, nor that vocational courses should be discouraged. I am arguing for a change in sequence.</p>
+
+<p>Capability should first be recorded using the framework Defence has already built, including scope, scale, complexity, decision-making authority and consequence of failure. That record should then be mapped against recognised civilian reference points — management system standards, internal control models, engineering and programme competency frameworks, and professional registration routes. Only then should the remaining gaps be identified and training selected to close them.</p>
+
+<p>Defence has spent years developing people who govern assets, test controls, manage risk, assure compliance and protect capability under considerable pressure, and the Pan-Defence Skills Framework finally gives those people a way to name it. Used outwardly as well as inwardly, it could measurably reduce the proportion of service leavers who take the first job that will have them rather than the job they are already qualified to do.</p>
+
+<p><em>The views expressed here are my own and are based on general observations about military transition, skills recognition and Defence workforce development. They do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</em></p>
+
+<div class="references">
+<h2>References</h2>
+<ul>
+<li><a href="https://www.gov.uk/government/publications/employment-analysis-of-uk-armed-forces-veterans/employment-skills-and-volunteering-uk-armed-forces-veterans-uk-veterans-survey-2022">Employment, skills and volunteering, UK armed forces veterans, UK: Veterans' Survey 2022</a> (GOV.UK, 23 April 2025).</li>
+<li><a href="https://www.ons.gov.uk/">Veterans' Survey 2022, demographic overview and coverage analysis</a> (ONS, December 2023).</li>
+<li><a href="https://www.forcesnews.com/services/tri-service/common-language-new-transferable-skills-app-shifting-defence-focus-rank">The new transferable skills app shifting Defence focus from rank to skills</a> (Forces News).</li>
+<li><a href="https://assets.publishing.service.gov.uk/media/65ce3f834239310011b7b8aa/JSP_822_V7.0__Vol_8_V3.0_-_Skills_and_Accreditation.odt">JSP 822 Volume 8: Skills and Accreditation in Defence</a> (GOV.UK).</li>
+<li><a href="https://assets.publishing.service.gov.uk/media/60590e988fa8f545d879f0aa/Defence_and_Security_Industrial_Strategy_-_FINAL.pdf">Defence and Security Industrial Strategy, March 2021</a> (GOV.UK).</li>
+<li><a href="https://www.gov.uk/government/publications/defence-industrial-strategy">Defence Industrial Strategy, 2025</a> (GOV.UK).</li>
+<li><a href="https://www.gov.uk/guidance/career-transition-partnership">Career Transition Partnership guidance</a> (GOV.UK).</li>
+<li><a href="https://www.gov.uk/government/publications/veterans-strategy/veterans-strategy">Veterans Strategy</a> (GOV.UK).</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p>Kelroy James · 2026 · Content may be freely reproduced for non-commercial use with attribution</p>
+  </div>
+</footer>
+
+<script>
+// Reading progress indicator
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
