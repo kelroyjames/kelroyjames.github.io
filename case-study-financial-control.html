@@ -166,7 +166,7 @@
         <div class="cs-section" id="challenge">
           <h2>The Challenge</h2>
           <p>In 2024, while conducting routine financial reconciliation across Royal Navy supply chain accounts, I identified systematic misallocation of expenditure totalling <strong>£2.4 million</strong>. The funds had been charged to incorrect cost centres, masking the true expenditure profile of multiple platforms and creating phantom budget headroom in some accounts while others appeared overspent.</p>
-          <p>This was not fraud. It was a process failure—one that had persisted because the existing validation steps did not catch allocation errors before they were committed to the ledger, and because there was no routine reconciliation process designed to detect the pattern retrospectively.</p>
+          <p>This was not fraud. It was a process failure, one that had persisted because the existing validation steps did not catch allocation errors before they were committed to the ledger, and because there was no routine reconciliation process designed to detect the pattern retrospectively.</p>
           
           <div class="highlight-box">
             <h4>The Core Issue</h4>
@@ -191,7 +191,7 @@
           <p>The misallocations were not immediately obvious. Each individual transaction appeared plausible in isolation. The pattern only became visible when I began mapping expenditure by platform against expected usage profiles.</p>
           
           <h3>Initial Indicators</h3>
-          <p>Several platforms were reporting expenditure significantly below historical norms, while others—particularly those in upkeep or maintenance cycles—showed expenditure that did not align with the scope of work being conducted. The variance could have been explained by operational tempo, but the magnitude suggested something more systematic.</p>
+          <p>Several platforms were reporting expenditure significantly below historical norms, while others, particularly those in upkeep or maintenance cycles, showed expenditure that did not align with the scope of work being conducted. The variance could have been explained by operational tempo, but the magnitude suggested something more systematic.</p>
           
           <h3>Data Interrogation</h3>
           <p>I extracted transactional data from the Defence ERP system and cross-referenced it against:</p>
@@ -201,7 +201,7 @@
             <li>Historical expenditure patterns for similar platforms in similar cycles</li>
             <li>Cost centre assignment rules documented in financial policy</li>
           </ul>
-          <p>The analysis revealed that <strong>allocation errors were concentrated at specific points in the procurement workflow</strong>—particularly where manual cost centre assignment was required and where there was ambiguity about which platform should bear the cost.</p>
+          <p>The analysis revealed that <strong>allocation errors were concentrated at specific points in the procurement workflow</strong>, particularly where manual cost centre assignment was required and where there was ambiguity about which platform should bear the cost.</p>
           
           <h3>Scale of the Issue</h3>
           <p>Once the pattern was identified, I conducted a lookback across 18 months of transactions. The total misallocated value was £2.4M, affecting multiple cost centres and distorting the financial position of platforms across the fleet.</p>
@@ -214,7 +214,7 @@
           <h3>Identified Root Causes</h3>
           
           <h4>1. Ambiguous Cost Centre Assignment Rules</h4>
-          <p>Policy defined cost centre assignment at a high level but did not provide decision trees for edge cases—shared equipment, cross-platform logistics support, and transitional states like pre-delivery or post-disposal. Personnel making allocation decisions were left to interpret policy, and interpretations varied.</p>
+          <p>Policy defined cost centre assignment at a high level but did not provide decision trees for edge cases such as shared equipment, cross-platform logistics support, and transitional states like pre-delivery or post-disposal. Personnel making allocation decisions were left to interpret policy, and interpretations varied.</p>
           
           <h4>2. No Pre-Commitment Validation</h4>
           <p>The ERP workflow allowed cost centre assignment without mandatory validation against the platform's current status. A platform in long-term storage could still be charged for active operations expenditure, and the system would not flag it.</p>
@@ -256,16 +256,16 @@
           <h2>Lessons Learned</h2>
           
           <h3>Look for Patterns, Not Just Variances</h3>
-          <p>Individual misallocations are correctable but unremarkable. A pattern of misallocations suggests a process failure that will continue to produce errors until the underlying cause is addressed. The £2.4M was significant, but the pattern was more significant—it indicated that the process was not fit for purpose.</p>
+          <p>Individual misallocations are correctable but unremarkable. A pattern of misallocations suggests a process failure that will continue to produce errors until the underlying cause is addressed. The £2.4M was significant, but the pattern was more significant: it indicated that the process was not fit for purpose.</p>
           
           <h3>Validation Should Happen at the Point of Commitment</h3>
-          <p>Detecting errors after they are committed is retrospective damage control. Preventing errors at the point of commitment—through pre-populated defaults, mandatory validation checks, and decision support tools—is control design. The former fixes mistakes; the latter stops them from happening.</p>
+          <p>Detecting errors after they are committed is retrospective damage control. Preventing errors at the point of commitment, through pre-populated defaults, mandatory validation checks, and decision support tools, is control design. The former fixes mistakes. The latter stops them from happening.</p>
           
           <h3>Policy Ambiguity is a Control Weakness</h3>
-          <p>If policy requires interpretation, different people will interpret it differently, and the process will produce inconsistent outcomes. Clear policy eliminates discretion where discretion is not needed. That does not mean removing judgment—it means removing ambiguity so that judgment can be applied consistently.</p>
+          <p>If policy requires interpretation, different people will interpret it differently, and the process will produce inconsistent outcomes. Clear policy eliminates discretion where discretion is not needed. That does not mean removing judgment. It means removing ambiguity so that judgment can be applied consistently.</p>
           
           <h3>Training Must Address "Why," Not Just "How"</h3>
-          <p>Teaching someone how to use an ERP system does not teach them how to make correct financial decisions within that system. Training that explains the financial logic—why cost centres exist, what they represent, and what happens when they are used incorrectly—produces better decision-making than training that only covers the mechanics of data entry.</p>
+          <p>Teaching someone how to use an ERP system does not teach them how to make correct financial decisions within that system. Training that explains the financial logic, why cost centres exist, what they represent, and what happens when they are used incorrectly, produces better decision-making than training that only covers the mechanics of data entry.</p>
           
           <h3>Scale Matters</h3>
           <p>£2.4M is material at the platform level, the unit level, and the enterprise level. When a finding scales across all three, the solution must scale with it. Local corrections are insufficient; the fix must be systemic, or the problem will recur elsewhere.</p>

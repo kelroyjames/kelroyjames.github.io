@@ -176,7 +176,7 @@
           
           <div class="highlight-box">
             <h4>The Core Problem</h4>
-            <p>The Royal Navy does not lack inventory data. It lacks a unified interrogation layer that can query across systems, validate against ground truth, and present actionable insights in real time. That is not an ERP problem—it is a data integration and visualisation problem.</p>
+            <p>The Royal Navy does not lack inventory data. It lacks a unified interrogation layer that can query across systems, validate against ground truth, and present actionable insights in real time. That is not an ERP problem. It is a data integration and visualisation problem.</p>
           </div>
         </div>
         
@@ -190,7 +190,7 @@
             <li>Regulatory requirements for audit trails, export control, and safety-critical items</li>
             <li>Personnel rotations every 18–24 months, requiring systems that do not depend on individual expertise</li>
           </ul>
-          <p>Previous attempts at inventory visibility relied on static reports extracted from the ERP and manually consolidated. By the time the report was complete, the data was already outdated. What was needed was a <strong>living interrogation capability</strong>—a system that could query current data, cross-reference multiple sources, and flag discrepancies for investigation.</p>
+          <p>Previous attempts at inventory visibility relied on static reports extracted from the ERP and manually consolidated. By the time the report was complete, the data was already outdated. What was needed was a <strong>living interrogation capability</strong>: a system that could query current data, cross-reference multiple sources, and flag discrepancies for investigation.</p>
           
           <p>Palantir Foundry was selected as the platform because it is designed for exactly this use case: integrating data from multiple legacy systems, applying validation logic, and presenting the results through a user-configurable interface. My role was to represent the operational user perspective in the development process, keeping the build anchored to the problems users actually had on the ground.</p>
         </div>
@@ -205,10 +205,10 @@
             <li><strong>Defence Equipment & Support (DE&S)</strong> – Defined enterprise requirements, data governance standards, and approval pathways</li>
             <li><strong>Operational users (my role)</strong> – Identified use cases, tested functionality, and validated that the application addressed real-world operational needs</li>
           </ul>
-          <p>This tri-party model ensured the application was technically sound, policy-compliant, and operationally useful—a balance that is often difficult to achieve in defence digital transformation projects.</p>
+          <p>This tri-party model ensured the application was technically sound, policy-compliant, and operationally useful, a balance that is often difficult to achieve in defence digital transformation projects.</p>
           
           <h3>Ground-Truth Validation Protocols</h3>
-          <p>One of the most critical design decisions was how to handle <strong>ground-truth validation</strong>—the process of verifying that what the ERP system says you hold actually exists in the physical location it claims.</p>
+          <p>One of the most critical design decisions was how to handle <strong>ground-truth validation</strong>: the process of verifying that what the ERP system says you hold actually exists in the physical location it claims.</p>
           <p>We established protocols that:</p>
           <ul>
             <li>Flag high-value or high-risk items for physical verification based on configurable thresholds</li>
@@ -216,10 +216,10 @@
             <li>Highlight discrepancies between ERP records and ground-truth findings for investigation</li>
             <li>Generate verification task lists optimised by physical location to minimise time spent walking the platform</li>
           </ul>
-          <p>This capability addresses one of the longstanding weaknesses in defence inventory management: the assumption that the ERP record is correct unless proven otherwise. Foundry inverts that assumption—it treats the ERP as a claim that requires validation, not as truth.</p>
+          <p>This capability addresses one of the longstanding weaknesses in defence inventory management: the assumption that the ERP record is correct unless proven otherwise. Foundry inverts that assumption. It treats the ERP as a claim that requires validation, not as truth.</p>
           
           <h3>Iterative User Testing</h3>
-          <p>Development followed an iterative model. The contractor team would build a capability, I would test it against real operational scenarios, and we would refine based on what worked and what did not. This cycle repeated until the application could handle the edge cases that routinely break theoretical designs—partial deliveries, supersession chains, items in transit, and holdings held on behalf of other units.</p>
+          <p>Development followed an iterative model. The contractor team would build a capability, I would test it against real operational scenarios, and we would refine based on what worked and what did not. This cycle repeated until the application could handle the edge cases that routinely break theoretical designs: partial deliveries, supersession chains, items in transit, and holdings held on behalf of other units.</p>
         </div>
         
         <div class="cs-section" id="capabilities">
@@ -232,7 +232,7 @@
           <p>The application automatically flags discrepancies between what the ERP claims and what ground-truth validation has confirmed. Flags are prioritised by value, by operational criticality, and by regulatory risk, so that investigation effort is directed where it matters most.</p>
           
           <h3>Visual Dashboards for Decision-Makers</h3>
-          <p>Senior decision-makers do not need transactional detail—they need summary insights. The application provides dashboards that show inventory health at a glance: holdings by value, verification status, outstanding discrepancies, and trend analysis over time.</p>
+          <p>Senior decision-makers do not need transactional detail. They need summary insights. The application provides dashboards that show inventory health at a glance: holdings by value, verification status, outstanding discrepancies, and trend analysis over time.</p>
           
           <h3>Audit-Ready Reporting</h3>
           <p>One of the design requirements was that the application must generate reports suitable for external audit. Every query, every validation action, and every discrepancy resolution is logged with a timestamp and a user ID, creating an audit trail that meets defence assurance standards.</p>
@@ -277,10 +277,10 @@
           <p>The technical challenge of extracting, transforming, and loading data from legacy defence systems into Foundry was significant. The systems were not designed to be integrated, and data quality varied widely. The contractor team spent months building the integration layer, and even then, edge cases continued to surface during testing. Anyone planning a similar project should budget more time for integration than the technical specification suggests.</p>
           
           <h3>Iterative Development Works, Even in Defence</h3>
-          <p>Defence procurement has a reputation for waterfall projects: specify everything up front, build to specification, deliver at the end. This project followed an iterative model—build a capability, test it, refine it, repeat. That approach allowed us to adapt to real-world complexity rather than trying to specify it all in advance. It works, but it requires stakeholders to accept that the final product will evolve rather than being fully defined at the start.</p>
+          <p>Defence procurement has a reputation for waterfall projects: specify everything up front, build to specification, deliver at the end. This project followed an iterative model: build a capability, test it, refine it, repeat. That approach allowed us to adapt to real-world complexity rather than trying to specify it all in advance. It works, but it requires stakeholders to accept that the final product will evolve rather than being fully defined at the start.</p>
           
           <h3>Scale is Both the Opportunity and the Risk</h3>
-          <p>The fleet-wide rollout represents significant value—real-time inventory visibility across all platforms would fundamentally change how the Royal Navy manages readiness. But scale also multiplies risk. If the application fails at enterprise scale, the disruption is proportional. That is why the trial phase was critical—it allowed us to identify and fix failure modes before they affected the entire fleet.</p>
+          <p>The fleet-wide rollout represents significant value: real-time inventory visibility across all platforms would fundamentally change how the Royal Navy manages readiness. But scale also multiplies risk. If the application fails at enterprise scale, the disruption is proportional. That is why the trial phase was critical. It allowed us to identify and fix failure modes before they affected the entire fleet.</p>
         </div>
         
       </div>
