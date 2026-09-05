@@ -2,7 +2,7 @@
 
 **Supply Chain Assurance · Governance, Risk & Compliance**
 
-📧 kelroydbjames@gmail.com | 🔗 [linkedin.com/in/kelroy-james](https://linkedin.com/in/kelroy-james) | 🌐 [kelroyjames.github.io](https://kelroyjames.github.io)
+📧 kelroydbjames@gmail.com | 🔗 [linkedin.com/in/kelroy-james](https://linkedin.com/in/kelroy-james) | 🌐 [kelroyjames.com](https://kelroyjames.com)
 
 ---
 
@@ -19,7 +19,7 @@ Supply chain assurance and GRC specialist with 18 years of Defence logistics exp
 ## PROFESSIONAL EXPERIENCE
 
 ### **Petty Officer (Supply Chain Manager)**  
-**Royal Navy, Type 45 Destroyer** | 2022 – Present
+**Royal Navy, Type 45 Destroyer** | May 2024 – Present
 
 **Account Turnaround & Financial Control Recovery**
 - Took over unsatisfactory Type 45 destroyer supply chain account; designed first-line controls that achieved full compliance within 12 months
@@ -37,6 +37,19 @@ Supply chain assurance and GRC specialist with 18 years of Defence logistics exp
 - Managed dangerous goods compliance (IMDG Code, ADR, IATA DGR) for naval aviation stores and ammunition
 - Conducted supplier due diligence using OSINT techniques for third-party risk assessment
 - Maintained 100% compliance across all mandated inspection cycles
+
+---
+
+### **Petty Officer (Stores Office Manager)**  
+**Royal Navy, Wildcat Maritime Force** | Apr 2022 – May 2024
+
+**Asset Accountability & Investigation Closure**
+- Consolidated dispersed Force Mobile Equipment from Accounting-in-Use control into a single accountable stock holding site, delivering a Tier 3 audit recommendation
+- Closed 14 major loss investigations, recovering the majority of previously unaccounted items rather than writing them off
+
+**Expeditionary Logistics Under Deadline Pressure**
+- Turned round a rejected consignment in 3 days to meet a fixed flight slot, sustaining a Gibraltar logistics support arrangement for a Ship Helicopter Operating Limit (SHOL) trial for the Future Anti-Surface Guided Weapon (FASGW) capability, valued at approximately £5M
+- Coordinated packing and cross-border movement of 7 containers of equipment for Exercise Tamber Shield (Joint Expeditionary Force); recovered a critical equipment shortfall mid-exercise, closing with 3 hours to spare against the return flight and delivery deadline
 
 ---
 
@@ -156,13 +169,13 @@ IMDG Code (Maritime) | ADR (Road) | IATA DGR (Air) | UN Recommendations on Trans
 Risk-based audit planning | Control testing | Root cause analysis | Corrective Action Request (CAR) management | Evidence sampling | Non-conformity investigation | Management system surveillance | Process maturity assessment
 
 ### Project & Change Management
-PRINCE2 principles | Agile methodologies | Stakeholder analysis | Change impact assessment | Business case development | Lessons learned capture | CMI Level 3 Coaching & Mentoring
+PRINCE2 principles | Agile methodologies | Stakeholder analysis | Change impact assessment | Business case development | Lessons learned capture | Level 3 Coaching & Mentoring (course completed)
 
 ---
 
 ## THOUGHT LEADERSHIP & PUBLICATIONS
 
-**Portfolio Website:** [kelroyjames.github.io](https://kelroyjames.github.io)
+**Portfolio Website:** [kelroyjames.com](https://kelroyjames.com)
 
 ### Frameworks & Reference Material (Published)
 - **OSINT Supplier Verification Framework** | Seven-stage open-source verification sequence for third-party risk assessment
@@ -220,4 +233,4 @@ Seeking senior roles in **supply chain assurance**, **GRC management**, **manage
 ---
 
 **Last Updated:** January 2026  
-**Download:** Available at [kelroyjames.github.io](https://kelroyjames.github.io)
+**Download:** Available at [kelroyjames.com](https://kelroyjames.com)
