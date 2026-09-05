@@ -73,12 +73,14 @@ Supply chain assurance and GRC specialist with 18 years of Defence logistics exp
 ## EDUCATION & QUALIFICATIONS
 
 ### Academic Credentials
-- **MSc Supply Chain and Logistics Management** | University of Lincoln | In Progress (Distinction track), Dissertation 2027
-- **MITx MicroMasters in Supply Chain Management** | SC0x–SC4x complete, Final exam 2026
-- **BSc (Hons) Logistics and Operations Management** | Completed
+- **MSc Supply Chain and Logistics Management (Defence Logistics Staff Course)** | University of Lincoln | In Progress (Distinction track), Apr 2025 – Apr 2027
+- **MicroMasters, Supply Chain Management & Advanced Network Design** | MIT Center for Transportation & Logistics | Completed 2024
+- **Professional Award in Cyber Security & OSINT** | Abertay University | Distinction, 2023–2025
+- **MicroMasters, Predictive Analytics using Python** | University of Edinburgh | 2021–2022
+- **DeFi Talents Program, Blockchain Strategy & Tokenisation** | Frankfurt School of Finance & Management | 2022
+- **Professional Certificate in Web3 (DeFi, CBDCs & Tokenisation)** | University of Nicosia | Distinction, 2024–2025
+- **BSc (Hons) Logistics, Materials and Supply Chain Management** | Aston University | 2017–2019
 - **FdSc Logistics Management** | University of Lincoln
-- **Professional Award in Cyber Security & OSINT** | University of Abertay | 2023–2025
-- **Professional Certificate in Web3** | University of Nicosia | 2024–2025
 
 ### Professional Certifications
 - **ISO/IEC 27001, 42001, 27701 Lead Auditor** | Information Security, AI Management, Privacy
