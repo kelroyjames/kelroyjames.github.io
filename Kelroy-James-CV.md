@@ -232,5 +232,5 @@ Seeking senior roles in **supply chain assurance**, **GRC management**, **manage
 
 ---
 
-**Last Updated:** January 2026  
+**Last Updated:** September 2026  
 **Download:** Available at [kelroyjames.com](https://kelroyjames.com)
