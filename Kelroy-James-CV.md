@@ -56,84 +56,35 @@ Supply chain assurance and GRC specialist with 18 years of Defence logistics exp
 ### **Supply Chain Specialist / Logistics Inspector**  
 **Royal Navy, Various Postings** | 2008 – 2022
 
-**Fleet Diving Squadron Headquarters**
-- Led logistics support for multi-service diving operations across UK and international locations
-- Managed cross-functional stakeholder engagement (RN, Army, RAF, allied nations)
-- Applied defence procurement model to deliver critical equipment and supplies with zero failures
-- Praised by OIC as top logistics specialist across 12 years: "second to none" in stakeholder networking and task delivery
-
-**Engineering Support Group & Fleet Logistics**
-- Conducted fleet logistics inspections, stocktaking, and remedial action planning
-- Managed supersession processes, handover protocols, and custody transfer documentation
-- Founded junior rates development programme, adopted as standing programme; awarded RN Inclusivity Award for Innovation (2023)
-
-**Lean Maintenance Trial Leadership**
-- Led £250K cost-saving lean maintenance initiative through inventory optimization and process streamlining
-- Designed stock-holding reduction strategy while maintaining operational readiness
+- Led logistics support for multi-service diving operations (Fleet Diving Squadron HQ) across UK and international deployments; praised by OIC as top logistics specialist across 12 years, "second to none" in stakeholder networking and task delivery
+- Conducted fleet logistics inspections, stocktaking, and remedial action planning; founded a junior rates development programme later adopted as a standing programme and recognised with a Royal Navy Inclusivity Award (2023)
+- Led a £250K cost-saving lean maintenance initiative through inventory optimization and stock-holding reduction, while maintaining operational readiness
 
 ---
 
 ### **GIS Analyst & Infrastructure Planner**  
 **St Vincent Electricity Services (VINLEC)** | 1996 – 2008
 
-- Led GPS geo-tagging of national grid infrastructure (12,000+ assets across island)
-- Developed enterprise GIS mapping system; won Esri Special Achievement in GIS Award
-- Advanced from meter reader to planning specialist through self-directed capability development
-- Awarded Employee of the Year for operational excellence
+- Led GPS geo-tagging of national grid infrastructure (12,000+ assets), underpinning an enterprise GIS mapping system that won an Esri Special Achievement in GIS Award
+- Advanced from meter reader to planning specialist through self-directed capability development; awarded Employee of the Year for operational excellence
 
 ---
 
 ## EDUCATION & QUALIFICATIONS
 
 ### Academic Credentials
-- **MSc Supply Chain and Logistics Management (Defence Logistics Staff Course)** | University of Lincoln | In Progress (Distinction track), Apr 2025 – Apr 2027
+- **MSc Supply Chain and Logistics Management (Defence Logistics Staff Course)** | University of Lincoln | In Progress (Distinction track), Apr 2025 – Apr 2027 — accredited by CIPS, CILT and IEMA; route to MCIPS on completion
 - **MicroMasters, Supply Chain Management & Advanced Network Design** | MIT Center for Transportation & Logistics | Completed 2024
 - **Professional Award in Cyber Security & OSINT** | Abertay University | Distinction, 2023–2025
-- **MicroMasters, Predictive Analytics using Python** | University of Edinburgh | 2021–2022
-- **DeFi Talents Program, Blockchain Strategy & Tokenisation** | Frankfurt School of Finance & Management | 2022
-- **Professional Certificate in Web3 (DeFi, CBDCs & Tokenisation)** | University of Nicosia | Distinction, 2024–2025
-- **BSc (Hons) Logistics, Materials and Supply Chain Management** | Aston University | 2017–2019
-- **FdSc Logistics Management** | University of Lincoln
 
-### Professional Certifications
-
-**Governance, Risk & Compliance**
-- **ISO/IEC 27001:2022 Lead Auditor** | Mastermind
-- **ISO/IEC 42001:2023 Lead Auditor** | Mastermind
-- **ISO/IEC 27701:2025 Lead Auditor** | Mastermind
+### Key Certifications
+- **ISO/IEC 27001:2022 / 42001:2023 / 27701:2025 Lead Auditor** | Mastermind
 - **Fellow of Management Systems Auditing (FellowMSA)** | Mastermind
 - **CompTIA PenTest+ ce** | Valid to 2027
+- **Forward Program (Advanced Professional Development)** | McKinsey & Company, 2024
 - **Tech Risk and Compliance Management** | OneTrust, 2025
 
-**Executive & Professional Development**
-- **Forward Program (Advanced Professional Development)** | McKinsey & Company, 2024
-- **Cyber Security – Technology and Governance Specialization** | Royal Holloway, University of London, 2026
-- **AI and Digital Transformation in Government** | Saïd Business School, University of Oxford, 2026
-- **Information Assurance Analysis** | The Johns Hopkins University, 2026
-
-**Supply Chain, Finance & Data**
-- **Advanced Supply Chain Systems Planning and Network Design** | MITx MicroMasters, 2024
-- **AI in Financial Services: Foundations Through Future Trends** | Saïd Business School, University of Oxford, 2025
-- **Supply Chain Finance and Blockchain Technology Specialization** | New York Institute of Finance, 2025
-- **Applied Corporate Finance** | University of Cambridge, 2023
-- **MBA Essentials (Santander Scholarship)** | London School of Economics, 2025
-- **XM Cyber – Exposure Management Expert** | 2025
-- **Blockchain Applications in Fintech** | INSEAD, 2025
-- **AI and Blockchain for Business Leaders: Cardano Edition** | INSEAD, 2026
-
-**Technical & Tools**
-- **Google AI Professional Certificate** | Coursera, 2026
-- **Alteryx Designer Core Certified** | 2024
-- **Anaplan Certified Model Builder** | Valid to 2028
-- **Identity in the Digital Age (LFS178x)** | The Linux Foundation, 2022
-- **Developing Industrial Internet of Things** | University of Colorado Boulder, 2025
-- **Mastering Blockchain and Distributed Ledger Technologies** | CHAISE_EU, 2023
-
-**Foundational**
-- **Fundamentals of Predictive Project Management** | PMI, 2022
-- **Fundamentals of Agile Project Management** | PMI, 2022
-- **Level 3 Award in Education and Training (6502-31)** | City & Guilds, 2026
-- **Member, Institute of Leadership** | 2025–2026
+*Full certification record (28 credentials across GRC, finance, data and technical domains) and continuing education: [kelroyjames.com/skills-expertise.html](https://kelroyjames.com/skills-expertise.html)*
 
 ### Professional Development
 - **1SL Richmond Fellowship** | Royal Navy Strategic Studies Centre | 2025–2026
@@ -153,38 +104,25 @@ Supply chain assurance and GRC specialist with 18 years of Defence logistics exp
 
 ## TECHNICAL COMPETENCIES
 
-### Governance, Risk & Compliance Frameworks
-ISO/IEC 27001 (Information Security) | ISO/IEC 42001 (AI Management) | ISO/IEC 27701 (Privacy) | ISO 19011 (Audit) | COSO Internal Control | Three Lines Model | NATO AQAP 2110 | MoD JSP 886 (Defence Logistics Support Chain Manual) | Export Control (ITAR, EAR, UK Strategic Export Controls)
+**Governance, Risk & Compliance:** ISO/IEC 27001, 42001, 27701 | ISO 19011 (Audit) | COSO Internal Control | Three Lines Model | NATO AQAP 2110 | MoD JSP 886 | Export Control (ITAR, EAR, UK Strategic Export Controls)
 
-### Supply Chain & Logistics Systems
-Oracle JD Edwards | SAP Materials Management | Palantir Foundry | Microsoft Dynamics | SCOR Model (Plan, Source, Make, Deliver, Return) | S&OP (Sales & Operations Planning) | Inventory optimization | Demand forecasting | Vendor Managed Inventory (VMI)
+**Audit & Assurance:** Risk-based audit planning | Control testing | Root cause analysis | CAR management | Evidence sampling | Non-conformity investigation | Process maturity assessment
 
-### Data Analytics & Digital Tools
-Palantir Foundry | Power BI | Tableau | SQL | Python (pandas, NumPy) | R (statistical analysis) | ArcGIS | QGIS | Excel (Advanced: Power Query, Power Pivot, VBA)
+**Systems, Analytics & Delivery:** Palantir Foundry | Oracle JD Edwards | SAP Materials Management | Power BI | Tableau | SQL | Python | PRINCE2 | Agile
 
-### Dangerous Goods & Trade Compliance
-IMDG Code (Maritime) | ADR (Road) | IATA DGR (Air) | UN Recommendations on Transport of Dangerous Goods | Commodity classification | HS codes | Export licensing | Dual-use goods assessment
-
-### Audit & Assurance Methodologies
-Risk-based audit planning | Control testing | Root cause analysis | Corrective Action Request (CAR) management | Evidence sampling | Non-conformity investigation | Management system surveillance | Process maturity assessment
-
-### Project & Change Management
-PRINCE2 principles | Agile methodologies | Stakeholder analysis | Change impact assessment | Business case development | Lessons learned capture | Level 3 Coaching & Mentoring (course completed)
+**Dangerous Goods & Trade Compliance:** IMDG Code | ADR | IATA DGR | Commodity classification | HS codes | Export licensing | Dual-use goods assessment
 
 ---
 
 ## THOUGHT LEADERSHIP & PUBLICATIONS
 
-**Portfolio Website:** [kelroyjames.com](https://kelroyjames.com)
+**Portfolio Website:** [kelroyjames.com](https://kelroyjames.com) — full case studies with quantified outcomes, two published open-source frameworks, and articles in preparation
 
 ### Frameworks & Reference Material (Published)
 - **OSINT Supplier Verification Framework** | Seven-stage open-source verification sequence for third-party risk assessment
 - **Same Control, Two Vocabularies** | Military-to-civilian skills translation mapped against ISO 27001, ISO 19011, COSO, Three Lines Model
 
-### Articles in Preparation
-- **Recognition Before Retraining** | Defence skills taxonomy and veteran employability (Skills series 1/2)
-- **Talent Should Flow Both Ways** | Skills Passport pilot and Defence Industrial Strategy alignment (Skills series 2/2)
-- **The Convergence of Cyber-GRC and Physical Logistics** | Export control gaps between supply chain and IT teams (Assurance series)
+*Also in preparation: a two-part series on defence skills taxonomy and veteran employability, and an assurance piece on export control gaps between supply chain and IT teams — see site for details.*
 
 ---
 
@@ -196,41 +134,14 @@ PRINCE2 principles | Agile methodologies | Stakeholder analysis | Change impact 
 
 ---
 
-## KEY DIFFERENTIATORS
+## CAREER OBJECTIVES & MEMBERSHIPS
 
-✅ **Evidence-Based Results:** £2.7M+ quantified business impact across financial control, lean operations, and compliance recovery
+Seeking senior roles in **supply chain assurance**, **GRC management**, **management consulting**, or **operational risk** where systematic controls, risk-based thinking, and the discipline of testing the ledger (not reproducing it) create measurable business value. **Available from April 2028 (resettlement).**
 
-✅ **Systematic Problem-Solving:** Designed transferable control artefacts adopted at fleet level, not person-dependent fixes
-
-✅ **Cross-Domain Expertise:** Unique combination of physical supply chain operations, cyber-GRC frameworks, and data analytics
-
-✅ **Military-Civilian Translation:** 18 years Defence experience with formal civilian qualifications (MSc, MITx, ISO Lead Auditor)
-
-✅ **Digital Transformation:** Hands-on Palantir Foundry development, cloud architecture (AWS), and data engineering
-
-✅ **Third-Party Validated:** Professional testimonials from defence industry management confirm operational excellence
-
----
-
-## CAREER OBJECTIVES
-
-Seeking senior roles in **supply chain assurance**, **GRC management**, **management consulting**, or **operational risk** where systematic controls, risk-based thinking, and the discipline of testing the ledger (not reproducing it) create measurable business value.
-
-**Available from April 2028 (resettlement)**
-
----
-
-## PROFESSIONAL MEMBERSHIPS
-
-- Fellow of Management Systems Auditing (FellowMSA)
-- AWS Community Builder (Data & Analytics)
-- CompTIA Professional Member
+Fellow of Management Systems Auditing (FellowMSA) | AWS Community Builder (Data & Analytics) | CompTIA Professional Member
 
 ---
 
 *Views expressed in portfolio and publications are personal and do not represent the position of the Royal Navy, Ministry of Defence, or any organization with which I work.*
 
----
-
-**Last Updated:** September 2026  
-**Download:** Available at [kelroyjames.com](https://kelroyjames.com)
+**Last Updated:** September 2026 | **Portfolio:** [kelroyjames.com](https://kelroyjames.com)
