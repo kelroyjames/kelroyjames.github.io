@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expeditionary Logistics Under Deadline Pressure — Kelroy James</title>
+  <meta name="description" content="Turning round a rejected consignment in three days for a £5M FASGW trial, and recovering critical equipment mid-exercise in Norway with three hours to spare.">
+  <meta property="og:title" content="Expeditionary Logistics Under Deadline Pressure">
+  <meta property="og:description" content="Turning round a rejected consignment in three days for a £5M FASGW trial, and recovering critical equipment mid-exercise in Norway with three hours to spare.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kelroyjames.github.io/case-study-expeditionary-logistics.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --ink:#131c28;--ink-2:#475569;--muted:#64748b;--surface:#ffffff;--bg:#f8fafc;
+    --rule:#e2e8f0;--brass:#8A6A2F;--brass-soft:#F2ECDF;--shadow:0 1px 3px rgba(19,28,40,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Public Sans",sans-serif;background:var(--bg);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+
+  .site-header{background:var(--surface);border-bottom:1px solid var(--rule);padding:18px 0;position:sticky;top:0;z-index:100}
+  .site-header .wrap{display:flex;justify-content:space-between;align-items:center}
+  .site-header .logo{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
+  .site-header nav{display:flex;gap:28px}
+  .site-header a{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+  .site-header a:hover{color:var(--brass)}
+
+  .cs-hero{background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);color:white;padding:80px 0 60px}
+  .cs-breadcrumb{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px;opacity:.8}
+  .cs-breadcrumb a{color:white;text-decoration:none}
+  .cs-breadcrumb a:hover{text-decoration:underline}
+  .cs-title{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:18px;max-width:22ch}
+  .cs-subtitle{font-size:1.15rem;opacity:.9;margin-bottom:32px;max-width:54ch;line-height:1.5}
+  .cs-meta{display:flex;gap:40px;flex-wrap:wrap}
+  .cs-meta-item{display:flex;flex-direction:column;gap:4px}
+  .cs-meta-label{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
+  .cs-meta-value{font-size:15px;font-weight:600}
+
+  .impact-banner{background:var(--brass-soft);border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);padding:40px 0}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+  .impact-item{text-align:center}
+  .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
+  .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+
+  .cs-content{background:var(--surface);padding:60px 0}
+  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .cs-toc{position:sticky;top:100px;height:fit-content}
+  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc ul{list-style:none}
+  .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
+  .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
+
+  .cs-section{margin-bottom:48px}
+  .cs-section h2{font-family:Spectral,Georgia,serif;font-size:1.8rem;font-weight:700;margin-bottom:16px;color:var(--ink)}
+  .cs-section h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:32px 0 12px;color:var(--ink)}
+  .cs-section p{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:16px;max-width:68ch}
+  .cs-section ul{margin:16px 0 16px 20px}
+  .cs-section li{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:8px}
+  .cs-section strong{color:var(--ink);font-weight:600}
+  .cs-section a{color:var(--brass)}
+
+  .highlight-box{background:var(--brass-soft);border-left:4px solid var(--brass);padding:24px;margin:28px 0;border-radius:4px}
+  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin-bottom:10px}
+  .highlight-box p{margin-bottom:0}
+
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:20px 0}
+  .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:13px;font-weight:500;border-radius:4px;box-shadow:var(--shadow)}
+
+  .outcome-list{list-style:none;margin:20px 0}
+  .outcome-list li{padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--rule)}
+  .outcome-list li:last-child{border-bottom:none}
+  .outcome-list li:before{content:"✓";position:absolute;left:0;top:12px;color:var(--brass);font-size:1.3rem;font-weight:bold}
+
+  .cs-footer{background:var(--surface);border-top:1px solid var(--rule);padding:40px 0}
+  .cs-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  .cs-footer a{color:var(--brass);text-decoration:none;font-weight:600}
+  .cs-footer a:hover{text-decoration:underline}
+
+  @media(max-width:640px){
+    .cs-hero{padding:50px 0 40px}
+    .impact-grid{grid-template-columns:1fr 1fr}
+    .impact-number{font-size:2rem}
+  }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo">Kelroy James</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#work">Work</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/#background">Background</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="cs-breadcrumb">
+      <a href="/">Home</a> / <a href="/#work">Case Studies</a> / Expeditionary Logistics
+    </div>
+    <h1 class="cs-title">Expeditionary Logistics Under Deadline Pressure</h1>
+    <p class="cs-subtitle">Turning round a rejected consignment in three days to keep a £5M weapons trial on schedule, then recovering critical equipment mid-exercise in Norway with three hours to spare.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Role</span>
+        <span class="cs-meta-value">Stores Office Manager (Petty Officer)</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Timeline</span>
+        <span class="cs-meta-value">2022 – 2024</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Organisation</span>
+        <span class="cs-meta-value">Wildcat Maritime Force, Royal Navy</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Outcome</span>
+        <span class="cs-meta-value">Zero Schedule Slippage</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact-banner">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number">3 Days</div>
+        <div class="impact-label">Rejected Consignment Turned Around</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">7</div>
+        <div class="impact-label">Containers Moved for Exercise Tamber Shield</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">3 Hrs</div>
+        <div class="impact-label">Margin to Spare on Emergency Recovery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-content">
+  <div class="wrap">
+    <div class="content-grid">
+
+      <aside class="cs-toc">
+        <h4>Contents</h4>
+        <ul>
+          <li><a href="#challenge">The Challenge</a></li>
+          <li><a href="#gibraltar">A Rejected Consignment</a></li>
+          <li><a href="#tambershield">Seven Containers to Norway</a></li>
+          <li><a href="#context">Why This Mattered</a></li>
+          <li><a href="#outcomes">Outcomes</a></li>
+          <li><a href="#lessons">Lessons Learned</a></li>
+        </ul>
+      </aside>
+
+      <div>
+
+        <div class="cs-section" id="challenge">
+          <h2>The Challenge</h2>
+          <p>Two Wildcat Maritime Force deployments, a year apart, shared the same underlying problem. Programme-critical trials and exercises do not wait for logistics to catch up. In both cases a late-stage complication threatened equipment that had to be in a specific place on a specific date, and in both cases the fix had to be found in days, then hours, not weeks.</p>
+        </div>
+
+        <div class="cs-section" id="gibraltar">
+          <h2>A Rejected Consignment</h2>
+          <p>On joining Wildcat Maritime Force, I took over responsibility for the logistics movements running from the UK to a forward support arrangement in Gibraltar, supporting the Ship Helicopter Operating Limit (SHOL) trial for the Future Anti-Surface Guided Weapon (FASGW) capability — a trial later recognised at programme level as a critically important enterprise success, and one I understood to be valued at around <strong>£5 million</strong>.</p>
+          <p>The team had just had a consignment rejected. With the next flight slot fixed and the trial's flying programme unable to absorb a slip, I had three days to turn the inventory and the paperwork around, correct what had caused the rejection, and get the consignment cleared in time to make that flight. Once in post, I coordinated the movement through to a successful conclusion, and the Gibraltar support arrangement went on to sustain the trial for its duration.</p>
+
+          <div class="highlight-box">
+            <h4>The Real Constraint</h4>
+            <p>A rejected consignment doesn't get a second attempt on the same schedule. The trial's flying programme was fixed long before the equipment was; the only variable that could still move was how fast the paperwork and the physical stock were made to agree.</p>
+          </div>
+        </div>
+
+        <div class="cs-section" id="tambershield">
+          <h2>Seven Containers to Norway</h2>
+          <p>Exercise Tamber Shield is an annual, UK-led exercise run under the Joint Expeditionary Force and hosted by Norway, built around Royal Navy Wildcat helicopters working alongside Norwegian patrol vessels and warships in the fjords near Bergen. For Wildcat Maritime Force, taking part meant packing and moving seven containers of equipment across borders to support the detachment.</p>
+          <p>I coordinated the packing consignment and the cross-border movement of all seven containers, then deployed to theatre myself to oversee the return leg. While there, a critical piece of equipment was pulled from the aircraft to meet a more urgent requirement from a front-line unit — a reasonable call operationally, but one that left the detachment without kit it needed to complete the exercise and return on schedule.</p>
+          <p>I raised the demand, and coordinated the issue, despatch and customs clearance of the replacement equipment against the deadline of the return flight. Both the aircraft's return and the final container delivery closed with three hours to spare.</p>
+
+          <div class="highlight-box">
+            <h4>Recovering Mid-Exercise, Not After It</h4>
+            <p>Losing a critical item mid-exercise is a different problem from losing one before deploying. There's no lead time left to absorb it, and the fix has to run in parallel with everything else already happening — the demand, the clearance and the delivery all had to land inside the same closing window as the return flight itself.</p>
+          </div>
+        </div>
+
+        <div class="cs-section" id="context">
+          <h2>Why This Mattered</h2>
+          <p>Both movements sat directly upstream of trials and exercises that could not simply wait:</p>
+          <ul>
+            <li><strong>Trial schedules are fixed months in advance</strong> – Ship and range time, aircraft availability and multiple duty-holding chains are booked well ahead; a logistics delay doesn't just slip a date, it can force a trial to be re-sought from scratch</li>
+            <li><strong>A single aircraft carries disproportionate risk</strong> – Both the SHOL trial and the Norway detachment ran on a small number of airframes, so equipment gaps translate directly into lost flying hours that are expensive and slow to recover</li>
+            <li><strong>Multinational exercises run on trust</strong> – A UK detachment that can't sustain its own equipment supply reflects on the wider Joint Expeditionary Force partnership, not just the unit</li>
+          </ul>
+          <p>In both cases, the equipment problem was really a schedule problem wearing a logistics disguise, and the fix had to be measured in the same units as the deadline: days, then hours.</p>
+        </div>
+
+        <div class="cs-section" id="outcomes">
+          <h2>Outcomes</h2>
+
+          <ul class="outcome-list">
+            <li><strong>Gibraltar Consignment Cleared in Three Days</strong> – Rejected consignment corrected and turned around in time to make the fixed flight slot, sustaining the SHOL trial's Gibraltar support arrangement</li>
+            <li><strong>FASGW SHOL Trial Delivered</strong> – Recognised at programme level as an enterprise success, generating the data (922 deck landings, 87 flying hours, 19 flying days on a single aircraft) needed to clear the capability</li>
+            <li><strong>Seven Containers Moved Cross-Border for Exercise Tamber Shield</strong> – Packing, customs and movement coordinated for the full consignment supporting the UK Wildcat detachment to Norway</li>
+            <li><strong>Critical Equipment Recovered Mid-Exercise</strong> – Replacement demand, issue, despatch and clearance coordinated and closed with three hours to spare against the return flight and container delivery deadlines</li>
+          </ul>
+
+          <div class="tools-grid">
+            <div class="tool-tag">Movements Coordination</div>
+            <div class="tool-tag">Customs Clearance</div>
+            <div class="tool-tag">Demand Management</div>
+            <div class="tool-tag">Cross-Border Logistics</div>
+            <div class="tool-tag">Multi-Agency Liaison</div>
+            <div class="tool-tag">Deadline Management</div>
+          </div>
+        </div>
+
+        <div class="cs-section" id="lessons">
+          <h2>Lessons Learned</h2>
+
+          <h3>A Rejection Is a Deadline, Not Just a Setback</h3>
+          <p>When a consignment is rejected against a fixed flight or trial date, the response time is set by the schedule, not by how much correction is actually needed. Three days was what the flight allowed, so three days was what the fix had to take.</p>
+
+          <h3>Plan for the Equipment to Move Again After It Arrives</h3>
+          <p>Equipment delivered for one purpose can be reallocated to a more urgent one mid-exercise, for entirely reasonable operational reasons. A movements plan that only accounts for the outbound leg misses exactly the kind of recovery that ends up mattering most.</p>
+
+          <h3>Being in Theatre Changes What You Can Fix</h3>
+          <p>Coordinating an outbound movement from the UK and coordinating a recovery from inside the exercise are different jobs. Deploying to oversee the return leg meant the demand, issue and clearance could be run in parallel by one person holding the whole picture, rather than handed across a time zone at the point it mattered most.</p>
+
+          <h3>Time to Spare Is a Design Choice, Not Luck</h3>
+          <p>Three hours of margin on a return flight and a container delivery isn't an accident. It's what's left over when every step in a recovery chain — demand, issue, despatch, clearance — is run in parallel rather than in sequence.</p>
+
+          <p style="font-size:13px;color:var(--muted);margin-top:32px">Exercise Tamber Shield is a publicly documented Joint Expeditionary Force exercise; see <a href="https://www.joint-forces.com/exercise-news/63868-tamber-shield-exercise-in-the-norwegian-fjords" target="_blank" rel="noopener">Joint Forces News</a> and <a href="https://jefnations.org/2026/05/27/drones-give-royal-navy-helicopters-the-edge-in-fjord-exercise-under-the-jef-banner/" target="_blank" rel="noopener">JEF Nations</a> for public reporting on the exercise. Programme and trial details drawn from official appraisal records and correspondence are described here in general terms only; no internal documents, other individuals, or classified detail are reproduced.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-footer">
+  <div class="wrap">
+    <div>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:6px">Next Case Study</p>
+      <a href="/case-study-type45-turnaround.html">Type 45 Destroyer Account Turnaround →</a>
+    </div>
+    <a href="/">← Back to Home</a>
+  </div>
+</section>
+
+</body>
+</html>
