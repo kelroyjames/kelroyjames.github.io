@@ -83,9 +83,44 @@ Supply chain assurance and GRC specialist with 18 years of Defence logistics exp
 - **FdSc Logistics Management** | University of Lincoln
 
 ### Professional Certifications
-- **ISO/IEC 27001, 42001, 27701 Lead Auditor** | Information Security, AI Management, Privacy
-- **Fellow of Management Systems Auditing (FellowMSA)** | Professional recognition in audit practice
-- **CompTIA PenTest+** | Valid to 2027 | Offensive security and vulnerability assessment
+
+**Governance, Risk & Compliance**
+- **ISO/IEC 27001:2022 Lead Auditor** | Mastermind
+- **ISO/IEC 42001:2023 Lead Auditor** | Mastermind
+- **ISO/IEC 27701:2025 Lead Auditor** | Mastermind
+- **Fellow of Management Systems Auditing (FellowMSA)** | Mastermind
+- **CompTIA PenTest+ ce** | Valid to 2027
+- **Tech Risk and Compliance Management** | OneTrust, 2025
+
+**Executive & Professional Development**
+- **Forward Program (Advanced Professional Development)** | McKinsey & Company, 2024
+- **Cyber Security – Technology and Governance Specialization** | Royal Holloway, University of London, 2026
+- **AI and Digital Transformation in Government** | Saïd Business School, University of Oxford, 2026
+- **Information Assurance Analysis** | The Johns Hopkins University, 2026
+
+**Supply Chain, Finance & Data**
+- **Advanced Supply Chain Systems Planning and Network Design** | MITx MicroMasters, 2024
+- **AI in Financial Services: Foundations Through Future Trends** | Saïd Business School, University of Oxford, 2025
+- **Supply Chain Finance and Blockchain Technology Specialization** | New York Institute of Finance, 2025
+- **Applied Corporate Finance** | University of Cambridge, 2023
+- **MBA Essentials (Santander Scholarship)** | London School of Economics, 2025
+- **XM Cyber – Exposure Management Expert** | 2025
+- **Blockchain Applications in Fintech** | INSEAD, 2025
+- **AI and Blockchain for Business Leaders: Cardano Edition** | INSEAD, 2026
+
+**Technical & Tools**
+- **Google AI Professional Certificate** | Coursera, 2026
+- **Alteryx Designer Core Certified** | 2024
+- **Anaplan Certified Model Builder** | Valid to 2028
+- **Identity in the Digital Age (LFS178x)** | The Linux Foundation, 2022
+- **Developing Industrial Internet of Things** | University of Colorado Boulder, 2025
+- **Mastering Blockchain and Distributed Ledger Technologies** | CHAISE_EU, 2023
+
+**Foundational**
+- **Fundamentals of Predictive Project Management** | PMI, 2022
+- **Fundamentals of Agile Project Management** | PMI, 2022
+- **Level 3 Award in Education and Training (6502-31)** | City & Guilds, 2026
+- **Member, Institute of Leadership** | 2025–2026
 
 ### Professional Development
 - **1SL Richmond Fellowship** | Royal Navy Strategic Studies Centre | 2025–2026
