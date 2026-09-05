@@ -131,15 +131,19 @@
   section.list{padding:56px 0}
   .essays{display:flex;flex-direction:column}
   .essay{
-    display:grid;grid-template-columns:1fr;gap:8px;
+    display:grid;grid-template-columns:1fr;gap:16px;
     padding:32px 0;border-bottom:1px solid var(--rule-soft);
   }
   @media(min-width:760px){
-    .essay{grid-template-columns:150px minmax(0,1fr);gap:32px}
+    .essay{grid-template-columns:160px minmax(0,1fr);gap:32px;align-items:start}
+  }
+  .essay .thumb{
+    width:100%;height:110px;object-fit:cover;
+    border:1px solid var(--rule);display:block;background:var(--surface-2);
   }
   .essay .meta{
     font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
-    text-transform:uppercase;color:var(--muted);
+    text-transform:uppercase;color:var(--muted);margin-bottom:8px;
   }
   .essay .meta .status{color:var(--brass)}
   .essay h3{font-family:Spectral,Georgia,serif;font-size:1.5rem;font-weight:700;margin:8px 0 8px;line-height:1.25}
@@ -197,8 +201,9 @@
     <div class="essays">
 
       <div class="essay">
-        <div class="meta"><span class="status">Published</span><br>Trade Finance</div>
+        <img class="thumb" src="/images/articles/trade-finance-header.jpg" alt="">
         <div>
+          <div class="meta"><span class="status">Published</span> · Trade Finance</div>
           <h3><a href="/the-rails-were-rebuilt-and-the-gap-remained.html">The Rails Were Rebuilt, and the Gap Remained</a></h3>
           <p>Three years after arguing that decentralised finance would widen access to trade finance, what actually got built, and what the data now shows.</p>
           <a class="go" href="/the-rails-were-rebuilt-and-the-gap-remained.html">Read the essay →</a>
@@ -206,8 +211,9 @@
       </div>
 
       <div class="essay">
-        <div class="meta"><span class="status">Published</span><br>Assurance · Supply Chain GRC</div>
+        <img class="thumb" src="/images/articles/export-control-supply-chain.png" alt="">
         <div>
+          <div class="meta"><span class="status">Published</span> · Assurance · Supply Chain GRC</div>
           <h3><a href="/convergence-of-cyber-grc-and-physical-logistics.html">The Convergence of Cyber-GRC and Physical Logistics</a></h3>
           <p>Why siloed supply chain assurance creates blind spots, and what a recent export control settlement revealed about where they form.</p>
           <a class="go" href="/convergence-of-cyber-grc-and-physical-logistics.html">Read the essay →</a>
@@ -215,8 +221,9 @@
       </div>
 
       <div class="essay">
-        <div class="meta"><span class="status">Published</span><br>Assurance · Enterprise Risk</div>
+        <img class="thumb" src="/images/articles/erm-header.jpg" alt="">
         <div>
+          <div class="meta"><span class="status">Published</span> · Assurance · Enterprise Risk</div>
           <h3><a href="/the-enterprise-risk-management-we-already-do.html">The Enterprise Risk Management We Already Do</a></h3>
           <p>Corporate risk management is being rewired around decisions, dependencies and judgement. Operational institutions have worked that way for decades, under other names.</p>
           <a class="go" href="/the-enterprise-risk-management-we-already-do.html">Read the essay →</a>
@@ -224,8 +231,9 @@
       </div>
 
       <div class="essay">
-        <div class="meta"><span class="status">Published</span><br>Skills Framework · 1 of 2</div>
+        <img class="thumb" src="/images/articles/defence-skills-transition.jpg" alt="">
         <div>
+          <div class="meta"><span class="status">Published</span> · Skills Framework · 1 of 2</div>
           <h3><a href="/recognition-before-retraining.html">Recognition Before Retraining</a></h3>
           <p>Why the Pan-Defence Skills Framework is the missing piece in service leaver transition.</p>
           <a class="go" href="/recognition-before-retraining.html">Read the essay →</a>
@@ -233,8 +241,9 @@
       </div>
 
       <div class="essay">
-        <div class="meta"><span class="status">Published</span><br>Skills Framework · 2 of 2</div>
+        <img class="thumb" src="/images/articles/defence-industry-talent.webp" alt="">
         <div>
+          <div class="meta"><span class="status">Published</span> · Skills Framework · 2 of 2</div>
           <h3><a href="/talent-should-flow-both-ways.html">Talent Should Flow Both Ways</a></h3>
           <p>The Pan-Defence Skills Framework as a Defence Industrial Strategy tool.</p>
           <a class="go" href="/talent-should-flow-both-ways.html">Read the essay →</a>
