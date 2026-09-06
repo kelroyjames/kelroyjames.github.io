@@ -74,6 +74,6 @@ Full certification record and continuing education: kelroyjames.com/skills-exper
 
 Portfolio with full case studies, published frameworks and case-study evidence for every metric above: **kelroyjames.com**
 
-Available now for advisory conversations, NED-style engagements, and Reserve or fixed-term contract work. Available for full-time roles from April 2028 (resettlement).
+Available now for advisory conversations and professional networking while serving. Available for full-time roles from April 2028 (resettlement).
 
 **Last Updated:** September 2026
