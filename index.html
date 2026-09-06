@@ -266,6 +266,16 @@
   .award-title{font-size:14.5px;font-weight:600;color:var(--ink);margin:0 0 3px}
   .award-org{font-size:12.5px;color:var(--muted);margin:0}
 
+  /* ============ what i do ============ */
+  .capability-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:28px}
+  @media(min-width:700px){.capability-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1100px){.capability-grid{grid-template-columns:repeat(4,1fr)}}
+  .capability-block{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--brass);padding:20px 22px}
+  .capability-block h4{font-family:Spectral,Georgia,serif;font-size:1.02rem;margin:0 0 12px;font-weight:600;color:var(--ink)}
+  .capability-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+  .capability-list li{font-size:13.5px;color:var(--ink-2);padding-left:14px;position:relative}
+  .capability-list li::before{content:"—";position:absolute;left:0;color:var(--brass)}
+
   /* ============ thesis band ============ */
   .band{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
   .band .wrap{padding:60px 26px}
@@ -322,6 +332,15 @@
   .contact .wrap{padding:60px 26px}
   .contact h2{font-family:Spectral,Georgia,serif;font-size:1.72rem;margin:0 0 14px;font-weight:700}
   .contact p{max-width:58ch;color:var(--ink-2);margin:0 0 24px}
+  .contact-paths{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:28px}
+  @media(min-width:700px){.contact-paths{grid-template-columns:repeat(2,1fr)}}
+  .contact-path{
+    display:block;padding:14px 18px;background:var(--surface);border:1px solid var(--rule);
+    color:var(--ink);text-decoration:none;font-size:14px;
+  }
+  .contact-path b{color:var(--ink);font-weight:600}
+  @media(prefers-reduced-motion:no-preference){.contact-path{transition:border-color .16s ease}}
+  .contact-path:hover{border-color:var(--brass)}
   .btns{display:flex;flex-wrap:wrap;gap:12px}
   .btn{
     display:inline-block;padding:11px 22px;text-decoration:none;
@@ -346,6 +365,7 @@
       <li><a class="lnk" href="#work">Work</a></li>
       <li><a class="lnk" href="/writing.html">Writing</a></li>
       <li><a class="lnk" href="#background">Background</a></li>
+      <li><a class="lnk" href="/for-recruiters.html">For Recruiters</a></li>
       <li><a class="lnk cta" href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -358,6 +378,7 @@
       <h1>When records don't match reality, I build the systems that close the gap.</h1>
       <p class="lede">Eighteen years operating inside mandated assurance frameworks, high-consequence transport regimes and internal control cycles.</p>
       <p class="sub">Across Defence, maritime aviation and critical infrastructure, that discipline is called supply chain assurance, enterprise risk, and governance, risk and compliance. The question is always the same: Does the record match the reality, and how would you know if it stopped?</p>
+      <p class="sub" style="margin-top:14px"><strong>In plain terms:</strong> I'm an experienced defence assurance and supply chain professional moving into civilian supply chain risk, third-party assurance and GRC roles. I design controls, investigate discrepancies, improve compliance, and give decision-makers confidence that records reflect reality.</p>
     </div>
     <div class="hero-visual">
       <div class="headshot-placeholder">
@@ -383,7 +404,7 @@
     <div class="metrics">
       <div class="metric">
         <div class="metric-value">£2.4M</div>
-        <div class="metric-label">Misallocated Funds Identified</div>
+        <div class="metric-label">Misallocated Expenditure Identified Through Spending-Pattern Analysis</div>
       </div>
       <div class="metric">
         <div class="metric-value">£250K</div>
@@ -422,6 +443,58 @@
   </div>
 </section>
 
+<section id="what-i-do">
+  <div class="wrap">
+    <div class="sec-head"><h2>What I Do</h2><span class="note">Scan the capabilities, then read the evidence</span></div>
+    <p class="intro-p">The case studies below show this in context. This is the same capability set, scannable in one pass.</p>
+    <div class="capability-grid">
+      <div class="capability-block">
+        <h4>Assurance &amp; Controls</h4>
+        <ul class="capability-list">
+          <li>Control design</li>
+          <li>Control testing</li>
+          <li>Audit remediation</li>
+          <li>Compliance recovery</li>
+          <li>Three Lines Model</li>
+          <li>Root-cause analysis</li>
+        </ul>
+      </div>
+      <div class="capability-block">
+        <h4>Supply Chain &amp; Assets</h4>
+        <ul class="capability-list">
+          <li>Supplier assurance</li>
+          <li>Inventory governance</li>
+          <li>Asset accountability</li>
+          <li>Stock accuracy</li>
+          <li>Loss investigation</li>
+          <li>Supply chain resilience</li>
+        </ul>
+      </div>
+      <div class="capability-block">
+        <h4>Risk &amp; Governance</h4>
+        <ul class="capability-list">
+          <li>Third-party risk</li>
+          <li>Operational risk</li>
+          <li>Financial control</li>
+          <li>Export &amp; customs compliance</li>
+          <li>Governance frameworks</li>
+          <li>Executive assurance reporting</li>
+        </ul>
+      </div>
+      <div class="capability-block">
+        <h4>Delivery &amp; Leadership</h4>
+        <ul class="capability-list">
+          <li>Stakeholder management</li>
+          <li>Cross-functional coordination</li>
+          <li>Team leadership</li>
+          <li>Change implementation</li>
+          <li>Operational delivery under deadline pressure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="work">
   <div class="wrap">
     <div class="sec-head"><h2>Work</h2><span class="note">What actually happened</span></div>
@@ -434,7 +507,7 @@
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Process Improvement</span>
-          <h3>Type 45 Destroyer Account Turnaround</h3>
+          <h3>Restoring Control to a Failing Defence Supply Account</h3>
           <p>Took over an unsatisfactory supply chain account and designed the first-line controls that brought it to full compliance. Three control artefacts adopted. Transferable process improvement, not person-dependent fixes.</p>
           <span class="go">Read the case study →</span>
         </div>
@@ -444,7 +517,7 @@
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Financial Control</span>
-          <h3>£2.4M Financial Control Recovery</h3>
+          <h3>Recovering £2.4M Through Financial-Control Analysis</h3>
           <p>Identified £2.4M in misallocated expenditure through systematic analysis of spending patterns. Root cause analysis led to proposed Enterprise-wide policy instruction to prevent recurrence. Enterprise-level systemic improvement.</p>
           <span class="go">Read the case study →</span>
         </div>
@@ -454,7 +527,7 @@
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Digital Transformation</span>
-          <h3>Palantir Foundry Inventory Application</h3>
+          <h3>Turning Inventory Data into Fleet-Wide Operational Visibility</h3>
           <p>Co-developed fleet-wide inventory interrogation application with prime contractor and DE&S teams. Real-time visibility, ground-truth validation protocols, scoped for enterprise rollout. Digital transformation at scale.</p>
           <span class="go">Read the case study →</span>
         </div>
@@ -464,7 +537,7 @@
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Enterprise GRC</span>
-          <h3>Naval Assurance Modernisation & Enterprise GRC Framework</h3>
+          <h3>Modernising Assurance Across Three Inspection Cycles</h3>
           <p>Re-engineered deck-plate assurance across three Fleet Logistics Inspections through integrated ISO governance, Lean Six Sigma, and Three Lines of Defence architecture. £2.4M misallocation identified, full compliance achieved, departmental policy adopted.</p>
           <span class="go">Read the case study →</span>
         </div>
@@ -474,7 +547,7 @@
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Project Management</span>
-          <h3>Building an Organic Logistics Movement Capability</h3>
+          <h3>Building a Compliant Movement Capability from the Ground Up</h3>
           <p>Delivered greenfield movement capability from governance to operational validation using PRINCE2 methodology. Designed customs compliance SOPs integrating HMRC, JSP 800, and JSP 916. Zero financial liability exposure across multinational deployments.</p>
           <span class="go">Read the case study →</span>
         </div>
@@ -484,7 +557,7 @@
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Asset Accountability</span>
-          <h3>Force Mobile Equipment Consolidation</h3>
+          <h3>Closing Asset-Accountability Gaps Across a Deployed Force</h3>
           <p>Consolidated dispersed ground support equipment into a single accountable stock holding site following a Tier 3 audit recommendation, and closed fourteen major loss investigations along the way.</p>
           <span class="go">Read the case study →</span>
         </div>
@@ -494,7 +567,7 @@
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Expeditionary Logistics</span>
-          <h3>Expeditionary Logistics Under Deadline Pressure</h3>
+          <h3>Protecting a £5M Trial from a Logistics Failure</h3>
           <p>Turned round a rejected consignment in three days to keep a £5M weapons trial on schedule, then coordinated a seven-container cross-border movement and recovered critical equipment mid-exercise with three hours to spare.</p>
           <span class="go">Read the case study →</span>
         </div>
@@ -693,7 +766,7 @@
 <div class="band" id="target-roles">
   <div class="wrap">
     <p class="thesis">Aiming at three places where this experience needs no translation.</p>
-    <p class="lead">The case studies above map most directly onto three tracks: risk consulting at firms with a structured route for military experience, supply chain assurance inside the primes whose problems these controls were built to solve, and operational risk at banks running the same kind of structured veteran hiring.</p>
+    <p class="lead">I'm transitioning into civilian roles in supply chain assurance, third-party risk, GRC consulting and operational controls. My experience combines physical asset accountability, financial-control recovery, supplier verification, audit remediation and high-consequence logistics — and it maps most directly onto three tracks.</p>
     <div class="band-cols">
       <div>
         <h4>Professional Services</h4>
@@ -719,10 +792,17 @@
   <div class="wrap">
     <h2>Get in touch</h2>
     <p>I'm aiming at third-party risk, GRC consulting and internal audit roles at firms like KPMG, PwC and Deloitte; supply chain assurance, export control or inventory governance roles at defence primes such as BAE Systems, Babcock, Leonardo and Leidos; and operational or third-party risk roles at banks such as Barclays, HSBC and Lloyds. If you're hiring for something adjacent, or just work in that world, I'd rather learn from you than pitch at you.</p>
+    <div class="contact-paths">
+      <a class="contact-path" href="mailto:kelroydbjames@gmail.com?subject=Recruiter%20-%20future%20candidate%20profile"><b>I'm a recruiter</b> — let's discuss a future candidate profile</a>
+      <a class="contact-path" href="mailto:kelroydbjames@gmail.com?subject=Sector%20insight"><b>I work in the sector</b> — I'd like to share market insight</a>
+      <a class="contact-path" href="mailto:kelroydbjames@gmail.com?subject=Hiring%20manager%20-%20relevant%20experience"><b>I'm a hiring manager</b> — let's discuss relevant experience</a>
+      <a class="contact-path" href="mailto:kelroydbjames@gmail.com?subject=Service%20leaver%20-%20skills%20translation"><b>I'm a service leaver</b> — let's talk skills translation</a>
+    </div>
     <div class="btns">
       <a class="btn primary" href="https://www.linkedin.com/in/kelroy-james">LinkedIn</a>
       <a class="btn" href="mailto:kelroydbjames@gmail.com">Email</a>
       <a class="btn" href="/Kelroy-James-CV.pdf" download>Download CV</a>
+      <a class="btn" href="/for-recruiters.html">One-Page Profile</a>
     </div>
   </div>
 </div>
