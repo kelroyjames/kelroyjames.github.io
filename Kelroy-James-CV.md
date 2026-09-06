@@ -8,7 +8,7 @@ Email: kelroydbjames@gmail.com | LinkedIn: linkedin.com/in/kelroy-james | Portfo
 
 ## PROFESSIONAL SUMMARY
 
-GRC and supply chain assurance specialist with 18 years of Defence logistics experience, targeting third-party risk, GRC consulting and internal audit roles at professional services firms, and supply chain assurance, export control or trade compliance roles at defence primes. Track record of closing the gap between records and physical reality through systematic controls, risk-based auditing and enterprise-level process improvement, with £2.7M+ in quantified business impact.
+GRC and supply chain assurance specialist with 18 years of Defence logistics experience, targeting third-party risk, GRC consulting and internal audit roles at professional services firms and banks, and supply chain assurance, export control or trade compliance roles at defence primes. Track record of closing the gap between records and physical reality through systematic controls, risk-based auditing and enterprise-level process improvement, with £2.7M+ in quantified business impact.
 
 **Core Skills:** Third-Party Risk Management | Governance, Risk & Compliance (GRC) | Internal Audit & Risk-Based Auditing | Supply Chain Assurance | ISO/IEC 27001, 42001, 27701 | COSO Internal Control Framework | Three Lines Model | Export Control & Trade Compliance (ITAR, EAR) | Dangerous Goods Compliance (IMDG Code, ADR, IATA DGR) | Financial Control & Root Cause Analysis | Digital Transformation (Palantir Foundry) | Data Analytics (SQL, Python, Power BI) | PRINCE2 Project Governance
 
@@ -47,7 +47,7 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 
 ## EDUCATION
 
-- MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln — In Progress (Distinction track), Apr 2025 – Apr 2027
+- MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln — In Progress (Distinction track), Apr 2025 – Apr 2027; route to MCIPS, eligible for CMILT on transition
 - MicroMasters, Supply Chain Management & Advanced Network Design, MIT Center for Transportation & Logistics — Completed 2024
 - Professional Award in Cyber Security & OSINT, Abertay University — Distinction, 2023–2025
 
