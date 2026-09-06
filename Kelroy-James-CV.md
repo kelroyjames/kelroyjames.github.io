@@ -31,10 +31,35 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 - Led a team of 7 through the unit's Gibraltar weapons trial and Exercise Tamber Shield deployments, turning round a rejected consignment in 3 days for a trial valued at approximately £5M and recovering a mid-exercise equipment shortfall with 3 hours to spare; recognised with the Royal Navy Inclusivity Award for Innovation (2023)
 - Completed a strategic innovation course and introduced Mission Model Canvas training to build the team's strategic awareness of innovation; 5 of 7 team members have since been promoted
 
-### Supply Chain Specialist / Logistics Inspector
-**Royal Navy, Various Postings** | 2008 – 2022
+### Section Head, Supply Chain (Petty Officer)
+**Royal Navy, Surface Flotilla Engineering Support (WLSG)** | Jun 2021 – Apr 2022
 
-- Designed and delivered an organic, PRINCE2-governed consignment tracking capability, eliminating a 200-mile round trip dependency and sustaining 4 multinational exercises
+- Took on Section Head responsibilities immediately upon promotion to Petty Officer, delivering Tier 1 Compliance Management Tool assurance across the Type 45, Type 23 and Hunt-class mine countermeasures fleets
+- Selected for the Percy Hobart Innovation Fellowship, a 12-week digital transformation programme, developing a project on sustainable consignment tracking
+
+### Leading Hand (Supply Chain)
+**Royal Navy, HMS Defender (Type 45 Destroyer)** | Mar 2020 – Nov 2020
+
+- Deputised for the Section Head across the ship's Naval Stores Account throughout an intensive pre-deployment training work-up, maintaining full compliance under sustained operational pressure
+- Coordinated a de-ammunitioning evolution with Royal Navy and MOD stakeholders and no senior-rate oversight, delivering it safely ahead of a fleet exercise
+
+### Leading Hand, Fleet Stores Coordination Cell
+**Royal Navy, Fleet Operations (Maritime Operations Centre)** | Jul 2018 – Mar 2020
+
+- Provided 24/7 watchkeeping cover for Fleet-wide operational-defect logistics, sustaining concurrent support to a carrier strike group deployment, a major Middle East exercise and a NATO High North exercise
+- Rated the strongest of more than 10 Leading Hands across two reporting periods; selected to understudy the Petty Officer billet
+
+### Leading Hand (Supply Chain Supervisor)
+**Royal Navy, Fleet Diving Squadron HQ** | Dec 2016 – Jul 2018
+
+- Sole logistician for Fleet Diving Squadron's Portsmouth-based units; designed and delivered an organic, PRINCE2-governed consignment tracking capability, eliminating a 200-mile round-trip dependency and sustaining exercises across 4 nations
+- Concurrently performed Warrant-Officer-level movements officer duties; awarded the Chief Naval Logistics Officer's Award for coaching and mentoring (2018)
+
+### Supply Chain Specialist / Logistics Inspector
+**Royal Navy, Various Postings** | 2008 – 2016
+
+- Sole logistics point of contact for a Joint Forces Logistics Unit in the Falkland Islands, managing a £30K monthly Government Procurement Card budget and cutting low-value purchase orders by 80%
+- Restructured Ministry of Defence inventory accounting (MJDI) across 31 NATO locations while posted to the European Joint Support Unit at SHAPE, Belgium
 - Delivered a £250K cost-saving lean maintenance initiative through inventory optimization and stock-holding reduction
 
 ### GIS Analyst & Infrastructure Planner
