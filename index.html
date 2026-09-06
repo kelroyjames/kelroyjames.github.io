@@ -287,6 +287,17 @@
   @media(min-width:800px){.band-cols{grid-template-columns:repeat(2,1fr);gap:38px 48px}}
   .band-cols h4{font-family:Spectral,Georgia,serif;font-size:1.04rem;margin:0 0 7px;font-weight:600}
   .band-cols p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+  .bd-form{display:flex;gap:10px;flex-wrap:wrap}
+  .bd-form input[type="email"]{
+    font-family:"Public Sans",sans-serif;font-size:14.5px;padding:11px 14px;
+    border:1px solid var(--rule);background:var(--surface);color:var(--ink);
+    min-width:240px;
+  }
+  .bd-form input[type="submit"]{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+    padding:11px 22px;background:transparent;color:var(--ink);border:1px solid var(--ink);cursor:pointer;
+  }
+  .bd-form input[type="submit"]:hover{background:var(--brass);border-color:var(--brass);color:#fff}
   .band > .wrap > p.lead{max-width:60ch;color:var(--ink-2);margin:0;font-size:16px}
 
   /* ============ background ============ */
@@ -751,10 +762,15 @@
 <div class="band" id="worksheet-optin">
   <div class="wrap">
     <p class="thesis">Get the worksheet: Translate Your Own Skills.</p>
-    <p class="lead">A two-page exercise for service leavers: turn what you actually do into language a GRC recruiter or hiring manager already recognises. Worked example, blank template, and a Logistics-trade mapping verified against the Royal Navy's own published role descriptions. Email me and I'll send it over myself: no list, no automation, just a reply.</p>
+    <p class="lead">A two-page exercise for service leavers: turn what you actually do into language a GRC recruiter or hiring manager already recognises. Worked example, blank template, and a Logistics-trade mapping verified against the Royal Navy's own published role descriptions.</p>
     <div class="btns" style="margin-top:28px">
-      <a class="btn primary" href="mailto:kelroydbjames@gmail.com?subject=Send%20me%20the%20worksheet&body=Hi%20Kelroy%2C%0A%0APlease%20send%20me%20the%20Translate%20Your%20Own%20Skills%20worksheet.%0A%0AMy%20trade%2Frank%20(optional)%3A%20">Get the worksheet →</a>
+      <a class="btn primary" href="/downloads/translate-your-own-skills-worksheet.pdf" download>Download the worksheet →</a>
     </div>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/kelroy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/kelroy', 'popupwindow')" class="bd-form" style="margin-top:22px">
+      <input type="email" name="email" id="bd-email-worksheet" placeholder="you@email.com" required>
+      <input type="hidden" value="1" name="embed">
+      <input type="submit" value="Also get new frameworks by email">
+    </form>
   </div>
 </div>
 
