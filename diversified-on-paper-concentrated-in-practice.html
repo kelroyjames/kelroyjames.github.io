@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A supplier list with fifty names on it can still fail from a single point. How to measure the concentration that headcount hides, and what to do once you've found it.">
+<meta property="og:title" content="Diversified on Paper, Concentrated in Practice">
+<meta property="og:description" content="A supplier list with fifty names on it can still fail from a single point. How to measure the concentration that headcount hides, and what to do once you've found it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/diversified-on-paper-concentrated-in-practice.html">
+<meta property="og:image" content="https://kelroyjames.com/images/articles/export-control-supply-chain.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diversified on Paper, Concentrated in Practice">
+<meta name="twitter:description" content="A supplier list with fifty names on it can still fail from a single point. How to measure the concentration that headcount hides, and what to do once you've found it.">
+<meta name="twitter:image" content="https://kelroyjames.com/images/articles/export-control-supply-chain.png">
+<title>Diversified on Paper, Concentrated in Practice: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3; --surface:#FFFFFF; --surface-2:#F5F7F9;
+  --ink:#15202B; --ink-2:#3D4C59; --muted:#697887;
+  --rule:#D3DAE1; --rule-soft:#E3E8ED;
+  --accent:#8A6A2F; --accent-soft:#F2ECDF;
+  --signal:#9A6410; --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A; --surface:#161F28; --surface-2:#1B252F;
+    --ink:#E5EAEF; --ink-2:#B9C4CE; --muted:#8593A0;
+    --rule:#2A3742; --rule-soft:#222E38;
+    --accent:#C9A257; --accent-soft:#2A2317;
+    --signal:#D9A652; --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+body{
+  background:var(--ground); color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.reading-progress{position:fixed;top:0;left:0;right:0;height:4px;background:var(--rule-soft);z-index:100}
+.reading-progress-bar{height:100%;background:var(--accent);width:0%;transition:width .1s ease}
+
+.topnav{padding:22px 0 0;margin-bottom:44px}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;
+  text-transform:uppercase;text-decoration:none;color:#6B7885;
+}
+.topnav a:hover{color:var(--accent)}
+
+.masthead{background:var(--surface);border-bottom:1px solid var(--rule);padding:0;margin-bottom:52px;position:relative}
+.featured-image{width:100%;height:320px;object-fit:cover;display:block}
+@media(min-width:800px){.featured-image{height:420px}}
+.masthead-content{padding:48px 0 44px}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;font-weight:700;font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;letter-spacing:-.015em;margin:0 0 20px;text-wrap:balance;max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;color:var(--ink-2);max-width:62ch;margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{font-family:Spectral,Georgia,serif;font-size:1.65rem;font-weight:700;margin:56px 0 18px;letter-spacing:-.012em}
+.prose h3{font-family:Spectral,Georgia,serif;font-size:1.32rem;font-weight:600;margin:42px 0 14px;letter-spacing:-.008em}
+.prose h4{font-family:Spectral,Georgia,serif;font-size:1.12rem;font-weight:600;margin:32px 0 10px}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+.pullquote{
+  border-left:4px solid var(--accent);padding:24px 28px;margin:32px 0;background:var(--accent-soft);
+  font-family:Spectral,Georgia,serif;font-size:1.28rem;line-height:1.5;font-weight:600;color:var(--ink);font-style:italic;
+}
+.reading-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+.share-buttons{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.share-btn{
+  padding:7px 14px;font-size:11.5px;font-family:"IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--surface-2);border:1px solid var(--rule);color:var(--ink-2);text-decoration:none;
+  transition:all .2s ease;cursor:pointer;
+}
+.share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.worked{background:var(--surface-2);border:1px solid var(--rule);padding:24px 26px;margin:28px 0;box-shadow:var(--shadow)}
+.worked h4{margin-top:0}
+table.calc{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+table.calc th, table.calc td{border:1px solid var(--rule);padding:8px 10px;text-align:left}
+table.calc th{background:var(--surface);font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.hhi-result{
+  font-family:"IBM Plex Mono",monospace;font-size:13px;background:var(--signal-soft);color:var(--signal);
+  padding:10px 14px;margin-top:10px;display:inline-block;
+}
+
+.references{border-top:1px solid var(--rule);padding-top:32px;margin-top:56px}
+.references h2{font-family:Spectral,Georgia,serif;font-size:1.45rem;font-weight:700;margin:0 0 20px}
+.references ul{list-style:none;padding:0;margin:0 0 24px}
+.references li{margin-bottom:10px;font-size:14px;line-height:1.6;padding-left:14px;position:relative}
+.references li::before{content:"—";position:absolute;left:0;color:var(--muted)}
+
+footer{padding:34px 0 56px;border-top:1px solid var(--rule)}
+footer p{font-size:12.5px;color:var(--muted);max-width:70ch;margin:0 0 10px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div class="wrap topnav">
+  <a href="/writing.html">&#8592; Writing</a>
+</div>
+
+<header class="masthead">
+  <img src="/images/articles/export-control-supply-chain.png" alt="A supplier due-diligence checklist over a global supply chain scene with connecting trade routes" class="featured-image">
+  <div class="wrap masthead-content">
+    <div class="eyebrow">
+      <span class="tick">◆</span>
+      <span>Third-Party Risk</span>
+      <span>Concentration Risk</span>
+      <span>GRC</span>
+    </div>
+    <h1>Diversified on Paper, Concentrated in Practice</h1>
+    <p class="standfirst">A supplier list with fifty names on it can still fail from a single point. Here's how to measure the concentration that headcount hides, and what to do once you've found it.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>September 2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 7 min read</span>
+      <span>📊 ~1,350 words</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/diversified-on-paper-concentrated-in-practice.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/diversified-on-paper-concentrated-in-practice.html&text=Diversified%20on%20Paper%2C%20Concentrated%20in%20Practice" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=Article: Diversified on Paper, Concentrated in Practice&body=I thought you might find this interesting: https://kelroyjames.com/diversified-on-paper-concentrated-in-practice.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>In March 2000, a fire at a Philips semiconductor plant in Albuquerque, New Mexico, damaged a cleanroom that supplied radio-frequency chips to two of the world's largest phone makers. Both Ericsson and Nokia bought from the same production line. Ericsson treated the plant as a reliable single source and waited for Philips's own assessment before acting. Nokia had a second qualified source already running and an escalation process that put engineers on the ground within days, before Philips had finished assessing the damage itself. Nokia lost weeks of margin. Ericsson lost an estimated few hundred million dollars in unfilled handset orders, and exited the phone manufacturing business it had run for decades not long after.</p>
+
+<p>The fire was the trigger. The vulnerability it exposed already existed, and it existed in Ericsson's supplier list before a single spark: not the absence of suppliers, but the concentration of one critical input inside a single relationship nobody had pressure-tested.</p>
+
+<p>That distinction, between how many suppliers you have and how concentrated your actual dependency is, is the one most supplier-risk conversations skip past. It's worth making explicit, and worth putting a number on.</p>
+
+<h4>Why supplier count is the wrong metric</h4>
+
+<p>"How many suppliers do we have?" is a vanity metric. An organisation can hold two hundred active suppliers and still be one plant fire away from a crisis, because two hundred is a count across the whole book, and risk doesn't distribute evenly across a book. It concentrates inside whichever category is both critical and thin. A distribution business might have forty suppliers of packaging materials and exactly one supplier of the specialist component that goes into its highest-margin product line. The forty tell you nothing useful about the one that matters.</p>
+
+<p>The right question isn't "how many suppliers," it's "of the spend or dependency that would actually hurt if it stopped, how much sits with how few hands." That's a concentration question, not a headcount question, and it needs to be asked separately for each risk tier, because concentration inside your Critical tier is a different conversation from concentration inside Low.</p>
+
+<h4>A number you can actually calculate</h4>
+
+<p>Economists and competition regulators have been measuring exactly this kind of concentration for decades, using the Herfindahl-Hirschman Index (HHI): take each player's share of a market, square it, and sum the results. A market with one player scores 10,000. A market with a hundred equal players scores 100. The US Department of Justice and Federal Trade Commission's own merger guidelines treat a market scoring below 1,500 as unconcentrated, 1,500 to 2,500 as moderately concentrated, and above 2,500 as highly concentrated.</p>
+
+<p>The same formula works internally, applied to your own supplier base instead of a market. Take one risk tier, take each supplier's share of spend or dependency within it, square each share, sum the squares. You get a single number that tells you whether "diversified" is actually true for the tier that matters, or just true on average across a book padded out with low-risk suppliers.</p>
+
+<div class="worked">
+<h4>Worked example (illustrative)</h4>
+<p>Three suppliers sit in the Critical tier of a fictional distribution company's risk register: a sole-source component supplier, an IT hosting provider, and a specialist subcontractor. Their share of Critical-tier spend:</p>
+<table class="calc">
+<tr><th>Supplier</th><th>Share of Critical spend</th><th>Share²</th></tr>
+<tr><td>Sole-source component supplier</td><td>45%</td><td>2,025</td></tr>
+<tr><td>IT hosting provider</td><td>35%</td><td>1,225</td></tr>
+<tr><td>Specialist subcontractor</td><td>20%</td><td>400</td></tr>
+</table>
+<p><strong>HHI = 2,025 + 1,225 + 400 = 3,650</strong></p>
+<div class="hhi-result">3,650 → highly concentrated (above the 2,500 threshold)</div>
+<p style="margin-top:14px">That figure isn't a surprise once you know two of those three suppliers, the hosting provider and the subcontractor, were already carrying open, escalated findings on the risk register. A high HHI doesn't just describe a number; it explains why problems at individual suppliers in that tier land harder than they would in a genuinely diversified one. There's no slack in the tier to absorb a single failure.</p>
+</div>
+
+<h4>What the number doesn't tell you</h4>
+
+<p>An HHI score is a trigger for a conversation, not a verdict. Concentration is sometimes the right call: a single strategic partner might offer better quality control, tighter IP protection, or economies of scale that a fragmented supplier base can't match. The point of measuring it isn't to force diversification everywhere. It's to make sure concentration is a decision someone actually made, with the risk understood, rather than something that accumulated silently because nobody was measuring it.</p>
+
+<p>The failure mode isn't concentration itself. It's undiscovered concentration, discovered for the first time when the single point actually fails.</p>
+
+<h4>Reducing concentration without pretending to eliminate it</h4>
+
+<p>Once a Critical-tier HHI comes back high, the options are the same ones Nokia had already exercised in 2000, and they're the same tools that sit at Stage 8, exit or replacement planning, of a properly run third-party risk lifecycle:</p>
+
+<ul>
+<li><strong>Qualify a warm second source</strong> even if it never takes live volume, so the requalification clock has already been run before you need it, not after</li>
+<li><strong>Size safety stock to the requalification lead time</strong> of the concentrated input, not to average demand variability, since that's the specific gap a concentration failure creates</li>
+<li><strong>Diversify geography or jurisdiction</strong> where the concentration risk is a single site or a single regulatory regime, not just a single company name</li>
+<li><strong>Negotiate step-in rights and IP escrow</strong> so a sole-source failure doesn't also mean losing the ability to make or specify the item yourself</li>
+<li><strong>Revisit the classification itself</strong>: if a Critical-tier input has been single-sourced for years without incident, that's worth checking against Stage 2 of the lifecycle, not just leaving alone because nothing has gone wrong yet</li>
+</ul>
+
+<p>None of these require walking away from a good supplier relationship. They require knowing, in a number rather than a feeling, when a good relationship has quietly become a single point of failure.</p>
+
+<p><em>The views expressed here are my own and are based on general observations about third-party risk and supply chain concentration. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. The worked example is entirely fictional; no real supplier, client or organisation is described.</em></p>
+
+<div class="references">
+<h2>References</h2>
+<ul>
+<li>Norrman, A. and Jansson, U. (2004), "Ericsson's proactive supply chain risk management approach after a serious sub-supplier accident," <em>International Journal of Physical Distribution &amp; Logistics Management</em>, Vol. 34 No. 5.</li>
+<li>U.S. Department of Justice and Federal Trade Commission, Horizontal Merger Guidelines (HHI concentration thresholds).</li>
+<li>ISO 31000:2018, Risk management — Guidelines.</li>
+<li>COSO, Enterprise Risk Management — Integrating with Strategy and Performance, 2017.</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p>Kelroy James · 2026 · Content may be freely reproduced for non-commercial use with attribution</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
