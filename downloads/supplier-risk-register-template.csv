@@ -1,0 +1,11 @@
+Supplier ID,Supplier Name,Category/Spend Area,Risk Tier (Critical/Significant/Standard/Low),Inherent Risk Rating,Key Risk Drivers,Last Due Diligence Date,Next Review Due,KRI Status (Green/Amber/Red),Open Findings (Ref + Rating),Remediation Status,Escalation/Exit Flag,Risk Owner
+EXAMPLE-01,Example: Sole-source component supplier,Manufacturing input,Critical,High,"Sole source, no substitute qualified, 40% of category spend",2026-01-15,2026-07-15,Amber,F1 - Partial Compliance,Open - action due 2026-03-01,None,J. Smith
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
