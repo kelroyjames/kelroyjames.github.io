@@ -60,6 +60,10 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 
 Full certification record and continuing education: kelroyjames.com/skills-expertise.html
 
+## PUBLISHED FRAMEWORKS
+
+- OSINT Supplier Verification Framework | Same Control, Two Vocabularies | The Three Lines of Defence: From Warships to AI | Change Management in a Rank Hierarchy — full case studies at kelroyjames.com
+
 ## AWARDS
 
 - Royal Navy Inclusivity Award for Innovation — 2023, Wildcat Maritime Force, for leading a 7-person team through operational deployments
