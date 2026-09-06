@@ -142,6 +142,28 @@
   }
   .fact dd{margin:0;font-size:14.5px;color:var(--ink)}
 
+  /* ============ recruiter quick read ============ */
+  .recruiter-panel{background:var(--surface-2);border-top:3px solid var(--brass);border-bottom:1px solid var(--rule)}
+  .recruiter-panel .wrap{padding:32px 26px}
+  .recruiter-panel-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+  .recruiter-panel-head h2{
+    font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--brass);margin:0;
+  }
+  .recruiter-panel-head a{
+    margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-2);text-decoration:none;white-space:nowrap;
+  }
+  .recruiter-panel-head a:hover{color:var(--brass)}
+  .recruiter-grid{display:grid;grid-template-columns:1fr;gap:16px 32px}
+  @media(min-width:700px){.recruiter-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1000px){.recruiter-grid{grid-template-columns:repeat(3,1fr)}}
+  .recruiter-item dt{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:3px;
+  }
+  .recruiter-item dd{margin:0;font-size:14px;color:var(--ink);line-height:1.5}
+
   /* ============ generic section ============ */
   section{padding:66px 0}
   .sec-head{display:flex;align-items:baseline;gap:18px;margin:0 0 30px;padding-bottom:13px;border-bottom:1px solid var(--rule)}
@@ -405,6 +427,23 @@
     </div>
   </div>
 </header>
+
+<div class="recruiter-panel" id="recruiter-quick-read">
+  <div class="wrap">
+    <div class="recruiter-panel-head">
+      <h2>Recruiter Quick Read</h2>
+      <a href="/for-recruiters.html">Full profile →</a>
+    </div>
+    <dl class="recruiter-grid">
+      <div class="recruiter-item"><dt>Target roles</dt><dd>Third-party risk, GRC consulting, supply chain assurance and operational controls</dd></div>
+      <div class="recruiter-item"><dt>Level</dt><dd>Experienced specialist, moving toward manager-level conversations</dd></div>
+      <div class="recruiter-item"><dt>Sector</dt><dd>Professional services, defence primes, banking and financial services</dd></div>
+      <div class="recruiter-item"><dt>Location</dt><dd>Greater Portsmouth area (Portsmouth/Fareham), UK. Open to relocation for the right role</dd></div>
+      <div class="recruiter-item"><dt>Availability</dt><dd>Full-time from April 2028. Professional conversations and networking now</dd></div>
+      <div class="recruiter-item"><dt>Evidence</dt><dd>£2.4M expenditure discrepancy identified, 80% reduction in financial liability, full compliance recovery, fleet-wide inventory application</dd></div>
+    </dl>
+  </div>
+</div>
 
 <section class="impact">
   <div class="wrap">
