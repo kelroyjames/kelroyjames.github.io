@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A full internal audit cycle demonstration against a fictional distribution company: scoping, risk-based planning, control objectives, testing, findings, remediation, follow-up and closure.">
+<meta property="og:title" content="An Internal Audit, End to End">
+<meta property="og:description" content="A full internal audit cycle demonstration against a fictional distribution company: scoping, risk-based planning, control objectives, testing, findings, remediation, follow-up and closure.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/internal-audit-demonstration.html">
+<style>*{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:22px 26px 0">
+<a href="/" style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#6B7885">&#8592; Kelroy James</a>
+</div>
+<title>An Internal Audit, End to End: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EEF1EF; --surface:#FFFFFF; --surface-2:#F4F7F5;
+    --ink:#16211D; --ink-2:#3C4C46; --muted:#68786F;
+    --rule:#D2DAD5; --rule-soft:#E2E8E4;
+    --accent:#8A6A2F; --accent-soft:#F2ECDF;
+    --counter:#7A4A1E; --counter-soft:#F3EAE0;
+    --good:#3D7A4A; --good-soft:#E9F3EA;
+    --bad:#B23B3B; --bad-soft:#F7E9E9;
+    --shadow:0 1px 2px rgba(22,33,29,.06), 0 8px 24px rgba(22,33,29,.05);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0D1411; --surface:#151F1A; --surface-2:#1A2621;
+      --ink:#E4EAE6; --ink-2:#B6C4BD; --muted:#84948B;
+      --rule:#293831; --rule-soft:#212E28;
+      --accent:#C9A257; --accent-soft:#2A2317;
+      --counter:#C8935F; --counter-soft:#2A2018;
+      --good:#7FBE8C; --good-soft:#16261A;
+      --bad:#D98080; --bad-soft:#2A1717;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0D1411; --surface:#151F1A; --surface-2:#1A2621;
+    --ink:#E4EAE6; --ink-2:#B6C4BD; --muted:#84948B;
+    --rule:#293831; --rule-soft:#212E28;
+    --accent:#C9A257; --accent-soft:#2A2317;
+    --counter:#C8935F; --counter-soft:#2A2018;
+    --good:#7FBE8C; --good-soft:#16261A;
+    --bad:#D98080; --bad-soft:#2A1717;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  .reading-progress{position:fixed;top:0;left:0;right:0;height:4px;background:var(--rule-soft);z-index:100}
+  .reading-progress-bar{height:100%;background:var(--accent);width:0%;transition:width .1s ease}
+  .reading-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px}
+  .share-buttons{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .share-btn{
+    padding:7px 14px;font-size:11.5px;font-family:"IBM Plex Mono",monospace;
+    letter-spacing:.1em;text-transform:uppercase;background:var(--surface-2);border:1px solid var(--rule);
+    color:var(--ink-2);text-decoration:none;transition:all .2s ease;cursor:pointer;
+  }
+  .share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+  header.top{background:var(--surface);border-bottom:1px solid var(--rule);position:relative}
+  .featured-image{width:100%;height:320px;object-fit:cover;display:block}
+  @media(min-width:800px){.featured-image{height:420px}}
+  header.top .wrap{padding:56px 24px 42px;display:flex;flex-direction:column;gap:26px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .eyebrow .tick{color:var(--accent)}
+  h1{
+    font-family:Spectral,Georgia,serif;font-weight:700;
+    font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.015em;
+    margin:0;text-wrap:balance;max-width:20ch;
+  }
+  .standfirst{
+    font-family:Spectral,Georgia,serif;font-size:clamp(1.05rem,1.9vw,1.26rem);
+    line-height:1.55;color:var(--ink-2);max-width:64ch;margin:0;
+  }
+  .byline{
+    display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:20px;
+    border-top:1px solid var(--rule-soft);font-size:13.5px;color:var(--muted);
+  }
+  .byline b{color:var(--ink-2);font-weight:600}
+
+  .banner{background:var(--counter-soft);border-bottom:2px solid var(--counter);padding:16px 0}
+  .banner .wrap{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+  .banner b{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--counter)}
+  .banner span{font-size:14px;color:var(--ink-2)}
+
+  .intro{padding:50px 0 6px}
+  .intro p{margin:0 0 16px;max-width:68ch}
+  .intro p:last-child{margin-bottom:0}
+  .intro em{font-style:italic;color:var(--ink)}
+
+  .sec-head{
+    display:flex;align-items:baseline;gap:16px;margin:54px 0 8px;
+    padding-bottom:12px;border-bottom:1px solid var(--rule);
+  }
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.6rem;font-weight:700;margin:0}
+  .sec-head .count{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin-left:auto;white-space:nowrap;
+  }
+
+  .stage-nav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 8px}
+  .stage-nav a{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    padding:6px 12px;background:var(--surface-2);border:1px solid var(--rule);color:var(--ink-2);text-decoration:none;
+  }
+  .stage-nav a:hover{border-color:var(--accent);color:var(--accent)}
+
+  .stage{
+    margin-top:20px;background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);
+    padding:28px 30px;scroll-margin-top:90px;
+  }
+  .stage-head{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+  .stage-num{font-family:Spectral,Georgia,serif;font-weight:700;font-size:1.6rem;color:var(--accent)}
+  .stage-head h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:0}
+  .stage p{margin:0 0 14px;max-width:72ch;color:var(--ink-2);font-size:15px;line-height:1.6}
+  .stage p:last-child{margin-bottom:0}
+  .stage-tool{background:var(--surface-2);border-left:3px solid var(--accent);padding:16px 20px;margin-top:16px}
+  .stage-tool h4{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);margin:0 0 10px;
+  }
+  .stage-tool ul, .stage-tool ol{margin:0;padding-left:20px;color:var(--ink-2);font-size:14.5px;display:flex;flex-direction:column;gap:6px}
+
+  table.data{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+  table.data th, table.data td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  table.data th{background:var(--surface-2);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  table.data td{color:var(--ink-2)}
+  .rating{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;white-space:nowrap;display:inline-block}
+  .rating.full{background:var(--good-soft);color:var(--good)}
+  .rating.partial{background:var(--accent-soft);color:var(--accent)}
+  .rating.non{background:var(--bad-soft);color:var(--bad)}
+
+  .caution{
+    margin-top:56px;background:var(--surface);border:1px solid var(--rule);
+    border-left:3px solid var(--counter);padding:26px 28px;box-shadow:var(--shadow);
+  }
+  .caution h3{font-family:Spectral,Georgia,serif;font-size:1.22rem;margin:0 0 10px;font-weight:600}
+  .caution p{margin:0 0 12px;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+  .caution p:last-child{margin-bottom:0}
+
+  .bridge{margin-top:56px;background:var(--accent-soft);border:1px solid var(--rule);padding:26px 28px}
+  .bridge h3{font-family:Spectral,Georgia,serif;font-size:1.22rem;margin:0 0 10px;font-weight:600;color:var(--ink)}
+  .bridge p{margin:0;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+
+  footer{margin-top:60px;padding:40px 0 64px;border-top:1px solid var(--rule)}
+  footer p{font-size:13px;color:var(--muted);line-height:1.65;max-width:72ch;margin:0 0 13px}
+  footer b{color:var(--ink-2);font-weight:600}
+  a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<header class="top">
+  <img src="/images/articles/osint-header.jpg" alt="A magnifying glass over a laptop keyboard" class="featured-image">
+  <div class="wrap">
+    <div class="eyebrow"><span class="tick">◆</span><span>Framework</span><span>Internal audit, full cycle</span><span>Demonstration case</span></div>
+    <h1>An internal audit, end to end</h1>
+    <p class="standfirst">A case study proves you can find a problem. It doesn't always prove you can run the process that's supposed to find problems on a schedule, before someone else does. This is that process, worked in full against a fictional company, from scoping to closure.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>Built from the discipline behind real Fleet Logistics Inspections</span>
+      <span>Company, findings and figures are fictional</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 9 min read</span>
+      <span>🔄 9-stage audit cycle</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/internal-audit-demonstration.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/internal-audit-demonstration.html&text=An%20Internal%20Audit%2C%20End%20to%20End" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=An Internal Audit, End to End&body=Check this out: https://kelroyjames.com/internal-audit-demonstration.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<div class="banner">
+  <div class="wrap">
+    <b>Demonstration only</b>
+    <span>"Northfield Distribution Ltd" is fictional. Every finding, figure, name and date below is an illustrative construct built to show method. Nothing here is real audit output, and nothing here describes any organisation I have worked with or for.</span>
+  </div>
+</div>
+
+<section class="intro">
+  <div class="wrap">
+    <p>The case studies elsewhere on this site show what happened when a specific control failed and I fixed it. That's evidence of judgement, but a recruiter for an internal audit role is usually asking a narrower question: have you actually run the audit cycle itself, not just benefited from someone else running it? Scoping, risk-based planning, control objectives, test procedures, evidence standards, findings and ratings, management actions, follow-up testing, closure and residual risk.</p>
+    <p>So here it is, worked end to end, against a fictional mid-sized distribution company invented for this purpose. The audit discipline is the same one behind a real Fleet Logistics Inspection: sample-based testing against defined control objectives, findings graded on a fixed scale, actions owned and dated, and nothing closed until someone independent of the finding checks it.</p>
+
+    <div class="stage-nav">
+      <a href="#stage-1">1. Scoping</a>
+      <a href="#stage-2">2. Planning</a>
+      <a href="#stage-3">3. Control Objectives</a>
+      <a href="#stage-4">4. Test Procedures</a>
+      <a href="#stage-5">5. Evidence Standards</a>
+      <a href="#stage-6">6. Findings &amp; Ratings</a>
+      <a href="#stage-7">7. Management Actions</a>
+      <a href="#stage-8">8. Follow-Up Testing</a>
+      <a href="#stage-9">9. Closure &amp; Residual Risk</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="sec-head"><h2>The Audit Cycle</h2><span class="count">Northfield Distribution Ltd (fictional)</span></div>
+
+  <div class="stage" id="stage-1">
+    <div class="stage-head"><span class="stage-num">1</span><h3>Audit Scoping</h3></div>
+    <p>Scope is agreed and fixed before testing starts, so findings can't later be dismissed as "not what we meant" and the audit can't quietly expand into areas nobody resourced it to check.</p>
+    <div class="stage-tool">
+      <h4>Scope Statement (illustrative)</h4>
+      <ul>
+        <li><strong>Objective:</strong> assess whether inventory, custody and supplier-onboarding controls at Northfield's Midlands distribution site are operating as designed</li>
+        <li><strong>Period covered:</strong> the preceding twelve months of transactions and records</li>
+        <li><strong>In scope:</strong> stock accuracy, custody transfer between shift handovers, purchase authorisation, new supplier onboarding</li>
+        <li><strong>Out of scope:</strong> IT general controls and payroll, both covered by separate, concurrently scheduled reviews</li>
+        <li><strong>Authority:</strong> commissioned by the Audit &amp; Risk Committee under the annual risk-based audit plan</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-2">
+    <div class="stage-head"><span class="stage-num">2</span><h3>Risk-Based Audit Planning</h3></div>
+    <p>Not every control gets the same depth of testing. Planning sets that depth deliberately, based on what the control is actually protecting against, rather than auditing everything to a uniform, shallow standard.</p>
+    <div class="stage-tool">
+      <h4>Categorisation Used</h4>
+      <ul>
+        <li><strong>Governance:</strong> activity the business is contractually or legally bound to control, such as financial authorisation limits. Non-negotiable; always tested.</li>
+        <li><strong>Assurance:</strong> activity that enables the operation to function, such as stock accuracy feeding accurate customer commitments. Tested to a risk-based sample.</li>
+        <li><strong>Compliance:</strong> internal procedural checks against the company's own policy. Sampled at the auditor's discretion, weighted toward areas with prior findings or recent change.</li>
+      </ul>
+      <p style="margin-top:10px">Sample sizes were set higher for Governance items (near-total population) and lower for Compliance items (risk-weighted sample), with the sampling rationale documented before testing began, not adjusted afterward to fit what was found.</p>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-3">
+    <div class="stage-head"><span class="stage-num">3</span><h3>Control Objectives</h3></div>
+    <p>Each objective states what risk the control addresses, before any testing happens, so it's clear what "pass" and "fail" actually mean.</p>
+    <table class="data">
+      <tr><th>Control Objective</th><th>Risk Addressed</th><th>Category</th></tr>
+      <tr><td>Inventory Accuracy</td><td>Stock records used for customer commitments and financial reporting don't reflect physical reality</td><td>Assurance</td></tr>
+      <tr><td>Custody Transfer</td><td>No one is accountable for stock discrepancies that occur during a shift or role handover</td><td>Governance</td></tr>
+      <tr><td>Purchase Authorisation</td><td>Spend above delegated limits is committed without appropriate sign-off</td><td>Governance</td></tr>
+      <tr><td>Supplier Onboarding</td><td>A new supplier is transacted with before being screened for sanctions, financial stability or compliance history</td><td>Compliance</td></tr>
+    </table>
+  </div>
+
+  <div class="stage" id="stage-4">
+    <div class="stage-head"><span class="stage-num">4</span><h3>Test Procedures</h3></div>
+    <p>How each objective was actually tested, not just what was tested. This is the part a checklist alone doesn't show.</p>
+    <table class="data">
+      <tr><th>Control Objective</th><th>Test Procedure</th><th>Sample</th></tr>
+      <tr><td>Inventory Accuracy</td><td>Independent physical recount of a sample of stock lines, reconciled against the system record</td><td>25 lines, Category A stock</td></tr>
+      <tr><td>Custody Transfer</td><td>Walkthrough of handover documentation, checking for dual signature and date</td><td>5 handover records</td></tr>
+      <tr><td>Purchase Authorisation</td><td>Re-performance check: trace each transaction above threshold to its authorisation record</td><td>15 transactions above £500</td></tr>
+      <tr><td>Supplier Onboarding</td><td>Document review confirming screening evidence exists and predates first transaction</td><td>8 new suppliers onboarded in period</td></tr>
+    </table>
+  </div>
+
+  <div class="stage" id="stage-5">
+    <div class="stage-head"><span class="stage-num">5</span><h3>Evidence Standards</h3></div>
+    <p>Not everything offered as evidence counts as evidence. The standard was fixed before testing, not negotiated finding by finding.</p>
+    <div class="stage-tool">
+      <h4>Accepted as Evidence</h4>
+      <ul>
+        <li>Dated and signed records, retained in the file at the time, not reconstructed for the audit</li>
+        <li>Independently verifiable output: a system report, a physical count, a third-party confirmation</li>
+        <li>Something checked by someone other than the person whose work is being evidenced</li>
+      </ul>
+      <h4 style="margin-top:16px">Not Accepted as Evidence</h4>
+      <ul>
+        <li>Verbal assurance with nothing retained in writing</li>
+        <li>Self-certification with no independent check</li>
+        <li>A record produced after the fact and dated to match the period under review</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-6">
+    <div class="stage-head"><span class="stage-num">6</span><h3>Findings &amp; Ratings</h3></div>
+    <p>Every finding is graded on a fixed three-point scale, applied the same way regardless of who's affected by the result.</p>
+    <div class="stage-tool">
+      <h4>Rating Scale</h4>
+      <ul>
+        <li><span class="rating full">Full Compliance</span> control operating as designed, no action required</li>
+        <li><span class="rating partial">Partial Compliance</span> control operating but with a gap that needs correcting</li>
+        <li><span class="rating non">Non-Compliance</span> control not operating, or operating in a way that doesn't manage the risk</li>
+      </ul>
+    </div>
+    <table class="data" style="margin-top:18px">
+      <tr><th>Ref</th><th>Objective</th><th>Finding</th><th>Rating</th></tr>
+      <tr><td>F1</td><td>Inventory Accuracy</td><td>3 of 25 sampled lines showed a system-to-physical variance with no adjustment record on file</td><td><span class="rating partial">Partial</span></td></tr>
+      <tr><td>F2</td><td>Custody Transfer</td><td>1 of 5 sampled handover records lacked a countersignature from the receiving custodian</td><td><span class="rating partial">Partial</span></td></tr>
+      <tr><td>F3</td><td>Purchase Authorisation</td><td>All 15 sampled transactions above threshold had appropriate dual authorisation on file</td><td><span class="rating full">Full</span></td></tr>
+      <tr><td>F4</td><td>Supplier Onboarding</td><td>2 of 8 new suppliers had no evidence of screening prior to first transaction</td><td><span class="rating non">Non</span></td></tr>
+    </table>
+  </div>
+
+  <div class="stage" id="stage-7">
+    <div class="stage-head"><span class="stage-num">7</span><h3>Management Actions</h3></div>
+    <p>A finding without an owned, dated action is an observation, not a managed risk. Every rating below Full Compliance gets a tracked action.</p>
+    <table class="data">
+      <tr><th>Ref</th><th>Root Cause</th><th>Action</th><th>Owner</th><th>Target</th><th>Status</th></tr>
+      <tr><td>F1</td><td>Adjustment step skipped after recount when variance was small</td><td>Investigate the 3 lines, raise adjustment records, brief the team on the adjustment step</td><td>Warehouse Manager</td><td>+30 days</td><td>Open</td></tr>
+      <tr><td>F2</td><td>Handover procedure not consistently enforced on night shift</td><td>Reissue handover procedure; retrospectively verify or re-perform the affected handover</td><td>Operations Supervisor</td><td>+14 days</td><td>Open</td></tr>
+      <tr><td>F4</td><td>Onboarding gate control not enforced before first transaction is permitted</td><td>Screen the 2 suppliers retrospectively; suspend further transactions pending clearance; add a system block preventing transactions before screening is recorded</td><td>Procurement Lead</td><td>+7 days, escalated</td><td>Open, escalated</td></tr>
+    </table>
+  </div>
+
+  <div class="stage" id="stage-8">
+    <div class="stage-head"><span class="stage-num">8</span><h3>Follow-Up Testing</h3></div>
+    <p>The first question of any audit is whether last time's findings actually got fixed. An action marked "closed" by the person who owned it isn't closed; it's a claim waiting to be tested.</p>
+    <div class="stage-tool">
+      <h4>Illustrative Follow-Up</h4>
+      <p>Prior audit (twelve months earlier) raised a Partial Compliance finding on stocktake reconciliation timeliness: reconciliations were being completed outside the 30-day policy window on a majority of sampled cycles.</p>
+      <p><strong>Retest this period:</strong> 9 of 10 sampled reconciliation cycles completed within the 30-day window. Evidence: dated reconciliation records cross-checked against the stocktake calendar.</p>
+      <p><strong>Result:</strong> upgraded from Non-Compliance to Partial Compliance. Retained on the tracker, not closed, because the standard is 10 of 10, not 9.</p>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-9">
+    <div class="stage-head"><span class="stage-num">9</span><h3>Closure &amp; Residual Risk</h3></div>
+    <p>Closure is a decision, not a formality, and it's made by someone who didn't own the finding.</p>
+    <div class="stage-tool">
+      <h4>Illustrative Closing Position</h4>
+      <ul>
+        <li><strong>Overall opinion:</strong> Limited Assurance. Core financial controls (purchase authorisation) are operating effectively; operational controls (inventory, custody, onboarding) have gaps that are known, owned and being actioned</li>
+        <li><strong>Residual risk:</strong> until F4 closes, Northfield carries uncontrolled counterparty risk on two live supplier relationships; this has been flagged to the Risk Committee as the priority item, not buried in the general finding count</li>
+        <li><strong>Independent verification:</strong> closure of each action is confirmed by a reviewer who did not own the finding, evidenced separately from the action owner's own sign-off</li>
+        <li><strong>Next audit:</strong> all open actions retested at the next scheduled visit; anything still open past two cycles is escalated automatically, not left to individual judgement</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="wrap">
+  <div class="caution">
+    <h3>What this demonstration is not</h3>
+    <p>It's not a real audit report, and Northfield Distribution Ltd doesn't exist. The figures, findings and dates are constructed to be realistic and internally consistent, not copied or adapted from any actual engagement, client, or organisation I have worked with.</p>
+    <p>It's also not a claim to hold a professional audit qualification. It's a demonstration that I understand the full cycle, sourced from the same discipline that runs real Fleet Logistics Inspections: risk-based scoping, defined evidence standards, graded findings, owned actions, and closure that someone independent has to sign off.</p>
+  </div>
+
+  <div class="bridge">
+    <h3>Where this comes from</h3>
+    <p>The rating scale, the categorisation into Governance, Assurance and Compliance, and the discipline of never letting the person who caused a finding also close it, are the same ones described in more detail in <a href="/three-lines-of-defence-warships-to-ai.html">The Three Lines of Defence: From Warships to AI</a>. This page is that discipline applied forward, end to end, against a single worked example rather than described in the abstract.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>Scope and sources.</b> This demonstration generalises audit method consistent with ISO 19011 (auditing management systems) and IIA internal audit standards, illustrated against a fictional company built for this page. No real client, employer or organisational data appears here.</p>
+    <p><b>Not official.</b> Views are my own and do not represent the position of the Royal Navy, the Ministry of Defence, or any organisation with which I work. Nothing here reproduces any organisation's internal policy, procedure, audit finding or assurance output.</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
