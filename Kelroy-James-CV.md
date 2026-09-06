@@ -73,7 +73,7 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 ## EDUCATION
 
 - MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln: In Progress (Distinction track), Apr 2025 – Apr 2027; route to MCIPS, eligible for CMILT on transition
-- MicroMasters, Supply Chain Management & Advanced Network Design, MIT Center for Transportation & Logistics: Completed 2024
+- MicroMasters, Supply Chain Management & Advanced Network Design, MIT Center for Transportation & Logistics: coursework complete (5 core courses + advanced elective), comprehensive final exam November 2026
 - Professional Award in Cyber Security & OSINT, Abertay University: Distinction, 2023–2025
 
 ## CERTIFICATIONS
