@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A third-party risk methodology covering the full supplier lifecycle: onboarding, segmentation, due diligence, contractual controls, monitoring, incident management, remediation and exit.">
+<meta property="og:title" content="Third-Party Risk, End to End">
+<meta property="og:description" content="A third-party risk methodology covering the full supplier lifecycle: onboarding, segmentation, due diligence, contractual controls, monitoring, incident management, remediation and exit.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/third-party-risk-lifecycle.html">
+<style>*{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:22px 26px 0">
+<a href="/" style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#6B7885">&#8592; Kelroy James</a>
+</div>
+<title>Third-Party Risk, End to End: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EEF1EF; --surface:#FFFFFF; --surface-2:#F4F7F5;
+    --ink:#16211D; --ink-2:#3C4C46; --muted:#68786F;
+    --rule:#D2DAD5; --rule-soft:#E2E8E4;
+    --accent:#8A6A2F; --accent-soft:#F2ECDF;
+    --counter:#7A4A1E; --counter-soft:#F3EAE0;
+    --shadow:0 1px 2px rgba(22,33,29,.06), 0 8px 24px rgba(22,33,29,.05);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0D1411; --surface:#151F1A; --surface-2:#1A2621;
+      --ink:#E4EAE6; --ink-2:#B6C4BD; --muted:#84948B;
+      --rule:#293831; --rule-soft:#212E28;
+      --accent:#C9A257; --accent-soft:#2A2317;
+      --counter:#C8935F; --counter-soft:#2A2018;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0D1411; --surface:#151F1A; --surface-2:#1A2621;
+    --ink:#E4EAE6; --ink-2:#B6C4BD; --muted:#84948B;
+    --rule:#293831; --rule-soft:#212E28;
+    --accent:#C9A257; --accent-soft:#2A2317;
+    --counter:#C8935F; --counter-soft:#2A2018;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  .reading-progress{position:fixed;top:0;left:0;right:0;height:4px;background:var(--rule-soft);z-index:100}
+  .reading-progress-bar{height:100%;background:var(--accent);width:0%;transition:width .1s ease}
+  .reading-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px}
+  .share-buttons{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .share-btn{
+    padding:7px 14px;font-size:11.5px;font-family:"IBM Plex Mono",monospace;
+    letter-spacing:.1em;text-transform:uppercase;background:var(--surface-2);border:1px solid var(--rule);
+    color:var(--ink-2);text-decoration:none;transition:all .2s ease;cursor:pointer;
+  }
+  .share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+  header.top{background:var(--surface);border-bottom:1px solid var(--rule);position:relative}
+  .featured-image{width:100%;height:320px;object-fit:cover;display:block}
+  @media(min-width:800px){.featured-image{height:420px}}
+  header.top .wrap{padding:56px 24px 42px;display:flex;flex-direction:column;gap:26px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .eyebrow .tick{color:var(--accent)}
+  h1{
+    font-family:Spectral,Georgia,serif;font-weight:700;
+    font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.015em;
+    margin:0;text-wrap:balance;max-width:20ch;
+  }
+  .standfirst{
+    font-family:Spectral,Georgia,serif;font-size:clamp(1.05rem,1.9vw,1.26rem);
+    line-height:1.55;color:var(--ink-2);max-width:64ch;margin:0;
+  }
+  .byline{
+    display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:20px;
+    border-top:1px solid var(--rule-soft);font-size:13.5px;color:var(--muted);
+  }
+  .byline b{color:var(--ink-2);font-weight:600}
+
+  .intro{padding:50px 0 6px}
+  .intro p{margin:0 0 16px;max-width:68ch}
+  .intro p:last-child{margin-bottom:0}
+  .intro em{font-style:italic;color:var(--ink)}
+
+  .sec-head{
+    display:flex;align-items:baseline;gap:16px;margin:54px 0 8px;
+    padding-bottom:12px;border-bottom:1px solid var(--rule);
+  }
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.6rem;font-weight:700;margin:0}
+  .sec-head .count{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin-left:auto;white-space:nowrap;
+  }
+
+  .stage-nav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 8px}
+  .stage-nav a{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    padding:6px 12px;background:var(--surface-2);border:1px solid var(--rule);color:var(--ink-2);text-decoration:none;
+  }
+  .stage-nav a:hover{border-color:var(--accent);color:var(--accent)}
+
+  .stage{
+    margin-top:20px;background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);
+    padding:28px 30px;scroll-margin-top:90px;
+  }
+  .stage-head{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+  .stage-num{
+    font-family:Spectral,Georgia,serif;font-weight:700;font-size:1.6rem;color:var(--accent);
+  }
+  .stage-head h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:0}
+  .stage p{margin:0 0 14px;max-width:70ch;color:var(--ink-2);font-size:15px;line-height:1.6}
+  .stage p:last-child{margin-bottom:0}
+  .stage-tool{
+    background:var(--surface-2);border-left:3px solid var(--accent);padding:16px 20px;margin-top:16px;
+  }
+  .stage-tool h4{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);margin:0 0 10px;
+  }
+  .stage-tool ul, .stage-tool ol{margin:0;padding-left:20px;color:var(--ink-2);font-size:14.5px;display:flex;flex-direction:column;gap:6px}
+  .tier-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px}
+  .tier-table th, .tier-table td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  .tier-table th{background:var(--surface-2);font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .tier-table td{color:var(--ink-2)}
+
+  .caution{
+    margin-top:56px;background:var(--surface);border:1px solid var(--rule);
+    border-left:3px solid var(--counter);padding:26px 28px;box-shadow:var(--shadow);
+  }
+  .caution h3{font-family:Spectral,Georgia,serif;font-size:1.22rem;margin:0 0 10px;font-weight:600}
+  .caution p{margin:0 0 12px;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+  .caution p:last-child{margin-bottom:0}
+
+  .bridge{margin-top:56px;background:var(--accent-soft);border:1px solid var(--rule);padding:26px 28px}
+  .bridge h3{font-family:Spectral,Georgia,serif;font-size:1.22rem;margin:0 0 10px;font-weight:600;color:var(--ink)}
+  .bridge p{margin:0;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+
+  footer{margin-top:60px;padding:40px 0 64px;border-top:1px solid var(--rule)}
+  footer p{font-size:13px;color:var(--muted);line-height:1.65;max-width:72ch;margin:0 0 13px}
+  footer b{color:var(--ink-2);font-weight:600}
+  a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<header class="top">
+  <img src="/images/articles/blockchain-network.jpg" alt="Interconnected supplier network" class="featured-image">
+  <div class="wrap">
+    <div class="eyebrow"><span class="tick">◆</span><span>Framework</span><span>Third-party risk, full lifecycle</span><span>Generic, anonymised</span></div>
+    <h1>Third-party risk, end to end</h1>
+    <p class="standfirst">Most published "supplier risk" frameworks stop at onboarding: verify who you're dealing with, tick the box, move on. The harder and more valuable part is everything that happens after the contract is signed. This is the full lifecycle, from first contact to exit, with a working tool at each stage.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>Built from 18 years of physical asset and supply chain assurance, translated into corporate third-party risk language</span>
+      <span>Generic examples only, no client or MOD-specific data</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 10 min read</span>
+      <span>🔄 8 lifecycle stages</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/third-party-risk-lifecycle.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/third-party-risk-lifecycle.html&text=Third-Party%20Risk%2C%20End%20to%20End" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=Third-Party Risk, End to End&body=Check this out: https://kelroyjames.com/third-party-risk-lifecycle.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <p>My earlier framework, <a href="/osint-supplier-verification.html">OSINT Supplier Verification</a>, is a due-diligence tool: it answers "is this supplier who and what they claim to be, right now?" That question matters, but it's one stage of a much longer relationship. A supplier can pass verification cleanly and still become the source of a serious incident eighteen months later, when its ownership changes, its financial position deteriorates, or it quietly subcontracts a critical process to a fourth party nobody screened.</p>
+    <p>The discipline that actually manages that risk isn't a single check. It's a lifecycle: onboarding, risk classification, due diligence, contractual controls, ongoing monitoring, incident management, remediation, and exit or replacement. Miss a stage and the earlier ones stop protecting you, because risk that isn't monitored is risk that isn't managed, no matter how good the initial check was.</p>
+    <p>What follows is that lifecycle, generalised from the same instinct that runs through the physical-asset work elsewhere on this site: a record is only as good as the last time someone checked it against reality. Every example below is generic. Nothing here describes any particular organisation's suppliers, contracts or incidents.</p>
+
+    <div class="stage-nav">
+      <a href="#stage-1">1. Onboarding</a>
+      <a href="#stage-2">2. Classification</a>
+      <a href="#stage-3">3. Due Diligence</a>
+      <a href="#stage-4">4. Contractual Controls</a>
+      <a href="#stage-5">5. Monitoring</a>
+      <a href="#stage-6">6. Incident Management</a>
+      <a href="#stage-7">7. Remediation</a>
+      <a href="#stage-8">8. Exit / Replacement</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="sec-head"><h2>The Lifecycle</h2><span class="count">Eight stages, one continuous discipline</span></div>
+
+  <div class="stage" id="stage-1">
+    <div class="stage-head"><span class="stage-num">1</span><h3>Onboarding</h3></div>
+    <p>Before a supplier is engaged, there's a narrow window to check what they say about themselves against what's independently verifiable. This is the intake gate: the point where it's still cheap to say no.</p>
+    <div class="stage-tool">
+      <h4>Tool: Intake Record</h4>
+      <ul>
+        <li>Legal entity and beneficial ownership confirmed against a company registry, not just the name on the invoice</li>
+        <li>Sanctions, export control and politically-exposed-person screening, with the screening date recorded</li>
+        <li>Basic financial health snapshot: filed accounts, credit rating, any insolvency or winding-up markers</li>
+        <li>Certifications and insurance claimed, verified against the issuing body rather than a supplied PDF</li>
+        <li>A named internal owner, before the relationship starts, not after something goes wrong</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-2">
+    <div class="stage-head"><span class="stage-num">2</span><h3>Risk Classification</h3></div>
+    <p>Not every supplier deserves the same scrutiny, and treating them all identically wastes effort on low-risk relationships while under-resourcing the ones that could actually hurt you. Classification sets how hard everything downstream has to work.</p>
+    <div class="stage-tool">
+      <h4>Tool: Segmentation Matrix</h4>
+      <table class="tier-table">
+        <tr><th>Tier</th><th>Criteria</th><th>Downstream treatment</th></tr>
+        <tr><td>Critical</td><td>No ready substitute, high spend, access to sensitive data or safety-relevant supply</td><td>Full due diligence, continuous monitoring, board-visible risk register entry</td></tr>
+        <tr><td>Significant</td><td>Moderate substitutability, meaningful spend or operational dependency</td><td>Standard due diligence, scheduled periodic review</td></tr>
+        <tr><td>Standard</td><td>Readily substitutable, limited data access, moderate spend</td><td>Light-touch due diligence, annual re-screen</td></tr>
+        <tr><td>Low</td><td>Commodity supply, negligible data access or operational dependency</td><td>Baseline screening only, exception-based review</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-3">
+    <div class="stage-head"><span class="stage-num">3</span><h3>Due Diligence</h3></div>
+    <p>Depth scales with tier. A Critical supplier gets every category below; a Low-tier one might only need the first two. The point of scaling it is to protect the credibility of the check itself: due diligence that's applied uniformly and shallowly to everyone ends up meaning nothing for the suppliers that actually matter.</p>
+    <div class="stage-tool">
+      <h4>Tool: Due-Diligence Checklist (by category)</h4>
+      <ul>
+        <li>Corporate structure and beneficial ownership, including ultimate parent</li>
+        <li>Financial stability: liquidity, debt position, trend over the last three reporting periods</li>
+        <li>Compliance history: litigation, regulatory action, adverse media</li>
+        <li>Cyber and information security posture, proportionate to data access granted</li>
+        <li>Business continuity and disaster recovery capability</li>
+        <li>Fourth-party visibility: who the supplier itself depends on, and whether that's been disclosed</li>
+        <li>ESG and labour standards, where relevant to sector and jurisdiction</li>
+        <li>Insurance adequacy against the value and risk of the relationship</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-4">
+    <div class="stage-head"><span class="stage-num">4</span><h3>Contractual Controls</h3></div>
+    <p>Due diligence findings that don't get written into the contract are opinions, not controls. This is where risk assessment becomes something enforceable.</p>
+    <div class="stage-tool">
+      <h4>Tool: Clause Checklist</h4>
+      <ul>
+        <li>Right-to-audit, with a realistic notice period rather than one nobody will ever actually use</li>
+        <li>Defined SLAs and KPIs, with a measurement method both sides agree on before a dispute happens</li>
+        <li>Notification obligations: change of control, insolvency risk, security incident, subcontracting</li>
+        <li>Data protection and security schedule, scoped to what's actually shared</li>
+        <li>Business continuity and disaster recovery requirements, not just an aspiration clause</li>
+        <li>Termination triggers tied directly to the due-diligence findings that would have failed the supplier at intake</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-5">
+    <div class="stage-head"><span class="stage-num">5</span><h3>Ongoing Monitoring</h3></div>
+    <p>A due-diligence check is a photograph. Monitoring is what tells you the picture is out of date before something breaks because of it. Cadence should follow the tier set in stage two, not run on a single fixed calendar for everyone.</p>
+    <div class="stage-tool">
+      <h4>Tool: Key Risk Indicators (sample)</h4>
+      <ul>
+        <li>Financial health score movement beyond an agreed threshold</li>
+        <li>Delivery or service performance trend against the contracted SLA</li>
+        <li>Adverse media or litigation alert, screened on a cadence matched to tier</li>
+        <li>Sanctions and watch-list re-screening, continuous for Critical, periodic below that</li>
+        <li>Security posture change: a new breach disclosure, a lapsed certification, a failed audit elsewhere</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-6">
+    <div class="stage-head"><span class="stage-num">6</span><h3>Incident Management</h3></div>
+    <p>When a monitoring trigger fires, or something goes wrong that monitoring didn't catch, the organisation needs to already know how seriously to take it and who decides. Working that out for the first time during the incident is how a minor issue becomes a major one.</p>
+    <div class="stage-tool">
+      <h4>Tool: Severity Ladder</h4>
+      <table class="tier-table">
+        <tr><th>Severity</th><th>Example trigger</th><th>Response</th></tr>
+        <tr><td>Minor</td><td>Isolated SLA breach, no downstream impact</td><td>Logged, tracked, reviewed at next scheduled check-in</td></tr>
+        <tr><td>Moderate</td><td>Repeated breach, or a single breach with limited downstream effect</td><td>Formal notice to supplier, corrective action plan required</td></tr>
+        <tr><td>Major</td><td>Service disruption reaching customers or operations</td><td>Escalation to risk owner, contingency supply activated if available</td></tr>
+        <tr><td>Critical</td><td>Safety, security or regulatory breach</td><td>Immediate escalation to senior leadership, contract suspension considered</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-7">
+    <div class="stage-head"><span class="stage-num">7</span><h3>Remediation</h3></div>
+    <p>An incident closed without a corrective action plan is a repeat incident waiting to happen. Remediation is where the organisation decides whether the relationship is worth continuing to invest in fixing, and proves it with evidence rather than a promise.</p>
+    <div class="stage-tool">
+      <h4>Tool: Remediation Tracker Fields</h4>
+      <ul>
+        <li>Root cause, categorised (process failure, capacity, financial distress, fourth-party failure, other)</li>
+        <li>Named corrective actions, each with an owner and a date, not a general commitment to "do better"</li>
+        <li>Verification method: how closure will be evidenced, and by whom other than the supplier itself</li>
+        <li>Re-assessment of risk tier once actions are verified closed, since a remediated supplier isn't automatically back to its original rating</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stage" id="stage-8">
+    <div class="stage-head"><span class="stage-num">8</span><h3>Exit or Replacement</h3></div>
+    <p>Every supplier relationship ends eventually, on someone's terms. The difference between a controlled exit and a crisis is almost entirely a matter of whether the organisation planned the transition before it needed one.</p>
+    <div class="stage-tool">
+      <h4>Tool: Exit Triggers and Transition Checklist</h4>
+      <ul>
+        <li>Trigger criteria defined in advance: persistent non-compliance, unacceptable residual risk, business failure, strategic change</li>
+        <li>A dual-running or transition period long enough to qualify a replacement without a capability gap</li>
+        <li>Data return or destruction confirmed, not assumed</li>
+        <li>Knowledge transfer captured before the relationship ends, not reconstructed afterwards from memory</li>
+        <li>Lessons from the exit fed back into stage two's segmentation criteria, so the next supplier in that category is classified better</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="wrap">
+  <div class="caution">
+    <h3>What this framework is not</h3>
+    <p>It's a working structure, not a certification or a claim of conformity with any specific regulatory regime. Real programmes borrow from ISO 31000, ISO 28000, COSO and sector-specific rules, and the right version of each tool above depends on jurisdiction, sector and the specific risk appetite of the organisation running it.</p>
+    <p>It's also not a substitute for judgement. A checklist tells you what to check; it doesn't tell you what to do when a Critical supplier fails one item and passes everything else. That decision is still a human one, and the framework's job is to make sure the decision gets made with full information, on a known schedule, rather than by accident when something has already gone wrong.</p>
+  </div>
+
+  <div class="bridge">
+    <h3>Where this comes from</h3>
+    <p>Every stage above has a direct equivalent in physical asset and supply chain assurance: onboarding is a supersession check, classification is knowing which accounts carry real financial exposure, monitoring is a stocktake cycle, incident management is what happens when a discrepancy is found, and exit is a formal handover. The vocabulary is corporate; the underlying discipline, checking what's claimed against what's true, on a schedule, with someone accountable for the gap, is the same one built into eighteen years of Defence logistics. See <a href="/same-control-two-vocabularies.html">Same Control, Two Vocabularies</a> for that mapping in more detail.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>Scope and sources.</b> This framework draws on generally published third-party risk practice, including concepts from ISO 31000 (risk management), ISO 28000 (supply chain security) and the COSO internal control framework, generalised into a single lifecycle view. All examples are illustrative and generic.</p>
+    <p><b>Not official.</b> Views are my own and do not represent the position of the Royal Navy, the Ministry of Defence, or any organisation with which I work. Nothing here reproduces any organisation's internal policy, procedure, supplier data or assurance output.</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
