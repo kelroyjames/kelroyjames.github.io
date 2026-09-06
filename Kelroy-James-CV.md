@@ -19,11 +19,9 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 ### Petty Officer (Supply Chain Manager)
 **Royal Navy, Type 45 Destroyer** | May 2024 – Present
 
-- Took over an unsatisfactory supply chain account and designed first-line controls achieving full compliance within 12 months
-- Identified and corrected £2.4M in misallocated expenditure through systematic financial control analysis, triggering a Navy-wide policy instruction to prevent recurrence
-- Co-developed a fleet-wide inventory interrogation application in Palantir Foundry with DE&S and prime contractor teams, enabling real-time visibility and ground-truth validation
-- Reduced financial liability by 80% and developed 3 control artefacts adopted fleet-wide across the Type 45 class
-- Manage dangerous goods compliance (IMDG Code, ADR, IATA DGR) and third-party supplier due diligence using OSINT techniques
+- Took over an account graded unsatisfactory at Fleet Logistics Inspection; identified and corrected £2.4M in misallocated expenditure through systematic financial control analysis, restoring full compliance within 12 months and triggering a Navy-wide policy instruction to prevent recurrence
+- Co-developed the STOROB inventory interrogation application in Palantir Foundry with BAE Systems and DE&S, delivering enterprise-grade data validation and real-time visibility scoped for fleet-wide rollout
+- Ranked in the top 3 of 79 peer supply chain senior rates across Surface Flotilla HQ; reduced financial liability by 80% through asset verification and documentation remediation
 
 ### Petty Officer (Stores Office Manager)
 **Royal Navy, Wildcat Maritime Force** | Apr 2022 – May 2024
@@ -43,6 +41,7 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 **St Vincent Electricity Services** | 1996 – 2008
 
 - Led GPS geo-tagging of national grid infrastructure (12,000+ assets), underpinning an Esri Special Achievement in GIS Award-winning enterprise mapping system
+- Advanced from meter reader to planning specialist through self-directed capability development; awarded Employee of the Year for operational excellence
 
 ---
 
