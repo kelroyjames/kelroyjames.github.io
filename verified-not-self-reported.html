@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Royal Navy trade role descriptions, rank by rank, mapped against public civilian control frameworks — starting with Logistics and expanding trade by trade.">
+<meta property="og:title" content="Verified, Not Self-Reported">
+<meta property="og:description" content="Royal Navy trade role descriptions, rank by rank, mapped against public civilian control frameworks — starting with Logistics and expanding trade by trade.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/verified-not-self-reported.html">
+<style>*{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:22px 26px 0">
+<a href="/" style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#6B7885">&#8592; Kelroy James</a>
+</div>
+<title>Verified, Not Self-Reported</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EEF1EF;
+    --surface:#FFFFFF;
+    --surface-2:#F4F7F5;
+    --ink:#16211D;
+    --ink-2:#3C4C46;
+    --muted:#68786F;
+    --rule:#D2DAD5;
+    --rule-soft:#E2E8E4;
+    --accent:#8A6A2F;
+    --accent-soft:#F2ECDF;
+    --counter:#7A4A1E;
+    --counter-soft:#F3EAE0;
+    --shadow:0 1px 2px rgba(22,33,29,.06), 0 8px 24px rgba(22,33,29,.05);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0D1411;
+      --surface:#151F1A;
+      --surface-2:#1A2621;
+      --ink:#E4EAE6;
+      --ink-2:#B6C4BD;
+      --muted:#84948B;
+      --rule:#293831;
+      --rule-soft:#212E28;
+      --accent:#C9A257;
+      --accent-soft:#2A2317;
+      --counter:#C8935F;
+      --counter-soft:#2A2018;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0D1411;
+    --surface:#151F1A;
+    --surface-2:#1A2621;
+    --ink:#E4EAE6;
+    --ink-2:#B6C4BD;
+    --muted:#84948B;
+    --rule:#293831;
+    --rule-soft:#212E28;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --counter:#C8935F;
+    --counter-soft:#2A2018;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  .reading-progress{position:fixed;top:0;left:0;right:0;height:4px;background:var(--rule-soft);z-index:100}
+  .reading-progress-bar{height:100%;background:var(--accent);width:0%;transition:width .1s ease}
+  .reading-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px}
+  .share-buttons{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .share-btn{
+    padding:7px 14px;font-size:11.5px;font-family:"IBM Plex Mono",monospace;
+    letter-spacing:.1em;text-transform:uppercase;background:var(--surface-2);border:1px solid var(--rule);
+    color:var(--ink-2);text-decoration:none;transition:all .2s ease;cursor:pointer;
+  }
+  .share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+  header.top{background:var(--surface);border-bottom:1px solid var(--rule);position:relative}
+  .featured-image{width:100%;height:320px;object-fit:cover;display:block}
+  @media(min-width:800px){.featured-image{height:420px}}
+  header.top .wrap{padding:56px 24px 42px;display:flex;flex-direction:column;gap:26px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .eyebrow .tick{color:var(--accent)}
+  h1{
+    font-family:Spectral,Georgia,serif;font-weight:700;
+    font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.015em;
+    margin:0;text-wrap:balance;max-width:20ch;
+  }
+  .standfirst{
+    font-family:Spectral,Georgia,serif;font-size:clamp(1.05rem,1.9vw,1.26rem);
+    line-height:1.55;color:var(--ink-2);max-width:62ch;margin:0;
+  }
+  .byline{
+    display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:20px;
+    border-top:1px solid var(--rule-soft);font-size:13.5px;color:var(--muted);
+  }
+  .byline b{color:var(--ink-2);font-weight:600}
+
+  .intro{padding:50px 0 6px}
+  .intro p{margin:0 0 16px;max-width:66ch}
+  .intro p:last-child{margin-bottom:0}
+  .intro em{font-style:italic;color:var(--ink)}
+
+  .sec-head{
+    display:flex;align-items:baseline;gap:16px;margin:54px 0 8px;
+    padding-bottom:12px;border-bottom:1px solid var(--rule);
+  }
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.6rem;font-weight:700;margin:0}
+  .sec-head .count{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin-left:auto;white-space:nowrap;
+  }
+  .sec-note{margin:0 0 18px;font-size:14px;color:var(--muted);max-width:70ch}
+
+  .colkey{
+    display:none;gap:0;margin-top:18px;
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--muted);
+  }
+  @media(min-width:900px){
+    .colkey{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr) minmax(0,1fr);gap:0 22px;padding:0 22px 10px}
+  }
+
+  .rows{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .row{
+    background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);
+    display:grid;grid-template-columns:1fr;
+  }
+  @media(min-width:900px){
+    .row{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr) minmax(0,1fr);}
+  }
+  .cell{padding:20px 22px}
+  @media(min-width:900px){.cell + .cell{border-left:1px solid var(--rule-soft)}}
+  @media(max-width:899px){.cell + .cell{border-top:1px solid var(--rule-soft)}}
+  .cell .mini{
+    display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:9px;
+  }
+  @media(min-width:900px){.cell .mini{display:none}}
+  .term{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin:0 0 6px;line-height:1.3}
+  .cell.left .term{color:var(--ink)}
+  .cell.right .term{color:var(--accent)}
+  .cell p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.55}
+  .cell.mid{background:var(--surface-2)}
+  .cell.mid p{color:var(--ink-2);font-size:14.5px}
+  .frames{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
+  .frame{font-family:"IBM Plex Mono",monospace;font-size:11px;padding:3px 8px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+
+  .source-line{margin:10px 0 0;font-size:12.5px;color:var(--muted);max-width:70ch}
+  .source-line a{color:var(--accent)}
+
+  .caution{
+    margin-top:56px;background:var(--surface);border:1px solid var(--rule);
+    border-left:3px solid var(--counter);padding:26px 28px;box-shadow:var(--shadow);
+  }
+  .caution h3{font-family:Spectral,Georgia,serif;font-size:1.22rem;margin:0 0 10px;font-weight:600}
+  .caution p{margin:0 0 12px;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+  .caution p:last-child{margin-bottom:0}
+
+  .help{
+    margin-top:56px;background:var(--accent-soft);border:1px solid var(--rule);
+    padding:26px 28px;
+  }
+  .help h3{font-family:Spectral,Georgia,serif;font-size:1.22rem;margin:0 0 10px;font-weight:600;color:var(--ink)}
+  .help p{margin:0;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+  .help a{color:var(--accent);font-weight:600}
+
+  footer{margin-top:60px;padding:40px 0 64px;border-top:1px solid var(--rule)}
+  footer p{font-size:13px;color:var(--muted);line-height:1.65;max-width:72ch;margin:0 0 13px}
+  footer b{color:var(--ink-2);font-weight:600}
+  a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  @media(prefers-reduced-motion:no-preference){
+    .row{transition:border-color .18s ease}
+    .row:hover{border-color:var(--accent)}
+  }
+</style>
+
+<header class="top">
+  <img src="/images/articles/same-control-header.jpg" alt="Bridge connecting two perspectives" class="featured-image">
+  <div class="wrap">
+    <div class="eyebrow"><span class="tick">◆</span><span>Evidence appendix</span><span>Official role descriptions → GRC</span><span>Public sources only</span></div>
+    <h1>Verified, not self-reported</h1>
+    <p class="standfirst">Skills translation for service leavers usually runs on trust — take my word that the job maps to what I say it maps to. This runs on the Royal Navy's own published role descriptions instead, rank by rank, trade by trade, checked against public civilian control frameworks.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>Royal Navy, 18 years</span>
+      <span>Mapped against official RN careers pages and published standards</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 7 min read</span>
+      <span>🔄 4 trades mapped so far</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/verified-not-self-reported.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/verified-not-self-reported.html&text=Verified%2C%20Not%20Self-Reported" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=Verified, Not Self-Reported&body=Check this out: https://kelroyjames.com/verified-not-self-reported.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <p>My earlier table, <a href="/same-control-two-vocabularies.html">Same Control, Two Vocabularies</a>, translated my own eighteen years in one trade. Useful for me, but it asks you to trust a stranger's self-report. This page tries to remove that step: instead of describing my own job, it pairs the Royal Navy's own published recruitment role descriptions — the same ones a school-leaver reads before applying — with the nearest civilian control language, rank by rank.</p>
+    <p>It starts with Logistics because that is the trade I can check against my own experience. Engineering, Warfare and Healthcare & Medical follow, built the same way but without a serving logistician's gut-check behind them — treat those three as a first pass, and see the caution below.</p>
+    <p>This also sits inside a bigger shift already under way inside Defence: the <a href="https://assets.publishing.service.gov.uk/media/676141801ca3ec0a49e18f98/JSP_822_V7.0__Vol_8_V4.0_-_Skills_and_Accreditation.pdf">Pan-Defence Skills Framework</a>, referenced in JSP 822, is building a single skills vocabulary across the services. That framework's detail sits inside internal MOD systems, not a public dataset, so nothing here draws on it beyond its published existence. Everything below comes from pages anyone can read at royalnavy.mod.uk.</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <div class="sec-head">
+    <h2>Logistics &amp; Personnel</h2>
+    <span class="count">Checked against my own experience</span>
+  </div>
+  <div class="colkey">
+    <span>Rank</span>
+    <span>What the role does (official)</span>
+    <span>Civilian control language</span>
+  </div>
+  <div class="rows">
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Supply Chain Rating (entry)</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Sources, tracks and coordinates delivery of stores and equipment across a global supply chain.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">First-line control execution</p><p>Basic inventory and asset control.</p><div class="frames"><span class="frame">Three Lines Model</span></div></div>
+    </article>
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Leading Hand</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Runs a stores account: sourcing, allocating and accounting for equipment under personal custody.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">First-line control ownership</p><p>Asset custody controls.</p><div class="frames"><span class="frame">COSO Control Activities</span></div></div>
+    </article>
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Petty Officer</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Moves into line management: mentoring junior logisticians and owning section-level compliance.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">Management oversight</p><p>Control environment component.</p><div class="frames"><span class="frame">COSO</span></div></div>
+    </article>
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Logistics Officer (Lt / Lt Cdr)</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Coordinates supply chain, personnel and financial management concurrently across the organisation.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">Second-line oversight</p><p>Enterprise risk management; cross-functional governance.</p><div class="frames"><span class="frame">IIA Three Lines Model</span></div></div>
+    </article>
+  </div>
+  <p class="source-line">Sourced from <a href="https://www.royalnavy.mod.uk/careers/professions/logistics-and-catering-personnel">royalnavy.mod.uk/careers/professions/logistics-and-catering-personnel</a>, the Supply Chain Rating and Logistics Officer role pages (accessed September 2026).</p>
+
+  <div class="sec-head">
+    <h2>Engineering</h2>
+    <span class="count">First pass — not yet gut-checked by a rate</span>
+  </div>
+  <div class="colkey">
+    <span>Rank</span>
+    <span>What the role does (official)</span>
+    <span>Civilian control language</span>
+  </div>
+  <div class="rows">
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Engineering Rating (entry)</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Completes daily rounds checking equipment to keep the ship operational, and finds solutions when systems fail.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">Preventive control execution</p><p>Scheduled inspection and sign-off before use.</p><div class="frames"><span class="frame">ISO 9001 clause 8</span></div></div>
+    </article>
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Petty Officer Engineering Technician (Section Head)</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Leads engineering projects, takes responsibility for sophisticated equipment, and trains junior engineers.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">First-line technical ownership</p><p>Sign-off authority; control activities.</p><div class="frames"><span class="frame">COSO Control Activities</span></div></div>
+    </article>
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Engineering Officer (Lt / Lt Cdr)</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Leads a department, decides how to resolve complex technical risk under pressure, and answers to the Commanding Officer when something fails.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">Second-line risk oversight</p><p>Engineering governance; operational risk.</p><div class="frames"><span class="frame">Operational resilience</span></div></div>
+    </article>
+  </div>
+  <p class="source-line">Sourced from the Engineering Rating, Direct Entry Petty Officer Engineering Technician and Engineering Officer role pages at royalnavy.mod.uk/careers/roles (accessed September 2026).</p>
+
+  <div class="sec-head">
+    <h2>Warfare</h2>
+    <span class="count">First pass — not yet gut-checked by a rate</span>
+  </div>
+  <div class="colkey">
+    <span>Rank</span>
+    <span>What the role does (official)</span>
+    <span>Civilian control language</span>
+  </div>
+  <div class="rows">
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Warfare Rating (entry)</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Collects and processes data, intelligence and communications, and produces concise, accurate reports under pressure.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">Risk monitoring</p><p>Management information; threat and exception reporting.</p><div class="frames"><span class="frame">Enterprise risk management</span></div></div>
+    </article>
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Warfare Officer (Lt / Lt Cdr)</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Makes strategic and tactical decisions in real time, and is accountable for the safety and effectiveness of the whole team.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">Second-line oversight</p><p>Incident and crisis decision-making.</p><div class="frames"><span class="frame">Operational resilience</span></div></div>
+    </article>
+  </div>
+  <p class="source-line">Sourced from the Warfare Rating and Warfare Officer role pages at royalnavy.mod.uk/careers/roles (accessed September 2026).</p>
+
+  <div class="sec-head">
+    <h2>Healthcare &amp; Medical</h2>
+    <span class="count">First pass — not yet gut-checked by a rate</span>
+  </div>
+  <div class="colkey">
+    <span>Rank</span>
+    <span>What the role does (official)</span>
+    <span>Civilian control language</span>
+  </div>
+  <div class="rows">
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Healthcare &amp; Medical Rating (Qualified)</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Maintains clinical competencies against professional registration (Health and Care Professions Council), and takes on leadership responsibility while progressing.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">Regulated practice</p><p>Professional standards compliance.</p><div class="frames"><span class="frame">Clinical governance</span></div></div>
+    </article>
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Petty Officer (Qualified)</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Takes full charge of equipment and a clinical team's day-to-day standards.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">First-line control ownership</p><p>Control environment component.</p><div class="frames"><span class="frame">COSO</span></div></div>
+    </article>
+    <article class="row">
+      <div class="cell left"><span class="mini">Rank</span><p class="term">Healthcare &amp; Medical Officer</p></div>
+      <div class="cell mid"><span class="mini">Role</span><p>Takes charge of all personnel's medical needs onboard, deployed anywhere in the world.</p></div>
+      <div class="cell right"><span class="mini">Civilian</span><p class="term">Second-line oversight</p><p>Clinical governance and assurance.</p><div class="frames"><span class="frame">Clinical governance frameworks</span></div></div>
+    </article>
+  </div>
+  <p class="source-line">Sourced from the Healthcare & Medical Rating (Qualified) and Healthcare & Medical Officer role pages at royalnavy.mod.uk/careers/roles (accessed September 2026).</p>
+
+  <div class="caution">
+    <h3>What this table is not</h3>
+    <p>The Logistics row is checked against my own service. Engineering, Warfare and Healthcare & Medical are built from the same public recruitment pages, but I have not done those jobs, and recruitment copy is written to attract applicants, not to document duties — it is thinner and more polished than an internal job specification. Treat those three trades as a starting point to correct, not a finished mapping.</p>
+    <p>It is not a compliance mapping. No organisation should treat a row here as evidence that a requirement has been met — the frameworks named are pointers to where the equivalent control is written down, not claims of conformity.</p>
+    <p>And a caution I'd apply to my own argument: naming a control is not evidence that it worked. The value of this page is in helping someone ask better questions about their own experience, not in letting them assert more than they've earned.</p>
+  </div>
+
+  <div class="help">
+    <h3>Help correct or extend it</h3>
+    <p>If you served in Engineering, Warfare or Healthcare & Medical and the middle column doesn't match what the job actually involved, or if you want your own trade added, <a href="mailto:kelroydbjames@gmail.com?subject=Fixing%20the%20trade%20mapping&body=Trade%2Frank%3A%20%0A%0AWhat%20I%27d%20correct%20or%20add%3A%20">email me your trade and rank</a> — this page gets more accurate every time someone who's held the job corrects it, and that's the only way the mapping earns the word "verified" beyond Logistics.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>Sources and scope.</b> Role descriptions summarised from the Royal Navy's published careers pages at royalnavy.mod.uk/careers (Logistics, Engineering, Warfare and Healthcare & Medical professions and role pages, accessed September 2026). The Pan-Defence Skills Framework is referenced via JSP 822 Defence Training and Education, published on gov.uk. Civilian control language references publicly available standards: ISO/IEC 27001, ISO 9001, the COSO internal control framework and the IIA Three Lines Model.</p>
+    <p><b>Not official.</b> Views are my own, based on published sources and eighteen years' service in one of the four trades mapped here. They do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work, and nothing here reproduces any internal policy, procedure or assurance output.</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
