@@ -174,6 +174,11 @@
   /* ============ work ============ */
   .work{display:grid;grid-template-columns:1fr;gap:18px}
   @media(min-width:840px){.work{grid-template-columns:repeat(2,1fr)}}
+  .work-3{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:700px){.work-3{grid-template-columns:repeat(3,1fr);gap:14px}}
+  .work-3 .card h3{font-size:1.02rem}
+  .work-3 .card .inner{padding:20px 18px 18px}
+  .work-3 .card p{font-size:13.8px;line-height:1.5}
   .card{
     background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);
     display:flex;flex-direction:column;text-decoration:none;color:inherit;
@@ -565,7 +570,7 @@
     
     <h3 style="font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:32px 0 16px;color:var(--ink)">Case Studies</h3>
     <p class="intro-p" style="margin-bottom:28px">Seven engagements, one recurring question: does the record match the physical reality, and what breaks first when it doesn't? These three are the most directly relevant; the diagnosis never changed across any of them.</p>
-    <div class="work">
+    <div class="work work-3">
 
       <a class="card" href="/case-study-type45-turnaround.html" style="border-left:4px solid var(--brass)">
         <div class="top-band"></div>
@@ -602,7 +607,7 @@
 
     <h3 style="font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:48px 0 16px;color:var(--ink)">Frameworks & Reference Material</h3>
     <p class="intro-p" style="margin-bottom:28px">Working frameworks and reference material, each pressure-tested against a real problem before it was written up. These three are the most complete work samples; take what's useful, adapt it, and tell me where it breaks.</p>
-    <div class="work">
+    <div class="work work-3">
 
       <a class="card alt" href="/third-party-risk-lifecycle.html">
         <div class="top-band"></div>
@@ -657,7 +662,7 @@
       </div>
 
       <div class="piece">
-        <img class="thumb" src="/images/articles/export-control-supply-chain.png" alt="">
+        <img class="thumb" src="/images/articles/same-control-header.jpg" alt="">
         <div>
           <div class="meta"><span class="status live">Published</span><span class="series">Assurance · GRC</span></div>
           <h3><a href="/convergence-of-cyber-grc-and-physical-logistics.html">The Convergence of Cyber-GRC and Physical Logistics</a></h3>
