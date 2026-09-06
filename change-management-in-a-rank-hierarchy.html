@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Applying Lewin, Kotter and ADKAR to a real culture-change intervention for junior sailors, run from the middle of the hierarchy rather than the top.">
+<meta property="og:title" content="Change Management in a Rank Hierarchy">
+<meta property="og:description" content="Applying Lewin, Kotter and ADKAR to a real culture-change intervention for junior sailors, run from the middle of the hierarchy rather than the top.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/change-management-in-a-rank-hierarchy.html">
+<style>*{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:22px 26px 0">
+<a href="/" style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#6B7885">&#8592; Kelroy James</a>
+</div>
+<title>Change Management in a Rank Hierarchy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EEF1EF;--surface:#FFFFFF;--surface-2:#F4F7F5;--ink:#16211D;--ink-2:#3C4C46;
+    --muted:#68786F;--rule:#D2DAD5;--rule-soft:#E2E8E4;--accent:#8A6A2F;--accent-soft:#F2ECDF;
+    --counter:#7A4A1E;--counter-soft:#F3EAE0;--shadow:0 1px 2px rgba(22,33,29,.06), 0 8px 24px rgba(22,33,29,.05);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0D1411;--surface:#151F1A;--surface-2:#1A2621;--ink:#E4EAE6;--ink-2:#B6C4BD;
+      --muted:#84948B;--rule:#293831;--rule-soft:#212E28;--accent:#C9A257;--accent-soft:#2A2317;
+      --counter:#C8935F;--counter-soft:#2A2018;--shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0D1411;--surface:#151F1A;--surface-2:#1A2621;--ink:#E4EAE6;--ink-2:#B6C4BD;
+    --muted:#84948B;--rule:#293831;--rule-soft:#212E28;--accent:#C9A257;--accent-soft:#2A2317;
+    --counter:#C8935F;--counter-soft:#2A2018;--shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .reading-progress{position:fixed;top:0;left:0;right:0;height:4px;background:var(--rule-soft);z-index:100}
+  .reading-progress-bar{height:100%;background:var(--accent);width:0%;transition:width .1s ease}
+  .reading-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px}
+  .share-buttons{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .share-btn{
+    padding:7px 14px;font-size:11.5px;font-family:"IBM Plex Mono",monospace;
+    letter-spacing:.1em;text-transform:uppercase;background:var(--surface-2);border:1px solid var(--rule);
+    color:var(--ink-2);text-decoration:none;transition:all .2s ease;cursor:pointer;
+  }
+  .share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  header.top{background:var(--surface);border-bottom:1px solid var(--rule);position:relative}
+  header.top .wrap{padding:56px 24px 42px;display:flex;flex-direction:column;gap:26px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .eyebrow .tick{color:var(--accent)}
+  h1{
+    font-family:Spectral,Georgia,serif;font-weight:700;
+    font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.015em;
+    margin:0;text-wrap:balance;max-width:20ch;
+  }
+  .standfirst{font-family:Spectral,Georgia,serif;font-size:clamp(1.05rem,1.9vw,1.26rem);line-height:1.55;color:var(--ink-2);max-width:62ch;margin:0}
+  .byline{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:20px;border-top:1px solid var(--rule-soft);font-size:13.5px;color:var(--muted)}
+  .byline b{color:var(--ink-2);font-weight:600}
+  .intro{padding:50px 0 6px}
+  .intro p{margin:0 0 16px;max-width:66ch}
+  .intro p:last-child{margin-bottom:0}
+  .intro em{font-style:italic;color:var(--ink)}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin:54px 0 8px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.6rem;font-weight:700;margin:0}
+  .sec-head .count{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:auto;white-space:nowrap}
+  .prose p{margin:0 0 16px;max-width:68ch;color:var(--ink-2)}
+  .prose p:last-child{margin-bottom:0}
+  .prose h3{font-family:Spectral,Georgia,serif;font-size:1.25rem;font-weight:600;margin:28px 0 10px;color:var(--ink)}
+  .prose ul,.prose ol{margin:0 0 16px 20px;max-width:66ch}
+  .prose li{color:var(--ink-2);margin-bottom:8px;line-height:1.6}
+  .prose strong{color:var(--ink)}
+  .stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0}
+  @media(min-width:700px){.stat-grid{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);padding:18px 16px;text-align:center}
+  .stat .num{font-family:Spectral,Georgia,serif;font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1}
+  .stat .lbl{font-size:12px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.04em;line-height:1.4}
+  .caution{margin-top:28px;background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--counter);padding:26px 28px;box-shadow:var(--shadow)}
+  .caution h3{font-family:Spectral,Georgia,serif;font-size:1.15rem;margin:0 0 10px;font-weight:600}
+  .caution p{margin:0 0 12px;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+  .caution p:last-child{margin-bottom:0}
+  .model-grid{display:grid;grid-template-columns:1fr;gap:20px;margin:20px 0}
+  @media(min-width:780px){.model-grid{grid-template-columns:repeat(3,1fr)}}
+  .model{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);padding:20px}
+  .model h4{font-family:Spectral,Georgia,serif;font-size:1.05rem;margin:0 0 8px;font-weight:600}
+  .model p{font-size:14px;color:var(--ink-2);margin:0;line-height:1.55}
+  footer{margin-top:60px;padding:40px 0 64px;border-top:1px solid var(--rule)}
+  footer p{font-size:13px;color:var(--muted);line-height:1.65;max-width:72ch;margin:0 0 13px}
+  footer b{color:var(--ink-2);font-weight:600}
+  a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow"><span class="tick">◆</span><span>Framework</span><span>Change Management</span><span>MSc Case Study</span></div>
+    <h1>Change management in a rank hierarchy</h1>
+    <p class="standfirst">Lewin, Kotter and ADKAR applied to a real culture-change intervention for junior sailors — run from the middle of the chain of command, not the top, and measured rather than asserted.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>MSc Logistics Management, University of Lincoln</span>
+      <span>Organisational Management and Change</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 9 min read</span>
+      <span>🔄 3 change models applied</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/change-management-in-a-rank-hierarchy.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/change-management-in-a-rank-hierarchy.html&text=Change%20Management%20in%20a%20Rank%20Hierarchy" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=Change Management in a Rank Hierarchy&body=Check this out: https://kelroyjames.com/change-management-in-a-rank-hierarchy.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <p>Junior sailors make up more than 60% of the Royal Navy's workforce, and survey data consistently shows they feel the least heard. That isn't just a morale issue — junior-rate attrition already runs 15–20% higher than for senior rates, training a replacement costs roughly £250,000, and voluntary outflow climbed from 9.8% to 11.2% in a single year. A workforce that doesn't feel able to speak up is an expensive workforce to keep.</p>
+    <p>In March 2025, while acting as training coordinator for a department of around 60 personnel, I designed and ran a one-day intervention — Empowerment Day — to test whether a structured, junior-led forum could shift that dynamic at unit level. This piece sets out what I built, which recognised change models I used to design and evaluate it, what actually moved, and what didn't.</p>
+    <p><em>The point isn't the specific event. It's that a mid-ranking individual, with no authority to change policy, used established change-management theory to design an intervention, measured its effect with real data, and can show exactly where the theory held and where the hierarchy pulled back.</em></p>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <div class="sec-head"><h2>The Diagnostic</h2><span class="count">Why the gap exists</span></div>
+  <div class="prose">
+    <p>Schein's three-level model of culture explains why empowerment is structurally hard in a rank-based organisation. The visible artefacts — uniforms, insignia, formal ceremony — function as constant signals that rank equates with authority, regardless of technical expertise. The espoused values (teamwork, excellence) sit at odds with decision-making that stays tightly held at senior level, and that mismatch breeds exactly the cynicism Argyris and Schön describe as a defensive routine: people stop believing the stated values apply to them.</p>
+    <p>French and Raven's power-base framework sharpens the point. Junior personnel often hold genuine expertise — they know the equipment, the systems, the daily workarounds — but positional authority still outranks it, and that information has to travel upward slowly through a hierarchy built for control rather than speed. I used a "drip-tray" diagnostic (borrowed from innovation-network practice) to track recurring low-level complaints as early-warning signals rather than noise: repeated concerns about being excluded from decisions, feeling overlooked, and leadership appearing disconnected from the operational reality on the floor. Individually, each complaint looked minor. Cumulatively, they pointed at a real psychological-safety deficit.</p>
+  </div>
+
+  <div class="sec-head"><h2>Three Models, Applied Together</h2><span class="count">Lewin · Kotter · ADKAR</span></div>
+  <div class="prose">
+    <p>No single change model covers strategic, behavioural and individual levels at once, so I applied three in combination: Lewin's Unfreeze-Change-Refreeze for the behavioural transition, Kotter's Eight-Step model for building organisational momentum, and Hiatt's ADKAR for the individual experience of the people actually being asked to change.</p>
+  </div>
+  <div class="model-grid">
+    <div class="model">
+      <h4>Lewin: Unfreeze → Change → Refreeze</h4>
+      <p>Unfreezing removed the visible signals of rank — epaulettes off, senior leaders in a listening-only role — to lower the psychological barrier to honest speech. The change phase worked inside the room. Refreezing is where it struggled: personnel returned to a hierarchy that hadn't changed, and the literature is clear that without formal reinforcement, behaviour reverts once the novelty fades.</p>
+    </div>
+    <div class="model">
+      <h4>Kotter: Eight Steps</h4>
+      <p>Steps one to three landed well — urgency was backed by real retention data, a coalition formed across ranks, and a clear vision was written into the training memorandum. Short-term wins were genuine: 42 ideas generated, 25 assessed viable, 12 implemented within 60 days. Steps six to eight — consolidating gains, producing more change, anchoring the new approach — were only weakly met, because nothing formally tied inclusive leadership to how people got assessed or promoted.</p>
+    </div>
+    <div class="model">
+      <h4>ADKAR: The Individual Lens</h4>
+      <p>Awareness was high (84% of junior personnel recognised the underlying problem). Desire was split — 60% approached the day with genuine openness, 25% with scepticism about whether leadership meant it, 15% treated it as performative. Knowledge and ability both rose measurably during the day itself. Reinforcement was the weakest link, exactly as ADKAR predicts it will be in a hierarchy with no built-in mechanism to sustain new behaviour once the event ends.</p>
+    </div>
+  </div>
+
+  <div class="sec-head"><h2>What Actually Moved</h2><span class="count">Measured, not asserted</span></div>
+  <div class="prose">
+    <p>The point of running three models in parallel was to avoid treating a well-received event as evidence of durable change. The pre- and post-event survey data draws that line clearly.</p>
+  </div>
+  <div class="stat-grid">
+    <div class="stat"><div class="num">73% → 62%</div><div class="lbl">Reluctance to speak honestly in front of senior leaders, before vs. after</div></div>
+    <div class="stat"><div class="num">55% → 89%</div><div class="lbl">Felt leadership listened to their concerns, before vs. after</div></div>
+    <div class="stat"><div class="num">45% → 67%</div><div class="lbl">Felt genuinely valued, before vs. after</div></div>
+    <div class="stat"><div class="num">42 → 12</div><div class="lbl">Ideas generated, and the number actually implemented within 60 days</div></div>
+  </div>
+  <div class="prose">
+    <p>Two events have now run — the March 2025 pilot and a second in December 2025 — with senior endorsement to continue on a termly basis. That's a genuine result. It's also, on its own, exactly the kind of short-term win Kotter warns against mistaking for institutionalised change.</p>
+  </div>
+
+  <div class="caution">
+    <h3>Where the Model Predicts the Limit</h3>
+    <p>Herzberg's hygiene factors were still unresolved months later — the December feedback minutes recorded the same complaints about parking, accommodation and equipment reliability that had been raised before, with one item deferred three separate times in 90 days. No amount of empowerment messaging fixes a hygiene factor that management hasn't actually addressed, and the theory predicts exactly that outcome: recognition and voice can lift motivation only so far against unresolved friction.</p>
+    <p>The deeper limitation is structural. Kotter's institutionalisation steps require decision-making processes, appraisal criteria and resourcing to change, not just an event calendar. A termly Empowerment Day is evidence of goodwill. It is not, by itself, evidence that inclusive leadership has been built into how the organisation actually promotes and resources people — and the model says that gap is where reverted behaviour comes from.</p>
+  </div>
+
+  <div class="sec-head"><h2>What This Means in Practice</h2><span class="count">Four recommendations</span></div>
+  <div class="prose">
+    <ul>
+      <li><strong>Formalise junior input into decision-making</strong> — standing forums feeding into the actual planning cycle, with a visible route for ideas to be accepted, implemented, or explained away, not just collected</li>
+      <li><strong>Put inclusive leadership into appraisal criteria</strong> — protecting junior voice and acting on feedback should be a visible factor in who gets selected for the next role, not a personality trait some leaders happen to have</li>
+      <li><strong>Anchor the initiative to existing strategy</strong>, rather than let it run as a standalone event — linking it to published organisational culture and people strategy documents gives it institutional legitimacy and a claim on resources</li>
+      <li><strong>Train the change agents themselves</strong> — running a session like this well requires the same change-management literacy used to design it, plus the emotional skill to handle the status friction that inclusive leadership creates for people used to command-and-control</li>
+    </ul>
+    <p>None of this is unique to a military hierarchy. Any organisation with a steep authority gradient — a partnership structure, a regulated industry with strict sign-off chains, a large operational workforce reporting through several management layers — hits the same wall: a well-designed, well-received intervention that doesn't survive contact with the incentive structure underneath it. The fix isn't a better event. It's making the event's outputs visible in exactly the systems — appraisal, promotion, resourcing — that decide what the organisation actually rewards.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>Sources and scope.</b> This piece draws on Lewin's Unfreeze-Change-Refreeze framework (1951), Kotter's Eight-Step Change Model (1996), Hiatt's ADKAR model (2006), Schein's three-level culture model, French and Raven's power-base theory, and Herzberg's two-factor theory, alongside the Ministry of Defence's publicly published Armed Forces Continuous Attitude Survey (2024) and the Royal Navy Culture Blueprint (2021). Survey percentages are drawn from anonymous, aggregate feedback collected during the events described, analysed as part of an MSc assignment (University of Lincoln, Organisational Management and Change).</p>
+    <p><b>Not official.</b> Views are my own and are based on general observations about organisational change and leadership. They draw only on published sources and my own anonymised survey analysis, and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing here reproduces any organisation's internal policy, procedure, appraisal record or assurance output, and no individual other than myself is identified.</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
