@@ -116,13 +116,14 @@ Supply chain assurance and GRC specialist with 18 years of Defence logistics exp
 
 ## THOUGHT LEADERSHIP & PUBLICATIONS
 
-**Portfolio Website:** [kelroyjames.com](https://kelroyjames.com) — full case studies with quantified outcomes, two published open-source frameworks, and articles in preparation
+**Portfolio Website:** [kelroyjames.com](https://kelroyjames.com) — full case studies with quantified outcomes, three published open-source frameworks, and articles in preparation
 
 ### Frameworks & Reference Material (Published)
 - **OSINT Supplier Verification Framework** | Seven-stage open-source verification sequence for third-party risk assessment
 - **Same Control, Two Vocabularies** | Military-to-civilian skills translation mapped against ISO 27001, ISO 19011, COSO, Three Lines Model
+- **The Three Lines of Defence: From Warships to AI** | Royal Navy BRd 93 mapped against ISO/IEC 42001 AI governance; presented to the Global Skill Development Council
 
-*Also in preparation: a two-part series on defence skills taxonomy and veteran employability, and an assurance piece on export control gaps between supply chain and IT teams — see site for details.*
+*Also in preparation: defence skills taxonomy (2-part series) and export control gaps between supply chain and IT teams — see site.*
 
 ---
 
@@ -142,6 +143,6 @@ Fellow of Management Systems Auditing (FellowMSA) | AWS Community Builder (Data 
 
 ---
 
-*Views expressed in portfolio and publications are personal and do not represent the position of the Royal Navy, Ministry of Defence, or any organization with which I work.*
+*Views expressed are personal and do not represent the Royal Navy, MOD, or any organisation I work with.*
 
 **Last Updated:** September 2026 | **Portfolio:** [kelroyjames.com](https://kelroyjames.com)
