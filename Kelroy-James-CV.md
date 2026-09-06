@@ -72,24 +72,24 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 
 ## EDUCATION
 
-- MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln — In Progress (Distinction track), Apr 2025 – Apr 2027; route to MCIPS, eligible for CMILT on transition
-- MicroMasters, Supply Chain Management & Advanced Network Design, MIT Center for Transportation & Logistics — Completed 2024
-- Professional Award in Cyber Security & OSINT, Abertay University — Distinction, 2023–2025
+- MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln: In Progress (Distinction track), Apr 2025 – Apr 2027; route to MCIPS, eligible for CMILT on transition
+- MicroMasters, Supply Chain Management & Advanced Network Design, MIT Center for Transportation & Logistics: Completed 2024
+- Professional Award in Cyber Security & OSINT, Abertay University: Distinction, 2023–2025
 
 ## CERTIFICATIONS
 
-- ISO/IEC 27001:2022 / 42001:2023 / 27701:2025 Lead Auditor; Fellow of Management Systems Auditing (FellowMSA) — Mastermind
+- ISO/IEC 27001:2022 / 42001:2023 / 27701:2025 Lead Auditor; Fellow of Management Systems Auditing (FellowMSA): Mastermind
 - CompTIA PenTest+ ce
-- Forward Program (Advanced Professional Development), McKinsey & Company — 2024
-- 1SL Richmond Fellowship, Royal Navy Strategic Studies Centre — 2025–2026
+- Forward Program (Advanced Professional Development), McKinsey & Company: 2024
+- 1SL Richmond Fellowship, Royal Navy Strategic Studies Centre: 2025–2026
 
 Full certification record and continuing education: kelroyjames.com/skills-expertise.html
 
 ## AWARDS
 
-- Royal Navy Inclusivity Award for Innovation — 2023, Wildcat Maritime Force, for leading a 7-person team through operational deployments
-- Chief Naval Logistics Officer's Award — 2018, Coaching, Mentoring & Training
-- Herbert Lott Naval Trust Fund Efficiency Award — 2019, process improvement and operational excellence
+- Royal Navy Inclusivity Award for Innovation: 2023, Wildcat Maritime Force, for leading a 7-person team through operational deployments
+- Chief Naval Logistics Officer's Award: 2018, Coaching, Mentoring & Training
+- Herbert Lott Naval Trust Fund Efficiency Award: 2019, process improvement and operational excellence
 
 ---
 
