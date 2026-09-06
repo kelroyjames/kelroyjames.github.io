@@ -35,6 +35,7 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 **Royal Navy, Surface Flotilla Engineering Support (WLSG)** | Jun 2021 – Apr 2022
 
 - Took on Section Head responsibilities immediately upon promotion to Petty Officer, delivering Tier 1 Compliance Management Tool assurance across the Type 45, Type 23 and Hunt-class mine countermeasures fleets
+- Led the Garage Lite lean-maintenance trial, delivering £250K in cost savings through inventory optimisation and stock-holding reduction
 - Selected for the Percy Hobart Innovation Fellowship, a 12-week digital transformation programme, developing a project on sustainable consignment tracking
 
 ### Leading Hand (Supply Chain)
@@ -60,7 +61,6 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 
 - Sole logistics point of contact for a Joint Forces Logistics Unit in the Falkland Islands, managing a £30K monthly Government Procurement Card budget and cutting low-value purchase orders by 80%
 - Restructured Ministry of Defence inventory accounting (MJDI) across 31 NATO locations while posted to the European Joint Support Unit at SHAPE, Belgium
-- Delivered a £250K cost-saving lean maintenance initiative through inventory optimization and stock-holding reduction
 
 ### GIS Analyst & Infrastructure Planner
 **St Vincent Electricity Services** | 1996 – 2008
@@ -84,10 +84,6 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 - 1SL Richmond Fellowship, Royal Navy Strategic Studies Centre — 2025–2026
 
 Full certification record and continuing education: kelroyjames.com/skills-expertise.html
-
-## PUBLISHED FRAMEWORKS
-
-- OSINT Supplier Verification Framework | Same Control, Two Vocabularies | The Three Lines of Defence: From Warships to AI | Change Management in a Rank Hierarchy — full case studies at kelroyjames.com
 
 ## AWARDS
 
