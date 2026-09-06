@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A working supplier risk register template and schema: the single document that ties onboarding, due diligence, monitoring and remediation together, with a downloadable blank template.">
+<meta property="og:title" content="One Register, Every Supplier">
+<meta property="og:description" content="A working supplier risk register template and schema: the single document that ties onboarding, due diligence, monitoring and remediation together, with a downloadable blank template.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/supplier-risk-register.html">
+<style>*{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:22px 26px 0">
+<a href="/" style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#6B7885">&#8592; Kelroy James</a>
+</div>
+<title>One Register, Every Supplier: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EEF1EF; --surface:#FFFFFF; --surface-2:#F4F7F5;
+    --ink:#16211D; --ink-2:#3C4C46; --muted:#68786F;
+    --rule:#D2DAD5; --rule-soft:#E2E8E4;
+    --accent:#8A6A2F; --accent-soft:#F2ECDF;
+    --counter:#7A4A1E; --counter-soft:#F3EAE0;
+    --good:#3D7A4A; --good-soft:#E9F3EA;
+    --warn:#9A7B1E; --warn-soft:#F5EFDD;
+    --bad:#B23B3B; --bad-soft:#F7E9E9;
+    --shadow:0 1px 2px rgba(22,33,29,.06), 0 8px 24px rgba(22,33,29,.05);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0D1411; --surface:#151F1A; --surface-2:#1A2621;
+      --ink:#E4EAE6; --ink-2:#B6C4BD; --muted:#84948B;
+      --rule:#293831; --rule-soft:#212E28;
+      --accent:#C9A257; --accent-soft:#2A2317;
+      --counter:#C8935F; --counter-soft:#2A2018;
+      --good:#7FBE8C; --good-soft:#16261A;
+      --warn:#D9BE6C; --warn-soft:#2A2412;
+      --bad:#D98080; --bad-soft:#2A1717;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0D1411; --surface:#151F1A; --surface-2:#1A2621;
+    --ink:#E4EAE6; --ink-2:#B6C4BD; --muted:#84948B;
+    --rule:#293831; --rule-soft:#212E28;
+    --accent:#C9A257; --accent-soft:#2A2317;
+    --counter:#C8935F; --counter-soft:#2A2018;
+    --good:#7FBE8C; --good-soft:#16261A;
+    --warn:#D9BE6C; --warn-soft:#2A2412;
+    --bad:#D98080; --bad-soft:#2A1717;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  .reading-progress{position:fixed;top:0;left:0;right:0;height:4px;background:var(--rule-soft);z-index:100}
+  .reading-progress-bar{height:100%;background:var(--accent);width:0%;transition:width .1s ease}
+  .reading-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px}
+  .share-buttons{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .share-btn{
+    padding:7px 14px;font-size:11.5px;font-family:"IBM Plex Mono",monospace;
+    letter-spacing:.1em;text-transform:uppercase;background:var(--surface-2);border:1px solid var(--rule);
+    color:var(--ink-2);text-decoration:none;transition:all .2s ease;cursor:pointer;
+  }
+  .share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+  header.top{background:var(--surface);border-bottom:1px solid var(--rule);position:relative}
+  .featured-image{width:100%;height:320px;object-fit:cover;display:block}
+  @media(min-width:800px){.featured-image{height:420px}}
+  header.top .wrap{padding:56px 24px 42px;display:flex;flex-direction:column;gap:26px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .eyebrow .tick{color:var(--accent)}
+  h1{
+    font-family:Spectral,Georgia,serif;font-weight:700;
+    font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.015em;
+    margin:0;text-wrap:balance;max-width:20ch;
+  }
+  .standfirst{
+    font-family:Spectral,Georgia,serif;font-size:clamp(1.05rem,1.9vw,1.26rem);
+    line-height:1.55;color:var(--ink-2);max-width:64ch;margin:0;
+  }
+  .byline{
+    display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:20px;
+    border-top:1px solid var(--rule-soft);font-size:13.5px;color:var(--muted);
+  }
+  .byline b{color:var(--ink-2);font-weight:600}
+
+  .banner{background:var(--counter-soft);border-bottom:2px solid var(--counter);padding:16px 0}
+  .banner .wrap{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+  .banner b{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--counter)}
+  .banner span{font-size:14px;color:var(--ink-2)}
+
+  .intro{padding:50px 0 6px}
+  .intro p{margin:0 0 16px;max-width:68ch}
+  .intro p:last-child{margin-bottom:0}
+  .intro em{font-style:italic;color:var(--ink)}
+
+  .sec-head{
+    display:flex;align-items:baseline;gap:16px;margin:54px 0 8px;
+    padding-bottom:12px;border-bottom:1px solid var(--rule);
+  }
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.6rem;font-weight:700;margin:0}
+  .sec-head .count{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin-left:auto;white-space:nowrap;
+  }
+  .sec-note{margin:0 0 18px;font-size:14px;color:var(--muted);max-width:72ch}
+
+  table.data{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+  table.data th, table.data td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  table.data th{background:var(--surface-2);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  table.data td{color:var(--ink-2)}
+  .scroll-x{overflow-x:auto;margin-top:8px}
+  .scroll-x table.data{margin-top:0;min-width:920px}
+
+  .pill{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;white-space:nowrap;display:inline-block}
+  .pill.critical{background:var(--bad-soft);color:var(--bad)}
+  .pill.significant{background:var(--warn-soft);color:var(--warn)}
+  .pill.standard{background:var(--accent-soft);color:var(--accent)}
+  .pill.low{background:var(--good-soft);color:var(--good)}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  .dot.green{background:var(--good)}
+  .dot.amber{background:var(--warn)}
+  .dot.red{background:var(--bad)}
+
+  .caution{
+    margin-top:56px;background:var(--surface);border:1px solid var(--rule);
+    border-left:3px solid var(--counter);padding:26px 28px;box-shadow:var(--shadow);
+  }
+  .caution h3{font-family:Spectral,Georgia,serif;font-size:1.22rem;margin:0 0 10px;font-weight:600}
+  .caution p{margin:0 0 12px;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+  .caution p:last-child{margin-bottom:0}
+
+  .bridge{margin-top:56px;background:var(--accent-soft);border:1px solid var(--rule);padding:26px 28px}
+  .bridge h3{font-family:Spectral,Georgia,serif;font-size:1.22rem;margin:0 0 10px;font-weight:600;color:var(--ink)}
+  .bridge p{margin:0;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+
+  .download-box{
+    margin-top:56px;background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);
+    padding:28px 30px;display:flex;flex-direction:column;gap:14px;align-items:flex-start;
+  }
+  .download-box h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;margin:0;font-weight:600}
+  .download-box p{margin:0;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+  .btn-download{
+    display:inline-block;padding:11px 22px;text-decoration:none;
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    background:var(--ink);color:var(--surface);border:1px solid var(--ink);
+  }
+  .btn-download:hover{opacity:.85}
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]) .btn-download{background:var(--accent);color:#0D1411;border-color:var(--accent)}
+  }
+  :root[data-theme="dark"] .btn-download{background:var(--accent);color:#0D1411;border-color:var(--accent)}
+
+  footer{margin-top:60px;padding:40px 0 64px;border-top:1px solid var(--rule)}
+  footer p{font-size:13px;color:var(--muted);line-height:1.65;max-width:72ch;margin:0 0 13px}
+  footer b{color:var(--ink-2);font-weight:600}
+  a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<header class="top">
+  <img src="/images/articles/export-control-supply-chain.png" alt="A supplier due-diligence checklist over an aerospace supply chain scene" class="featured-image">
+  <div class="wrap">
+    <div class="eyebrow"><span class="tick">◆</span><span>Framework</span><span>Third-party risk</span><span>Downloadable template</span></div>
+    <h1>One register, every supplier</h1>
+    <p class="standfirst">A due-diligence file proves you checked one supplier once. A risk register proves you're managing all of them, continuously. This is the schema, a worked example, and a blank template to start your own.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>Companion to the Third-Party Risk lifecycle framework</span>
+      <span>Generic, fictional example data</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 6 min read</span>
+      <span>🔄 Downloadable CSV template</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/supplier-risk-register.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/supplier-risk-register.html&text=One%20Register%2C%20Every%20Supplier" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=One Register, Every Supplier&body=Check this out: https://kelroyjames.com/supplier-risk-register.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<div class="banner">
+  <div class="wrap">
+    <b>Demonstration only</b>
+    <span>The worked example below uses invented supplier names and fictional figures to show the schema in use. No real supplier, client or organisational data appears on this page.</span>
+  </div>
+</div>
+
+<section class="intro">
+  <div class="wrap">
+    <p>Every stage of the <a href="/third-party-risk-lifecycle.html">Third-Party Risk, End to End</a> framework produces a document: an intake record, a due-diligence file, a monitoring alert, a remediation tracker entry. Taken individually, none of them answer the question a risk committee actually asks, which is usually some version of "which of our Critical suppliers have an open finding right now, and who owns fixing it?"</p>
+    <p>That question can only be answered quickly if there's one document that rolls all of it up: a register, not a filing cabinet. A good register lets you answer it without opening a single supplier file. A bad one just tells you a file exists somewhere.</p>
+    <p>What follows is the schema I'd build that register around, a worked example with invented suppliers across all four risk tiers, and a blank version you can copy and start populating with your own.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="sec-head"><h2>The Schema</h2><span class="count">Thirteen columns, each earning its place</span></div>
+  <p class="sec-note">Every column exists to answer a specific question a risk owner will actually ask. A column nobody ever queries is a column that shouldn't be there.</p>
+  <div class="scroll-x">
+    <table class="data">
+      <tr><th>Column</th><th>Question It Answers</th></tr>
+      <tr><td>Supplier ID / Name</td><td>Which supplier, unambiguously (names change; an ID doesn't)</td></tr>
+      <tr><td>Category / Spend Area</td><td>What do they actually supply, and how much does it matter commercially</td></tr>
+      <tr><td>Risk Tier</td><td>Critical, Significant, Standard or Low, set at classification (Stage 2 of the lifecycle) and revisited, not fixed forever</td></tr>
+      <tr><td>Inherent Risk Rating</td><td>How risky is this relationship before any controls are applied</td></tr>
+      <tr><td>Key Risk Drivers</td><td>Why it's rated that way in one line: sole source, data access, jurisdiction, safety relevance</td></tr>
+      <tr><td>Last Due Diligence Date</td><td>When was this actually checked, not assumed</td></tr>
+      <tr><td>Next Review Due</td><td>When does it need checking again, set by tier-based cadence, not a single calendar for everyone</td></tr>
+      <tr><td>KRI Status</td><td>Green, Amber or Red: the live monitoring signal from Stage 5, so deterioration shows up before the scheduled review does</td></tr>
+      <tr><td>Open Findings</td><td>Reference and rating of anything currently outstanding, so nothing sits invisible between audits</td></tr>
+      <tr><td>Remediation Status</td><td>Is the open finding actually being worked, and by when is it due to close</td></tr>
+      <tr><td>Escalation / Exit Flag</td><td>Has this relationship crossed a threshold that puts Stage 8 (exit or replacement) into play</td></tr>
+      <tr><td>Risk Owner</td><td>One named person accountable, not a department or a distribution list</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sec-head"><h2>Worked Example</h2><span class="count">Six fictional suppliers, four tiers</span></div>
+  <p class="sec-note">Invented entries, chosen to show the range: a clean Low-tier relationship, a Critical one mid-remediation, and one flagged for exit.</p>
+  <div class="scroll-x">
+    <table class="data">
+      <tr>
+        <th>Supplier</th><th>Tier</th><th>Category</th><th>KRI</th><th>Open Findings</th><th>Next Review</th><th>Flag</th>
+      </tr>
+      <tr>
+        <td>Supplier A, sole-source component</td>
+        <td><span class="pill critical">Critical</span></td>
+        <td>Manufacturing input</td>
+        <td><span class="dot amber"></span>Amber</td>
+        <td>F1, Partial Compliance</td>
+        <td>3 months</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Supplier B, IT hosting</td>
+        <td><span class="pill critical">Critical</span></td>
+        <td>Data processing</td>
+        <td><span class="dot red"></span>Red</td>
+        <td>F2, Non-Compliance (screening gap)</td>
+        <td>Immediate</td>
+        <td>Escalated to Risk Committee</td>
+      </tr>
+      <tr>
+        <td>Supplier C, regional freight</td>
+        <td><span class="pill significant">Significant</span></td>
+        <td>Logistics</td>
+        <td><span class="dot green"></span>Green</td>
+        <td>None open</td>
+        <td>6 months</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Supplier D, packaging</td>
+        <td><span class="pill standard">Standard</span></td>
+        <td>Consumables</td>
+        <td><span class="dot amber"></span>Amber</td>
+        <td>F3, Partial Compliance</td>
+        <td>9 months</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Supplier E, office supplies</td>
+        <td><span class="pill low">Low</span></td>
+        <td>Commodity</td>
+        <td><span class="dot green"></span>Green</td>
+        <td>None open</td>
+        <td>12 months</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Supplier F, specialist subcontractor</td>
+        <td><span class="pill critical">Critical</span></td>
+        <td>Manufacturing subassembly</td>
+        <td><span class="dot red"></span>Red</td>
+        <td>F4, Non-Compliance (repeat, 3rd cycle)</td>
+        <td>Immediate</td>
+        <td>Exit/replacement triggered</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sec-head"><h2>How It Gets Used</h2><span class="count">A register is only as good as its update discipline</span></div>
+  <table class="data">
+    <tr><th>Trigger</th><th>What Updates</th></tr>
+    <tr><td>Scheduled due-diligence refresh (Stage 3)</td><td>Inherent risk rating, key risk drivers, last DD date, next review date</td></tr>
+    <tr><td>Monitoring alert fires (Stage 5)</td><td>KRI status, immediately, not at the next scheduled review</td></tr>
+    <tr><td>Incident raised (Stage 6)</td><td>Open findings column, with reference and severity</td></tr>
+    <tr><td>Corrective action progresses (Stage 7)</td><td>Remediation status, updated on evidence of progress, not on the owner's word</td></tr>
+    <tr><td>Exit trigger met (Stage 8)</td><td>Escalation/exit flag, and the entry stays visible until the transition is confirmed complete</td></tr>
+  </table>
+  <p style="margin-top:16px;color:var(--ink-2);font-size:15px;max-width:70ch">One person owns the register itself, distinct from the individual risk owners listed in it. Their job is making sure it reflects reality, not making every entry green.</p>
+</div>
+
+<div class="wrap">
+  <div class="download-box">
+    <h3>Download the blank template</h3>
+    <p>A CSV with the schema above, one worked example row, and space to add your own. Opens in Excel, Google Sheets, or any spreadsheet tool.</p>
+    <a class="btn-download" href="/downloads/supplier-risk-register-template.csv" download>Download supplier-risk-register-template.csv</a>
+  </div>
+
+  <div class="caution">
+    <h3>What this is not</h3>
+    <p>It's a starting schema, not a finished system. A real register usually lives inside a GRC platform with automated KRI feeds rather than a spreadsheet, and the exact columns should flex to the regulatory regime and sector it sits in.</p>
+    <p>The worked example is entirely invented. No supplier named here exists, and none of the findings, ratings or dates describe any real relationship.</p>
+  </div>
+
+  <div class="bridge">
+    <h3>Part of a set</h3>
+    <p>This register is the connective tissue for the full lifecycle described in <a href="/third-party-risk-lifecycle.html">Third-Party Risk, End to End</a>, and the same discipline, independent verification, graded findings, owned actions, closure that isn't self-certified, is worked in detail against a fictional company in <a href="/internal-audit-demonstration.html">An Internal Audit, End to End</a>.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>Scope and sources.</b> This schema generalises common third-party risk register practice consistent with ISO 31000 and COSO. All example data is invented for illustration.</p>
+    <p><b>Not official.</b> Views are my own and do not represent the position of the Royal Navy, the Ministry of Defence, or any organisation with which I work. Nothing here reproduces any organisation's internal policy, procedure or supplier data.</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
