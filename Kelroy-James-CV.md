@@ -22,20 +22,20 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 - Took over an account graded unsatisfactory at Fleet Logistics Inspection; identified and corrected £2.4M in misallocated expenditure through systematic financial control analysis, restoring full compliance within 12 months and triggering a Navy-wide policy instruction to prevent recurrence
 - Co-developed the STOROB inventory interrogation application in Palantir Foundry with BAE Systems and DE&S, delivering enterprise-grade data validation and real-time visibility scoped for fleet-wide rollout
 - Ranked in the top 3 of 79 peer supply chain senior rates across Surface Flotilla HQ; reduced financial liability by 80% through asset verification and documentation remediation
+- Founded "Empowerment Day" within Engineering Support Group 1 to build junior rates' self-awareness and career development, adopted as a standing programme
 
 ### Petty Officer (Stores Office Manager)
 **Royal Navy, Wildcat Maritime Force** | Apr 2022 – May 2024
 
 - Consolidated dispersed Force Mobile Equipment into a single accountable stock holding site, closing 14 major loss investigations
-- Turned round a rejected consignment in 3 days to sustain a weapons trial valued at approximately £5M against a fixed flight deadline
-- Coordinated cross-border movement of 7 containers of equipment for a multinational exercise, recovering a mid-exercise equipment shortfall with 3 hours to spare
+- Led a team of 7 through the unit's Gibraltar weapons trial and Exercise Tamber Shield deployments, turning round a rejected consignment in 3 days for a trial valued at approximately £5M and recovering a mid-exercise equipment shortfall with 3 hours to spare; recognised with the Royal Navy Inclusivity Award for Innovation (2023)
+- Completed a strategic innovation course and introduced Mission Model Canvas training to build the team's strategic awareness of innovation; 5 of 7 team members have since been promoted
 
 ### Supply Chain Specialist / Logistics Inspector
 **Royal Navy, Various Postings** | 2008 – 2022
 
 - Designed and delivered an organic, PRINCE2-governed consignment tracking capability, eliminating a 200-mile round trip dependency and sustaining 4 multinational exercises
 - Delivered a £250K cost-saving lean maintenance initiative through inventory optimization and stock-holding reduction
-- Founded a junior rates development programme adopted as a standing programme; Royal Navy Inclusivity Award for Innovation (2023)
 
 ### GIS Analyst & Infrastructure Planner
 **St Vincent Electricity Services** | 1996 – 2008
@@ -62,7 +62,7 @@ Full certification record and continuing education: kelroyjames.com/skills-exper
 
 ## AWARDS
 
-- Royal Navy Inclusivity Award for Innovation — 2023, inaugural recipient
+- Royal Navy Inclusivity Award for Innovation — 2023, Wildcat Maritime Force, for leading a 7-person team through operational deployments
 - Chief Naval Logistics Officer's Award — 2018, Coaching, Mentoring & Training
 - Herbert Lott Naval Trust Fund Efficiency Award — 2019, process improvement and operational excellence
 
