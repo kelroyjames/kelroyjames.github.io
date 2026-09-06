@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="All frameworks and reference material: third-party risk, internal audit, supplier risk register, skills translation, AI governance and change management.">
+<meta property="og:title" content="All Frameworks & Reference Material: Kelroy James">
+<meta property="og:description" content="All frameworks and reference material: third-party risk, internal audit, supplier risk register, skills translation, AI governance and change management.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kelroyjames.com/frameworks.html">
+<link rel="icon" href="/favicon.ico">
+<title>All Frameworks: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EDEEF0; --surface:#FFFFFF; --surface-2:#F4F5F7;
+    --ink:#131C28; --ink-2:#3A4753; --muted:#6B7885;
+    --rule:#D4D8DD; --rule-soft:#E4E7EA;
+    --brass:#8A6A2F; --brass-soft:#F2ECDF;
+    --navy:#24405C; --navy-soft:#E4EAF1;
+    --shadow:0 1px 2px rgba(19,28,40,.06), 0 10px 30px rgba(19,28,40,.06);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0B1119; --surface:#131B24; --surface-2:#18212B;
+      --ink:#E2E7EC; --ink-2:#B4C0CB; --muted:#828F9B;
+      --rule:#27333F; --rule-soft:#1F2A34;
+      --brass:#C9A257; --brass-soft:#2A2317;
+      --navy:#83A6C7; --navy-soft:#182533;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0B1119;--surface:#131B24;--surface-2:#18212B;--ink:#E2E7EC;--ink-2:#B4C0CB;
+    --muted:#828F9B;--rule:#27333F;--rule-soft:#1F2A34;--brass:#C9A257;--brass-soft:#2A2317;
+    --navy:#83A6C7;--navy-soft:#182533;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box;margin:0}
+  img{max-width:100%}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+  .nav{border-bottom:1px solid var(--rule);background:var(--surface);position:sticky;top:0;z-index:20}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:15px;padding-bottom:15px}
+  .mark{font-family:Spectral,Georgia,serif;font-weight:700;font-size:1.45rem;letter-spacing:-.015em;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .mark span{color:var(--brass)}
+  .nav ul{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
+  .nav a.lnk{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+  .nav a.lnk:hover{color:var(--brass)}
+  .nav a.lnk.cta{background:var(--brass);color:#fff;padding:9px 18px}
+
+  .page-head{background:var(--surface);border-bottom:1px solid var(--rule);padding:56px 0 44px}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 18px}
+  h1{font-family:Spectral,Georgia,serif;font-weight:700;font-size:clamp(2rem,4.4vw,2.9rem);line-height:1.1;letter-spacing:-.015em;margin:0 0 18px}
+  .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.02rem,1.8vw,1.2rem);line-height:1.55;color:var(--ink-2);max-width:66ch;margin:0}
+
+  section{padding:56px 0}
+  .work{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:840px){.work{grid-template-columns:repeat(2,1fr)}}
+  .card{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);display:flex;flex-direction:column;text-decoration:none;color:inherit}
+  .card .top-band{height:3px;background:var(--brass)}
+  .card.alt .top-band{background:var(--navy)}
+  .card .inner{padding:26px 26px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .card .type{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .card h3{font-family:Spectral,Georgia,serif;font-size:1.33rem;font-weight:600;margin:0;line-height:1.25}
+  .card p{margin:0;font-size:14.8px;color:var(--ink-2);line-height:1.58}
+  .card .go{margin-top:auto;padding-top:16px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--brass)}
+  .card.alt .go{color:var(--navy)}
+  @media(prefers-reduced-motion:no-preference){.card{transition:transform .18s ease, border-color .18s ease}.card:hover{transform:translateY(-2px);border-color:var(--brass)}}
+
+  footer{padding:34px 0 56px;border-top:1px solid var(--rule)}
+  footer p{font-size:12.5px;color:var(--muted);max-width:74ch;margin:0 0 10px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="mark" href="/">Kelroy James</a>
+    <ul>
+      <li><a class="lnk" href="/#work">Work</a></li>
+      <li><a class="lnk" href="/writing.html">Writing</a></li>
+      <li><a class="lnk" href="/#background">Background</a></li>
+      <li><a class="lnk" href="/for-recruiters.html">For Recruiters</a></li>
+      <li><a class="lnk cta" href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="kicker">Work · All Frameworks &amp; Reference Material</p>
+    <h1>All frameworks &amp; reference material</h1>
+    <p class="lede">Working frameworks, each pressure-tested against a real problem before it was written up. The three most complete are featured on the <a href="/#work">homepage</a>; all nine are here.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="work">
+
+      <a class="card alt" href="/third-party-risk-lifecycle.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Framework · Third-Party Risk</span>
+          <h3>Third-Party Risk, End to End</h3>
+          <p>A full supplier lifecycle methodology, from onboarding through segmentation, due diligence, contractual controls and monitoring to incident management, remediation and exit, with a working tool at every stage.</p>
+          <span class="go">Open the framework →</span>
+        </div>
+      </a>
+
+      <a class="card" href="/internal-audit-demonstration.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Framework · Internal Audit</span>
+          <h3>An Internal Audit, End to End</h3>
+          <p>A full audit cycle worked against a fictional company: scoping, risk-based planning, control objectives, testing, evidence standards, graded findings, owned actions, follow-up and independent closure.</p>
+          <span class="go">Open the demonstration →</span>
+        </div>
+      </a>
+
+      <a class="card alt" href="/supplier-risk-register.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Framework · Third-Party Risk</span>
+          <h3>One Register, Every Supplier</h3>
+          <p>The schema, a worked example across four risk tiers, and a downloadable blank template: the single document that ties onboarding, monitoring and remediation together into one live view.</p>
+          <span class="go">Open the framework →</span>
+        </div>
+      </a>
+
+      <a class="card" href="/diversified-on-paper-concentrated-in-practice.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Paper · Third-Party Risk</span>
+          <h3>Diversified on Paper, Concentrated in Practice</h3>
+          <p>Why supplier count is the wrong diversification metric, a concentration index adapted from antitrust practice, and what a high score actually means for a risk register.</p>
+          <span class="go">Read the paper →</span>
+        </div>
+      </a>
+
+      <a class="card alt" href="/osint-supplier-verification.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Framework · Third-party risk</span>
+          <h3>OSINT Supplier Verification</h3>
+          <p>A seven-stage open-source verification sequence for the case where a supplier's paperwork is complete, its certifications are valid, and something has stopped adding up. Runs from corporate structure through to synthesis, with a confidence grading key and the legal constraints it operates under.</p>
+          <span class="go">Open the framework →</span>
+        </div>
+      </a>
+
+      <a class="card" href="/same-control-two-vocabularies.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Reference · Skills translation</span>
+          <h3>Same Control, Two Vocabularies</h3>
+          <p>Nine things military logisticians do every week, described in the language a civilian assurance function would use, mapped against ISO 27001, ISO 19011, COSO and the Three Lines Model. Built for service leavers who cannot name what they have already been doing.</p>
+          <span class="go">Open the table →</span>
+        </div>
+      </a>
+
+      <a class="card alt" href="/verified-not-self-reported.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Reference · Skills translation</span>
+          <h3>Verified, Not Self-Reported</h3>
+          <p>Royal Navy role descriptions, rank by rank, mapped against public civilian control frameworks: Logistics checked against my own service, Engineering, Warfare and Healthcare & Medical mapped and open for correction.</p>
+          <span class="go">Open the table →</span>
+        </div>
+      </a>
+
+      <a class="card" href="/three-lines-of-defence-warships-to-ai.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Framework · AI Governance</span>
+          <h3>The Three Lines of Defence: From Warships to AI</h3>
+          <p>The Royal Navy's four-tier logistics assurance model (BRd 93) mapped against ISO/IEC 42001 AI governance: Supersession, Minimum Viable Bureaucracy, and why assurance is what gives command the confidence to deploy. Presented to the Global Skill Development Council.</p>
+          <span class="go">Open the framework →</span>
+        </div>
+      </a>
+
+      <a class="card alt" href="/change-management-in-a-rank-hierarchy.html">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Framework · Change Management</span>
+          <h3>Change Management in a Rank Hierarchy</h3>
+          <p>Lewin, Kotter and ADKAR applied to a culture-change intervention I designed and ran for junior sailors, measured with real before/after survey data, including exactly where the models predicted the hierarchy would pull back.</p>
+          <span class="go">Open the framework →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
+    <p>© Kelroy James</p>
+  </div>
+</footer>
+
+</body>
+</html>

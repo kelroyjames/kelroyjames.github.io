@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="All seven case studies: financial control, compliance recovery, digital transformation, project management, asset accountability and expeditionary logistics.">
+<meta property="og:title" content="All Case Studies: Kelroy James">
+<meta property="og:description" content="All seven case studies: financial control, compliance recovery, digital transformation, project management, asset accountability and expeditionary logistics.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kelroyjames.com/case-studies.html">
+<link rel="icon" href="/favicon.ico">
+<title>All Case Studies: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EDEEF0; --surface:#FFFFFF; --surface-2:#F4F5F7;
+    --ink:#131C28; --ink-2:#3A4753; --muted:#6B7885;
+    --rule:#D4D8DD; --rule-soft:#E4E7EA;
+    --brass:#8A6A2F; --brass-soft:#F2ECDF;
+    --navy:#24405C; --navy-soft:#E4EAF1;
+    --shadow:0 1px 2px rgba(19,28,40,.06), 0 10px 30px rgba(19,28,40,.06);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0B1119; --surface:#131B24; --surface-2:#18212B;
+      --ink:#E2E7EC; --ink-2:#B4C0CB; --muted:#828F9B;
+      --rule:#27333F; --rule-soft:#1F2A34;
+      --brass:#C9A257; --brass-soft:#2A2317;
+      --navy:#83A6C7; --navy-soft:#182533;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0B1119;--surface:#131B24;--surface-2:#18212B;--ink:#E2E7EC;--ink-2:#B4C0CB;
+    --muted:#828F9B;--rule:#27333F;--rule-soft:#1F2A34;--brass:#C9A257;--brass-soft:#2A2317;
+    --navy:#83A6C7;--navy-soft:#182533;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box;margin:0}
+  img{max-width:100%}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+  .nav{border-bottom:1px solid var(--rule);background:var(--surface);position:sticky;top:0;z-index:20}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:15px;padding-bottom:15px}
+  .mark{font-family:Spectral,Georgia,serif;font-weight:700;font-size:1.45rem;letter-spacing:-.015em;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .mark span{color:var(--brass)}
+  .nav ul{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
+  .nav a.lnk{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+  .nav a.lnk:hover{color:var(--brass)}
+  .nav a.lnk.cta{background:var(--brass);color:#fff;padding:9px 18px}
+
+  .page-head{background:var(--surface);border-bottom:1px solid var(--rule);padding:56px 0 44px}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 18px}
+  h1{font-family:Spectral,Georgia,serif;font-weight:700;font-size:clamp(2rem,4.4vw,2.9rem);line-height:1.1;letter-spacing:-.015em;margin:0 0 18px}
+  .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.02rem,1.8vw,1.2rem);line-height:1.55;color:var(--ink-2);max-width:66ch;margin:0}
+
+  section{padding:56px 0}
+  .work{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:840px){.work{grid-template-columns:repeat(2,1fr)}}
+  .card{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);display:flex;flex-direction:column;text-decoration:none;color:inherit}
+  .card .top-band{height:3px;background:var(--brass)}
+  .card.alt .top-band{background:var(--navy)}
+  .card .inner{padding:26px 26px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .card .type{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .card h3{font-family:Spectral,Georgia,serif;font-size:1.33rem;font-weight:600;margin:0;line-height:1.25}
+  .card p{margin:0;font-size:14.8px;color:var(--ink-2);line-height:1.58}
+  .card .go{margin-top:auto;padding-top:16px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--brass)}
+  .card.alt .go{color:var(--navy)}
+  @media(prefers-reduced-motion:no-preference){.card{transition:transform .18s ease, border-color .18s ease}.card:hover{transform:translateY(-2px);border-color:var(--brass)}}
+
+  footer{padding:34px 0 56px;border-top:1px solid var(--rule)}
+  footer p{font-size:12.5px;color:var(--muted);max-width:74ch;margin:0 0 10px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="mark" href="/">Kelroy James</a>
+    <ul>
+      <li><a class="lnk" href="/#work">Work</a></li>
+      <li><a class="lnk" href="/writing.html">Writing</a></li>
+      <li><a class="lnk" href="/#background">Background</a></li>
+      <li><a class="lnk" href="/for-recruiters.html">For Recruiters</a></li>
+      <li><a class="lnk cta" href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="kicker">Work · All Case Studies</p>
+    <h1>All case studies</h1>
+    <p class="lede">Seven engagements, one recurring question: does the record match the physical reality, and what breaks first when it doesn't? The three most directly relevant are featured on the <a href="/#work">homepage</a>; all seven are here.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="work">
+
+      <a class="card" href="/case-study-type45-turnaround.html" style="border-left:4px solid var(--brass)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Case Study · Process Improvement</span>
+          <h3>Restoring Control to a Failing Defence Supply Account</h3>
+          <p>Took over an unsatisfactory supply chain account and designed the first-line controls that brought it to full compliance. Three control artefacts adopted. Transferable process improvement, not person-dependent fixes.</p>
+          <span class="go">Read the case study →</span>
+        </div>
+      </a>
+
+      <a class="card alt" href="/case-study-financial-control.html" style="border-left:4px solid var(--brass)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Case Study · Financial Control</span>
+          <h3>Recovering £2.4M Through Financial-Control Analysis</h3>
+          <p>Identified £2.4M in misallocated expenditure through systematic analysis of spending patterns. Root cause analysis led to proposed enterprise-wide policy instruction to prevent recurrence. Enterprise-level systemic improvement.</p>
+          <span class="go">Read the case study →</span>
+        </div>
+      </a>
+
+      <a class="card" href="/case-study-palantir-foundry.html" style="border-left:4px solid var(--brass)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Case Study · Digital Transformation</span>
+          <h3>Turning Inventory Data into Fleet-Wide Operational Visibility</h3>
+          <p>Co-developed fleet-wide inventory interrogation application with prime contractor and DE&S teams. Real-time visibility, ground-truth validation protocols, scoped for enterprise rollout. Digital transformation at scale.</p>
+          <span class="go">Read the case study →</span>
+        </div>
+      </a>
+
+      <a class="card alt" href="/case-study-grc-framework.html" style="border-left:4px solid var(--brass)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Case Study · Enterprise GRC</span>
+          <h3>Modernising Assurance Across Three Inspection Cycles</h3>
+          <p>Re-engineered deck-plate assurance across three Fleet Logistics Inspections through integrated ISO governance, Lean Six Sigma, and the Three Lines Model. £2.4M misallocation identified, full compliance achieved, departmental policy adopted.</p>
+          <span class="go">Read the case study →</span>
+        </div>
+      </a>
+
+      <a class="card" href="/case-study-logistics-movement.html" style="border-left:4px solid var(--brass)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Case Study · Project Management</span>
+          <h3>Building a Compliant Movement Capability from the Ground Up</h3>
+          <p>Delivered greenfield movement capability from governance to operational validation using PRINCE2 methodology. Designed customs compliance SOPs integrating HMRC, JSP 800, and JSP 916. Zero financial liability exposure across multinational deployments.</p>
+          <span class="go">Read the case study →</span>
+        </div>
+      </a>
+
+      <a class="card alt" href="/case-study-force-mobile-equipment.html" style="border-left:4px solid var(--brass)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Case Study · Asset Accountability</span>
+          <h3>Closing Asset-Accountability Gaps Across a Deployed Force</h3>
+          <p>Consolidated dispersed ground support equipment into a single accountable stock holding site following a Tier 3 audit recommendation, and closed fourteen major loss investigations along the way.</p>
+          <span class="go">Read the case study →</span>
+        </div>
+      </a>
+
+      <a class="card" href="/case-study-expeditionary-logistics.html" style="border-left:4px solid var(--brass)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Case Study · Expeditionary Logistics</span>
+          <h3>Protecting a £5M Trial from a Logistics Failure</h3>
+          <p>Turned round a rejected consignment in three days to keep a £5M weapons trial on schedule, then coordinated a seven-container cross-border movement and recovered critical equipment mid-exercise with three hours to spare.</p>
+          <span class="go">Read the case study →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
+    <p>© Kelroy James</p>
+  </div>
+</footer>
+
+</body>
+</html>
