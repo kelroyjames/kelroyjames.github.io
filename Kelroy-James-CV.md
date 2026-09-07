@@ -20,7 +20,7 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 **Royal Navy, Type 45 Destroyer** | May 2024 – Present
 
 - Took over an account graded unsatisfactory at Fleet Logistics Inspection; identified £2.4M in misallocated expenditure through financial control analysis and led the root-cause work behind its correction, restoring full compliance within 12 months and informing a proposed Navy-wide policy instruction to prevent recurrence
-- Co-developed the STOROB inventory interrogation application in Palantir Foundry with BAE Systems and DE&S, delivering enterprise-grade data validation and real-time visibility scoped for fleet-wide rollout
+- Designed requirements with the project manager and stakeholders, then built the STOROB inventory application in Palantir Foundry with BAE Systems and DE&S, scoped for fleet-wide rollout
 - Ranked in the top 3 of 79 peer senior rates across Surface Flotilla HQ, assessed against the whole peer group rather than a single trade; reduced financial liability by 80% through asset verification and documentation remediation
 - Founded "Empowerment Day" within Engineering Support Group 1 to build junior rates' self-awareness and career development, adopted as a standing programme
 
@@ -35,7 +35,7 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 **Royal Navy, Surface Flotilla Engineering Support (WLSG)** | Jun 2021 – Apr 2022
 
 - Took on Section Head responsibilities immediately upon promotion to Petty Officer, delivering Tier 1 Compliance Management Tool assurance across the Type 45, Type 23 and Hunt-class mine countermeasures fleets
-- Led the Garage Lite lean-maintenance trial, delivering £250K in cost savings through inventory optimisation and stock-holding reduction
+- Led the Garage Lite lean-maintenance trial, delivering £250K in cost savings through efficiency and inventory optimisation
 - Selected for the Percy Hobart Innovation Fellowship, a 12-week digital transformation programme, developing a project on sustainable consignment tracking
 
 ### Leading Hand (Supply Chain)
