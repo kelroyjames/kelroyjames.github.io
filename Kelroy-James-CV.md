@@ -78,7 +78,7 @@ GRC and supply chain assurance specialist with 18 years of Defence logistics exp
 
 ## CERTIFICATIONS
 
-- ISO/IEC 27001:2022 / 42001:2023 / 27701:2025 Lead Auditor; Fellow of Management Systems Auditing (FellowMSA): Mastermind
+- ISO/IEC 27001:2022 / 42001:2023 / 27701:2025 Lead Auditor; Fellow of Management Systems Auditing (FellowMSA): Mastermind Assurance
 - CompTIA PenTest+ ce
 - Forward Program (Advanced Professional Development), McKinsey & Company: 2024
 - 1SL Richmond Fellowship, Royal Navy Strategic Studies Centre: 2025–2026
