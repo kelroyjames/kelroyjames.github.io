@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recovering a Failed Account at NATO SHAPE: Kelroy James</title>
+  <meta name="description" content="How a logistics account, including ammunition, was brought from a failed assurance rating to full compliance in nine months, in a tri-service NATO unit, with three artefacts still in use.">
+  <meta property="og:title" content="Recovering a Failed Account at NATO SHAPE">
+  <meta property="og:description" content="How a logistics account, including ammunition, was brought from a failed assurance rating to full compliance in nine months, in a tri-service NATO unit, with three artefacts still in use.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kelroyjames.com/case-study-nato-shape-recovery.html">
+  <meta property="og:image" content="https://kelroyjames.com/images/articles/nato-shape-header.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recovering a Failed Account at NATO SHAPE">
+  <meta name="twitter:description" content="How a logistics account, including ammunition, was brought from a failed assurance rating to full compliance in nine months, in a tri-service NATO unit, with three artefacts still in use.">
+  <meta name="twitter:image" content="https://kelroyjames.com/images/articles/nato-shape-header.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --ink:#131c28;--ink-2:#475569;--muted:#64748b;--surface:#ffffff;--bg:#f8fafc;
+    --rule:#e2e8f0;--brass:#8A6A2F;--brass-soft:#F2ECDF;--shadow:0 1px 3px rgba(19,28,40,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Public Sans",sans-serif;background:var(--bg);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+
+  .site-header{background:var(--surface);border-bottom:1px solid var(--rule);padding:18px 0;position:sticky;top:0;z-index:100}
+  .site-header .wrap{display:flex;justify-content:space-between;align-items:center}
+  .site-header .logo{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
+  .site-header nav{display:flex;gap:28px}
+  .site-header a{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+  .site-header a:hover{color:var(--brass)}
+
+  .cs-hero{background:linear-gradient(135deg,#1c1c1c 0%,#2c2416 50%,#3d3016 100%);color:white;padding:80px 0 60px}
+  .cs-breadcrumb{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px;opacity:.8}
+  .cs-breadcrumb a{color:white;text-decoration:none}
+  .cs-breadcrumb a:hover{text-decoration:underline}
+  .cs-title{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:18px;max-width:20ch}
+  .cs-subtitle{font-size:1.15rem;opacity:.9;margin-bottom:32px;max-width:52ch;line-height:1.5}
+  .cs-meta{display:flex;gap:40px;flex-wrap:wrap}
+  .cs-meta-item{display:flex;flex-direction:column;gap:4px}
+  .cs-meta-label{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
+  .cs-meta-value{font-size:15px;font-weight:600}
+
+  .impact-banner{background:var(--brass-soft);border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);padding:40px 0}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+  .impact-item{text-align:center}
+  .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
+  .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+
+  .cs-content{background:var(--surface);padding:60px 0}
+  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .cs-toc{position:sticky;top:100px;height:fit-content}
+  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc ul{list-style:none}
+  .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
+  .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
+
+  .cs-section{margin-bottom:48px}
+  .cs-section h2{font-family:Spectral,Georgia,serif;font-size:1.8rem;font-weight:700;margin-bottom:16px;color:var(--ink)}
+  .cs-section h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:32px 0 12px;color:var(--ink)}
+  .cs-section p{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:16px;max-width:68ch}
+  .cs-section ul{margin:16px 0 16px 20px}
+  .cs-section li{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:8px}
+  .cs-section strong{color:var(--ink);font-weight:600}
+
+  .highlight-box{background:var(--brass-soft);border-left:4px solid var(--brass);padding:24px;margin:28px 0;border-radius:4px}
+  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin-bottom:10px}
+  .highlight-box p{margin-bottom:0}
+
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:20px 0}
+  .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:13px;font-weight:500;border-radius:4px;box-shadow:var(--shadow)}
+
+  .outcome-list{list-style:none;margin:20px 0}
+  .outcome-list li{padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--rule)}
+  .outcome-list li:last-child{border-bottom:none}
+  .outcome-list li:before{content:"✓";position:absolute;left:0;top:12px;color:var(--brass);font-size:1.3rem;font-weight:bold}
+
+  .cs-footer{background:var(--surface);border-top:1px solid var(--rule);padding:40px 0}
+  .cs-footer .wrap{display:flex;justify-content:space-between;align-items:center}
+  .cs-footer a{color:var(--brass);text-decoration:none;font-weight:600}
+  .cs-footer a:hover{text-decoration:underline}
+
+  @media(max-width:640px){
+    .cs-hero{padding:50px 0 40px}
+    .impact-grid{grid-template-columns:1fr 1fr}
+    .impact-number{font-size:2rem}
+  }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo">Kelroy James</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#work">Work</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/background.html">Background</a>
+    <a href="/#contact">Contact</a>
+      </nav>
+  </div>
+</header>
+
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="cs-breadcrumb">
+      <a href="/">Home</a> / <a href="/case-studies.html">Case Studies</a> / NATO SHAPE Recovery
+    </div>
+    <h1 class="cs-title">Recovering a Failed Account at NATO SHAPE</h1>
+    <p class="cs-subtitle">How a logistics account, including ammunition, was brought from a failed assurance rating to full compliance in a tri-service NATO unit.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Role</span>
+        <span class="cs-meta-value">UAA &amp; Accounting Lead</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Timeline</span>
+        <span class="cs-meta-value">2015 – 2016 (approx. 9 months)</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Scope</span>
+        <span class="cs-meta-value">Tri-service logistics account, incl. ammunition</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Outcome</span>
+        <span class="cs-meta-value">Full Compliance Achieved</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact-banner">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number">3</div>
+        <div class="impact-label">Artefacts Created and Adopted</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">~9 Months</div>
+        <div class="impact-label">Failed to Fully Compliant</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">31</div>
+        <div class="impact-label">NATO Locations Supported</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-content">
+  <div class="wrap">
+    <div class="content-grid">
+
+      <aside class="cs-toc">
+        <h4>Contents</h4>
+        <ul>
+          <li><a href="#challenge">The Challenge</a></li>
+          <li><a href="#context">Context & Stakes</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#artefacts">Artefacts Created</a></li>
+          <li><a href="#outcomes">Outcomes</a></li>
+          <li><a href="#lessons">Lessons Learned</a></li>
+        </ul>
+      </aside>
+
+      <div>
+
+        <div class="cs-section" id="challenge">
+          <h2>The Challenge</h2>
+          <p>I took over as Unit Application Administrator (UAA) at the European Joint Support Unit (EJSU), a tri-service support unit based at NATO's Supreme Headquarters Allied Powers Europe (SHAPE), during the period when the unit had to rectify shortfalls found in a prior assurance inspection ahead of a mandatory revisit.</p>
+          <p>The unit's logistics account, including ammunition accounting, had been assessed as failed against the Army's own logistics assurance framework, a different standard to the Royal Navy's own stores-accounting regulations. As the only Royal Navy rating in a tri-service unit, I held the account's day-to-day accounting responsibility as UAA under segregation of duties, while formally listed as second-in-charge, a reflection of unit structure rather than a lesser share of the work.</p>
+
+          <div class="highlight-box">
+            <h4>The Core Problem</h4>
+            <p>A failed assurance rating on an account that includes ammunition is not a paperwork inconvenience. It means the unit cannot evidence accurate accountability for what it holds, against a framework built around a different service's structures and terminology to the one I had trained in.</p>
+          </div>
+        </div>
+
+        <div class="cs-section" id="context">
+          <h2>Context &amp; Stakes</h2>
+          <p>EJSU provided firm-base logistics support to UK military and MOD civilian personnel and their dependants serving with NATO and the EU, across 31 locations in Europe and Turkey. The account under review covered general stores, uniform and specialist clothing, and ammunition, for a diverse and demanding tri-service population.</p>
+          <p>A mandatory revisit was already scheduled. Failure to close the shortfalls identified at the first inspection risked a second failed rating, with the accountability gap it exposed left open across the unit's full footprint in the meantime.</p>
+        </div>
+
+        <div class="cs-section" id="approach">
+          <h2>Approach</h2>
+          <p>Rather than closing individual findings in isolation, I focused on the structural gaps that had produced them: inconsistent naming conventions, no single source of truth for records, and no standard template tying the account's data to the tri-service systems it was being assessed against.</p>
+          <p>I worked with the unit's RQMS (Regimental Quartermaster Sergeant) to make sure the fixes held up against Army assurance expectations specifically, not just against what I was used to from Royal Navy stores accounting, and to embed the new practice across a unit where every other rating and rank came from a different service.</p>
+        </div>
+
+        <div class="cs-section" id="artefacts">
+          <h2>Artefacts Created</h2>
+
+          <h3>Restructured Asset Naming Conventions</h3>
+          <p>Rebuilt the unit's asset-in-use naming conventions from the ground up, so that every item could be traced consistently across the account rather than relying on ad hoc local naming that varied by who had entered it.</p>
+
+          <h3>Central Records Branch</h3>
+          <p>Established a new Central Records Branch to hold a single, consistent source of truth for the unit's accounting records, replacing a position where records had been dispersed and inconsistently maintained.</p>
+
+          <h3>MIR Template</h3>
+          <p>Created a new MIR template that brought the unit's records in line with MJDI (the tri-service inventory system) and DLF policy, so the account's data mapped cleanly onto the systems and standards it would actually be assessed against.</p>
+
+          <div class="tools-grid">
+            <div class="tool-tag">MJDI</div>
+            <div class="tool-tag">Ammunition Accounting</div>
+            <div class="tool-tag">Segregation of Duties</div>
+            <div class="tool-tag">Tri-Service Assurance</div>
+          </div>
+        </div>
+
+        <div class="cs-section" id="outcomes">
+          <h2>Outcomes</h2>
+
+          <ul class="outcome-list">
+            <li><strong>Account Recovered to Full Compliance</strong> – The account moved from a failed assurance rating to full compliance at the scheduled revisit, in approximately nine months</li>
+            <li><strong>Three Artefacts Created and Adopted</strong> – The naming convention restructure, Central Records Branch and MIR template were all built personally and remained in use as the account's standard practice</li>
+            <li><strong>Recognised at the Inspection</strong> – The inspecting Senior Warrant Officer singled me out during the revisit, described in my Logistics Inspection feedback as being "of infallible character with impeccable attention to detail"</li>
+            <li><strong>Rated Against a Wider Peer Group</strong> – Placed first of five Leading Hands and Corporals reported on by my First Reporting Officer for that tour</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4>Working to Someone Else's Standard</h4>
+            <p>The harder part of this account was not the ammunition or the paperwork volume. It was that the assurance framework I was being measured against was not the one I had trained in. Building fixes that held up against Army assurance expectations, not just Royal Navy ones, meant learning a second framework well enough to close gaps in it, not just translating my own habits across.</p>
+          </div>
+        </div>
+
+        <div class="cs-section" id="lessons">
+          <h2>Lessons Learned</h2>
+
+          <h3>A Title Doesn't Always Describe the Work</h3>
+          <p>Being formally listed as second-in-charge, because I was the only Royal Navy rating in a tri-service structure, said nothing about where the actual accounting responsibility sat. As UAA, that responsibility was mine under segregation of duties regardless of where the org chart placed me.</p>
+
+          <h3>Different Frameworks, Same Underlying Discipline</h3>
+          <p>An account failed against Army assurance standards and an account failed against Royal Navy stores regulations are the same underlying problem: the record does not match what is actually held, and the audit trail cannot prove otherwise. Learning to close that gap under someone else's framework, rather than my own, is the same skill applied further from home.</p>
+
+          <h3>Structural Fixes Outlast the Person Who Built Them</h3>
+          <p>None of the three artefacts here depended on me personally to keep working. That was deliberate: a naming convention, a records branch and a template are all things a successor can pick up without the context I had in my head.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-footer">
+  <div class="wrap">
+    <div>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:6px">Next Case Study</p>
+      <a href="/case-study-type45-turnaround.html">Restoring Control to a Failing Account →</a>
+    </div>
+    <a href="/">← Back to Home</a>
+  </div>
+</section>
+
+</body>
+</html>
