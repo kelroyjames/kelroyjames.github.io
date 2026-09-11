@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Defence Logistics Staff Course is built for high calibre officers of SO2/3 rank. A Petty Officer's case for a place on it, and what five modules against real defence procurement problems actually taught.">
+<meta property="og:title" content="The Course They Almost Didn't Let Me On">
+<meta property="og:description" content="The Defence Logistics Staff Course is built for high calibre officers of SO2/3 rank. A Petty Officer's case for a place on it, and what five modules against real defence procurement problems actually taught.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/the-course-they-almost-didnt-let-me-on.html">
+<meta property="og:image" content="https://kelroyjames.com/images/articles/mit-scm-header.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Course They Almost Didn't Let Me On">
+<meta name="twitter:description" content="The Defence Logistics Staff Course is built for high calibre officers of SO2/3 rank. A Petty Officer's case for a place on it, and what five modules against real defence procurement problems actually taught.">
+<meta name="twitter:image" content="https://kelroyjames.com/images/articles/mit-scm-header.jpg">
+<link rel="canonical" href="https://kelroyjames.com/the-course-they-almost-didnt-let-me-on.html">
+<title>The Course They Almost Didn't Let Me On: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3;
+  --surface:#FFFFFF;
+  --surface-2:#F5F7F9;
+  --ink:#15202B;
+  --ink-2:#3D4C59;
+  --muted:#697887;
+  --rule:#D3DAE1;
+  --rule-soft:#E3E8ED;
+  --accent:#8A6A2F;
+  --accent-soft:#F2ECDF;
+  --signal:#9A6410;
+  --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E141A;--surface:#161F28;--surface-2:#1B252F;--ink:#E5EAEF;--ink-2:#B9C4CE;
+  --muted:#8593A0;--rule:#2A3742;--rule-soft:#222E38;--accent:#C9A257;--accent-soft:#2A2317;
+  --signal:#D9A652;--signal-soft:#2E2617;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  color-scheme:dark;
+}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.topnav{padding:22px 0 0;margin-bottom:44px}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:#6B7885;
+}
+.topnav a:hover{color:var(--accent)}
+
+.masthead{
+  background:var(--surface);
+  border-bottom:1px solid var(--rule);
+  padding:0;
+  margin-bottom:52px;
+  position:relative;
+}
+.masthead-content{
+  padding:48px 0 44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:0 0 20px;
+  text-wrap:balance;
+  max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;
+  font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;
+  padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.65rem;font-weight:700;
+  margin:56px 0 18px;
+  letter-spacing:-.012em;
+}
+.prose h3{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.32rem;font-weight:600;
+  margin:42px 0 14px;
+  letter-spacing:-.008em;
+}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose table{border-collapse:collapse;width:100%;margin:8px 0 20px;font-size:14.5px}
+.prose th,.prose td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule-soft)}
+.prose th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1px solid var(--rule)}
+.table-scroll{overflow-x:auto}
+.prose blockquote{
+  border-left:3px solid var(--accent);
+  padding-left:20px;
+  margin:26px 0;
+  font-style:italic;
+  color:var(--ink-2);
+}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+.reading-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  margin-top:8px;
+}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+
+.references{
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  margin-top:56px;
+}
+.references h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.45rem;font-weight:700;
+  margin:0 0 20px;
+}
+.references ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+}
+.references li{
+  margin-bottom:10px;
+  font-size:14px;
+  line-height:1.6;
+  padding-left:14px;
+  position:relative;
+}
+.references li::before{
+  content:"\2013";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+.references a{color:var(--accent)}
+.disclaimer{font-size:12.5px;color:var(--muted);font-style:italic;margin:24px 0 0;max-width:72ch}
+
+footer{
+  padding:34px 0 56px;
+  border-top:1px solid var(--rule);
+}
+footer p{
+  font-size:12.5px;color:var(--muted);
+  max-width:70ch;margin:0 0 10px;
+  line-height:1.6;
+}
+</style>
+</head>
+<body>
+<div class="wrap topnav">
+  <a href="/writing.html">&#8592; Writing</a>
+</div>
+
+<header class="masthead">
+  <img src="/images/articles/mit-scm-header.jpg" alt="" style="width:100%;height:320px;object-fit:cover;display:block">
+  <div class="wrap masthead-content">
+    <div class="eyebrow">
+      <span class="tick">&#9670;</span>
+      <span>Credentials</span>
+      <span>Defence Logistics</span>
+    </div>
+    <h1>The Course They Almost Didn't Let Me On</h1>
+    <p class="standfirst">The Defence Logistics Staff Course is built for high calibre officers of SO2/3 rank, following completion of their single-service career development staff courses. I applied as a Petty Officer. This is what got me a place on it, and what five modules against real defence procurement problems have actually taught me so far.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>September 2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>&#128214; 9 min read</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>I had been concentrating on MIT's Supply Chain Management MicroMasters for most of the last three years, working through it in the way I described in an earlier piece: properly for a few weeks, then not at all for a few months, until it finally became a serious habit. As I got closer to my resettlement window, it became obvious that I needed to use the time still available to me differently. The Defence Logistics Staff Course was the opportunity in front of me, funded, structured, and running now rather than on my own schedule, and it was worth taking seriously rather than treating as a lower priority than the MicroMasters.</p>
+
+<h2>A Course Built for a Different Rank</h2>
+
+<p>The DLSC exists to award a Post Graduate Diploma in Logistics Management, extendable to a full MSc through a self-funded dissertation, delivered through a partnership between the Logistics Management Training Squadron at RAF College Cranwell and the University of Lincoln. Its own governing instruction is specific about who it is built for: "high calibre officers of SO2/3 rank from the Royal Navy, Army, Royal Marines and Royal Air Force (Logistics and Engineer Branches), ideally following completion of their single service career development staff courses," extending also to Civil Service logisticians at Band C2 and above. Petty Officer sits outside that primary cohort. The same instruction sets out a separate route for WOs and SNCOs from all three services, considered case-by-case on individual strength: previous logistics and academic experience, personal ambition and motivation clearly articulated in the application, and a clear indication of how the course would be used for the benefit of Defence.</p>
+
+<p>My application leaned on the MIT coursework directly. Both the MicroMasters and an earlier MIT-affiliated certificate in advanced supply chain systems planning and design were listed in my academic history alongside a foundation degree, a bachelor's degree, and prior Defence logistics training. My line manager's supporting statement backed the application on the strength of work I had already delivered rather than rank alone. I was selected for Cohort 14, which runs from April 2025 to March 2027.</p>
+
+<h2>Five Modules Against Five Real Problems</h2>
+
+<p>The DLSC comprises eight modules: six compulsory, delivered first, and two electives chosen from a pool of six. Each is a one-week residential period at Cranwell followed by an assignment marked to Masters-level criteria by the University of Lincoln. I have completed the six compulsory modules bar the final capstone, and my marks so far are these.</p>
+
+<div class="table-scroll">
+<table>
+<tr><th>Module</th><th>Mark</th></tr>
+<tr><td>Strategic Management</td><td>80</td></tr>
+<tr><td>Organisational Leadership and Change</td><td>75</td></tr>
+<tr><td>Decision Support in Logistics</td><td>71</td></tr>
+<tr><td>Procurement Management</td><td>77</td></tr>
+<tr><td>Logistics and Supply Chain Management</td><td>66</td></tr>
+</table>
+</div>
+
+<p>The marks matter less to me than what each assignment forced me to do, which was take the module's theory and point it at a live problem inside Defence rather than a textbook case.</p>
+
+<h3>Empowerment Day, Under a Change-Management Lens</h3>
+
+<p>For Organisational Leadership and Change, I used Empowerment Day, the junior-rates development programme I founded within Engineering Support Group 1, as the case study for the assignment itself, applying Lewin's Unfreeze-Change-Refreeze framework, Kotter's Eight-Step Change Model, and Hiatt's ADKAR model to what had, until then, been a practical initiative rather than a theorised one. The analysis drew on the Royal Navy's own retention data: voluntary outflow running at 11.2% in 2024, up from 9.8% the year before, with junior rates leaving at 15 to 20% higher rates than senior rates, against a training cost of roughly £250,000 per junior rate. Internal survey data from the pilot showed 68% of junior rates felt overlooked before the intervention. The assignment's own recommendations went further than the pilot itself: formalising junior-rate input through standing forums feeding into unit planning cycles, building inclusive leadership into promotion and appraisal criteria, and linking unit-level initiatives to the Royal Navy's Culture Blueprint and Armed Forces People Strategy to give them lasting legitimacy rather than relying on one enthusiastic sponsor. A second Empowerment Day ran in December 2025, with management endorsement for it to continue as a recurring event.</p>
+
+<h3>Project Selborne and the Culture Problem Underneath It</h3>
+
+<p>Decision Support in Logistics gave me the framework to look properly at Project Selborne, the Royal Navy's training modularisation programme, as a decision-making problem rather than a purely technical one. Drawing on Kahneman's distinction between fast and deliberate thinking, the Cynefin framework's treatment of complex versus merely complicated problems, and structured techniques such as the Nominal Group Technique for reducing groupthink in hierarchical settings, the assignment argued that Project Selborne's biggest obstacle is cultural rather than technical: building a decision culture where evidence is weighed on its merits rather than deferred to rank. The practical recommendations centred on institutionalising cross-disciplinary review and feedback sessions across the training pipeline, and committing to enterprise-wide data standardisation through platforms such as the Defence Learning and Management Capability, so training data is actually usable by the people who need it rather than locked in whichever system originally captured it.</p>
+
+<h3>A Tier 3 Supplier, Properly Checked</h3>
+
+<p>Procurement gave me the clearest through-line to work already on this site. The assignment was a strategic procurement appraisal of BAE Systems Maritime's Type 26 supply chain, built around an open-source due-diligence assessment of a specific Tier 3 supplier, using the Kraljic Matrix, the CIPS procurement cycle, and the 10Cs supplier evaluation framework. The supplier checked out as legitimate: a stable legal identity, visible company officers, and a programme link corroborated beyond its own self-reporting. Legitimacy, though, is not the same as resilience, and the assignment's real contribution was a proposed integrity-led due diligence layer for lower-tier defence suppliers specifically, sitting on top of standard portfolio-based procurement models: formalised OSINT screening for critical lower-tier suppliers, collaborative assurance support rather than pure audit burden for the SMEs a prime depends on, and governance segmented by the supplier's actual effect on capability rather than applied uniformly across the supply base. It is the same discipline behind the <a href="/osint-supplier-verification.html">OSINT Supplier Verification framework</a> already on this site, applied to a real Tier 3 supplier rather than a constructed example.</p>
+
+<h3>What the Reverse Supply Chain Is Costing Defence</h3>
+
+<p>Logistics and Supply Chain Management compared the Ministry of Defence's reverse supply chain, the process of recovering, repairing, and redeploying equipment rather than replacing it, against reverse logistics practice in the automotive sector, using the 4Rs model and a Level of Repair Analysis framework. The comparison, grounded in National Audit Office reporting on the MoD's global supply chain and support information systems, argued that defence's reverse logistics is weaker on exactly the dimensions the automotive sector has already solved: data visibility, supplier collaboration, and economic decision-making about whether to repair or replace. The recommendations were specific rather than aspirational: moving key suppliers from short-term transactional contracts to five-to-ten-year performance-based agreements piloted with the top ten suppliers, a phased Level of Repair Analysis rollout starting with a single high-value platform to prove the data is trustworthy before scaling, and a dedicated analysis cell with a trained cohort of fifty to a hundred MoD and industry personnel to actually run it, rather than assuming the capability already exists.</p>
+
+<p>Strategic Management, the fifth module, was assessed against a commercial case study rather than a defence one. It added the same strategic toolkit, the Strategy Diamond, PESTLE, Porter's Five Forces, VRIO, to the same critical habit: not taking a business's stated strategy at face value until it has been tested against the evidence.</p>
+
+<h2>Where I Am Now</h2>
+
+<p>I am currently working through Financing Defence Logistics, the first of my two electives, which introduces financial and management accounting for logistics decision-making. The assessment is a 4,000-word written report built around a case study of a constructed defence support company, covering cash management and investment appraisal, cost-volume-profit analysis for a new training product, pricing strategy, sources of capital, and financial ratio analysis, the kind of numerate reasoning that sits underneath every procurement decision I have written about elsewhere on this site.</p>
+
+<p>My second elective is Responsible Supply Chain Strategy, a module added to the DLSC's pool as part of a recent retender. The University of Lincoln went through a competitive retender between January and April 2026 and was awarded a new five-year contract that April, opening a fresh cycle of cohorts numbered from one, running from May 2026 through to September 2032. My own Cohort 14 sits on the existing contract, which concludes with Module 8 in March 2027 as originally scheduled. Responsible Supply Chain Strategy, informed by the Institute of Environmental Management and Assessment and the International Sustainability and ESG Practitioners body, is assessed through a Business Implementation Plan on sustainability and ethics within a supply chain, the elective most directly aligned with the GRC and assurance work I have written about elsewhere on this site.</p>
+
+<p>After that comes the capstone: a work-based project negotiated with a supervisor and the Dissertation Coordinator, intended to apply everything from the programme against a real issue rather than a constructed one.</p>
+
+<p>The Post Graduate Diploma comes with professional accreditation from the Chartered Institute of Logistics and Transport, the Chartered Institute of Procurement and Supply, and the Chartered Management Institute. The MSc, if I choose to complete the dissertation, is a separate, self-funded step after that. Either way, the PGDip attracts a Return of Service of eighteen months, administered by the Royal Navy, which is a reasonable trade for a fully funded Masters-level qualification I would not otherwise have had the case-by-case argument to access.</p>
+
+<h2>What Each Course Actually Does</h2>
+
+<p>The MIT coursework taught me to reason formally about supply chains as flows: physical, financial, and information, moving between trading partners. The DLSC is teaching me to do that same reasoning inside the specific constraints of Defence procurement, MOD funding structures, and the accountability chains that come with spending public money on equipment that has to work the first time it is used in anger. Neither course replaces the other. The MicroMasters gave me the general theory. The DLSC is where I am testing it against BAE Systems Maritime, Type 26, and a junior-rates programme that had to actually work, not just read well in a report.</p>
+
+<p>Petty Officer was not the rank this course was built for. The case for a place on it had to be made on paper, against real evidence, rather than assumed from a rank slide. That is probably the more useful lesson for anyone reading this from a similar rank and wondering whether it is worth applying: it is, but the application has to do the work that the rank alone will not.</p>
+
+<div class="references">
+<h2>References</h2>
+<ul>
+<li>2024DIN07-076, <em>The Defence Logistics Staff Course (DLSC): General Outline and Application Process</em>, Ministry of Defence, July 2024.</li>
+<li>2026DIN07-035, <em>The Defence Logistics Staff Course (DLSC): General Outline and Application Process</em>, Ministry of Defence, April 2026.</li>
+<li>University of Lincoln, <em>Defence Logistics Staff Course: Module Overviews</em>, Lincoln International Business School.</li>
+<li>University of Lincoln, <em>Responsible Supply Chain Strategy: Module Information</em>, Lincoln International Business School.</li>
+<li>University of Lincoln, Results Letter, Student 17630229, MSc Logistics Management (LOGMANMS).</li>
+</ul>
+<p class="disclaimer">The views expressed here are my own. They draw only on published sources and my own academic records and do not represent the position of the Royal Navy, the Ministry of Defence, the University of Lincoln or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
+    <p>&copy; Kelroy James</p>
+  </div>
+</footer>
+
+</body>
+</html>
