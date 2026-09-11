@@ -91,7 +91,7 @@ Full certification record and continuing education: kelroyjames.com/skills-exper
 ## AWARDS
 
 - Royal Navy Inclusivity Award for Innovation: 2023, Wildcat Maritime Force, for leading a 7-person team through operational deployments
-- Chief Naval Logistics Officer's Award: 2018, Coaching, Mentoring & Training
+- Chief Naval Logistics Officer's Award, Supply Chain Branch: 2018, for dangerous goods training delivery to EOD personnel, SOP authorship and mentoring ahead of RN Qualifying Courses
 - Herbert Lott Efficiency Award: 2019, Fleet Stores Coordination Cell team award, Fleet Operations (Northwood)
 
 ---
