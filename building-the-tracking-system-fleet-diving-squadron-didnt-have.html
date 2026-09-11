@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="In 2017, as the Logistics Specialist at Fleet Diving Squadron, I completed a Foundation Degree in Logistics Management with the University of Lincoln. The work-based project installed a consignment-tracking system the unit didn't have, tested live on exercise in Latvia.">
+<meta property="og:title" content="Building the Tracking System Fleet Diving Squadron Didn't Have">
+<meta property="og:description" content="In 2017, as the Logistics Specialist at Fleet Diving Squadron, I completed a Foundation Degree in Logistics Management with the University of Lincoln. The work-based project installed a consignment-tracking system the unit didn't have, tested live on exercise in Latvia.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/building-the-tracking-system-fleet-diving-squadron-didnt-have.html">
+<meta property="og:image" content="https://kelroyjames.com/images/articles/fds-header.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Building the Tracking System Fleet Diving Squadron Didn't Have">
+<meta name="twitter:description" content="In 2017, as the Logistics Specialist at Fleet Diving Squadron, I completed a Foundation Degree in Logistics Management with the University of Lincoln. The work-based project installed a consignment-tracking system the unit didn't have, tested live on exercise in Latvia.">
+<meta name="twitter:image" content="https://kelroyjames.com/images/articles/fds-header.jpg">
+<link rel="canonical" href="https://kelroyjames.com/building-the-tracking-system-fleet-diving-squadron-didnt-have.html">
+<title>Building the Tracking System Fleet Diving Squadron Didn't Have: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3;
+  --surface:#FFFFFF;
+  --surface-2:#F5F7F9;
+  --ink:#15202B;
+  --ink-2:#3D4C59;
+  --muted:#697887;
+  --rule:#D3DAE1;
+  --rule-soft:#E3E8ED;
+  --accent:#8A6A2F;
+  --accent-soft:#F2ECDF;
+  --signal:#9A6410;
+  --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E141A;--surface:#161F28;--surface-2:#1B252F;--ink:#E5EAEF;--ink-2:#B9C4CE;
+  --muted:#8593A0;--rule:#2A3742;--rule-soft:#222E38;--accent:#C9A257;--accent-soft:#2A2317;
+  --signal:#D9A652;--signal-soft:#2E2617;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  color-scheme:dark;
+}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.topnav{padding:22px 0 0;margin-bottom:44px}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:#6B7885;
+}
+.topnav a:hover{color:var(--accent)}
+
+.masthead{
+  background:var(--surface);
+  border-bottom:1px solid var(--rule);
+  padding:0;
+  margin-bottom:52px;
+  position:relative;
+}
+.masthead-content{
+  padding:48px 0 44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:0 0 20px;
+  text-wrap:balance;
+  max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;
+  font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;
+  padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.65rem;font-weight:700;
+  margin:56px 0 18px;
+  letter-spacing:-.012em;
+}
+.prose h3{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.32rem;font-weight:600;
+  margin:42px 0 14px;
+  letter-spacing:-.008em;
+}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose table{border-collapse:collapse;width:100%;margin:8px 0 20px;font-size:14.5px}
+.prose th,.prose td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule-soft)}
+.prose th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1px solid var(--rule)}
+.table-scroll{overflow-x:auto}
+.prose blockquote{
+  border-left:3px solid var(--accent);
+  padding-left:20px;
+  margin:26px 0;
+  font-style:italic;
+  color:var(--ink-2);
+}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+.reading-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  margin-top:8px;
+}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+
+.references{
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  margin-top:56px;
+}
+.references h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.45rem;font-weight:700;
+  margin:0 0 20px;
+}
+.references ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+}
+.references li{
+  margin-bottom:10px;
+  font-size:14px;
+  line-height:1.6;
+  padding-left:14px;
+  position:relative;
+}
+.references li::before{
+  content:"\2013";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+.references a{color:var(--accent)}
+.disclaimer{font-size:12.5px;color:var(--muted);font-style:italic;margin:24px 0 0;max-width:72ch}
+
+footer{
+  padding:34px 0 56px;
+  border-top:1px solid var(--rule);
+}
+footer p{
+  font-size:12.5px;color:var(--muted);
+  max-width:70ch;margin:0 0 10px;
+  line-height:1.6;
+}
+</style>
+</head>
+<body>
+<div class="wrap topnav">
+  <a href="/writing.html">&#8592; Writing</a>
+</div>
+
+<header class="masthead">
+  <img src="/images/articles/fds-header.jpg" alt="" style="width:100%;height:320px;object-fit:cover;display:block">
+  <div class="wrap masthead-content">
+    <div class="eyebrow">
+      <span class="tick">&#9670;</span>
+      <span>Credentials</span>
+      <span>University of Lincoln</span>
+    </div>
+    <h1>Building the Tracking System Fleet Diving Squadron Didn't Have</h1>
+    <p class="standfirst">In 2017, as the Logistics Specialist at Fleet Diving Squadron, I completed a Foundation Degree in Logistics Management with the University of Lincoln. The work-based project was a PRINCE2 proposal to install a consignment-tracking system the unit didn't have, tested live on a NATO exercise in Latvia within the year.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>September 2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>&#128214; 4 min read</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>The BSc I wrote about recently was not the only credential missing from the published account of my career. Before Aston, there was a Foundation Degree in Logistics Management with the University of Lincoln, completed in 2018 through work-based learning while I was serving as the Logistics Specialist at Fleet Diving Squadron. Its centrepiece was a capstone module called Work Based Logistics Project, which required a real organisational problem, managed as a formal project rather than written up as a case study.</p>
+
+<h2>A Foundation Degree Built Around the Unit</h2>
+
+<p>I joined Fleet Diving Squadron in December 2016, responsible for advising Command on all logistics matters. The Squadron is organised across Fleet Diving Units 1 to 3, Southern Diving Unit 2 and an Operational Support Unit, held at high readiness to counter mine and explosive threats worldwide. The capstone module asked students to identify a genuine problem inside their own workplace, then run it through a full project lifecycle: initiation, risk management, stakeholder analysis, phased delivery and a final progress evaluation, marked against Masters-adjacent academic criteria despite sitting within a Foundation Degree.</p>
+
+<h2>The Problem: No System to Track What Left the Building</h2>
+
+<p>Fleet Diving Squadron had a legal obligation under HMRC's Project Waterguard to consign every piece of equipment leaving or re-entering the UK for exercises and deployments. The unit had no consignment-tracking hardware or software of its own to do this, relying on manual procedures and on external units to produce the paperwork, with a single supply chain individual coordinating the whole process. A failure to comply carried financial liability. A failure to produce documentation on time carried the risk of a cancelled exercise.</p>
+
+<p>My recommendation was to install VITALS, the Ministry of Defence's Visibility In Tracking Assets Logistics System, giving the Squadron its own consignment-tracking capability rather than depending on units outside the building.</p>
+
+<h2>Running It as PRINCE2, Not as an Essay</h2>
+
+<p>The project was structured using PRINCE2, the same methodology I would later apply again in defence and industry contexts. A Project Initiation Document set out scope, deliverables and interfaces with the Defence Logistics Framework. SWOT and PESTLE analyses grounded the case in the Squadron's actual constraints: a strong technical workforce and physical infrastructure set against a shortage of logistics personnel, IT hardware and a formal movements structure. A risk register tracked technical, planning and relationship risks through to closure, with contingency funding set aside for delays.</p>
+
+<p>Delivery ran across four phases: installing the VITALS hardware and software in August, training staff through September and into October, fitting the supporting printers and calibrated scales, and then testing the whole system live on Exercise Open Spirit in Latvia that October. The same capability went on to support Exercise Sea Breeze in Ukraine, Exercise Northern Challenge and Exercise Joint Warrior, the recurring exercise cycle the Squadron depends on to stay deployable.</p>
+
+<h2>What Carried Forward</h2>
+
+<p>The Royal Navy issued a call across the Fleet in spring 2026 for volunteers to build dedicated "movements" expertise, covering dangerous-goods competency and consignment-tracking documentation of exactly the kind this project installed at Fleet Diving Squadron in 2017. The unit-level gap I closed then is still, at Fleet level, a gap the Navy is actively working to close now. The PRINCE2 discipline behind it, structured risk management, phased delivery, and compliance built into the process rather than bolted on afterward, is the same discipline running through everything else I have written on this site since.</p>
+
+<div class="references">
+<h2>References</h2>
+<ul>
+<li>James, K. (2017). <em>Work Based Logistics Project: Project Management Report.</em> Assessment Two, Module 2009M, FdSc Logistics Management, University of Lincoln.</li>
+<li>Murray, A., Bennett, N. and Bentley, C. (2009). <em>Managing Successful Projects with PRINCE2.</em> 5th ed. London: TSO.</li>
+<li>Ministry of Defence (2015). <em>JSP 800 Volume 3: Movements.</em> London: Joint Service Publications.</li>
+</ul>
+<p class="disclaimer">The views expressed here are my own. They draw only on published sources and my own academic records and do not represent the position of the Royal Navy, the Ministry of Defence, the University of Lincoln or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output, and no personal or identifying detail from any serving individual is reproduced here.</p>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
+    <p>&copy; Kelroy James</p>
+  </div>
+</footer>
+
+</body>
+</html>
