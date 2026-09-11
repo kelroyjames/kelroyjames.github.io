@@ -130,6 +130,13 @@
   /* ============ essay list ============ */
   section.list{padding:56px 0}
   .essays{display:flex;flex-direction:column}
+  .group-heading{
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--brass);
+    padding:0 0 14px;margin-top:44px;
+    border-bottom:2px solid var(--rule);
+  }
+  .essays > .group-heading:first-child{margin-top:0}
   .essay{
     display:grid;grid-template-columns:1fr;gap:16px;
     padding:32px 0;border-bottom:1px solid var(--rule-soft);
@@ -200,55 +207,7 @@
   <div class="wrap">
     <div class="essays">
 
-      <div class="essay">
-        <img class="thumb" src="/images/articles/fds-header.jpg" alt="">
-        <div>
-          <div class="meta"><span class="status">Published</span> · Credentials · University of Lincoln</div>
-          <h3><a href="/building-the-tracking-system-fleet-diving-squadron-didnt-have.html">Building the Tracking System Fleet Diving Squadron Didn't Have</a></h3>
-          <p>In 2017, as the Logistics Specialist at Fleet Diving Squadron, I completed a Foundation Degree in Logistics Management with the University of Lincoln. The work-based project installed a consignment-tracking system the unit didn't have.</p>
-          <a class="go" href="/building-the-tracking-system-fleet-diving-squadron-didnt-have.html">Read the essay →</a>
-        </div>
-      </div>
-
-      <div class="essay">
-        <img class="thumb" src="/images/articles/sjar-header.jpg" alt="">
-        <div>
-          <div class="meta"><span class="status">Published</span> · Career · Performance Record</div>
-          <h3><a href="/nine-officers-one-recurring-assessment.html">Nine Officers, One Recurring Assessment</a></h3>
-          <p>Between 2014 and 2026, nine reporting officers across five units, with no connection to each other, independently reached for the same word to describe the same thing. What the record actually shows, and what built it.</p>
-          <a class="go" href="/nine-officers-one-recurring-assessment.html">Read the essay →</a>
-        </div>
-      </div>
-
-      <div class="essay">
-        <img class="thumb" src="/images/articles/dlsc-header.jpg" alt="">
-        <div>
-          <div class="meta"><span class="status">Published</span> · Credentials · Defence Logistics</div>
-          <h3><a href="/the-course-they-almost-didnt-let-me-on.html">The Course They Almost Didn't Let Me On</a></h3>
-          <p>The Defence Logistics Staff Course is built for high calibre officers of SO2/3 rank. A Petty Officer's case for a place on it, and what five modules against real defence procurement problems actually taught.</p>
-          <a class="go" href="/the-course-they-almost-didnt-let-me-on.html">Read the essay →</a>
-        </div>
-      </div>
-
-      <div class="essay">
-        <img class="thumb" src="/images/articles/aston-header.jpg" alt="">
-        <div>
-          <div class="meta"><span class="status">Published</span> · Credentials · Aston University</div>
-          <h3><a href="/a-dissertation-about-the-job-i-was-already-doing.html">A Dissertation About the Job I Was Already Doing</a></h3>
-          <p>Between 2017 and 2019, while working in Fleet Operations at Northwood, I completed a BSc (Hons) in Logistics and Operations Management at Aston University. The dissertation was built around the job I was already doing.</p>
-          <a class="go" href="/a-dissertation-about-the-job-i-was-already-doing.html">Read the essay →</a>
-        </div>
-      </div>
-
-      <div class="essay">
-        <img class="thumb" src="/images/articles/mit-scm-header.jpg" alt="">
-        <div>
-          <div class="meta"><span class="status">Published</span> · Credentials · Supply Chain Management</div>
-          <h3><a href="/supply-chain-management-was-already-a-discipline.html">Supply Chain Management Was Already a Discipline</a></h3>
-          <p>Five MIT courses gave a name to work I had been doing for years without one, and the Ministry of Defence has just signed a research partnership with the institution's UK research centre.</p>
-          <a class="go" href="/supply-chain-management-was-already-a-discipline.html">Read the essay →</a>
-        </div>
-      </div>
+      <div class="group-heading">GRC, Assurance &amp; Risk</div>
 
       <div class="essay">
         <img class="thumb" src="/images/articles/same-control-header.jpg" alt="">
@@ -257,16 +216,6 @@
           <h3><a href="/diversified-on-paper-concentrated-in-practice.html">Diversified on Paper, Concentrated in Practice</a></h3>
           <p>A supplier list with fifty names on it can still fail from a single point. How to measure the concentration that headcount hides, and what to do once you've found it.</p>
           <a class="go" href="/diversified-on-paper-concentrated-in-practice.html">Read the essay →</a>
-        </div>
-      </div>
-
-      <div class="essay">
-        <img class="thumb" src="/images/articles/trade-finance-header.jpg" alt="">
-        <div>
-          <div class="meta"><span class="status">Published</span> · Trade Finance</div>
-          <h3><a href="/the-rails-were-rebuilt-and-the-gap-remained.html">The Rails Were Rebuilt, and the Gap Remained</a></h3>
-          <p>Three years after arguing that decentralised finance would widen access to trade finance, what actually got built, and what the data now shows.</p>
-          <a class="go" href="/the-rails-were-rebuilt-and-the-gap-remained.html">Read the essay →</a>
         </div>
       </div>
 
@@ -291,6 +240,18 @@
       </div>
 
       <div class="essay">
+        <img class="thumb" src="/images/articles/trade-finance-header.jpg" alt="">
+        <div>
+          <div class="meta"><span class="status">Published</span> · Trade Finance</div>
+          <h3><a href="/the-rails-were-rebuilt-and-the-gap-remained.html">The Rails Were Rebuilt, and the Gap Remained</a></h3>
+          <p>Three years after arguing that decentralised finance would widen access to trade finance, what actually got built, and what the data now shows.</p>
+          <a class="go" href="/the-rails-were-rebuilt-and-the-gap-remained.html">Read the essay →</a>
+        </div>
+      </div>
+
+      <div class="group-heading">Skills Framework</div>
+
+      <div class="essay">
         <img class="thumb" src="/images/articles/defence-skills-transition.jpg" alt="">
         <div>
           <div class="meta"><span class="status">Published</span> · Skills Framework · 1 of 2</div>
@@ -307,6 +268,58 @@
           <h3><a href="/talent-should-flow-both-ways.html">Talent Should Flow Both Ways</a></h3>
           <p>The Pan-Defence Skills Framework as a Defence Industrial Strategy tool.</p>
           <a class="go" href="/talent-should-flow-both-ways.html">Read the essay →</a>
+        </div>
+      </div>
+
+      <div class="group-heading">Credentials &amp; Career</div>
+
+      <div class="essay">
+        <img class="thumb" src="/images/articles/sjar-header.jpg" alt="">
+        <div>
+          <div class="meta"><span class="status">Published</span> · Career · Performance Record</div>
+          <h3><a href="/nine-officers-one-recurring-assessment.html">Nine Officers, One Recurring Assessment</a></h3>
+          <p>Between 2014 and 2026, nine reporting officers across five units, with no connection to each other, independently reached for the same word to describe the same thing. What the record actually shows, and what built it.</p>
+          <a class="go" href="/nine-officers-one-recurring-assessment.html">Read the essay →</a>
+        </div>
+      </div>
+
+      <div class="essay">
+        <img class="thumb" src="/images/articles/fds-header.jpg" alt="">
+        <div>
+          <div class="meta"><span class="status">Published</span> · Credentials · University of Lincoln</div>
+          <h3><a href="/building-the-tracking-system-fleet-diving-squadron-didnt-have.html">Building the Tracking System Fleet Diving Squadron Didn't Have</a></h3>
+          <p>In 2017, as the Logistics Specialist at Fleet Diving Squadron, I completed a Foundation Degree in Logistics Management with the University of Lincoln. The work-based project installed a consignment-tracking system the unit didn't have.</p>
+          <a class="go" href="/building-the-tracking-system-fleet-diving-squadron-didnt-have.html">Read the essay →</a>
+        </div>
+      </div>
+
+      <div class="essay">
+        <img class="thumb" src="/images/articles/aston-header.jpg" alt="">
+        <div>
+          <div class="meta"><span class="status">Published</span> · Credentials · Aston University</div>
+          <h3><a href="/a-dissertation-about-the-job-i-was-already-doing.html">A Dissertation About the Job I Was Already Doing</a></h3>
+          <p>Between 2017 and 2019, while working in Fleet Operations at Northwood, I completed a BSc (Hons) in Logistics and Operations Management at Aston University. The dissertation was built around the job I was already doing.</p>
+          <a class="go" href="/a-dissertation-about-the-job-i-was-already-doing.html">Read the essay →</a>
+        </div>
+      </div>
+
+      <div class="essay">
+        <img class="thumb" src="/images/articles/dlsc-header.jpg" alt="">
+        <div>
+          <div class="meta"><span class="status">Published</span> · Credentials · Defence Logistics</div>
+          <h3><a href="/the-course-they-almost-didnt-let-me-on.html">The Course They Almost Didn't Let Me On</a></h3>
+          <p>The Defence Logistics Staff Course is built for high calibre officers of SO2/3 rank. A Petty Officer's case for a place on it, and what five modules against real defence procurement problems actually taught.</p>
+          <a class="go" href="/the-course-they-almost-didnt-let-me-on.html">Read the essay →</a>
+        </div>
+      </div>
+
+      <div class="essay">
+        <img class="thumb" src="/images/articles/mit-scm-header.jpg" alt="">
+        <div>
+          <div class="meta"><span class="status">Published</span> · Credentials · Supply Chain Management</div>
+          <h3><a href="/supply-chain-management-was-already-a-discipline.html">Supply Chain Management Was Already a Discipline</a></h3>
+          <p>Five MIT courses gave a name to work I had been doing for years without one, and the Ministry of Defence has just signed a research partnership with the institution's UK research centre.</p>
+          <a class="go" href="/supply-chain-management-was-already-a-discipline.html">Read the essay →</a>
         </div>
       </div>
 
