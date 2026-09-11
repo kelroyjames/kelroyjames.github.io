@@ -20,7 +20,7 @@ GRC and supply chain assurance specialist combining 18 years of Defence logistic
 **Royal Navy, Type 45 Destroyer** | May 2024 – Present
 
 - Took over an account graded unsatisfactory at Fleet Logistics Inspection; identified £2.4M in misallocated expenditure through financial control analysis and led the root-cause work behind its correction, restoring full compliance within 12 months and informing a proposed Navy-wide policy instruction to prevent recurrence
-- Designed requirements with the project manager and stakeholders, then built the STOROB inventory application in Palantir Foundry with BAE Systems and DE&S, scoped for fleet-wide rollout
+- Designed requirements with the project manager and stakeholders, then directed the build of the STOROB inventory application in Palantir Foundry through iterative testing with BAE Systems and DE&S, scoped for fleet-wide rollout
 - Ranked in the top 3 of 79 peer senior rates across Surface Flotilla HQ, assessed against the whole peer group rather than a single trade; reduced financial liability by 80% through asset verification and documentation remediation
 - Founded "Empowerment Day" within Engineering Support Group 1 to build junior rates' self-awareness and career development, adopted as a standing programme
 
