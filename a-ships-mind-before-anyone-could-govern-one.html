@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Two Royal Navy admirals, two years apart, both reached for AI at the heart of a warship. The record corrects which one said what, and shows the capability arriving years before anything could govern it.">
+<meta property="og:title" content="A Ship's Mind, Before Anyone Could Govern One">
+<meta property="og:description" content="Two Royal Navy admirals, two years apart, both reached for AI at the heart of a warship. The record corrects which one said what, and shows the capability arriving years before anything could govern it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/a-ships-mind-before-anyone-could-govern-one.html">
+<meta property="og:image" content="https://kelroyjames.com/images/articles/three-lines-ai/gsdc-slide-02.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Ship's Mind, Before Anyone Could Govern One">
+<meta name="twitter:description" content="Two Royal Navy admirals, two years apart, both reached for AI at the heart of a warship. The record corrects which one said what, and shows the capability arriving years before anything could govern it.">
+<meta name="twitter:image" content="https://kelroyjames.com/images/articles/three-lines-ai/gsdc-slide-02.jpg">
+<link rel="canonical" href="https://kelroyjames.com/a-ships-mind-before-anyone-could-govern-one.html">
+<title>A ship's mind, before anyone could govern one: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3;
+  --surface:#FFFFFF;
+  --surface-2:#F5F7F9;
+  --ink:#15202B;
+  --ink-2:#3D4C59;
+  --muted:#697887;
+  --rule:#D3DAE1;
+  --rule-soft:#E3E8ED;
+  --accent:#8A6A2F;
+  --accent-soft:#F2ECDF;
+  --signal:#9A6410;
+  --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E141A;--surface:#161F28;--surface-2:#1B252F;--ink:#E5EAEF;--ink-2:#B9C4CE;
+  --muted:#8593A0;--rule:#2A3742;--rule-soft:#222E38;--accent:#C9A257;--accent-soft:#2A2317;
+  --signal:#D9A652;--signal-soft:#2E2617;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  color-scheme:dark;
+}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.reading-progress{
+  position:fixed;top:0;left:0;right:0;height:4px;
+  background:var(--rule-soft);z-index:100;
+}
+.reading-progress-bar{
+  height:100%;background:var(--accent);width:0%;
+  transition:width .1s ease;
+}
+
+.topnav{padding:22px 0 0;margin-bottom:44px}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:#6B7885;
+}
+.topnav a:hover{color:var(--accent)}
+
+.masthead{
+  background:var(--surface);
+  border-bottom:1px solid var(--rule);
+  padding:0;
+  margin-bottom:52px;
+  position:relative;
+}
+.featured-image{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+@media(min-width:800px){
+  .featured-image{height:420px}
+}
+.masthead-content{
+  padding:48px 0 44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:0 0 20px;
+  text-wrap:balance;
+  max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;
+  font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;
+  padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.65rem;font-weight:700;
+  margin:56px 0 18px;
+  letter-spacing:-.012em;
+}
+.prose h3{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.32rem;font-weight:600;
+  margin:42px 0 14px;
+  letter-spacing:-.008em;
+}
+.prose h4{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.12rem;font-weight:600;
+  margin:32px 0 10px;
+}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose blockquote{
+  border-left:3px solid var(--accent);
+  padding-left:20px;
+  margin:26px 0;
+  font-style:italic;
+  color:var(--ink-2);
+}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+.pullquote{
+  border-left:4px solid var(--accent);
+  padding:24px 28px;margin:32px 0;
+  background:var(--accent-soft);
+  font-family:Spectral,Georgia,serif;
+  font-size:1.28rem;line-height:1.5;
+  font-weight:600;color:var(--ink);
+  font-style:italic;
+}
+.pullquote cite{
+  display:block;margin-top:10px;font-size:.62em;font-style:normal;
+  font-family:"IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+}
+.reading-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  margin-top:8px;
+}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+.share-buttons{
+  display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;
+}
+.share-btn{
+  padding:7px 14px;font-size:11.5px;
+  font-family:"IBM Plex Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--surface-2);border:1px solid var(--rule);
+  color:var(--ink-2);text-decoration:none;
+  transition:all .2s ease;cursor:pointer;
+}
+.share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.references{
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  margin-top:56px;
+}
+.references h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.45rem;font-weight:700;
+  margin:0 0 20px;
+}
+.references ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+}
+.references li{
+  margin-bottom:10px;
+  font-size:14px;
+  line-height:1.6;
+  padding-left:14px;
+  position:relative;
+}
+.references li::before{
+  content:"\2013";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+.references a{color:var(--accent)}
+.disclaimer{font-size:12.5px;color:var(--muted);font-style:italic;margin:24px 0 0;max-width:72ch}
+
+footer{
+  padding:34px 0 56px;
+  border-top:1px solid var(--rule);
+}
+footer p{
+  font-size:12.5px;color:var(--muted);
+  max-width:70ch;margin:0 0 10px;
+  line-height:1.6;
+}
+</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div class="wrap topnav">
+  <a href="/writing.html">&#8592; Writing</a>
+</div>
+
+<header class="masthead">
+  <img src="/images/articles/three-lines-ai/gsdc-slide-02.jpg" alt="Title slide: The Three Lines of Defence, From Warships to AI" class="featured-image">
+  <div class="wrap masthead-content">
+    <div class="eyebrow">
+      <span class="tick">&#9670;</span>
+      <span>Defence</span>
+      <span>AI Governance</span>
+      <span>History</span>
+    </div>
+    <h1>A ship's mind, before anyone could govern one</h1>
+    <p class="standfirst">I went looking for a quote I half-remembered about the Royal Navy wanting artificial intelligence at the heart of a warship. The quote I found was better than the one I remembered, and it belonged to a different admiral than the one I thought said it.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>12 September 2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>&#128214; 6 min read</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/a-ships-mind-before-anyone-could-govern-one.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/a-ships-mind-before-anyone-could-govern-one.html&text=A%20Ship%27s%20Mind%2C%20Before%20Anyone%20Could%20Govern%20One" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=A Ship's Mind, Before Anyone Could Govern One&body=I thought you might find this interesting: https://kelroyjames.com/a-ships-mind-before-anyone-could-govern-one.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>Writing my last piece sent me back to a memory I have carried for years, of a First Sea Lord saying he wanted artificial intelligence at the heart of a warship. I went to check it before I used it, the way I now check most memories, and the record corrected me on two counts at once. The sentiment was right. The admiral, and the year, were not.</p>
+
+<h4>Two admirals, two years apart</h4>
+
+<p>In September 2015, Admiral Sir George Zambellas, then First Sea Lord, told an audience at the Defence and Security Equipment International exhibition that deploying "intelligent systems at sea, under the sea, in the air and on land" would "revolutionise maritime operations." He named autonomy as one of six technologies set to remake the Royal Navy, alongside additive manufacturing, novel weapons, interoperability, data and people. It is a genuinely early and confident claim, made eleven years ago this month. However, it does not use the words "artificial intelligence," and it does not put anything at the heart of a warship.</p>
+
+<p>That specific claim belongs to his successor. Two years later, in September 2017, Admiral Sir Philip Jones stood at the same exhibition and said it plainly: "Artificial Intelligence is also an important part of this future. Under Project Nelson, the Royal Navy aims to develop a ship's 'mind' at the centre of our warships and headquarters to enable rapid decision making in complex, fast moving operations." A Royal Navy AI system, named, with a purpose and a location, stated by the officer who would have owned the decision to fund it. That is the sentence I had been misremembering as Zambellas's for years, which is itself a small lesson in how a good idea migrates onto whoever you associate most strongly with the era it belongs to.</p>
+
+<h4>The trail Project Nelson leaves</h4>
+
+<p>Project Nelson had already been reported the previous year. Trade coverage from October 2016 describes the Royal Navy as "keen to explore the potential of using machine-learning to improve operational capability in its fighting units," alongside a related programme called STARTLE, built by Roke Manor Research, which used neural networks to flag threats from sensor data and explicitly logged its own decisions for a human to sign off. That detail is worth sitting with. Explainability and human sign-off were being built into a Royal Navy AI system in 2016, seven years before ISO/IEC 42001 made exactly that pairing, transparency and human oversight, a named requirement for AI management systems generally.</p>
+
+<p>What I could not find is a public verdict on Project Nelson itself. The clearest trace of it I can locate after 2017 is a single sentence in the Royal Navy's own 2022 Digital and Data Plan, citing "the advent of NELSON, Navy X and other initiatives" in a section about attracting digital talent, with no further account of what the programme delivered, how it was assured, or whether the ship's mind Jones described was ever built as described. That silence says less about whether Project Nelson succeeded than about the assurance regime that was supposed to sit around it, which left no visible public record of its own, a different and, in some ways, more interesting problem than an outright failure would be.</p>
+
+<div class="pullquote">"Artificial Intelligence is also an important part of this future. Under Project Nelson, the Royal Navy aims to develop a ship's 'mind' at the centre of our warships and headquarters."<cite>Admiral Sir Philip Jones, First Sea Lord, September 2017</cite></div>
+
+<h4>The gap that opened first</h4>
+
+<p>I made an argument in my last piece that Deloitte and Boston Consulting Group are now describing, for AI-enabled enterprises, an assurance destination that military logistics has been operating close to for years. Project Nelson complicates that argument in a useful way, because it shows the same institution reaching for the AI capability years before it had anything resembling a governance standard to point at. Jones asked for a ship's mind in 2017. ISO/IEC 42001, the first international standard for AI management systems, was not published until 2023. Deloitte and BCG's papers making the case for assurance engineered into AI systems by design did not arrive until this September, eleven years after Zambellas's speech and nine after Jones's. The capability ambition and the governance instrument to assure it were never running on the same clock, in defence or, it now appears, anywhere else.</p>
+
+<p>That is a different claim from the one I made last time, and I think it is the more honest one. Naval logistics assurance did not anticipate AI governance because someone in it was unusually far-sighted about artificial intelligence specifically. It held up because the discipline underneath it, judgement exercised close to the risk, graded rather than advisory inspection, a mandatory reckoning when ownership changes hands, does not depend on knowing in advance what kind of system it will eventually be asked to assure. Project Nelson's silence in the public record is what happens when the capability arrives and that discipline is not yet attached to it. The Deloitte and BCG papers are, in effect, a proposal to attach it now, at enterprise scale, to a technology that has already been running for years without it.</p>
+
+<h4>What I would want to know</h4>
+
+<p>I do not know what happened to Project Nelson, and I would rather say that plainly than guess at a tidier ending. What I would want to know, if I could ask either admiral now, is not whether the ship's mind was built, but who was accountable for saying so when it was not, and whether that accountability survived the change of command between them. That is the question this whole territory keeps returning to, under a different name each time: a record is not reality, a capability announced is not a capability assured, and the distance between the two does not close on its own just because the technology it concerns has changed.</p>
+
+<p><em>The views expressed here are my own and are based on general observations about defence technology history and AI governance. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work.</em></p>
+
+<div class="references">
+<h2>References</h2>
+<ul>
+<li>Admiral Sir George Zambellas, First Sea Lord, speech to the Defence and Security Equipment International Naval Technology Zone, "Think Navies, Think Technology," 15 September 2015.</li>
+<li>Admiral Sir Philip Jones, First Sea Lord, speech to the Defence and Security Equipment International Naval Technology Zone, 12 September 2017.</li>
+<li>"AI, AI, captain: Royal Navy warships to set sail with computer officers," <em>The Register</em>, 18 October 2016.</li>
+<li>Royal Navy, <em>Digital and Data Plan 2022&#8211;2025</em>, Ministry of Defence, December 2022.</li>
+<li>International Organization for Standardization, <em>ISO/IEC 42001:2023, Artificial Intelligence Management Systems</em>.</li>
+<li>James, K., <a href="/engineering-trust-what-military-assurance-can-teach-ai-governance.html">"Engineering Trust: What Military Assurance Can Teach AI Governance"</a>, kelroyjames.com, September 2026.</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p>Kelroy James &middot; 2026 &middot; Content may be freely reproduced for non-commercial use with attribution</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
