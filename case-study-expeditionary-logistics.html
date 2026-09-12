@@ -54,6 +54,12 @@
   .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
   .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
 
+  .at-a-glance{background:var(--surface);border-bottom:1px solid var(--rule);padding:28px 0}
+  .glance-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:700px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
+  .glance-item h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
+  .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+
   .cs-content{background:var(--surface);padding:60px 0}
   .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
   @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
@@ -162,6 +168,17 @@
         <div class="impact-number">5 of 7</div>
         <div class="impact-label">Team Members Promoted Since</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="at-a-glance">
+  <div class="wrap">
+    <div class="glance-grid">
+      <div class="glance-item"><h4>Situation</h4><p>A rejected consignment threatened a fixed flight slot on a £5M weapons trial, and a critical item was later pulled mid-exercise in Norway.</p></div>
+      <div class="glance-item"><h4>Action</h4><p>Turned the consignment around in three days, then coordinated a mid-exercise replacement demand, clearance and delivery in parallel against a closing deadline.</p></div>
+      <div class="glance-item"><h4>Result</h4><p>The trial stayed on schedule and the exercise closed with three hours to spare.</p></div>
+      <div class="glance-item"><h4>Transferable</h4><p>Deadline-critical coordination and multi-agency liaison under a fixed external schedule.</p></div>
     </div>
   </div>
 </section>

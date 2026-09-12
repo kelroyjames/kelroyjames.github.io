@@ -53,6 +53,12 @@
   .impact-item{text-align:center}
   .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
   .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+
+  .at-a-glance{background:var(--surface);border-bottom:1px solid var(--rule);padding:28px 0}
+  .glance-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:700px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
+  .glance-item h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
+  .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
   
   .cs-content{background:var(--surface);padding:60px 0}
   .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
@@ -153,6 +159,17 @@
         <div class="impact-number">Enterprise</div>
         <div class="impact-label">Systemic Improvement Impact</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="at-a-glance">
+  <div class="wrap">
+    <div class="glance-grid">
+      <div class="glance-item"><h4>Situation</h4><p>Routine financial reconciliation across Royal Navy supply chain accounts, with no process designed to catch systemic misallocation patterns.</p></div>
+      <div class="glance-item"><h4>Action</h4><p>Cross-referenced ERP transaction data against work orders, delivery notes and historical spend to trace the pattern back to its root causes.</p></div>
+      <div class="glance-item"><h4>Result</h4><p>£2.4M in misallocated expenditure identified and corrected, and a proposed Navy-wide policy instruction to prevent recurrence.</p></div>
+      <div class="glance-item"><h4>Transferable</h4><p>Root-cause analysis, financial control investigation and evidence-based policy recommendations.</p></div>
     </div>
   </div>
 </section>
