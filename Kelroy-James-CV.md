@@ -84,7 +84,7 @@ GRC and supply chain assurance specialist combining 18 years of Defence logistic
 - ISO/IEC 27001:2022, 42001:2023 & 27701:2025 Lead Auditor. Awarded Fellow of Management Systems Auditing (FellowMSA) on completion of all three: Mastermind Assurance
 - CompTIA PenTest+ ce
 - Forward Program (Advanced Professional Development), McKinsey & Company: 2024
-- 1SL Richmond Fellowship, Royal Navy Strategic Studies Centre: 2025–2026
+- Richmond Fellowship, Royal Navy Strategic Studies Centre: 2025–2026
 
 Full certification record and continuing education: kelroyjames.com/skills-expertise.html
 
