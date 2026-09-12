@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A Deloitte paper argues AI is turning assurance into a property of the system itself. A logistics assurance model built for warships has been operating close to that for years.">
+<meta property="og:title" content="The Fleet Already Runs the Model Deloitte Just Named">
+<meta property="og:description" content="A Deloitte paper argues AI is turning assurance into a property of the system itself. A logistics assurance model built for warships has been operating close to that for years.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/the-fleet-already-runs-this-model.html">
+<meta property="og:image" content="https://kelroyjames.com/images/articles/three-lines-ai/gsdc-slide-02.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Fleet Already Runs the Model Deloitte Just Named">
+<meta name="twitter:description" content="A Deloitte paper argues AI is turning assurance into a property of the system itself. A logistics assurance model built for warships has been operating close to that for years.">
+<meta name="twitter:image" content="https://kelroyjames.com/images/articles/three-lines-ai/gsdc-slide-02.jpg">
+<link rel="canonical" href="https://kelroyjames.com/the-fleet-already-runs-this-model.html">
+<title>The fleet already runs the model Deloitte just named: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3;
+  --surface:#FFFFFF;
+  --surface-2:#F5F7F9;
+  --ink:#15202B;
+  --ink-2:#3D4C59;
+  --muted:#697887;
+  --rule:#D3DAE1;
+  --rule-soft:#E3E8ED;
+  --accent:#8A6A2F;
+  --accent-soft:#F2ECDF;
+  --signal:#9A6410;
+  --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E141A;--surface:#161F28;--surface-2:#1B252F;--ink:#E5EAEF;--ink-2:#B9C4CE;
+  --muted:#8593A0;--rule:#2A3742;--rule-soft:#222E38;--accent:#C9A257;--accent-soft:#2A2317;
+  --signal:#D9A652;--signal-soft:#2E2617;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  color-scheme:dark;
+}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.reading-progress{
+  position:fixed;top:0;left:0;right:0;height:4px;
+  background:var(--rule-soft);z-index:100;
+}
+.reading-progress-bar{
+  height:100%;background:var(--accent);width:0%;
+  transition:width .1s ease;
+}
+
+.topnav{padding:22px 0 0;margin-bottom:44px}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:#6B7885;
+}
+.topnav a:hover{color:var(--accent)}
+
+.masthead{
+  background:var(--surface);
+  border-bottom:1px solid var(--rule);
+  padding:0;
+  margin-bottom:52px;
+  position:relative;
+}
+.featured-image{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+@media(min-width:800px){
+  .featured-image{height:420px}
+}
+.masthead-content{
+  padding:48px 0 44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:0 0 20px;
+  text-wrap:balance;
+  max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;
+  font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;
+  padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.65rem;font-weight:700;
+  margin:56px 0 18px;
+  letter-spacing:-.012em;
+}
+.prose h3{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.32rem;font-weight:600;
+  margin:42px 0 14px;
+  letter-spacing:-.008em;
+}
+.prose h4{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.12rem;font-weight:600;
+  margin:32px 0 10px;
+}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose blockquote{
+  border-left:3px solid var(--accent);
+  padding-left:20px;
+  margin:26px 0;
+  font-style:italic;
+  color:var(--ink-2);
+}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+.pullquote{
+  border-left:4px solid var(--accent);
+  padding:24px 28px;margin:32px 0;
+  background:var(--accent-soft);
+  font-family:Spectral,Georgia,serif;
+  font-size:1.28rem;line-height:1.5;
+  font-weight:600;color:var(--ink);
+  font-style:italic;
+}
+.pullquote cite{
+  display:block;margin-top:10px;font-size:.62em;font-style:normal;
+  font-family:"IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+}
+.reading-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  margin-top:8px;
+}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+.share-buttons{
+  display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;
+}
+.share-btn{
+  padding:7px 14px;font-size:11.5px;
+  font-family:"IBM Plex Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--surface-2);border:1px solid var(--rule);
+  color:var(--ink-2);text-decoration:none;
+  transition:all .2s ease;cursor:pointer;
+}
+.share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.references{
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  margin-top:56px;
+}
+.references h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.45rem;font-weight:700;
+  margin:0 0 20px;
+}
+.references h3,.references h4{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:24px 0 12px;
+  font-weight:500;
+}
+.references ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+}
+.references li{
+  margin-bottom:10px;
+  font-size:14px;
+  line-height:1.6;
+  padding-left:14px;
+  position:relative;
+}
+.references li::before{
+  content:"\2014";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+
+footer{
+  padding:34px 0 56px;
+  border-top:1px solid var(--rule);
+}
+footer p{
+  font-size:12.5px;color:var(--muted);
+  max-width:70ch;margin:0 0 10px;
+  line-height:1.6;
+}
+</style>
+</head>
+<body>
+<div class="reading-progress">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div class="wrap topnav">
+  <a href="/writing.html">&#8592; Writing</a>
+</div>
+
+<header class="masthead">
+  <img src="/images/articles/three-lines-ai/gsdc-slide-02.jpg" alt="Title slide: The Three Lines of Defence, From Warships to AI" class="featured-image">
+  <div class="wrap masthead-content">
+    <div class="eyebrow">
+      <span class="tick">&#9670;</span>
+      <span>GRC</span>
+      <span>AI Governance</span>
+      <span>Assurance</span>
+    </div>
+    <h1>The fleet already runs the model Deloitte just named</h1>
+    <p class="standfirst">Deloitte published a paper this month arguing that AI is turning assurance into a property of the system itself. A logistics assurance model built for warships has been operating close to that destination for years, under harder constraints.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>September 2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>&#128214; 5 min read</span>
+      <span>&#128202; 1,200 words</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/the-fleet-already-runs-this-model.html" target="_blank" class="share-btn">Share on LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/the-fleet-already-runs-this-model.html&text=The%20fleet%20already%20runs%20the%20model%20Deloitte%20just%20named" target="_blank" class="share-btn">Share on X</a>
+      <a href="mailto:?subject=The fleet already runs the model Deloitte just named&body=I thought you might find this interesting: https://kelroyjames.com/the-fleet-already-runs-this-model.html" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>Deloitte published a paper this month called <em>Transforming Controls and Assurance in an AI Enabled Enterprise</em>. Its argument is that the Three Lines model, built for a world where people carried out processes and controls sat alongside them, is being rebuilt around a different idea: assurance generated at the point of work, rather than checked once the work is finished. The paper backs this with figures worth sitting with. Only 18% of organisations believe they are ready to govern AI at scale, and 77% do not feel prepared to manage AI risk and governance at all.</p>
+
+<p>I read it the same week I was preparing to go back to the Global Skill Development Council. I first presented to them on 19 February 2026, mapping naval logistics assurance practice against ISO/IEC 42001, the international standard for AI management systems. They have asked me back this week to take the argument further. The timing made the comparison hard to avoid. Deloitte is describing a destination. Naval logistics assurance has been operating close to it for years, under conditions where a failed control can cost the ship's ability to fight.</p>
+
+<h4>Judgement at the point of work</h4>
+
+<p>In Deloitte's redefined model, the First Line generates assurance at source, as a natural by-product of how a process runs. Naval logistics assurance reaches the same place through deliberate delegation. Routine checks on stores and equipment accounts sit with the most junior people in the department, because doing the check is how they learn to own the risk. The officer above them applies judgement: does this look right, given what's actually happening on the ship. When it does, a short logged entry recording that nothing significant was found is treated as a complete record. No further paperwork is generated to prove a negative.</p>
+
+<div class="pullquote">"The long-standing ambition of assurance by design becomes practically achievable at scale."<cite>Deloitte, September 2026</cite></div>
+
+<p>That is the mechanism behind Deloitte's own observation that human focus in a mature AI-enabled enterprise shifts towards strategic judgement and professional challenge. Naval logistics assurance already relies on the habit that makes judgement trustworthy rather than reckless: place the check as close to the risk as possible, and let demonstrated competence, not paperwork volume, stand as the evidence.</p>
+
+<h4>Inspection with a graded outcome</h4>
+
+<p>Deloitte's Third Line moves from testing individual controls to assuring the integrity of the whole system, and the paper calls for stronger internal audit capability to assess how AI assurance is designed, configured and relied upon. Naval logistics assurance offers one working example of what that capability looks like in practice: independent inspection that is graded rather than advisory, so the outcome carries weight on its own.</p>
+
+<p>A department that fails outright receives an immediate rectification requirement and a mandatory re-inspection, and nothing proceeds until it is fixed. Translated into AI governance, the same idea would give a fairness or bias audit an outcome that can actually halt deployment, alongside the more familiar recommendation-based review most functions already run.</p>
+
+<h4>The handover question</h4>
+
+<p>Deloitte's paper and ISO/IEC 42001 both focus on how ownership of a system is assigned and maintained. Naval logistics assurance adds a mechanism for the moment ownership actually changes hands, which is a question worth setting alongside them.</p>
+
+<p>ISO/IEC 42001's provisions on AI roles and responsibilities require organisations to name an accountable owner for every AI system and to have a backup and escalation route agreed in advance. That is a real and useful requirement. Whether to run a fresh audit of the system's risk position at the point accountability actually transfers is left to the organisation to decide.</p>
+
+<p>Naval logistics assurance answers that question directly. When responsibility for an account passes to a new officer, a full audit is mandatory before they accept it, and findings are recorded before responsibility transfers. Applied to AI governance, the principle sits comfortably alongside the named-owner model ISO/IEC 42001 already requires: a change of ownership can trigger a re-baseline of the risk position, not just a handover email.</p>
+
+<h4>Deciding what's worth keeping</h4>
+
+<p>Deloitte is clear that the direction of travel runs towards embedded, preventative controls and away from manual, detective ones. Naval logistics assurance offers one concrete version of the rule for deciding which controls belong in that shift and which deserve to stay slow and deliberate.</p>
+
+<p>Naval logistics assurance answers that with a straightforward sort: checks are split into what is legally non-negotiable and what is genuinely discretionary, and the discretionary tier is reviewed only as often as the actual risk warrants. One recent internal review used exactly this logic to cut the volume of routine compliance questions by roughly half, without touching anything load-bearing. The same sort works for AI governance. Not every parameter change needs a paper trail behind it. The effort belongs on the handful of checks that are genuinely load-bearing: safety, legal exposure, bias thresholds. The rest can run on trust that has already been earned.</p>
+
+<div class="pullquote">Naval logistics assurance solved the handover problem before AI governance had a name for it.</div>
+
+<h4>Going back this week</h4>
+
+<p>This reads as confirmation of Deloitte's paper, arriving from an environment that reached a similar place first, because it never had the option of doing assurance retrospectively. A warship does not get to fail quietly and correct it in the next audit cycle. The assurance has to be live, carried by people trusted to exercise judgement at the point where the risk actually sits.</p>
+
+<p>AI governance functions are now being asked to build something close to that, mostly from a standing start. Going back to the Global Skill Development Council this week, the case I will make has a second source behind it now, drawn from Deloitte's own numbers as well as my own service. There is a working version of this model already, tested on ships rather than in data centres.</p>
+
+<p><em>The views expressed here are my own and are based on general observations about logistics assurance and AI governance. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Naval practice is described in general terms; nothing internal to the Royal Navy or the Ministry of Defence is reproduced.</em></p>
+
+<div class="references">
+<h2>References</h2>
+
+<h4>Primary source</h4>
+<ul>
+<li>McNulty, M., Oxbrough, A., Bigham, T., <em>Transforming Controls and Assurance in an AI Enabled Enterprise</em>, Deloitte LLP, September 2026.</li>
+</ul>
+
+<h4>AI governance standard</h4>
+<ul>
+<li>ISO/IEC 42001:2023, <em>Artificial Intelligence Management Systems</em>, International Organization for Standardization.</li>
+<li>Summaries of ISO/IEC 42001 Annex A.3.2 (AI roles and responsibilities) consulted via ISMS.online and Aona, September 2026.</li>
+</ul>
+
+<h4>Related</h4>
+<ul>
+<li>James, K., <a href="/three-lines-of-defence-warships-to-ai.html">"The Three Lines of Defence: From Warships to AI"</a>, presented to the Global Skill Development Council, 19 February 2026.</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p>Kelroy James &middot; 2026 &middot; Content may be freely reproduced for non-commercial use with attribution</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
