@@ -54,7 +54,6 @@
   .skill-name{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px}
   .skill-level{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:10px}
   .skill-desc{font-size:14px;color:var(--ink-2);line-height:1.5;margin-bottom:12px}
-  .skill-years{font-size:12px;color:var(--brass);font-weight:600}
   
   .proficiency-bar{height:6px;background:var(--rule);border-radius:3px;margin-top:10px;overflow:hidden}
   .proficiency-fill{height:100%;background:var(--brass);border-radius:3px;transition:width .5s ease}
@@ -67,6 +66,11 @@
   .cert-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
   .cert-org{font-size:13px;color:var(--muted);margin-bottom:8px}
   .cert-valid{font-size:12px;color:var(--brass);font-weight:600}
+
+  .edu-compact{list-style:none;columns:2;column-gap:32px;font-size:13.5px;color:var(--ink-2);margin:0}
+  .edu-compact li{margin-bottom:9px;break-inside:avoid;line-height:1.4}
+  .edu-compact strong{color:var(--ink);font-weight:600}
+  @media(max-width:640px){.edu-compact{columns:1}}
   
   @media(max-width:640px){
     .skills-hero{padding:50px 0 40px}
@@ -132,49 +136,42 @@
           <div class="skill-name">ISO/IEC 27001 (Information Security)</div>
           <div class="skill-level">Lead Auditor Certified</div>
           <div class="skill-desc">Information security management systems. Lead Auditor qualified, applied to Defence logistics and supply chain contexts.</div>
-          <div class="skill-years">3 years operational application</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:95%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">ISO/IEC 42001 (AI Management Systems)</div>
           <div class="skill-level">Lead Auditor Certified</div>
           <div class="skill-desc">AI management systems assurance. Lead Auditor credential, focused on AI decision traceability and governance.</div>
-          <div class="skill-years">2 years study & application</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">ISO/IEC 27701 (Privacy)</div>
           <div class="skill-level">Lead Auditor Certified</div>
           <div class="skill-desc">Privacy information management systems. Lead Auditor qualified, GDPR alignment and data protection controls.</div>
-          <div class="skill-years">2 years operational application</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">ISO 19011 (Audit Management)</div>
           <div class="skill-level">Expert</div>
           <div class="skill-desc">Auditing management systems. FellowMSA credential demonstrates mastery of audit planning, execution, and reporting.</div>
-          <div class="skill-years">5 years audit practice</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:95%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">COSO Internal Control Framework</div>
           <div class="skill-level">Applied Practitioner</div>
           <div class="skill-desc">Control environment, risk assessment, control activities, information & communication, monitoring. Applied to Defence financial controls.</div>
-          <div class="skill-years">18 years practical application</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">IIA Three Lines Model</div>
           <div class="skill-level">Applied Practitioner</div>
           <div class="skill-desc">Operational management (1st line), oversight functions (2nd line), internal audit (3rd line). Military supply chain maps directly to this model.</div>
-          <div class="skill-years">18 years operational context</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:85%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">NIST Cybersecurity Framework</div>
           <div class="skill-level">Proficient</div>
           <div class="skill-desc">Identify, Protect, Detect, Respond, Recover. Cross-referenced with ISO 27001 in supply chain risk contexts.</div>
-          <div class="skill-years">3 years alignment work</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:80%"></div></div>
         </div>
       </div>
@@ -192,35 +189,30 @@
           <div class="skill-name">Defence ERP Systems</div>
           <div class="skill-level">Expert</div>
           <div class="skill-desc">18 years operational use across procurement, inventory, financial accounting, and audit reporting modules. Power user with deep workflow knowledge.</div>
-          <div class="skill-years">18 years daily operational use</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:95%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Palantir Foundry</div>
           <div class="skill-level">Co-Developer</div>
           <div class="skill-desc">Co-developed fleet-wide inventory interrogation application. Data integration, validation logic, dashboard design, and user testing.</div>
-          <div class="skill-years">2 years development & implementation</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:85%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">SAP Material Management (implied)</div>
           <div class="skill-level">Proficient</div>
           <div class="skill-desc">Defence ERP systems built on SAP architecture. Understanding of procurement workflows, goods receipt, and inventory management modules.</div>
-          <div class="skill-years">18 years Defence ERP use</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:75%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Consignment Tracking Systems</div>
           <div class="skill-level">Business Case Author</div>
           <div class="skill-desc">Wrote PRINCE2 business case for dangerous goods consignment tracking. Implemented multi-modal movement oversight systems.</div>
-          <div class="skill-years">6 years implementation & use</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:85%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">GIS Platforms (Esri)</div>
           <div class="skill-level">Advanced User</div>
           <div class="skill-desc">Led GPS geo-tagging of Caribbean utility grid infrastructure. Dataset underpinned Esri Special Achievement in GIS award-winning system.</div>
-          <div class="skill-years">12 years field & planning use</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:80%"></div></div>
         </div>
       </div>
@@ -238,35 +230,30 @@
           <div class="skill-name">Excel (Advanced)</div>
           <div class="skill-level">Expert</div>
           <div class="skill-desc">Power Query, Power Pivot, advanced formulas, VBA automation, financial modeling. Used daily for £2.4M financial analysis, control design, and audit reporting.</div>
-          <div class="skill-years">18 years intensive operational use</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:95%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">SQL</div>
           <div class="skill-level">Proficient</div>
           <div class="skill-desc">Database interrogation for supply chain analytics. Complex queries, joins, aggregations for ERP data extraction and validation.</div>
-          <div class="skill-years">5 years data extraction work</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:75%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Python</div>
           <div class="skill-level">Proficient</div>
           <div class="skill-desc">Supply chain analytics, data cleaning, automation scripts. MIT MicroMasters coursework application, operational data processing.</div>
-          <div class="skill-years">3 years academic & applied use</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:70%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Power BI / Tableau</div>
           <div class="skill-level">Proficient</div>
           <div class="skill-desc">Supply chain visualization, KPI dashboards, inventory health reporting. Used for decision-maker briefings and audit presentations.</div>
-          <div class="skill-years">4 years dashboard development</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:75%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">OSINT Tools & Frameworks</div>
           <div class="skill-level">Professional Award Qualified</div>
           <div class="skill-desc">Open-source intelligence collection and analysis. University of Abertay Professional Award. Applied to supplier verification and third-party risk.</div>
-          <div class="skill-years">3 years study & application</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:85%"></div></div>
         </div>
       </div>
@@ -284,42 +271,36 @@
           <div class="skill-name">IMDG Code (Maritime Dangerous Goods)</div>
           <div class="skill-level">Qualified & Operational</div>
           <div class="skill-desc">International Maritime Dangerous Goods Code. Performed consignment preparation for global deployments, explosives and munitions transport.</div>
-          <div class="skill-years">6 years operational application</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">IATA DGR (Air Dangerous Goods)</div>
           <div class="skill-level">Qualified & Operational</div>
           <div class="skill-desc">International Air Transport Association Dangerous Goods Regulations. Air consignment for EOD and diving equipment worldwide.</div>
-          <div class="skill-years">6 years operational application</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">ADR (Road Dangerous Goods)</div>
           <div class="skill-level">Qualified & Operational</div>
           <div class="skill-desc">European Agreement concerning the International Carriage of Dangerous Goods by Road. Multi-modal movement oversight.</div>
-          <div class="skill-years">6 years operational application</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:85%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Explosives Regulations & Accounting</div>
           <div class="skill-level">Ammunition Authorised Representative</div>
           <div class="skill-desc">Explosives storage, transport, and accounting. Qualified as Ammunition Authorised Representative for Fleet Diving Squadron.</div>
-          <div class="skill-years">6 years authorised operations</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">HMRC Customs Procedures</div>
           <div class="skill-level">Authorised Representative</div>
           <div class="skill-desc">HM Revenue & Customs compliance for international movements. Authorised representative for customs declarations and clearance.</div>
-          <div class="skill-years">8 years operational compliance</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:85%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Export Controls (ITAR/EAR awareness)</div>
           <div class="skill-level">Applied Knowledge</div>
           <div class="skill-desc">International Traffic in Arms Regulations (ITAR) and Export Administration Regulations (EAR) awareness in Defence context. £5M strategic trial delivered.</div>
-          <div class="skill-years">10 years Defence procurement context</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:75%"></div></div>
         </div>
       </div>
@@ -337,35 +318,30 @@
           <div class="skill-name">PRINCE2</div>
           <div class="skill-level">Applied Practitioner</div>
           <div class="skill-desc">Business case author for consignment tracking system. Initiation documentation, risk management, and project governance in Defence context.</div>
-          <div class="skill-years">8 years project delivery</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:80%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Agile Delivery</div>
           <div class="skill-level">Percy Hobart Fellow</div>
           <div class="skill-desc">Digital transformation fellowship focused on agile methods. Iterative development applied to Palantir Foundry co-development project.</div>
-          <div class="skill-years">4 years agile practice</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:75%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Lean Process Improvement</div>
           <div class="skill-level">Trial Architect</div>
           <div class="skill-desc">Designed and delivered lean maintenance trial achieving £250K savings. Waste elimination, value stream mapping, continuous improvement.</div>
-          <div class="skill-years">6 years improvement programmes</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:85%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Root Cause Analysis</div>
           <div class="skill-level">Expert</div>
           <div class="skill-desc">Five Whys, fishbone diagrams, failure mode analysis. Applied to £2.4M financial control recovery and Type 45 account turnaround.</div>
-          <div class="skill-years">18 years problem-solving practice</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:95%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Policy Development</div>
           <div class="skill-level">Contributor</div>
           <div class="skill-desc">Proposed Navy-wide policy instruction based on £2.4M findings. SOPs authored for Fleet Diving Squadron capability continuation.</div>
-          <div class="skill-years">10 years policy contribution</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:80%"></div></div>
         </div>
       </div>
@@ -383,28 +359,24 @@
           <div class="skill-name">Team Leadership & Strategic Innovation Coaching</div>
           <div class="skill-level">7-Person Team, Wildcat Maritime Force</div>
           <div class="skill-desc">Led a 7-person team through the unit's Gibraltar weapons trial and Exercise Tamber Shield deployments. Ran Mission Model Canvas training to build the team's strategic awareness of innovation; 5 of 7 team members have since been promoted. Royal Navy Inclusivity Award for Innovation 2023.</div>
-          <div class="skill-years">2 years, Apr 2022 – May 2024</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:95%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Coaching & Mentoring</div>
           <div class="skill-level">Level 3 Course Completed</div>
           <div class="skill-desc">Level 3 Coaching and Mentoring course completed. 100% task book pass rate across coached team. Chief Naval Logistics Officer's Award 2018.</div>
-          <div class="skill-years">10 years coaching practice</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Training Design & Delivery</div>
           <div class="skill-level">Level 3 Award in Education</div>
           <div class="skill-desc">Level 3 Award in Education and Training. Designed training for cost centre assignment, dangerous goods compliance, and financial controls.</div>
-          <div class="skill-years">8 years training delivery</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:85%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Programme Development</div>
           <div class="skill-level">Founder</div>
           <div class="skill-desc">Founded Empowerment Day development programme for junior rates. Adopted as standing programme by Engineering Support Group 1.</div>
-          <div class="skill-years">5 years programme delivery</div>
           <div class="proficiency-bar"><div class="proficiency-fill" style="width:90%"></div></div>
         </div>
       </div>
@@ -506,131 +478,32 @@
         </div>
       </div>
 
-      <div class="skill-level" style="color:var(--brass)">Executive &amp; Professional Development</div>
-      <div class="certs-grid" style="margin-bottom:32px">
-        <div class="cert-card">
-          <div class="cert-title">Forward Program</div>
-          <div class="cert-org">McKinsey &amp; Company</div>
-          <div class="cert-valid">2024</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Cyber Security – Technology and Governance Specialization</div>
-          <div class="cert-org">Royal Holloway, University of London</div>
-          <div class="cert-valid">2026</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">AI and Digital Transformation in Government</div>
-          <div class="cert-org">Saïd Business School, University of Oxford</div>
-          <div class="cert-valid">2026</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Information Assurance Analysis</div>
-          <div class="cert-org">The Johns Hopkins University</div>
-          <div class="cert-valid">2026</div>
-        </div>
-      </div>
-
-      <div class="skill-level" style="color:var(--brass)">Supply Chain, Finance &amp; Data</div>
-      <div class="certs-grid" style="margin-bottom:32px">
-        <div class="cert-card">
-          <div class="cert-title">Advanced Supply Chain Systems Planning and Network Design</div>
-          <div class="cert-org">MITx MicroMasters</div>
-          <div class="cert-valid">2024</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">AI in Financial Services: Foundations Through Future Trends</div>
-          <div class="cert-org">Saïd Business School, University of Oxford</div>
-          <div class="cert-valid">2025</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Supply Chain Finance and Blockchain Technology Specialization</div>
-          <div class="cert-org">New York Institute of Finance</div>
-          <div class="cert-valid">2025</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Applied Corporate Finance</div>
-          <div class="cert-org">University of Cambridge</div>
-          <div class="cert-valid">2023</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">MBA Essentials (Santander Scholarship)</div>
-          <div class="cert-org">London School of Economics</div>
-          <div class="cert-valid">2025</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Exposure Management Expert</div>
-          <div class="cert-org">XM Cyber</div>
-          <div class="cert-valid">2025</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Blockchain Applications in Fintech</div>
-          <div class="cert-org">INSEAD</div>
-          <div class="cert-valid">2025</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">AI and Blockchain for Business Leaders: Cardano Edition</div>
-          <div class="cert-org">INSEAD</div>
-          <div class="cert-valid">2026</div>
-        </div>
-      </div>
-
-      <div class="skill-level" style="color:var(--brass)">Technical &amp; Tools</div>
-      <div class="certs-grid" style="margin-bottom:32px">
-        <div class="cert-card">
-          <div class="cert-title">Google AI Professional Certificate</div>
-          <div class="cert-org">Coursera</div>
-          <div class="cert-valid">2026</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Alteryx Designer Core Certified</div>
-          <div class="cert-org">Alteryx</div>
-          <div class="cert-valid">2024</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Anaplan Certified Model Builder</div>
-          <div class="cert-org">Anaplan</div>
-          <div class="cert-valid">Valid to 2028</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Identity in the Digital Age (LFS178x)</div>
-          <div class="cert-org">The Linux Foundation</div>
-          <div class="cert-valid">2022</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Developing Industrial Internet of Things</div>
-          <div class="cert-org">University of Colorado Boulder</div>
-          <div class="cert-valid">2025</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Mastering Blockchain and Distributed Ledger Technologies</div>
-          <div class="cert-org">CHAISE_EU</div>
-          <div class="cert-valid">2023</div>
-        </div>
-      </div>
-
-      <div class="skill-level" style="color:var(--brass)">Foundational</div>
-      <div class="certs-grid">
-        <div class="cert-card">
-          <div class="cert-title">Fundamentals of Predictive Project Management</div>
-          <div class="cert-org">Project Management Institute</div>
-          <div class="cert-valid">2022</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Fundamentals of Agile Project Management</div>
-          <div class="cert-org">Project Management Institute</div>
-          <div class="cert-valid">2022</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Level 3 Award in Education and Training (6502-31)</div>
-          <div class="cert-org">City &amp; Guilds</div>
-          <div class="cert-valid">2026</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Member, Institute of Leadership</div>
-          <div class="cert-org">The Institute of Leadership</div>
-          <div class="cert-valid">2025–2026</div>
-        </div>
-      </div>
+      <div class="skill-level" style="color:var(--brass)">Continuing Education</div>
+      <p style="font-size:13px;color:var(--muted);margin:0 0 14px;max-width:70ch">Executive programmes, specialist short courses and tool certifications, listed for completeness. The credentials above are the ones directly load-bearing for GRC and third-party risk roles.</p>
+      <ul class="edu-compact">
+        <li><strong>Forward Program</strong> (McKinsey &amp; Company, 2024)</li>
+        <li><strong>Cyber Security, Technology and Governance Specialization</strong> (Royal Holloway, University of London, 2026)</li>
+        <li><strong>AI and Digital Transformation in Government</strong> (Saïd Business School, University of Oxford, 2026)</li>
+        <li><strong>Information Assurance Analysis</strong> (The Johns Hopkins University, 2026)</li>
+        <li><strong>Advanced Supply Chain Systems Planning and Network Design</strong> (MITx MicroMasters, 2024)</li>
+        <li><strong>AI in Financial Services: Foundations Through Future Trends</strong> (Saïd Business School, University of Oxford, 2025)</li>
+        <li><strong>Supply Chain Finance and Blockchain Technology Specialization</strong> (New York Institute of Finance, 2025)</li>
+        <li><strong>Applied Corporate Finance</strong> (University of Cambridge, 2023)</li>
+        <li><strong>MBA Essentials</strong> (Santander Scholarship, London School of Economics, 2025)</li>
+        <li><strong>Exposure Management Expert</strong> (XM Cyber, 2025)</li>
+        <li><strong>Blockchain Applications in Fintech</strong> (INSEAD, 2025)</li>
+        <li><strong>AI and Blockchain for Business Leaders: Cardano Edition</strong> (INSEAD, 2026)</li>
+        <li><strong>Google AI Professional Certificate</strong> (Coursera, 2026)</li>
+        <li><strong>Alteryx Designer Core Certified</strong> (Alteryx, 2024)</li>
+        <li><strong>Anaplan Certified Model Builder</strong> (Anaplan, valid to 2028)</li>
+        <li><strong>Identity in the Digital Age</strong> (LFS178x, The Linux Foundation, 2022)</li>
+        <li><strong>Developing Industrial Internet of Things</strong> (University of Colorado Boulder, 2025)</li>
+        <li><strong>Mastering Blockchain and Distributed Ledger Technologies</strong> (CHAISE_EU, 2023)</li>
+        <li><strong>Fundamentals of Predictive Project Management</strong> (Project Management Institute, 2022)</li>
+        <li><strong>Fundamentals of Agile Project Management</strong> (Project Management Institute, 2022)</li>
+        <li><strong>Level 3 Award in Education and Training</strong> (6502-31, City &amp; Guilds, 2026)</li>
+        <li><strong>Member, Institute of Leadership</strong> (2025–2026)</li>
+      </ul>
     </div>
 
   </div>
