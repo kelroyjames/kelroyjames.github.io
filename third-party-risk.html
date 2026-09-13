@@ -91,7 +91,7 @@
   .intro-p{max-width:70ch;color:var(--ink-2);margin:0 0 28px;font-size:15.5px}
 
   .work{display:grid;grid-template-columns:1fr;gap:18px}
-  @media(min-width:840px){.work{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:840px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}}
   .card{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);display:flex;flex-direction:column;text-decoration:none;color:inherit}
   .card .top-band{height:3px;background:var(--brass)}
   .card.alt .top-band{background:var(--navy)}
