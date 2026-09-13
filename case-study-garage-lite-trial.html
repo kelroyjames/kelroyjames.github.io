@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zero Losses, Piloting a New Support Model: Kelroy James</title>
+  <meta name="description" content="Running the logistics side of HMS Dragon's Garage Lite trial, a Fleet Time Support Period model nobody had tested before, with zero losses and the highest early-demand rate of any Type 45 FTSP that year.">
+  <meta property="og:title" content="Zero Losses, Piloting a New Support Model">
+  <meta property="og:description" content="Running the logistics side of HMS Dragon's Garage Lite trial, a Fleet Time Support Period model nobody had tested before, with zero losses and the highest early-demand rate of any Type 45 FTSP that year.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kelroyjames.com/case-study-garage-lite-trial.html">
+  <meta property="og:image" content="https://kelroyjames.com/images/articles/export-control-supply-chain.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zero Losses, Piloting a New Support Model">
+  <meta name="twitter:description" content="Running the logistics side of HMS Dragon's Garage Lite trial, a Fleet Time Support Period model nobody had tested before, with zero losses and the highest early-demand rate of any Type 45 FTSP that year.">
+  <meta name="twitter:image" content="https://kelroyjames.com/images/articles/export-control-supply-chain.png">
+<link rel="canonical" href="https://kelroyjames.com/case-study-garage-lite-trial.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --ink:#131c28;--ink-2:#475569;--muted:#64748b;--surface:#ffffff;--bg:#f8fafc;
+    --rule:#e2e8f0;--brass:#8A6A2F;--brass-soft:#F2ECDF;--shadow:0 1px 3px rgba(19,28,40,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Public Sans",sans-serif;background:var(--bg);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+
+  .site-header{background:var(--surface);border-bottom:1px solid var(--rule);padding:18px 0;position:sticky;top:0;z-index:100}
+  .site-header .wrap{display:flex;justify-content:space-between;align-items:center}
+  .site-header .logo{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
+  .site-header nav{display:flex;gap:28px}
+  .site-header .wrap{position:relative}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;font-size:20px;line-height:1;color:var(--ink)}
+  @media(max-width:700px){
+    .nav-toggle{display:block}
+    .site-header nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--rule);padding:6px 26px 18px}
+    .site-header nav.open{display:flex}
+    .site-header nav a{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+    .site-header nav a:last-child{border-bottom:none}
+  }
+  .site-header a{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+  .site-header a:hover{color:var(--brass)}
+
+  .cs-hero{background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);color:white;padding:80px 0 60px}
+  .cs-breadcrumb{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px;opacity:.8}
+  .cs-breadcrumb a{color:white;text-decoration:none}
+  .cs-breadcrumb a:hover{text-decoration:underline}
+  .cs-title{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:18px;max-width:22ch}
+  .cs-subtitle{font-size:1.15rem;opacity:.9;margin-bottom:32px;max-width:52ch;line-height:1.5}
+  .cs-meta{display:flex;gap:40px;flex-wrap:wrap}
+  .cs-meta-item{display:flex;flex-direction:column;gap:4px}
+  .cs-meta-label{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
+  .cs-meta-value{font-size:15px;font-weight:600}
+
+  .impact-banner{background:var(--brass-soft);border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);padding:40px 0}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+  .impact-item{text-align:center}
+  .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
+  .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+
+  .at-a-glance{background:var(--surface);border-bottom:1px solid var(--rule);padding:28px 0}
+  .glance-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:700px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
+  .glance-item h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
+  .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+
+  .cs-content{background:var(--surface);padding:60px 0}
+  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .cs-toc{position:sticky;top:100px;height:fit-content}
+  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc ul{list-style:none}
+  .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
+  .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
+  @media(max-width:840px){.cs-toc{position:static}}
+
+  .cs-section{margin-bottom:48px}
+  .cs-section h2{font-family:Spectral,Georgia,serif;font-size:1.8rem;font-weight:700;margin-bottom:16px;color:var(--ink)}
+  .cs-section h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:32px 0 12px;color:var(--ink)}
+  .cs-section p{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:16px;max-width:68ch}
+  .cs-section ul{margin:16px 0 16px 20px}
+  .cs-section li{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:8px}
+  .cs-section strong{color:var(--ink);font-weight:600}
+
+  .highlight-box{background:var(--brass-soft);border-left:4px solid var(--brass);padding:24px;margin:28px 0;border-radius:4px}
+  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin-bottom:10px}
+  .highlight-box p{margin-bottom:0}
+
+  .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:20px 0}
+  .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:13px;font-weight:500;border-radius:4px;box-shadow:var(--shadow)}
+
+  .outcome-list{list-style:none;margin:20px 0}
+  .outcome-list li{padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--rule)}
+  .outcome-list li:last-child{border-bottom:none}
+  .outcome-list li:before{content:"✓";position:absolute;left:0;top:12px;color:var(--brass);font-size:1.3rem;font-weight:bold}
+
+  .cs-footer{background:var(--surface);border-top:1px solid var(--rule);padding:40px 0}
+  .cs-footer .wrap{display:flex;justify-content:space-between;align-items:center}
+  .cs-footer a{color:var(--brass);text-decoration:none;font-weight:600}
+  .cs-footer a:hover{text-decoration:underline}
+
+  @media(max-width:640px){
+    .cs-hero{padding:50px 0 40px}
+    .impact-grid{grid-template-columns:1fr 1fr}
+    .impact-number{font-size:2rem}
+  }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo">Kelroy James</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var el=this.nextElementSibling;var open=el.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#work">Work</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/background.html">Background</a>
+    <a href="/#contact">Contact</a>
+      </nav>
+  </div>
+</header>
+
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="cs-breadcrumb">
+      <a href="/">Home</a> / <a href="/#work">Case Studies</a> / Garage Lite Trial
+    </div>
+    <h1 class="cs-title">Zero Losses, Piloting a New Support Model</h1>
+    <p class="cs-subtitle">Running the logistics side of a Fleet Time Support Period model nobody had tested before, on HMS Dragon.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Role</span>
+        <span class="cs-meta-value">Supply Chain POSC, FTSP Support Group</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Timeline</span>
+        <span class="cs-meta-value">Jun–Jul 2021 (5-week trial)</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Scope</span>
+        <span class="cs-meta-value">HMS Dragon (Type 45), logistics workstream</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Outcome</span>
+        <span class="cs-meta-value">Zero Losses, Best-in-Class Planning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact-banner">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number">100%</div>
+        <div class="impact-label">Return of All Permanent &amp; Loan Items, Zero Losses</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">89%</div>
+        <div class="impact-label">Demands Placed Before T-12, Highest of Any Type 45 FTSP That Year</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number">£145,674</div>
+        <div class="impact-label">Value of Stores Delivered Successfully in 5 Weeks</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="at-a-glance">
+  <div class="wrap">
+    <div class="glance-grid">
+      <div class="glance-item"><h4>Situation</h4><p>HMS Dragon was chosen to trial "Garage Lite", a new Fleet Time Support Period concept moving Ship's Staff ashore so BAE and a Duty Watch could deliver maintenance faster. No comparable stores-support model had been run before.</p></div>
+      <div class="glance-item"><h4>Action</h4><p>Ran the logistics workstream: pre-mustered and labelled stores with a BAE stores coordinator ahead of start, a first for any FTSP, and drove early demand placement.</p></div>
+      <div class="glance-item"><h4>Result</h4><p>£145,674 of stores delivered with zero losses on return, and the highest rate of pre-T-12 demand placement of any Type 45 FTSP that year.</p></div>
+      <div class="glance-item"><h4>Transferable</h4><p>Running the logistics side of a model with no precedent to follow, and building the accountability that a first-of-its-kind trial doesn't come with by default.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-content">
+  <div class="wrap">
+    <div class="content-grid">
+
+      <aside class="cs-toc">
+        <h4>Contents</h4>
+        <ul>
+          <li><a href="#challenge">The Challenge</a></li>
+          <li><a href="#context">Context &amp; Stakes</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#outcomes">Outcomes</a></li>
+          <li><a href="#lessons">Lessons Learned</a></li>
+        </ul>
+      </aside>
+
+      <div>
+
+        <div class="cs-section" id="challenge">
+          <h2>The Challenge</h2>
+          <p>"Garage Lite" was a new way of delivering a Fleet Time Support Period (FTSP): instead of Ship's Staff remaining aboard throughout, they would move ashore so that BAE's Whole Fleet Support Partner team and a Duty Watch could deliver maintenance faster, with the aim of returning the ship to Availability sooner. HMS Dragon was the platform chosen to trial it, over five weeks from 28 June to 30 July 2021.</p>
+          <p>Nobody had run the stores and logistics side of an FTSP this way before. With Ship's Staff off the platform for most of the trial, the usual people who track, sign for and account for stores were not there to do it, and there was no existing model to follow for how the supply chain should operate under those conditions.</p>
+
+          <div class="highlight-box">
+            <h4>The Core Problem</h4>
+            <p>Removing Ship's Staff removes the people who normally hold the accountability for what a platform's stores account contains. A trial built to prove a faster maintenance model still needed someone to make sure that speed did not come at the cost of losing track of what moved, where it went, and whether it came back.</p>
+          </div>
+        </div>
+
+        <div class="cs-section" id="context">
+          <h2>Context &amp; Stakes</h2>
+          <p>HMS Dragon's Garage Lite trial sat inside a wider Captain Engineering-sponsored assessment of whether the model could reliably deliver more maintenance in less time across the fleet. The trial succeeded on that measure: the Whole Fleet Support Partner team completed 1,125 tasks against the work package, compared with 677 on a comparable full-length FTSP.</p>
+          <p>None of that activity removes the logistics risk. Defence's stores accounting system, MJDI, remained live afloat throughout the trial with no ashore workaround, meaning the FTSP Support Group had to run live supply chain administration for a ship without the usual on-ship presence supporting it. Every item moved, permanent or loan, still had to be tracked and returned, and the trial's own after-action review flagged stores accountability and the return of material to the supply chain as genuinely difficult problems to solve under the new model.</p>
+        </div>
+
+        <div class="cs-section" id="approach">
+          <h2>Approach</h2>
+
+          <h3>Pre-Mustering Stores Before the Trial Started</h3>
+          <p>Working with a BAE stores coordinator, I had stores mustered and labelled ahead of the FTSP's start date, so they were kitted and ready on the jetty from day one rather than being tracked down once the trial was already under way. The trial's own after-action review noted this had not happened on any previous FTSP.</p>
+
+          <h3>Streamlining the Handover to BAE</h3>
+          <p>I set up a direct, streamlined process for calling permanent and limited stores forward and handing them to the BAE Principal Material Controller, with a single point of contact on the BAE side coordinating receipt. That single-POC arrangement did not exist on other FTSPs running at the same time.</p>
+
+          <h3>Driving Early Demand Placement</h3>
+          <p>I pushed demand submission earlier than the trial required, reaching 89% of demands placed before the T-12-week mark, the highest proportion recorded on any Type 45 FTSP that year, ahead of Dragon's own two prior FTSPs, HMS Defender's, and HMS Diamond's.</p>
+
+          <h3>Running It Alongside Eight Other Units</h3>
+          <p>The trial's logistics support ran to roughly 160 hours over five weeks, about two hours a day, which was 31% of my working time; the remaining 69% went to FTSP preparation for eight other units running concurrently (Defender, Diamond, Lancaster, Westminster, Kent, Hurworth, Ledbury and Brocklesby).</p>
+        </div>
+
+        <div class="cs-section" id="outcomes">
+          <h2>Outcomes</h2>
+
+          <ul class="outcome-list">
+            <li><strong>Zero Losses on Return</strong> – 100% of permanent and loan items were returned to the supply chain, with no losses, under a model that removed the Ship's Staff who would normally hold that accountability</li>
+            <li><strong>Best Early-Demand Rate of Any Type 45 FTSP That Year</strong> – 89% of demands placed before T-12 weeks, ahead of Dragon's own prior FTSPs and every other Type 45 compared in the trial's after-action review</li>
+            <li><strong>£145,674 of Stores Delivered</strong> – 97 demands covering 517 line items delivered across the five-week trial</li>
+            <li><strong>A First-of-Its-Kind Process Adopted Into the Model</strong> – pre-mustering stores with a named BAE coordinator ahead of FTSP start, something no previous FTSP had done, and recorded as a positive finding in the trial's own review</li>
+            <li><strong>Logistics Credited in the Formal Report</strong> – the Captain Engineering's post-delivery report named the logistics activity specifically as one of the trial's demonstrated advantages</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4>Proving It Under Conditions With No Precedent</h4>
+            <p>A trial like this has no existing playbook to copy, so the questions have to be answered from first principles: who signs for what, when do you ask for it, and how do you know it came back. Getting all three right on the first attempt, without a template, is what the zero-loss result actually demonstrates.</p>
+          </div>
+        </div>
+
+        <div class="cs-section" id="lessons">
+          <h2>Lessons Learned</h2>
+
+          <h3>A Zero-Precedent Trial Needs Someone to Own the Accountability Gap</h3>
+          <p>Removing Ship's Staff removed the default owners of stores accountability. Nobody had assigned that gap to a specific role before the trial started; closing it required deciding, without instruction, who would hold it, and then proving the answer worked.</p>
+
+          <h3>Early Action Buys Room for Everything Else to Go Wrong</h3>
+          <p>Placing demands well ahead of T-12 did not prevent every problem, but it meant the problems that did surface had time to be resolved before they threatened delivery. The 89% figure was a planning choice, not a lucky outcome.</p>
+
+          <h3>Not Every Problem Gets Solved the First Time</h3>
+          <p>The trial's own review was honest about what remained unresolved: 29 lines, 132 items, were still sitting in the FTSP Support Group's warehouse at the end because they had not been called forward, and managing stores returns without a firm single point of contact remained a genuine weak point. A pilot that surfaces its own remaining problems clearly is more useful than one that quietly hides them.</p>
+
+          <h3>What Worked Gets Copied</h3>
+          <p>The pre-mustering arrangement with a named BAE coordinator was specific to this trial when it started. By the time the after-action review was written, it was already being recommended as standard practice for future platforms running the same model.</p>
+
+          <div class="highlight-box">
+            <h4>Civilian Relevance</h4>
+            <p>Running a supply chain workstream for an operating model with no precedent, building the accountability controls it doesn't come with by default, and proving the approach with a verifiable result rather than a plan: the same discipline a supply chain or operations lead applies whenever the business changes how it works faster than its controls have caught up.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-footer">
+  <div class="wrap">
+    <div>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:6px">Next Case Study</p>
+      <a href="/case-study-type45-turnaround.html">Restoring Control to a Failing Account →</a>
+    </div>
+    <a href="/">← Back to Home</a>
+  </div>
+</section>
+
+</body>
+</html>
