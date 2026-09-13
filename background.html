@@ -100,6 +100,14 @@
   }
   .bg-era:not(:first-child){margin-top:24px}
 
+  .awards-head{text-align:center;margin-bottom:38px}
+  .awards-head h2{font-family:Spectral,Georgia,serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:0 0 10px;color:var(--ink)}
+  .awards-head p{font-size:15px;color:var(--ink-2);margin:0 auto;max-width:64ch}
+  .awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .award-item{background:var(--surface);border-left:3px solid var(--brass);padding:14px 18px;border-radius:3px}
+  .award-title{font-size:14.5px;font-weight:600;color:var(--ink);margin:0 0 3px}
+  .award-org{font-size:12.5px;color:var(--muted);margin:0}
+
   footer{padding:34px 0 56px;border-top:1px solid var(--rule)}
   footer p{font-size:12.5px;color:var(--muted);max-width:74ch;margin:0 0 10px;line-height:1.6}
 
@@ -137,7 +145,7 @@
   <div class="wrap">
     <p class="kicker">Background · Study · Qualifications</p>
     <h1>Background</h1>
-    <p class="lede">From a meter reader in St Vincent to eighteen years in Defence logistics, and the study, qualifications and programmes that bridge to civilian assurance work. A short version is on the <a href="/#background">homepage</a>; this is the full story.</p>
+    <p class="lede">From a meter reader in St Vincent to eighteen years in Defence logistics, and the study, qualifications and programmes that bridge to civilian assurance work.</p>
   </div>
 </header>
 
@@ -178,6 +186,32 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="awards-head">
+      <h2>Awards &amp; Recognition</h2>
+      <p>Led a nine-person team through concurrent operational deployments, maintaining delivery under pressure while developing the people in it: six of the nine have since been promoted.</p>
+    </div>
+    <div class="awards-grid">
+      <div class="award-item">
+        <p class="award-title">Chief Naval Logistics Officer's Award</p>
+        <p class="award-org">Fleet Diving Squadron, 2018: Supply Chain Branch award for dangerous goods training delivery to EOD personnel and mentoring ahead of RN Qualifying Courses</p>
+        <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-top:4px">What this demonstrates: safety-critical compliance delivery and structured mentoring, trusted without senior-rate oversight.</p>
+      </div>
+      <div class="award-item">
+        <p class="award-title">Herbert Lott Efficiency Award</p>
+        <p class="award-org">Fleet Stores Coordination Cell, Fleet Operations, 2019: team award for sustaining WESTLANT 18, SAIF SAREEA 3 and Exercise Trident Juncture concurrently</p>
+        <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-top:4px">What this demonstrates: sustained delivery across concurrent, globally distributed operations under pressure.</p>
+      </div>
+      <div class="award-item">
+        <p class="award-title">Royal Navy Inclusivity Award for Innovation</p>
+        <p class="award-org">Wildcat Maritime Force, 2023, for Leading a 9-Person Team Through Operational Deployments</p>
+        <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-top:4px">What this demonstrates: team leadership through concurrent deployments, with 6 of 9 team members since promoted.</p>
+      </div>
     </div>
   </div>
 </section>
