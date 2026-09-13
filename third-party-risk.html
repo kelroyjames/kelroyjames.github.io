@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Third-party risk and supplier assurance frameworks built from real defence supply chains: a full supplier lifecycle methodology, a supplier risk register, OSINT verification, and the essays behind them.">
+<meta property="og:title" content="Third-Party Risk & Supplier Assurance: Kelroy James">
+<meta property="og:description" content="Third-party risk and supplier assurance frameworks built from real defence supply chains: a full supplier lifecycle methodology, a supplier risk register, OSINT verification, and the essays behind them.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kelroyjames.com/third-party-risk.html">
+<meta property="og:image" content="https://kelroyjames.com/images/kelroy-james-headshot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Third-Party Risk & Supplier Assurance: Kelroy James">
+<meta name="twitter:description" content="Third-party risk and supplier assurance frameworks built from real defence supply chains: a full supplier lifecycle methodology, a supplier risk register, OSINT verification, and the essays behind them.">
+<meta name="twitter:image" content="https://kelroyjames.com/images/kelroy-james-headshot.jpg">
+<link rel="canonical" href="https://kelroyjames.com/third-party-risk.html">
+<link rel="icon" href="/favicon.ico">
+<title>Third-Party Risk & Supplier Assurance: Kelroy James</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#EDEEF0; --surface:#FFFFFF; --surface-2:#F4F5F7;
+    --ink:#131C28; --ink-2:#3A4753; --muted:#6B7885;
+    --rule:#D4D8DD; --rule-soft:#E4E7EA;
+    --brass:#8A6A2F; --brass-soft:#F2ECDF;
+    --navy:#24405C; --navy-soft:#E4EAF1;
+    --shadow:0 1px 2px rgba(19,28,40,.06), 0 10px 30px rgba(19,28,40,.06);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0B1119; --surface:#131B24; --surface-2:#18212B;
+      --ink:#E2E7EC; --ink-2:#B4C0CB; --muted:#828F9B;
+      --rule:#27333F; --rule-soft:#1F2A34;
+      --brass:#C9A257; --brass-soft:#2A2317;
+      --navy:#83A6C7; --navy-soft:#182533;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0B1119;--surface:#131B24;--surface-2:#18212B;--ink:#E2E7EC;--ink-2:#B4C0CB;
+    --muted:#828F9B;--rule:#27333F;--rule-soft:#1F2A34;--brass:#C9A257;--brass-soft:#2A2317;
+    --navy:#83A6C7;--navy-soft:#182533;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box;margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+  .nav{border-bottom:1px solid var(--rule);background:var(--surface);position:sticky;top:0;z-index:20}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:15px;padding-bottom:15px}
+  .mark{font-family:Spectral,Georgia,serif;font-weight:700;font-size:1.45rem;letter-spacing:-.015em;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .nav ul{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
+  .nav a.lnk{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+  .nav a.lnk:hover{color:var(--brass)}
+  .nav a.lnk.cta{background:var(--brass);color:#fff;padding:9px 18px}
+  .nav a.lnk.cta:hover{background:var(--navy);color:#fff}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;font-size:20px;line-height:1;color:var(--ink)}
+  @media(max-width:700px){
+    .nav-toggle{display:block}
+    .nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--rule);padding:6px 26px 18px}
+    .nav ul.open{display:flex}
+    .nav ul li{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+    .nav ul li:last-child{border-bottom:none;padding-top:16px}
+    .nav a.lnk.cta{display:inline-block;text-align:center}
+  }
+
+  .page-head{background:var(--surface);border-bottom:1px solid var(--rule);padding:56px 0 44px}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 18px}
+  h1{font-family:Spectral,Georgia,serif;font-weight:700;font-size:clamp(2rem,4.4vw,2.9rem);line-height:1.1;letter-spacing:-.015em;margin:0 0 18px}
+  .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.02rem,1.8vw,1.2rem);line-height:1.55;color:var(--ink-2);max-width:68ch;margin:0}
+
+  section{padding:56px 0}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;padding-bottom:13px;border-bottom:1px solid var(--rule)}
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.6rem;font-weight:700;margin:0;letter-spacing:-.012em}
+  .sec-head .note{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:auto;white-space:nowrap}
+  .intro-p{max-width:70ch;color:var(--ink-2);margin:0 0 28px;font-size:15.5px}
+
+  .work{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:840px){.work{grid-template-columns:repeat(2,1fr)}}
+  .card{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);display:flex;flex-direction:column;text-decoration:none;color:inherit}
+  .card .top-band{height:3px;background:var(--brass)}
+  .card.alt .top-band{background:var(--navy)}
+  .card .inner{padding:26px 26px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .card .type{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .card h3{font-family:Spectral,Georgia,serif;font-size:1.15rem;font-weight:600;margin:0;line-height:1.3}
+  .card p{margin:0;font-size:14.8px;color:var(--ink-2);line-height:1.58}
+  .card .go{margin-top:auto;padding-top:16px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--brass)}
+  .card.alt .go{color:var(--navy)}
+  @media(prefers-reduced-motion:no-preference){.card{transition:transform .18s ease, border-color .18s ease}.card:hover{transform:translateY(-2px);border-color:var(--brass)}}
+
+  .writing{display:flex;flex-direction:column}
+  .piece{display:grid;grid-template-columns:1fr;gap:14px;padding:22px 0;border-bottom:1px solid var(--rule-soft)}
+  @media(min-width:640px){.piece{grid-template-columns:140px minmax(0,1fr);gap:24px;align-items:start}}
+  .piece .thumb{width:100%;height:96px;object-fit:cover;border:1px solid var(--rule);display:block;background:var(--surface-2)}
+  .piece .meta{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;margin-bottom:4px}
+  .piece .status{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--brass)}
+  .piece h3{font-family:Spectral,Georgia,serif;font-size:1.14rem;font-weight:600;margin:0 0 5px;line-height:1.32}
+  .piece h3 a{color:var(--ink);text-decoration:none}
+  .piece h3 a:hover{color:var(--brass)}
+  .piece p{margin:0 0 6px;font-size:14.5px;color:var(--ink-2);max-width:66ch}
+  .piece .go{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);text-decoration:none}
+  .piece .go:hover{color:var(--navy)}
+
+  .cross-link{padding:0 0 8px}
+  .cta-band{background:var(--surface-2);border-top:1px solid var(--rule)}
+  .cta-band .wrap{padding:44px 0}
+  .cta-band h2{font-family:Spectral,Georgia,serif;font-size:1.5rem;margin:0 0 14px;font-weight:700}
+  .cta-band p{margin:0 0 20px;color:var(--ink-2);max-width:64ch}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:11px 22px;text-decoration:none;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);color:var(--ink);background:transparent}
+  .btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+  .btn:hover{background:var(--brass);border-color:var(--brass);color:#fff}
+
+  footer{padding:34px 0 56px;border-top:1px solid var(--rule)}
+  footer p{font-size:12.5px;color:var(--muted);max-width:74ch;margin:0 0 10px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="mark" href="/">Kelroy James</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.nextElementSibling;var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
+    <ul>
+      <li><a class="lnk" href="/#work">Work</a></li>
+      <li><a class="lnk" href="/writing.html">Writing</a></li>
+      <li><a class="lnk" href="/background.html">Background</a></li>
+      <li><a class="lnk" href="/for-recruiters.html">For Recruiters</a></li>
+      <li><a class="lnk cta" href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="kicker">Third-Party Risk &amp; Supplier Assurance</p>
+    <h1>Third-Party Risk &amp; Supplier Assurance</h1>
+    <p class="lede">A supplier list can look diversified and still fail from a single point, and paperwork can be complete while something underneath it has stopped adding up. The frameworks below cover the full supplier lifecycle, from onboarding and segmentation through to monitoring, verification and exit, built and pressure-tested against real defence supply chains rather than written from a template.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2>Third-Party Risk Frameworks</h2><span class="note">See all nine →</span></div>
+    <p class="intro-p">Three working frameworks, each with a tool at every stage rather than just a diagram.</p>
+    <div class="work">
+
+      <a class="card alt" href="/third-party-risk-lifecycle.html" style="border-left:4px solid var(--navy)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Framework · Third-Party Risk</span>
+          <h3>Third-Party Risk, End to End</h3>
+          <p>A full supplier lifecycle methodology, from onboarding through segmentation, due diligence, contractual controls and monitoring to incident management, remediation and exit, with a working tool at every stage.</p>
+          <span class="go">Open the framework →</span>
+        </div>
+      </a>
+
+      <a class="card alt" href="/supplier-risk-register.html" style="border-left:4px solid var(--navy)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Framework · Third-Party Risk</span>
+          <h3>One Register, Every Supplier</h3>
+          <p>The schema, a worked example across four risk tiers, and a downloadable blank template: the single document that ties onboarding, monitoring and remediation together into one live view.</p>
+          <span class="go">Open the framework →</span>
+        </div>
+      </a>
+
+      <a class="card alt" href="/osint-supplier-verification.html" style="border-left:4px solid var(--navy)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Framework · Third-Party Risk</span>
+          <h3>OSINT Supplier Verification</h3>
+          <p>A seven-stage open-source verification sequence for the case where a supplier's paperwork is complete, its certifications are valid, and something has stopped adding up. Runs from corporate structure through to synthesis, with a confidence grading key and the legal constraints it operates under.</p>
+          <span class="go">Open the framework →</span>
+        </div>
+      </a>
+
+    </div>
+    <p class="intro-p" style="margin-top:20px;margin-bottom:0"><a href="/frameworks.html">See all nine frameworks →</a></p>
+  </div>
+</section>
+
+<section style="background:var(--brass-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--brass)">
+  <div class="wrap">
+    <div class="sec-head"><h2>Related Writing</h2><span class="note">See all writing →</span></div>
+    <div class="writing">
+
+      <div class="piece">
+        <img class="thumb" src="/images/articles/same-control-header.jpg" alt="Diversified on Paper, Concentrated in Practice">
+        <div>
+          <div class="meta"><span class="status">Published</span></div>
+          <h3><a href="/diversified-on-paper-concentrated-in-practice.html">Diversified on Paper, Concentrated in Practice</a></h3>
+          <p>A supplier list with fifty names on it can still fail from a single point. How to measure the concentration that headcount hides, and what to do once you've found it.</p>
+          <a class="go" href="/diversified-on-paper-concentrated-in-practice.html">Read the essay →</a>
+        </div>
+      </div>
+
+      <div class="piece">
+        <img class="thumb" src="/images/articles/export-control-supply-chain.png" alt="The Convergence of Cyber-GRC and Physical Logistics">
+        <div>
+          <div class="meta"><span class="status">Published</span></div>
+          <h3><a href="/convergence-of-cyber-grc-and-physical-logistics.html">The Convergence of Cyber-GRC and Physical Logistics</a></h3>
+          <p>Why siloed supply chain assurance creates blind spots, and what a recent export control settlement revealed about where they form.</p>
+          <a class="go" href="/convergence-of-cyber-grc-and-physical-logistics.html">Read the essay →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2>Related Operational Evidence</h2></div>
+    <p class="intro-p">Neither of these was a dedicated third-party risk engagement, but both demonstrate skills the discipline depends on: cross-organisational stakeholder coordination and systematic discrepancy investigation.</p>
+    <div class="work">
+
+      <a class="card" href="/case-study-palantir-foundry.html" style="border-left:4px solid var(--brass)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Case Study · Digital Transformation</span>
+          <h3>Building Fleet-Wide Inventory Visibility</h3>
+          <p>Co-developed a fleet-wide inventory interrogation application with a prime contractor and DE&amp;S, working across organisational boundaries to agree data standards and validation protocols.</p>
+          <span class="go">Read the case study →</span>
+        </div>
+      </a>
+
+      <a class="card" href="/case-study-financial-control.html" style="border-left:4px solid var(--brass)">
+        <div class="top-band"></div>
+        <div class="inner">
+          <span class="type">Case Study · Financial Control</span>
+          <h3>Identifying £2.4M in Misallocated Funds</h3>
+          <p>Identified £2.4M in misallocated expenditure through systematic analysis of spending patterns, the same investigative method a supplier financial-risk review depends on.</p>
+          <span class="go">Read the case study →</span>
+        </div>
+      </a>
+
+    </div>
+    <p class="intro-p cross-link" style="margin-top:24px;margin-bottom:0"><a href="/supply-chain-assurance.html">Related: Supply Chain Assurance →</a></p>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>If third-party risk or supplier assurance is the gap your organisation is trying to close, I'd welcome a conversation now, ahead of full-time civilian availability from April 2028.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:kelroydbjames@gmail.com?subject=Third-party%20risk%20or%20supplier%20assurance%20role">Discuss a Future Role</a>
+      <a class="btn" href="mailto:kelroydbjames@gmail.com?subject=Request%20for%20full%20CV">Request the Private CV</a>
+      <a class="btn" href="/">Back to the Homepage</a>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:14px">I keep my full CV private. Email your name, organisation and the role you're exploring, and I'll send it directly.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
+    <p>© Kelroy James</p>
+  </div>
+</footer>
+
+</body>
+</html>
