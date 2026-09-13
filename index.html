@@ -159,6 +159,27 @@
   .recruiter-panel-head a:hover{color:var(--brass)}
   .recruiter-summary{display:flex;flex-direction:column;gap:16px;max-width:78ch}
   .recruiter-summary p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.65}
+  .quickread-grid{display:grid;grid-template-columns:1fr;gap:22px 32px;margin-top:4px}
+  @media(min-width:700px){.quickread-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1000px){.quickread-grid{grid-template-columns:repeat(3,1fr)}}
+  .quickread-block h4{font-family:Spectral,Georgia,serif;font-size:1rem;font-weight:600;margin:0 0 8px;color:var(--ink)}
+  .quickread-block p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+  .quickread-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+  .quickread-list li{font-size:14px;color:var(--ink-2);line-height:1.5;padding-left:14px;position:relative}
+  .quickread-list li::before{content:"—";position:absolute;left:0;color:var(--brass)}
+  .quickread-list a{color:var(--navy)}
+
+  /* ============ hiring manager panel ============ */
+  .hiring-manager-panel{background:var(--navy-soft);border-top:3px solid var(--navy);border-bottom:1px solid var(--rule)}
+  .hiring-manager-panel .wrap{padding:32px 26px}
+  .hiring-manager-panel h2{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin:0 0 14px}
+  .hiring-manager-panel p{margin:0 0 16px;font-size:15px;color:var(--ink-2);line-height:1.65;max-width:78ch}
+  .useful-list{list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:1fr;gap:8px;max-width:78ch}
+  @media(min-width:700px){.useful-list{grid-template-columns:repeat(2,1fr)}}
+  .useful-list li{font-size:14.5px;color:var(--ink-2);padding-left:16px;position:relative;line-height:1.5}
+  .useful-list li::before{content:"—";position:absolute;left:0;color:var(--navy)}
+  .hiring-manager-links{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13.5px}
+  .hiring-manager-links a{color:var(--navy)}
 
   /* ============ generic section ============ */
   section{padding:66px 0}
@@ -437,6 +458,7 @@
       <div class="btns" style="margin-top:22px">
         <a class="btn primary" href="mailto:kelroydbjames@gmail.com?subject=Request%20for%20full%20CV">Request the Private CV →</a>
         <a class="btn" href="#work">View the evidence →</a>
+        <a class="btn" href="/for-recruiters.html">One-Page Profile →</a>
       </div>
       <p style="font-size:12.5px;color:var(--muted);margin-top:10px">I keep my full CV private. Email your name, organisation and the role you're exploring, and I'll send it directly.</p>
     </div>
@@ -447,7 +469,7 @@
       <dl class="facts">
         <div class="fact"><dt>Current</dt><dd>Petty Officer (Supply Chain), Royal Navy</dd></div>
         <div class="fact"><dt>Studying</dt><dd>MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA</dd></div>
-        <div class="fact"><dt>Available</dt><dd>Open to employer conversations and future-role mapping now; full-time civilian availability from April 2028</dd></div>
+        <div class="fact"><dt>Early engagement</dt><dd>Open now to exploratory conversations, future-role mapping and capability discussions; full-time civilian availability from April 2028</dd></div>
       </dl>
     </div>
   </div>
@@ -456,12 +478,64 @@
 <div class="recruiter-panel" id="recruiter-quick-read">
   <div class="wrap">
     <div class="recruiter-panel-head">
-      <h2>Recruiter Quick Read</h2>
+      <h2>Quick Read: For Recruiters &amp; Hiring Managers</h2>
       <a href="/for-recruiters.html">Full profile →</a>
     </div>
-    <div class="recruiter-summary">
-      <p>My primary focus is supply chain assurance, third-party risk and operational controls, targeting Consultant and Senior Consultant roles with scope to contribute at manager level where the domain fit is strong. GRC consulting, internal audit and defence and aerospace assurance are the natural adjacent routes, spanning defence and aerospace primes (supply chain assurance, export control, inventory governance), professional services (third-party risk, GRC consulting, internal audit) and banks and regulated organisations (operational and third-party risk). I'm based in the greater Portsmouth area and open to relocation, working office-based, hybrid or field-based.</p>
-      <p>The case for hiring me rests on operational assurance experience backed by formal quantitative study, an MIT MicroMasters in Supply Chain Management, control design, financial and asset discrepancy investigation, stakeholder leadership and supplier-risk remediation. On one account, that meant identifying £2.4M in misallocated expenditure, and separately reducing financial liability by 80% on the same account. I'm open to employer conversations, future-role mapping and assessment now; transition and onboarding typically take 12 to 18 months, so early engagement matters ahead of full-time civilian availability from April 2028.</p>
+    <div class="quickread-grid">
+      <div class="quickread-block">
+        <h4>Where I add value</h4>
+        <p>I help organisations restore confidence that operational records match reality, in supply chain, third-party risk and operational controls.</p>
+      </div>
+      <div class="quickread-block">
+        <h4>Best-fit roles</h4>
+        <p>Supply chain assurance, third-party risk and operational controls, targeting Consultant and Senior Consultant roles with scope to contribute at manager level. GRC consulting, internal audit and defence &amp; aerospace assurance are the natural adjacent routes.</p>
+      </div>
+      <div class="quickread-block">
+        <h4>Evidence</h4>
+        <ul class="quickread-list">
+          <li><a href="/case-study-financial-control.html">£2.4M in misallocated expenditure identified</a></li>
+          <li>£250K in cost savings delivered through efficiency and inventory optimisation</li>
+          <li><a href="/case-study-type45-turnaround.html">A failing supply chain account restored to full compliance, with financial liability cut 80%</a></li>
+          <li><a href="/case-study-palantir-foundry.html">Fleet-wide inventory visibility built in Palantir Foundry</a></li>
+          <li>A seven-person team led through concurrent operational deployments; five of seven since promoted</li>
+        </ul>
+      </div>
+      <div class="quickread-block">
+        <h4>Leadership &amp; working style</h4>
+        <p>Operationally grounded and evidence-led, comfortable working across technical, commercial and senior stakeholder groups. Backed by an MIT MicroMasters in Supply Chain Management.</p>
+      </div>
+      <div class="quickread-block">
+        <h4>Engagement timing</h4>
+        <p>Open now to exploratory conversations, future-role mapping and assessment; transition and onboarding typically take 12 to 18 months, so early engagement matters ahead of full-time civilian availability from April 2028.</p>
+      </div>
+      <div class="quickread-block">
+        <h4>Location</h4>
+        <p>Greater Portsmouth area, open to relocation, working office-based, hybrid or field-based.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hiring-manager-panel" id="for-hiring-managers">
+  <div class="wrap">
+    <h2>For Hiring Managers</h2>
+    <p>If your organisation is dealing with weak supply-chain visibility, supplier-risk exposure, inventory inaccuracy, control failure or a complex operational transition, I'd welcome a conversation about the problem and the capability required.</p>
+    <ul class="useful-list">
+      <li>Operational records don't match physical reality</li>
+      <li>Inventory or asset accountability is weak</li>
+      <li>A supply chain account has failed a compliance review</li>
+      <li>Financial exposure from a process is unclear</li>
+      <li>Supplier risk sits fragmented across teams</li>
+      <li>A critical process depends on one experienced person</li>
+      <li>Operational data isn't reaching the people making senior decisions</li>
+      <li>A transformation project needs the operational requirement defined properly before the system is built</li>
+    </ul>
+    <div class="hiring-manager-links">
+      <a href="/case-study-type45-turnaround.html">Restoring Control to a Failing Account →</a>
+      <a href="/case-study-financial-control.html">Identifying £2.4M in Misallocated Funds →</a>
+      <a href="/case-study-palantir-foundry.html">Building Fleet-Wide Inventory Visibility →</a>
+      <a href="/for-recruiters.html">One-Page Profile →</a>
+      <a href="mailto:kelroydbjames@gmail.com?subject=Hiring%20manager%20-%20relevant%20experience">Discuss a Role →</a>
     </div>
   </div>
 </div>
@@ -635,6 +709,7 @@
   <div class="wrap">
     <div class="impact-head">
       <h2 style="font-size:1.6rem;margin-top:24px">Awards & Recognition</h2>
+      <p style="max-width:64ch;margin:14px auto 0">Led a seven-person team through concurrent operational deployments, maintaining delivery under pressure while developing the people in it: five of the seven have since been promoted.</p>
     </div>
     <div class="awards-grid">
       <div class="award-item">
@@ -676,7 +751,7 @@
 <div class="contact" id="contact">
   <div class="wrap">
     <h2>Get in touch</h2>
-    <p>Currently exploring supply chain assurance, third-party risk and GRC opportunities ahead of full-time civilian availability from April 2028.</p>
+    <p>Open now to exploratory conversations, future-role mapping and capability discussions with organisations planning ahead of full-time civilian availability from April 2028.</p>
     <div class="btns" style="margin:20px 0 8px">
       <a class="btn primary" href="mailto:kelroydbjames@gmail.com?subject=Supply%20chain%20assurance%2C%20third-party%20risk%20or%20GRC%20role">Discuss a Future Role in Supply Chain Assurance, Third-Party Risk or GRC</a>
       <a class="btn" href="mailto:kelroydbjames@gmail.com?subject=Request%20for%20full%20CV">Request the Private CV</a>
