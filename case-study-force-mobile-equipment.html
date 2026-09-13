@@ -34,6 +34,15 @@
   .site-header .wrap{display:flex;justify-content:space-between;align-items:center}
   .site-header .logo{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
   .site-header nav{display:flex;gap:28px}
+  .site-header .wrap{position:relative}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;font-size:20px;line-height:1;color:var(--ink)}
+  @media(max-width:700px){
+    .nav-toggle{display:block}
+    .site-header nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--rule);padding:6px 26px 18px}
+    .site-header nav.open{display:flex}
+    .site-header nav a{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+    .site-header nav a:last-child{border-bottom:none}
+  }
   .site-header a{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
   .site-header a:hover{color:var(--brass)}
 
@@ -106,6 +115,7 @@
 <header class="site-header">
   <div class="wrap">
     <a href="/" class="logo">Kelroy James</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var el=this.nextElementSibling;var open=el.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
     <nav>
       <a href="/">Home</a>
       <a href="/#work">Work</a>
