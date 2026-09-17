@@ -164,25 +164,6 @@
   @media(min-width:1000px){.quickread-grid{grid-template-columns:repeat(3,1fr)}}
   .quickread-block h4{font-family:Spectral,Georgia,serif;font-size:1rem;font-weight:600;margin:0 0 8px;color:var(--ink)}
   .quickread-block p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
-  .quickread-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
-  .quickread-list li{font-size:14px;color:var(--ink-2);line-height:1.5;padding-left:14px;position:relative}
-  .quickread-list li::before{content:"—";position:absolute;left:0;color:var(--brass)}
-  .quickread-list a{color:var(--navy)}
-
-  /* ============ hiring manager panel ============ */
-  .hiring-manager-panel{background:var(--navy-soft);border-top:3px solid var(--navy);border-bottom:1px solid var(--rule)}
-  .hiring-manager-panel .wrap{padding:32px 26px}
-  .hiring-manager-panel h2{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin:0 0 14px}
-  .hiring-manager-panel p{margin:0 0 16px;font-size:15px;color:var(--ink-2);line-height:1.65;max-width:78ch}
-  .useful-groups{display:grid;grid-template-columns:1fr;gap:22px;margin:0 0 20px}
-  @media(min-width:700px){.useful-groups{grid-template-columns:repeat(3,1fr);gap:28px}}
-  .useful-group h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin:0 0 10px}
-  .useful-group ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-  .useful-group li{font-size:14.5px;color:var(--ink-2);padding-left:16px;position:relative;line-height:1.5}
-  .useful-group li::before{content:"—";position:absolute;left:0;color:var(--navy)}
-  .hiring-manager-links{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13.5px}
-  .hiring-manager-links a{color:var(--navy)}
-
   /* ============ generic section ============ */
   section{padding:66px 0}
   .sec-head{display:flex;align-items:baseline;gap:18px;margin:0 0 30px;padding-bottom:13px;border-bottom:1px solid var(--rule)}
@@ -293,42 +274,8 @@
     letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;
   }
 
-  /* ============ what i do ============ */
-  .capability-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:28px}
-  @media(min-width:700px){.capability-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(min-width:1100px){.capability-grid{grid-template-columns:repeat(4,1fr)}}
-  .capability-block{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--brass);padding:20px 22px}
-  .capability-block h4{font-family:Spectral,Georgia,serif;font-size:1.02rem;margin:0 0 12px;font-weight:600;color:var(--ink)}
-  .capability-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
-  .capability-list li{font-size:13.5px;color:var(--ink-2);padding-left:14px;position:relative}
-  .capability-list li::before{content:"—";position:absolute;left:0;color:var(--brass)}
-
   /* ============ work zone ============ */
   #work{background:var(--navy-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--navy)}
-
-  /* ============ thesis band ============ */
-  .band{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-  .band .wrap{padding:60px 26px}
-  .thesis{
-    font-family:Spectral,Georgia,serif;font-size:clamp(1.4rem,3vw,2rem);
-    line-height:1.35;font-weight:600;margin:0 0 22px;max-width:24ch;text-wrap:balance;
-  }
-  .band-cols{display:grid;grid-template-columns:1fr;gap:26px;margin-top:34px}
-  @media(min-width:800px){.band-cols{grid-template-columns:repeat(2,1fr);gap:38px 48px}}
-  .band-cols h4{font-family:Spectral,Georgia,serif;font-size:1.04rem;margin:0 0 7px;font-weight:600}
-  .band-cols p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
-  .bd-form{display:flex;gap:10px;flex-wrap:wrap}
-  .bd-form input[type="email"]{
-    font-family:"Public Sans",sans-serif;font-size:14.5px;padding:11px 14px;
-    border:1px solid var(--rule);background:var(--surface);color:var(--ink);
-    min-width:240px;
-  }
-  .bd-form input[type="submit"]{
-    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
-    padding:11px 22px;background:transparent;color:var(--ink);border:1px solid var(--ink);cursor:pointer;
-  }
-  .bd-form input[type="submit"]:hover{background:var(--brass);border-color:var(--brass);color:#fff}
-  .band > .wrap > p.lead{max-width:60ch;color:var(--ink-2);margin:0;font-size:16px}
 
   /* ============ background ============ */
   .bg-grid{display:grid;grid-template-columns:1fr;gap:34px}
@@ -479,8 +426,8 @@
 <div class="recruiter-panel" id="recruiter-quick-read">
   <div class="wrap">
     <div class="recruiter-panel-head">
-      <h2>Quick Read: For Recruiters &amp; Hiring Managers</h2>
-      <a href="/for-recruiters.html">Full profile →</a>
+      <h2>Target Roles &amp; Availability</h2>
+      <a href="/for-recruiters.html">Full recruiter profile →</a>
     </div>
     <div class="quickread-grid">
       <div class="quickread-block">
@@ -492,21 +439,7 @@
         <p><strong>Primary target:</strong> Assurance Manager, Operational Controls Manager and Supplier Assurance Manager roles in supply chain assurance and operational controls. <strong>Also open to:</strong> Consultant and Senior Consultant roles in the same domain, plus GRC consulting, internal audit, third-party risk and defence &amp; aerospace assurance as adjacent routes.</p>
       </div>
       <div class="quickread-block">
-        <h4>Evidence</h4>
-        <ul class="quickread-list">
-          <li><a href="/case-study-financial-control.html">£2.4M in misallocated expenditure identified</a></li>
-          <li><a href="/case-study-garage-lite-trial.html">Zero losses piloting a new Fleet Time Support Period model with no precedent to follow</a></li>
-          <li><a href="/case-study-type45-turnaround.html">A failing supply chain account restored to full compliance, with associated financial liability reduced by 80% through asset verification</a></li>
-          <li><a href="/case-study-palantir-foundry.html">Reconfigured the spreadsheet feeding a fleet-adopted STOROB-tracking tool in Palantir Foundry</a></li>
-          <li>A nine-person team led through concurrent operational deployments; six of nine since promoted</li>
-        </ul>
-      </div>
-      <div class="quickread-block">
-        <h4>Leadership &amp; working style</h4>
-        <p>Operationally grounded and evidence-led, comfortable working across technical, commercial and senior stakeholder groups. Backed by an MIT MicroMasters in Supply Chain Management.</p>
-      </div>
-      <div class="quickread-block">
-        <h4>Engagement timing</h4>
+        <h4>Availability</h4>
         <p>Open now to exploratory conversations, future-role mapping and assessment; transition and onboarding typically take 12 to 18 months, so early engagement matters ahead of full-time civilian availability from April 2028.</p>
       </div>
       <div class="quickread-block">
@@ -514,99 +447,9 @@
         <p>Greater Portsmouth area, open to relocation, working office-based, hybrid or field-based.</p>
       </div>
     </div>
+    <p class="intro-p" style="margin-top:24px;margin-bottom:0"><a href="/for-recruiters.html">See the full recruiter profile →</a> · <a href="/skills-expertise.html">See the full skills and expertise breakdown →</a></p>
   </div>
 </div>
-
-<div class="hiring-manager-panel" id="for-hiring-managers">
-  <div class="wrap">
-    <h2>For Hiring Managers</h2>
-    <p>If your organisation is dealing with weak supply-chain visibility, supplier-risk exposure, inventory inaccuracy, control failure or a complex operational transition, I'd welcome a conversation about the problem and the capability required.</p>
-    <div class="useful-groups">
-      <div class="useful-group">
-        <h5>Control &amp; Assurance</h5>
-        <ul>
-          <li>Operational records don't match physical reality</li>
-          <li>A supply chain account has failed a compliance review</li>
-          <li>Financial exposure from a process is unclear</li>
-        </ul>
-      </div>
-      <div class="useful-group">
-        <h5>Risk &amp; Resilience</h5>
-        <ul>
-          <li>Supplier risk sits fragmented across teams</li>
-          <li>Inventory or asset accountability is weak</li>
-          <li>A critical process depends on one experienced person</li>
-        </ul>
-      </div>
-      <div class="useful-group">
-        <h5>Transformation &amp; Visibility</h5>
-        <ul>
-          <li>Operational data isn't reaching the people making senior decisions</li>
-          <li>A transformation project needs the operational requirement defined properly before the system is built</li>
-        </ul>
-      </div>
-    </div>
-    <div class="hiring-manager-links">
-      <a href="/case-study-type45-turnaround.html">Restoring Control to a Failing Account →</a>
-      <a href="/case-study-financial-control.html">Identifying £2.4M in Misallocated Funds →</a>
-      <a href="/case-study-palantir-foundry.html">Building Fleet-Wide Inventory Visibility →</a>
-      <a href="/for-recruiters.html">One-Page Profile →</a>
-      <a href="mailto:kelroydbjames@gmail.com?subject=Hiring%20manager%20-%20relevant%20experience">Discuss a Role →</a>
-    </div>
-  </div>
-</div>
-
-<section id="what-i-do">
-  <div class="wrap">
-    <div class="sec-head"><h2>What I Do</h2><span class="note">Scan the capabilities, then read the evidence</span></div>
-    <p class="intro-p">The capabilities below are demonstrated through the case studies and frameworks that follow, and organised by theme on the <a href="/supply-chain-assurance.html">Supply Chain Assurance</a> and <a href="/third-party-risk.html">Third-Party Risk &amp; Supplier Assurance</a> pages.</p>
-    <div class="capability-grid">
-      <div class="capability-block">
-        <h4>Assurance &amp; Controls</h4>
-        <ul class="capability-list">
-          <li>Control design</li>
-          <li>Control testing</li>
-          <li>Audit remediation</li>
-          <li>Compliance recovery</li>
-          <li>Three Lines Model</li>
-          <li>Root-cause analysis</li>
-        </ul>
-      </div>
-      <div class="capability-block">
-        <h4>Supply Chain &amp; Assets</h4>
-        <ul class="capability-list">
-          <li>Supplier assurance</li>
-          <li>Inventory governance</li>
-          <li>Asset accountability</li>
-          <li>Stock accuracy</li>
-          <li>Loss investigation</li>
-          <li>Supply chain resilience</li>
-        </ul>
-      </div>
-      <div class="capability-block">
-        <h4>Risk &amp; Governance</h4>
-        <ul class="capability-list">
-          <li>Third-party risk</li>
-          <li>Operational risk</li>
-          <li>Financial control</li>
-          <li>Export &amp; customs compliance</li>
-          <li>Governance frameworks</li>
-          <li>Executive assurance reporting</li>
-        </ul>
-      </div>
-      <div class="capability-block">
-        <h4>Delivery &amp; Leadership</h4>
-        <ul class="capability-list">
-          <li>Stakeholder management</li>
-          <li>Cross-functional coordination</li>
-          <li>Team leadership</li>
-          <li>Change implementation</li>
-          <li>Operational delivery under deadline pressure</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section id="work">
@@ -651,44 +494,7 @@
       </a>
 
     </div>
-    <p class="intro-p" style="margin-top:20px;margin-bottom:0"><a href="/case-studies.html">See all nine case studies →</a></p>
-
-    <h3 style="font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:48px 0 16px;color:var(--ink);border-left:4px solid var(--navy);padding-left:14px">Frameworks & Reference Material</h3>
-    <p class="intro-p" style="margin-bottom:28px">Working frameworks and reference material, each pressure-tested against a real problem before it was written up. These three are the most complete work samples; take what's useful, adapt it, and tell me where it breaks.</p>
-    <div class="work work-3">
-
-      <a class="card alt" href="/third-party-risk-lifecycle.html" style="border-left:4px solid var(--navy)">
-        <div class="top-band"></div>
-        <div class="inner">
-          <span class="type">Framework · Third-Party Risk</span>
-          <h3>Third-Party Risk, End to End</h3>
-          <p>A full supplier lifecycle methodology, from onboarding through segmentation, due diligence, contractual controls and monitoring to incident management, remediation and exit, with a working tool at every stage.</p>
-          <span class="go">Open the framework →</span>
-        </div>
-      </a>
-
-      <a class="card alt" href="/internal-audit-demonstration.html" style="border-left:4px solid var(--navy)">
-        <div class="top-band"></div>
-        <div class="inner">
-          <span class="type">Framework · Internal Audit</span>
-          <h3>An Internal Audit, End to End</h3>
-          <p>A full audit cycle worked against a fictional company: scoping, risk-based planning, control objectives, testing, evidence standards, graded findings, owned actions, follow-up and independent closure.</p>
-          <span class="go">Open the demonstration →</span>
-        </div>
-      </a>
-
-      <a class="card alt" href="/supplier-risk-register.html" style="border-left:4px solid var(--navy)">
-        <div class="top-band"></div>
-        <div class="inner">
-          <span class="type">Framework · Third-Party Risk</span>
-          <h3>One Register, Every Supplier</h3>
-          <p>The schema, a worked example across four risk tiers, and a downloadable blank template: the single document that ties onboarding, monitoring and remediation together into one live view.</p>
-          <span class="go">Open the framework →</span>
-        </div>
-      </a>
-
-    </div>
-    <p class="intro-p" style="margin-top:20px;margin-bottom:0"><a href="/frameworks.html">See all ten frameworks →</a> · <a href="/skills-expertise.html">See the full skills and expertise breakdown →</a></p>
+    <p class="intro-p" style="margin-top:20px;margin-bottom:0"><a href="/case-studies.html">See all nine case studies →</a> · <a href="/frameworks.html">See all ten frameworks →</a></p>
   </div>
 </section>
 
@@ -729,21 +535,6 @@
       <a class="btn" href="https://www.linkedin.com/in/kelroy-james">LinkedIn</a>
       <a class="btn" href="mailto:kelroydbjames@gmail.com">Email</a>
     </div>
-  </div>
-</div>
-
-<div class="band" id="worksheet-optin">
-  <div class="wrap">
-    <p class="thesis">Get the worksheet: Translate Your Own Skills.</p>
-    <p class="lead">A two-page exercise for service leavers: turn what you actually do into language a GRC recruiter or hiring manager already recognises. Worked example, blank template, and a Logistics-trade mapping verified against the Royal Navy's own published role descriptions.</p>
-    <div class="btns" style="margin-top:28px">
-      <a class="btn primary" href="/downloads/translate-your-own-skills-worksheet.pdf" download>Download the worksheet →</a>
-    </div>
-    <form action="https://buttondown.com/api/emails/embed-subscribe/kelroy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/kelroy', 'popupwindow')" class="bd-form" style="margin-top:22px">
-      <input type="email" name="email" id="bd-email-worksheet" placeholder="you@email.com" required>
-      <input type="hidden" value="1" name="embed">
-      <input type="submit" value="Also get new frameworks by email">
-    </form>
   </div>
 </div>
 
