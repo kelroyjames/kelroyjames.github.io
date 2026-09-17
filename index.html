@@ -174,10 +174,12 @@
   .hiring-manager-panel .wrap{padding:32px 26px}
   .hiring-manager-panel h2{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin:0 0 14px}
   .hiring-manager-panel p{margin:0 0 16px;font-size:15px;color:var(--ink-2);line-height:1.65;max-width:78ch}
-  .useful-list{list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:1fr;gap:8px;max-width:78ch}
-  @media(min-width:700px){.useful-list{grid-template-columns:repeat(2,1fr)}}
-  .useful-list li{font-size:14.5px;color:var(--ink-2);padding-left:16px;position:relative;line-height:1.5}
-  .useful-list li::before{content:"—";position:absolute;left:0;color:var(--navy)}
+  .useful-groups{display:grid;grid-template-columns:1fr;gap:22px;margin:0 0 20px}
+  @media(min-width:700px){.useful-groups{grid-template-columns:repeat(3,1fr);gap:28px}}
+  .useful-group h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin:0 0 10px}
+  .useful-group ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+  .useful-group li{font-size:14.5px;color:var(--ink-2);padding-left:16px;position:relative;line-height:1.5}
+  .useful-group li::before{content:"—";position:absolute;left:0;color:var(--navy)}
   .hiring-manager-links{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13.5px}
   .hiring-manager-links a{color:var(--navy)}
 
@@ -519,16 +521,31 @@
   <div class="wrap">
     <h2>For Hiring Managers</h2>
     <p>If your organisation is dealing with weak supply-chain visibility, supplier-risk exposure, inventory inaccuracy, control failure or a complex operational transition, I'd welcome a conversation about the problem and the capability required.</p>
-    <ul class="useful-list">
-      <li>Operational records don't match physical reality</li>
-      <li>Inventory or asset accountability is weak</li>
-      <li>A supply chain account has failed a compliance review</li>
-      <li>Financial exposure from a process is unclear</li>
-      <li>Supplier risk sits fragmented across teams</li>
-      <li>A critical process depends on one experienced person</li>
-      <li>Operational data isn't reaching the people making senior decisions</li>
-      <li>A transformation project needs the operational requirement defined properly before the system is built</li>
-    </ul>
+    <div class="useful-groups">
+      <div class="useful-group">
+        <h5>Control &amp; Assurance</h5>
+        <ul>
+          <li>Operational records don't match physical reality</li>
+          <li>A supply chain account has failed a compliance review</li>
+          <li>Financial exposure from a process is unclear</li>
+        </ul>
+      </div>
+      <div class="useful-group">
+        <h5>Risk &amp; Resilience</h5>
+        <ul>
+          <li>Supplier risk sits fragmented across teams</li>
+          <li>Inventory or asset accountability is weak</li>
+          <li>A critical process depends on one experienced person</li>
+        </ul>
+      </div>
+      <div class="useful-group">
+        <h5>Transformation &amp; Visibility</h5>
+        <ul>
+          <li>Operational data isn't reaching the people making senior decisions</li>
+          <li>A transformation project needs the operational requirement defined properly before the system is built</li>
+        </ul>
+      </div>
+    </div>
     <div class="hiring-manager-links">
       <a href="/case-study-type45-turnaround.html">Restoring Control to a Failing Account →</a>
       <a href="/case-study-financial-control.html">Identifying £2.4M in Misallocated Funds →</a>
