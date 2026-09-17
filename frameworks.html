@@ -79,7 +79,7 @@
   .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.02rem,1.8vw,1.2rem);line-height:1.55;color:var(--ink-2);max-width:66ch;margin:0}
 
   section{padding:56px 0}
-  .work{display:grid;grid-template-columns:1fr;gap:18px}
+  .work{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
   @media(min-width:840px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}}
   .card{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);display:flex;flex-direction:column;text-decoration:none;color:inherit}
   .card .top-band{height:3px;background:var(--brass)}
