@@ -20,96 +20,121 @@
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
   :root{
-    --ink:#131c28;--ink-2:#475569;--muted:#64748b;--surface:#ffffff;--bg:#f8fafc;
-    --rule:#e2e8f0;--brass:#8A6A2F;--brass-soft:#F2ECDF;--shadow:0 1px 3px rgba(19,28,40,.08);
+    --ground:#EDEEF0; --surface:#FFFFFF; --surface-2:#F4F5F7;
+    --ink:#131C28; --ink-2:#3A4753; --muted:#6B7885;
+    --rule:#D4D8DD; --rule-soft:#E4E7EA;
+    --brass:#8A6A2F; --brass-soft:#F2ECDF;
+    --navy:#24405C; --navy-soft:#E4EAF1;
+    --shadow:0 1px 2px rgba(19,28,40,.06), 0 10px 30px rgba(19,28,40,.06);
+    color-scheme:light;
   }
-  *{margin:0;padding:0;box-sizing:border-box}
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0B1119; --surface:#131B24; --surface-2:#18212B;
+      --ink:#E2E7EC; --ink-2:#B4C0CB; --muted:#828F9B;
+      --rule:#27333F; --rule-soft:#1F2A34;
+      --brass:#C9A257; --brass-soft:#2A2317;
+      --navy:#83A6C7; --navy-soft:#182533;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0B1119;--surface:#131B24;--surface-2:#18212B;--ink:#E2E7EC;--ink-2:#B4C0CB;
+    --muted:#828F9B;--rule:#27333F;--rule-soft:#1F2A34;--brass:#C9A257;--brass-soft:#2A2317;
+    --navy:#83A6C7;--navy-soft:#182533;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box;margin:0}
+  img{max-width:100%}
   body{
-    font-family:"Public Sans",sans-serif;background:var(--bg);color:var(--ink);
-    line-height:1.6;-webkit-font-smoothing:antialiased;
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
-  
-  /* header */
-  .site-header{background:var(--surface);border-bottom:1px solid var(--rule);padding:18px 0;position:sticky;top:0;z-index:100}
-  .site-header .wrap{display:flex;justify-content:space-between;align-items:center}
-  .site-header .logo{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
-  .site-header nav{display:flex;gap:28px}
-  .site-header .wrap{position:relative}
+  a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+  .nav{border-bottom:1px solid var(--rule);background:var(--surface);position:sticky;top:0;z-index:20}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:15px;padding-bottom:15px}
+  .mark{font-family:Spectral,Georgia,serif;font-weight:700;font-size:1.45rem;letter-spacing:-.015em;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .nav ul{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
+  .nav a.lnk{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+  .nav a.lnk:hover{color:var(--brass)}
+  .nav a.lnk.cta{background:var(--brass);color:#fff;padding:9px 18px}
   .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;font-size:20px;line-height:1;color:var(--ink)}
   @media(max-width:700px){
     .nav-toggle{display:block}
-    .site-header nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--rule);padding:6px 26px 18px}
-    .site-header nav.open{display:flex}
-    .site-header nav a{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
-    .site-header nav a:last-child{border-bottom:none}
+    .nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--rule);padding:6px 26px 18px}
+    .nav ul.open{display:flex}
+    .nav ul li{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+    .nav ul li:last-child{border-bottom:none;padding-top:16px}
   }
-  .site-header a{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
-  .site-header a:hover{color:var(--brass)}
-  
-  /* case study header */
-  .cs-hero{background:linear-gradient(135deg,#131c28 0%,#1e3a5f 100%);color:white;padding:80px 0 60px}
-  .cs-breadcrumb{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px;opacity:.8}
-  .cs-breadcrumb a{color:white;text-decoration:none}
-  .cs-breadcrumb a:hover{text-decoration:underline}
-  .cs-title{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:18px;max-width:20ch}
-  .cs-subtitle{font-size:1.15rem;opacity:.9;margin-bottom:32px;max-width:50ch;line-height:1.5}
-  .cs-meta{display:flex;gap:40px;flex-wrap:wrap}
+
+  .cs-hero{background:var(--surface);border-bottom:1px solid var(--rule);padding:56px 0 44px}
+  .cs-breadcrumb{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px;color:var(--brass)}
+  .cs-breadcrumb a{color:var(--muted);text-decoration:none}
+  .cs-breadcrumb a:hover{color:var(--brass)}
+  .cs-title{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,4.4vw,2.9rem);font-weight:700;line-height:1.1;letter-spacing:-.015em;margin-bottom:18px;max-width:22ch}
+  .cs-subtitle{font-family:Spectral,Georgia,serif;font-size:clamp(1.02rem,1.8vw,1.2rem);color:var(--ink-2);margin-bottom:30px;max-width:60ch;line-height:1.55}
+  .cs-meta{display:flex;gap:36px;flex-wrap:wrap}
   .cs-meta-item{display:flex;flex-direction:column;gap:4px}
-  .cs-meta-label{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;opacity:.7}
-  .cs-meta-value{font-size:15px;font-weight:600}
-  
-  /* impact banner */
-  .impact-banner{background:var(--brass-soft);border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);padding:40px 0}
+  .cs-meta-label{font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+  .cs-meta-value{font-size:14.5px;font-weight:600;color:var(--ink)}
+
+  .impact-banner{background:var(--brass-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--brass);padding:40px 0}
   .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
   .impact-item{text-align:center}
   .impact-number{font-family:Spectral,Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--brass);line-height:1}
-  .impact-label{font-size:13px;color:var(--ink-2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+  .impact-label{font-size:13px;color:var(--ink-2);margin-top:8px;text-transform:uppercase;letter-spacing:.05em}
 
   .at-a-glance{background:var(--surface);border-bottom:1px solid var(--rule);padding:28px 0}
   .glance-grid{display:grid;grid-template-columns:1fr;gap:20px}
   @media(min-width:700px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
   .glance-item h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
   .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
-  
-  /* content */
-  .cs-content{background:var(--surface);padding:60px 0}
+
+  .cs-content{background:var(--surface);padding:56px 0}
   .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
   @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
-  .cs-toc{position:sticky;top:100px;height:fit-content}
+  .cs-toc{position:sticky;top:80px;height:fit-content}
   .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
-  .cs-toc ul{list-style:none}
+  .cs-toc ul{list-style:none;padding:0;margin:0}
   .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
   .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
   @media(max-width:840px){.cs-toc{position:static}}
-  
+
   .cs-section{margin-bottom:48px}
-  .cs-section h2{font-family:Spectral,Georgia,serif;font-size:1.8rem;font-weight:700;margin-bottom:16px;color:var(--ink)}
-  .cs-section h3{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:600;margin:32px 0 12px;color:var(--ink)}
-  .cs-section p{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:16px;max-width:68ch}
+  .cs-section h2{font-family:Spectral,Georgia,serif;font-size:1.6rem;font-weight:700;margin-bottom:16px;color:var(--ink);letter-spacing:-.012em}
+  .cs-section h3{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:600;margin:28px 0 12px;color:var(--ink)}
+  .cs-section p{font-size:15.5px;line-height:1.7;color:var(--ink-2);margin-bottom:16px;max-width:68ch}
   .cs-section ul{margin:16px 0 16px 20px}
-  .cs-section li{font-size:16px;line-height:1.7;color:var(--ink-2);margin-bottom:8px}
+  .cs-section li{font-size:15.5px;line-height:1.7;color:var(--ink-2);margin-bottom:8px}
   .cs-section strong{color:var(--ink);font-weight:600}
-  
-  .highlight-box{background:var(--brass-soft);border-left:4px solid var(--brass);padding:24px;margin:28px 0;border-radius:4px}
-  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin-bottom:10px}
-  .highlight-box p{margin-bottom:0}
-  
+  .cs-section a{color:var(--brass)}
+
+  .highlight-box{background:var(--brass-soft);border-left:3px solid var(--brass);padding:22px 24px;margin:28px 0}
+  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin-bottom:10px;color:var(--ink)}
+  .highlight-box p{margin-bottom:8px}
+  .highlight-box p:last-child{margin-bottom:0}
+
   .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:20px 0}
-  .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:13px;font-weight:500;border-radius:4px;box-shadow:var(--shadow)}
-  
-  .outcome-list{list-style:none;margin:20px 0}
-  .outcome-list li{padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--rule)}
+  .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:12.5px;font-weight:500;color:var(--ink-2);box-shadow:var(--shadow)}
+
+  .outcome-list{list-style:none;margin:20px 0;padding:0}
+  .outcome-list li{padding:12px 0 12px 32px;position:relative;border-bottom:1px solid var(--rule-soft);font-size:15.5px;line-height:1.65;color:var(--ink-2)}
   .outcome-list li:last-child{border-bottom:none}
-  .outcome-list li:before{content:"✓";position:absolute;left:0;top:12px;color:var(--brass);font-size:1.3rem;font-weight:bold}
-  
-  /* footer */
-  .cs-footer{background:var(--surface);border-top:1px solid var(--rule);padding:40px 0}
-  .cs-footer .wrap{display:flex;justify-content:space-between;align-items:center}
-  .cs-footer a{color:var(--brass);text-decoration:none;font-weight:600}
+  .outcome-list li:before{content:"✓";position:absolute;left:0;top:12px;color:var(--brass);font-size:1.1rem;font-weight:bold}
+  .outcome-list strong{color:var(--ink);font-weight:600}
+
+  .cs-footer{background:var(--surface-2);border-top:1px solid var(--rule);padding:36px 0}
+  .cs-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  .cs-footer a{color:var(--brass);text-decoration:none;font-weight:600;font-size:14.5px}
   .cs-footer a:hover{text-decoration:underline}
 
-  .cta-band{background:var(--bg);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .cta-band{background:var(--surface-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
   .cta-band .wrap{padding:44px 26px}
   .cta-band h2{font-family:Spectral,Georgia,serif;font-size:1.5rem;margin:0 0 14px;font-weight:700;color:var(--ink)}
   .cta-band p{margin:0 0 20px;color:var(--ink-2);max-width:64ch}
@@ -122,9 +147,11 @@
   .btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
   .btn:hover{background:var(--brass);border-color:var(--brass);color:#fff}
 
-  
+  footer{padding:34px 0 56px;border-top:1px solid var(--rule)}
+  footer p{font-size:12.5px;color:var(--muted);max-width:74ch;margin:0 0 10px;line-height:1.6}
+
   @media(max-width:640px){
-    .cs-hero{padding:50px 0 40px}
+    .cs-hero{padding:44px 0 36px}
     .impact-grid{grid-template-columns:1fr 1fr}
     .impact-number{font-size:2rem}
   }
@@ -132,20 +159,19 @@
 </head>
 <body>
 
-<header class="site-header">
+<nav class="nav">
   <div class="wrap">
-    <a href="/" class="logo">Kelroy James</a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var el=this.nextElementSibling;var open=el.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/#work">Work</a>
-      <a href="/writing.html">Writing</a>
-      <a href="/background.html">Background</a>
-    <a href="/for-recruiters.html">For Recruiters</a>
-    <a href="/#contact">Contact</a>
-      </nav>
+    <a class="mark" href="/">Kelroy James</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.nextElementSibling;var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
+    <ul>
+      <li><a class="lnk" href="/#work">Work</a></li>
+      <li><a class="lnk" href="/writing.html">Writing</a></li>
+      <li><a class="lnk" href="/background.html">Background</a></li>
+      <li><a class="lnk" href="/for-recruiters.html">For Recruiters</a></li>
+      <li><a class="lnk cta" href="/#contact">Contact</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
 <section class="cs-hero">
   <div class="wrap">
@@ -369,6 +395,14 @@
     <a href="/">← Back to Home</a>
   </div>
 </section>
+
+
+<footer>
+  <div class="wrap">
+    <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
+    <p>© Kelroy James</p>
+  </div>
+</footer>
 
 </body>
 </html>
