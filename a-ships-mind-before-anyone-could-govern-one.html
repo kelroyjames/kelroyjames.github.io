@@ -83,7 +83,8 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   transition:width .1s ease;
 }
 
-.topnav{padding:22px 0 0;margin-bottom:44px}
+.topnav{padding-top:22px;margin-bottom:44px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 22px}
+.topnav-links{display:flex;gap:18px;flex-wrap:wrap}
 .topnav a{
   font-family:"IBM Plex Mono",ui-monospace,monospace;
   font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
@@ -267,6 +268,12 @@ footer p{
 </div>
 <div class="wrap topnav">
   <a href="/writing.html">&#8592; Writing</a>
+  <div class="topnav-links">
+    <a href="/#work">Work</a>
+    <a href="/background.html">Background</a>
+    <a href="/for-recruiters.html">For Recruiters</a>
+    <a href="/#contact">Contact</a>
+  </div>
 </div>
 
 <header class="masthead">
