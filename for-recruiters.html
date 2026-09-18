@@ -52,6 +52,10 @@
     font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+  .topnav{padding-top:22px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 22px}
+  .topnav-links{display:flex;gap:18px;flex-wrap:wrap}
+  .topnav a{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#6B7885}
+  .topnav a:hover{color:var(--accent)}
   a{color:var(--accent)}
   a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
@@ -138,8 +142,14 @@
 </style>
 </head>
 <body>
-<div style="max-width:1100px;margin:0 auto;padding:22px 26px 0">
-<a href="/" style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:#6B7885">&#8592; Kelroy James</a>
+<div class="wrap topnav">
+  <a href="/">&#8592; Kelroy James</a>
+  <div class="topnav-links">
+    <a href="/#work">Work</a>
+    <a href="/writing.html">Writing</a>
+    <a href="/background.html">Background</a>
+    <a href="/#contact">Contact</a>
+  </div>
 </div>
 
 
@@ -151,7 +161,7 @@
     <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0">Full evidence, case studies, frameworks and testimonials are one click away at the bottom of this page</p>
     <dl class="quick-facts">
       <div><dt>Current status</dt><dd>Serving Petty Officer (Supply Chain), Royal Navy: 18 years' service</dd></div>
-      <div><dt>Availability</dt><dd>Open now to exploratory conversations, future-role mapping and assessment; transition and onboarding can take 12–18 months, so early engagement matters ahead of full-time civilian availability from April 2028.</dd></div>
+      <div><dt>Availability</dt><dd>Available now for exploratory conversations, future-role mapping, capability assessment and transition planning. Full-time civilian availability begins in April 2028. Transition and onboarding can take 12–18 months, so early engagement is worth starting now.</dd></div>
       <div><dt>Location</dt><dd>Greater Portsmouth area (Portsmouth/Fareham), UK. Open to relocation for the right role; comfortable with regular travel.</dd></div>
       <div><dt>Working preference</dt><dd>Open to office-based, hybrid and field-based roles. Eighteen years of deployed and shore postings means I adapt easily to any of them.</dd></div>
     </dl>
