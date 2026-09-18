@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /Kelroy-James-CV.pdf
-Disallow: /Kelroy-James-CV.docx
 
 Sitemap: https://kelroyjames.com/sitemap.xml
