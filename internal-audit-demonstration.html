@@ -293,8 +293,8 @@ main:focus{outline:none}
   <div class="stage" id="stage-3">
     <div class="stage-head"><span class="stage-num">3</span><h3>Control Objectives</h3></div>
     <p>Each objective states what risk the control addresses, before any testing happens, so it's clear what "pass" and "fail" actually mean.</p>
-    <div class="scroll-x"><table class="data">
-      <tr><th>Control Objective</th><th>Risk Addressed</th><th>Category</th></tr>
+    <div class="scroll-x"><table class="data"><caption class="sr-only">Control objectives, the risk each one addresses, and its category.</caption>
+      <tr><th scope="col">Control Objective</th><th scope="col">Risk Addressed</th><th scope="col">Category</th></tr>
       <tr><td>Inventory Accuracy</td><td>Stock records used for customer commitments and financial reporting don't reflect physical reality</td><td>Assurance</td></tr>
       <tr><td>Custody Transfer</td><td>No one is accountable for stock discrepancies that occur during a shift or role handover</td><td>Governance</td></tr>
       <tr><td>Purchase Authorisation</td><td>Spend above delegated limits is committed without appropriate sign-off</td><td>Governance</td></tr>
@@ -305,8 +305,8 @@ main:focus{outline:none}
   <div class="stage" id="stage-4">
     <div class="stage-head"><span class="stage-num">4</span><h3>Test Procedures</h3></div>
     <p>How each objective was actually tested, not just what was tested. This is the part a checklist alone doesn't show.</p>
-    <div class="scroll-x"><table class="data">
-      <tr><th>Control Objective</th><th>Test Procedure</th><th>Sample</th></tr>
+    <div class="scroll-x"><table class="data"><caption class="sr-only">Test procedure and sample size for each control objective.</caption>
+      <tr><th scope="col">Control Objective</th><th scope="col">Test Procedure</th><th scope="col">Sample</th></tr>
       <tr><td>Inventory Accuracy</td><td>Independent physical recount of a sample of stock lines, reconciled against the system record</td><td>25 lines, Category A stock</td></tr>
       <tr><td>Custody Transfer</td><td>Walkthrough of handover documentation, checking for dual signature and date</td><td>5 handover records</td></tr>
       <tr><td>Purchase Authorisation</td><td>Re-performance check: trace each transaction above threshold to its authorisation record</td><td>15 transactions above £500</td></tr>
@@ -344,8 +344,8 @@ main:focus{outline:none}
         <li><span class="rating non">Non-Compliance</span> control not operating, or operating in a way that doesn't manage the risk</li>
       </ul>
     </div>
-    <div class="scroll-x" style="margin-top:18px"><table class="data">
-      <tr><th>Ref</th><th>Objective</th><th>Finding</th><th>Rating</th></tr>
+    <div class="scroll-x" style="margin-top:18px"><table class="data"><caption class="sr-only">Audit findings: reference, control objective tested, what was found, and the rating given.</caption>
+      <tr><th scope="col">Ref</th><th scope="col">Objective</th><th scope="col">Finding</th><th scope="col">Rating</th></tr>
       <tr><td>F1</td><td>Inventory Accuracy</td><td>3 of 25 sampled lines showed a system-to-physical variance with no adjustment record on file</td><td><span class="rating partial">Partial</span></td></tr>
       <tr><td>F2</td><td>Custody Transfer</td><td>1 of 5 sampled handover records lacked a countersignature from the receiving custodian</td><td><span class="rating partial">Partial</span></td></tr>
       <tr><td>F3</td><td>Purchase Authorisation</td><td>All 15 sampled transactions above threshold had appropriate dual authorisation on file</td><td><span class="rating full">Full</span></td></tr>
@@ -356,8 +356,8 @@ main:focus{outline:none}
   <div class="stage" id="stage-7">
     <div class="stage-head"><span class="stage-num">7</span><h3>Management Actions</h3></div>
     <p>A finding without an owned, dated action is an observation, not a managed risk. Every rating below Full Compliance gets a tracked action.</p>
-    <div class="scroll-x"><table class="data">
-      <tr><th>Ref</th><th>Root Cause</th><th>Action</th><th>Owner</th><th>Target</th><th>Status</th></tr>
+    <div class="scroll-x"><table class="data"><caption class="sr-only">Management actions: root cause, action, owner, target date and status for each finding.</caption>
+      <tr><th scope="col">Ref</th><th scope="col">Root Cause</th><th scope="col">Action</th><th scope="col">Owner</th><th scope="col">Target</th><th scope="col">Status</th></tr>
       <tr><td>F1</td><td>Adjustment step skipped after recount when variance was small</td><td>Investigate the 3 lines, raise adjustment records, brief the team on the adjustment step</td><td>Warehouse Manager</td><td>+30 days</td><td>Open</td></tr>
       <tr><td>F2</td><td>Handover procedure not consistently enforced on night shift</td><td>Reissue handover procedure; retrospectively verify or re-perform the affected handover</td><td>Operations Supervisor</td><td>+14 days</td><td>Open</td></tr>
       <tr><td>F4</td><td>Onboarding gate control not enforced before first transaction is permitted</td><td>Screen the 2 suppliers retrospectively; suspend further transactions pending clearance; add a system block preventing transactions before screening is recorded</td><td>Procurement Lead</td><td>+7 days, escalated</td><td>Open, escalated</td></tr>

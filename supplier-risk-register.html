@@ -255,8 +255,8 @@ main:focus{outline:none}
   <div class="sec-head"><h2>The Schema</h2><span class="count">Thirteen columns, each earning its place</span></div>
   <p class="sec-note">Every column exists to answer a specific question a risk owner will actually ask. A column nobody ever queries is a column that shouldn't be there.</p>
   <div class="scroll-x">
-    <table class="data">
-      <tr><th>Column</th><th>Question It Answers</th></tr>
+    <table class="data"><caption class="sr-only">Register schema: each column and the question it answers.</caption>
+      <tr><th scope="col">Column</th><th scope="col">Question It Answers</th></tr>
       <tr><td>Supplier ID / Name</td><td>Which supplier, unambiguously (names change; an ID doesn't)</td></tr>
       <tr><td>Category / Spend Area</td><td>What do they actually supply, and how much does it matter commercially</td></tr>
       <tr><td>Risk Tier</td><td>Critical, Significant, Standard or Low, set at classification (Stage 2 of the lifecycle) and revisited, not fixed forever</td></tr>
@@ -277,9 +277,9 @@ main:focus{outline:none}
   <div class="sec-head"><h2>Worked Example</h2><span class="count">Six fictional suppliers, four tiers</span></div>
   <p class="sec-note">Invented entries, chosen to show the range: a clean Low-tier relationship, a Critical one mid-remediation, and one flagged for exit.</p>
   <div class="scroll-x">
-    <table class="data">
+    <table class="data"><caption class="sr-only">Worked example: supplier, tier, category, key risk indicator, open findings and next review date.</caption>
       <tr>
-        <th>Supplier</th><th>Tier</th><th>Category</th><th>KRI</th><th>Open Findings</th><th>Next Review</th><th>Flag</th>
+        <th scope="col">Supplier</th><th scope="col">Tier</th><th scope="col">Category</th><th scope="col">KRI</th><th scope="col">Open Findings</th><th scope="col">Next Review</th><th scope="col">Flag</th>
       </tr>
       <tr>
         <td>Supplier A, sole-source component</td>
@@ -341,8 +341,8 @@ main:focus{outline:none}
 
 <div class="wrap">
   <div class="sec-head"><h2>How It Gets Used</h2><span class="count">A register is only as good as its update discipline</span></div>
-  <table class="data">
-    <tr><th>Trigger</th><th>What Updates</th></tr>
+  <table class="data"><caption class="sr-only">Triggers and the register update each one causes.</caption>
+    <tr><th scope="col">Trigger</th><th scope="col">What Updates</th></tr>
     <tr><td>Scheduled due-diligence refresh (Stage 3)</td><td>Inherent risk rating, key risk drivers, last DD date, next review date</td></tr>
     <tr><td>Monitoring alert fires (Stage 5)</td><td>KRI status, immediately, not at the next scheduled review</td></tr>
     <tr><td>Incident raised (Stage 6)</td><td>Open findings column, with reference and severity</td></tr>
