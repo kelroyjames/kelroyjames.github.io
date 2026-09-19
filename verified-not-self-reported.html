@@ -25,10 +25,10 @@
     --surface-2:#F4F7F5;
     --ink:#16211D;
     --ink-2:#3C4C46;
-    --muted:#68786F;
+    --muted:#566659;
     --rule:#D2DAD5;
     --rule-soft:#E2E8E4;
-    --accent:#8A6A2F;
+    --accent:#7A5C24;
     --accent-soft:#F2ECDF;
     --counter:#7A4A1E;
     --counter-soft:#F3EAE0;
@@ -84,7 +84,7 @@
 .topnav a{
   font-family:"IBM Plex Mono",ui-monospace,monospace;
   font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
-  text-decoration:none;color:#6B7885;
+  text-decoration:none;color:var(--muted);
 }
 .topnav a:hover{color:var(--accent)}
 
@@ -98,7 +98,7 @@
     letter-spacing:.1em;text-transform:uppercase;background:var(--surface-2);border:1px solid var(--rule);
     color:var(--ink-2);text-decoration:none;transition:all .2s ease;cursor:pointer;
   }
-  .share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .share-btn:hover{background:var(--accent);color:var(--surface);border-color:var(--accent)}
 
   header.top{background:var(--surface);border-bottom:1px solid var(--rule);position:relative}
   .featured-image{width:100%;height:320px;object-fit:cover;display:block}
@@ -206,10 +206,16 @@
     .row{transition:border-color .18s ease}
     .row:hover{border-color:var(--accent)}
   }
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--surface);color:var(--ink);padding:10px 16px;z-index:300;font:600 14px/1.2 "Public Sans",sans-serif;text-decoration:none;border:2px solid currentColor}
+.skip-link:focus{left:8px;top:8px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<div class="reading-progress">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="reading-progress" aria-hidden="true">
   <div class="reading-progress-bar" id="progressBar"></div>
 </div>
 <div class="wrap topnav">
@@ -222,6 +228,7 @@
     <a href="/#contact">Contact</a>
   </div>
 </div>
+<main id="main">
 
 
 <header class="top">
@@ -240,8 +247,8 @@
       <span>🔄 4 trades mapped so far</span>
     </div>
     <div class="share-buttons">
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/verified-not-self-reported.html" target="_blank" class="share-btn">Share on LinkedIn</a>
-      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/verified-not-self-reported.html&text=Independently%20Verified%20Skills%20Mapping" target="_blank" class="share-btn">Share on X</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/verified-not-self-reported.html" target="_blank" class="share-btn" rel="noopener noreferrer">Share on LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/verified-not-self-reported.html&text=Independently%20Verified%20Skills%20Mapping" target="_blank" class="share-btn" rel="noopener noreferrer">Share on X<span class="sr-only"> (opens in a new tab)</span></a>
       <a href="mailto:?subject=Independently Verified Skills Mapping&body=Check this out: https://kelroyjames.com/verified-not-self-reported.html" class="share-btn">Share via Email</a>
     </div>
   </div>
@@ -382,6 +389,7 @@
   </div>
 </div>
 
+</main>
 <footer>
   <div class="wrap">
     <p><b>Sources and scope.</b> Role descriptions summarised from the Royal Navy's published careers pages at royalnavy.mod.uk/careers (Logistics, Engineering, Warfare and Healthcare & Medical professions and role pages, accessed September 2026). The Pan-Defence Skills Framework is referenced via JSP 822 Defence Training and Education, published on gov.uk. Civilian control language references publicly available standards: ISO/IEC 27001, ISO 9001, the COSO internal control framework and the IIA Three Lines Model.</p>

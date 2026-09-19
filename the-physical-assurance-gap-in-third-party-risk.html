@@ -23,10 +23,10 @@ img{max-width:100%}
 [hidden]{display:none!important}
 :root{
   --ground:#EDF0F3; --surface:#FFFFFF; --surface-2:#F5F7F9;
-  --ink:#15202B; --ink-2:#3D4C59; --muted:#697887;
+  --ink:#15202B; --ink-2:#3D4C59; --muted:#586573;
   --rule:#D3DAE1; --rule-soft:#E3E8ED;
-  --accent:#8A6A2F; --accent-soft:#F2ECDF;
-  --signal:#9A6410; --signal-soft:#F6EEDF;
+  --accent:#7A5C24; --accent-soft:#F2ECDF;
+  --signal:#855410; --signal-soft:#F6EEDF;
   --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
   --maxw:1080px;
   color-scheme:light;
@@ -58,7 +58,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .topnav-links{display:flex;gap:18px;flex-wrap:wrap}
 .topnav a{
   font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;
-  text-transform:uppercase;text-decoration:none;color:#6B7885;
+  text-transform:uppercase;text-decoration:none;color:var(--muted);
 }
 .topnav a:hover{color:var(--accent)}
 
@@ -108,7 +108,7 @@ article{padding:0 0 56px}
   background:var(--surface-2);border:1px solid var(--rule);color:var(--ink-2);text-decoration:none;
   transition:all .2s ease;cursor:pointer;
 }
-.share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.share-btn:hover{background:var(--accent);color:var(--surface);border-color:var(--accent)}
 
 .worked{background:var(--surface-2);border:1px solid var(--rule);padding:24px 26px;margin:28px 0;box-shadow:var(--shadow)}
 .worked h4{margin-top:0}
@@ -124,6 +124,11 @@ table.calc th{background:var(--surface);font-family:"IBM Plex Mono",monospace;fo
 
 footer{padding:34px 0 56px;border-top:1px solid var(--rule)}
 footer p{font-size:12.5px;color:var(--muted);max-width:70ch;margin:0 0 10px;line-height:1.6}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--surface);color:var(--ink);padding:10px 16px;z-index:300;font:600 14px/1.2 "Public Sans",sans-serif;text-decoration:none;border:2px solid currentColor}
+.skip-link:focus{left:8px;top:8px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 <script type="application/ld+json">
 {
@@ -140,7 +145,8 @@ footer p{font-size:12.5px;color:var(--muted);max-width:70ch;margin:0 0 10px;line
 </script>
 </head>
 <body>
-<div class="reading-progress">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="reading-progress" aria-hidden="true">
   <div class="reading-progress-bar" id="progressBar"></div>
 </div>
 <div class="wrap topnav">
@@ -152,6 +158,7 @@ footer p{font-size:12.5px;color:var(--muted);max-width:70ch;margin:0 0 10px;line
     <a href="/#contact">Contact</a>
   </div>
 </div>
+<main id="main">
 
 <header class="masthead">
   <img src="/images/articles/export-control-supply-chain.png" alt="A supplier due-diligence checklist over an aerospace supply chain scene" class="featured-image">
@@ -173,8 +180,8 @@ footer p{font-size:12.5px;color:var(--muted);max-width:70ch;margin:0 0 10px;line
       <span>📊 ~1,870 words</span>
     </div>
     <div class="share-buttons">
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/the-physical-assurance-gap-in-third-party-risk.html" target="_blank" class="share-btn">Share on LinkedIn</a>
-      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/the-physical-assurance-gap-in-third-party-risk.html&text=The%20Physical%20Assurance%20Gap%20in%20Third-Party%20Risk" target="_blank" class="share-btn">Share on X</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/the-physical-assurance-gap-in-third-party-risk.html" target="_blank" class="share-btn" rel="noopener noreferrer">Share on LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/the-physical-assurance-gap-in-third-party-risk.html&text=The%20Physical%20Assurance%20Gap%20in%20Third-Party%20Risk" target="_blank" class="share-btn" rel="noopener noreferrer">Share on X<span class="sr-only"> (opens in a new tab)</span></a>
       <a href="mailto:?subject=Article: The Physical Assurance Gap in Third-Party Risk&body=I thought you might find this interesting: https://kelroyjames.com/the-physical-assurance-gap-in-third-party-risk.html" class="share-btn">Share via Email</a>
     </div>
   </div>
@@ -271,6 +278,7 @@ footer p{font-size:12.5px;color:var(--muted);max-width:70ch;margin:0 0 10px;line
   </div>
 </article>
 
+</main>
 <footer>
   <div class="wrap">
     <p>Kelroy James · 2026 · Content may be freely reproduced for non-commercial use with attribution</p>

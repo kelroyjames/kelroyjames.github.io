@@ -24,7 +24,7 @@
     --surface-2:#F4F5F7;
     --ink:#131C28;
     --ink-2:#3A4753;
-    --muted:#6B7885;
+    --muted:#56636F;
     --rule:#D4D8DD;
     --rule-soft:#E4E7EA;
     --brass:#7A3B44;
@@ -82,8 +82,8 @@
     text-transform:uppercase;color:var(--muted);text-decoration:none;
   }
   .nav a.lnk:hover{color:var(--brass)}
-  .nav a.lnk.cta{background:var(--brass);color:#fff;padding:9px 18px}
-  .nav a.lnk.cta:hover{background:var(--navy);color:#fff}
+  .nav a.lnk.cta{background:var(--brass);color:var(--surface);padding:9px 18px}
+  .nav a.lnk.cta:hover{background:var(--navy);color:var(--surface)}
   .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:10px 12px;margin-right:-12px;font-size:20px;line-height:1;color:var(--ink)}
   @media(max-width:700px){
     .nav-toggle{display:block}
@@ -180,11 +180,17 @@
     border:1px solid var(--ink);color:var(--ink);background:transparent;
   }
   .btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
-  .btn:hover{background:var(--brass);border-color:var(--brass);color:#fff}
+  .btn:hover{background:var(--brass);border-color:var(--brass);color:var(--surface)}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--surface);color:var(--ink);padding:10px 16px;z-index:300;font:600 14px/1.2 "Public Sans",sans-serif;text-decoration:none;border:2px solid currentColor}
+.skip-link:focus{left:8px;top:8px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<nav class="nav">
+<a class="skip-link" href="#main">Skip to main content</a>
+<nav class="nav" aria-label="Main">
   <div class="wrap">
     <a class="mark" href="/">Kelroy James</a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.nextElementSibling;var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
@@ -197,6 +203,7 @@
     </ul>
   </div>
 </nav>
+<main id="main">
 
 <header class="page-header">
   <div class="wrap">
@@ -213,7 +220,7 @@
       <p>One email when a new piece goes up. No spam, unsubscribe any time.</p>
     </div>
     <form action="https://buttondown.com/api/emails/embed-subscribe/kelroy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/kelroy', 'popupwindow')" class="bd-form">
-      <input type="email" name="email" id="bd-email" placeholder="you@email.com" required>
+      <input type="email" aria-label="Email address" name="email" id="bd-email" placeholder="you@email.com" required>
       <input type="hidden" value="1" name="embed">
       <input type="submit" value="Subscribe">
     </form>
@@ -414,13 +421,14 @@
       <p>One email when a new piece goes up. No spam, unsubscribe any time.</p>
     </div>
     <form action="https://buttondown.com/api/emails/embed-subscribe/kelroy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/kelroy', 'popupwindow')" class="bd-form">
-      <input type="email" name="email" id="bd-email-bottom" placeholder="you@email.com" required>
+      <input type="email" aria-label="Email address" name="email" id="bd-email-bottom" placeholder="you@email.com" required>
       <input type="hidden" value="1" name="embed">
       <input type="submit" value="Subscribe">
     </form>
   </div>
 </section>
 
+</main>
 <footer>
   <div class="wrap">
     <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>

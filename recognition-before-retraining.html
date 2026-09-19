@@ -27,12 +27,12 @@ img{max-width:100%}
   --surface-2:#F5F7F9;
   --ink:#15202B;
   --ink-2:#3D4C59;
-  --muted:#697887;
+  --muted:#586573;
   --rule:#D3DAE1;
   --rule-soft:#E3E8ED;
-  --accent:#8A6A2F;
+  --accent:#7A5C24;
   --accent-soft:#F2ECDF;
-  --signal:#9A6410;
+  --signal:#855410;
   --signal-soft:#F6EEDF;
   --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
   --maxw:1080px;
@@ -84,7 +84,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .topnav a{
   font-family:"IBM Plex Mono",ui-monospace,monospace;
   font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
-  text-decoration:none;color:#6B7885;
+  text-decoration:none;color:var(--muted);
 }
 .topnav a:hover{color:var(--accent)}
 
@@ -199,7 +199,7 @@ article{padding:0 0 56px}
   color:var(--ink-2);text-decoration:none;
   transition:all .2s ease;cursor:pointer;
 }
-.share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.share-btn:hover{background:var(--accent);color:var(--surface);border-color:var(--accent)}
 
 /* references section */
 .references{
@@ -249,6 +249,11 @@ footer p{
   max-width:70ch;margin:0 0 10px;
   line-height:1.6;
 }
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--surface);color:var(--ink);padding:10px 16px;z-index:300;font:600 14px/1.2 "Public Sans",sans-serif;text-decoration:none;border:2px solid currentColor}
+.skip-link:focus{left:8px;top:8px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 <script type="application/ld+json">
 {
@@ -265,7 +270,8 @@ footer p{
 </script>
 </head>
 <body>
-<div class="reading-progress">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="reading-progress" aria-hidden="true">
   <div class="reading-progress-bar" id="progressBar"></div>
 </div>
 <div class="wrap topnav">
@@ -277,6 +283,7 @@ footer p{
     <a href="/#contact">Contact</a>
   </div>
 </div>
+<main id="main">
 
 <header class="masthead">
   <img src="/images/articles/defence-skills-transition.jpg" alt="Service leavers at Defence Equipment and Support: illustrating military-to-civilian career transition" class="featured-image">
@@ -298,8 +305,8 @@ footer p{
       <span>📊 ~1,470 words</span>
     </div>
     <div class="share-buttons">
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/recognition-before-retraining.html" target="_blank" class="share-btn">Share on LinkedIn</a>
-      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/recognition-before-retraining.html&text=Recognition%20Before%20Retraining" target="_blank" class="share-btn">Share on X</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/recognition-before-retraining.html" target="_blank" class="share-btn" rel="noopener noreferrer">Share on LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/recognition-before-retraining.html&text=Recognition%20Before%20Retraining" target="_blank" class="share-btn" rel="noopener noreferrer">Share on X<span class="sr-only"> (opens in a new tab)</span></a>
       <a href="mailto:?subject=Article: Recognition Before Retraining&body=I thought you might find this interesting: https://kelroyjames.com/recognition-before-retraining.html" class="share-btn">Share via Email</a>
     </div>
   </div>
@@ -402,6 +409,7 @@ Senior non-commissioned capability is precisely the capability the civilian mark
   </div>
 </article>
 
+</main>
 <footer>
   <div class="wrap">
     <p>Kelroy James · 2026 · Content may be freely reproduced for non-commercial use with attribution</p>
