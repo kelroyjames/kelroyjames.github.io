@@ -229,7 +229,7 @@ main:focus{outline:none}
 
 <p>Economists and competition regulators have been measuring exactly this kind of concentration for decades, using the Herfindahl-Hirschman Index (HHI): take each player's share of a market, square it, and sum the results. A market with one player scores 10,000. A market with a hundred equal players scores 100. The US Department of Justice and Federal Trade Commission's own merger guidelines treat a market scoring below 1,500 as unconcentrated, 1,500 to 2,500 as moderately concentrated, and above 2,500 as highly concentrated.</p>
 
-<p>The same formula works internally, applied to your own supplier base instead of a market. Take one risk tier, take each supplier's share of spend or dependency within it, square each share, sum the squares. You get a single number that tells you whether "diversified" is actually true for the tier that matters, or just true on average across a book padded out with low-risk suppliers.</p>
+<p>The same formula works internally, applied to your own supplier base. Take one risk tier, take each supplier's share of spend or dependency within it, square each share, sum the squares. You get a single number that tells you whether "diversified" is actually true for the tier that matters, or just true on average across a book padded out with low-risk suppliers.</p>
 
 <div class="worked">
 <h2 class="sec">Worked example (illustrative)</h2>
@@ -242,12 +242,12 @@ main:focus{outline:none}
 </table>
 <p><strong>HHI = 2,025 + 1,225 + 400 = 3,650</strong></p>
 <div class="hhi-result">3,650 → highly concentrated (above the 2,500 threshold)</div>
-<p style="margin-top:14px">That figure isn't a surprise once you know two of those three suppliers, the hosting provider and the subcontractor, were already carrying open, escalated findings on the risk register. A high HHI explains why problems at individual suppliers in that tier land harder than they would in a genuinely diversified one. There's no slack in the tier to absorb a single failure.</p>
+<p style="margin-top:14px">That figure is unsurprising once you know two of those three suppliers, the hosting provider and the subcontractor, were already carrying open, escalated findings on the risk register. A high HHI explains why problems at individual suppliers in that tier land harder than they would in a genuinely diversified one. There's no slack in the tier to absorb a single failure.</p>
 </div>
 
 <h2 class="sec">What the number doesn't tell you</h2>
 
-<p>An HHI score is a trigger for a conversation, not a verdict. Concentration is sometimes the right call: a single strategic partner might offer better quality control, tighter IP protection, or economies of scale that a fragmented supplier base can't match. The point of measuring it is to make sure concentration is a decision someone actually made, with the risk understood, rather than something that accumulated silently because nobody was measuring it.</p>
+<p>An HHI score is a trigger for a conversation. Concentration is sometimes the right call: a single strategic partner might offer better quality control, tighter IP protection, or economies of scale that a fragmented supplier base can't match. The point of measuring it is to make sure concentration is a decision someone actually made, with the risk understood, rather than something that accumulated silently because nobody was measuring it.</p>
 
 <p>The failure mode is undiscovered concentration, discovered for the first time when the single point actually fails.</p>
 
@@ -258,12 +258,12 @@ main:focus{outline:none}
 <ul>
 <li><strong>Qualify a warm second source</strong> even if it never takes live volume, so the requalification clock has already been run before you need it, not after</li>
 <li><strong>Size safety stock to the requalification lead time</strong> of the concentrated input, not to average demand variability, since that's the specific gap a concentration failure creates</li>
-<li><strong>Diversify geography or jurisdiction</strong> where the concentration risk is a single site or a single regulatory regime, not just a single company name</li>
+<li><strong>Diversify geography or jurisdiction</strong> where the concentration risk is a single site or a single regulatory regime</li>
 <li><strong>Negotiate step-in rights and IP escrow</strong> so a sole-source failure doesn't also mean losing the ability to make or specify the item yourself</li>
-<li><strong>Revisit the classification itself</strong>: if a Critical-tier input has been single-sourced for years without incident, that's worth checking against Stage 2 of the lifecycle, not just leaving alone because nothing has gone wrong yet</li>
+<li><strong>Revisit the classification itself</strong>: if a Critical-tier input has been single-sourced for years without incident, that's worth checking against Stage 2 of the lifecycle</li>
 </ul>
 
-<p>Every one of these steps can be taken while keeping a good supplier relationship, provided you know, in a number rather than a feeling, when it has quietly become a single point of failure.</p>
+<p>Every one of these steps can be taken while keeping a good supplier relationship, provided you know, in a number, when it has quietly become a single point of failure.</p>
 
 <h2 class="sec">Questions for your own programme</h2>
 
