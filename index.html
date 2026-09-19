@@ -182,6 +182,16 @@
     .sec-head{flex-direction:column;align-items:flex-start;gap:6px}
     .sec-head .note{margin-left:0;white-space:normal}
   }
+  .writing-block{margin-top:40px}
+  .wb-head{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:700;margin:0 0 16px}
+  .wb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .wb{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--brass);box-shadow:var(--shadow);padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+  .wb h4{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;line-height:1.3;margin:0}
+  .wb p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+  .wb .wb-meta{font-size:13px;color:var(--muted)}
+  .wb .wb-meta b{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);font-weight:500;margin-right:6px}
+  .wb .wb-rel{font-size:13.5px}
+  .wb-all{margin:16px 0 0;font-size:15px}
   .intro-p{max-width:66ch;color:var(--ink-2);margin:0 0 32px;font-size:16.5px}
 
   /* ============ work ============ */
@@ -406,7 +416,7 @@ main:focus{outline:none}
           <li><b>Leadership:</b> Section head level; responsible for daily operational output, normally managing 5 to 10 people</li>
           <li><b>Accountability:</b> Tier 1 signatory (senior approver of record) for stock and inventory valued at £10M to £25M, depending on the items held</li>
         </ul></dd></div>
-        <div class="fact"><dt>Studying</dt><dd>MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA</dd></div>
+        <div class="fact"><dt>Studying</dt><dd>MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA. In progress, due April 2027.</dd></div>
         <div class="fact"><dt>Early engagement</dt><dd>Available now for exploratory conversations and transition planning. Full-time civilian availability begins April 2028.</dd></div>
       </dl>
     </div>
@@ -449,7 +459,6 @@ main:focus{outline:none}
   <div class="wrap">
     <div class="recruiter-panel-head">
       <h2>Target Roles &amp; Availability</h2>
-      <a href="/for-recruiters.html">View the One-Page Profile →</a>
     </div>
     <div class="quickread-grid">
       <div class="quickread-block">
@@ -464,14 +473,14 @@ main:focus{outline:none}
       </div>
       <div class="quickread-block">
         <h3>Availability</h3>
-        <p>Available now for exploratory conversations, future-role mapping, capability assessment and transition planning. Full-time civilian availability begins in April 2028. Transition and onboarding typically take 12 to 18 months, so early engagement is worth starting now.</p>
+        <p>Full-time civilian availability begins in April 2028. Early conversations allow time for role mapping and transition planning.</p>
       </div>
       <div class="quickread-block">
         <h3>Location</h3>
         <p>Greater Portsmouth area, open to relocation, working office-based, hybrid or field-based.</p>
       </div>
     </div>
-    <p class="intro-p" style="margin-top:24px;margin-bottom:0"><a href="/for-recruiters.html">See the full recruiter profile →</a> · <a href="/skills-expertise.html">See the full skills and expertise breakdown →</a></p>
+    <p class="intro-p" style="margin-top:24px;margin-bottom:0"><a href="/for-recruiters.html">One-page recruiter profile: role focus, evidence and availability →</a> · <a href="/skills-expertise.html">Skills and certifications: the full capability breakdown →</a> · The full CV is shared privately on request.</p>
   </div>
 </div>
 
@@ -513,7 +522,7 @@ main:focus{outline:none}
         <div class="inner">
           <span class="type">Case Study · Digital Transformation</span>
           <h3>Building Fleet-Wide Inventory Visibility</h3>
-          <p>I took over a predecessor's incomplete build and reconfigured the spreadsheet feeding it, creating a single source of truth for STOROB tracking across upkeep units. It was rolled out to an adjacent unit, and inventory managers elsewhere in the fleet have since adopted it.</p>
+          <p>I took over a predecessor's incomplete build and reconfigured the spreadsheet feeding it, creating a single source of truth for STOROB (cross-platform stock reallocation) tracking across upkeep units. It was rolled out to an adjacent unit, and inventory managers elsewhere in the fleet have since adopted it.</p>
           <p class="result"><b>Result</b>Single source of truth for STOROB tracking; adopted by an adjacent unit and by inventory managers elsewhere in the fleet.</p>
           <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-top:2px">Civilian relevance: requirements ownership, data redesign, and completing a stalled build rather than starting one from scratch.</p>
           <span class="go">Read the case study →</span>
@@ -522,7 +531,30 @@ main:focus{outline:none}
 
     </div>
     <p class="intro-p" style="margin-top:20px;margin-bottom:0"><a href="/case-studies.html">Explore All Nine Case Studies →</a> · <a href="/frameworks.html">See all ten frameworks →</a></p>
-    <p class="intro-p" style="margin-top:12px;margin-bottom:0">Selected writing: <a href="/the-physical-assurance-gap-in-third-party-risk.html">The Physical Assurance Gap in Third-Party Risk</a> · <a href="/diversified-on-paper-concentrated-in-practice.html">Diversified on Paper, Concentrated in Practice</a> · <a href="/the-enterprise-risk-management-we-already-do.html">The Enterprise Risk Management We Already Do</a> · <a href="/writing.html">All writing →</a></p>
+    <div class="writing-block">
+      <h3 class="wb-head">Selected writing</h3>
+      <div class="wb-grid">
+        <article class="wb">
+          <h4><a href="/the-physical-assurance-gap-in-third-party-risk.html">The Physical Assurance Gap in Third-Party Risk</a></h4>
+          <p>A practical way to find the physical dependencies that supplier-risk registers miss.</p>
+          <p class="wb-meta"><b>For</b> supplier assurance and third-party risk professionals · 10 min read</p>
+          <p class="wb-rel">Related evidence: <a href="/case-study-force-mobile-equipment.html">Closing Asset-Accountability Gaps</a></p>
+        </article>
+        <article class="wb">
+          <h4><a href="/diversified-on-paper-concentrated-in-practice.html">Diversified on Paper, Concentrated in Practice</a></h4>
+          <p>How to measure the concentration that a supplier count hides.</p>
+          <p class="wb-meta"><b>For</b> supplier assurance and procurement risk teams · 6 min read</p>
+          <p class="wb-rel">Related evidence: <a href="/third-party-risk-lifecycle.html">Third-Party Risk, End to End (framework)</a></p>
+        </article>
+        <article class="wb">
+          <h4><a href="/the-enterprise-risk-management-we-already-do.html">The Enterprise Risk Management We Already Do</a></h4>
+          <p>How operational judgement maps onto the enterprise risk approach PwC now describes.</p>
+          <p class="wb-meta"><b>For</b> GRC and internal audit leaders · 8 min read</p>
+          <p class="wb-rel">Related evidence: <a href="/case-study-grc-framework.html">Modernising Assurance Across Inspections</a></p>
+        </article>
+      </div>
+      <p class="wb-all"><a href="/writing.html">All writing →</a></p>
+    </div>
   </div>
 </section>
 
