@@ -173,6 +173,12 @@
   @media(min-width:1000px){.quickread-grid{grid-template-columns:repeat(3,1fr)}}
   .quickread-block h3{font-family:Spectral,Georgia,serif;font-size:1rem;font-weight:600;margin:0 0 8px;color:var(--ink)}
   .quickread-block p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+  .strip{background:var(--surface-2);border-bottom:1px solid var(--rule);padding:0}
+  .strip .wrap{padding-top:26px;padding-bottom:26px;display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:900px){.strip .wrap{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}}
+  .strip-item{border-top:3px solid var(--brass);padding-top:12px}
+  .strip-item b{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);font-weight:500;margin-bottom:6px}
+  .strip-item span{font-size:14.5px;line-height:1.5;color:var(--ink)}
   /* ============ generic section ============ */
   section{padding:66px 0}
   .sec-head{display:flex;align-items:baseline;gap:18px;margin:0 0 30px;padding-bottom:13px;border-bottom:1px solid var(--rule)}
@@ -421,6 +427,14 @@ main:focus{outline:none}
   </div>
 </header>
 
+<section class="strip" aria-label="Recruiter summary">
+  <div class="wrap">
+    <div class="strip-item"><b>Targeting</b><span>Supply Chain Assurance Manager · Operational Controls Manager · Supplier Assurance Manager</span></div>
+    <div class="strip-item"><b>Evidence</b><span>£2.4M misallocated expenditure identified · 80% reduction in financial liability · zero stores lost in a first-of-its-kind pilot</span></div>
+    <div class="strip-item"><b>Availability</b><span>Exploratory conversations welcome now · full-time civilian roles from April 2028</span></div>
+  </div>
+</section>
+
 <section class="impact">
   <div class="wrap">
     <div class="impact-head">
@@ -438,7 +452,7 @@ main:focus{outline:none}
       <a class="metric" href="/case-study-garage-lite-trial.html">
         <span class="metric-tag">Operational Innovation</span>
         <div class="metric-value">Zero</div>
-        <div class="metric-label">Stores Lost on Return from £145,674 Delivered, Piloting a Fleet-Support Model With No Precedent</div>
+        <div class="metric-label">Stores Lost Across £145,674 Delivered and Returned in a First-of-its-Kind Support-Model Pilot</div>
         <p class="metric-sub">A new fleet-support model was piloted against £145,674 of stores with no precedent to follow.</p>
         <span class="metric-link-note">Read the case study →</span>
       </a>
@@ -575,7 +589,7 @@ main:focus{outline:none}
 
 <div class="contact" id="contact">
   <div class="wrap">
-    <h2>My civilian transition begins in April 2028. Start the conversation now.</h2>
+    <h2>Start the conversation now.</h2>
     <p>Available now for exploratory conversations, future-role mapping, capability assessment and transition planning.</p>
     <div class="btns" style="margin:20px 0 8px">
       <a class="btn primary" href="mailto:kelroydbjames@gmail.com?subject=Supply%20chain%20assurance%2C%20third-party%20risk%20or%20GRC%20role">Discuss a Future Role</a>
