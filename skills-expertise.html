@@ -83,10 +83,18 @@
   .page-head .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.02rem,1.8vw,1.2rem);line-height:1.55;color:var(--ink-2);max-width:66ch;margin:0}
 
   .skills-content{background:var(--surface);padding:60px 0}
+  .skill-group{margin-bottom:72px}
+  .skill-group:last-child{margin-bottom:0}
+  .group-head{margin-bottom:34px;padding-bottom:14px;border-bottom:2px solid var(--brass)}
+  .group-head h2{font-family:Spectral,Georgia,serif;font-size:clamp(1.6rem,3vw,2rem);font-weight:700;margin:0 0 8px}
+  .group-head p{font-size:15px;color:var(--ink-2);margin:0;max-width:70ch}
+  details.more summary{cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--brass);padding:10px 0}
+  details.more summary:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+  details.more[open] summary{margin-bottom:10px}
   .skill-category{margin-bottom:56px}
   .skill-category:last-child{margin-bottom:0}
   .cat-header{margin-bottom:22px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
-  .cat-title{font-family:Spectral,Georgia,serif;font-size:1.5rem;font-weight:700;margin:0}
+  .cat-title{font-family:Spectral,Georgia,serif;font-size:1.4rem;font-weight:700;margin:0}
   .cat-intro{font-size:15px;color:var(--ink-2);margin-bottom:24px;max-width:70ch}
 
   .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
@@ -222,9 +230,15 @@ main:focus{outline:none}
 
 <section class="skills-content">
   <div class="wrap">
+    <div class="skill-group">
+      <div class="group-head">
+        <h2>Core capabilities for target roles</h2>
+        <p>What I bring to supply chain assurance, operational controls and adjacent roles: inventory and supply chain governance, assurance and control design, and leading teams.</p>
+      </div>
+
     <div class="skill-category">
       <div class="cat-header">
-        <h2 class="cat-title">Supply Chain & ERP Systems</h2>
+        <h3 class="cat-title">Supply Chain & ERP Systems</h3>
       </div>
       <p class="cat-intro">Enterprise resource planning, inventory management, and logistics platforms used at scale in Defence and critical infrastructure contexts.</p>
       <div class="skills-grid">
@@ -253,46 +267,7 @@ main:focus{outline:none}
 
     <div class="skill-category">
       <div class="cat-header">
-        <h2 class="cat-title">Dangerous Goods & Trade Compliance</h2>
-      </div>
-      <p class="cat-intro">High-consequence transport regimes: dangerous goods by sea, air, and road; HMRC customs procedures; export controls. Capability built as sole logistician for 8-unit expeditionary diving squadron.</p>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-name">IMDG Code (Maritime Dangerous Goods)</div>
-          <div class="skill-level">Qualified & Operational</div>
-          <div class="skill-desc">International Maritime Dangerous Goods Code. Performed consignment preparation for global deployments, explosives and munitions transport.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">IATA DGR (Air Dangerous Goods)</div>
-          <div class="skill-level">Qualified & Operational</div>
-          <div class="skill-desc">International Air Transport Association Dangerous Goods Regulations. Air consignment for EOD and diving equipment worldwide.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">ADR (Road Dangerous Goods)</div>
-          <div class="skill-level">Qualified & Operational</div>
-          <div class="skill-desc">European Agreement concerning the International Carriage of Dangerous Goods by Road. Multi-modal movement oversight.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Explosives Regulations & Accounting</div>
-          <div class="skill-level">Ammunition Authorised Representative</div>
-          <div class="skill-desc">Explosives storage, transport, and accounting. Qualified as Ammunition Authorised Representative for Fleet Diving Squadron.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">HMRC Customs Procedures</div>
-          <div class="skill-level">Authorised Representative</div>
-          <div class="skill-desc">HM Revenue & Customs compliance for international movements. Authorised representative for customs declarations and clearance.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Export Controls (ITAR/EAR awareness)</div>
-          <div class="skill-level">Applied Knowledge</div>
-          <div class="skill-desc">International Traffic in Arms Regulations (ITAR) and Export Administration Regulations (EAR) awareness in Defence context. £5M strategic trial delivered. <a href="/convergence-of-cyber-grc-and-physical-logistics.html">Read the essay →</a></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <div class="cat-header">
-        <h2 class="cat-title">Governance, Risk & Compliance Frameworks</h2>
+        <h3 class="cat-title">Governance, Risk & Compliance Frameworks</h3>
       </div>
       <p class="cat-intro">Enterprise-level assurance frameworks applied in operational contexts. ISO management systems, internal audit standards, and risk frameworks translated from theory to practice.</p>
       <div class="skills-grid">
@@ -331,7 +306,83 @@ main:focus{outline:none}
 
     <div class="skill-category">
       <div class="cat-header">
-        <h2 class="cat-title">Data Analysis & Technical Tools</h2>
+        <h3 class="cat-title">Leadership, Coaching & Training</h3>
+      </div>
+      <p class="cat-intro">Development of people and teams. From 100% task book pass rates to leading a nine-person team recognised with a Royal Navy Inclusivity Award.</p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-name">Team Leadership & Strategic Innovation Coaching</div>
+          <div class="skill-level">9-Person Team, Wildcat Maritime Force</div>
+          <div class="skill-desc">Led a 9-person team through the unit's weapons trial and Exercise Tamber Shield deployments. Ran Mission Model Canvas training to build the team's strategic awareness of innovation; 6 of 9 team members have since been promoted. Royal Navy Inclusivity Award for Innovation 2023. <a href="/case-study-expeditionary-logistics.html">Read the case study →</a></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Coaching & Mentoring</div>
+          <div class="skill-level">Level 3 Course Completed</div>
+          <div class="skill-desc">Level 3 Coaching and Mentoring course completed. 100% task book pass rate across coached team. Chief Naval Logistics Officer's Award 2018. <a href="/dangerous-goods-training-and-a-foundation-degree-at-the-same-time.html">Read the essay →</a></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Training Design & Delivery</div>
+          <div class="skill-level">Level 3 Award in Education</div>
+          <div class="skill-desc">Level 3 Award in Education and Training. Designed training for cost centre assignment, dangerous goods compliance, and financial controls.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Programme Development</div>
+          <div class="skill-level">Founder</div>
+          <div class="skill-desc">Founded Empowerment Day development programme for junior rates. Adopted as standing programme by Engineering Support Group 1. <a href="/change-management-in-a-rank-hierarchy.html">Read the framework →</a></div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="skill-group">
+      <div class="group-head">
+        <h2>Systems, compliance and qualifications</h2>
+        <p>The regulated-movement knowledge, data tools, education and certifications behind those capabilities.</p>
+      </div>
+
+    <div class="skill-category">
+      <div class="cat-header">
+        <h3 class="cat-title">Dangerous Goods & Trade Compliance</h3>
+      </div>
+      <p class="cat-intro">High-consequence transport regimes: dangerous goods by sea, air, and road; HMRC customs procedures; export controls. Capability built as sole logistician for 8-unit expeditionary diving squadron.</p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-name">IMDG Code (Maritime Dangerous Goods)</div>
+          <div class="skill-level">Qualified & Operational</div>
+          <div class="skill-desc">International Maritime Dangerous Goods Code. Performed consignment preparation for global deployments, explosives and munitions transport.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">IATA DGR (Air Dangerous Goods)</div>
+          <div class="skill-level">Qualified & Operational</div>
+          <div class="skill-desc">International Air Transport Association Dangerous Goods Regulations. Air consignment for EOD and diving equipment worldwide.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">ADR (Road Dangerous Goods)</div>
+          <div class="skill-level">Qualified & Operational</div>
+          <div class="skill-desc">European Agreement concerning the International Carriage of Dangerous Goods by Road. Multi-modal movement oversight.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Explosives Regulations & Accounting</div>
+          <div class="skill-level">Ammunition Authorised Representative</div>
+          <div class="skill-desc">Explosives storage, transport, and accounting. Qualified as Ammunition Authorised Representative for Fleet Diving Squadron.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">HMRC Customs Procedures</div>
+          <div class="skill-level">Authorised Representative</div>
+          <div class="skill-desc">HM Revenue & Customs compliance for international movements. Authorised representative for customs declarations and clearance.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Export Controls (ITAR/EAR awareness)</div>
+          <div class="skill-level">Applied Knowledge</div>
+          <div class="skill-desc">International Traffic in Arms Regulations (ITAR) and Export Administration Regulations (EAR) awareness in Defence context. £5M strategic trial delivered. <a href="/convergence-of-cyber-grc-and-physical-logistics.html">Read the essay →</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="cat-header">
+        <h3 class="cat-title">Data Analysis & Technical Tools</h3>
       </div>
       <p class="cat-intro">Data interrogation, financial analysis, and process automation. From Excel VBA to SQL queries to Python analytics: whatever extracts insight from messy operational data.</p>
       <div class="skills-grid">
@@ -363,75 +414,9 @@ main:focus{outline:none}
       </div>
     </div>
 
-    <!-- Project & Process Management -->
     <div class="skill-category">
       <div class="cat-header">
-        <h2 class="cat-title">Project & Process Management</h2>
-      </div>
-      <p class="cat-intro">Structured project delivery, process improvement, and change management. From PRINCE2 business cases to Lean trials to digital transformation rollouts.</p>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-name">PRINCE2</div>
-          <div class="skill-level">Applied Practitioner</div>
-          <div class="skill-desc">Business case author for consignment tracking system. Initiation documentation, risk management, and project governance in Defence context.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Agile Delivery</div>
-          <div class="skill-level">Percy Hobart Fellow</div>
-          <div class="skill-desc">12-week Defence innovation programme pairing military personnel with a GovTech placement. Embedded as product manager with start-up Cordial World, directing MVP development for a Human Knowledge as a Service platform and co-architecting a business case for enterprise supply chain visibility with international stakeholders.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Logistics Under a New Model</div>
-          <div class="skill-level">FTSP Support Group Supply Chain POSC</div>
-          <div class="skill-desc">Ran the logistics workstream for a Garage Lite trial on a Type 45 destroyer, a Fleet Time Support Period model with no precedent: zero losses on £145,674 of stores, and the highest pre-T-12 demand-placement rate of any Type 45 FTSP that year. <a href="/case-study-garage-lite-trial.html">Read the case study →</a></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Root Cause Analysis</div>
-          <div class="skill-level">Expert</div>
-          <div class="skill-desc">Five Whys, fishbone diagrams, failure mode analysis. Applied to £2.4M financial control recovery and Type 45 account turnaround. <a href="/case-study-financial-control.html">Read the case study →</a></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Policy Development</div>
-          <div class="skill-level">Contributor</div>
-          <div class="skill-desc">Proposed Navy-wide policy instruction based on £2.4M findings. SOPs authored for Fleet Diving Squadron capability continuation.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Leadership & Training -->
-    <div class="skill-category">
-      <div class="cat-header">
-        <h2 class="cat-title">Leadership, Coaching & Training</h2>
-      </div>
-      <p class="cat-intro">Development of people and teams. From 100% task book pass rates to leading a nine-person team recognised with a Royal Navy Inclusivity Award.</p>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-name">Team Leadership & Strategic Innovation Coaching</div>
-          <div class="skill-level">9-Person Team, Wildcat Maritime Force</div>
-          <div class="skill-desc">Led a 9-person team through the unit's weapons trial and Exercise Tamber Shield deployments. Ran Mission Model Canvas training to build the team's strategic awareness of innovation; 6 of 9 team members have since been promoted. Royal Navy Inclusivity Award for Innovation 2023. <a href="/case-study-expeditionary-logistics.html">Read the case study →</a></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Coaching & Mentoring</div>
-          <div class="skill-level">Level 3 Course Completed</div>
-          <div class="skill-desc">Level 3 Coaching and Mentoring course completed. 100% task book pass rate across coached team. Chief Naval Logistics Officer's Award 2018. <a href="/dangerous-goods-training-and-a-foundation-degree-at-the-same-time.html">Read the essay →</a></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Training Design & Delivery</div>
-          <div class="skill-level">Level 3 Award in Education</div>
-          <div class="skill-desc">Level 3 Award in Education and Training. Designed training for cost centre assignment, dangerous goods compliance, and financial controls.</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Programme Development</div>
-          <div class="skill-level">Founder</div>
-          <div class="skill-desc">Founded Empowerment Day development programme for junior rates. Adopted as standing programme by Engineering Support Group 1. <a href="/change-management-in-a-rank-hierarchy.html">Read the framework →</a></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Education -->
-    <div class="skill-category">
-      <div class="cat-header">
-        <h2 class="cat-title">Education</h2>
+        <h3 class="cat-title">Education</h3>
       </div>
       <div class="certs-grid">
         <div class="cert-card">
@@ -482,10 +467,9 @@ main:focus{outline:none}
       </div>
     </div>
 
-    <!-- Certifications Summary -->
     <div class="skill-category">
       <div class="cat-header">
-        <h2 class="cat-title">Professional Certifications</h2>
+        <h3 class="cat-title">Professional Certifications</h3>
       </div>
       <p class="cat-intro">Dangerous goods qualifications and lead auditor credentials. Explosives and HMRC customs authorisations are listed under Dangerous Goods &amp; Trade Compliance above.</p>
 
@@ -542,9 +526,59 @@ main:focus{outline:none}
         </div>
       </div>
 
-      <div class="skill-level" style="color:var(--brass)">Continuing Education</div>
-      <p style="font-size:13px;color:var(--muted);margin:0 0 14px;max-width:70ch">Executive programmes, specialist short courses and tool certifications, listed for completeness. The credentials above are the ones most relevant to supply chain assurance, operational controls and third-party risk roles.</p>
-      <ul class="edu-compact">
+
+    </div>
+
+    </div>
+
+    <div class="skill-group">
+      <div class="group-head">
+        <h2>Additional professional development</h2>
+        <p>Broader project methods and short courses, listed for completeness.</p>
+      </div>
+
+    <div class="skill-category">
+      <div class="cat-header">
+        <h3 class="cat-title">Project & Process Management</h3>
+      </div>
+      <p class="cat-intro">Structured project delivery, process improvement, and change management. From PRINCE2 business cases to Lean trials to digital transformation rollouts.</p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-name">PRINCE2</div>
+          <div class="skill-level">Applied Practitioner</div>
+          <div class="skill-desc">Business case author for consignment tracking system. Initiation documentation, risk management, and project governance in Defence context.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Agile Delivery</div>
+          <div class="skill-level">Percy Hobart Fellow</div>
+          <div class="skill-desc">12-week Defence innovation programme pairing military personnel with a GovTech placement. Embedded as product manager with start-up Cordial World, directing MVP development for a Human Knowledge as a Service platform and co-architecting a business case for enterprise supply chain visibility with international stakeholders.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Logistics Under a New Model</div>
+          <div class="skill-level">FTSP Support Group Supply Chain POSC</div>
+          <div class="skill-desc">Ran the logistics workstream for a Garage Lite trial on a Type 45 destroyer, a Fleet Time Support Period model with no precedent: zero losses on £145,674 of stores, and the highest rate of demands placed before T-12 (twelve weeks before the support period starts) of any Type 45 FTSP that year. <a href="/case-study-garage-lite-trial.html">Read the case study →</a></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Root Cause Analysis</div>
+          <div class="skill-level">Expert</div>
+          <div class="skill-desc">Five Whys, fishbone diagrams, failure mode analysis. Applied to £2.4M financial control recovery and Type 45 account turnaround. <a href="/case-study-financial-control.html">Read the case study →</a></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Policy Development</div>
+          <div class="skill-level">Contributor</div>
+          <div class="skill-desc">Proposed Navy-wide policy instruction based on £2.4M findings. SOPs authored for Fleet Diving Squadron capability continuation.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="cat-header">
+        <h3 class="cat-title">Continuing education</h3>
+      </div>
+      <details class="more">
+        <summary>Show all 22 short courses and tool certifications</summary>
+        <p class="cat-intro">Executive programmes, specialist short courses and tool certifications, listed for completeness. The qualifications in the sections above are the ones most relevant to supply chain assurance, operational controls and third-party risk roles.</p>
+        <ul class="edu-compact">
         <li><strong>Forward Program</strong> (McKinsey &amp; Company, 2024)</li>
         <li><strong>Cyber Security, Technology and Governance Specialization</strong> (Royal Holloway, University of London, 2026)</li>
         <li><strong>AI and Digital Transformation in Government</strong> (Saïd Business School, University of Oxford, 2026)</li>
@@ -568,15 +602,17 @@ main:focus{outline:none}
         <li><strong>Level 3 Award in Education and Training</strong> (6502-31, City &amp; Guilds, 2026)</li>
         <li><strong>Member, Institute of Leadership</strong> (2025–2026)</li>
       </ul>
+      </details>
     </div>
 
+    </div>
   </div>
 </section>
 
 <div class="cta-band">
   <div class="wrap">
     <h2>Get in touch</h2>
-    <p>If this capability is relevant to a role you're hiring for, I'd welcome a conversation now, ahead of full-time civilian availability from April 2028.</p>
+    <p>If this capability is relevant to a role you're hiring for, I'd welcome a conversation now.</p>
     <div class="btns">
       <a class="btn primary" href="mailto:kelroydbjames@gmail.com?subject=Supply%20chain%20assurance%2C%20third-party%20risk%20or%20GRC%20role">Discuss a Future Role</a>
       <a class="btn" href="/for-recruiters.html">View the One-Page Profile</a>
