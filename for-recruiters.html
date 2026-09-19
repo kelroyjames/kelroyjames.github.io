@@ -125,6 +125,13 @@
   .metric-label{font-size:13px;color:var(--ink-2);font-weight:500;text-transform:uppercase;letter-spacing:.05em;max-width:none;margin:0}
   .metric-sub{font-size:13px;color:var(--muted);margin:8px 0 0;line-height:1.45;max-width:none}
   .metric-link-note{display:block;margin-top:8px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+  .target-line{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:0;max-width:none}
+  .target-line b{color:var(--accent);font-weight:600;margin-right:10px}
+  .snap-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:0 0 20px}
+  @media(min-width:700px){.snap-grid{grid-template-columns:repeat(3,1fr)}}
+  .snap{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--accent);padding:16px 18px;box-shadow:var(--shadow)}
+  .snap b{display:block;font-family:Spectral,Georgia,serif;font-size:1.05rem;margin-bottom:4px;color:var(--ink)}
+  .snap span{font-size:13.8px;color:var(--ink-2)}
   .achieve-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
   .achieve-list li{
     background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--accent);
@@ -241,8 +248,8 @@ main:focus{outline:none}
       <div class="top-intro">
     <div class="eyebrow"><span class="tick">◆</span><span>Professional profile</span><span>The essentials for recruiters</span></div>
     <h1>For recruiters</h1>
+    <p class="target-line"><b>Target</b> Manager-level supply chain assurance and operational controls roles</p>
     <p class="standfirst">Defence assurance and supply chain professional with 18 years' experience designing controls, investigating financial and asset discrepancies, improving compliance and delivering logistics outcomes in high-consequence environments. Now targeting manager-level supply chain assurance and operational controls roles, with third-party risk, GRC and internal audit as adjacent routes, in defence, aerospace, professional services and regulated organisations.</p>
-    <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0">Full evidence, case studies, frameworks and testimonials are one click away at the bottom of this page</p>
       </div>
       <div class="top-photo"><img width="600" height="600" src="/images/kelroy-james-headshot.jpg" alt="Kelroy James"></div>
     </div>
@@ -263,6 +270,11 @@ main:focus{outline:none}
   <section class="band">
     <div class="wrap">
     <div class="sec-head"><h2>Snapshot</h2></div>
+    <div class="snap-grid">
+      <div class="snap"><b>Controls</b><span>Design, recovery and remediation</span></div>
+      <div class="snap"><b>Investigation</b><span>Financial and asset discrepancies</span></div>
+      <div class="snap"><b>Assurance</b><span>Evidence, compliance and operational accountability</span></div>
+    </div>
     <p>I'm an experienced defence assurance and supply chain professional moving into civilian supply chain assurance and operational controls roles, with third-party risk and GRC as adjacent routes. Eighteen years operating inside mandated assurance frameworks, high-consequence logistics and transport environments, and internal control cycles. The job has always been the same question in different uniforms: does the record match the reality, and how would you know if it stopped? I design controls, investigate discrepancies, improve compliance, and give decision-makers confidence that records reflect reality.</p>
     <p>As Tier 1 signatory on the supersession certificate for my account, that is, the person formally accountable for certifying the accuracy of stock and inventory records at handover, I sit inside a four-tier assurance structure that maps directly onto the <a href="/three-lines-of-defence-warships-to-ai.html">Three Lines Model</a>: my own first-line ownership of the account, second-line oversight from the Logistics Officer, third-line independent audit, and fourth-line assurance from Navy Command Headquarters (NCHQ). I recognised the mapping only once I began studying the model formally, years after I first signed for the account.</p>
     </div>
