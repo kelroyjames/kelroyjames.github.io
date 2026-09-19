@@ -94,14 +94,14 @@
   .at-a-glance{background:var(--surface);border-bottom:1px solid var(--rule);padding:28px 0}
   .glance-grid{display:grid;grid-template-columns:1fr;gap:20px}
   @media(min-width:700px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
-  .glance-item h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
+  .glance-item h2{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
   .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
 
   .cs-content{background:var(--surface);padding:56px 0}
   .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
   @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
   .cs-toc{position:sticky;top:80px;height:fit-content}
-  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc h2{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
   .cs-toc ul{list-style:none;padding:0;margin:0}
   .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
   .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
@@ -117,7 +117,7 @@
   .cs-section a{color:var(--brass)}
 
   .highlight-box{background:var(--brass-soft);border-left:3px solid var(--brass);padding:22px 24px;margin:28px 0}
-  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin-bottom:10px;color:var(--ink)}
+  .highlight-box h3{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin:0 0 10px;color:var(--ink)}
   .highlight-box p{margin-bottom:8px}
   .highlight-box p:last-child{margin-bottom:0}
 
@@ -232,10 +232,10 @@ main:focus{outline:none}
 <section class="at-a-glance">
   <div class="wrap">
     <div class="glance-grid">
-      <div class="glance-item"><h4>Situation</h4><p>Routine financial reconciliation across Royal Navy supply chain accounts, with no process designed to catch systemic misallocation patterns.</p></div>
-      <div class="glance-item"><h4>Action</h4><p>Cross-referenced ERP transaction data against work orders, delivery notes and historical spend to trace the pattern back to its root causes.</p></div>
-      <div class="glance-item"><h4>Result</h4><p>£2.4M in misallocated expenditure identified and corrected, with a proposed Navy-wide policy instruction to prevent recurrence now under review by command.</p></div>
-      <div class="glance-item"><h4>Transferable</h4><p>Root-cause analysis, financial control investigation and evidence-based policy recommendations.</p></div>
+      <div class="glance-item"><h2>Situation</h2><p>Routine financial reconciliation across Royal Navy supply chain accounts, with no process designed to catch systemic misallocation patterns.</p></div>
+      <div class="glance-item"><h2>Action</h2><p>Cross-referenced ERP transaction data against work orders, delivery notes and historical spend to trace the pattern back to its root causes.</p></div>
+      <div class="glance-item"><h2>Result</h2><p>£2.4M in misallocated expenditure identified and corrected, with a proposed Navy-wide policy instruction to prevent recurrence now under review by command.</p></div>
+      <div class="glance-item"><h2>Transferable</h2><p>Root-cause analysis, financial control investigation and evidence-based policy recommendations.</p></div>
     </div>
   </div>
 </section>
@@ -245,7 +245,7 @@ main:focus{outline:none}
     <div class="content-grid">
       
       <aside class="cs-toc">
-        <h4>Contents</h4>
+        <h2>Contents</h2>
         <ul>
           <li><a href="#challenge">The Challenge</a></li>
           <li><a href="#context">Why This Matters</a></li>
@@ -264,7 +264,7 @@ main:focus{outline:none}
           <p>This was a process failure, not fraud: it persisted because the existing validation steps did not catch allocation errors before they were committed to the ledger, and because there was no routine reconciliation process designed to detect the pattern retrospectively.</p>
           
           <div class="highlight-box">
-            <h4>The Core Issue</h4>
+            <h3>The Core Issue</h3>
             <p>The real cost of a misallocation is the decision it distorts. Commanders making readiness calls based on reported budgets were working from incorrect data, and that risk extended beyond the platforms directly affected.</p>
           </div>
         </div>
@@ -333,7 +333,7 @@ main:focus{outline:none}
           </ul>
           
           <div class="highlight-box">
-            <h4>Systemic vs. Symptomatic Solutions</h4>
+            <h3>Systemic vs. Symptomatic Solutions</h3>
             <p>Getting the £2.4M corrected was necessary, but it addressed the symptom. The real value is in the policy and process improvements that prevent the same misallocations from recurring fleet-wide, and those changes are currently under review by command. That is the difference between fixing a problem and fixing the system that allowed the problem to exist.</p>
           </div>
           
@@ -366,7 +366,7 @@ main:focus{outline:none}
           <p>£2.4M is material at the platform level, the unit level, and the enterprise level. When a finding scales across all three, the solution must scale with it. Local corrections are insufficient; the fix must be systemic, or the problem will recur elsewhere.</p>
 
           <div class="highlight-box">
-            <h4>Civilian Relevance</h4>
+            <h3>Civilian Relevance</h3>
             <p>Root-cause analysis, financial control investigation and evidence-based policy recommendations: the same competency a controls-assurance or internal audit function screens for when a finding needs to become a fix, not just a correction.</p>
           </div>
         </div>

@@ -94,14 +94,14 @@
   .at-a-glance{background:var(--surface);border-bottom:1px solid var(--rule);padding:28px 0}
   .glance-grid{display:grid;grid-template-columns:1fr;gap:20px}
   @media(min-width:700px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
-  .glance-item h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
+  .glance-item h2{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
   .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
 
   .cs-content{background:var(--surface);padding:56px 0}
   .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
   @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
   .cs-toc{position:sticky;top:80px;height:fit-content}
-  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc h2{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
   .cs-toc ul{list-style:none;padding:0;margin:0}
   .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
   .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
@@ -117,7 +117,7 @@
   .cs-section a{color:var(--brass)}
 
   .highlight-box{background:var(--brass-soft);border-left:3px solid var(--brass);padding:22px 24px;margin:28px 0}
-  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin-bottom:10px;color:var(--ink)}
+  .highlight-box h3{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin:0 0 10px;color:var(--ink)}
   .highlight-box p{margin-bottom:8px}
   .highlight-box p:last-child{margin-bottom:0}
 
@@ -240,10 +240,10 @@ main:focus{outline:none}
 <section class="at-a-glance">
   <div class="wrap">
     <div class="glance-grid">
-      <div class="glance-item"><h4>Situation</h4><p>A rejected consignment threatened a fixed flight slot on a £5M weapons trial, and a critical item was later pulled mid-exercise in Norway.</p></div>
-      <div class="glance-item"><h4>Action</h4><p>Turned the consignment around in three days, then coordinated a mid-exercise replacement demand, clearance and delivery in parallel against a closing deadline.</p></div>
-      <div class="glance-item"><h4>Result</h4><p>The trial stayed on schedule and the exercise closed with three hours to spare.</p></div>
-      <div class="glance-item"><h4>Transferable</h4><p>Deadline-critical coordination and multi-agency liaison under a fixed external schedule.</p></div>
+      <div class="glance-item"><h2>Situation</h2><p>A rejected consignment threatened a fixed flight slot on a £5M weapons trial, and a critical item was later pulled mid-exercise in Norway.</p></div>
+      <div class="glance-item"><h2>Action</h2><p>Turned the consignment around in three days, then coordinated a mid-exercise replacement demand, clearance and delivery in parallel against a closing deadline.</p></div>
+      <div class="glance-item"><h2>Result</h2><p>The trial stayed on schedule and the exercise closed with three hours to spare.</p></div>
+      <div class="glance-item"><h2>Transferable</h2><p>Deadline-critical coordination and multi-agency liaison under a fixed external schedule.</p></div>
     </div>
   </div>
 </section>
@@ -253,7 +253,7 @@ main:focus{outline:none}
     <div class="content-grid">
 
       <aside class="cs-toc">
-        <h4>Contents</h4>
+        <h2>Contents</h2>
         <ul>
           <li><a href="#challenge">The Challenge</a></li>
           <li><a href="#consignment">A Rejected Consignment</a></li>
@@ -277,7 +277,7 @@ main:focus{outline:none}
           <p>The team had just had a consignment rejected. With the next flight slot fixed and the trial's flying programme unable to absorb a slip, I had three days to turn the inventory and the paperwork around, correct what had caused the rejection, and get the consignment cleared in time to make that flight. Once in post, I coordinated the movement through to a successful conclusion, and the support arrangement went on to sustain the trial for its duration.</p>
 
           <div class="highlight-box">
-            <h4>The Real Constraint</h4>
+            <h3>The Real Constraint</h3>
             <p>A rejected consignment doesn't get a second attempt on the same schedule. The trial's flying programme was fixed long before the equipment was; the only variable that could still move was how fast the paperwork and the physical stock were made to agree.</p>
           </div>
         </div>
@@ -289,7 +289,7 @@ main:focus{outline:none}
           <p>I raised the demand, and coordinated the issue, despatch and customs clearance of the replacement equipment against the deadline of the return flight. Both the aircraft's return and the final container delivery closed with three hours to spare.</p>
 
           <div class="highlight-box">
-            <h4>Recovering Mid-Exercise</h4>
+            <h3>Recovering Mid-Exercise</h3>
             <p>Losing a critical item mid-exercise is a different problem from losing one before deploying. There's no lead time left to absorb it, and the fix has to run in parallel with everything else already happening: the demand, the clearance and the delivery all had to land inside the same closing window as the return flight itself.</p>
           </div>
         </div>
@@ -305,7 +305,7 @@ main:focus{outline:none}
           <p>In both cases, the equipment problem was really a schedule problem wearing a logistics disguise, and the fix had to be measured in the same units as the deadline: days, then hours.</p>
 
           <div class="highlight-box">
-            <h4>The Scale That Depended on It</h4>
+            <h3>The Scale That Depended on It</h3>
             <p>The weapons trial that the consignment recovery kept on schedule went on to be recognised at programme level as a critically important enterprise success, run against a fixed flying programme on a small number of airframes. None of that activity happens if the equipment doesn't clear customs in time to make the flight. A missed flight slot doesn't just cost three days: trial windows of that size are booked months out and can't simply be rebooked, so the three-day fix was protecting weeks of trial time, not just the immediate consignment.</p>
           </div>
         </div>
@@ -350,7 +350,7 @@ main:focus{outline:none}
           <p>The Mission Model Canvas training was a serial within a strategic-innovation programme I was completing myself, and I used it to set out a vision statement for the team rather than a list of instructions. Explaining why the work mattered, alongside what needed to be done, gave people a stake in the outcome rather than just a task to complete. I trace the growth mindset behind six of the nine going on to be promoted back to that shift in ownership.</p>
 
           <div class="highlight-box">
-            <h4>Civilian Relevance</h4>
+            <h3>Civilian Relevance</h3>
             <p>Deadline-critical coordination and multi-agency liaison under a fixed external schedule: the same pressure that defines regulated trial, launch or compliance-deadline management in industry, where the date moves for no one and the fix has to run in parallel, not in sequence.</p>
           </div>
 

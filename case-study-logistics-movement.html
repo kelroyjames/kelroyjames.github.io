@@ -94,14 +94,14 @@
   .at-a-glance{background:var(--surface);border-bottom:1px solid var(--rule);padding:28px 0}
   .glance-grid{display:grid;grid-template-columns:1fr;gap:20px}
   @media(min-width:700px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
-  .glance-item h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
+  .glance-item h2{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
   .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
 
   .cs-content{background:var(--surface);padding:56px 0}
   .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
   @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
   .cs-toc{position:sticky;top:80px;height:fit-content}
-  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc h2{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
   .cs-toc ul{list-style:none;padding:0;margin:0}
   .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
   .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
@@ -117,7 +117,7 @@
   .cs-section a{color:var(--brass)}
 
   .highlight-box{background:var(--brass-soft);border-left:3px solid var(--brass);padding:22px 24px;margin:28px 0}
-  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin-bottom:10px;color:var(--ink)}
+  .highlight-box h3{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin:0 0 10px;color:var(--ink)}
   .highlight-box p{margin-bottom:8px}
   .highlight-box p:last-child{margin-bottom:0}
 
@@ -235,10 +235,10 @@ main:focus{outline:none}
 <section class="at-a-glance">
   <div class="wrap">
     <div class="glance-grid">
-      <div class="glance-item"><h4>Situation</h4><p>A high-readiness diving unit had no organic capability to track its own equipment or manage customs compliance for international movements.</p></div>
-      <div class="glance-item"><h4>Action</h4><p>Built a PRINCE2-governed movement capability from greenfield, integrating HMRC, JSP 800 and JSP 916 requirements into the process itself.</p></div>
-      <div class="glance-item"><h4>Result</h4><p>Zero financial liability exposure and full deployment tracking, validated live across four multinational exercises.</p></div>
-      <div class="glance-item"><h4>Transferable</h4><p>PRINCE2 project delivery against a live regulatory compliance obligation.</p></div>
+      <div class="glance-item"><h2>Situation</h2><p>A high-readiness diving unit had no organic capability to track its own equipment or manage customs compliance for international movements.</p></div>
+      <div class="glance-item"><h2>Action</h2><p>Built a PRINCE2-governed movement capability from greenfield, integrating HMRC, JSP 800 and JSP 916 requirements into the process itself.</p></div>
+      <div class="glance-item"><h2>Result</h2><p>Zero financial liability exposure and full deployment tracking, validated live across four multinational exercises.</p></div>
+      <div class="glance-item"><h2>Transferable</h2><p>PRINCE2 project delivery against a live regulatory compliance obligation.</p></div>
     </div>
   </div>
 </section>
@@ -248,7 +248,7 @@ main:focus{outline:none}
     <div class="content-grid">
       
       <aside class="cs-toc">
-        <h4>Contents</h4>
+        <h2>Contents</h2>
         <ul>
           <li><a href="#challenge">Challenge</a></li>
           <li><a href="#governance">Project Governance</a></li>
@@ -266,17 +266,17 @@ main:focus{outline:none}
           <p>A high-readiness unit deploying globally shouldn't depend on someone else's systems to know where its equipment is. That dependency created operational risk: when external tracking systems failed or access was delayed, the unit had no organic capability to account for equipment in transit or confirm arrival.</p>
           
           <div class="highlight-box">
-            <h4>The Strategic Problem</h4>
+            <h3>The Strategic Problem</h3>
             <p>Closing this gap meant building a movement organisation from nothing: governance, infrastructure, procedures, and the customs compliance that underpinned it all. The project had to deliver end-to-end capability within the deployment cycle, not as a future-state aspiration.</p>
           </div>
 
           <div class="highlight-box">
-            <h4>The Cost of the Old Way: A 200-Mile Round Trip for a Label</h4>
+            <h3>The Cost of the Old Way: A 200-Mile Round Trip for a Label</h3>
             <p>Before this project, when consignment labels were needed to move equipment, the only option was for someone to drive upwards of 200 miles round trip to collect them in person, a full day's tasking, plus fuel and vehicle wear, spent on paperwork rather than diving support. That was the situation before I took over. VITALS, the tracking system this project installed, removed that journey entirely.</p>
           </div>
 
           <div class="highlight-box">
-            <h4>The Wider Stakes: Defence Engagement</h4>
+            <h3>The Wider Stakes: Defence Engagement</h3>
             <p>A high-readiness diving unit that cannot move its own equipment reliably is a unit that cannot commit to the multinational exercises that sustain Defence Engagement: the UK's programme of military cooperation and alliance-building with partner nations. Losing organic movement capability risked more than an administrative headache; it risked the unit's ability to take part in exactly the exercises that keep those partnerships active.</p>
           </div>
 
@@ -358,7 +358,7 @@ main:focus{outline:none}
           <p>International movements carry financial liability if customs requirements aren't met. Equipment moving between countries without proper documentation exposes the organisation to tax, duty, and penalty charges. For a high-readiness unit deploying frequently, this risk compounded with every movement.</p>
 
           <div class="highlight-box">
-            <h4>Regulatory Framework Integration</h4>
+            <h3>Regulatory Framework Integration</h3>
             <p>Designed Standard Operating Procedures (SOPs) that aligned unit movements with three regulatory regimes simultaneously:</p>
             <ul style="margin-top:12px">
               <li><strong>HMRC Customs Requirements:</strong> UK customs authority for international goods movements</li>
@@ -420,7 +420,7 @@ main:focus{outline:none}
           <p>The true test of any movement capability is whether it works under operational conditions. VITALS went live in time to support the unit's exercise programme that autumn, and was validated in the field on Exercise Open Spirit (Latvia) before going on to sustain the unit's deployments to Exercise Sea Breeze (Ukraine), Exercise Northern Challenge, and Exercise Joint Warrior (UK).</p>
 
           <div class="highlight-box">
-            <h4>Milestone Timeline</h4>
+            <h3>Milestone Timeline</h3>
             <ul style="margin-top:12px">
               <li><strong>15 Jul 2017:</strong> Project Initiation Document approved</li>
               <li><strong>20 Aug 2017:</strong> VITALS hardware and software installed</li>
@@ -432,7 +432,7 @@ main:focus{outline:none}
           </div>
 
           <div class="highlight-box">
-            <h4>Operational Validation Criteria</h4>
+            <h3>Operational Validation Criteria</h3>
             <ul style="margin-top:12px">
               <li><strong>Real-time visibility:</strong> Command staff could track equipment location and status during transit</li>
               <li><strong>Concurrent deployments:</strong> System handled at least two simultaneous movements across different countries, the threshold set as a critical success factor at project initiation</li>
@@ -478,7 +478,7 @@ main:focus{outline:none}
           </ul>
 
           <div class="highlight-box">
-            <h4>Rob Jones' Validation</h4>
+            <h3>Rob Jones' Validation</h3>
             <p>From Rob Jones' LinkedIn recommendation (OIC during this project):</p>
             <blockquote style="font-style:italic;margin-top:12px">
               "Of all the logistics specialists I worked with over 12 years if I could select one to support my engineers on the ground it would be Kelroy. He could always be relied on to deliver and didn't let the unit down."
@@ -563,7 +563,7 @@ main:focus{outline:none}
           <p>The skills are commercial-grade. Only the sector differs.</p>
 
           <div class="highlight-box">
-            <h4>Nine Years On: The Gap Goes Fleet-Wide</h4>
+            <h3>Nine Years On: The Gap Goes Fleet-Wide</h3>
             <p>In March 2026, Royal Navy logistics leadership circulated a fleet-wide call for volunteers to build "movements" specialism, citing a structural shortage of suitably qualified and experienced personnel in the field and noting that the Royal Navy has never had a dedicated Movements branch, having relied on the Army and RAF to cover it for years. The initiative was framed as a first step toward "building resilience within this field" across the Fleet.</p>
             <p>This is the same capability gap this project diagnosed and closed locally, at unit level, nine years earlier: an organic movements function that didn't depend on borrowing capacity from elsewhere. The fix scaled down to one unit in 2017; the problem it solved has since scaled up to a fleet-wide priority.</p>
           </div>

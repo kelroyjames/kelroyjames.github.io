@@ -94,14 +94,14 @@
   .at-a-glance{background:var(--surface);border-bottom:1px solid var(--rule);padding:28px 0}
   .glance-grid{display:grid;grid-template-columns:1fr;gap:20px}
   @media(min-width:700px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
-  .glance-item h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
+  .glance-item h2{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
   .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
 
   .cs-content{background:var(--surface);padding:56px 0}
   .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
   @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
   .cs-toc{position:sticky;top:80px;height:fit-content}
-  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc h2{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
   .cs-toc ul{list-style:none;padding:0;margin:0}
   .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
   .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
@@ -117,7 +117,7 @@
   .cs-section a{color:var(--brass)}
 
   .highlight-box{background:var(--brass-soft);border-left:3px solid var(--brass);padding:22px 24px;margin:28px 0}
-  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin-bottom:10px;color:var(--ink)}
+  .highlight-box h3{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin:0 0 10px;color:var(--ink)}
   .highlight-box p{margin-bottom:8px}
   .highlight-box p:last-child{margin-bottom:0}
 
@@ -236,10 +236,10 @@ main:focus{outline:none}
 <section class="at-a-glance">
   <div class="wrap">
     <div class="glance-grid">
-      <div class="glance-item"><h4>Situation</h4><p>Took over a Type 45 supply chain account rated unsatisfactory by fleet logistics inspectors, with no standardised controls and no audit trail.</p></div>
-      <div class="glance-item"><h4>Action</h4><p>Root-caused each inspection finding, then designed control artefacts, validation aide-memoires, auditable voucher reports, standardised loss packs and an action grid, built for handover from day one.</p></div>
-      <div class="glance-item"><h4>Result</h4><p>Account restored to full compliance, with three of those artefacts adopted beyond the original unit and a Navy-wide policy instruction proposed.</p></div>
-      <div class="glance-item"><h4>Transferable</h4><p>Control design, audit remediation and process improvement that survives a change of owner.</p></div>
+      <div class="glance-item"><h2>Situation</h2><p>Took over a Type 45 supply chain account rated unsatisfactory by fleet logistics inspectors, with no standardised controls and no audit trail.</p></div>
+      <div class="glance-item"><h2>Action</h2><p>Root-caused each inspection finding, then designed control artefacts, validation aide-memoires, auditable voucher reports, standardised loss packs and an action grid, built for handover from day one.</p></div>
+      <div class="glance-item"><h2>Result</h2><p>Account restored to full compliance, with three of those artefacts adopted beyond the original unit and a Navy-wide policy instruction proposed.</p></div>
+      <div class="glance-item"><h2>Transferable</h2><p>Control design, audit remediation and process improvement that survives a change of owner.</p></div>
     </div>
   </div>
 </section>
@@ -249,7 +249,7 @@ main:focus{outline:none}
     <div class="content-grid">
       
       <aside class="cs-toc">
-        <h4>Contents</h4>
+        <h2>Contents</h2>
         <ul>
           <li><a href="#challenge">The Challenge</a></li>
           <li><a href="#context">Context & Stakes</a></li>
@@ -268,7 +268,7 @@ main:focus{outline:none}
           <p>The previous system was person-dependent rather than process-driven. When personnel rotated, institutional knowledge left with them. There were no standardised first-line controls, no audit trail for decisions, and no regeneration matrix to prevent the same failures from recurring under the next account holder.</p>
           
           <div class="highlight-box">
-            <h4>The Core Problem</h4>
+            <h3>The Core Problem</h3>
             <p>An account assessed as unsatisfactory does not fail because nobody worked hard enough. It fails because the controls that should make compliance routine either do not exist or cannot be followed consistently by whoever happens to hold the role.</p>
           </div>
         </div>
@@ -346,12 +346,12 @@ main:focus{outline:none}
           </ul>
           
           <div class="highlight-box">
-            <h4>The Inspection Trajectory</h4>
+            <h3>The Inspection Trajectory</h3>
             <p>An early inspection rates the account <strong>Unsatisfactory</strong>, with over 40 open findings. A revisit some months later rates the account <strong>Satisfactory</strong>, with open findings down to under a dozen, one of them still red-rated. By the most recent inspection, only a handful of actions remain, none red-rated, the outstanding minor pickups corrected within two weeks, and the account is assessed <strong>fully compliant</strong>. Alongside that, 15 loss cases are closed through asset verification and internal investigation over the same period, which together with the inspection-finding reduction account for the 80% fall in financial liability.</p>
           </div>
 
           <div class="highlight-box">
-            <h4>Transferable Impact</h4>
+            <h3>Transferable Impact</h3>
             <p>The controls built for this account are now preventing failures on other platforms, which is the real measure of success: enterprise-level process improvement, not localised firefighting.</p>
           </div>
         </div>
@@ -372,7 +372,7 @@ main:focus{outline:none}
           <p>Every entry in the regeneration matrix carries the reasoning: why the control exists, which finding it mitigates, and what happens if it is not followed. That context is what allows future account holders to make informed decisions when circumstances change.</p>
 
           <div class="highlight-box">
-            <h4>Civilian Relevance</h4>
+            <h3>Civilian Relevance</h3>
             <p>Control design, audit remediation and process improvement that survives a change of owner: the same discipline a controls-assurance, internal audit or third-party risk function is built around, whatever the account happens to hold.</p>
           </div>
         </div>

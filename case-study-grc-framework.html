@@ -94,14 +94,14 @@
   .at-a-glance{background:var(--surface);border-bottom:1px solid var(--rule);padding:28px 0}
   .glance-grid{display:grid;grid-template-columns:1fr;gap:20px}
   @media(min-width:700px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
-  .glance-item h4{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
+  .glance-item h2{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
   .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
 
   .cs-content{background:var(--surface);padding:56px 0}
   .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
   @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
   .cs-toc{position:sticky;top:80px;height:fit-content}
-  .cs-toc h4{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
+  .cs-toc h2{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
   .cs-toc ul{list-style:none;padding:0;margin:0}
   .cs-toc a{font-size:14px;color:var(--ink-2);text-decoration:none;display:block;padding:6px 0;border-left:2px solid transparent;padding-left:12px;transition:all .2s}
   .cs-toc a:hover,.cs-toc a.active{color:var(--brass);border-left-color:var(--brass)}
@@ -117,7 +117,7 @@
   .cs-section a{color:var(--brass)}
 
   .highlight-box{background:var(--brass-soft);border-left:3px solid var(--brass);padding:22px 24px;margin:28px 0}
-  .highlight-box h4{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin-bottom:10px;color:var(--ink)}
+  .highlight-box h3{font-family:Spectral,Georgia,serif;font-size:1.05rem;font-weight:600;margin:0 0 10px;color:var(--ink)}
   .highlight-box p{margin-bottom:8px}
   .highlight-box p:last-child{margin-bottom:0}
 
@@ -235,10 +235,10 @@ main:focus{outline:none}
 <section class="at-a-glance">
   <div class="wrap">
     <div class="glance-grid">
-      <div class="glance-item"><h4>Situation</h4><p>Three Fleet Logistics Inspection failures in fifteen months exposed person-dependent controls with no systematic governance framework behind them.</p></div>
-      <div class="glance-item"><h4>Action</h4><p>Designed control mechanisms from first principles using ISO 27001, 42001 and 27701, Lean Six Sigma and the Three Lines Model, then embedded the change through policy and academic validation.</p></div>
-      <div class="glance-item"><h4>Result</h4><p>Full compliance sustained after handover, with the controls still holding under the next account holder.</p></div>
-      <div class="glance-item"><h4>Transferable</h4><p>Enterprise GRC framework design, Three Lines Model implementation, and change management that survives the departure of the person who built it.</p></div>
+      <div class="glance-item"><h2>Situation</h2><p>Three Fleet Logistics Inspection failures in fifteen months exposed person-dependent controls with no systematic governance framework behind them.</p></div>
+      <div class="glance-item"><h2>Action</h2><p>Designed control mechanisms from first principles using ISO 27001, 42001 and 27701, Lean Six Sigma and the Three Lines Model, then embedded the change through policy and academic validation.</p></div>
+      <div class="glance-item"><h2>Result</h2><p>Full compliance sustained after handover, with the controls still holding under the next account holder.</p></div>
+      <div class="glance-item"><h2>Transferable</h2><p>Enterprise GRC framework design, Three Lines Model implementation, and change management that survives the departure of the person who built it.</p></div>
     </div>
   </div>
 </section>
@@ -248,7 +248,7 @@ main:focus{outline:none}
     <div class="content-grid">
       
       <aside class="cs-toc">
-        <h4>Contents</h4>
+        <h2>Contents</h2>
         <ul>
           <li><a href="#challenge">Challenge</a></li>
           <li><a href="#approach">Approach</a></li>
@@ -266,7 +266,7 @@ main:focus{outline:none}
           <p>Operational gaps across three Fleet Logistics Inspections (FLIs) in 15 months revealed systemic deficiencies in deck-plate assurance. The existing approach relied on position power rather than systematic controls, creating compliance gaps that couldn't be sustained through personnel changes.</p>
           
           <div class="highlight-box">
-            <h4>The Core Problem</h4>
+            <h3>The Core Problem</h3>
             <p>Traditional naval assurance relied on the person, not the process. When that person left, the controls failed. The challenge was to design transferable governance that worked independently of who was in the role.</p>
           </div>
 
@@ -290,7 +290,7 @@ main:focus{outline:none}
           <p>Adopted a greenfield approach rather than attempting to fix inherited broken processes. This meant designing new control mechanisms from first principles, grounded in commercial governance standards and academic change management theory.</p>
 
           <div class="highlight-box">
-            <h4>Power Model Selection: Expert & Referent Over Position</h4>
+            <h3>Power Model Selection: Expert & Referent Over Position</h3>
             <p>Applied French & Raven's power taxonomy strategically. Rather than relying on rank (position power), built influence through demonstrated expertise (expert power) and cultural engagement (referent power). This was critical for embedding change that would survive leadership turnover.</p>
           </div>
 
@@ -339,7 +339,7 @@ main:focus{outline:none}
           </ul>
 
           <div class="highlight-box">
-            <h4>The £2.4M Discovery</h4>
+            <h3>The £2.4M Discovery</h3>
             <p>The analytics dashboard surfaced spending patterns that didn't align with operational activity. Systematic voucher analysis revealed £2.4M in misallocated expenditure across multiple account lines. This was systemic control failure, not fraud: transactions were recorded against incorrect budget codes, creating both financial liability and inventory discrepancies.</p>
             <p>Recovery required coordinating with finance teams, validating actual usage, correcting ledger entries, and establishing preventive controls to stop recurrence.</p>
           </div>
@@ -411,7 +411,7 @@ main:focus{outline:none}
           </ul>
 
           <div class="highlight-box">
-            <h4>The Transferability Test</h4>
+            <h3>The Transferability Test</h3>
             <p>The true measure of success: when I departed the role, the controls continued to function. The subsequent FLI (conducted after my departure) maintained the Fully Compliant rating. This confirms the framework was process-driven, not person-dependent.</p>
           </div>
         </section>
