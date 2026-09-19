@@ -290,7 +290,7 @@ main:focus{outline:none}
 <section class="at-a-glance">
   <div class="wrap">
     <div class="glance-grid">
-      <div class="glance-item"><h2>Situation</h2><p>Upkeep units were tracking STOROBs (stores robbed from one platform to support another) across various different spreadsheets with no single source of truth, and a predecessor's attempt at a fix was incomplete when I took it over.</p></div>
+      <div class="glance-item"><h2>Situation</h2><p>Upkeep units were tracking STOROBs (cross-platform stock reallocations, where stores are taken from one platform to support another) across various different spreadsheets with no single source of truth, and a predecessor's attempt at a fix was incomplete when I took it over.</p></div>
       <div class="glance-item"><h2>Action</h2><p>Reviewed the project manager's requirement and reconfigured the spreadsheet to meet it, feeding a single source of truth into Palantir Foundry for the technical team to build a load, view and comparison layer on top of.</p></div>
       <div class="glance-item"><h2>Result</h2><p>A working tool that immediately identified a complex STOROB worth £8,000 and 50 man-hours, then proved the concept well enough to be rolled out to an adjacent unit and adopted by inventory managers fleet-wide.</p></div>
       <div class="glance-item"><h2>Civilian relevance</h2><p>Requirements ownership, data redesign, and completing a stalled build rather than starting one from scratch.</p></div>
@@ -318,7 +318,7 @@ main:focus{outline:none}
         
         <div class="cs-section" id="challenge">
           <h2>The Challenge</h2>
-          <p>A STOROB, stores robbed from one platform to support another, is a routine part of keeping ships in upkeep moving when the alternative is waiting weeks for fresh procurement. It is also, if it is not tracked properly, an easy way to lose sight of what has actually moved from where, and what that is costing.</p>
+          <p>A STOROB is a cross-platform stock reallocation, where stores are taken from one platform to support another. It is a routine part of keeping ships in upkeep moving when the alternative is waiting weeks for fresh procurement. It is also, if it is not tracked properly, an easy way to lose sight of what has actually moved from where, and what that is costing.</p>
           <p>Across the upkeep units I supported, STOROB tracking was spread across various different spreadsheets, each maintained separately, with no single source of truth the project manager could rely on to see the full picture. A predecessor had already started building a fix that fed into Palantir Foundry, intended to give the project manager one place to load, view and compare STOROB data across units. When I took over the account, that build was incomplete and not working as intended.</p>
 
           <div class="highlight-box">
@@ -330,7 +330,7 @@ main:focus{outline:none}
         <div class="cs-section" id="context">
           <h2>Context &amp; Stakes</h2>
           <p>Upkeep periods run to tight timelines, and a STOROB is often the fastest legitimate way to keep a job moving when the part needed is sitting unused on another platform rather than weeks away in the supply chain. That makes STOROBs valuable. It also makes them a control risk: an untracked STOROB is an asset that has moved without the paperwork that would let anyone reconcile it later, or spot that the same gap keeps recurring somewhere it could be fixed at source.</p>
-          <p>Each unit's own spreadsheet was internally consistent but told nobody outside it what had actually moved, or what it was worth. Without a shared view, the project manager had no way to compare STOROB activity across units, spot a pattern worth acting on, or know whether a robbed item had already been accounted for somewhere else.</p>
+          <p>Each unit's own spreadsheet was internally consistent but told nobody outside it what had actually moved, or what it was worth. Without a shared view, the project manager had no way to compare STOROB activity across units, spot a pattern worth acting on, or know whether a reallocated item had already been accounted for somewhere else.</p>
           <p>Palantir Foundry was the platform the wider team had already chosen to load, view and compare this kind of data. My part sat upstream of that: getting the underlying spreadsheet right so that what fed into Foundry was accurate and structured to answer the questions stakeholders actually had, rather than continuing to patch a build that had stalled before it worked.</p>
         </div>
         
@@ -354,7 +354,7 @@ main:focus{outline:none}
           <p>Instead of each unit keeping its own separate record, STOROB activity is captured in one consistently structured spreadsheet, loaded into Foundry so the project manager can view and compare it across units in one place rather than reconciling separate files by hand.</p>
 
           <h3>Comparison Across Units</h3>
-          <p>Because the data is structured the same way regardless of which unit it came from, it can be compared directly: what has been robbed, from where, for what, and what it was worth, without the manual translation work that separate spreadsheets used to require.</p>
+          <p>Because the data is structured the same way regardless of which unit it came from, it can be compared directly: what has been reallocated, from where, for what, and what it was worth, without the manual translation work that separate spreadsheets used to require.</p>
 
           <div class="tools-grid">
             <div class="tool-tag">Palantir Foundry</div>
