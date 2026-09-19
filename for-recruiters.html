@@ -66,7 +66,13 @@
   a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
   header.top{background:var(--surface);border-bottom:1px solid var(--rule)}
-  header.top .wrap{padding:52px 24px 40px;display:flex;flex-direction:column;gap:20px}
+  header.top .wrap{padding:52px 24px 40px;display:flex;flex-direction:column;gap:24px}
+  .top-grid{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+  @media(min-width:800px){.top-grid{grid-template-columns:minmax(0,1fr) 200px;gap:48px}}
+  .top-intro{display:flex;flex-direction:column;gap:18px}
+  .top-photo{width:132px;height:132px;border-radius:50%;overflow:hidden;border:3px solid var(--accent);box-shadow:var(--shadow);order:-1}
+  @media(min-width:800px){.top-photo{width:200px;height:200px;order:0;justify-self:center}}
+  .top-photo img{width:100%;height:100%;object-fit:cover;display:block}
   .eyebrow{
     font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
     text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
@@ -83,19 +89,20 @@
   .quick-facts{
     display:grid;grid-template-columns:1fr;gap:12px 28px;margin-top:6px;
     font-size:14px;color:var(--ink-2);
+    background:var(--surface-2);border:1px solid var(--rule);border-top:3px solid var(--accent);padding:22px 24px;
   }
   @media(min-width:700px){.quick-facts{grid-template-columns:repeat(2,1fr)}}
   .quick-facts dt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
   .quick-facts dd{margin:0 0 8px}
 
-  main .wrap{padding:44px 24px}
-  section{margin-bottom:44px}
-  section:last-of-type{margin-bottom:0}
+  .band{padding:44px 0;margin:0}
+  .band .wrap{padding:0 24px}
+  .band.alt{background:var(--surface-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
   .sec-head{
     display:flex;align-items:baseline;gap:16px;margin:0 0 16px;
     padding-bottom:10px;border-bottom:1px solid var(--rule);
   }
-  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.32rem;font-weight:700;margin:0}
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.4rem;font-weight:700;margin:0;border-left:4px solid var(--accent);padding-left:12px}
   p{margin:0 0 14px;max-width:70ch;color:var(--ink-2)}
   p:last-child{margin-bottom:0}
 
@@ -105,6 +112,19 @@
   .role-card h3{font-family:Spectral,Georgia,serif;font-size:1.02rem;margin:0 0 8px;font-weight:600}
   .role-card p{font-size:13.8px;margin:0}
 
+  .impact{background:var(--accent-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--accent);padding:48px 0;margin:0}
+  .impact-head{text-align:center;margin-bottom:34px}
+  .impact-head h2{font-family:Spectral,Georgia,serif;font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700;margin:0 0 10px;color:var(--ink)}
+  .impact-head p{font-size:15px;color:var(--ink-2);margin:0 auto;max-width:none}
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+  .metric{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:24px 18px;text-align:center;box-shadow:var(--shadow);display:block;text-decoration:none;color:inherit}
+  .metric:hover{border-color:var(--accent)}
+  .metric:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .metric-tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+  .metric-value{font-family:Spectral,Georgia,serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--accent);margin:0 0 6px;line-height:1}
+  .metric-label{font-size:13px;color:var(--ink-2);font-weight:500;text-transform:uppercase;letter-spacing:.05em;max-width:none;margin:0}
+  .metric-sub{font-size:13px;color:var(--muted);margin:8px 0 0;line-height:1.45;max-width:none}
+  .metric-link-note{display:block;margin-top:8px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
   .achieve-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
   .achieve-list li{
     background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--accent);
@@ -217,10 +237,15 @@ main:focus{outline:none}
 
 <header class="top">
   <div class="wrap">
+    <div class="top-grid">
+      <div class="top-intro">
     <div class="eyebrow"><span class="tick">◆</span><span>Professional profile</span><span>One page, everything you need</span></div>
     <h1>For recruiters</h1>
     <p class="standfirst">Defence assurance and supply chain professional with 18 years' experience designing controls, investigating financial and asset discrepancies, improving compliance and delivering logistics outcomes in high-consequence environments. Now targeting supply chain assurance and operational controls roles, with third-party risk, GRC and internal audit as adjacent routes, in defence, aerospace, professional services and regulated organisations.</p>
     <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0">Full evidence, case studies, frameworks and testimonials are one click away at the bottom of this page</p>
+      </div>
+      <div class="top-photo"><img width="600" height="600" src="/images/kelroy-james-headshot.jpg" alt="Kelroy James"></div>
+    </div>
     <dl class="quick-facts">
       <div><dt>Current status</dt><dd>Serving Petty Officer (Supply Chain), Royal Navy: 18 years' service</dd></div>
       <div><dt>Seniority and scale</dt><dd>Section head level. I am responsible for daily operational output, normally managing a team of 5 to 10 people, with inventory under management of £10M to £25M depending on the items held.</dd></div>
@@ -234,24 +259,56 @@ main:focus{outline:none}
 </header>
 
 <main id="main" tabindex="-1">
-<div class="wrap">
 
-  <section>
+  <section class="band">
+    <div class="wrap">
     <div class="sec-head"><h2>Snapshot</h2></div>
     <p>I'm an experienced defence assurance and supply chain professional moving into civilian supply chain assurance and operational controls roles, with third-party risk and GRC as adjacent routes. Eighteen years operating inside mandated assurance frameworks, high-consequence logistics and transport environments, and internal control cycles. The job has always been the same question in different uniforms: does the record match the reality, and how would you know if it stopped? I design controls, investigate discrepancies, improve compliance, and give decision-makers confidence that records reflect reality.</p>
     <p>As Tier 1 signatory on the supersession certificate for my account, that is, the person formally accountable for certifying the accuracy of stock and inventory records at handover, I sit inside a four-tier assurance structure that maps directly onto the <a href="/three-lines-of-defence-warships-to-ai.html">Three Lines Model</a>: my own first-line ownership of the account, second-line oversight from the Logistics Officer, third-line independent audit, and fourth-line assurance from Navy Command Headquarters (NCHQ). I recognised the mapping only once I began studying the model formally, years after I first signed for the account.</p>
+    </div>
   </section>
 
-  <section>
-    <div class="sec-head"><h2>Three strongest achievements</h2></div>
-    <ul class="achieve-list">
-      <li><span class="achieve-num">£2.4M</span><p>Misallocated expenditure identified through spending-pattern analysis on a supply chain account previously rated unsatisfactory; led the root-cause analysis behind its correction, which led to a proposed Navy-wide policy instruction to prevent recurrence. <a href="/case-study-financial-control.html">Read the case study →</a></p></li>
-      <li><span class="achieve-num">80%</span><p>Reduction in financial liability, a separate initiative on the same account delivered through asset verification and documentation remediation, while ranked in the top three of seventy-nine peer senior rates across Surface Flotilla HQ, assessed against the whole peer group across all trades. <a href="/case-study-type45-turnaround.html">Read the case study →</a></p></li>
-      <li><span class="achieve-num">6 of 9 promoted</span><p>Led a nine-person team through concurrent operational deployments (a £5M weapons trial and a joint exercise), running a strategic-innovation programme alongside the delivery: six of the nine have since been promoted, and the tour was recognised with a Royal Navy Inclusivity Award for Innovation. <a href="/case-study-expeditionary-logistics.html">Read the case study →</a></p></li>
-    </ul>
+  <section class="impact" aria-labelledby="impact-h">
+    <div class="wrap">
+      <div class="impact-head">
+        <h2 id="impact-h">Proven Business Impact</h2>
+        <p>18 years delivering measurable results in high-stakes environments</p>
+      </div>
+      <div class="metrics">
+        <a class="metric" href="/case-study-financial-control.html">
+          <span class="metric-tag">Financial Control</span>
+          <div class="metric-value">£2.4M</div>
+          <div class="metric-label">Misallocated Expenditure Identified Through Spending-Pattern Analysis</div>
+          <p class="metric-sub">Spending-pattern analysis exposed the misallocation and supported the corrective action that followed.</p>
+          <span class="metric-link-note">Read the case study →</span>
+        </a>
+        <a class="metric" href="/case-study-garage-lite-trial.html">
+          <span class="metric-tag">Operational Innovation</span>
+          <div class="metric-value">Zero</div>
+          <div class="metric-label">Stores Lost on Return from £145,674 Delivered, Piloting a Fleet-Support Model With No Precedent</div>
+          <p class="metric-sub">A new fleet-support model was piloted against £145,674 of stores with no precedent to follow.</p>
+          <span class="metric-link-note">Read the case study →</span>
+        </a>
+        <a class="metric" href="/case-study-type45-turnaround.html">
+          <span class="metric-tag">Asset Assurance</span>
+          <div class="metric-value">80%</div>
+          <div class="metric-label">Reduction in Financial Liability, on the Same Account Restored to Full Compliance</div>
+          <p class="metric-sub">Asset verification and documentation remediation restored a failing account to full compliance.</p>
+          <span class="metric-link-note">Read the case study →</span>
+        </a>
+        <a class="metric" href="/case-study-expeditionary-logistics.html">
+          <span class="metric-tag">Leadership</span>
+          <div class="metric-value">6 of 9</div>
+          <div class="metric-label">Team Members Promoted Since a Nine-Person Deployment Tour</div>
+          <p class="metric-sub">Concurrent deployments included a £5M weapons trial, and the tour was recognised with a Royal Navy Inclusivity Award for Innovation.</p>
+          <span class="metric-link-note">Read the case study →</span>
+        </a>
+      </div>
+    </div>
   </section>
 
-  <section>
+  <section class="band alt">
+    <div class="wrap">
     <div class="sec-head"><h2>Target role families</h2></div>
     <p style="margin-bottom:20px"><strong>Primary target:</strong> Assurance Manager, Operational Controls Manager and Supplier Assurance Manager roles in supply chain assurance and operational controls. <strong>Also open to:</strong> Consultant and Senior Consultant roles in the same domain, plus GRC consulting, internal audit, third-party risk and defence and aerospace assurance as adjacent routes.</p>
     <div class="role-grid">
@@ -268,9 +325,11 @@ main:focus{outline:none}
         <p>Third-party/vendor risk, internal audit and operational risk, at firms with structured veteran hiring. Third-party risk is functionally the same discipline across sectors, and ISO 27001 and 27701 are the common language.</p>
       </div>
     </div>
+    </div>
   </section>
 
-  <section>
+  <section class="band">
+    <div class="wrap">
     <div class="sec-head"><h2>Problems I help solve</h2></div>
     <p style="margin-bottom:20px">If your organisation is dealing with any of the following, I'd welcome a conversation about the problem and the capability required.</p>
     <div class="role-grid">
@@ -287,9 +346,11 @@ main:focus{outline:none}
         <p>Operational data isn't reaching the people making senior decisions. A transformation project needs the operational requirement defined properly before the system is built.</p>
       </div>
     </div>
+    </div>
   </section>
 
-  <section>
+  <section class="band alt">
+    <div class="wrap">
     <div class="sec-head"><h2>How this translates commercially</h2></div>
     <div class="table-scroll">
     <table class="translate-table"><caption class="sr-only">How Defence experience translates into civilian terms.</caption>
@@ -302,9 +363,11 @@ main:focus{outline:none}
       <tr><td>Supplier and third-party assurance work</td><td>Third-party risk management and supplier governance</td></tr>
     </table>
     </div>
+    </div>
   </section>
 
-  <section>
+  <section class="band">
+    <div class="wrap">
     <div class="sec-head"><h2>Selected writing</h2></div>
     <ul class="sel-writing">
       <li><a href="/the-physical-assurance-gap-in-third-party-risk.html">The Physical Assurance Gap in Third-Party Risk</a><br><span>For supplier-assurance and third-party-risk professionals: a practical way to find the physical dependencies that registers miss.</span></li>
@@ -312,9 +375,11 @@ main:focus{outline:none}
       <li><a href="/the-enterprise-risk-management-we-already-do.html">The Enterprise Risk Management We Already Do</a><br><span>For GRC and internal-audit leaders: how operational judgement maps onto the enterprise risk approach PwC now describes.</span></li>
     </ul>
     <p style="margin-top:16px;font-size:14px"><a href="/writing.html">All writing →</a></p>
+    </div>
   </section>
 
-  <section>
+  <section class="band">
+    <div class="wrap">
     <div class="two-col">
       <div>
         <div class="sec-head"><h2>What I'm looking for</h2></div>
@@ -333,9 +398,9 @@ main:focus{outline:none}
         </div>
       </div>
     </div>
+    </div>
   </section>
 
-</div>
 </main>
 
 <div class="cta-band">
