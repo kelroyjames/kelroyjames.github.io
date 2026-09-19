@@ -252,6 +252,7 @@ footer p{
 
 .skip-link{position:absolute;left:-9999px;top:0;background:var(--surface);color:var(--ink);padding:10px 16px;z-index:300;font:600 14px/1.2 "Public Sans",sans-serif;text-decoration:none;border:2px solid currentColor}
 .skip-link:focus{left:8px;top:8px}
+main:focus{outline:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
@@ -283,7 +284,7 @@ footer p{
     <a href="/#contact">Contact</a>
   </div>
 </div>
-<main id="main">
+<main id="main" tabindex="-1">
 
 <header class="masthead">
   <img src="/images/articles/erm-header.jpg" alt="A ship's bridge navigation console at night, radar screens lit red against city lights, illustrating the sensor picture available to a modern watchkeeper" class="featured-image">
