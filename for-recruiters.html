@@ -58,10 +58,12 @@
   }
   .wrap{max-width:920px;margin:0 auto;padding:0 24px}
   .topnav{padding-top:22px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 22px}
-  .topnav-links{display:flex;gap:18px;flex-wrap:wrap}
+  .topnav-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
   .topnav a{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
   .topnav a:hover{color:var(--accent)}
-@media(max-width:640px){.topnav a{display:inline-block;padding:11px 0}.topnav-links{gap:4px 18px}} /*tap*/
+  .topnav a.topnav-cta{background:var(--accent);color:var(--surface);padding:9px 16px}
+  .topnav a.topnav-cta:hover{color:var(--surface);opacity:.9}
+@media(max-width:640px){.topnav a{display:inline-block;padding:11px 0}.topnav a.topnav-cta{padding:11px 16px}.topnav-links{gap:4px 18px}} /*tap*/
   a{color:var(--accent)}
   a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
@@ -237,10 +239,11 @@ main:focus{outline:none}
 <div class="wrap topnav">
   <a href="/">&#8592; Kelroy James</a>
   <div class="topnav-links">
-    <a href="/#work">Work</a>
+    <a href="/case-studies">Case Studies</a>
     <a href="/writing">Writing</a>
     <a href="/background">Background</a>
-    <a href="/#contact">Contact</a>
+    <a href="/skills-expertise">Skills</a>
+    <a href="/#contact" class="topnav-cta">Get CV</a>
   </div>
 </div>
 
@@ -278,7 +281,7 @@ main:focus{outline:none}
     <div class="wrap">
     <div class="sec-head"><h2>Where to start</h2></div>
     <div class="routes">
-      <div class="route"><h3>Hiring for supply chain assurance?</h3><ul><li><a href="/case-study-type45-turnaround">Restoring Control to a Failing Account</a></li><li><a href="/case-study-financial-control">Identifying £2.4M in Misallocated Funds</a></li></ul></div>
+      <div class="route"><h3>Hiring for supply chain assurance?</h3><ul><li><a href="/case-study-failing-account-turnaround">Restoring Control to a Failing Account</a></li><li><a href="/case-study-financial-control">Identifying £2.4M in Misallocated Funds</a></li></ul></div>
       <div class="route"><h3>Hiring for supplier assurance or third-party risk?</h3><ul><li><a href="/the-physical-assurance-gap-in-third-party-risk">The Physical Assurance Gap in Third-Party Risk</a></li><li><a href="/third-party-risk-lifecycle">Third-Party Risk, End to End</a></li></ul></div>
       <div class="route"><h3>Hiring for GRC, audit or consulting?</h3><ul><li><a href="/case-study-grc-framework">Modernising Assurance Across Inspections</a></li><li><a href="/internal-audit-demonstration">An Internal Audit, End to End</a></li></ul></div>
       <div class="route"><h3>Hiring in defence or aerospace?</h3><ul><li><a href="/case-study-logistics-movement">Building a Compliant Movement Capability</a></li><li><a href="/case-study-expeditionary-logistics">Protecting a £5M Trial from Failure</a></li></ul></div>
@@ -320,7 +323,7 @@ main:focus{outline:none}
           <p class="metric-sub">Stores were pre-mustered and labelled before the trial started.</p>
           <span class="metric-link-note">Read the case study →</span>
         </a>
-        <a class="metric" href="/case-study-type45-turnaround">
+        <a class="metric" href="/case-study-failing-account-turnaround">
           <span class="metric-tag">Asset Assurance</span>
           <div class="metric-value">80%</div>
           <div class="metric-label">Reduction in Financial Liability, on the Same Account Restored to Full Compliance</div>

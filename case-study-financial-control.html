@@ -68,13 +68,16 @@
   .nav a.lnk{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none}
   .nav a.lnk:hover{color:var(--brass)}
   .nav a.lnk.cta{background:var(--brass);color:var(--surface);padding:9px 18px}
+  .nav-right{display:flex;align-items:center;gap:20px}
+  .nav-getcv{white-space:nowrap}
   .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:10px 12px;margin-right:-12px;font-size:20px;line-height:1;color:var(--ink)}
   @media(max-width:700px){
     .nav-toggle{display:block}
-    .nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--rule);padding:6px 26px 18px}
-    .nav ul.open{display:flex}
-    .nav ul li{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
-    .nav ul li:last-child{border-bottom:none;padding-top:16px}
+    .nav-right{gap:10px}
+    .nav-right ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--rule);padding:6px 26px 18px}
+    .nav-right ul.open{display:flex}
+    .nav-right ul li{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+    .nav-right ul li:last-child{border-bottom:none;padding-top:16px}
   }
 
   .cs-hero{background:var(--surface);border-bottom:1px solid var(--rule);padding:56px 0 44px}
@@ -230,14 +233,17 @@ main:focus{outline:none}
 <nav class="nav" aria-label="Main">
   <div class="wrap">
     <a class="mark" href="/">Kelroy James</a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.nextElementSibling;var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
-    <ul>
-      <li><a class="lnk" href="/#work">Work</a></li>
-      <li><a class="lnk" href="/writing">Writing</a></li>
-      <li><a class="lnk" href="/background">Background</a></li>
-      <li><a class="lnk" href="/for-recruiters">For Recruiters</a></li>
-      <li><a class="lnk cta" href="/#contact">Contact</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul>
+        <li><a class="lnk" href="/case-studies">Case Studies</a></li>
+        <li><a class="lnk" href="/writing">Writing</a></li>
+        <li><a class="lnk" href="/background">Background</a></li>
+        <li><a class="lnk" href="/skills-expertise">Skills</a></li>
+        <li><a class="lnk" href="/for-recruiters">For Recruiters</a></li>
+      </ul>
+      <a class="lnk cta nav-getcv" href="/#contact">Get CV</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.parentElement.querySelector('ul');var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
+    </div>
   </div>
 </nav>
 <main id="main" tabindex="-1">
@@ -469,7 +475,7 @@ main:focus{outline:none}
   <div class="wrap">
     <div>
       <p style="font-size:14px;color:var(--muted);margin-bottom:6px">Next Case Study</p>
-      <a href="/case-study-palantir-foundry">Palantir Foundry Inventory Application →</a>
+      <a href="/case-study-fleet-inventory-visibility">Palantir Foundry Inventory Application →</a>
     </div>
     <a href="/">← Back to Home</a>
   </div>

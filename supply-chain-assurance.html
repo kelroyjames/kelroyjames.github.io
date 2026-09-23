@@ -70,13 +70,16 @@
   .nav a.lnk:hover{color:var(--brass)}
   .nav a.lnk.cta{background:var(--brass);color:var(--surface);padding:9px 18px}
   .nav a.lnk.cta:hover{background:var(--navy);color:var(--surface)}
+  .nav-right{display:flex;align-items:center;gap:20px}
+  .nav-getcv{white-space:nowrap}
   .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:10px 12px;margin-right:-12px;font-size:20px;line-height:1;color:var(--ink)}
   @media(max-width:700px){
     .nav-toggle{display:block}
-    .nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--rule);padding:6px 26px 18px}
-    .nav ul.open{display:flex}
-    .nav ul li{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
-    .nav ul li:last-child{border-bottom:none;padding-top:16px}
+    .nav-right{gap:10px}
+    .nav-right ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--rule);padding:6px 26px 18px}
+    .nav-right ul.open{display:flex}
+    .nav-right ul li{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+    .nav-right ul li:last-child{border-bottom:none;padding-top:16px}
     .nav a.lnk.cta{display:inline-block;text-align:center}
   }
 
@@ -200,14 +203,17 @@ main:focus{outline:none}
 <nav class="nav" aria-label="Main">
   <div class="wrap">
     <a class="mark" href="/">Kelroy James</a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.nextElementSibling;var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
-    <ul>
-      <li><a class="lnk" href="/#work">Work</a></li>
-      <li><a class="lnk" href="/writing">Writing</a></li>
-      <li><a class="lnk" href="/background">Background</a></li>
-      <li><a class="lnk" href="/for-recruiters">For Recruiters</a></li>
-      <li><a class="lnk cta" href="/#contact">Contact</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul>
+        <li><a class="lnk" href="/case-studies">Case Studies</a></li>
+        <li><a class="lnk" href="/writing">Writing</a></li>
+        <li><a class="lnk" href="/background">Background</a></li>
+        <li><a class="lnk" href="/skills-expertise">Skills</a></li>
+        <li><a class="lnk" href="/for-recruiters">For Recruiters</a></li>
+      </ul>
+      <a class="lnk cta nav-getcv" href="/#contact">Get CV</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.parentElement.querySelector('ul');var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
+    </div>
   </div>
 </nav>
 <main id="main" tabindex="-1">
@@ -230,7 +236,7 @@ main:focus{outline:none}
         <div class="metric-label">Misallocated Expenditure Identified</div>
         <span class="metric-link-note">Read the case study →</span>
       </a>
-      <a class="metric" href="/case-study-type45-turnaround">
+      <a class="metric" href="/case-study-failing-account-turnaround">
         <span class="metric-tag">Asset Assurance</span>
         <div class="metric-value">80%</div>
         <div class="metric-label">Financial Liability Reduced</div>
@@ -246,7 +252,7 @@ main:focus{outline:none}
     <p class="intro-p">Every one of these started as the same question: does the record match the physical reality, and what breaks first when it doesn't?</p>
     <div class="work">
 
-      <a class="card" href="/case-study-type45-turnaround" style="border-left:4px solid var(--brass)">
+      <a class="card" href="/case-study-failing-account-turnaround" style="border-left:4px solid var(--brass)">
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Process Improvement</span>
@@ -296,7 +302,7 @@ main:focus{outline:none}
         </div>
       </a>
 
-      <a class="card" href="/case-study-palantir-foundry" style="border-left:4px solid var(--brass)">
+      <a class="card" href="/case-study-fleet-inventory-visibility" style="border-left:4px solid var(--brass)">
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Digital Transformation</span>
