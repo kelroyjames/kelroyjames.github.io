@@ -124,6 +124,16 @@
   .highlight-box p{margin-bottom:8px}
   .highlight-box p:last-child{margin-bottom:0}
 
+  .pull-quote{
+    font-family:Spectral,Georgia,serif;font-size:1.05rem;line-height:1.65;font-style:italic;
+    color:var(--ink-2);margin:20px 0;padding:24px 28px;background:var(--surface);
+    border:1px solid var(--rule);border-left:4px solid var(--brass);box-shadow:var(--shadow);
+  }
+  .pull-quote::before{content:"\201C";font-size:2rem;color:var(--brass);line-height:0;margin-right:6px;vertical-align:-0.35em}
+  .pull-quote-footer{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule-soft);font-style:normal}
+  .pull-quote-author{font-size:14px;font-weight:600;color:var(--ink);margin:0}
+  .pull-quote-role{font-size:12.5px;color:var(--muted);margin:2px 0 0}
+
   .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin:20px 0}
   .tool-tag{background:var(--surface);border:1px solid var(--rule);padding:10px 14px;text-align:center;font-size:12.5px;font-weight:500;color:var(--ink-2);box-shadow:var(--shadow)}
 
@@ -351,8 +361,12 @@ main:focus{outline:none}
 
           <h3>Rob Jones' Assessment (Project OIC)</h3>
           <p>Rob Jones (now Project Manager at Thales, then Officer in Charge) described this project context in his LinkedIn recommendation:</p>
-          <blockquote style="border-left:3px solid var(--brass);padding-left:20px;margin:20px 0;font-style:italic;color:var(--ink-2)">
+          <blockquote class="pull-quote">
             "His application of the defence procurement model and capability to network with all stakeholders to achieve the required outcome is second to none. If I needed a supervisor to deliver a general defence task then he could always be relied on to deliver and didn't let the unit down."
+            <div class="pull-quote-footer">
+              <p class="pull-quote-author">Rob Jones CEng MIET FCMI</p>
+              <p class="pull-quote-role">Project Manager at Thales · Officer in Charge, Fleet Diving Squadron HQ</p>
+            </div>
           </blockquote>
           <p>This project was the operational proof of that assessment.</p>
         </section>
@@ -539,8 +553,12 @@ main:focus{outline:none}
           <div class="highlight-box">
             <h3>Rob Jones' Validation</h3>
             <p>From Rob Jones' LinkedIn recommendation (OIC during this project):</p>
-            <blockquote style="font-style:italic;margin-top:12px">
+            <blockquote class="pull-quote" style="margin:12px 0 0">
               "Of all the logistics specialists I worked with over 12 years if I could select one to support my engineers on the ground it would be Kelroy. He could always be relied on to deliver and didn't let the unit down."
+              <div class="pull-quote-footer">
+                <p class="pull-quote-author">Rob Jones CEng MIET FCMI</p>
+                <p class="pull-quote-role">Project Manager at Thales · Officer in Charge, Fleet Diving Squadron HQ</p>
+              </div>
             </blockquote>
             <p style="margin-top:12px">This project was the proof: greenfield capability delivery, from governance to operational validation, with zero failures.</p>
           </div>
