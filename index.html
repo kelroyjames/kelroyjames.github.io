@@ -98,18 +98,21 @@
   .nav a.lnk:hover{color:var(--brass)}
   .nav a.lnk.cta{background:var(--brass);color:var(--surface);padding:9px 18px}
   .nav a.lnk.cta:hover{background:var(--navy);color:var(--surface)}
+  .nav-right{display:flex;align-items:center;gap:20px}
+  .nav-getcv{white-space:nowrap}
   .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:10px 12px;margin-right:-12px;font-size:20px;line-height:1;color:var(--ink)}
   @media(max-width:700px){
     .nav-toggle{display:block}
-    .nav ul{
+    .nav-right{gap:10px}
+    .nav-right ul{
       display:none;position:absolute;top:100%;left:0;right:0;
       flex-direction:column;align-items:stretch;gap:0;
       background:var(--surface);border-bottom:1px solid var(--rule);
       padding:6px 26px 18px;
     }
-    .nav ul.open{display:flex}
-    .nav ul li{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
-    .nav ul li:last-child{border-bottom:none;padding-top:16px}
+    .nav-right ul.open{display:flex}
+    .nav-right ul li{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+    .nav-right ul li:last-child{border-bottom:none;padding-top:16px}
     .nav a.lnk.cta{display:inline-block;text-align:center}
   }
 
@@ -117,18 +120,16 @@
   .hero{background:var(--surface);border-bottom:1px solid var(--rule)}
   .hero .wrap{padding:76px 26px 62px;display:grid;grid-template-columns:1fr;gap:40px}
   @media(min-width:920px){.hero .wrap{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:64px;padding-top:92px;padding-bottom:78px}}
-  .kicker{
-    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
-    text-transform:uppercase;color:var(--brass);margin:0 0 22px;
-  }
   h1{
     font-family:Spectral,Georgia,serif;font-weight:700;
     font-size:clamp(2.3rem,5.2vw,3.7rem);line-height:1.05;letter-spacing:-.02em;
     margin:0 0 24px;text-wrap:balance;
   }
-  .hero .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.08rem,2vw,1.32rem);line-height:1.5;color:var(--ink-2);margin:0 0 20px;max-width:56ch}
-  .hero .signature-line{font-family:Spectral,Georgia,serif;font-style:italic;font-weight:600;font-size:clamp(1.15rem,2.1vw,1.4rem);line-height:1.4;color:var(--ink);margin:0 0 18px;max-width:56ch}
-  .hero p.sub{margin:0;max-width:58ch;color:var(--ink-2);font-size:15.5px}
+  .hero .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.08rem,2vw,1.32rem);line-height:1.5;color:var(--ink-2);margin:0 0 28px;max-width:56ch}
+  .proof-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;margin:0;max-width:640px}
+  .proof-item{border-top:3px solid var(--brass);padding-top:10px}
+  .proof-value{display:block;font-family:Spectral,Georgia,serif;font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:700;color:var(--brass);line-height:1}
+  .proof-label{display:block;margin:6px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.4}
   .hero-visual{display:flex;flex-direction:column;gap:32px}
   .headshot-placeholder{
     width:200px;height:200px;border-radius:50%;overflow:hidden;
@@ -141,7 +142,6 @@
     font-size:11px;color:var(--muted);white-space:nowrap;
     font-family:"IBM Plex Mono",monospace;letter-spacing:.05em;
   }
-  .facts{align-self:start;border-top:2px solid var(--brass);padding-top:20px;display:flex;flex-direction:column;gap:16px;width:100%}
   .fact{display:flex;flex-direction:column;gap:2px}
   .fact dt{
     font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;
@@ -173,12 +173,10 @@
   @media(min-width:1000px){.quickread-grid{grid-template-columns:repeat(3,1fr)}}
   .quickread-block h3{font-family:Spectral,Georgia,serif;font-size:1rem;font-weight:600;margin:0 0 8px;color:var(--ink)}
   .quickread-block p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
-  .strip{background:var(--surface-2);border-bottom:1px solid var(--rule);padding:0}
-  .strip .wrap{padding-top:26px;padding-bottom:26px;display:grid;grid-template-columns:1fr;gap:16px}
-  @media(min-width:900px){.strip .wrap{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}}
-  .strip-item{border-top:3px solid var(--brass);padding-top:12px}
-  .strip-item b{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);font-weight:500;margin-bottom:6px}
-  .strip-item span{font-size:14.5px;line-height:1.5;color:var(--ink)}
+  .glance-strip-wrap{margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid var(--rule)}
+  .glance-strip-label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 14px;font-weight:600}
+  .glance-strip{display:grid;grid-template-columns:1fr;gap:20px 32px;margin:0}
+  @media(min-width:760px){.glance-strip{grid-template-columns:repeat(3,1fr)}}
   /* ============ generic section ============ */
   section{padding:66px 0}
   .sec-head{display:flex;align-items:baseline;gap:18px;margin:0 0 30px;padding-bottom:13px;border-bottom:1px solid var(--rule)}
@@ -259,45 +257,6 @@
   .article-meta{display:flex;align-items:center;gap:16px;margin-bottom:20px}
   .article-status{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--surface);background:var(--brass);padding:3px 10px}
 
-  /* ============ impact metrics ============ */
-  .impact{background:var(--brass-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--brass);padding:48px 0}
-  .impact .wrap{max-width:1100px}
-  .impact-head{text-align:center;margin-bottom:38px}
-  .impact-head h2{
-    font-family:Spectral,Georgia,serif;font-size:clamp(1.6rem,3vw,2.2rem);
-    font-weight:700;margin:0 0 10px;color:var(--ink);
-  }
-  .impact-head p{font-size:15px;color:var(--ink-2);margin:0}
-  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-bottom:32px}
-  .metric{
-    background:var(--surface);border:1px solid var(--rule);border-radius:6px;
-    padding:24px 20px;text-align:center;box-shadow:var(--shadow);
-    transition:transform .2s ease, box-shadow .2s ease;
-    display:block;text-decoration:none;color:inherit;
-  }
-  .metric:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(19,28,40,.12);border-color:var(--brass)}
-  .metric-link-note{
-    display:block;margin-top:8px;font-family:"IBM Plex Mono",monospace;font-size:10px;
-    letter-spacing:.08em;text-transform:uppercase;color:var(--brass);
-  }
-  .metric-value{
-    font-family:Spectral,Georgia,serif;font-size:clamp(2rem,4vw,3rem);
-    font-weight:700;color:var(--brass);margin:0 0 4px;line-height:1;
-  }
-  .metric-label{
-    font-family:"Public Sans",sans-serif;font-size:13px;
-    color:var(--ink-2);font-weight:500;text-transform:uppercase;letter-spacing:.05em;
-  }
-  .metric-sub{
-    font-family:"Public Sans",sans-serif;font-size:13px;
-    color:var(--muted);font-weight:400;text-transform:none;letter-spacing:normal;
-    margin-top:8px;line-height:1.45;
-  }
-  .metric-tag{
-    display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;
-  }
-
   /* ============ work zone ============ */
   #work{background:var(--navy-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--navy)}
 
@@ -349,20 +308,34 @@
   .contact .wrap{padding:60px 26px}
   .contact h2{font-family:Spectral,Georgia,serif;font-size:1.72rem;margin:0 0 14px;font-weight:700}
   .contact p{max-width:58ch;color:var(--ink-2);margin:0 0 24px}
-  .contact-paths{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:28px}
-  @media(min-width:700px){.contact-paths{grid-template-columns:repeat(2,1fr)}}
-  .contact-path{
-    display:block;padding:14px 18px;background:var(--surface);border:1px solid var(--rule);
-    color:var(--ink);text-decoration:none;font-size:14px;
+  .contact-form{display:flex;flex-direction:column;gap:18px;max-width:520px;margin-bottom:8px}
+  .form-row{display:flex;flex-direction:column;gap:6px}
+  .form-row label{font-size:13px;font-weight:600;color:var(--ink)}
+  .form-row input,.form-row select,.form-row textarea{
+    font:inherit;font-size:15px;color:var(--ink);background:var(--surface);
+    border:1px solid var(--rule);padding:10px 12px;width:100%;
   }
-  .contact-path b{color:var(--ink);font-weight:600}
-  @media(prefers-reduced-motion:no-preference){.contact-path{transition:border-color .16s ease}}
-  .contact-path:hover{border-color:var(--brass)}
+  .form-row input:focus-visible,.form-row select:focus-visible,.form-row textarea:focus-visible{
+    outline:2px solid var(--brass);outline-offset:1px;border-color:var(--brass);
+  }
+  .form-row textarea{resize:vertical}
+  .contact-secondary{margin-top:22px;padding-top:18px;border-top:1px solid var(--rule)}
+  .contact-secondary p{font-size:13.5px;color:var(--muted);margin:0 0 10px;max-width:none}
+  .newsletter-slot{margin-top:32px;padding-top:24px;border-top:1px solid var(--rule)}
+  .newsletter-slot h3{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin:0 0 8px;color:var(--ink)}
+  .newsletter-slot p{font-size:14px;color:var(--ink-2);margin:0 0 14px;max-width:60ch}
+  .newsletter-form{display:flex;flex-wrap:wrap;gap:10px}
+  .newsletter-form input{
+    font:inherit;font-size:15px;color:var(--ink);background:var(--surface);
+    border:1px solid var(--rule);padding:10px 12px;flex:1;min-width:200px;
+  }
+  .newsletter-form input:focus-visible{outline:2px solid var(--brass);outline-offset:1px;border-color:var(--brass)}
   .btns{display:flex;flex-wrap:wrap;gap:12px}
   .btn{
     display:inline-block;padding:11px 22px;text-decoration:none;
     font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
     border:1px solid var(--ink);color:var(--ink);background:transparent;
+    cursor:pointer;
   }
   .btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
   @media(prefers-reduced-motion:no-preference){.btn{transition:background .16s ease,color .16s ease}}
@@ -385,14 +358,17 @@ main:focus{outline:none}
 <nav class="nav" aria-label="Main">
   <div class="wrap">
     <a class="mark" href="#top">Kelroy James</a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.nextElementSibling;var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
-    <ul>
-      <li><a class="lnk" href="#work">Work</a></li>
-      <li><a class="lnk" href="/writing">Writing</a></li>
-      <li><a class="lnk" href="/background">Background</a></li>
-      <li><a class="lnk" href="/for-recruiters">For Recruiters</a></li>
-      <li><a class="lnk cta" href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul>
+        <li><a class="lnk" href="/case-studies">Case Studies</a></li>
+        <li><a class="lnk" href="/writing">Writing</a></li>
+        <li><a class="lnk" href="/background">Background</a></li>
+        <li><a class="lnk" href="/skills-expertise">Skills</a></li>
+        <li><a class="lnk" href="/for-recruiters">For Recruiters</a></li>
+      </ul>
+      <a class="lnk cta nav-getcv" href="#contact">Get CV</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.parentElement.querySelector('ul');var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
+    </div>
   </div>
 </nav>
 <main id="main" tabindex="-1">
@@ -400,98 +376,25 @@ main:focus{outline:none}
 <header class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="kicker">Supply Chain Assurance · Operational Controls · Inventory &amp; Financial Governance</p>
-      <h1>Supply Chain Assurance and Operational Controls Professional</h1>
-      <p class="signature-line">When records don't match reality, I build the systems that close the gap.</p>
-      <p class="lede">Defence logistics specialist with eighteen years' experience designing controls, investigating discrepancies and improving assurance across high-consequence environments.</p>
-      <p class="sub">Twelve years in a critical national infrastructure (CNI) utility, followed by eighteen years across maritime, aviation and Defence logistics, and now with the coursework complete for an MIT MicroMasters in Supply Chain Management (final examination November 2026), I am moving into civilian supply chain assurance, operational controls and GRC roles.</p>
+      <h1>When records don't match reality, I build the systems that close the gap.</h1>
+      <p class="lede">18 years in Defence logistics after 12 in a critical national infrastructure utility; moving into civilian supply chain assurance and operational controls roles from April 2028.</p>
+      <dl class="proof-bar">
+        <div class="proof-item"><dt class="proof-value">£2.4M</dt><dd class="proof-label">Misallocated expenditure identified</dd></div>
+        <div class="proof-item"><dt class="proof-value">80%</dt><dd class="proof-label">Reduction in financial liability</dd></div>
+        <div class="proof-item"><dt class="proof-value">£10–25M</dt><dd class="proof-label">Inventory accountable as Tier 1 signatory</dd></div>
+      </dl>
       <div class="btns" style="margin-top:22px">
-        <a class="btn primary" href="/for-recruiters">View the One-Page Profile →</a>
-        <a class="btn" href="#work">Explore the Case Studies →</a>
+        <a class="btn primary" href="#contact">Request my CV</a>
+        <a class="btn" href="#work">See case studies</a>
       </div>
     </div>
     <div class="hero-visual">
       <div class="headshot-placeholder">
         <img width="600" height="600" src="/images/kelroy-james-headshot.jpg" alt="Kelroy James" style="width:100%;height:100%;object-fit:cover;">
       </div>
-      <dl class="facts">
-        <div class="fact"><dt>Current</dt><dd><ul class="fact-points">
-          <li><b>Role:</b> Petty Officer (Supply Chain Manager), Royal Navy, Type 45 Destroyer, since May 2024</li>
-          <li><b>Leadership:</b> Section head level; responsible for daily operational output, normally managing 5 to 10 people</li>
-          <li><b>Accountability:</b> Tier 1 signatory (senior approver of record) for stock and inventory valued at £10M to £25M, depending on the items held</li>
-        </ul></dd></div>
-        <div class="fact"><dt>Studying</dt><dd>MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA. In progress, due March 2027.</dd></div>
-        <div class="fact"><dt>Skills</dt><dd><a href="/skills-expertise">Skills and certifications →</a></dd></div>
-      </dl>
     </div>
   </div>
 </header>
-
-<section class="strip" aria-label="Recruiter summary">
-  <div class="wrap">
-    <div class="strip-item"><b>Targeting</b><span>Supply Chain Assurance Manager or Senior Consultant · Operational Controls Manager · Supplier Assurance Manager</span></div>
-    <div class="strip-item"><b>Evidence</b><span>£2.4M misallocated expenditure identified · 80% reduction in financial liability · zero stores lost in a first-of-its-kind pilot</span></div>
-    <div class="strip-item"><b>Availability</b><span>Exploratory conversations welcome now · full-time civilian roles from April 2028</span></div>
-  </div>
-</section>
-
-<section class="impact">
-  <div class="wrap">
-    <div class="impact-head">
-      <h2>Proven Business Impact</h2>
-      <p>18 years delivering measurable results in high-stakes environments</p>
-    </div>
-    <div class="metrics">
-      <a class="metric" href="/case-study-financial-control">
-        <span class="metric-tag">Financial Control</span>
-        <div class="metric-value">£2.4M</div>
-        <div class="metric-label">Misallocated Expenditure Identified Through Spending-Pattern Analysis</div>
-        <p class="metric-sub">Spending-pattern analysis exposed the misallocation and supported the corrective action that followed.</p>
-        <span class="metric-link-note">Read the case study →</span>
-      </a>
-      <a class="metric" href="/case-study-garage-lite-trial">
-        <span class="metric-tag">Operational Innovation</span>
-        <div class="metric-value">Zero</div>
-        <div class="metric-label">Stores Lost Across £145,674 Delivered and Returned in a First-of-its-Kind Support-Model Pilot</div>
-        <p class="metric-sub">Stores were pre-mustered and labelled before the trial started.</p>
-        <span class="metric-link-note">Read the case study →</span>
-      </a>
-      <a class="metric" href="/case-study-type45-turnaround">
-        <span class="metric-tag">Asset Assurance</span>
-        <div class="metric-value">80%</div>
-        <div class="metric-label">Reduction in Financial Liability, on the Same Account Restored to Full Compliance</div>
-        <p class="metric-sub">Asset verification and documentation remediation restored a failing account to full compliance.</p>
-        <span class="metric-link-note">Read the case study →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<div class="recruiter-panel" id="recruiter-quick-read">
-  <div class="wrap">
-    <div class="recruiter-panel-head">
-      <h2>Target Roles &amp; Availability</h2>
-    </div>
-    <div class="quickread-grid">
-      <div class="quickread-block">
-        <h3>Where I add value</h3>
-        <p>I help organisations restore confidence in supply-chain information and operational controls where inaccurate records, weak accountability or poor visibility create financial, compliance or resilience risk.</p>
-      </div>
-      <div class="quickread-block">
-        <h3>Best-fit roles</h3>
-        <p><strong>Primary focus:</strong> Supply chain assurance and operational controls.</p>
-        <p style="margin-top:8px"><strong>Target roles:</strong> Assurance Manager, Operational Controls Manager, Supplier Assurance Manager, most realistically through structured veteran or military-transition hiring routes. Consultant and Senior Consultant roles in the same domain are an equally strong fit in an open-market process.</p>
-        <p style="margin-top:8px"><strong>Adjacent strengths:</strong> Supplier assurance, inventory governance, third-party risk, internal audit, GRC and defence &amp; aerospace assurance.</p>
-      </div>
-      <div class="quickread-block">
-        <h3>Location</h3>
-        <p>Greater Portsmouth area, open to relocation, working office-based, hybrid or field-based.</p>
-      </div>
-    </div>
-    <p class="intro-p" style="margin-top:24px;margin-bottom:0"><a href="/for-recruiters">One-page recruiter profile →</a></p>
-  </div>
-</div>
-
 
 <section id="work">
   <div class="wrap">
@@ -501,7 +404,7 @@ main:focus{outline:none}
     <p class="intro-p" style="margin-bottom:28px">Nine engagements, one recurring question: does the record match the physical reality, and what breaks first when it doesn't? These three are the most directly relevant; the diagnosis never changed across any of them.</p>
     <div class="work work-3">
 
-      <a class="card" href="/case-study-type45-turnaround" style="border-left:4px solid var(--brass)">
+      <a class="card" href="/case-study-failing-account-turnaround" style="border-left:4px solid var(--brass)">
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Process Improvement</span>
@@ -525,7 +428,7 @@ main:focus{outline:none}
         </div>
       </a>
 
-      <a class="card" href="/case-study-palantir-foundry" style="border-left:4px solid var(--brass)">
+      <a class="card" href="/case-study-fleet-inventory-visibility" style="border-left:4px solid var(--brass)">
         <div class="top-band"></div>
         <div class="inner">
           <span class="type">Case Study · Digital Transformation</span>
@@ -541,6 +444,60 @@ main:focus{outline:none}
     <p class="intro-p" style="margin-top:20px;margin-bottom:0"><a href="/case-studies">Explore All Nine Case Studies →</a> · <a href="/frameworks">See all ten frameworks →</a></p>
   </div>
 </section>
+
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="sec-head"><h2>What Others Say</h2><span class="note">Professional recommendation</span></div>
+    <p class="intro-p">Rob Jones was Officer in Charge at Fleet Diving Squadron HQ, where he worked directly with me on defence procurement and engineering support delivery. He has since moved into project management at Thales.</p>
+    <!-- More .testimonial-card blocks can be added below as further recommendations come in -->
+    <div class="testimonial-card">
+      <p class="testimonial-quote">Of all the logistics specialists I worked with over 12 years, if I could select one to support my engineers on the ground, it would be Kelroy. His application of the defence procurement model and capability to network with all stakeholders to achieve the required outcome is second to none.</p>
+      <div class="testimonial-footer">
+        <p class="testimonial-author">Rob Jones CEng MIET FCMI</p>
+        <p class="testimonial-role">Project Manager at Thales</p>
+        <p class="testimonial-context">Officer in Charge · Fleet Diving Squadron HQ</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="recruiter-panel" id="recruiter-quick-read">
+  <div class="wrap">
+    <div class="recruiter-panel-head">
+      <h2>Target Roles &amp; Availability</h2>
+    </div>
+    <div class="glance-strip-wrap">
+      <p class="glance-strip-label">At a glance</p>
+      <dl class="glance-strip">
+        <div class="fact"><dt>Current</dt><dd><ul class="fact-points">
+          <li><b>Role:</b> <!-- TODO(Kelroy): current role, generalised, since Sept 2026 --></li>
+          <li><b>Leadership:</b> Section head level; responsible for daily operational output, normally managing 5 to 10 people</li>
+          <li><b>Accountability:</b> Tier 1 signatory (senior approver of record) for stock and inventory valued at £10M to £25M, depending on the items held</li>
+        </ul></dd></div>
+        <div class="fact"><dt>Studying</dt><dd>MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA. In progress, due March 2027.</dd></div>
+        <div class="fact"><dt>Skills</dt><dd><a href="/skills-expertise">Skills and certifications →</a></dd></div>
+      </dl>
+    </div>
+    <div class="quickread-grid">
+      <div class="quickread-block">
+        <h3>Where I add value</h3>
+        <p>I help organisations restore confidence in supply-chain information and operational controls where inaccurate records, weak accountability or poor visibility create financial, compliance or resilience risk.</p>
+      </div>
+      <div class="quickread-block">
+        <h3>Best-fit roles</h3>
+        <p><strong>Primary focus:</strong> Supply chain assurance and operational controls.</p>
+        <p style="margin-top:8px"><strong>Target roles:</strong> Assurance Manager, Operational Controls Manager, Supplier Assurance Manager, most realistically through structured veteran or military-transition hiring routes. Consultant and Senior Consultant roles in the same domain are an equally strong fit in an open-market process.</p>
+        <p style="margin-top:8px"><strong>Adjacent strengths:</strong> Supplier assurance, inventory governance, third-party risk, internal audit, GRC and defence &amp; aerospace assurance.</p>
+      </div>
+      <div class="quickread-block">
+        <h3>Location</h3>
+        <p>Greater Portsmouth area, open to relocation, working office-based, hybrid or field-based.</p>
+      </div>
+    </div>
+    <p class="intro-p" style="margin-top:24px;margin-bottom:0"><a href="/for-recruiters">One-page recruiter profile →</a></p>
+  </div>
+</div>
 
 <section id="writing">
   <div class="wrap">
@@ -567,23 +524,16 @@ main:focus{outline:none}
       </article>
     </div>
     <p class="wb-all"><a href="/writing">All writing →</a></p>
-  </div>
-</section>
-
-<section class="testimonials" id="testimonials">
-  <div class="wrap">
-    <div class="sec-head"><h2>What Others Say</h2><span class="note">Professional recommendation</span></div>
-    <p class="intro-p">Rob Jones was Officer in Charge at Fleet Diving Squadron HQ, where he worked directly with me on defence procurement and engineering support delivery. He has since moved into project management at Thales.</p>
-    
-    <div class="testimonial-card">
-      <p class="testimonial-quote">Of all the logistics specialists I worked with over 12 years, if I could select one to support my engineers on the ground, it would be Kelroy. His application of the defence procurement model and capability to network with all stakeholders to achieve the required outcome is second to none.</p>
-      <div class="testimonial-footer">
-        <p class="testimonial-author">Rob Jones CEng MIET FCMI</p>
-        <p class="testimonial-role">Project Manager at Thales</p>
-        <p class="testimonial-context">Officer in Charge · Fleet Diving Squadron HQ</p>
-      </div>
+    <!-- TODO(Kelroy): enable once confirmed
+    <div class="newsletter-slot">
+      <h3>Get new writing by email</h3>
+      <p>Occasional notes on supply chain assurance and operational controls. No spam, unsubscribe any time.</p>
+      <form class="newsletter-form" action="https://formspree.io/f/TODO_FORM_ID" method="POST">
+        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+        <button type="submit" class="btn primary">Subscribe</button>
+      </form>
     </div>
-
+    -->
   </div>
 </section>
 
@@ -591,21 +541,46 @@ main:focus{outline:none}
   <div class="wrap">
     <h2>Start the conversation now.</h2>
     <p>Available now for exploratory conversations, future-role mapping, capability assessment and transition planning.</p>
-    <div class="btns" style="margin:20px 0 8px">
-      <a class="btn primary" href="mailto:kelroydbjames@gmail.com?subject=Supply%20chain%20assurance%2C%20third-party%20risk%20or%20GRC%20role">Discuss a Future Role</a>
-      <a class="btn" href="/for-recruiters">View the One-Page Profile</a>
-    </div>
-    <p style="font-size:12.5px;color:var(--muted);margin-bottom:18px"><a href="mailto:kelroydbjames@gmail.com?subject=Request%20for%20full%20CV">Request the Full CV</a>: email your name, organisation and the role you're exploring, and I'll send it directly.</p>
-    <p style="font-size:13.5px;color:var(--muted);margin-bottom:12px">Or, if your interest is more specific:</p>
-    <div class="contact-paths">
-      <a class="contact-path" href="mailto:kelroydbjames@gmail.com?subject=Recruiter%20-%20future%20candidate%20profile"><b>I'm a recruiter:</b> let's discuss a future candidate profile</a>
-      <a class="contact-path" href="mailto:kelroydbjames@gmail.com?subject=Sector%20insight"><b>I work in the sector:</b> I'd like to share market insight</a>
-      <a class="contact-path" href="mailto:kelroydbjames@gmail.com?subject=Hiring%20manager%20-%20relevant%20experience"><b>I'm a hiring manager:</b> let's discuss relevant experience</a>
-      <a class="contact-path" href="mailto:kelroydbjames@gmail.com?subject=Service%20leaver%20-%20skills%20translation"><b>I'm a service leaver:</b> let's talk skills translation</a>
-    </div>
-    <div class="btns" style="margin-top:26px">
-      <a class="btn" href="https://www.linkedin.com/in/kelroy-james">LinkedIn</a>
-      <a class="btn" href="mailto:kelroydbjames@gmail.com">Email</a>
+    <form class="contact-form" action="https://formspree.io/f/TODO_FORM_ID" method="POST">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_next" value="https://kelroyjames.com/thank-you">
+      <div class="form-row">
+        <label for="cf-name">Name</label>
+        <input type="text" id="cf-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="form-row">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" autocomplete="email" required>
+      </div>
+      <div class="form-row">
+        <label for="cf-org">Organisation</label>
+        <input type="text" id="cf-org" name="organisation" autocomplete="organization">
+      </div>
+      <div class="form-row">
+        <label for="cf-role">I am a…</label>
+        <select id="cf-role" name="i_am_a">
+          <option value="">Select one</option>
+          <option value="Recruiter">Recruiter</option>
+          <option value="Hiring manager">Hiring manager</option>
+          <option value="Working in the sector">Working in the sector</option>
+          <option value="Service leaver">Service leaver</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="5" required></textarea>
+      </div>
+      <div class="btns" style="margin-top:6px">
+        <button type="submit" class="btn primary">Request CV / Start a conversation</button>
+      </div>
+    </form>
+    <div class="contact-secondary">
+      <p>Prefer email or LinkedIn instead?</p>
+      <div class="btns">
+        <a class="btn" href="mailto:kelroydbjames@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/kelroy-james">LinkedIn</a>
+      </div>
     </div>
   </div>
 </div>
@@ -618,5 +593,8 @@ main:focus{outline:none}
   </div>
 </footer>
 
+<!-- TODO(Kelroy): enable once you add the Cloudflare Web Analytics token
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "TODO_CF_TOKEN"}'></script>
+-->
 </body>
 </html>
