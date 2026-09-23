@@ -291,7 +291,7 @@ main:focus{outline:none}
   "image": "https://kelroyjames.com/images/articles/three-lines-ai/gsdc-slide-16.jpg",
   "author": {"@type": "Person", "name": "Kelroy James", "url": "https://kelroyjames.com/"},
   "datePublished": "2026-09",
-  "dateModified": "2026-09-19",
+  "dateModified": "2026-09-23",
   "publisher": {"@type": "Person", "name": "Kelroy James"}
 }
 </script>
@@ -347,7 +347,7 @@ main:focus{outline:none}
 
 <p>I first presented on this territory to <a href="/three-lines-of-defence-warships-to-ai">the Global Skill Development Council</a> on 19 February 2026, mapping naval logistics assurance practice against ISO/IEC 42001, the international standard for AI management systems. They have invited me back for a second session, though we have not settled on a date yet. Reading Deloitte's paper made the comparison hard to avoid. Two fields with almost nothing in common have arrived at the same design problem and produced recognisably similar answers to parts of it, and neither has solved what the other is starting.</p>
 
-<p>That convergence is the interesting thing. It is also, as a later section of this piece argues, running out of road in both fields at the same time, and for the same reason.</p>
+<p>Both fields are approaching the limit of that convergence from the same direction, and for the same reason: assurance built around a person standing at the point of work does not survive once the person is removed.</p>
 
 <h2 class="sec">Judgement at the point of work</h2>
 
@@ -357,7 +357,7 @@ main:focus{outline:none}
 
 <p>That is the mechanism behind Deloitte's own observation that human focus in a mature AI-enabled enterprise shifts towards strategic judgement and professional challenge. The habit that makes such judgement trustworthy rather than reckless is to place the check as close to the risk as possible, and to let demonstrated competence, rather than paperwork volume, stand as the evidence.</p>
 
-<p>Worth marking now, because it matters later: the record is complete because a competent person looked. The brevity is earned by the presence.</p>
+<p>This detail matters later: the record is complete because a competent person looked, and the brevity is earned by that presence.</p>
 
 <h2 class="sec">Inspection with a graded outcome</h2>
 
@@ -365,11 +365,11 @@ main:focus{outline:none}
 
 <p>A department that fails outright receives an immediate rectification requirement and a mandatory re-inspection, and nothing proceeds until it is fixed. Translated into AI governance, the same idea would give a fairness or bias audit an outcome that can actually halt deployment, alongside the more familiar recommendation-based review most functions already run.</p>
 
-<p>The limit of that mechanism is worth stating alongside it. Graded inspection is built around an inspectable unit: a department, a site, an account, something with a boundary and somebody answerable for it. Activity distributed below that level is not inspected at all, and the absence of findings reads as the absence of problems. AI governance will meet this immediately, since agentic activity distributed across systems is precisely the thing that sits below the level of any unit an inspection regime currently recognises. The naval version has begun to meet it too, wherever operations are conducted by small detached elements that hold no account of their own.</p>
+<p>That mechanism has a clear limit. Graded inspection is built around an inspectable unit: a department, a site, an account, something with a boundary and somebody answerable for it. Activity distributed below that level is not inspected at all, and the absence of findings reads as the absence of problems. AI governance will meet this immediately, since agentic activity distributed across systems is precisely the thing that sits below the level of any unit an inspection regime currently recognises. The naval version has begun to meet it too, wherever operations are conducted by small detached elements that hold no account of their own.</p>
 
 <h2 class="sec">The handover question</h2>
 
-<p>Deloitte's paper and ISO/IEC 42001 both focus on how ownership of a system is assigned and maintained. Naval logistics assurance adds a mechanism for the moment ownership actually changes hands, which is a question worth setting alongside them.</p>
+<p>Deloitte's paper and ISO/IEC 42001 both focus on how ownership of a system is assigned and maintained. Naval logistics assurance adds a mechanism for the moment ownership actually changes hands, extending what Deloitte's paper and ISO/IEC 42001 already require.</p>
 
 <p>ISO/IEC 42001's provisions on AI roles and responsibilities require organisations to name an accountable owner for every AI system and to have a backup and escalation route agreed in advance. That is a real and useful requirement. Whether to run a fresh audit of the system's risk position at the point accountability actually transfers is left to the organisation to decide.</p>
 
@@ -383,9 +383,9 @@ main:focus{outline:none}
 
 <p>Assurance at the point of work requires a point of work with a person standing at it. The junior rating learns to own the risk because they are physically present with the materiel. The handover audit works because accountability passes from one named human custodian to another, each of whom can be asked what they did. The short entry recording that nothing significant was found is a complete record because a competent person looked and exercised judgement, and could say so if challenged.</p>
 
-<p>Remove the person and each mechanism loses the thing that made it work. That is not a hypothetical for either field.</p>
+<p>Remove the person, and each mechanism loses the thing that made it work, in naval logistics assurance as much as in AI governance.</p>
 
-<p>In AI governance it is exactly what Coppola and Kleppe describe: an agent inherits an authority granted to a supervised human, acts under it, and leaves a record identifying the credential but not the actor, the delegation or the reasoning. The audit trail survives; the accountability inside it does not.</p>
+<p>In AI governance it is exactly what Coppola and Kleppe describe: an agent inherits an authority granted to a supervised human, acts under it, and leaves a record identifying the credential but not the actor, the delegation or the reasoning.</p>
 
 <p>The custodial version is structurally identical, and it is arriving in physical logistics now. Where materiel is held by an uncrewed or automated system, that system holds an accountability delegated to a person who is not present and may be a continent away. If the asset moves itself under pre-authorised instructions and is lost while doing so, the resulting investigation has a named account and no custodian: at the material time, nobody was holding it. If it is destroyed, the only evidence distinguishing destruction from diversion is machine-generated telemetry, which is almost always assured for operational decision-making and not to any evidential standard. The record identifies the account but not the agent, the delegation, or the rationale.</p>
 
@@ -397,24 +397,24 @@ main:focus{outline:none}
 
 <p>The naval version of that rule is a straightforward sort: checks are split into what is legally non-negotiable and what is genuinely discretionary, and the discretionary tier is reviewed only as often as the actual risk warrants. One recent internal review used exactly this logic to cut the volume of routine compliance questions by roughly half, without touching anything load-bearing. The same sort works for AI governance. Not every parameter change needs a paper trail behind it. The effort belongs on the handful of checks that are genuinely load-bearing: safety, legal exposure, bias thresholds. The rest can run on trust that has already been earned.</p>
 
-<p>It is worth naming what this does and does not claim about speed. Corporate compliance tooling has already moved past monthly cycles for anything genuinely high-risk. Continuous controls monitoring platforms now check critical items hourly or daily, and the UK Corporate Governance Code's newest provision expects boards to back control effectiveness with real-time evidence rather than periodic snapshots. The principle naval logistics assurance shares with that shift is risk-based frequency, not the exact interval. Coppola and Kleppe make the same point about frequency more bluntly, from inside a bank: validation built for periodic, human-paced review does not hold once a system is composing decisions continuously across a portfolio. The discipline described above is about deciding which checks deserve that level of attention at all, and it stands alongside the fastest monitoring technology available, not in competition with it.</p>
+<p>The claim about speed made here is a narrow one. Corporate compliance tooling has already moved past monthly cycles for anything genuinely high-risk. Continuous controls monitoring platforms now check critical items hourly or daily, and the UK Corporate Governance Code's newest provision expects boards to back control effectiveness with real-time evidence rather than periodic snapshots. The principle naval logistics assurance shares with that shift is risk-based frequency, not the exact interval. Coppola and Kleppe make the same point about frequency more bluntly, from inside a bank: validation built for periodic, human-paced review does not hold once a system is composing decisions continuously across a portfolio. The discipline described above is about deciding which checks deserve that level of attention at all, and it stands alongside the fastest monitoring technology available, not in competition with it.</p>
+
+<h2 class="sec">Questions for an AI governance programme</h2>
+
+<ul>
+<li>Who is the named, accountable owner of each AI system, and does a change of owner trigger a fresh look at its risk position?</li>
+<li>Which controls are load-bearing (safety, legal exposure, bias thresholds), and which persist out of habit?</li>
+<li>When an agent acts under inherited authority, does the record identify the agent, the delegation and the rationale, or only the credential?</li>
+<li>Which parts of AI activity sit below the unit that any inspection or audit currently recognises?</li>
+</ul>
 
 <h2 class="sec">Going back to the Global Skill Development Council</h2>
 
 <p>Read together, Deloitte's paper and BCG's describe an assurance model being rebuilt around work that no longer has a person standing at every point of it. Naval logistics assurance is a mature version of the model they are rebuilding, developed under conditions where a failed control has immediate consequences and there is no option to correct it in the next audit cycle. It is also, for the same reasons everyone else is discovering, beginning to run into the limits of its own central assumption.</p>
 
-<p>That makes it a useful comparison rather than a finished answer. The mechanisms are worth borrowing: judgement placed close to the risk, inspection with an outcome that can stop things, an audit at the moment accountability moves, and an honest sort between the checks that are load-bearing and the ones that are habit. The open question is the same in both fields, and neither has answered it: what custody, ownership and accountability mean when the thing doing the work cannot be asked what it did.</p>
+<p>That makes it a useful comparison rather than a finished answer. The mechanisms transfer directly: judgement placed close to the risk, inspection with an outcome that can stop things, an audit at the moment accountability moves, and an honest sort between the checks that are load-bearing and the ones that are habit. The open question is the same in both fields, and neither has answered it: what custody, ownership and accountability mean when the thing doing the work cannot be asked what it did.</p>
 
 <p>When the second session is confirmed, that is the question I intend to put, with two independent papers behind it and eighteen years of holding the accounts that are now being asked to stretch around systems nobody is standing next to.</p>
-
-<h2 class="sec">Questions for your own programme</h2>
-
-<ul>
-<li>Who is the named, accountable owner of each AI system, and does a change of owner trigger a fresh look at its risk position?</li>
-<li>Which of our controls are load-bearing (safety, legal exposure, bias thresholds), and which persist out of habit?</li>
-<li>When an agent acts under inherited authority, does the record identify the agent, the delegation and the rationale, or only the credential?</li>
-<li>Which parts of our AI activity sit below the unit that any inspection or audit currently recognises?</li>
-</ul>
 
 <p><em>The views expressed here are my own and are based on general observations about logistics assurance and AI governance. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Naval practice is described in general terms; nothing internal to the Royal Navy or the Ministry of Defence is reproduced, and no specific programme, platform or operation is described.</em></p>
 
