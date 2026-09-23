@@ -321,6 +321,7 @@
   .form-row textarea{resize:vertical}
   .contact-secondary{margin-top:22px;padding-top:18px;border-top:1px solid var(--rule)}
   .contact-secondary p{font-size:13.5px;color:var(--muted);margin:0 0 10px;max-width:none}
+  .form-error{margin-top:14px;padding:10px 14px;font-size:13.5px;color:var(--ink);border-left:3px solid var(--brass);background:var(--surface-2)}
   .newsletter-slot{margin-top:32px;padding-top:24px;border-top:1px solid var(--rule)}
   .newsletter-slot h3{font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;margin:0 0 8px;color:var(--ink)}
   .newsletter-slot p{font-size:14px;color:var(--ink-2);margin:0 0 14px;max-width:60ch}
@@ -541,7 +542,7 @@ main:focus{outline:none}
   <div class="wrap">
     <h2>Start the conversation now.</h2>
     <p>Available now for exploratory conversations, future-role mapping, capability assessment and transition planning.</p>
-    <form class="contact-form" action="https://formspree.io/f/mnpnvled" method="POST">
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mnpnvled" method="POST">
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <input type="hidden" name="_next" value="https://kelroyjames.com/thank-you">
       <div class="form-row">
@@ -571,10 +572,39 @@ main:focus{outline:none}
         <label for="cf-message">Message</label>
         <textarea id="cf-message" name="message" rows="5" required></textarea>
       </div>
+      <p id="contact-form-error" class="form-error" hidden>Something went wrong sending that — please try again, or email me directly at <a href="mailto:kelroydbjames@gmail.com">kelroydbjames@gmail.com</a>.</p>
       <div class="btns" style="margin-top:6px">
         <button type="submit" class="btn primary">Request CV / Start a conversation</button>
       </div>
     </form>
+    <script>
+    (function(){
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        var errorEl = document.getElementById('contact-form-error');
+        var originalLabel = btn ? btn.textContent : '';
+        if (errorEl) errorEl.hidden = true;
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res){
+          if (res.ok) {
+            window.location.href = '/thank-you';
+          } else {
+            throw new Error('Submission failed');
+          }
+        }).catch(function(){
+          if (errorEl) errorEl.hidden = false;
+          if (btn) { btn.disabled = false; btn.textContent = originalLabel; }
+        });
+      });
+    })();
+    </script>
     <div class="contact-secondary">
       <p>Prefer email or LinkedIn instead?</p>
       <div class="btns">
