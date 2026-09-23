@@ -176,7 +176,7 @@
   .glance-strip-wrap{margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid var(--rule)}
   .glance-strip-label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 14px;font-weight:600}
   .glance-strip{display:grid;grid-template-columns:1fr;gap:20px 32px;margin:0}
-  @media(min-width:760px){.glance-strip{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:760px){.glance-strip{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}}
   /* ============ generic section ============ */
   section{padding:66px 0}
   .sec-head{display:flex;align-items:baseline;gap:18px;margin:0 0 30px;padding-bottom:13px;border-bottom:1px solid var(--rule)}
@@ -382,7 +382,7 @@ main:focus{outline:none}
       <dl class="proof-bar">
         <div class="proof-item"><dt class="proof-value">£2.4M</dt><dd class="proof-label">Misallocated expenditure identified</dd></div>
         <div class="proof-item"><dt class="proof-value">80%</dt><dd class="proof-label">Reduction in financial liability</dd></div>
-        <div class="proof-item"><dt class="proof-value">£10–25M</dt><dd class="proof-label">Inventory accountable as Tier 1 signatory</dd></div>
+        <div class="proof-item"><dt class="proof-value">£10–25M</dt><dd class="proof-label">Previously accountable as Tier 1 signatory</dd></div>
       </dl>
       <div class="btns" style="margin-top:22px">
         <a class="btn primary" href="#contact">Request my CV</a>
@@ -473,7 +473,9 @@ main:focus{outline:none}
       <dl class="glance-strip">
         <div class="fact"><dt>Current</dt><dd><ul class="fact-points">
           <li><b>Role:</b> Petty Officer (Supply Chain), Royal Navy, since Sept 2026</li>
-          <li><b>Leadership:</b> Section head level; responsible for daily operational output, normally managing 5 to 10 people</li>
+        </ul></dd></div>
+        <div class="fact"><dt>Previously</dt><dd><ul class="fact-points">
+          <li><b>Leadership:</b> Section head level; responsible for daily operational output, managing 5 to 10 people</li>
           <li><b>Accountability:</b> Tier 1 signatory (senior approver of record) for stock and inventory valued at £10M to £25M, depending on the items held</li>
         </ul></dd></div>
         <div class="fact"><dt>Studying</dt><dd>MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA. In progress, due March 2027.</dd></div>
