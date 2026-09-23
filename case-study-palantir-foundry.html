@@ -95,6 +95,7 @@
   .impact-label{font-size:13px;color:var(--ink-2);margin-top:8px;text-transform:uppercase;letter-spacing:.05em}
 
   .at-a-glance{background:var(--surface);border-bottom:1px solid var(--rule);padding:28px 0}
+  .glance-eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 16px;font-weight:600}
   .glance-grid{display:grid;grid-template-columns:1fr;gap:20px}
   @media(min-width:700px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
   .glance-item h2{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;font-weight:600}
@@ -270,6 +271,18 @@ main:focus{outline:none}
   </div>
 </section>
 
+<section class="at-a-glance">
+  <div class="wrap">
+    <p class="glance-eyebrow">TL;DR</p>
+    <div class="glance-grid">
+      <div class="glance-item"><h2>Situation</h2><p>Upkeep units were tracking STOROBs (cross-platform stock reallocations, where stores are taken from one platform to support another) across various different spreadsheets with no single source of truth, and a predecessor's attempt at a fix was incomplete when I took it over.</p></div>
+      <div class="glance-item"><h2>Action</h2><p>Reviewed the project manager's requirement and reconfigured the spreadsheet to meet it, feeding a single source of truth into Palantir Foundry for the technical team to build a load, view and comparison layer on top of.</p></div>
+      <div class="glance-item"><h2>Result</h2><p>A working tool that immediately identified a complex STOROB worth £8,000 and 50 man-hours, then proved the concept well enough to be rolled out to an adjacent unit and adopted by inventory managers fleet-wide.</p></div>
+      <div class="glance-item"><h2>Civilian relevance</h2><p>Requirements ownership, data redesign and completing a stalled build rather than starting one from scratch.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="impact-banner">
   <div class="wrap">
     <div class="impact-grid">
@@ -285,17 +298,6 @@ main:focus{outline:none}
         <div class="impact-number">Fleet-Wide</div>
         <div class="impact-label">Adopted by Inventory Managers, After Rollout to an Adjacent Unit</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="at-a-glance">
-  <div class="wrap">
-    <div class="glance-grid">
-      <div class="glance-item"><h2>Situation</h2><p>Upkeep units were tracking STOROBs (cross-platform stock reallocations, where stores are taken from one platform to support another) across various different spreadsheets with no single source of truth, and a predecessor's attempt at a fix was incomplete when I took it over.</p></div>
-      <div class="glance-item"><h2>Action</h2><p>Reviewed the project manager's requirement and reconfigured the spreadsheet to meet it, feeding a single source of truth into Palantir Foundry for the technical team to build a load, view and comparison layer on top of.</p></div>
-      <div class="glance-item"><h2>Result</h2><p>A working tool that immediately identified a complex STOROB worth £8,000 and 50 man-hours, then proved the concept well enough to be rolled out to an adjacent unit and adopted by inventory managers fleet-wide.</p></div>
-      <div class="glance-item"><h2>Civilian relevance</h2><p>Requirements ownership, data redesign and completing a stalled build rather than starting one from scratch.</p></div>
     </div>
   </div>
 </section>
