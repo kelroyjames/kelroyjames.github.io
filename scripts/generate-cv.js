@@ -89,7 +89,7 @@ function buildDoc({ outPath, includePhone, preparedFor }) {
   doc.moveDown(0.25);
   doc.font('Helvetica-Bold').fontSize(9.3).fillColor(INK).text('Core Skills: ', { continued: true });
   doc.font('Helvetica').fontSize(9.3).fillColor(INK).text(
-    'Supply Chain Assurance | Global Movements | Operational Controls | First-Line Risk Ownership (1LOD) | Financial Control, Root-Cause Analysis & Remediation | Senior Stakeholder and Command-Level Reporting | Governance, Risk & Compliance (GRC) | Public Sector Assurance & Compliance | Lean Six Sigma Green Belt (Continuous Improvement) | Team Coaching & Development | Concurrent Workstream Management | Three Lines Model | ISO/IEC 27001, 42001, 27701 Lead Auditor | Data-Driven Reporting (SQL, Python, Power BI) | PRINCE2 Project Governance'
+    'Supply Chain Assurance | Global Movements | Operational Controls | First-Line Risk Ownership (1LOD) | Financial Control, Root-Cause Analysis & Remediation | Senior Stakeholder and Command-Level Reporting | Governance, Risk & Compliance (GRC) | Public Sector Assurance & Compliance | Lean Six Sigma Green Belt (Continuous Improvement) | Team Coaching & Development | Concurrent Workstream Management | Three Lines Model | ISO/IEC 27001, 42001, 27701 Lead Auditor | Data-Driven Reporting (SQL, Python) | PRINCE2 Project Governance'
   );
 
   // Professional experience
