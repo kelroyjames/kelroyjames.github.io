@@ -133,12 +133,7 @@ function buildDoc({ outPath, includePhone, preparedFor }) {
     'Provided 24/7 watchkeeping cover for fleet-wide operational-defect logistics, supporting three concurrent, globally distributed operational commitments',
     "Designed and delivered a PRINCE2-governed consignment-tracking capability, removing a manual, error-prone workaround and sustaining operations across four nations; awarded the Chief Naval Logistics Officer's Award for the coaching and mentoring delivered alongside it",
     'Rated the strongest among peer Leading Hands across two reporting periods',
-    // TODO(Kelroy): this achievement is attributed to a Falklands posting as
-    // "LVP Officer", not the NATO multinational headquarters role -- need
-    // the correct posting name, dates and context before restoring the
-    // full bullet. Location claim removed pending that; figures kept as
-    // previously confirmed.
-    "Sole point of contact for a deployed unit's financial and asset compliance, managing a recurring procurement budget and cutting low-value transaction volume by 80%",
+    "As Low Value Procurement Officer during a Falklands posting, sole point of contact for the deployed unit's financial and asset compliance, managing a recurring procurement budget and cutting low-value transaction volume by 80%; separately restructured MOD inventory-accounting practice across a NATO multinational headquarters",
   ]);
 
   jobHeading('GIS Analyst & Infrastructure Planner - Critical National Infrastructure', 'St Vincent Electricity Services', '1996 - 2008');
