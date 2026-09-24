@@ -130,6 +130,12 @@
   .proof-item{border-top:3px solid var(--brass);padding-top:10px}
   .proof-value{display:block;font-family:Spectral,Georgia,serif;font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:700;color:var(--brass);line-height:1}
   .proof-label{display:block;margin:6px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.4}
+  .credentials-strip{
+    display:block;margin:18px 0 0;max-width:640px;
+    font-variant:small-caps;font-size:13px;letter-spacing:.02em;
+    color:var(--muted);text-decoration:none;line-height:1.6;
+  }
+  .credentials-strip:hover{color:var(--brass)}
   .hero-visual{display:flex;flex-direction:column;gap:32px}
   .headshot-placeholder{
     width:200px;height:200px;border-radius:50%;overflow:hidden;
@@ -302,6 +308,8 @@
     font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;
     text-transform:uppercase;color:var(--brass);margin:6px 0 0;
   }
+  .testimonials-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:20px}
+  @media(min-width:760px){.testimonials-grid{grid-template-columns:repeat(2,1fr)}}
 
   /* ============ contact ============ */
   .contact{background:var(--surface-2);border-top:1px solid var(--rule)}
@@ -367,7 +375,7 @@ main:focus{outline:none}
         <li><a class="lnk" href="/skills-expertise">Skills</a></li>
         <li><a class="lnk" href="/for-recruiters">For Recruiters</a></li>
       </ul>
-      <a class="lnk cta nav-getcv" href="#contact">Get CV</a>
+      <a class="lnk cta nav-getcv" href="/downloads/kelroy-james-cv-public.pdf" download rel="noopener">Get CV</a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.parentElement.querySelector('ul');var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
     </div>
   </div>
@@ -384,10 +392,12 @@ main:focus{outline:none}
         <div class="proof-item"><dt class="proof-value">80%</dt><dd class="proof-label">Reduction in financial liability</dd></div>
         <div class="proof-item"><dt class="proof-value">£10–25M</dt><dd class="proof-label">Previously accountable as Tier 1 signatory</dd></div>
       </dl>
+      <a class="credentials-strip" href="/skills-expertise">ISO/IEC 27001:2022, 42001:2023 &amp; 27701:2025 Lead Auditor · MIT MicroMasters, Supply Chain Management &amp; Advanced Network Design (final exam Nov 2026) · MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), in progress</a>
       <div class="btns" style="margin-top:22px">
-        <a class="btn primary" href="#contact">Request my CV</a>
+        <a class="btn primary" href="/downloads/kelroy-james-cv-public.pdf" download rel="noopener">Download CV (PDF)</a>
         <a class="btn" href="#work">See case studies</a>
       </div>
+      <p style="margin:14px 0 0;font-size:13px;color:var(--muted)">Full CV with direct number → <a href="#contact" style="color:var(--brass)">request here</a></p>
     </div>
     <div class="hero-visual">
       <div class="headshot-placeholder">
@@ -434,9 +444,9 @@ main:focus{outline:none}
         <div class="inner">
           <span class="type">Case Study · Digital Transformation</span>
           <h3>Building Cross-Unit Inventory Visibility</h3>
-          <p>I took over a predecessor's incomplete build and reconfigured the spreadsheet feeding it, creating a single source of truth for STOROB (cross-platform stock reallocation) tracking across upkeep units. It was rolled out to an adjacent unit, and inventory managers elsewhere in the fleet have since adopted it.</p>
-          <p class="result"><b>Result:</b> Single source of truth for STOROB tracking; adopted by an adjacent unit and by inventory managers elsewhere in the fleet.</p>
-          <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-top:2px">Civilian relevance: requirements ownership, data redesign, and completing a stalled build rather than starting one from scratch.</p>
+          <p>I took over a predecessor's incomplete build and reconfigured the spreadsheet feeding it, creating a single source of truth for tracking of inter-site stock transfers across maintenance sites. It was rolled out to an adjacent site, and inventory managers elsewhere in the fleet have since adopted it.</p>
+          <p class="result"><b>Result:</b> Single source of truth for inter-site stock transfer tracking; adopted by an adjacent site and by inventory managers elsewhere in the fleet.</p>
+          <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-top:2px">Civilian relevance: bringing records held in separate systems into one consistent, comparable view, the same problem risk and third-party-risk functions face.</p>
           <span class="go">Read the case study →</span>
         </div>
       </a>
@@ -450,13 +460,23 @@ main:focus{outline:none}
   <div class="wrap">
     <div class="sec-head"><h2>What Others Say</h2><span class="note">Professional recommendation</span></div>
     <p class="intro-p">Rob Jones was Officer in Charge at Fleet Diving Squadron HQ, where he worked directly with me on defence procurement and engineering support delivery. He has since moved into project management at Thales.</p>
-    <!-- More .testimonial-card blocks can be added below as further recommendations come in -->
-    <div class="testimonial-card">
-      <p class="testimonial-quote">Of all the logistics specialists I worked with over 12 years, if I could select one to support my engineers on the ground, it would be Kelroy. His application of the defence procurement model and capability to network with all stakeholders to achieve the required outcome is second to none.</p>
-      <div class="testimonial-footer">
-        <p class="testimonial-author">Rob Jones CEng MIET FCMI</p>
-        <p class="testimonial-role">Project Manager at Thales</p>
-        <p class="testimonial-context">Officer in Charge · Fleet Diving Squadron HQ</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">Of all the logistics specialists I worked with over 12 years, if I could select one to support my engineers on the ground, it would be Kelroy. His application of the defence procurement model and capability to network with all stakeholders to achieve the required outcome is second to none.</p>
+        <div class="testimonial-footer">
+          <p class="testimonial-author">Rob Jones CEng MIET FCMI</p>
+          <p class="testimonial-role">Project Manager at Thales</p>
+          <p class="testimonial-context">Officer in Charge · Fleet Diving Squadron HQ</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card" hidden>
+        <p class="testimonial-quote">TODO(Kelroy): recent line manager / inspector / civilian stakeholder quote, name, title, relationship.</p>
+        <div class="testimonial-footer">
+          <p class="testimonial-author">TODO(Kelroy): name</p>
+          <p class="testimonial-role">TODO(Kelroy): title</p>
+          <p class="testimonial-context">TODO(Kelroy): relationship</p>
+        </div>
       </div>
     </div>
 
@@ -576,7 +596,7 @@ main:focus{outline:none}
       </div>
       <p id="contact-form-error" class="form-error" hidden>Something went wrong sending that — please try again, or email me directly at <a href="mailto:kelroydbjames@gmail.com">kelroydbjames@gmail.com</a>.</p>
       <div class="btns" style="margin-top:6px">
-        <button type="submit" class="btn primary">Request CV / Start a conversation</button>
+        <button type="submit" class="btn primary">Request full CV / Start a conversation</button>
       </div>
     </form>
     <script>
