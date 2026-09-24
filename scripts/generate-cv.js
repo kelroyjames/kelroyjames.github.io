@@ -133,13 +133,18 @@ function buildDoc({ outPath, includePhone, preparedFor }) {
     'Provided 24/7 watchkeeping cover for fleet-wide operational-defect logistics, supporting three concurrent, globally distributed operational commitments',
     "Designed and delivered a PRINCE2-governed consignment-tracking capability, removing a manual, error-prone workaround and sustaining operations across four nations; awarded the Chief Naval Logistics Officer's Award for the coaching and mentoring delivered alongside it",
     'Rated the strongest among peer Leading Hands across two reporting periods',
-    "Sole point of contact for a deployed unit's financial and asset compliance, managing a recurring procurement budget and cutting low-value transaction volume by 80%; separately restructured MOD inventory-accounting practice across a NATO multinational headquarters",
+    // TODO(Kelroy): this achievement is attributed to a Falklands posting as
+    // "LVP Officer", not the NATO multinational headquarters role -- need
+    // the correct posting name, dates and context before restoring the
+    // full bullet. Location claim removed pending that; figures kept as
+    // previously confirmed.
+    "Sole point of contact for a deployed unit's financial and asset compliance, managing a recurring procurement budget and cutting low-value transaction volume by 80%",
   ]);
 
   jobHeading('GIS Analyst & Infrastructure Planner - Critical National Infrastructure', 'St Vincent Electricity Services', '1996 - 2008');
   bullets([
     'Twelve years in a national utility, a critical national infrastructure environment, advancing from front-line operations to infrastructure planning through self-directed development',
-    'Led GPS-based mapping of national grid infrastructure, underpinning an industry-recognised, award-winning enterprise mapping system',
+    'Led GPS-based mapping of national grid infrastructure, underpinning an Esri Special Achievement in GIS award-winning system',
   ]);
 
   // Education & Qualifications
@@ -148,7 +153,7 @@ function buildDoc({ outPath, includePhone, preparedFor }) {
     'ISO/IEC 27001:2022, 42001:2023 & 27701:2025 Lead Auditor; Fellow of Management Systems Auditing (FellowMSA)',
     'Lean Six Sigma Green Belt (LSSGB), Star Global College of Workforce Development - Feb 2026',
     'MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA - in progress, Apr 2025 - Mar 2027; route to MCIPS',
-    'MicroMasters, Supply Chain Management & Advanced Network Design, MIT Center for Transportation & Logistics - coursework complete',
+    'MicroMasters, Supply Chain Management & Advanced Network Design, MIT Center for Transportation & Logistics - coursework complete (5 core courses + advanced elective); final exam November 2026',
     'MicroMasters, Predictive Analytics using Python, University of Edinburgh: 2021 - 2022',
     'BSc (Hons) Logistics and Operations Management, Aston University - 2:1',
     'Professional Award in Cyber Security & OSINT, Abertay University - Distinction',
