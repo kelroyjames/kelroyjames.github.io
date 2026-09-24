@@ -286,7 +286,7 @@ main:focus{outline:none}
     <p class="glance-eyebrow">TL;DR</p>
     <div class="glance-grid">
       <div class="glance-item"><h2>Situation</h2><p>A review of annual inventory demands on an adjacent account, with no process designed to catch systemic misallocation patterns.</p></div>
-      <div class="glance-item"><h2>Action</h2><p>Traced the pattern back to its root causes. <!-- TODO(Kelroy): confirm this still describes the annual-demand review on the adjacent account --><span hidden>Cross-referenced ERP transaction data against work orders, delivery notes, and historical spend.</span></p></div>
+      <div class="glance-item"><h2>Action</h2><p>Cross-referenced ERP transaction data against work orders, delivery notes, and historical spend to trace the pattern back to its root causes.</p></div>
       <div class="glance-item"><h2>Result</h2><p>£2.4M in misallocated expenditure identified on an adjacent account and corrected, with a proposed Navy-wide policy instruction to prevent recurrence now under review by command.</p></div>
       <div class="glance-item"><h2>Civilian relevance</h2><p>Root-cause analysis, financial control investigation and evidence-based policy recommendations.</p></div>
     </div>
@@ -333,7 +333,7 @@ main:focus{outline:none}
         
         <div class="cs-section" id="challenge">
           <h2>The Challenge</h2>
-          <p>In 2024, while reviewing annual inventory demands on an adjacent account, I identified systematic misallocation of expenditure totalling <strong>£2.4 million</strong>. The funds had been charged to incorrect cost centres, masking the true expenditure profile of multiple platforms and creating phantom budget headroom in some accounts while others appeared overspent.</p>
+          <p>In 2024, after reviewing and implementing controls to make sure my own account was not similarly exposed, I extended that review to an adjacent account's annual inventory demands and identified systematic misallocation of expenditure totalling <strong>£2.4 million</strong>. The funds had been charged to incorrect cost centres, masking the true expenditure profile of multiple platforms and creating phantom budget headroom in some accounts while others appeared overspent.</p>
           <p>This was a process failure, not fraud: it persisted because the existing validation steps did not catch allocation errors before they were committed to the ledger, and because there was no routine reconciliation process designed to detect the pattern retrospectively.</p>
           
           <div class="highlight-box">
@@ -356,30 +356,24 @@ main:focus{outline:none}
         
         <div class="cs-section" id="discovery">
           <h2>Discovery</h2>
-          <!-- TODO(Kelroy): was this a joint investigation with the prime contractor? If so, say so at role level, without naming them -->
+          <p>The investigation was conducted alongside the maritime support group responsible for placing demands on behalf of the prime contractor.</p>
           <p>The misallocations were not immediately obvious. Each individual transaction appeared plausible in isolation. The pattern only became visible when I began reviewing the adjacent account's annual inventory demands against expected usage profiles.</p>
 
           <h3>Initial Indicators</h3>
           <p>Several platforms were reporting expenditure significantly below historical norms, while others, particularly those in upkeep or maintenance cycles, showed expenditure that did not align with the scope of work being conducted. The variance could have been explained by operational tempo, but the magnitude suggested something more systematic.</p>
 
           <h3>Data Interrogation</h3>
-          <p>I reviewed the adjacent account's annual inventory demands, tracing individual transactions back to the underlying requirement to see whether the charge matched the need.</p>
-          <!-- TODO(Kelroy): confirm this still describes the annual-demand review on the adjacent account -->
-          <div hidden>
-            <p>I extracted transactional data from the Defence ERP system and cross-referenced it against:</p>
-            <ul>
-              <li>Work orders and maintenance schedules</li>
-              <li>Goods receipts and delivery notes</li>
-              <li>Historical expenditure patterns for similar platforms in similar cycles</li>
-              <li>Cost centre assignment rules documented in financial policy</li>
-            </ul>
-          </div>
+          <p>I reviewed the adjacent account's annual inventory demands, tracing individual transactions back to the underlying requirement to see whether the charge matched the need. I extracted transactional data from the Defence ERP system and cross-referenced it against:</p>
+          <ul>
+            <li>Work orders and maintenance schedules</li>
+            <li>Goods receipts and delivery notes</li>
+            <li>Historical expenditure patterns for similar platforms in similar cycles</li>
+            <li>Cost centre assignment rules documented in financial policy</li>
+          </ul>
           <p>The analysis revealed that <strong>allocation errors were concentrated at specific points in the procurement workflow</strong>, particularly where manual cost centre assignment was required and where there was ambiguity about which platform should bear the cost.</p>
 
           <h3>Scale of the Issue</h3>
-          <p>Once the pattern was identified, I traced its extent across the adjacent account's demand history. The total misallocated value was £2.4M, affecting multiple cost centres.</p>
-          <!-- TODO(Kelroy): confirm this still describes the annual-demand review on the adjacent account -->
-          <p hidden>Original method detail: a lookback across 18 months of transactions, distorting the financial position of platforms across the fleet.</p>
+          <p>Once the pattern was identified, I traced its extent across a lookback of 18 months of transactions on the adjacent account's demand history. The £2.4M figure is the value specifically cross-referenced and validated against those orders, affecting multiple cost centres; the underlying pattern had been occurring for longer than that lookback window, and a full audit of the account's history would likely surface a higher figure.</p>
         </div>
         
         <div class="cs-section" id="analysis">
