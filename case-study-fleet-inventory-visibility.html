@@ -105,8 +105,8 @@
   .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
 
   .cs-content{background:var(--surface);padding:56px 0}
-  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
-  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .content-grid{display:grid;grid-template-columns:200px minmax(0,1fr);gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:minmax(0,1fr);gap:40px}}
   .cs-toc{position:sticky;top:80px;height:fit-content}
   .cs-toc h2{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
   .cs-toc ul{list-style:none;padding:0;margin:0}
@@ -377,7 +377,7 @@ main:focus{outline:none}
 
         <div class="cs-section" id="briefed">
           <h2>Who I briefed and what they decided</h2>
-          <p>I presented the rebuilt tool and its findings to the regeneration project manager at DE&amp;S, who owned the requirement, and to BAE's STOROB manager. Both backed rolling it out beyond the units it was built for: it went to an adjacent unit first, and inventory managers elsewhere in the fleet have since adopted it themselves.</p>
+          <p>I presented the rebuilt tool and its findings to the regeneration project manager who owned the requirement, and to the prime contractor's stock-transfer lead. Both backed rolling it out beyond the units it was built for: it went to an adjacent unit first, and inventory managers elsewhere in the fleet have since adopted it themselves.</p>
         </div>
 
         <div class="cs-section" id="outcomes">

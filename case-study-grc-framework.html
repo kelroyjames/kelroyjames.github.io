@@ -105,8 +105,8 @@
   .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
 
   .cs-content{background:var(--surface);padding:56px 0}
-  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
-  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .content-grid{display:grid;grid-template-columns:200px minmax(0,1fr);gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:minmax(0,1fr);gap:40px}}
   .cs-toc{position:sticky;top:80px;height:fit-content}
   .cs-toc h2{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
   .cs-toc ul{list-style:none;padding:0;margin:0}
@@ -291,10 +291,6 @@ main:focus{outline:none}
   <div class="wrap">
     <div class="impact-grid">
       <div class="impact-item">
-        <div class="impact-number">£2.4M</div>
-        <div class="impact-label">Misallocated Expenditure Identified</div>
-      </div>
-      <div class="impact-item">
         <div class="impact-number">100%</div>
         <div class="impact-label">Compliance Achievement</div>
       </div>
@@ -390,7 +386,7 @@ main:focus{outline:none}
           <p>Designed systematic protocols for investigating and documenting inventory discrepancies. Moved from ad-hoc "find the lost item" efforts to structured root-cause analysis using 5 Whys and fishbone diagrams.</p>
 
           <p><strong>2. Voucher Assurance Controls</strong></p>
-          <p>Created financial transaction verification processes that caught the £2.4M misallocation. Established segregation of duties, approval hierarchies, and exception reporting thresholds.</p>
+          <p>Created financial transaction verification processes: segregation of duties, approval hierarchies, and exception reporting thresholds designed to catch misallocation before it reaches the ledger.</p>
 
           <p><strong>3. Enterprise Analytics Dashboard</strong></p>
           <p>Co-designed custom dashboard providing real-time visibility into:</p>
@@ -402,9 +398,9 @@ main:focus{outline:none}
           </ul>
 
           <div class="highlight-box">
-            <h3>The £2.4M Discovery</h3>
-            <p>The analytics dashboard surfaced spending patterns that didn't align with operational activity. Systematic voucher analysis revealed £2.4M in misallocated expenditure across multiple account lines. This was systemic control failure, not fraud: transactions were recorded against incorrect budget codes, creating both financial liability and inventory discrepancies.</p>
-            <p>Recovery required coordinating with finance teams, validating actual usage, correcting ledger entries, and establishing preventive controls to stop recurrence.</p>
+            <h3>Related Finding</h3>
+            <p>These same voucher-assurance principles apply directly to the <a href="/case-study-financial-control">£2.4M misallocated-expenditure finding</a> on an adjacent account: transactions recorded against incorrect budget codes, a systemic control failure rather than fraud, creating both financial liability and inventory discrepancies.</p>
+            <p>Recovery in that case required coordinating with finance teams, validating actual usage, correcting ledger entries, and establishing preventive controls to stop recurrence.</p>
           </div>
 
           <h3>Infrastructure Resilience Business Case</h3>
@@ -463,7 +459,7 @@ main:focus{outline:none}
           <h2>Outcomes</h2>
 
           <ul class="outcome-list">
-            <li><strong>£2.4M misallocated expenditure identified and corrected</strong>: Voucher assurance controls caught systemic budget code errors; full recovery executed through ledger corrections and preventive controls</li>
+            <li><strong>Voucher Assurance Controls Established</strong>: Segregation of duties, approval hierarchies and exception reporting thresholds, the same control type behind the <a href="/case-study-financial-control">£2.4M finding on an adjacent account</a></li>
             <li><strong>Unsatisfactory → Fully Compliant inspection rating</strong>: Fleet Logistics Inspection outcome transformed through systematic control design, not person-dependent effort</li>
             <li><strong>3 Fleet Logistics Inspections navigated in 15 months</strong>: High operational tempo provided multiple validation cycles for the new control framework</li>
             <li><strong>Enterprise analytics dashboard operational</strong>: Real-time visibility into compliance status, financial exposure, and control effectiveness; scoped for wider fleet adoption</li>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kelroy James: supply chain assurance and operational controls professional. Eighteen years in Defence logistics, accountable for inventory worth £10M to £25M.">
+<meta name="description" content="Kelroy James: supply chain assurance and operational controls professional. Eighteen years in Defence logistics, previously accountable for inventory worth £10M to £25M.">
 <meta property="og:title" content="Kelroy James">
 <meta property="og:description" content="Supply Chain Assurance and Operational Controls. When records don't match reality, I build the systems that close the gap.">
 <meta property="og:type" content="website">
@@ -118,7 +118,8 @@
 
   /* ============ hero ============ */
   .hero{background:var(--surface);border-bottom:1px solid var(--rule)}
-  .hero .wrap{padding:76px 26px 62px;display:grid;grid-template-columns:1fr;gap:40px}
+  .hero .wrap{padding:76px 26px 62px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+  .hero .wrap > *{min-width:0}
   @media(min-width:920px){.hero .wrap{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:64px;padding-top:92px;padding-bottom:78px}}
   h1{
     font-family:Spectral,Georgia,serif;font-weight:700;
@@ -127,6 +128,7 @@
   }
   .hero .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.08rem,2vw,1.32rem);line-height:1.5;color:var(--ink-2);margin:0 0 28px;max-width:56ch}
   .proof-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;margin:0;max-width:640px}
+  @media(max-width:480px){.proof-bar{grid-template-columns:repeat(auto-fit,minmax(100px,1fr))}}
   .proof-item{border-top:3px solid var(--brass);padding-top:10px}
   .proof-item a{display:block;text-decoration:none}
   .proof-value{display:block;font-family:Spectral,Georgia,serif;font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:700;color:var(--brass);line-height:1}
@@ -344,6 +346,7 @@
   }
   .newsletter-form input:focus-visible{outline:2px solid var(--brass);outline-offset:1px;border-color:var(--brass)}
   .btns{display:flex;flex-wrap:wrap;gap:12px}
+  @media(max-width:400px){.btns .btn{flex:1 1 100%;text-align:center}}
   .btn{
     display:inline-block;padding:11px 22px;text-decoration:none;
     font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
@@ -392,7 +395,7 @@ main:focus{outline:none}
       <h1>When records don't match reality, I build the systems that close the gap.</h1>
       <p class="lede">18 years in Defence logistics after 12 in a critical national infrastructure utility; moving into civilian supply chain assurance and operational controls roles from April 2028.</p>
       <dl class="proof-bar">
-        <div class="proof-item"><a href="/case-study-financial-control"><dt class="proof-value">£2.4M</dt><dd class="proof-label">Misallocated expenditure identified</dd></a></div>
+        <div class="proof-item"><a href="/case-study-financial-control"><dt class="proof-value">£2.4M</dt><dd class="proof-label">Misallocated expenditure identified, adjacent account</dd></a></div>
         <div class="proof-item"><a href="/case-study-failing-account-turnaround"><dt class="proof-value">80%</dt><dd class="proof-label">Reduction in financial liability on one account</dd></a></div>
         <div class="proof-item"><a href="/for-recruiters"><dt class="proof-value">£10–25M</dt><dd class="proof-label">Previously accountable as Tier 1 signatory</dd></a></div>
       </dl>
@@ -436,7 +439,7 @@ main:focus{outline:none}
         <div class="inner">
           <span class="type">Case Study · Financial Control</span>
           <h3>Identifying £2.4M in Misallocated Funds</h3>
-          <p>I identified £2.4M in misallocated expenditure through systematic analysis of spending patterns and led the root-cause analysis that supported its correction. The findings informed a proposed enterprise-wide policy instruction to prevent recurrence.</p>
+          <p>I identified £2.4M in misallocated expenditure on an adjacent account through a review of annual inventory demands, and led the root-cause analysis that supported its correction. The findings informed a proposed enterprise-wide policy instruction to prevent recurrence.</p>
           <p class="result"><b>Result:</b> £2.4M in misallocated expenditure identified; policy instruction proposed to prevent recurrence.</p>
           <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-top:2px">Civilian relevance: root-cause analysis, financial control investigation and evidence-based policy recommendations.</p>
           <span class="go">Read the case study →</span>
@@ -474,14 +477,16 @@ main:focus{outline:none}
         </div>
       </div>
 
+      <!-- TODO(Kelroy): second testimonial -- recent line manager / inspector / civilian stakeholder quote, name, title, relationship. Uncomment and fill in the block below, then remove the hidden attribute.
       <div class="testimonial-card" hidden>
-        <p class="testimonial-quote">TODO(Kelroy): recent line manager / inspector / civilian stakeholder quote, name, title, relationship.</p>
+        <p class="testimonial-quote">Quote text here.</p>
         <div class="testimonial-footer">
-          <p class="testimonial-author">TODO(Kelroy): name</p>
-          <p class="testimonial-role">TODO(Kelroy): title</p>
-          <p class="testimonial-context">TODO(Kelroy): relationship</p>
+          <p class="testimonial-author">Name</p>
+          <p class="testimonial-role">Title</p>
+          <p class="testimonial-context">Relationship</p>
         </div>
       </div>
+      -->
     </div>
 
   </div>
@@ -551,10 +556,10 @@ main:focus{outline:none}
       </article>
     </div>
     <p class="wb-all"><a href="/writing">All writing →</a></p>
-    <div class="newsletter-slot">
+    <div class="newsletter-slot" hidden>
       <h3>Get new writing by email</h3>
       <p>Occasional notes on supply chain assurance and operational controls. No spam, unsubscribe any time.</p>
-      <form class="newsletter-form" action="https://formspree.io/f/xppwrgln" method="POST">
+      <form class="newsletter-form" action="TODO(Kelroy): Beehiiv embed/subscribe URL" method="POST">
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
         <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
         <button type="submit" class="btn primary">Subscribe</button>

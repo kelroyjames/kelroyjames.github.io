@@ -69,7 +69,7 @@
 
   header.top{background:var(--surface);border-bottom:1px solid var(--rule)}
   header.top .wrap{padding:52px 24px 40px;display:flex;flex-direction:column;gap:24px}
-  .top-grid{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+  .top-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:center}
   @media(min-width:800px){.top-grid{grid-template-columns:minmax(0,1fr) 200px;gap:48px}}
   .top-intro{display:flex;flex-direction:column;gap:18px}
   .top-photo{width:132px;height:132px;border-radius:50%;overflow:hidden;border:3px solid var(--accent);box-shadow:var(--shadow);order:-1}
@@ -89,7 +89,7 @@
     line-height:1.55;color:var(--ink-2);max-width:66ch;margin:0;
   }
   .quick-facts{
-    display:grid;grid-template-columns:1fr;gap:12px 28px;margin-top:6px;
+    display:grid;grid-template-columns:minmax(0,1fr);gap:12px 28px;margin-top:6px;
     font-size:14px;color:var(--ink-2);
     background:var(--surface-2);border:1px solid var(--rule);border-top:3px solid var(--accent);padding:22px 24px;
   }
@@ -335,8 +335,8 @@ main:focus{outline:none}
         <a class="metric" href="/case-study-financial-control">
           <span class="metric-tag">Financial Control</span>
           <div class="metric-value">£2.4M</div>
-          <div class="metric-label">Misallocated Expenditure Identified Through Spending-Pattern Analysis</div>
-          <p class="metric-sub">Spending-pattern analysis exposed the misallocation and supported the corrective action that followed.</p>
+          <div class="metric-label">Misallocated Expenditure Identified on an Adjacent Account</div>
+          <p class="metric-sub">A review of annual inventory demands exposed the misallocation and supported the corrective action that followed.</p>
           <span class="metric-link-note">Read the case study →</span>
         </a>
         <a class="metric" href="/case-study-garage-lite-trial">
@@ -357,7 +357,7 @@ main:focus{outline:none}
           <span class="metric-tag">Leadership</span>
           <div class="metric-value">6 of 9</div>
           <div class="metric-label">Team Members Promoted Since a Nine-Person Deployment Tour</div>
-          <p class="metric-sub">Concurrent deployments included a £5M weapons trial and Exercise Tamber Shield.</p>
+          <p class="metric-sub">Concurrent deployments included a £5M weapons trial and a multinational exercise.</p>
           <span class="metric-link-note">Read the case study →</span>
         </a>
       </div>
