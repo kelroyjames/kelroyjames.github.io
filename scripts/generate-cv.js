@@ -121,6 +121,7 @@ function buildDoc({ outPath, includePhone, preparedFor }) {
 
   jobHeading('Section Head, Supply Chain (Petty Officer)', 'Royal Navy, Surface Flotilla Engineering Support', 'Jun 2021 - Apr 2022');
   bullets([
+    'Held Tier 1 signatory accountability (senior approver of record) for stock and inventory valued at £10M to £25M, depending on the items held',
     'Held first-line assurance responsibility for compliance-tool testing across three ship classes from the point of promotion',
     'Led the logistics workstream of a lean-maintenance pilot: £145,674 of stores handled with zero losses on return, and the highest rate of demands placed on time of any comparable support period that year',
     'Selected for a 12-week Defence innovation fellowship; delivered a project on consignment-tracking process redesign',
