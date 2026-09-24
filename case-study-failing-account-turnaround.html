@@ -105,8 +105,8 @@
   .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
 
   .cs-content{background:var(--surface);padding:56px 0}
-  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
-  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .content-grid{display:grid;grid-template-columns:200px minmax(0,1fr);gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:minmax(0,1fr);gap:40px}}
   .cs-toc{position:sticky;top:80px;height:fit-content}
   .cs-toc h2{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
   .cs-toc ul{list-style:none;padding:0;margin:0}
@@ -416,7 +416,7 @@ main:focus{outline:none}
             <li><strong>3 Control Artefacts Adopted Beyond Unit</strong> – Standardised losses pack adopted by another unit and by the wider organisation; S82 financial template adopted for upkeep cycles; standardised stores robbery form now in use fleet-wide</li>
             <li><strong>Process Improvement, Not Person Dependency</strong> – The controls were embedded in the workflow rather than individual expertise, designed to be handed over intact, and were handed over in September 2026</li>
             <li><strong>Navy-Wide Policy Instruction Proposed</strong> – Control design lessons informed a proposed policy update to prevent similar failures across the fleet</li>
-            <li><strong>80% Reduction in Financial Liability</strong> – Delivered through two workstreams on this account: closing 15 loss cases through asset verification and internal investigation, and the inspection-finding reduction above. A separate initiative from the £2.4M finding, which came from fleet-wide spending-pattern analysis rather than asset verification</li>
+            <li><strong>80% Reduction in Financial Liability</strong> – Delivered through two workstreams on this account: closing 15 loss cases through asset verification and internal investigation, and the inspection-finding reduction above. A separate initiative from the £2.4M finding, which came from a review of annual inventory demands on an adjacent account rather than asset verification</li>
           </ul>
           
           <div class="highlight-box">

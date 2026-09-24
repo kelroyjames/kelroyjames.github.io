@@ -105,8 +105,8 @@
   .glance-item p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
 
   .cs-content{background:var(--surface);padding:56px 0}
-  .content-grid{display:grid;grid-template-columns:200px 1fr;gap:60px;max-width:980px}
-  @media(max-width:840px){.content-grid{grid-template-columns:1fr;gap:40px}}
+  .content-grid{display:grid;grid-template-columns:200px minmax(0,1fr);gap:60px;max-width:980px}
+  @media(max-width:840px){.content-grid{grid-template-columns:minmax(0,1fr);gap:40px}}
   .cs-toc{position:sticky;top:80px;height:fit-content}
   .cs-toc h2{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}
   .cs-toc ul{list-style:none;padding:0;margin:0}
