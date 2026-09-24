@@ -128,14 +128,18 @@
   .hero .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.08rem,2vw,1.32rem);line-height:1.5;color:var(--ink-2);margin:0 0 28px;max-width:56ch}
   .proof-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;margin:0;max-width:640px}
   .proof-item{border-top:3px solid var(--brass);padding-top:10px}
+  .proof-item a{display:block;text-decoration:none}
   .proof-value{display:block;font-family:Spectral,Georgia,serif;font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:700;color:var(--brass);line-height:1}
   .proof-label{display:block;margin:6px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.4}
+  .proof-item a:hover .proof-label{color:var(--brass)}
   .credentials-strip{
     display:block;margin:18px 0 0;max-width:640px;
     font-variant:small-caps;font-size:13px;letter-spacing:.02em;
     color:var(--muted);text-decoration:none;line-height:1.6;
   }
   .credentials-strip:hover{color:var(--brass)}
+  .cred-short{display:none}
+  @media(max-width:560px){.cred-full{display:none}.cred-short{display:inline}}
   .hero-visual{display:flex;flex-direction:column;gap:32px}
   .headshot-placeholder{
     width:200px;height:200px;border-radius:50%;overflow:hidden;
@@ -388,11 +392,11 @@ main:focus{outline:none}
       <h1>When records don't match reality, I build the systems that close the gap.</h1>
       <p class="lede">18 years in Defence logistics after 12 in a critical national infrastructure utility; moving into civilian supply chain assurance and operational controls roles from April 2028.</p>
       <dl class="proof-bar">
-        <div class="proof-item"><dt class="proof-value">£2.4M</dt><dd class="proof-label">Misallocated expenditure identified</dd></div>
-        <div class="proof-item"><dt class="proof-value">80%</dt><dd class="proof-label">Reduction in financial liability</dd></div>
-        <div class="proof-item"><dt class="proof-value">£10–25M</dt><dd class="proof-label">Previously accountable as Tier 1 signatory</dd></div>
+        <div class="proof-item"><a href="/case-study-financial-control"><dt class="proof-value">£2.4M</dt><dd class="proof-label">Misallocated expenditure identified</dd></a></div>
+        <div class="proof-item"><a href="/case-study-failing-account-turnaround"><dt class="proof-value">80%</dt><dd class="proof-label">Reduction in financial liability on one account</dd></a></div>
+        <div class="proof-item"><a href="/for-recruiters"><dt class="proof-value">£10–25M</dt><dd class="proof-label">Previously accountable as Tier 1 signatory</dd></a></div>
       </dl>
-      <a class="credentials-strip" href="/skills-expertise">ISO/IEC 27001:2022, 42001:2023 &amp; 27701:2025 Lead Auditor · MIT MicroMasters, Supply Chain Management &amp; Advanced Network Design (final exam Nov 2026) · MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), in progress</a>
+      <a class="credentials-strip" href="/skills-expertise"><span class="cred-full">ISO/IEC 27001:2022, 42001:2023 &amp; 27701:2025 Lead Auditor · MIT MicroMasters, Supply Chain Management &amp; Advanced Network Design (final exam Nov 2026) · MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), in progress</span><span class="cred-short">ISO 27001 · 42001 · 27701 Lead Auditor · MIT MicroMasters SCM · MSc (in progress)</span></a>
       <div class="btns" style="margin-top:22px">
         <a class="btn primary" href="/downloads/kelroy-james-cv-public.pdf" download rel="noopener">Download CV (PDF)</a>
         <a class="btn" href="#work">See case studies</a>
