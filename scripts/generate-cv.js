@@ -52,14 +52,18 @@ function buildDoc({ outPath, includePhone, preparedFor }) {
   }
 
   function bullets(items) {
-    const bulletIndent = 12;
+    // Deliberately a single flowing .text() call per bullet, with no
+    // explicit x/y positioning. An earlier version drew the bullet
+    // glyph and the bullet text as two separate positioned .text()
+    // calls sharing one startY; when that Y landed near the bottom
+    // margin, pdfkit could paginate between the two calls, stranding
+    // the bullet glyph on the previous page and pushing the whole
+    // document to an extra page. Flowing text avoids that failure
+    // mode entirely, at the minor cost of wrapped lines not hanging
+    // under the bullet.
     for (const item of items) {
       doc.font('Helvetica').fontSize(9.3).fillColor(INK);
-      const startY = doc.y;
-      doc.text('•', doc.page.margins.left, startY, { width: bulletIndent });
-      doc.text(item, doc.page.margins.left + bulletIndent, startY, {
-        width: contentWidth - bulletIndent,
-      });
+      doc.text('•  ' + item, { width: contentWidth });
       doc.moveDown(0.1);
     }
     doc.moveDown(0.12);
@@ -85,7 +89,7 @@ function buildDoc({ outPath, includePhone, preparedFor }) {
   doc.moveDown(0.25);
   doc.font('Helvetica-Bold').fontSize(9.3).fillColor(INK).text('Core Skills: ', { continued: true });
   doc.font('Helvetica').fontSize(9.3).fillColor(INK).text(
-    'Supply Chain Assurance | Global Movements | Operational Controls | First-Line Risk Ownership (1LOD) | Financial Control, Root-Cause Analysis & Remediation | Senior Stakeholder and Command-Level Reporting | Governance, Risk & Compliance (GRC) | Public Sector Assurance & Compliance | Lean Six Sigma Green Belt (Continuous Improvement) | Team Coaching & Development | Concurrent Workstream Management | Three Lines Model | ISO/IEC 27001, 42001, 27701 Lead Auditor | Data-Driven Reporting (Excel, Python) | PRINCE2 Project Governance'
+    'Supply Chain Assurance | Global Movements | Operational Controls | First-Line Risk Ownership (1LOD) | Financial Control, Root-Cause Analysis & Remediation | Senior Stakeholder and Command-Level Reporting | Governance, Risk & Compliance (GRC) | Public Sector Assurance & Compliance | Lean Six Sigma Green Belt (Continuous Improvement) | Team Coaching & Development | Concurrent Workstream Management | Three Lines Model | ISO/IEC 27001, 42001, 27701 Lead Auditor | Data-Driven Reporting (SQL, Python, Power BI) | PRINCE2 Project Governance'
   );
 
   // Professional experience
@@ -132,7 +136,7 @@ function buildDoc({ outPath, includePhone, preparedFor }) {
     'Deputised for full account ownership through an intensive pre-deployment compliance work-up; coordinated a safety-critical evolution with external regulatory stakeholders and no senior oversight',
     'Provided 24/7 watchkeeping cover for fleet-wide operational-defect logistics, supporting three concurrent, globally distributed operational commitments',
     "Designed and delivered a PRINCE2-governed consignment-tracking capability, removing a manual, error-prone workaround and sustaining operations across four nations; awarded the Chief Naval Logistics Officer's Award for the coaching and mentoring delivered alongside it",
-    'Rated the strongest performer among peer cohorts across two consecutive appraisal periods',
+    'Rated the strongest among peer Leading Hands across two reporting periods',
     "Sole point of contact for a deployed unit's financial and asset compliance, managing a recurring procurement budget and cutting low-value transaction volume by 80%; separately restructured MOD inventory-accounting practice across a NATO multinational headquarters",
   ]);
 
