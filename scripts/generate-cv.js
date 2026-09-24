@@ -97,7 +97,7 @@ function buildDoc({ outPath, includePhone, preparedFor }) {
 
   jobHeading('Petty Officer (Supply Chain)', 'Royal Navy', 'Sept 2026 - Present');
   bullets([
-    'On enhanced leave between substantive postings, retaining Petty Officer (Supply Chain) responsibility at section-head level; next posting is as Movements POSC, at the unit where earlier FdSc and PRINCE2 study was completed',
+    'Between postings; next appointment as Movements Petty Officer with a specialist unit',
   ]);
 
   jobHeading('Petty Officer (Supply Chain Manager) - first-line control owner (1LOD)', 'Royal Navy, Front-Line Warship', 'May 2024 - September 2026');
