@@ -96,13 +96,9 @@ function buildDoc({ outPath, includePhone, preparedFor }) {
   sectionHeading('Professional Experience');
 
   jobHeading('Petty Officer (Supply Chain)', 'Royal Navy', 'Sept 2026 - Present');
-  // No bullet here: the brief asked for one TODO(Kelroy) bullet, but a
-  // flattened PDF has no way to hide a TODO from anyone who opens the
-  // file -- there is no "hidden" state at PDF-render time. Per the
-  // brief's own fallback, the bullet is left out entirely and reported
-  // as an open TODO instead of being printed into a document going to
-  // a recruiter.
-  doc.moveDown(0.35);
+  bullets([
+    'On enhanced leave between substantive postings, retaining Petty Officer (Supply Chain) responsibility at section-head level; next posting is as Movements POSC, at the unit where earlier FdSc and PRINCE2 study was completed',
+  ]);
 
   jobHeading('Petty Officer (Supply Chain Manager) - first-line control owner (1LOD)', 'Royal Navy, Front-Line Warship', 'May 2024 - September 2026');
   bullets([
