@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Kelroy James: Writing</title>
+  <link>https://kelroyjames.com/writing</link>
+  <atom:link href="https://kelroyjames.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Essays on supply chain assurance, third-party risk and governance.</description>
+  <language>en-gb</language>
+  <item>
+    <title>The Physical Assurance Gap in Third-Party Risk</title>
+    <link>https://kelroyjames.com/the-physical-assurance-gap-in-third-party-risk</link>
+    <guid isPermaLink="true">https://kelroyjames.com/the-physical-assurance-gap-in-third-party-risk</guid>
+    <pubDate>Thu, 17 Sep 2026 09:00:00 +0000</pubDate>
+    <description>Two 2026 KPMG surveys map where third-party risk management spends its attention: data, AI, managed services, almost none on physical supplier verification.</description>
+  </item>
+  <item>
+    <title>The Convergence of Cyber-GRC and Physical Logistics</title>
+    <link>https://kelroyjames.com/convergence-of-cyber-grc-and-physical-logistics</link>
+    <guid isPermaLink="true">https://kelroyjames.com/convergence-of-cyber-grc-and-physical-logistics</guid>
+    <pubDate>Wed, 16 Sep 2026 09:00:00 +0000</pubDate>
+    <description>Why siloed supply chain assurance creates blind spots, where they form, and what happens to custody when nobody is holding the item.</description>
+  </item>
+  <item>
+    <title>Diversified on Paper, Concentrated in Practice</title>
+    <link>https://kelroyjames.com/diversified-on-paper-concentrated-in-practice</link>
+    <guid isPermaLink="true">https://kelroyjames.com/diversified-on-paper-concentrated-in-practice</guid>
+    <pubDate>Tue, 15 Sep 2026 09:00:00 +0000</pubDate>
+    <description>A supplier list with fifty names can still fail from a single point. How to measure the concentration that headcount hides, and what to do about it.</description>
+  </item>
+  <item>
+    <title>The Enterprise Risk Management We Already Do</title>
+    <link>https://kelroyjames.com/the-enterprise-risk-management-we-already-do</link>
+    <guid isPermaLink="true">https://kelroyjames.com/the-enterprise-risk-management-we-already-do</guid>
+    <pubDate>Mon, 14 Sep 2026 09:00:00 +0000</pubDate>
+    <description>Corporate risk management is being rewired around decisions, dependencies and judgement. Operational institutions have worked that way for decades.</description>
+  </item>
+  <item>
+    <title>Engineering Trust: What Military Assurance and AI Governance Share</title>
+    <link>https://kelroyjames.com/engineering-trust-what-military-assurance-can-teach-ai-governance</link>
+    <guid isPermaLink="true">https://kelroyjames.com/engineering-trust-what-military-assurance-can-teach-ai-governance</guid>
+    <pubDate>Sun, 13 Sep 2026 09:00:00 +0000</pubDate>
+    <description>Deloitte and BCG argue AI is turning assurance into a property of the system itself. Naval logistics assurance meets the same limit from the other end.</description>
+  </item>
+  <item>
+    <title>A Ship's Mind, Before Anyone Could Govern One</title>
+    <link>https://kelroyjames.com/a-ships-mind-before-anyone-could-govern-one</link>
+    <guid isPermaLink="true">https://kelroyjames.com/a-ships-mind-before-anyone-could-govern-one</guid>
+    <pubDate>Sat, 12 Sep 2026 09:00:00 +0000</pubDate>
+    <description>Two Royal Navy admirals, two years apart, both reached for AI at the heart of a warship. The record corrects which one said it first.</description>
+  </item>
+  <item>
+    <title>Recognition Before Retraining</title>
+    <link>https://kelroyjames.com/recognition-before-retraining</link>
+    <guid isPermaLink="true">https://kelroyjames.com/recognition-before-retraining</guid>
+    <pubDate>Fri, 11 Sep 2026 09:00:00 +0000</pubDate>
+    <description>Why the Pan-Defence Skills Framework is the missing piece in service leaver transition, for anyone leaving with a trade nobody outside recognises.</description>
+  </item>
+  <item>
+    <title>Talent Should Flow Both Ways</title>
+    <link>https://kelroyjames.com/talent-should-flow-both-ways</link>
+    <guid isPermaLink="true">https://kelroyjames.com/talent-should-flow-both-ways</guid>
+    <pubDate>Thu, 10 Sep 2026 09:00:00 +0000</pubDate>
+    <description>The Pan-Defence Skills Framework as a Defence Industrial Strategy tool, connecting service leavers to the industrial base that needs their exact skills.</description>
+  </item>
+  <item>
+    <title>Dangerous Goods Training and a Foundation Degree, at the Same Time</title>
+    <link>https://kelroyjames.com/dangerous-goods-training-and-a-foundation-degree-at-the-same-time</link>
+    <guid isPermaLink="true">https://kelroyjames.com/dangerous-goods-training-and-a-foundation-degree-at-the-same-time</guid>
+    <pubDate>Wed, 09 Sep 2026 09:00:00 +0000</pubDate>
+    <description>In 2018, as sole logistics contact for Fleet Diving Squadron HQ, I delivered dangerous goods training to EOD personnel while finishing a Foundation Degree.</description>
+  </item>
+  <item>
+    <title>Five People, Every Deployed Platform</title>
+    <link>https://kelroyjames.com/five-people-every-deployed-platform</link>
+    <guid isPermaLink="true">https://kelroyjames.com/five-people-every-deployed-platform</guid>
+    <pubDate>Tue, 08 Sep 2026 09:00:00 +0000</pubDate>
+    <description>In 2019, five members of the Fleet Stores Coordination Cell at Northwood received the Herbert Lott Efficiency Award for supporting every deployed platform.</description>
+  </item>
+  <item>
+    <title>Nine Officers, One Recurring Assessment</title>
+    <link>https://kelroyjames.com/nine-officers-one-recurring-assessment</link>
+    <guid isPermaLink="true">https://kelroyjames.com/nine-officers-one-recurring-assessment</guid>
+    <pubDate>Mon, 07 Sep 2026 09:00:00 +0000</pubDate>
+    <description>Between 2014 and 2026, nine reporting officers across five units, unconnected to each other, independently reached for the same word to describe the same thing.</description>
+  </item>
+  <item>
+    <title>Building the Tracking System Fleet Diving Squadron Didn't Have</title>
+    <link>https://kelroyjames.com/building-the-tracking-system-fleet-diving-squadron-didnt-have</link>
+    <guid isPermaLink="true">https://kelroyjames.com/building-the-tracking-system-fleet-diving-squadron-didnt-have</guid>
+    <pubDate>Sun, 06 Sep 2026 09:00:00 +0000</pubDate>
+    <description>In 2017, as Logistics Specialist at Fleet Diving Squadron, I built a consignment-tracking system the unit didn't have, tested live on exercise in Latvia.</description>
+  </item>
+  <item>
+    <title>A Dissertation About the Job I Was Already Doing</title>
+    <link>https://kelroyjames.com/a-dissertation-about-the-job-i-was-already-doing</link>
+    <guid isPermaLink="true">https://kelroyjames.com/a-dissertation-about-the-job-i-was-already-doing</guid>
+    <pubDate>Sat, 05 Sep 2026 09:00:00 +0000</pubDate>
+    <description>While working in Fleet Operations at Northwood, I completed a BSc in Logistics and Operations Management, built around the job I was already doing.</description>
+  </item>
+  <item>
+    <title>The Course They Almost Didn't Let Me On</title>
+    <link>https://kelroyjames.com/the-course-they-almost-didnt-let-me-on</link>
+    <guid isPermaLink="true">https://kelroyjames.com/the-course-they-almost-didnt-let-me-on</guid>
+    <pubDate>Fri, 04 Sep 2026 09:00:00 +0000</pubDate>
+    <description>The Defence Logistics Staff Course is built for high calibre officers of SO2/3 rank. A Petty Officer's case for a place, and what five modules taught.</description>
+  </item>
+  <item>
+    <title>Supply Chain Management Was Already a Discipline</title>
+    <link>https://kelroyjames.com/supply-chain-management-was-already-a-discipline</link>
+    <guid isPermaLink="true">https://kelroyjames.com/supply-chain-management-was-already-a-discipline</guid>
+    <pubDate>Thu, 03 Sep 2026 09:00:00 +0000</pubDate>
+    <description>What five MIT courses in supply chain analytics and design named in work I had already been doing for years, and why logisticians shouldn't wait to start.</description>
+  </item>
+  <item>
+    <title>The Rails Were Rebuilt, and the Gap Remained</title>
+    <link>https://kelroyjames.com/the-rails-were-rebuilt-and-the-gap-remained</link>
+    <guid isPermaLink="true">https://kelroyjames.com/the-rails-were-rebuilt-and-the-gap-remained</guid>
+    <pubDate>Thu, 01 Jan 2026 09:00:00 +0000</pubDate>
+    <description>An examination of decentralised finance, trade documentation, and the persistent global trade finance gap.</description>
+  </item>
+</channel>
+</rss>
