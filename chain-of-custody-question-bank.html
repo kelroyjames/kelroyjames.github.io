@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The supply chain audit question bank: Kelroy James</title>
+  <meta name="description" content="Twenty-five questions an auditor would ask about your supplier records and the hand-offs between your teams, with the evidence that answers each one. Free with the Chain of Custody newsletter.">
+  <link rel="canonical" href="https://kelroyjames.com/chain-of-custody-question-bank">
+  <meta property="og:title" content="The supply chain audit question bank">
+  <meta property="og:description" content="Twenty-five audit questions on supplier records and hand-offs, with the evidence that answers each one. Free with the Chain of Custody newsletter.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kelroyjames.com/chain-of-custody-question-bank">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The supply chain audit question bank">
+  <meta name="twitter:description" content="Twenty-five audit questions on supplier records and hand-offs, with the evidence that answers each one.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#EDEEF0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B1119" media="(prefers-color-scheme: dark)">
+  <link rel="preload" href="/fonts/publicsans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/spectral-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <style>
+  :root{
+    --ground:#EDEEF0; --surface:#FFFFFF; --surface-2:#F4F5F7;
+    --ink:#131C28; --ink-2:#3A4753; --muted:#56636F;
+    --rule:#D4D8DD; --rule-soft:#E4E7EA;
+    --brass:#7A5C24; --brass-soft:#F2ECDF;
+    --navy:#24405C; --navy-soft:#E4EAF1;
+    --shadow:0 1px 2px rgba(19,28,40,.06), 0 10px 30px rgba(19,28,40,.06);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0B1119; --surface:#131B24; --surface-2:#18212B;
+      --ink:#E2E7EC; --ink-2:#B4C0CB; --muted:#828F9B;
+      --rule:#27333F; --rule-soft:#1F2A34;
+      --brass:#C9A257; --brass-soft:#2A2317;
+      --navy:#83A6C7; --navy-soft:#182533;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+      color-scheme:dark;
+    }
+  }
+  *{box-sizing:border-box;margin:0}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 26px}
+  a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:16px;top:12px;background:var(--surface);padding:8px 12px;z-index:10}
+  .nav{border-bottom:1px solid var(--rule);background:var(--surface)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:15px;padding-bottom:15px}
+  .mark{font-family:Spectral,Georgia,serif;font-weight:700;font-size:1.45rem;letter-spacing:-.015em;color:var(--ink);text-decoration:none}
+  .nav-link{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+  .nav-link:hover{color:var(--ink)}
+  main{padding:72px 0 64px}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 18px}
+  h1{font-family:Spectral,Georgia,serif;font-weight:700;font-size:clamp(2.1rem,5.4vw,3.3rem);line-height:1.08;letter-spacing:-.02em;margin:0 0 20px;text-wrap:balance}
+  h2{font-family:Spectral,Georgia,serif;font-weight:700;font-size:1.5rem;line-height:1.2;margin:0 0 16px}
+  .lede{color:var(--ink-2);font-size:1.14rem;line-height:1.55;max-width:58ch;margin:0 0 28px}
+  p{color:var(--ink-2);margin:0 0 14px;max-width:62ch}
+  .btn{
+    display:inline-block;padding:14px 26px;text-decoration:none;
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+    border:1px solid var(--ink);color:var(--surface);background:var(--ink);
+  }
+  .btn:hover{background:var(--brass);border-color:var(--brass);color:var(--surface)}
+  .fine{font-size:13.5px;color:var(--muted);margin:14px 0 0;max-width:60ch}
+  .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:44px 0 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .fact{padding:18px 0}
+  .fact + .fact{border-left:1px solid var(--rule);padding-left:22px}
+  .fact b{display:block;font-family:Spectral,Georgia,serif;font-weight:700;font-size:2rem;line-height:1.1;font-variant-numeric:tabular-nums}
+  .fact span{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  section{margin-top:56px}
+  ul.inside{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule)}
+  ul.inside li{padding:13px 0;border-bottom:1px solid var(--rule);color:var(--ink-2);display:grid;grid-template-columns:34px 1fr;gap:8px}
+  ul.inside li span{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--brass);padding-top:3px}
+  .sample{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);padding:26px 28px}
+  .sample .q-num{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;color:var(--brass);margin:0 0 8px}
+  .sample .q{font-family:Spectral,Georgia,serif;font-weight:600;font-size:1.3rem;line-height:1.3;color:var(--ink);margin:0 0 20px;max-width:none}
+  .cols{display:grid;grid-template-columns:1.3fr 1fr;gap:26px}
+  .label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+  .cols ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:15px}
+  .cols li{margin:0 0 6px}
+  .cols p{font-size:15px;margin:0}
+  .cols p.label{font-size:11px;margin:0 0 8px}
+  .anchor{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);margin:20px 0 0;padding-top:14px;border-top:1px solid var(--rule-soft);max-width:none}
+  .cta{background:var(--navy-soft);border:1px solid var(--rule);padding:30px 28px}
+  .cta h2{margin-bottom:10px}
+  .cta p{margin-bottom:20px}
+  footer{padding:34px 0 56px;border-top:1px solid var(--rule)}
+  footer p{font-size:12.5px;color:var(--muted);max-width:74ch;margin:0 0 10px}
+  @media (max-width:600px){
+    main{padding:48px 0 48px}
+    .cols{grid-template-columns:1fr;gap:18px}
+    .fact + .fact{padding-left:14px}
+    .fact b{font-size:1.6rem}
+    .sample{padding:22px 20px}
+    .cta{padding:26px 20px}
+    .btn{padding:13px 16px;font-size:11.5px;letter-spacing:.08em}
+  }
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="/">Kelroy James</a>
+    <a class="nav-link" href="/writing">Writing</a>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+  <div class="wrap">
+    <p class="eyebrow">Chain of Custody · Free resource</p>
+    <h1>The supply chain audit question bank</h1>
+    <p class="lede">Twenty-five questions an auditor would ask about your supplier records and the hand-offs between your teams, with the evidence that answers each one. Free when you subscribe to Chain of Custody.</p>
+    <a class="btn" href="https://chainofcustody.beehiiv.com/subscribe?utm_source=kelroyjames.com&amp;utm_medium=landing&amp;utm_campaign=question-bank">Send me the question bank →</a>
+    <p class="fine">It arrives in your welcome email as a PDF. You'll also receive Chain of Custody, a weekly newsletter on supply chain governance, risk and compliance, every Tuesday. Unsubscribe in one click.</p>
+
+    <div class="facts" aria-label="What the question bank contains">
+      <div class="fact"><b>25</b><span>Questions</span></div>
+      <div class="fact"><b>7</b><span>Areas</span></div>
+      <div class="fact"><b>1</b><span>Worksheet</span></div>
+    </div>
+
+    <section aria-labelledby="inside">
+      <h2 id="inside">What's inside</h2>
+      <ul class="inside">
+        <li><span>01</span><div>Twenty-five questions across seven areas, from knowing who you buy from to correcting past errors.</div></li>
+        <li><span>02</span><div>For each question, the evidence that answers it and the warning sign that it won't.</div></li>
+        <li><span>03</span><div>The rules and standards behind each question, cited by clause.</div></li>
+        <li><span>04</span><div>A one-page worksheet for recording gaps, owners and dates.</div></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="sample">
+      <h2 id="sample">One of the twenty-five</h2>
+      <div class="sample">
+        <p class="q-num">Q03 · Knowing who you buy from</p>
+        <p class="q">When a supplier changes factory, sub-supplier or ownership, how do you find out, and how quickly?</p>
+        <div class="cols">
+          <div>
+            <p class="label">Evidence that answers it</p>
+            <ul>
+              <li>A contractual duty on the supplier to notify changes</li>
+              <li>A change log comparing the date notified with the date the change took effect</li>
+              <li>The re-assessments each change triggered</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label">Warning sign</p>
+            <p>Changes are discovered from shipping documents after the goods have moved.</p>
+          </div>
+        </div>
+        <p class="anchor">Anchored in · ISO/IEC 27001:2022 Annex A 5.22 · ISO 9001:2015 clause 8.4</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="why">
+      <h2 id="why">Why these questions</h2>
+      <p>Most supply chain controls fail quietly, at the point where a record stops matching the goods, the supplier or the team that is meant to act on it. The questions are written to find those points before a regulator, a customer or an auditor does, and a strong answer to any of them is a document, a log or a record, whilst a weak answer is a description of what is supposed to happen.</p>
+      <p>I wrote them as a lead auditor for ISO/IEC 27001, ISO/IEC 42001 and ISO/IEC 27701, and as someone who has spent a career running first-line supply chain controls.</p>
+    </section>
+
+    <section>
+      <div class="cta">
+        <h2>Get the question bank</h2>
+        <p>Subscribe to Chain of Custody and the PDF comes with your welcome email.</p>
+        <a class="btn" href="https://chainofcustody.beehiiv.com/subscribe?utm_source=kelroyjames.com&amp;utm_medium=landing&amp;utm_campaign=question-bank">Send me the question bank →</a>
+      </div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>The question bank is general information to support your own review. It is not legal advice.</p>
+    <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
+    <p>© Kelroy James</p>
+  </div>
+</footer>
+</body>
+</html>
