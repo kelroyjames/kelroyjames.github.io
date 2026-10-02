@@ -107,6 +107,9 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
     // each bullet covers (shipment tracking, compliance and so on).
     for (const item of items) {
       const align = expand ? 'justify' : 'left';
+      // Keep each bullet whole: start a new page rather than split one across the break.
+      doc.font(FONT.reg).fontSize(F.body);
+      ensureSpace(doc.heightOfString('•  ' + (Array.isArray(item) ? item[0] + ': ' + item[1] : item), { width: contentWidth }));
       doc.font(FONT.reg).fontSize(F.body).fillColor(INK);
       if (Array.isArray(item)) {
         doc.text('•  ', { continued: true, width: contentWidth, align });
@@ -145,8 +148,9 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
       bulletsH += 0.06 * lh;
       ensureSpace(roleH + orgH + jobGapCoef * SP * lh + bulletsH);
     } else {
-      const oneLine = doc.heightOfString('A', { width: contentWidth });
-      ensureSpace(roleH + orgH + jobGapCoef * SP * lh + oneLine);
+      const first = items[0];
+      const firstH = doc.heightOfString('•  ' + (Array.isArray(first) ? first[0] + ': ' + first[1] : first), { width: contentWidth });
+      ensureSpace(roleH + orgH + jobGapCoef * SP * lh + firstH);
     }
 
     doc.font(FONT.bold).fontSize(F.job).fillColor(INK).text(role, { continued: false });
@@ -159,28 +163,32 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   doc.font(FONT.bold).fontSize(F.name).fillColor(INK).text('KELROY JAMES');
   doc.moveDown(0.15 * SP);
   doc.font(FONT.reg).fontSize(F.subtitle).fillColor(BLUE)
-    .text('Supply Chain Assurance (Logistics & Movements) | Operational Controls | Governance, Risk & Compliance');
+    .text('Operational Risk & Supply Chain Assurance | Third-Party & Supplier Assurance | Governance, Risk & Compliance');
   doc.moveDown(0.15 * SP);
   doc.font(FONT.reg).fontSize(F.contact).fillColor(MUTED)
     .text(includePhone
-      ? '07891 118595   |   kelroydbjames@gmail.com   |   linkedin.com/in/kelroy-james   |   kelroyjames.com'
-      : 'kelroydbjames@gmail.com   |   linkedin.com/in/kelroy-james   |   kelroyjames.com');
+      ? 'Fareham, Hampshire   |   07891 118595   |   kelroydbjames@gmail.com   |   linkedin.com/in/kelroy-james   |   kelroyjames.com'
+      : 'Fareham, Hampshire   |   kelroydbjames@gmail.com   |   linkedin.com/in/kelroy-james   |   kelroyjames.com');
   rule();
 
-  // Professional summary. Kept to about five lines at 12pt (KPMG feedback,
-  // 30 Sept 2026): it captures the reader and names the areas the roles below
-  // prove, but carries no figures, so no achievement is stated twice.
+  // Professional summary: the copy used on the site hero. It states no
+  // inspection outcome ("restores assurance positions", not "failed ones"),
+  // and the selected result matches the financial-control case study.
   sectionHeading('Professional Summary');
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    "Supply chain assurance professional with 18 years in Royal Navy logistics and global movements, following 12 years in critical national infrastructure. First-line control owner who leads account recovery after failed inspections, financial-control investigations and the loss reduction that follows. Leads and coaches teams through concurrent operational commitments, and delivers continuous improvement through Lean Six Sigma. Seeking supply chain assurance, operational controls and governance, risk and compliance roles.",
+    'Operational risk and supply chain assurance manager with 18 years in Royal Navy logistics and global movements, preceded by 12 years in critical national infrastructure. Owns the controls, loss position and financial integrity of accounts valued between £10M and £25M, leads teams of up to ten through concurrent operational commitments, and restores assurance positions to sustained compliance. Seeking operational risk, supply chain assurance, and supplier and third-party risk roles.',
     { align: expand ? 'justify' : 'left' }
   );
   doc.moveDown(0.25 * SP);
-  // One short line, tailored to the target roles (KPMG feedback: too many
-  // skills, keep to the role). The full record stays on the skills page.
+  doc.font(FONT.bold).fontSize(F.body).fillColor(INK).text('Selected result: ', { continued: true, align: expand ? 'justify' : 'left' });
+  doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
+    'identified and corrected £2.4M of misallocated expenditure on an adjacent account, tracing it to an unowned interface between the contractual and accounting routes.',
+    { align: expand ? 'justify' : 'left' }
+  );
+  doc.moveDown(0.25 * SP);
   doc.font(FONT.bold).fontSize(F.body).fillColor(INK).text('Core Skills: ', { continued: true, align: expand ? 'justify' : 'left' });
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    'Supply Chain Assurance | Operational Controls | First-Line Risk Ownership (1LOD) | Governance, Risk & Compliance | Root-Cause Analysis & Remediation | Lean Six Sigma | ISO/IEC 27001, 42001, 27701 Lead Auditor',
+    'Operational Risk & Resilience | Supply Chain Assurance | Control Design & Testing | Third-Party & Contractor Assurance | Loss Investigation & Root-Cause Analysis | Governance, Risk & Compliance (Three Lines Model) | First-Line Risk Ownership (1LOD) | Customs & Movements Compliance | Security Management & Governance | Industrial IoT & Control Systems Security Awareness | Lean Six Sigma | ISO/IEC 27001, 42001, 27701 Lead Auditor | MSc Supply Chain and Logistics Management (in progress, route to MCIPS)',
     { align: expand ? 'justify' : 'left' }
   );
 
@@ -189,55 +197,65 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   // achievement. Earlier postings use problem, action, result.
   sectionHeading('Professional Experience');
 
-  job('Petty Officer (Supply Chain Manager) - first-line control owner (1LOD)', 'Royal Navy, Front-Line Warship', 'May 2024 - September 2026', [
-    ['Compliance Recovery', 'Led the remediation of a public sector account rated unsatisfactory at independent inspection, restoring full compliance within 12 months.'],
-    ['Financial Control', 'Identified £2.4M in misallocated expenditure on an adjacent account by reviewing annual inventory demands, and led the root-cause analysis behind its correction.'],
-    ['Loss Reduction', 'Cut financial liability by 80% by closing 15 loss cases through asset verification and investigation.'],
-    ['Continuous Improvement', 'Redesigned first-line controls using ISO management-systems standards, Lean Six Sigma and the Three Lines Model; the recommendations went to the policy authority as a proposed policy instruction.'],
-    ['Coaching & Development', 'Founded and led "Empowerment Day," a junior-rate coaching and development programme, adopted as recurring practice within the department.'],
+  job('Petty Officer (Supply Chain Manager)', 'Royal Navy, specialist unit', 'September 2026 - Present', [
+    ['Current Scope', 'Supply chain accountability, compliance and movements support for a high-readiness specialist unit.'],
   ]);
   jobGap();
 
-  job('Petty Officer (Supply Chain and Global Movements)', 'Royal Navy, Wildcat Maritime Force', 'Apr 2022 - May 2024', [
+  job('Petty Officer (Supply Chain Manager) and Departmental Training Coordinator', 'Royal Navy, Front-Line Warship', 'May 2024 - September 2026', [
+    ['Compliance Recovery', 'Led the remediation of an account rated unsatisfactory at independent inspection, restoring full compliance within 12 months and sustaining it through pre-deployment assurance.'],
+    ['Competency Assurance', "Departmental training coordinator through three Fleet Logistics Inspections: planned and oversaw the training serials taking junior rates through workplace task books for advancement, evidencing competence as part of the department's compliance position."],
+    ['Financial Control & Third-Party Reconciliation', 'Identified £2.4M in misallocated expenditure on an adjacent account during a contractor-supported upkeep period, tracing it to an unowned interface between the contractual and accounting routes; reconciled enterprise data with prime contractor and DE&S counterparts and co-designed an analytics dashboard for continuous oversight.'],
+    ['Loss Reduction', 'Cut financial liability by 80% by closing 15 loss cases through asset verification and investigation.'],
+    ['Control Design', 'Redesigned first-line controls using ISO management-systems standards, Lean Six Sigma and the Three Lines Model; recommendations submitted to the policy authority as a proposed policy instruction.'],
+    ['Training & Awareness', 'Designed and delivered training on the purpose behind the monthly compliance-monitoring routine, reframing it for the team as governance, risk and compliance work rather than administration; extended into "Empowerment Day," a junior-rate development programme adopted as recurring departmental practice.'],
+  ]);
+  jobGap();
+
+  job('Petty Officer (Supply Chain and Global Movements)', 'Royal Navy, Wildcat Maritime Force', 'April 2022 - May 2024', [
     ['Asset Accountability', 'Consolidated a dispersed, effectively unauditable asset base into a single accountable holding and closed 14 major loss investigations through evidence-based reconciliation.'],
-    ['Global Movements', 'Ran global movements coordination alongside stores accountability, covering international freight and customs documentation.'],
+    ['Movements & Customs Compliance', 'Ran global movements coordination alongside stores accountability, covering international freight, customs documentation and third-party freight and handling partners.'],
     ['Team Leadership', 'Led a nine-person team through concurrent operational commitments, including support to a £5M weapons trial; six of the nine have since been promoted.'],
     ['Delivery Under Pressure', 'Turned round a rejected compliance consignment in three days to protect a fixed external deadline, and recovered a mid-exercise equipment shortfall with three hours to spare.'],
   ]);
   jobGap();
 
-  job('Section Head, Supply Chain (Petty Officer)', 'Royal Navy, Surface Flotilla Engineering Support', 'Jun 2021 - Apr 2022', [
-    ['Financial Accountability', 'Signed as Tier 1 approver of record for stock and inventory valued between £10M and £25M.'],
+  job('Section Head, Supply Chain (Petty Officer)', 'Royal Navy, Surface Flotilla Engineering Support', 'June 2021 - April 2022', [
+    ['Financial Accountability', 'Tier 1 approver of record for stock and inventory valued between £10M and £25M.'],
     ['Compliance Assurance', 'Owned first-line compliance-tool testing across three ship classes from the point of promotion.'],
     ['Lean Delivery', 'Led the logistics workstream of a lean-maintenance pilot: £145,674 of stores handled with zero losses on return, and the highest rate of demands placed on time of any comparable support period that year.'],
     ['Innovation', 'Selected for the 12-week Percy Hobart Fellowship, a Defence innovation programme, and delivered a mentored capability project on consignment-tracking process redesign.'],
   ]);
   jobGap();
 
-  job('Earlier Royal Navy Postings - Leadership, Assurance and Movements', 'Royal Navy, various units', '2008 - 2021', [
-    ['Fleet Stores Coordination Cell, 2019', 'Provided 24/7 watchkeeping cover for fleet-wide defect logistics across three concurrent global commitments (WESTLANT 18, SAIF SAREEA 3, Exercise Trident Juncture); part of the five-person team awarded the Herbert Lott Efficiency Award.'],
-    ['Fleet Diving Squadron', 'A high-readiness unit relied on external systems to locate its equipment. Led delivery of its own tracking capability under PRINCE2, from stakeholder mapping to customs-compliant procedures, ending a 200-mile round trip for consignment labels.'],
-    ['Dangerous Goods Training', 'Delivered safety-critical dangerous goods training to EOD personnel and mentored colleagues ahead of Qualifying Courses without senior-rate oversight; awarded the Chief Naval Logistics Officer\'s Award (2018).'],
-    ['NATO SHAPE, 2015-16', 'As the only Royal Navy rating in a tri-service unit, rebuilt a logistics account, including ammunition, that had failed Army assurance: established a Central Records Branch, new naming conventions and a new record template, restoring full compliance at the revisit within nine months.'],
-    ['Falklands Islands', "As Low Value Procurement Officer, sole point of contact for the deployed unit's financial and asset compliance, cutting low-value transaction volume by 80%."],
+  job('Earlier Royal Navy Postings - Assurance, Movements and Leadership', 'Royal Navy, various units', '2008 - 2021', [
+    ['Fleet Stores Coordination Cell, 2019', 'Provided 24/7 watchkeeping cover for fleet-wide defect logistics across three concurrent global commitments; part of the five-person team awarded the Herbert Lott Efficiency Award.'],
+    ['Fleet Diving Squadron', 'A high-readiness unit relied on external systems to locate its equipment. Led delivery of its own tracking capability under PRINCE2, from stakeholder mapping and contractor integration to customs-compliant procedures, ending a 200-mile round trip for consignment labels.'],
+    ['NATO SHAPE, 2015-16', 'As the only Royal Navy rating in a tri-service unit, rebuilt a non-compliant logistics account, including ammunition: established a Central Records Branch, new naming conventions and a new record template, restoring full compliance within nine months.'],
+    ['Dangerous Goods Training', "Delivered safety-critical dangerous goods training to EOD personnel and mentored colleagues ahead of Qualifying Courses without senior-rate oversight; awarded the Chief Naval Logistics Officer's Award (2018)."],
+    ['Falkland Islands', "As Low Value Procurement Officer, sole point of contact for the deployed unit's financial and asset compliance, cutting low-value transaction volume by 80%."],
   ]);
   jobGap();
 
   job('GIS Analyst & Infrastructure Planner - Critical National Infrastructure', 'St Vincent Electricity Services', '1996 - 2008', [
     ['GIS Mapping', 'Led the GPS geo-tagging of national grid infrastructure, the mapping work that underpinned an Esri Special Achievement in GIS award.'],
-    ['Progression', 'Advanced over twelve years from front-line operations to infrastructure planning through self-directed development, in a critical national infrastructure environment.'],
+    ['Progression', 'Advanced over twelve years from front-line operations to infrastructure planning through self-directed development, in a regulated utility environment.'],
   ]);
 
   // Education & Qualifications
   sectionHeading('Education & Qualifications');
   const educationItems = [
-    'ISO/IEC 27001:2022, 42001:2023 & 27701:2025 Lead Auditor; Fellow of Management Systems Auditing (FellowMSA).',
-    'Lean Six Sigma Green Belt (LSSGB), Star Global College of Workforce Development - Feb 2026.',
-    'MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA - in progress, Apr 2025 - Mar 2027; route to MCIPS.',
-    'MicroMasters, Supply Chain Management & Advanced Network Design, MIT Center for Transportation & Logistics - coursework complete (5 core courses + advanced elective).',
-    'MicroMasters, Predictive Analytics using Python, University of Edinburgh: 2021 - 2022.',
-    'BSc (Hons) Logistics and Operations Management, Aston University - 2:1.',
-    'Professional Award in Cyber Security & OSINT, Abertay University - Distinction.',
+    'ISO/IEC 27001:2022, 42001:2023 and 27701:2025 Lead Auditor; Fellow of Management Systems Auditing (FellowMSA).',
+    'MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA - in progress, April 2025 - March 2027; route to MCIPS.',
+    'Lean Six Sigma Green Belt, Star Global College of Workforce Development - February 2026.',
+    'MicroMasters, Supply Chain Management and Advanced Network Design, MIT Center for Transportation & Logistics - coursework complete.',
+    'BSc (Hons) Logistics and Operations Management (2:1), Aston University.',
+    'Strategic Risk Leadership: Data, Empathy and Assurance, University of Illinois - in progress, from September 2026 (risk discovery, enterprise risk management tools, strategic internal auditing).',
+    'Information Assurance Analysis, Johns Hopkins University - February 2026, including AI in industrial control systems security and advanced network security.',
+    'Cyber Security: Technology and Governance, Royal Holloway, University of London - February 2026, including security management and governance.',
+    'Developing Industrial Internet of Things, University of Colorado Boulder - December 2025, including industrial IoT markets and security.',
+    'MicroMasters, Predictive Analytics using Python, University of Edinburgh - 2021 - 2022.',
+    'Professional Award in Cyber Security & OSINT, Abertay University - Distinction; CompTIA PenTest+ (valid to 2027).',
   ];
   // KPMG copy only: pulled from the fuller "continuing education" list on
   // skills-expertise.html -- the two entries most likely to resonate with
@@ -249,40 +267,17 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
     );
   }
   bullets(educationItems);
-  if (!singleWebsiteLink) {
-    doc.font(FONT.italic).fontSize(F.fine).fillColor(MUTED).text('Full certification record: kelroyjames.com/skills-expertise.html');
-  }
 
-  // Supporting evidence -- dropped from the expanded (KPMG) copy, which is
-  // read in person rather than followed up online; it stays on the public
-  // site CV, where the case-study links are the point.
-  if (!expand) {
-    sectionHeading('Supporting Evidence');
-    if (singleWebsiteLink) {
-      doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-        'Full case studies with methodology and evidence for every figure above are published on the website linked at the top of this CV.'
-      );
-    } else {
-      doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text('Full case studies with methodology and evidence for every figure above: ', { continued: true });
-      doc.font(FONT.bold).text('kelroyjames.com');
-    }
-    doc.moveDown(0.2 * SP);
-    bullets([
-      'Identifying £2.4M in Misallocated Funds - financial-control investigation and root-cause analysis on an adjacent account.',
-      'Restoring Control to a Failing Account - controls design and remediation following independent inspection findings, account taken from unsatisfactory to fully compliant.',
-      'Modernising Assurance Across Inspections - first-line control framework built on ISO management-systems standards, Lean Six Sigma and the Three Lines Model.',
-    ]);
-  }
-
-  // Availability
+  // Availability: the same position as the site, with no discharge date or
+  // leave detail.
   sectionHeading('Availability');
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    'Serving until April 2028 (resettlement). Available now for informational conversations and structured veteran or service-leaver hiring routes ahead of full-time availability.',
+    'Available for permanent appointment from April 2028. Open before that date to resettlement work attachments, secondments and structured veteran or service-leaver hiring routes.',
     { align: expand ? 'justify' : 'left' }
   );
 
   doc.moveDown(expand ? 0.15 : 0.4 * SP);
-  doc.font(FONT.italic).fontSize(F.fine).fillColor(MUTED).text('Last Updated: September 2026');
+  doc.font(FONT.italic).fontSize(F.fine).fillColor(MUTED).text('Last Updated: October 2026');
 
   doc.end();
   return new Promise((resolve) => stream.on('finish', resolve));
@@ -298,6 +293,8 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
 
   await buildDoc({ outPath: publicPath, includePhone: false, singleWebsiteLink: false, expand: false });
   console.log('wrote', publicPath);
+
+  if (process.argv[2] === 'public') return;
 
   await buildDoc({
     outPath: privatePath,
