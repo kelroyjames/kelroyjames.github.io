@@ -121,6 +121,11 @@
   .hero .wrap{padding:76px 26px 62px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
   .hero .wrap > *{min-width:0}
   @media(min-width:920px){.hero .wrap{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:64px;padding-top:92px;padding-bottom:78px}}
+  /* The hero headline is three phrases, each on its own line, sized for its length. */
+  .hero h1{font-size:clamp(1.9rem,8vw,2.2rem);line-height:1.12}
+  .hero h1 .hp{display:block}
+  .hero h1 .hp + .hp{margin-top:.3em}
+  @media(min-width:920px){.hero h1{font-size:clamp(2.1rem,2.7vw,2.4rem)}}
   h1{
     font-family:Spectral,Georgia,serif;font-weight:700;
     font-size:clamp(2.3rem,5.2vw,3.7rem);line-height:1.05;letter-spacing:-.02em;
@@ -392,7 +397,7 @@ main:focus{outline:none}
 <header class="hero" id="top">
   <div class="wrap">
     <div>
-      <h1>Operational Risk &amp; Supply Chain Assurance | Third-Party &amp; Supplier Assurance | Governance, Risk &amp; Compliance</h1>
+      <h1><span class="hp">Operational Risk &amp; Supply Chain Assurance</span><span class="sr-only"> | </span><span class="hp">Third-Party &amp; Supplier Assurance</span><span class="sr-only"> | </span><span class="hp">Governance, Risk &amp; Compliance</span></h1>
       <p class="lede">Operational risk and supply chain assurance manager with 18 years in Royal Navy logistics and global movements, preceded by 12 years in critical national infrastructure. Seeking operational risk, supply chain assurance, and supplier and third-party risk roles.</p>
       <p class="lede">Available for civilian roles from April 2028, and open now to early conversations and structured transition programmes.</p>
       <dl class="proof-bar">
