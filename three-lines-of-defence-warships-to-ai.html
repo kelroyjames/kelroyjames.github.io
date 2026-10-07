@@ -271,8 +271,8 @@ main:focus{outline:none}
 
 <section class="intro">
   <div class="wrap">
-    <p>I found this mapping by accident. I was partway through an ISO/IEC 27001 Lead Auditor course when I recognised a control I had been running for years under a completely different name. The Royal Navy's four-tier assurance model, made up of sub-departmental checks, departmental review, independent inspection, and strategic governance, is the same architecture ISO management-system standards use everywhere, not a naval invention, described in a vocabulary built for warships instead of boardrooms.</p>
-    <p>That recognition is what "Same Control, Two Vocabularies" is about at the level of individual tasks. This presentation, given to the Global Skill Development Council, takes the same argument up a level: to the assurance architecture itself, applied to a live governance problem: AI model risk under ISO/IEC 42001.</p>
+    <p>While working through an ISO/IEC 27001 Lead Auditor course, I compared it with a control I had been running for years under a different name, and the two matched. The Royal Navy's four-tier assurance model, made up of sub-departmental checks, departmental review, independent inspection, and strategic governance, is the same architecture ISO management-system standards use everywhere, described in a vocabulary built for warships instead of boardrooms.</p>
+    <p><a href="/same-control-two-vocabularies">Same Control, Two Vocabularies</a> makes that comparison at the level of individual tasks. This presentation, given to the Global Skill Development Council, takes the same argument up a level, to the assurance architecture itself, applied to a live governance problem: AI model risk under ISO/IEC 42001.</p>
     <p><em>If a four-tier model has kept warships and their supply chains audit-ready for decades, the same structure is a reasonable starting point for governing something that changes as fast as an AI model does.</em></p>
   </div>
 </section>
@@ -301,7 +301,7 @@ main:focus{outline:none}
     <img loading="lazy" decoding="async" width="1200" height="675" src="/images/articles/three-lines-ai/gsdc-slide-07.jpg" alt="Comparison table: Royal Navy BRd 93 versus ISO 42001 AI governance, showing matching structure, human factor, key mechanism and audit style">
     <div class="slide-cap">
       <p>Line them up and the architecture matches almost exactly. Where BRd 93 has a Logistics Officer applying professional judgement to risk context, ISO/IEC 42001 has an AI Risk Officer providing human oversight under Clause 5. Where the Navy runs Supersession at every handover, the standard runs mandatory model supersession whenever a model owner changes, a model moves from staging to production, or its training data changes materially.</p>
-      <p>Military assurance is stronger on enforcing accountability through binary grading and mandatory handover. ISO 42001 is stronger on managing a lifecycle that keeps changing after deployment. Neither replaces the other: the strongest AI governance model applies Navy-grade accountability inside ISO's more flexible structure.</p>
+      <p>Military assurance is stronger on enforcing accountability through binary grading and mandatory handover. ISO 42001 is stronger on managing a lifecycle that keeps changing after deployment. The strongest AI governance model would apply Navy-grade accountability inside ISO's more flexible structure.</p>
     </div>
   </div>
 
@@ -313,7 +313,7 @@ main:focus{outline:none}
   <div class="slide-block">
     <img loading="lazy" decoding="async" width="1200" height="675" src="/images/articles/three-lines-ai/gsdc-slide-08.jpg" alt="Diagram translating the four Royal Navy tiers to the corporate Three Lines of Defence model used in AI governance">
     <div class="slide-cap">
-      <p>Translated into the language a corporate risk function already uses: Tier 1 (the unit) and Tier 2 (the Logistics Officer) map to the First Line: the developers and risk owners doing the work and making the first judgement call. Tier 3 (Fleet Logistics Inspection) maps to the Second Line: compliance and risk oversight, independent of the people being checked. Tier 4 (Navy Command) maps to the Third Line: internal audit and the governance board setting risk appetite from a position of genuine independence.</p>
+      <p>Translated into the language a corporate risk function already uses: Tier 1 (the unit) and Tier 2 (the Logistics Officer) map to the First Line: the developers and risk owners doing the work and making the first judgement call. Tier 3 (Fleet Logistics Inspection) maps to the Second Line: compliance and risk oversight, independent of the people being checked. Tier 4 (Navy Command) maps to the Third Line: internal audit and the governance board setting risk appetite from a position of independence.</p>
     </div>
   </div>
 
@@ -339,7 +339,7 @@ main:focus{outline:none}
   <div class="slide-block">
     <img loading="lazy" decoding="async" width="1200" height="675" src="/images/articles/three-lines-ai/gsdc-slide-11.jpg" alt="Tier 3: Independent Assurance, mapped between Fleet Logistics Inspection's binary grading and AI internal audit under ISO 42001 Clause 9.2">
     <div class="slide-cap">
-      <p><strong>Tier 3: Independent Assurance.</strong> Fleet Logistics Inspection uses a binary grading system running from Fully Compliant to No Compliance: there is no "partially safe" grade, because in a warzone or a regulated market, partial safety isn't a real category. ISO 42001's internal audit under Clause 9.2 exists for the same reason: independent verification of the safety guardrails, not a self-assessment.</p>
+      <p><strong>Tier 3: Independent Assurance.</strong> Fleet Logistics Inspection uses a binary grading system running from Fully Compliant to No Compliance: there is no "partially safe" grade, because in a warzone or a regulated market, partial safety is not a category. ISO 42001's internal audit under Clause 9.2 exists for the same reason: independent verification of the safety guardrails, which a self-assessment cannot provide.</p>
     </div>
   </div>
 
@@ -351,14 +351,13 @@ main:focus{outline:none}
   <div class="slide-block">
     <img loading="lazy" decoding="async" width="1200" height="675" src="/images/articles/three-lines-ai/gsdc-slide-13.jpg" alt="Strategic Lesson 1: The Supersession Check, mapped from mandatory Navy handover audits to mandatory AI model supersession events">
     <div class="slide-cap">
-      <p><strong>Lesson 1: The Supersession check.</strong> The Navy protocol is simple: no inheritance of unknown risks. A new officer does not accept an account without a deep-dive audit first. Applied to AI, that means mandatory supersession whenever the model owner changes, the model moves from staging to production, or the training data or service history needs revalidating. The principle is the same: don't inherit a risk position that has not been verified independently.</p>
+      <p><strong>Lesson 1: The Supersession check.</strong> The Navy protocol is simple: no inheritance of unknown risks. A new officer does not accept an account without a deep-dive audit first. Applied to AI, that means mandatory supersession whenever the model owner changes, the model moves from staging to production, or the training data or service history needs revalidating. The principle is the same: do not inherit a risk position that has not been verified independently.</p>
     </div>
   </div>
 
   <div class="slide-block">
-    <img loading="lazy" decoding="async" width="1200" height="675" src="/images/articles/three-lines-ai/gsdc-slide-14.jpg" alt="Strategic Lesson 2: Minimum Viable Bureaucracy, splitting checks into governance (must do) and compliance (check by exception)">
     <div class="slide-cap">
-      <p><strong>Lesson 2: Minimum Viable Bureaucracy.</strong> Not every check deserves the same weight. The Navy re-categorised its checks into Governance (lawful obligations, non-negotiable), Assurance (enablers for operational capability), and Compliance (internal checks, now trusted to the inspector's risk-based discretion), and started accepting "Checked, NSTR" (Nothing Significant to Report) as a valid log entry where the risk is genuinely low. Naval streamlining exercises using this logic have materially cut documentation burden without touching anything load-bearing. The same discipline applies to AI governance: don't document every low-risk parameter change. Focus the energy on the high-risk governance items, such as legal, safety, ethics, and bias thresholds, and automate the rest.</p>
+      <p><strong>Lesson 2: Minimum Viable Bureaucracy.</strong> Not every check deserves the same weight. Checks fall into three groups: governance obligations that are lawful and non-negotiable, assurance that enables operational capability, and internal compliance checks that can be left to the inspector's risk-based discretion. Where the risk is low, a short entry confirming that nothing significant was found can be a complete and valid record. Applied with care, that logic cuts documentation burden without touching anything load-bearing. The same discipline applies to AI governance: do not document every low-risk parameter change. Focus the energy on the high-risk governance items, such as legal, safety, ethics, and bias thresholds, and automate the rest.</p>
     </div>
   </div>
 
@@ -370,20 +369,20 @@ main:focus{outline:none}
   <div class="slide-block">
     <img loading="lazy" decoding="async" width="1200" height="675" src="/images/articles/three-lines-ai/gsdc-slide-16.jpg" alt="Diagram: trust in data plus trust in supply equals force generation and lethality; the same logic applies to trust in algorithms">
     <div class="slide-cap">
-      <p>Logistics assurance is what gives command the confidence to deploy in the first place, not paperwork bolted onto operations. As AI moves into supply chains through predictive maintenance and autonomous resupply, it introduces probabilistic risk into what used to be a deterministic system. The stakes are the same shape either way: we need the same level of trust in our algorithms that we already require of our physical stores. If AI is the engine, governance is the steering wheel.</p>
+      <p>Logistics assurance gives command the confidence to deploy in the first place. As AI moves into supply chains through predictive maintenance and autonomous resupply, it introduces probabilistic risk into what used to be a deterministic system. The stakes are the same shape either way: algorithms need the same level of trust that physical stores already require. If AI is the engine, governance is the steering wheel.</p>
     </div>
   </div>
 
   <div class="slide-block">
     <img loading="lazy" decoding="async" width="1200" height="675" src="/images/articles/three-lines-ai/gsdc-slide-17.jpg" alt="Summary diagram: the three lines of defence for AI, showing operational judgement, inspections with teeth, and strategic direction">
     <div class="slide-cap">
-      <p>The summary is deliberately simple. First Line: operational judgement, with the shop floor owning the risk. Second Line: inspections with teeth, graded assurance that can force immediate action when something is genuinely unsatisfactory. Third Line: strategic direction, where a governance board sets risk appetite and owns the supersession policy. It is the structure the Royal Navy has used to keep complex, high-consequence systems accountable for decades, applied to a governance problem that is, at bottom, the same problem in new clothes.</p>
+      <p>The summary is deliberately simple. First Line: operational judgement, with the shop floor owning the risk. Second Line: inspections with teeth, graded assurance that can force immediate action when something is unsatisfactory. Third Line: strategic direction, where a governance board sets risk appetite and owns the supersession policy. It is the structure the Royal Navy has used to keep complex, high-consequence systems accountable for decades, applied to a governance problem with the same structure.</p>
     </div>
   </div>
 
   <div class="caution">
-    <h3>What this presentation is not</h3>
-    <p>It is a structural analogy, not a compliance mapping. Nothing here asserts that following this framework satisfies ISO/IEC 42001 certification requirements, and no organisation should treat a slide here as evidence a requirement has been met. The naval policy references are described in general terms; nothing internal to the Royal Navy or the Ministry of Defence is reproduced.</p>
+    <h3>Scope of this presentation</h3>
+    <p>It is a structural analogy. Nothing here asserts that following this framework satisfies ISO/IEC 42001 certification requirements, and no organisation should treat a slide here as evidence a requirement has been met. The naval policy references are described in general terms; nothing internal to the Royal Navy or the Ministry of Defence is reproduced.</p>
   </div>
 
 </div>
