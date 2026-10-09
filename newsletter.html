@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Chain of Custody is my weekly newsletter on practical supply chain assurance: supplier evidence, ownership and hand-offs, and lessons from control failures.">
+<meta property="og:title" content="Chain of Custody: Supply Chain Assurance Newsletter">
+<meta property="og:description" content="My weekly newsletter on practical supply chain assurance: supplier evidence, ownership and hand-offs, and lessons from control failures.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kelroyjames.com/newsletter">
+<meta property="og:image" content="https://kelroyjames.com/images/kelroy-james-headshot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chain of Custody: Supply Chain Assurance Newsletter">
+<meta name="twitter:description" content="My weekly newsletter on practical supply chain assurance: supplier evidence, ownership and hand-offs, and lessons from control failures.">
+<meta name="twitter:image" content="https://kelroyjames.com/images/kelroy-james-headshot.jpg">
+<link rel="canonical" href="https://kelroyjames.com/newsletter">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#EDEEF0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1119" media="(prefers-color-scheme: dark)">
+<title>Chain of Custody: Supply Chain Assurance Newsletter | Kelroy James</title>
+<link rel="preload" href="/fonts/publicsans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/spectral-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/chain-of-custody.css">
+<style>
+  :root{
+    --ground:#EDEEF0; --surface:#FFFFFF; --surface-2:#F4F5F7;
+    --ink:#131C28; --ink-2:#3A4753; --muted:#56636F;
+    --rule:#D4D8DD; --rule-soft:#E4E7EA;
+    --brass:#7A5C24; --brass-soft:#F2ECDF;
+    --navy:#24405C; --navy-soft:#E4EAF1;
+    --shadow:0 1px 2px rgba(19,28,40,.06), 0 10px 30px rgba(19,28,40,.06);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0B1119; --surface:#131B24; --surface-2:#18212B;
+      --ink:#E2E7EC; --ink-2:#B4C0CB; --muted:#828F9B;
+      --rule:#27333F; --rule-soft:#1F2A34;
+      --brass:#C9A257; --brass-soft:#2A2317;
+      --navy:#83A6C7; --navy-soft:#182533;
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0B1119;--surface:#131B24;--surface-2:#18212B;--ink:#E2E7EC;--ink-2:#B4C0CB;
+    --muted:#828F9B;--rule:#27333F;--rule-soft:#1F2A34;--brass:#C9A257;--brass-soft:#2A2317;
+    --navy:#83A6C7;--navy-soft:#182533;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 30px rgba(0,0,0,.3);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box;margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+  .nav{border-bottom:1px solid var(--rule);background:var(--surface);position:sticky;top:0;z-index:20}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:15px;padding-bottom:15px}
+  .mark{font-family:Spectral,Georgia,serif;font-weight:700;font-size:1.45rem;letter-spacing:-.015em;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .nav ul{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
+  .nav a.lnk{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+  .nav a.lnk:hover{color:var(--brass)}
+  .nav a.lnk.cta{background:var(--brass);color:var(--surface);padding:9px 18px}
+  .nav a.lnk.cta:hover{background:var(--navy);color:var(--surface)}
+  .nav-right{display:flex;align-items:center;gap:20px}
+  .nav-getcv{white-space:nowrap}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:10px 12px;margin-right:-12px;font-size:20px;line-height:1;color:var(--ink)}
+  @media(max-width:960px){
+    .nav-toggle{display:block}
+    .nav-right{gap:10px}
+    .nav-right ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--rule);padding:6px 26px 18px}
+    .nav-right ul.open{display:flex}
+    .nav-right ul li{padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+    .nav-right ul li:last-child{border-bottom:none;padding-top:16px}
+    .nav a.lnk.cta{display:inline-block;text-align:center}
+  }
+
+  .page-head{background:var(--surface);border-bottom:1px solid var(--rule);padding:56px 0 48px}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 18px}
+  h1{font-family:Spectral,Georgia,serif;font-weight:700;font-size:clamp(2rem,4.4vw,2.9rem);line-height:1.1;letter-spacing:-.015em;margin:0 0 14px}
+  .sub{font-family:Spectral,Georgia,serif;font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.4;color:var(--ink);margin:0 0 18px}
+  .lede{font-family:Spectral,Georgia,serif;font-size:clamp(1.02rem,1.8vw,1.2rem);line-height:1.55;color:var(--ink-2);max-width:68ch;margin:0 0 28px}
+
+  section{padding:56px 0}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;padding-bottom:13px;border-bottom:1px solid var(--rule)}
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.6rem;font-weight:700;margin:0;letter-spacing:-.012em}
+  .sec-head .note{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:auto;white-space:nowrap}
+  @media(max-width:700px){
+    .sec-head{flex-direction:column;align-items:flex-start;gap:6px}
+    .sec-head .note{margin-left:0;white-space:normal}
+  }
+  .intro-p{max-width:66ch;color:var(--ink-2);margin:0 0 20px;font-size:16px}
+
+  .themes{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+  @media(min-width:760px){.themes{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}
+  .theme{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--brass);box-shadow:var(--shadow);padding:24px 22px 26px}
+  .theme h3{font-family:Spectral,Georgia,serif;font-size:1.2rem;font-weight:600;line-height:1.3;margin:0 0 10px}
+  .theme p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.58}
+
+  .author{background:var(--surface-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .author-links{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px 24px}
+  .author-links a{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--brass);text-decoration:none}
+  .author-links a:hover{text-decoration:underline;text-underline-offset:3px}
+
+  .cta-band{background:var(--surface-2);border-top:1px solid var(--rule)}
+  .cta-band .wrap{padding:44px 26px}
+  .cta-band h2{font-family:Spectral,Georgia,serif;font-size:1.5rem;margin:0 0 14px;font-weight:700}
+  .cta-band p{margin:0 0 20px;color:var(--ink-2);max-width:64ch}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  @media(max-width:400px){.btns .btn{flex:1 1 100%;text-align:center}}
+  .btn{display:inline-block;padding:11px 22px;text-decoration:none;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);color:var(--ink);background:transparent}
+  .btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+  .btn:hover{background:var(--brass);border-color:var(--brass);color:var(--surface)}
+
+  footer{padding:34px 0 56px;border-top:1px solid var(--rule)}
+  footer p{font-size:12.5px;color:var(--muted);max-width:74ch;margin:0 0 10px;line-height:1.6}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--surface);color:var(--ink);padding:10px 16px;z-index:300;font:600 14px/1.2 "Public Sans",sans-serif;text-decoration:none;border:2px solid currentColor}
+.skip-link:focus{left:8px;top:8px}
+main:focus{outline:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Chain of Custody: Supply Chain Assurance Newsletter",
+      "description": "Chain of Custody is a weekly newsletter on practical supply chain assurance by Kelroy James: supplier evidence, ownership and hand-offs, and lessons from control failures.",
+      "url": "https://kelroyjames.com/newsletter",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Kelroy James",
+        "url": "https://kelroyjames.com/"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Kelroy James",
+        "url": "https://kelroyjames.com/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kelroyjames.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Newsletter",
+          "item": "https://kelroyjames.com/newsletter"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="/">Kelroy James</a>
+    <div class="nav-right">
+      <ul>
+        <li><a class="lnk" href="/case-studies">Case Studies</a></li>
+        <li><a class="lnk" href="/writing">Writing</a></li>
+        <li><a class="lnk" href="/newsletter" aria-current="page">Newsletter</a></li>
+        <li><a class="lnk" href="/background">Background</a></li>
+        <li><a class="lnk" href="/skills-expertise">Skills</a></li>
+        <li><a class="lnk" href="/for-recruiters">For Recruiters</a></li>
+      </ul>
+      <a class="lnk cta nav-getcv" href="/downloads/kelroy-james-cv-public.pdf" download rel="noopener">Get CV</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.parentElement.querySelector('ul');var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+
+<header class="page-head nl-page">
+  <div class="wrap">
+    <p class="kicker">Newsletter</p>
+    <h1>Chain of Custody</h1>
+    <p class="sub">Practical supply chain assurance, every week.</p>
+    <p class="lede">I draw on 18 years in logistics to examine where supplier evidence, ownership and operational controls break down. In Chain of Custody, I share case studies, practical questions and lessons you can apply to your own assurance work.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://chainofcustody.beehiiv.com/">Subscribe free</a>
+      <a class="btn" href="https://chainofcustody.beehiiv.com/">Read recent issues</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2>Recurring themes</h2><span class="note">What the issues return to</span></div>
+    <div class="themes">
+      <div class="theme">
+        <h3>Supplier evidence</h3>
+        <p>What a record proves, and what still needs checking.</p>
+      </div>
+      <div class="theme">
+        <h3>Ownership and hand-offs</h3>
+        <p>Who is accountable when work crosses teams or suppliers.</p>
+      </div>
+      <div class="theme">
+        <h3>Control failures</h3>
+        <p>Lessons from published cases and questions to apply in practice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="author">
+  <div class="wrap">
+    <div class="sec-head"><h2>Who writes it</h2><span class="note">Kelroy James</span></div>
+    <p class="intro-p">I write Chain of Custody alongside my work in operational risk and supply chain assurance. The newsletter draws on 18 years in logistics, and my professional record sits elsewhere on this site.</p>
+    <ul class="author-links">
+      <li><a href="/case-studies">Case studies →</a></li>
+      <li><a href="/background">Background →</a></li>
+      <li><a href="/downloads/kelroy-james-cv-public.pdf" download rel="noopener">Download CV →</a></li>
+      <li><a href="/#contact">Get in touch →</a></li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Subscribe to Chain of Custody</h2>
+    <p>Free to subscribe. You can read recent issues first to see what to expect.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://chainofcustody.beehiiv.com/">Subscribe free</a>
+      <a class="btn" href="https://chainofcustody.beehiiv.com/">Read recent issues</a>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer>
+  <div class="wrap">
+    <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
+    <p>© Kelroy James</p>
+    <p><a href="/newsletter">Chain of Custody newsletter</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

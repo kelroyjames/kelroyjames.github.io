@@ -1,0 +1,53 @@
+/* Chain of Custody newsletter components.
+   Shared by the homepage band, the /newsletter page and the end-of-page invitation.
+   Uses each page's own colour variables, so light and dark themes follow the page. */
+
+.nl-invite,.nl-band,.nl-page{--nl-accent:var(--brass,var(--accent,#7A5C24))}
+
+/* Subscribe link, styled like the site's primary button */
+.nl-link{
+  display:inline-block;padding:11px 22px;text-decoration:none;
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--ink);color:var(--surface);background:var(--ink);cursor:pointer;
+}
+.nl-link:hover{background:var(--nl-accent);border-color:var(--nl-accent);color:var(--surface)}
+.nl-link:focus-visible{outline:2px solid var(--nl-accent);outline-offset:3px}
+.nl-link.nl-alt{background:transparent;color:var(--ink)}
+.nl-link.nl-alt:hover{background:var(--nl-accent);border-color:var(--nl-accent);color:var(--surface)}
+.nl-more{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--nl-accent);text-decoration:none;
+}
+.nl-more:hover{text-decoration:underline;text-underline-offset:3px}
+.nl-more:focus-visible{outline:2px solid var(--nl-accent);outline-offset:3px}
+
+/* End-of-page invitation on articles and case studies */
+.nl-invite{background:var(--surface-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.nl-invite .wrap{padding-top:32px;padding-bottom:34px}
+.nl-invite-inner{max-width:66ch;border-left:3px solid var(--nl-accent);padding-left:20px}
+.nl-invite-label{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--nl-accent);margin:0 0 8px;
+}
+.nl-invite-text{font-family:Spectral,Georgia,serif;font-size:1.1rem;line-height:1.5;color:var(--ink);margin:0 0 16px}
+
+/* Homepage band, placed straight after the introduction */
+.nl-band{background:var(--surface-2);border-bottom:1px solid var(--rule);padding:56px 0}
+.nl-card{
+  background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--nl-accent);
+  box-shadow:var(--shadow,none);padding:32px 34px;
+}
+.nl-eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--nl-accent);margin:0 0 10px;
+}
+.nl-title{font-family:Spectral,Georgia,serif;font-size:1.72rem;font-weight:700;line-height:1.15;letter-spacing:-.012em;margin:0 0 6px;color:var(--ink)}
+.nl-sub{font-family:Spectral,Georgia,serif;font-size:1.18rem;line-height:1.4;color:var(--ink-2);margin:0 0 16px}
+.nl-body{max-width:62ch;font-size:15.5px;line-height:1.62;color:var(--ink-2);margin:0 0 22px}
+.nl-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px}
+
+@media(max-width:560px){
+  .nl-band{padding:40px 0}
+  .nl-card{padding:24px 20px}
+  .nl-actions .nl-link{flex:1 1 100%;text-align:center}
+}

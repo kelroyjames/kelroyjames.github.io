@@ -22,6 +22,7 @@
 <link rel="preload" href="/fonts/publicsans-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/spectral-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/chain-of-custody.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -101,7 +102,7 @@
   .nav-right{display:flex;align-items:center;gap:20px}
   .nav-getcv{white-space:nowrap}
   .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:10px 12px;margin-right:-12px;font-size:20px;line-height:1;color:var(--ink)}
-  @media(max-width:700px){
+  @media(max-width:960px){
     .nav-toggle{display:block}
     .nav-right{gap:10px}
     .nav-right ul{
@@ -383,6 +384,7 @@ main:focus{outline:none}
       <ul>
         <li><a class="lnk" href="/case-studies">Case Studies</a></li>
         <li><a class="lnk" href="/writing">Writing</a></li>
+        <li><a class="lnk" href="/newsletter">Newsletter</a></li>
         <li><a class="lnk" href="/background">Background</a></li>
         <li><a class="lnk" href="/skills-expertise">Skills</a></li>
         <li><a class="lnk" href="/for-recruiters">For Recruiters</a></li>
@@ -409,6 +411,7 @@ main:focus{outline:none}
       <div class="btns" style="margin-top:22px">
         <a class="btn primary" href="/downloads/kelroy-james-cv-public.pdf" download rel="noopener">Download CV (PDF) · October 2026</a>
         <a class="btn" href="#work">See case studies</a>
+        <a class="btn" href="https://chainofcustody.beehiiv.com/">Subscribe to Chain of Custody</a>
       </div>
       <p style="margin:14px 0 0;font-size:13px;color:var(--muted)">Full CV with direct number → <a href="#contact" style="color:var(--brass)">request here</a></p>
     </div>
@@ -419,6 +422,21 @@ main:focus{outline:none}
     </div>
   </div>
 </header>
+
+<section class="nl-band" id="newsletter" aria-labelledby="nl-title">
+  <div class="wrap">
+    <div class="nl-card">
+      <p class="nl-eyebrow">Newsletter</p>
+      <h2 class="nl-title" id="nl-title">Chain of Custody</h2>
+      <p class="nl-sub">Practical supply chain assurance, every week.</p>
+      <p class="nl-body">I draw on 18 years in logistics to examine where supplier evidence, ownership and operational controls break down. In Chain of Custody, I share case studies, practical questions and lessons you can apply to your own assurance work.</p>
+      <div class="nl-actions">
+        <a class="nl-link" href="https://chainofcustody.beehiiv.com/">Subscribe free</a>
+        <a class="nl-more" href="/newsletter">About the newsletter →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="work">
   <div class="wrap">
@@ -664,6 +682,7 @@ main:focus{outline:none}
   <div class="wrap">
     <p>Views expressed on this site are my own. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</p>
     <p>© Kelroy James</p>
+    <p><a href="/newsletter">Chain of Custody newsletter</a></p>
   </div>
 </footer>
 
