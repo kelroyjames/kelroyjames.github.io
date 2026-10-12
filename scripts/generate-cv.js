@@ -171,12 +171,13 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
       : 'Fareham, Hampshire   |   kelroydbjames@gmail.com   |   linkedin.com/in/kelroy-james   |   kelroyjames.com');
   rule();
 
-  // Professional summary: the copy used on the site hero. It states no
-  // inspection outcome ("restores assurance positions", not "failed ones"),
-  // and the selected result matches the financial-control case study.
+  // Professional summary: opens on one distinctive attribute, the guidance
+  // for a civilian reader, and leaves out years of service. It states no
+  // inspection outcome, and the selected result matches the
+  // financial-control case study.
   sectionHeading('Professional Summary');
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    'Operational risk and supply chain assurance manager with 18 years in Royal Navy logistics and global movements, preceded by 12 years in critical national infrastructure. Owns the controls, loss position and financial integrity of accounts valued between £10M and £25M, leads teams of up to ten through concurrent operational commitments, and restores assurance positions to sustained compliance. Seeking operational risk, supply chain assurance, and supplier and third-party risk roles.',
+    'Operational risk and supply chain assurance manager who designs first-line controls that keep working after the person who built them has moved on. Works from the evidence: the record, the physical stock and the person accountable for each, and closes the gap where they disagree. Seeking operational risk, supply chain assurance, and supplier and third-party risk roles, bringing Royal Navy logistics experience, ISO Lead Auditor qualifications and an MSc in progress.',
     { align: expand ? 'justify' : 'left' }
   );
   doc.moveDown(0.25 * SP);
@@ -188,7 +189,7 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   doc.moveDown(0.25 * SP);
   doc.font(FONT.bold).fontSize(F.body).fillColor(INK).text('Core Skills: ', { continued: true, align: expand ? 'justify' : 'left' });
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    'Operational Risk & Resilience | Supply Chain Assurance | Control Design & Testing | Third-Party & Contractor Assurance | Loss Investigation & Root-Cause Analysis | Governance, Risk & Compliance (Three Lines Model) | First-Line Risk Ownership (1LOD) | Customs & Movements Compliance | Security Management & Governance | Industrial IoT & Control Systems Security Awareness | Lean Six Sigma | ISO/IEC 27001, 42001, 27701 Lead Auditor | MSc Supply Chain and Logistics Management (in progress, route to MCIPS)',
+    'Operational Risk & Resilience | Supply Chain Assurance | Control Design & Testing | Third-Party & Contractor Assurance | Loss Investigation & Root-Cause Analysis | Governance, Risk & Compliance (Three Lines Model) | First-Line Risk Ownership (1LOD) | ISO/IEC 27001, 42001, 27701 Lead Auditor',
     { align: expand ? 'justify' : 'left' }
   );
 
@@ -197,22 +198,22 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   // achievement. Earlier postings use problem, action, result.
   sectionHeading('Professional Experience');
 
-  job('Petty Officer (Supply Chain Manager)', 'Royal Navy, specialist unit', 'September 2026 - Present', [
+  job('Supply Chain Manager (Petty Officer)', 'Royal Navy, specialist unit', 'September 2026 - Present', [
     ['Current Scope', 'Supply chain accountability, compliance and movements support for a high-readiness specialist unit.'],
   ]);
   jobGap();
 
-  job('Petty Officer (Supply Chain Manager) and Departmental Training Coordinator', 'Royal Navy, Front-Line Warship', 'May 2024 - September 2026', [
+  job('Supply Chain Manager (Petty Officer) and Departmental Training Coordinator', 'Royal Navy, Front-Line Warship', 'May 2024 - September 2026', [
     ['Compliance Recovery', 'Led the remediation of an account rated unsatisfactory at independent inspection, restoring full compliance within 12 months and sustaining it through pre-deployment assurance.'],
-    ['Competency Assurance', "Departmental training coordinator through three Fleet Logistics Inspections: planned and oversaw the training serials taking junior rates through workplace task books for advancement, evidencing competence as part of the department's compliance position."],
-    ['Financial Control & Third-Party Reconciliation', 'Identified £2.4M in misallocated expenditure on an adjacent account during a contractor-supported upkeep period, tracing it to an unowned interface between the contractual and accounting routes; reconciled enterprise data with prime contractor and DE&S counterparts and co-designed an analytics dashboard for continuous oversight.'],
+    ['Competency Assurance', "Departmental training coordinator through three formal logistics inspections: planned and oversaw the training programmes taking junior personnel through workplace task books for promotion, evidencing competence as part of the department's compliance position."],
+    ['Financial Control & Third-Party Reconciliation', 'Identified £2.4M in misallocated expenditure on an adjacent account during a contractor-supported upkeep period, tracing it to an unowned interface between the contractual and accounting routes; reconciled enterprise data with the prime contractor and with Defence Equipment and Support, the procurement body of the Ministry of Defence, and co-designed an analytics dashboard for continuous oversight.'],
     ['Loss Reduction', 'Cut financial liability by 80% by closing 15 loss cases through asset verification and investigation.'],
     ['Control Design', 'Redesigned first-line controls using ISO management-systems standards, Lean Six Sigma and the Three Lines Model; recommendations submitted to the policy authority as a proposed policy instruction.'],
-    ['Training & Awareness', 'Designed and delivered training on the purpose behind the monthly compliance-monitoring routine, reframing it for the team as governance, risk and compliance work rather than administration; extended into "Empowerment Day," a junior-rate development programme adopted as recurring departmental practice.'],
+    ['Training & Awareness', 'Designed and delivered training on the purpose behind the monthly compliance-monitoring routine, reframing it for the team as governance, risk and compliance work rather than administration; extended into "Empowerment Day," a junior-personnel development programme adopted as recurring departmental practice.'],
   ]);
   jobGap();
 
-  job('Petty Officer (Supply Chain and Global Movements)', 'Royal Navy, Wildcat Maritime Force', 'April 2022 - May 2024', [
+  job('Supply Chain and Global Movements (Petty Officer)', 'Royal Navy, Wildcat Maritime Force', 'April 2022 - May 2024', [
     ['Asset Accountability', 'Consolidated a dispersed, effectively unauditable asset base into a single accountable holding and closed 14 major loss investigations through evidence-based reconciliation.'],
     ['Movements & Customs Compliance', 'Ran global movements coordination alongside stores accountability, covering international freight, customs documentation and third-party freight and handling partners.'],
     ['Team Leadership', 'Led a nine-person team through concurrent operational commitments, including support to a £5M weapons trial; six of the nine have since been promoted.'],
@@ -221,7 +222,7 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   jobGap();
 
   job('Section Head, Supply Chain (Petty Officer)', 'Royal Navy, Surface Flotilla Engineering Support', 'June 2021 - April 2022', [
-    ['Financial Accountability', 'Tier 1 approver of record for stock and inventory valued between £10M and £25M.'],
+    ['Financial Accountability', 'Approver of record, at Tier 1 level, for stock and inventory valued between £10M and £25M.'],
     ['Compliance Assurance', 'Owned first-line compliance-tool testing across three ship classes from the point of promotion.'],
     ['Lean Delivery', 'Led the logistics workstream of a lean-maintenance pilot: £145,674 of stores handled with zero losses on return, and the highest rate of demands placed on time of any comparable support period that year.'],
     ['Innovation', 'Selected for the 12-week Percy Hobart Fellowship, a Defence innovation programme, and delivered a mentored capability project on consignment-tracking process redesign.'],
@@ -231,8 +232,8 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   job('Earlier Royal Navy Postings - Assurance, Movements and Leadership', 'Royal Navy, various units', '2008 - 2021', [
     ['Fleet Stores Coordination Cell, 2019', 'Provided 24/7 watchkeeping cover for fleet-wide defect logistics across three concurrent global commitments; part of the five-person team awarded the Herbert Lott Efficiency Award.'],
     ['Fleet Diving Squadron', 'A high-readiness unit relied on external systems to locate its equipment. Led delivery of its own tracking capability under PRINCE2, from stakeholder mapping and contractor integration to customs-compliant procedures, ending a 200-mile round trip for consignment labels.'],
-    ['NATO SHAPE, 2015-16', 'As the only Royal Navy rating in a tri-service unit, rebuilt a non-compliant logistics account, including ammunition: established a Central Records Branch, new naming conventions and a new record template, restoring full compliance within nine months.'],
-    ['Dangerous Goods Training', "Delivered safety-critical dangerous goods training to EOD personnel and mentored colleagues ahead of Qualifying Courses without senior-rate oversight; awarded the Chief Naval Logistics Officer's Award (2018)."],
+    ['NATO SHAPE, 2015-16', 'As the only Royal Navy sailor in a tri-service unit, rebuilt a non-compliant logistics account, including ammunition: established a Central Records Branch, new naming conventions and a new record template, restoring full compliance within nine months.'],
+    ['Dangerous Goods Training', "Delivered safety-critical dangerous goods training to explosive ordnance disposal personnel and mentored colleagues ahead of promotion courses without senior supervision; awarded the Chief Naval Logistics Officer's Award (2018)."],
     ['Falkland Islands', "As Low Value Procurement Officer, sole point of contact for the deployed unit's financial and asset compliance, cutting low-value transaction volume by 80%."],
   ]);
   jobGap();
