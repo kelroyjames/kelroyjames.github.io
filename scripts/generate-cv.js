@@ -1,7 +1,10 @@
 // CV generator for kelroyjames.com
-// Usage: node scripts/generate-cv.js
-// Writes the public CV to downloads/kelroy-james-cv-public.pdf and the
-// KPMG workshop copy to private/kelroy-james-cv-kpmg-workshop.pdf.
+// Usage: node scripts/generate-cv.js            public CV and KPMG workshop copy
+//        node scripts/generate-cv.js public     public CV only
+//        node scripts/generate-cv.js variants   three role-specific CVs
+// Writes the public CV to downloads/kelroy-james-cv-public.pdf, the KPMG
+// workshop copy to private/kelroy-james-cv-kpmg-workshop.pdf and the role
+// variants to private/cv-variants/ (not published on the site).
 // Edit the data below, not the PDFs -- they are generated output.
 //
 // Note on the en dash: pdfkit's standard (non-embedded) Helvetica font
@@ -19,7 +22,41 @@ const INK = '#1a1a1a';
 const MUTED = '#555555';
 const RULE = '#c9c9c9';
 
-function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
+// Role-specific variants. Every fact in the body stays the same; a variant
+// changes only the headline line, the profile, the selected result, the
+// eight core skills, and which of the warship bullets comes first.
+const VARIANTS = {
+  'operational-risk': {
+    subtitle: 'Operational Risk & Resilience | Control Design & Testing | First-Line Risk Ownership',
+    profile: 'Operational risk and supply chain assurance manager who designs first-line controls that keep working after the person who built them has moved on. Owns the accounts, the loss position and the controls behind them, and finds where operational practice has drifted from the documented process, then closes the gap. Seeking operational risk and resilience roles, bringing Royal Navy logistics experience, ISO Lead Auditor qualifications and an MSc in progress.',
+    skills: 'Operational Risk & Resilience | Control Design & Testing | Loss Investigation & Root-Cause Analysis | First-Line Risk Ownership (1LOD) | Supply Chain Assurance | Customs & Movements Compliance | Lean Six Sigma | Security Management & Governance',
+    firstLabels: ['Compliance Recovery', 'Loss Reduction'],
+  },
+  'third-party-assurance': {
+    subtitle: 'Third-Party & Supplier Assurance | Supply Chain Assurance | Contractor Oversight',
+    profile: 'Supply chain assurance manager who checks what suppliers and contractors report against the records and the physical goods. Owns the loss position and records for accounts valued between £10M and £25M, and reconciles enterprise data with the prime contractor and Defence Equipment and Support. Seeking supplier and third-party risk roles, bringing Royal Navy logistics experience, ISO Lead Auditor qualifications and an MSc in progress.',
+    skills: 'Third-Party & Contractor Assurance | Supply Chain Assurance | Loss Investigation & Root-Cause Analysis | Customs & Movements Compliance | Control Design & Testing | First-Line Risk Ownership (1LOD) | Operational Risk & Resilience | ISO/IEC 27001, 42001, 27701 Lead Auditor',
+    firstLabels: ['Financial Control & Third-Party Reconciliation', 'Loss Reduction'],
+  },
+  'grc': {
+    subtitle: 'Governance, Risk & Compliance | Control Assurance | ISO Management Systems',
+    profile: 'Governance, risk and compliance practitioner from the first line, who turns management-systems standards and the Three Lines Model into controls that operational teams use. Holds ISO/IEC 27001, 42001 and 27701 Lead Auditor qualifications and has redesigned first-line controls on ISO standards, Lean Six Sigma and the Three Lines Model. Seeking governance, risk and compliance roles, bringing Royal Navy logistics experience and an MSc in progress.',
+    selected: 'cut financial liability by 80% on one account by closing 15 loss cases through asset verification and investigation.',
+    skills: 'Governance, Risk & Compliance (Three Lines Model) | Control Design & Testing | ISO/IEC 27001, 42001, 27701 Lead Auditor | First-Line Risk Ownership (1LOD) | Operational Risk & Resilience | Lean Six Sigma | Security Management & Governance | Industrial IoT & Control Systems Security Awareness',
+    firstLabels: ['Control Design', 'Compliance Recovery'],
+  },
+};
+
+// Moves the bullets whose label matches one in "labels" to the front, in the order
+// given; every other bullet keeps its original order.
+function ordered(items, labels) {
+  if (!labels || !labels.length) return items;
+  const rank = (it) => { const i = labels.indexOf(Array.isArray(it) ? it[0] : ''); return i < 0 ? labels.length : i; };
+  return items.map((it, idx) => ({ it, idx })).sort((a, b) => rank(a.it) - rank(b.it) || a.idx - b.idx).map((x) => x.it);
+}
+
+function buildDoc({ outPath, includePhone, singleWebsiteLink, expand, variant }) {
+  const V = variant || {};
   const doc = new PDFDocument({
     size: 'A4',
     margins: expand ? { top: 24, bottom: 22, left: 40, right: 40 } : { top: 42, bottom: 42, left: 48, right: 48 },
@@ -163,7 +200,7 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   doc.font(FONT.bold).fontSize(F.name).fillColor(INK).text('KELROY JAMES');
   doc.moveDown(0.15 * SP);
   doc.font(FONT.reg).fontSize(F.subtitle).fillColor(BLUE)
-    .text('Operational Risk & Supply Chain Assurance | Third-Party & Supplier Assurance | Governance, Risk & Compliance');
+    .text(V.subtitle || 'Operational Risk & Supply Chain Assurance | Third-Party & Supplier Assurance | Governance, Risk & Compliance');
   doc.moveDown(0.15 * SP);
   doc.font(FONT.reg).fontSize(F.contact).fillColor(MUTED)
     .text(includePhone
@@ -177,19 +214,19 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   // financial-control case study.
   sectionHeading('Professional Summary');
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    'Operational risk and supply chain assurance manager who designs first-line controls that keep working after the person who built them has moved on. Works from the evidence: the record, the physical stock and the person accountable for each, and closes the gap where they disagree. Seeking operational risk, supply chain assurance, and supplier and third-party risk roles, bringing Royal Navy logistics experience, ISO Lead Auditor qualifications and an MSc in progress.',
+    V.profile || 'Operational risk and supply chain assurance manager who designs first-line controls that keep working after the person who built them has moved on. Works from the evidence: the record, the physical stock and the person accountable for each, and closes the gap where they disagree. Seeking operational risk, supply chain assurance, and supplier and third-party risk roles, bringing Royal Navy logistics experience, ISO Lead Auditor qualifications and an MSc in progress.',
     { align: expand ? 'justify' : 'left' }
   );
   doc.moveDown(0.25 * SP);
   doc.font(FONT.bold).fontSize(F.body).fillColor(INK).text('Selected result: ', { continued: true, align: expand ? 'justify' : 'left' });
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    'identified and corrected £2.4M of misallocated expenditure on an adjacent account, tracing it to an unowned interface between the contractual and accounting routes.',
+    V.selected || 'identified and corrected £2.4M of misallocated expenditure on an adjacent account, tracing it to an unowned interface between the contractual and accounting routes.',
     { align: expand ? 'justify' : 'left' }
   );
   doc.moveDown(0.25 * SP);
   doc.font(FONT.bold).fontSize(F.body).fillColor(INK).text('Core Skills: ', { continued: true, align: expand ? 'justify' : 'left' });
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    'Operational Risk & Resilience | Supply Chain Assurance | Control Design & Testing | Third-Party & Contractor Assurance | Loss Investigation & Root-Cause Analysis | Governance, Risk & Compliance (Three Lines Model) | First-Line Risk Ownership (1LOD) | ISO/IEC 27001, 42001, 27701 Lead Auditor',
+    V.skills || 'Operational Risk & Resilience | Supply Chain Assurance | Control Design & Testing | Third-Party & Contractor Assurance | Loss Investigation & Root-Cause Analysis | Governance, Risk & Compliance (Three Lines Model) | First-Line Risk Ownership (1LOD) | ISO/IEC 27001, 42001, 27701 Lead Auditor',
     { align: expand ? 'justify' : 'left' }
   );
 
@@ -203,14 +240,14 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   ]);
   jobGap();
 
-  job('Supply Chain Manager (Petty Officer) and Departmental Training Coordinator', 'Royal Navy, Front-Line Warship', 'May 2024 - September 2026', [
+  job('Supply Chain Manager (Petty Officer) and Departmental Training Coordinator', 'Royal Navy, Front-Line Warship', 'May 2024 - September 2026', ordered([
     ['Compliance Recovery', 'Led the remediation of an account rated unsatisfactory at independent inspection, restoring full compliance within 12 months and sustaining it through pre-deployment assurance.'],
     ['Competency Assurance', "Departmental training coordinator through three formal logistics inspections: planned and oversaw the training programmes taking junior personnel through workplace task books for promotion, evidencing competence as part of the department's compliance position."],
     ['Financial Control & Third-Party Reconciliation', 'Identified £2.4M in misallocated expenditure on an adjacent account during a contractor-supported upkeep period, tracing it to an unowned interface between the contractual and accounting routes; reconciled enterprise data with the prime contractor and with Defence Equipment and Support, the procurement body of the Ministry of Defence, and co-designed an analytics dashboard for continuous oversight.'],
     ['Loss Reduction', 'Cut financial liability by 80% by closing 15 loss cases through asset verification and investigation.'],
     ['Control Design', 'Redesigned first-line controls using ISO management-systems standards, Lean Six Sigma and the Three Lines Model; recommendations submitted to the policy authority as a proposed policy instruction.'],
     ['Training & Awareness', 'Designed and delivered training on the purpose behind the monthly compliance-monitoring routine, reframing it for the team as governance, risk and compliance work rather than administration; extended into "Empowerment Day," a junior-personnel development programme adopted as recurring departmental practice.'],
-  ]);
+  ], V.firstLabels));
   jobGap();
 
   job('Supply Chain and Global Movements (Petty Officer)', 'Royal Navy, Wildcat Maritime Force', 'April 2022 - May 2024', [
@@ -222,7 +259,7 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   jobGap();
 
   job('Section Head, Supply Chain (Petty Officer)', 'Royal Navy, Surface Flotilla Engineering Support', 'June 2021 - April 2022', [
-    ['Financial Accountability', 'Approver of record, at Tier 1 level, for stock and inventory valued between £10M and £25M.'],
+    ['Financial Accountability', 'First-line (Tier 1) approver of record, as section head, for stock and inventory valued between £10M and £25M.'],
     ['Compliance Assurance', 'Owned first-line compliance-tool testing across three ship classes from the point of promotion.'],
     ['Lean Delivery', 'Led the logistics workstream of a lean-maintenance pilot: £145,674 of stores handled with zero losses on return, and the highest rate of demands placed on time of any comparable support period that year.'],
     ['Innovation', 'Selected for the 12-week Percy Hobart Fellowship, a Defence innovation programme, and delivered a mentored capability project on consignment-tracking process redesign.'],
@@ -291,6 +328,17 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand }) {
   const privatePath = path.join(privateDir, 'kelroy-james-cv-kpmg-workshop.pdf');
 
   if (!fs.existsSync(privateDir)) fs.mkdirSync(privateDir, { recursive: true });
+
+  if (process.argv[2] === 'variants') {
+    const outDir = path.join(privateDir, 'cv-variants');
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+    for (const [name, variant] of Object.entries(VARIANTS)) {
+      const outPath = path.join(outDir, 'kelroy-james-cv-' + name + '.pdf');
+      await buildDoc({ outPath, includePhone: false, singleWebsiteLink: false, expand: false, variant });
+      console.log('wrote', outPath);
+    }
+    return;
+  }
 
   await buildDoc({ outPath: publicPath, includePhone: false, singleWebsiteLink: false, expand: false });
   console.log('wrote', publicPath);
