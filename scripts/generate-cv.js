@@ -247,6 +247,7 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand, variant })
     ['Loss Reduction', 'Cut financial liability by 80% by closing 15 loss cases through asset verification and investigation.'],
     ['Control Design', 'Redesigned first-line controls using ISO management-systems standards, Lean Six Sigma and the Three Lines Model; recommendations submitted to the policy authority as a proposed policy instruction.'],
     ['Training & Awareness', 'Designed and delivered training on the purpose behind the monthly compliance-monitoring routine, reframing it for the team as governance, risk and compliance work rather than administration; extended into "Empowerment Day," a junior-personnel development programme adopted as recurring departmental practice.'],
+    ['Strategic Research', 'Selected as a 1SL Richmond Fellow at the Royal Navy Strategic Studies Centre (April 2025 - April 2026), contributing to quarterly research themes and red-team exercises on maritime strategy.'],
   ], V.firstLabels));
   jobGap();
 
