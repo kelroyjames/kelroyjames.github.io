@@ -125,17 +125,16 @@
   .signup .inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
   .signup h2{font-family:Spectral,Georgia,serif;font-size:1.3rem;font-weight:700;margin:0 0 6px;color:var(--ink)}
   .signup p{margin:0;color:var(--ink-2);font-size:14.5px;max-width:46ch}
-  .bd-form{display:flex;gap:10px;flex-wrap:wrap}
-  .bd-form input[type="email"]{
-    font-family:"Public Sans",sans-serif;font-size:14.5px;padding:11px 14px;
-    border:1px solid var(--rule);background:var(--surface);color:var(--ink);
-    min-width:240px;
+  .signup .sub-btn{
+    display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+    padding:11px 22px;background:var(--ink);color:var(--surface);border:1px solid var(--ink);text-decoration:none;
   }
-  .bd-form input[type="submit"]{
-    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
-    padding:11px 22px;background:var(--ink);color:var(--surface);border:1px solid var(--ink);cursor:pointer;
-  }
-  .bd-form input[type="submit"]:hover{background:var(--brass);border-color:var(--brass)}
+  .signup .sub-btn:hover{background:var(--brass);border-color:var(--brass)}
+  .signup p a{color:var(--navy)}
+  details.career > summary.group-heading{cursor:pointer;list-style:none}
+  details.career > summary.group-heading::-webkit-details-marker{display:none}
+  details.career > summary.group-heading::after{content:"  +";color:var(--brass)}
+  details.career[open] > summary.group-heading::after{content:"  \2212"}
 
   /* ============ essay list ============ */
   section.list{padding:56px 0}
@@ -265,21 +264,17 @@ main:focus{outline:none}
   <div class="wrap">
     <p class="kicker">Defence · GRC · Supply Chain Assurance</p>
     <h1>Writing</h1>
-    <p class="lede">Eighteen years running naval logistics accounts gave me the practice. These essays are the research: tracing what that practice actually maps onto in supply chain assurance, third-party risk and AI governance, and setting out what I find so other practitioners can test it against their own experience. Each essay says who it is for and links to the evidence behind it.</p>
+    <p class="lede">Eighteen years running naval logistics accounts gave me the practice. These essays are the research: tracing what that practice actually maps onto in supply chain assurance, third-party risk and AI governance, and setting out what I find so other practitioners can test it against their own experience. Each essay links to the evidence behind it.</p>
   </div>
 </header>
 
 <section class="signup">
   <div class="wrap inner">
     <div>
-      <h2>Get new essays by email</h2>
-      <p>One email when a new piece goes up. No spam, unsubscribe any time.</p>
+      <h2>Chain of Custody</h2>
+      <p>My weekly newsletter on practical supply chain assurance: supplier evidence, ownership and hand-offs, and lessons from control failures.</p>
     </div>
-    <form action="https://buttondown.com/api/emails/embed-subscribe/kelroy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/kelroy', 'popupwindow')" class="bd-form">
-      <input type="email" aria-label="Email address" name="email" id="bd-email" placeholder="you@email.com" required>
-      <input type="hidden" value="1" name="embed">
-      <input type="submit" value="Subscribe">
-    </form>
+    <a class="sub-btn" href="https://chainofcustody.beehiiv.com/">Subscribe free</a>
   </div>
 </section>
 
@@ -375,7 +370,8 @@ main:focus{outline:none}
         </div>
       </div>
 
-      <div class="group-heading">Career Evidence &amp; Defence-to-Civilian Translation</div>
+      <details class="career">
+      <summary class="group-heading">Career evidence and defence-to-civilian translation (9 pieces)</summary>
 
       <div class="essay">
         <img loading="lazy" decoding="async" width="480" height="313" class="thumb" src="/images/articles/thumbs/defence-skills-transition.jpg" alt="Recognition Before Retraining">
@@ -383,7 +379,6 @@ main:focus{outline:none}
           <div class="meta"><span class="status">Published</span> · Skills Framework · 1 of 2 · 8 min read</div>
           <h3><a href="/recognition-before-retraining">Recognition Before Retraining</a></h3>
           <p>Why the Pan-Defence Skills Framework is the missing piece in service leaver transition.</p>
-          <p class="audience"><b>For service leavers, resettlement advisers and employers:</b> why recognising the level someone has already worked at should come first.</p>
           <p class="audience"><b>Related evidence:</b> <a href="/verified-not-self-reported">Independently Verified Skills Mapping</a></p>
           <a class="go" href="/recognition-before-retraining">Read the essay →</a>
         </div>
@@ -395,7 +390,6 @@ main:focus{outline:none}
           <div class="meta"><span class="status">Published</span> · Skills Framework · 2 of 2 · 7 min read</div>
           <h3><a href="/talent-should-flow-both-ways">Talent Should Flow Both Ways</a></h3>
           <p>The Pan-Defence Skills Framework as a Defence Industrial Strategy tool.</p>
-          <p class="audience"><b>For Defence and industry workforce leaders:</b> how the skills framework could move people between Service and industry in both directions.</p>
           <p class="audience"><b>Related evidence:</b> <a href="/same-control-two-vocabularies">Same Control, Two Vocabularies</a></p>
           <a class="go" href="/talent-should-flow-both-ways">Read the essay →</a>
         </div>
@@ -407,7 +401,6 @@ main:focus{outline:none}
           <div class="meta"><span class="status">Published</span> · Career · Chief Naval Logistics Officer's Award · 3 min read</div>
           <h3><a href="/dangerous-goods-training-and-a-foundation-degree-at-the-same-time">Dangerous Goods Training and a Foundation Degree, at the Same Time</a></h3>
           <p>Between December 2016 and June 2018, as the sole logistics point of contact for two Royal Navy units at once, I was delivering dangerous goods training to EOD personnel and finishing a Foundation Degree at the same time. The award citation names both.</p>
-          <p class="audience"><b>For hazardous-materials and safety-compliance hiring managers:</b> what delivering dangerous goods training alongside a degree involved.</p>
           <p class="audience"><b>Related evidence:</b> <a href="/case-study-logistics-movement">Building a Compliant Movement Capability</a></p>
           <a class="go" href="/dangerous-goods-training-and-a-foundation-degree-at-the-same-time">Read the essay →</a>
         </div>
@@ -419,7 +412,6 @@ main:focus{outline:none}
           <div class="meta"><span class="status">Published</span> · Career · Herbert Lott Efficiency Award · 3 min read</div>
           <h3><a href="/five-people-every-deployed-platform">Five People, Every Deployed Platform</a></h3>
           <p>In 2019, the five members of the Fleet Stores Coordination Cell received the Herbert Lott Efficiency Award together. What we did at once for the whole deployed Royal Navy, and why the citation credits the team.</p>
-          <p class="audience"><b>For hiring managers assessing team delivery:</b> how five people supported every deployed Royal Navy platform at once.</p>
           <p class="audience"><b>Related evidence:</b> <a href="/case-study-expeditionary-logistics">Protecting a £5M Trial from Failure</a></p>
           <a class="go" href="/five-people-every-deployed-platform">Read the essay →</a>
         </div>
@@ -431,7 +423,6 @@ main:focus{outline:none}
           <div class="meta"><span class="status">Published</span> · Career · Continuous Development · 2 min read</div>
           <h3><a href="/study-shapes-practice-practice-shapes-delivery">Study Shapes Practice, Practice Shapes Delivery</a></h3>
           <p>Study alongside service has repeatedly turned into delivered, checkable outcomes, and the MOD's 2026 attitude survey suggests development is a retention lever the Navy has not yet used.</p>
-          <p class="audience"><b>For hiring managers weighing evidence:</b> what a career of study alongside service produced, and why it matters for retention.</p>
           <p class="audience"><b>Related evidence:</b> <a href="/case-study-financial-control">Identifying £2.4M in Misallocated Funds</a></p>
           <a class="go" href="/study-shapes-practice-practice-shapes-delivery">Read the essay →</a>
         </div>
@@ -443,7 +434,6 @@ main:focus{outline:none}
           <div class="meta"><span class="status">Published</span> · Credentials · University of Lincoln · 4 min read</div>
           <h3><a href="/building-the-tracking-system-fleet-diving-squadron-didnt-have">Building the Tracking System a High-Readiness Unit Didn't Have</a></h3>
           <p>In 2017, as the Logistics Specialist at a high-readiness Royal Navy unit, I completed a Foundation Degree in Logistics Management with the University of Lincoln. The work-based project installed a consignment-tracking system the unit didn't have.</p>
-          <p class="audience"><b>For logistics and compliance leaders:</b> how a unit without consignment tracking built a working system and tested it on a NATO exercise.</p>
           <p class="audience"><b>Related evidence:</b> <a href="/case-study-logistics-movement">Building a Compliant Movement Capability</a></p>
           <a class="go" href="/building-the-tracking-system-fleet-diving-squadron-didnt-have">Read the essay →</a>
         </div>
@@ -455,7 +445,6 @@ main:focus{outline:none}
           <div class="meta"><span class="status">Published</span> · Credentials · Aston University · 5 min read</div>
           <h3><a href="/a-dissertation-about-the-job-i-was-already-doing">A Dissertation About the Job I Was Already Doing</a></h3>
           <p>Between 2017 and 2019, while working in Fleet Operations at Northwood, I completed a BSc (Hons) in Logistics and Operations Management at Aston University. The dissertation was built around the job I was already doing.</p>
-          <p class="audience"><b>For hiring managers assessing analytical ability:</b> a fuel-forecasting dissertation built around live operational work.</p>
           <p class="audience"><b>Related evidence:</b> <a href="/case-study-fleet-inventory-visibility">Building Fleet-Wide Inventory Visibility</a></p>
           <a class="go" href="/a-dissertation-about-the-job-i-was-already-doing">Read the essay →</a>
         </div>
@@ -467,7 +456,6 @@ main:focus{outline:none}
           <div class="meta"><span class="status">Published</span> · Credentials · Defence Logistics · 8 min read</div>
           <h3><a href="/the-course-they-almost-didnt-let-me-on">The Course They Almost Didn't Let Me On</a></h3>
           <p>The Defence Logistics Staff Course is built for high calibre officers of SO2/3 rank. A Petty Officer's case for a place on it, and what five modules against real defence procurement problems actually taught.</p>
-          <p class="audience"><b>For senior rates and staff-course applicants:</b> making the case for a place on a course built for a higher rank.</p>
           <p class="audience"><b>Related evidence:</b> <a href="/case-study-grc-framework">Modernising Assurance Across Inspections</a></p>
           <a class="go" href="/the-course-they-almost-didnt-let-me-on">Read the essay →</a>
         </div>
@@ -479,11 +467,12 @@ main:focus{outline:none}
           <div class="meta"><span class="status">Published</span> · Credentials · Supply Chain Management · 7 min read</div>
           <h3><a href="/supply-chain-management-was-already-a-discipline">Supply Chain Management Was Already a Discipline</a></h3>
           <p>MIT teaches this MicroMasters as an engineering discipline, housed inside the School of Engineering, and the Ministry of Defence has just signed a research partnership with the institution's UK research centre.</p>
-          <p class="audience"><b>For logistics practitioners:</b> why MIT treats supply chain management as engineering-grade, and what the curriculum actually contains.</p>
           <p class="audience"><b>Related evidence:</b> <a href="/case-study-financial-control">Identifying £2.4M in Misallocated Funds</a></p>
           <a class="go" href="/supply-chain-management-was-already-a-discipline">Read the essay →</a>
         </div>
       </div>
+
+      </details>
 
     </div>
   </div>
@@ -505,14 +494,10 @@ main:focus{outline:none}
 <section class="signup">
   <div class="wrap inner">
     <div>
-      <h2>Enjoyed these? Get the next one by email</h2>
-      <p>One email when a new piece goes up. No spam, unsubscribe any time.</p>
+      <h2>Enjoyed these? Subscribe to Chain of Custody</h2>
+      <p>Free, every week. The 25-question <a href="/chain-of-custody-question-bank">supply chain audit question bank</a> is a free download.</p>
     </div>
-    <form action="https://buttondown.com/api/emails/embed-subscribe/kelroy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/kelroy', 'popupwindow')" class="bd-form">
-      <input type="email" aria-label="Email address" name="email" id="bd-email-bottom" placeholder="you@email.com" required>
-      <input type="hidden" value="1" name="embed">
-      <input type="submit" value="Subscribe">
-    </form>
+    <a class="sub-btn" href="https://chainofcustody.beehiiv.com/">Subscribe free</a>
   </div>
 </section>
 
