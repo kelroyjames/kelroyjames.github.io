@@ -374,6 +374,7 @@
   footer{padding:34px 0 56px}
   footer p{font-size:12.5px;color:var(--muted);max-width:74ch;margin:0 0 10px;line-height:1.6}
 </style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="12ac4e5a-0ec4-4c01-b1c4-6ed43553b568"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -397,7 +398,7 @@ main:focus{outline:none}
         <li><a class="lnk" href="/skills-expertise">Skills</a></li>
         <li><a class="lnk" href="/for-recruiters">For Recruiters</a></li>
       </ul>
-      <a class="lnk cta nav-getcv" href="/downloads/kelroy-james-cv-public.pdf" download rel="noopener">Download CV</a>
+      <a data-umami-event="cv-download" class="lnk cta nav-getcv" href="/downloads/kelroy-james-cv-public.pdf" download rel="noopener">Download CV</a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var ul=this.parentElement.querySelector('ul');var open=ul.classList.toggle('open');this.setAttribute('aria-expanded',open);this.textContent=open?'✕':'☰'">☰</button>
     </div>
   </div>
@@ -417,9 +418,9 @@ main:focus{outline:none}
       </dl>
       <a class="credentials-strip" href="/skills-expertise"><span class="cred-full">ISO/IEC 27001:2022, 42001:2023 &amp; 27701:2025 Lead Auditor · MIT MicroMasters, Supply Chain Management &amp; Advanced Network Design (coursework complete) · MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), in progress</span><span class="cred-short">ISO 27001 · 42001 · 27701 Lead Auditor · MIT MicroMasters SCM · MSc (in progress)</span></a>
       <div class="btns" style="margin-top:22px">
-        <a class="btn primary" href="/downloads/kelroy-james-cv-public.pdf" download rel="noopener">Download CV (PDF) · October 2026</a>
+        <a data-umami-event="cv-download" class="btn primary" href="/downloads/kelroy-james-cv-public.pdf" download rel="noopener">Download CV (PDF) · October 2026</a>
         <a class="btn" href="#work">See case studies</a>
-        <a class="btn" href="https://chainofcustody.beehiiv.com/?utm_source=kelroyjames.com&amp;utm_medium=hero&amp;utm_campaign=home">Subscribe to Chain of Custody</a>
+        <a data-umami-event="newsletter-click" class="btn" href="https://chainofcustody.beehiiv.com/?utm_source=kelroyjames.com&amp;utm_medium=hero&amp;utm_campaign=home">Subscribe to Chain of Custody</a>
       </div>
       <p style="margin:14px 0 0;font-size:13px;color:var(--muted)">Need it for a specific role? <a href="#contact" style="color:var(--brass)">Request a tailored CV</a></p>
     </div>
@@ -439,7 +440,7 @@ main:focus{outline:none}
       <p class="nl-sub">Practical supply chain assurance, every week.</p>
       <p class="nl-body">I draw on 18 years in logistics to examine where supplier evidence, ownership and operational controls break down. In Chain of Custody, I share case studies, practical questions and lessons you can apply to your own assurance work.</p>
       <div class="nl-actions">
-        <a class="nl-link" href="https://chainofcustody.beehiiv.com/?utm_source=kelroyjames.com&amp;utm_medium=home-band&amp;utm_campaign=home">Subscribe free</a>
+        <a data-umami-event="newsletter-click" class="nl-link" href="https://chainofcustody.beehiiv.com/?utm_source=kelroyjames.com&amp;utm_medium=home-band&amp;utm_campaign=home">Subscribe free</a>
         <a class="nl-more" href="/newsletter">About the newsletter →</a>
       </div>
     </div>
@@ -633,7 +634,7 @@ main:focus{outline:none}
         <label for="cf-message">Message</label>
         <textarea id="cf-message" name="message" rows="5" required></textarea>
       </div>
-      <p id="contact-form-error" class="form-error" hidden>Something went wrong sending that. Please try again, or email me directly at <a href="mailto:kelroydbjames@gmail.com">kelroydbjames@gmail.com</a>.</p>
+      <p id="contact-form-error" class="form-error" hidden>Something went wrong sending that. Please try again, or email me directly at <a data-umami-event="contact-email" href="mailto:kelroydbjames@gmail.com">kelroydbjames@gmail.com</a>.</p>
       <div class="btns" style="margin-top:6px">
         <button type="submit" class="btn primary">Request a tailored CV / Start a conversation</button>
       </div>
@@ -669,8 +670,8 @@ main:focus{outline:none}
     <div class="contact-secondary">
       <p>Prefer email or LinkedIn instead?</p>
       <div class="btns">
-        <a class="btn" href="mailto:kelroydbjames@gmail.com">Email</a>
-        <a class="btn" href="https://www.linkedin.com/in/kelroy-james">LinkedIn</a>
+        <a data-umami-event="contact-email" class="btn" href="mailto:kelroydbjames@gmail.com">Email</a>
+        <a data-umami-event="linkedin-click" class="btn" href="https://www.linkedin.com/in/kelroy-james">LinkedIn</a>
       </div>
     </div>
   </div>
