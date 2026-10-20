@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A practitioner's reading of the PRA's third-party rules (SS2/21): materiality, monitoring and exit testing, seen from the goods-receipt desk.">
+<meta property="og:title" content="What the PRA's Third-Party Rules Ask of the Receiving Bay">
+<meta property="og:description" content="A practitioner's reading of the PRA's third-party rules (SS2/21): materiality, monitoring and exit testing, seen from the goods-receipt desk.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/pra-third-party-rules-receiving-bay">
+<meta property="og:image" content="https://kelroyjames.com/images/articles/framework-tprm-lifecycle.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What the PRA's Third-Party Rules Ask of the Receiving Bay">
+<meta name="twitter:description" content="A practitioner's reading of the PRA's third-party rules (SS2/21): materiality, monitoring and exit testing, seen from the goods-receipt desk.">
+<meta name="twitter:image" content="https://kelroyjames.com/images/articles/framework-tprm-lifecycle.jpg">
+<link rel="canonical" href="https://kelroyjames.com/pra-third-party-rules-receiving-bay">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#EDEEF0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1119" media="(prefers-color-scheme: dark)">
+<title>What the PRA's Third-Party Rules Ask of the Receiving Bay: Kelroy James</title>
+<link rel="preload" href="/fonts/publicsans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/spectral-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/chain-of-custody.css">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3;
+  --surface:#FFFFFF;
+  --surface-2:#F5F7F9;
+  --ink:#15202B;
+  --ink-2:#3D4C59;
+  --muted:#586573;
+  --rule:#D3DAE1;
+  --rule-soft:#E3E8ED;
+  --accent:#7A5C24;
+  --accent-soft:#F2ECDF;
+  --signal:#855410;
+  --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* reading progress bar */
+.reading-progress{
+  position:fixed;top:0;left:0;right:0;height:4px;
+  background:var(--rule-soft);z-index:100;
+}
+.reading-progress-bar{
+  height:100%;background:var(--accent);width:0%;
+  transition:width .1s ease;
+}
+
+/* top nav */
+.topnav{padding-top:22px;margin-bottom:44px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 22px}
+.topnav-links{display:flex;gap:18px;flex-wrap:wrap}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:var(--muted);
+}
+.topnav a:hover{color:var(--accent)}
+@media(max-width:640px){.topnav a{display:inline-block;padding:11px 0}.topnav-links{gap:4px 18px}} /*tap*/
+
+/* masthead */
+.masthead{
+  background:var(--surface);
+  border-bottom:1px solid var(--rule);
+  padding:0;
+  margin-bottom:52px;
+  position:relative;
+}
+.featured-image{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+@media(min-width:800px){
+  .featured-image{height:420px}
+}
+.masthead-content{
+  padding:48px 0 44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:0 0 20px;
+  text-wrap:balance;
+  max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;
+  font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;
+  padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+/* article body */
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.65rem;font-weight:700;
+  margin:56px 0 18px;
+  letter-spacing:-.012em;
+}
+.prose h3{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.32rem;font-weight:600;
+  margin:42px 0 14px;
+  letter-spacing:-.008em;
+}
+.prose h4{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.12rem;font-weight:600;
+  margin:32px 0 10px;
+}
+.prose h2.sec{font-size:1.12rem;font-weight:600;margin:32px 0 10px;letter-spacing:normal}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose blockquote{
+  border-left:3px solid var(--accent);
+  padding-left:20px;
+  margin:26px 0;
+  font-style:italic;
+  color:var(--ink-2);
+}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+.pullquote{
+  border-left:4px solid var(--accent);
+  padding:24px 28px;margin:32px 0;
+  background:var(--accent-soft);
+  font-family:Spectral,Georgia,serif;
+  font-size:1.28rem;line-height:1.5;
+  font-weight:600;color:var(--ink);
+  font-style:italic;
+}
+.reading-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  margin-top:8px;
+}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+.share-buttons{
+  display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;
+}
+.share-btn{
+  padding:11px 15px;font-size:11.5px;
+  font-family:"IBM Plex Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--surface-2);border:1px solid var(--rule);
+  color:var(--ink-2);text-decoration:none;
+  transition:all .2s ease;cursor:pointer;
+}
+.share-btn:hover{background:var(--accent);color:var(--surface);border-color:var(--accent)}
+
+/* references section */
+.references{
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  margin-top:56px;
+}
+.references h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.45rem;font-weight:700;
+  margin:0 0 20px;
+}
+.references h3,.references h4{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:24px 0 12px;
+  font-weight:500;
+}
+.references ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+}
+.references li{
+  margin-bottom:10px;
+  font-size:14px;
+  line-height:1.6;
+  padding-left:14px;
+  position:relative;
+}
+.references li::before{
+  content:"—";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+
+footer{
+  padding:34px 0 56px;
+  border-top:1px solid var(--rule);
+}
+footer p{
+  font-size:12.5px;color:var(--muted);
+  max-width:70ch;margin:0 0 10px;
+  line-height:1.6;
+}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--surface);color:var(--ink);padding:10px 16px;z-index:300;font:600 14px/1.2 "Public Sans",sans-serif;text-decoration:none;border:2px solid currentColor}
+.skip-link:focus{left:8px;top:8px}
+main:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+:where(img){height:auto}
+.prose .next-step{margin:44px 0 8px;padding:22px 24px;background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--accent)}
+.prose .next-step h2{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 10px}
+.prose .next-step p{margin:0 0 14px;font-size:15px;color:var(--ink-2)}
+.prose .next-step .ns-links{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+.prose .next-step .ns-btn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:11px 16px;border:1px solid var(--rule);background:var(--surface-2);color:var(--ink)}
+.prose .next-step .ns-btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.prose .next-step .ns-btn:hover{border-color:var(--accent);color:var(--accent)}
+.prose .next-step .ns-btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What the PRA's Third-Party Rules Ask of the Receiving Bay",
+  "description": "A practitioner's reading of the PRA's third-party rules (SS2/21): materiality, monitoring and exit testing, seen from the goods-receipt desk.",
+  "url": "https://kelroyjames.com/pra-third-party-rules-receiving-bay",
+  "image": "https://kelroyjames.com/images/articles/framework-tprm-lifecycle.jpg",
+  "author": {"@type": "Person", "name": "Kelroy James", "url": "https://kelroyjames.com/"},
+  "datePublished": "2026-10",
+  "dateModified": "2026-10-20",
+  "publisher": {"@type": "Person", "name": "Kelroy James"}
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="reading-progress" aria-hidden="true">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div class="wrap topnav">
+  <a href="/writing">&#8592; Writing</a>
+  <div class="topnav-links">
+    <a href="/#work">Work</a>
+    <a href="/background">Background</a>
+    <a href="/for-recruiters">For Recruiters</a>
+    <a href="/newsletter">Newsletter</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</div>
+<main id="main" tabindex="-1">
+
+<header class="masthead">
+  <img fetchpriority="high" width="1600" height="900" src="/images/articles/framework-tprm-lifecycle.jpg" alt="A cargo ship in silhouette against an orange sunset" class="featured-image">
+  <div class="wrap masthead-content">
+    <div class="eyebrow">
+      <span class="tick">◆</span>
+      <span>Third-Party Risk</span>
+      <span>PRA SS2/21</span>
+      <span>Assurance</span>
+    </div>
+    <h1>What the PRA's Third-Party Rules Ask of the Receiving Bay</h1>
+    <p class="standfirst">The PRA's supervisory statement on third-party risk expects firms to monitor, test and exit. Physical supply chains make the evidence for each of those at the receiving bay, and the principle carries into banking, with limits.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>October 2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 4 min read</span>
+      <span>📊 839 words</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/pra-third-party-rules-receiving-bay" target="_blank" class="share-btn" rel="noopener noreferrer">Share on LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/pra-third-party-rules-receiving-bay&text=What%20the%20PRA's%20Third-Party%20Rules%20Ask%20of%20the%20Receiving%20Bay" target="_blank" class="share-btn" rel="noopener noreferrer">Share on X<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="mailto:?subject=Article: What the PRA's Third-Party Rules Ask of the Receiving Bay&body=I thought you might find this interesting: https://kelroyjames.com/pra-third-party-rules-receiving-bay" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>Supervisory Statement 2/21 was first published by the Prudential Regulation Authority on 29 March 2021. It expects firms to assess the materiality and risks of all third-party arrangements, whether or not they count as outsourcing (Prudential Regulation Authority, 2024). It applies to UK banks, building societies, insurers and PRA-designated investment firms. Its chapters cover data security, access, audit and information rights, sub-outsourcing, and business continuity and exit plans. That vocabulary belongs to risk and compliance teams. Much of the evidence behind it is made earlier, where goods or services arrive and somebody checks them against the paperwork.</p>
+
+<p>I work at that point. I receive goods, check them against the documents, bring them to account and raise a discrepancy when the two disagree. This piece reads the PRA's expectations from there. It is a practitioner's reading of published material and is not regulatory advice.</p>
+
+<h2 class="sec">A ledger before a policy</h2>
+
+<p>The statement asks firms to judge which arrangements are material or high risk and to apply controls proportionate to that judgement (Prudential Regulation Authority, 2024). Making the judgement needs more than a contract register. It needs to know what each supplier can break, and how many things depend on the same supplier. A list of fifty names can still fail from a single point, which is the argument in my piece on <a href="/supplier-concentration-risk-tier-by-tier">supplier concentration, tier by tier</a>.</p>
+
+<p>The physical equivalent is the account that carries real financial exposure against the one that only looks busy. Classification starts from exposure, and spend is one input to it. In my view a materiality assessment built on spend alone will rank suppliers in the wrong order.</p>
+
+<h2 class="sec">A record someone made</h2>
+
+<p>The statement expects an outsourcing agreement to give the firm the right to monitor the provider's performance on an ongoing basis (Prudential Regulation Authority, 2024). That may be by reference to key performance indicators. A performance report supplied by the provider is a claim. A receiving record made by the firm is evidence. When the quantity, condition or timing of a delivery differs from the order, the discrepancy log shows how the supplier performed without relying on the supplier's account of itself.</p>
+
+<p>The mechanics differ for a bank, whose suppliers mostly provide services, data and cloud capacity. The principle carries over: some part of the monitoring should be a record that someone other than the supplier made. Examples are a reconciliation of invoices to service actually delivered, a restore test that was actually run, and a check on who the supplier's subcontractors are today. The PRA expects controls proportionate to the risk, and a check of this kind costs little against the exposure it covers.</p>
+
+<h2 class="sec">Handover is where exits fail</h2>
+
+<p>The statement expects exit plans to cover stressed exits and to be documented and tested as far as possible (Prudential Regulation Authority, 2024). Its own testing example turns on reconciliation. A firm that keeps backup copies of outsourced data outside the cloud may focus its testing on the ongoing consistency of both sets of data, reconciling them as appropriate. That is a stock-take under another name, two records of the same thing compared on a schedule.</p>
+
+<p>In physical accounts the weak point is the handover between owners, when the record has to match the stock and the new owner inherits the old owner's gaps. I design every control so that a successor can run it without its author in the room. An exit plan deserves the same test: has it been exercised against a real record, or does it exist only as a document?</p>
+
+<h2 class="sec">Where the first line stops</h2>
+
+<p>The first line produces evidence. It does not provide independent oversight. Concentration across suppliers, long subcontracting chains and cyber exposure need second-line challenge, and no receiving check replaces that.</p>
+
+<p>At system level, the critical third parties regime puts designated providers under direct regulatory oversight. The rules took effect on 1 January 2025 but apply only once a provider is designated. HM Treasury designated the first four providers on 10 July 2026, with effect from 13 July (Morrison Foerster, 2026). In my view a firm still has to manage its own dependence on those providers, so the regime adds oversight above the firm and leaves the need for firm-level evidence in place.</p>
+
+<p>In my view a firm with sound first-line evidence gives its second line something to test, and a firm without it gives the second line only assertions. The question I would put to any third-party risk team is where in its process a record is made by someone other than the supplier.</p>
+
+<p><em>The views expressed here are my own and are based on general observations about third-party risk and financial regulation. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</em></p>
+
+<aside class="next-step" aria-labelledby="ns-the-bay">
+<h2 id="ns-the-bay">Related evidence</h2>
+<p>The practical evidence behind this argument is in a related framework.</p>
+<p class="ns-links"><a class="ns-btn primary" href="/third-party-risk-lifecycle">Read: Third-Party Risk, End to End</a> <a class="ns-btn" href="mailto:kelroydbjames@gmail.com?subject=Future%20role%20discussion">Discuss a future role</a></p>
+</aside>
+
+<div class="references">
+<h2>References</h2>
+
+<h2 class="sec">Supervisory material</h2>
+<ul>
+<li>Prudential Regulation Authority, <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2021/march/outsourcing-and-third-party-risk-management-ss"><em>SS2/21: Outsourcing and third party risk management</em></a>, first published 29 March 2021. The November 2024 version, <a href="https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2024/ss221-november-2024-update.pdf">in PDF</a>, is the text read for this piece. A March 2026 version, effective 18 March 2027, follows the PRA's policy on operational incident and third-party reporting.</li>
+</ul>
+
+<h2 class="sec">Critical third parties</h2>
+<ul>
+<li>Morrison Foerster, <a href="https://www.mofo.com/resources/insights/260716-uk-announces-list-of-first-critical-third-parties">"UK Announces List of First Critical Third Parties"</a>, 17 July 2026.</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<aside class="nl-invite" aria-label="Chain of Custody newsletter">
+  <div class="wrap">
+    <div class="nl-invite-inner">
+      <p class="nl-invite-label">Newsletter</p>
+      <p class="nl-invite-text">I explore these questions in Chain of Custody, my weekly newsletter on practical supply chain assurance.</p>
+      <a class="nl-link" href="https://chainofcustody.beehiiv.com/">Subscribe free</a>
+    </div>
+  </div>
+</aside>
+
+</main>
+<footer>
+  <div class="wrap">
+    <p>Kelroy James · 2026 · Content may be freely reproduced for non-commercial use with attribution</p>
+    <p><a href="/newsletter">Chain of Custody newsletter</a></p>
+  </div>
+</footer>
+
+<script>
+// Reading progress indicator
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
