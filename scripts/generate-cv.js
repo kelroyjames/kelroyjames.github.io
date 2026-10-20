@@ -287,7 +287,7 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand, variant })
     'ISO/IEC 27001:2022, 42001:2023 and 27701:2025 Lead Auditor; Fellow of Management Systems Auditing (FellowMSA).',
     'MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA - in progress, April 2025 - March 2027; route to MCIPS.',
     'Lean Six Sigma Green Belt, Star Global College of Workforce Development - February 2026.',
-    'MicroMasters, Supply Chain Management and Advanced Network Design, MIT Center for Transportation & Logistics - coursework complete.',
+    'MicroMasters, Supply Chain Management and Advanced Network Design, MIT Center for Transportation & Logistics - five core courses complete; comprehensive exam pending for full award.',
     'BSc (Hons) Logistics and Operations Management (2:1), Aston University.',
     'Strategic Risk Leadership: Data, Empathy and Assurance, University of Illinois - in progress, from September 2026 (risk discovery, enterprise risk management tools, strategic internal auditing).',
     'Information Assurance Analysis, Johns Hopkins University - February 2026, including AI in industrial control systems security and advanced network security.',
