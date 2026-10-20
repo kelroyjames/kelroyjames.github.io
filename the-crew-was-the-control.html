@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="When a warship loses its crew, the controls the crew performed move to the supply chain and the record. A supply chain assurance reading.">
+<meta property="og:title" content="The Crew Was the Control">
+<meta property="og:description" content="When a warship loses its crew, the controls the crew performed move to the supply chain and the record. A supply chain assurance reading.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/the-crew-was-the-control">
+<meta property="og:image" content="https://kelroyjames.com/images/articles/framework-tprm-lifecycle.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Crew Was the Control">
+<meta name="twitter:description" content="When a warship loses its crew, the controls the crew performed move to the supply chain and the record. A supply chain assurance reading.">
+<meta name="twitter:image" content="https://kelroyjames.com/images/articles/framework-tprm-lifecycle.jpg">
+<link rel="canonical" href="https://kelroyjames.com/the-crew-was-the-control">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#EDEEF0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1119" media="(prefers-color-scheme: dark)">
+<title>The Crew Was the Control: Kelroy James</title>
+<link rel="preload" href="/fonts/publicsans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/spectral-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/chain-of-custody.css">
+<style>
+*{margin:0;box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --ground:#EDF0F3;
+  --surface:#FFFFFF;
+  --surface-2:#F5F7F9;
+  --ink:#15202B;
+  --ink-2:#3D4C59;
+  --muted:#586573;
+  --rule:#D3DAE1;
+  --rule-soft:#E3E8ED;
+  --accent:#7A5C24;
+  --accent-soft:#F2ECDF;
+  --signal:#855410;
+  --signal-soft:#F6EEDF;
+  --shadow:0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.05);
+  --maxw:1080px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F28;
+    --surface-2:#1B252F;
+    --ink:#E5EAEF;
+    --ink-2:#B9C4CE;
+    --muted:#8593A0;
+    --rule:#2A3742;
+    --rule-soft:#222E38;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --signal:#D9A652;
+    --signal-soft:#2E2617;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* reading progress bar */
+.reading-progress{
+  position:fixed;top:0;left:0;right:0;height:4px;
+  background:var(--rule-soft);z-index:100;
+}
+.reading-progress-bar{
+  height:100%;background:var(--accent);width:0%;
+  transition:width .1s ease;
+}
+
+/* top nav */
+.topnav{padding-top:22px;margin-bottom:44px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 22px}
+.topnav-links{display:flex;gap:18px;flex-wrap:wrap}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:var(--muted);
+}
+.topnav a:hover{color:var(--accent)}
+@media(max-width:640px){.topnav a{display:inline-block;padding:11px 0}.topnav-links{gap:4px 18px}} /*tap*/
+
+/* masthead */
+.masthead{
+  background:var(--surface);
+  border-bottom:1px solid var(--rule);
+  padding:0;
+  margin-bottom:52px;
+  position:relative;
+}
+.featured-image{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+@media(min-width:800px){
+  .featured-image{height:420px}
+}
+.masthead-content{
+  padding:48px 0 44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  margin-bottom:24px;
+}
+.eyebrow .tick{color:var(--accent)}
+h1{
+  font-family:Spectral,Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  margin:0 0 20px;
+  text-wrap:balance;
+  max-width:26ch;
+}
+.standfirst{
+  font-family:Spectral,Georgia,serif;
+  font-size:clamp(1.05rem,1.9vw,1.28rem);
+  line-height:1.55;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin:0 0 18px;
+}
+.byline{
+  display:flex;flex-wrap:wrap;gap:10px 28px;
+  padding-top:22px;border-top:1px solid var(--rule-soft);
+  font-size:13.5px;color:var(--muted);
+}
+.byline b{color:var(--ink-2);font-weight:600}
+
+/* article body */
+article{padding:0 0 56px}
+.prose{max-width:66ch}
+.prose h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.65rem;font-weight:700;
+  margin:56px 0 18px;
+  letter-spacing:-.012em;
+}
+.prose h3{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.32rem;font-weight:600;
+  margin:42px 0 14px;
+  letter-spacing:-.008em;
+}
+.prose h4{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.12rem;font-weight:600;
+  margin:32px 0 10px;
+}
+.prose h2.sec{font-size:1.12rem;font-weight:600;margin:32px 0 10px;letter-spacing:normal}
+.prose p{margin:0 0 16px;line-height:1.7}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:26px}
+.prose li{margin-bottom:8px;line-height:1.65}
+.prose blockquote{
+  border-left:3px solid var(--accent);
+  padding-left:20px;
+  margin:26px 0;
+  font-style:italic;
+  color:var(--ink-2);
+}
+.prose em{font-style:italic}
+.prose strong{font-weight:600}
+.pullquote{
+  border-left:4px solid var(--accent);
+  padding:24px 28px;margin:32px 0;
+  background:var(--accent-soft);
+  font-family:Spectral,Georgia,serif;
+  font-size:1.28rem;line-height:1.5;
+  font-weight:600;color:var(--ink);
+  font-style:italic;
+}
+.reading-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+  margin-top:8px;
+}
+.reading-meta span{display:flex;align-items:center;gap:6px}
+.share-buttons{
+  display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;
+}
+.share-btn{
+  padding:11px 15px;font-size:11.5px;
+  font-family:"IBM Plex Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--surface-2);border:1px solid var(--rule);
+  color:var(--ink-2);text-decoration:none;
+  transition:all .2s ease;cursor:pointer;
+}
+.share-btn:hover{background:var(--accent);color:var(--surface);border-color:var(--accent)}
+
+/* references section */
+.references{
+  border-top:1px solid var(--rule);
+  padding-top:32px;
+  margin-top:56px;
+}
+.references h2{
+  font-family:Spectral,Georgia,serif;
+  font-size:1.45rem;font-weight:700;
+  margin:0 0 20px;
+}
+.references h3,.references h4{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:24px 0 12px;
+  font-weight:500;
+}
+.references ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+}
+.references li{
+  margin-bottom:10px;
+  font-size:14px;
+  line-height:1.6;
+  padding-left:14px;
+  position:relative;
+}
+.references li::before{
+  content:"—";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+}
+
+footer{
+  padding:34px 0 56px;
+  border-top:1px solid var(--rule);
+}
+footer p{
+  font-size:12.5px;color:var(--muted);
+  max-width:70ch;margin:0 0 10px;
+  line-height:1.6;
+}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--surface);color:var(--ink);padding:10px 16px;z-index:300;font:600 14px/1.2 "Public Sans",sans-serif;text-decoration:none;border:2px solid currentColor}
+.skip-link:focus{left:8px;top:8px}
+main:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+:where(img){height:auto}
+.prose .next-step{margin:44px 0 8px;padding:22px 24px;background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--accent)}
+.prose .next-step h2{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 10px}
+.prose .next-step p{margin:0 0 14px;font-size:15px;color:var(--ink-2)}
+.prose .next-step .ns-links{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+.prose .next-step .ns-btn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:11px 16px;border:1px solid var(--rule);background:var(--surface-2);color:var(--ink)}
+.prose .next-step .ns-btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.prose .next-step .ns-btn:hover{border-color:var(--accent);color:var(--accent)}
+.prose .next-step .ns-btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Crew Was the Control",
+  "description": "When a warship loses its crew, the controls the crew performed move to the supply chain and the record. A supply chain assurance reading.",
+  "url": "https://kelroyjames.com/the-crew-was-the-control",
+  "image": "https://kelroyjames.com/images/articles/framework-tprm-lifecycle.jpg",
+  "author": {"@type": "Person", "name": "Kelroy James", "url": "https://kelroyjames.com/"},
+  "datePublished": "2026-10",
+  "dateModified": "2026-10-20",
+  "publisher": {"@type": "Person", "name": "Kelroy James"}
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="reading-progress" aria-hidden="true">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div class="wrap topnav">
+  <a href="/writing">&#8592; Writing</a>
+  <div class="topnav-links">
+    <a href="/#work">Work</a>
+    <a href="/background">Background</a>
+    <a href="/for-recruiters">For Recruiters</a>
+    <a href="/newsletter">Newsletter</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</div>
+<main id="main" tabindex="-1">
+
+<header class="masthead">
+  <img fetchpriority="high" width="1600" height="900" src="/images/articles/framework-tprm-lifecycle.jpg" alt="A cargo ship in silhouette against an orange sunset" class="featured-image">
+  <div class="wrap masthead-content">
+    <div class="eyebrow">
+      <span class="tick">◆</span>
+      <span>Uncrewed Maritime Systems</span>
+      <span>Materiel Assurance</span>
+      <span>Supply Chain</span>
+    </div>
+    <h1>The Crew Was the Control</h1>
+    <p class="standfirst">Removing the crew from a warship leaves the controls the crew performed. They move to the supply chain and the record, and the Royal Navy's shift to uncrewed maritime systems makes that a question for materiel assurance.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>October 2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 7 min read</span>
+      <span>📊 1,243 words</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/the-crew-was-the-control" target="_blank" class="share-btn" rel="noopener noreferrer">Share on LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/the-crew-was-the-control&text=The%20Crew%20Was%20the%20Control" target="_blank" class="share-btn" rel="noopener noreferrer">Share on X<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="mailto:?subject=Article: The Crew Was the Control&body=I thought you might find this interesting: https://kelroyjames.com/the-crew-was-the-control" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <div class="prose">
+
+<p>Early in my time as a junior rating in naval supply, I spent a morning checking a consignment in against its paperwork. It is the kind of receipt inspection that fills a storekeeper's first years and attracts no attention when it goes well. One line did not match. The paperwork said one thing and the item in my hands said another, and the difference was small enough to pass any reasonable glance at the record. It was caught because a person was holding the item beside the paperwork and had done the job long enough to feel the mismatch before being able to explain it. Eighteen years later, having run first-line stores and supply chain controls for much of that time, I still think of that morning as a control that no policy wrote down. The person who performed it appeared on no organisation chart as an assurance function.</p>
+
+<p>That morning has been on my mind this month. On <a href="https://www.royalnavy.mod.uk/news/2026/october/01/20261001-ex-repmus-nato-autonomous-wargames">1 October 2026 the Royal Navy reported</a> that Exercise REPMUS, the annual autonomous warfare experiment hosted by the Portuguese Navy, had trialled prototype uncrewed capabilities for its Atlantic Bastion programme. Around 200 UK personnel led a contingent drawn from ten NATO and partner nations. The systems on show described the fleet that is coming. Underwater gliders fed data to larger sentinel gliders. Squads of small and medium uncrewed surface vessels gathered acoustic contact reports. Two autonomous boats, twelve and seventeen metres long, towed sonar and launched other platforms. At <a href="https://ukdefencejournal.org.uk/more-detail-emerges-on-royal-navy-atlantic-bastion/">Undersea Defence Technology 2026</a>, a senior officer described Atlantic Bastion as "probably its biggest innovation transformation program in a generation."</p>
+
+<h2 class="sec">What the crew was doing</h2>
+
+<p>Most commentary on uncrewed maritime systems concerns the sensors, the autonomy, the processing and the data architecture that connects them. The assurance question sits behind all of it, and for the most part it is being answered by omission. A crewed warship carries its own assurance system in the people on board, and almost none of it is documented. The engineer notices a reading drifting before it trips an alarm. The storekeeper rejects a part that arrived with the right label and the wrong provenance. The watchkeeper distrusts an instrument on a particular morning, for reasons that later prove sound. These are controls, exercised continuously. No instruction classifies them as controls, because the people exercising them are understood to be doing their jobs.</p>
+
+<p>An uncrewed platform removes the people and leaves the functions. They move. The assurance a crew performs tacitly passes elsewhere. It goes to a remote operator watching a console, and to a shore maintenance team that may never stand on the hull. It goes to a supplier whose quality process now carries weight that a person on board used to carry. Above all it goes to the documentary record, which has to bear load for the first time. One widely read naval analysis made the point earlier this year: an uncrewed vessel <a href="https://www.navylookout.com/the-royal-navys-future-large-uncrewed-surface-vessels-and-the-cultural-obstacles-to-autonomy/">"has no damage control team."</a> That is usually read as a point about resilience in action. It is also a point about materiel assurance, because damage control includes a continuous, physical, human inspection that catches the condition of a platform before the platform reports it.</p>
+
+<h2 class="sec">Where the control goes</h2>
+
+<p>Consider how a commercial-grade component reaches an uncrewed platform. <a href="https://ukdefencejournal.org.uk/more-detail-emerges-on-royal-navy-atlantic-bastion/">UK Defence Journal's report of the same panel</a> describes earlier and more open engagement with industry, including companies forming consortia to develop solutions. It also notes workarounds, such as commercial-grade systems in some areas to maintain pace. A consortium spreads a platform across many suppliers and sub-tiers. Each contributes parts and software under its own assurance arrangements, and the integration of those arrangements is itself a control that somebody now owns. On a crewed vessel, much integration assurance happens informally, in the judgement of the people who live with the equipment. On an uncrewed one, that judgement has to be designed in, specified, contracted for and evidenced, because nobody aboard supplies it by default.</p>
+
+<p>The civilian frameworks that would carry this are still maturing, and they are maturing as guidance. The Industry Code of Practice for Maritime Autonomous Ship Systems is now at <a href="https://maritimeindustries.org/download_file/view/3921/2588">Version 8, dated November 2024</a>, and it is adopted by contract and convention. The International Maritime Organization's MASS Code is on its way to becoming mandatory but is not there yet. A code that clients require as a basis for negotiation is a real and useful control. It is a different kind of instrument from a regulation. The difference is the gap a storekeeper learns to watch for: the space between what the record says is assured and what someone able to feel a mismatch has actually verified.</p>
+
+<h2 class="sec">More data, less provenance</h2>
+
+<p>The strongest objection is that uncrewed platforms are better instrumented than crewed ones. A modern uncrewed underwater vehicle can generate more condition and performance data on a single sortie than earlier systems were built to handle. The Atlantic Bastion reporting makes that point directly. An engineer could fairly argue that continuous, logged, machine-generated telemetry is a more thorough record than any sailor's memory, and that tacit human judgement should not be romanticised.</p>
+
+<p>The objection is largely right about volume. Volume of data is still a different thing from assurance of data, and the distance between them is the whole of the supply chain assurance discipline. Telemetry reports what a component did. It cannot establish that the component is what the supplier certified, or that it entered service through a controlled and documented route. It cannot show that its readings can be trusted where the incentive to pass is high and a clean record is cheap to fabricate. The more a platform depends on self-reported machine data, the more the provenance of that data matters. Provenance is a physical and documentary chain, and a sensor cannot verify it about itself. More sensing raises the value of independent verification.</p>
+
+<h2 class="sec">A control worth naming</h2>
+
+<p>None of this argues against the uncrewed fleet. It is coming whether or not its assurance model is articulated in time. The Navy has framed it as intended <a href="https://ukdefencejournal.org.uk/more-detail-emerges-on-royal-navy-atlantic-bastion/">"to augment, not replace, crewed platforms."</a> The argument is for naming a control that has operated for as long as there have been crews. Named, it can be rebuilt deliberately. A remote operating model, supplier assurance, sub-tier visibility and a record designed to be independently checkable can reconstruct what a crew did by being present. That only happens if someone first recognises that those functions existed and carried load.</p>
+
+<p>The capability will arrive. The risk is that it arrives with its assurance assumed. The first time anyone looks closely at the record, nobody may be left who could have felt the mismatch. As the fleet adds mass in the water, the organisations that supply, integrate and assure these platforms should list the controls a crew used to perform and say where each one now sits.</p>
+
+<p><em>The views expressed here are my own and are based on general observations about uncrewed maritime systems, materiel assurance and supply chain controls. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing published here reproduces any organisation's internal policy, procedure or assurance output.</em></p>
+
+<aside class="next-step" aria-labelledby="ns-the-crew">
+<h2 id="ns-the-crew">Related evidence</h2>
+<p>The wider argument about assurance arriving after capability is in a related essay.</p>
+<p class="ns-links"><a class="ns-btn primary" href="/a-ships-mind-before-anyone-could-govern-one">Read: A Ship's Mind, Before Anyone Could Govern One</a> <a class="ns-btn" href="/three-lines-of-defence-warships-to-ai">Read: The Three Lines of Defence</a> <a class="ns-btn" href="mailto:kelroydbjames@gmail.com?subject=Future%20role%20discussion">Discuss a future role</a></p>
+</aside>
+
+<div class="references">
+<h2>References</h2>
+
+<h2 class="sec">Royal Navy and defence reporting</h2>
+<ul>
+<li>Royal Navy, <a href="https://www.royalnavy.mod.uk/news/2026/october/01/20261001-ex-repmus-nato-autonomous-wargames">"Uncrewed and autonomous technology tested against underwater threats in NATO exercise (REPMUS 2026)"</a>, 1 October 2026.</li>
+<li>UK Defence Journal, <a href="https://ukdefencejournal.org.uk/more-detail-emerges-on-royal-navy-atlantic-bastion/">"More detail emerges on Royal Navy Atlantic Bastion"</a>, 17 April 2026. Reports a panel at Undersea Defence Technology 2026.</li>
+<li>Navy Lookout, <a href="https://www.navylookout.com/the-royal-navys-future-large-uncrewed-surface-vessels-and-the-cultural-obstacles-to-autonomy/">"The Royal Navy's future Large Uncrewed Surface Vessels and the cultural obstacles to autonomy"</a>.</li>
+</ul>
+
+<h2 class="sec">Maritime autonomy standards</h2>
+<ul>
+<li>Maritime UK and the Society of Maritime Industries, <a href="https://maritimeindustries.org/download_file/view/3921/2588"><em>MASS UK Industry Conduct Principles and Code of Practice, Version 8</em></a>, November 2024.</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<aside class="nl-invite" aria-label="Chain of Custody newsletter">
+  <div class="wrap">
+    <div class="nl-invite-inner">
+      <p class="nl-invite-label">Newsletter</p>
+      <p class="nl-invite-text">I explore these questions in Chain of Custody, my weekly newsletter on practical supply chain assurance.</p>
+      <a class="nl-link" href="https://chainofcustody.beehiiv.com/">Subscribe free</a>
+    </div>
+  </div>
+</aside>
+
+</main>
+<footer>
+  <div class="wrap">
+    <p>Kelroy James · 2026 · Content may be freely reproduced for non-commercial use with attribution</p>
+    <p><a href="/newsletter">Chain of Custody newsletter</a></p>
+  </div>
+</footer>
+
+<script>
+// Reading progress indicator
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
