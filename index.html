@@ -26,11 +26,28 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Kelroy James",
-  "jobTitle": "Supply Chain Manager (Petty Officer), Royal Navy",
-  "description": "Supply chain assurance and operational controls. Eighteen years in Defence logistics.",
-  "sameAs": ["https://www.linkedin.com/in/kelroy-james"]
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://kelroyjames.com/#person",
+      "name": "Kelroy James",
+      "url": "https://kelroyjames.com/",
+      "image": "https://kelroyjames.com/images/kelroy-james-headshot.jpg",
+      "jobTitle": "Supply Chain Manager (Petty Officer), Royal Navy",
+      "description": "Operational risk and supply chain assurance manager with eighteen years in Defence logistics.",
+      "knowsAbout": ["Supply chain assurance", "Third-party risk", "Operational risk", "Governance, risk and compliance", "Control design", "Supplier assurance"],
+      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Aston University"},
+      "sameAs": ["https://www.linkedin.com/in/kelroy-james", "https://chainofcustody.beehiiv.com/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://kelroyjames.com/#website",
+      "url": "https://kelroyjames.com/",
+      "name": "Kelroy James",
+      "inLanguage": "en-GB",
+      "publisher": {"@id": "https://kelroyjames.com/#person"}
+    }
+  ]
 }
 </script>
 <style>
