@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A guide for service leavers: translate Royal Navy logistics roles, training and monthly controls into civilian language, with CV lines you can adapt.">
+<meta property="og:title" content="Service Leaver Translation Guide">
+<meta property="og:description" content="A guide for service leavers: translate Royal Navy logistics roles, training and monthly controls into civilian language, with CV lines you can adapt.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kelroyjames.com/service-leaver-translation-guide">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Service Leaver Translation Guide">
+<meta name="twitter:description" content="A guide for service leavers: translate Royal Navy logistics roles, training and monthly controls into civilian language, with CV lines you can adapt.">
+<link rel="canonical" href="https://kelroyjames.com/service-leaver-translation-guide">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#EDEEF0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1119" media="(prefers-color-scheme: dark)">
+<style>*{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Service Leaver Translation Guide: Kelroy James</title>
+<link rel="preload" href="/fonts/publicsans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/spectral-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+  :root{
+    --ground:#EEF1EF;
+    --surface:#FFFFFF;
+    --surface-2:#F4F7F5;
+    --ink:#16211D;
+    --ink-2:#3C4C46;
+    --muted:#566659;
+    --rule:#D2DAD5;
+    --rule-soft:#E2E8E4;
+    --accent:#7A5C24;
+    --accent-soft:#F2ECDF;
+    --counter:#7A4A1E;
+    --counter-soft:#F3EAE0;
+    --shadow:0 1px 2px rgba(22,33,29,.06), 0 8px 24px rgba(22,33,29,.05);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0D1411;
+      --surface:#151F1A;
+      --surface-2:#1A2621;
+      --ink:#E4EAE6;
+      --ink-2:#B6C4BD;
+      --muted:#84948B;
+      --rule:#293831;
+      --rule-soft:#212E28;
+      --accent:#C9A257;
+      --accent-soft:#2A2317;
+      --counter:#C8935F;
+      --counter-soft:#2A2018;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0D1411;
+    --surface:#151F1A;
+    --surface-2:#1A2621;
+    --ink:#E4EAE6;
+    --ink-2:#B6C4BD;
+    --muted:#84948B;
+    --rule:#293831;
+    --rule-soft:#212E28;
+    --accent:#C9A257;
+    --accent-soft:#2A2317;
+    --counter:#C8935F;
+    --counter-soft:#2A2018;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);color:var(--ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* top nav */
+.topnav{padding-top:22px;margin-bottom:44px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 22px}
+.topnav-links{display:flex;gap:18px;flex-wrap:wrap}
+.topnav a{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;color:var(--muted);
+}
+.topnav a:hover{color:var(--accent)}
+@media(max-width:640px){.topnav a{display:inline-block;padding:11px 0}.topnav-links{gap:4px 18px}} /*tap*/
+
+
+  /* reading progress */
+  .reading-progress{
+    position:fixed;top:0;left:0;right:0;height:4px;
+    background:var(--rule-soft);z-index:100;
+  }
+  .reading-progress-bar{
+    height:100%;background:var(--accent);width:0%;
+    transition:width .1s ease;
+  }
+  .reading-meta{
+    display:flex;gap:20px;flex-wrap:wrap;
+    font-size:13px;color:var(--muted);margin-top:10px;
+  }
+  .share-buttons{
+    display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;
+  }
+  .share-btn{
+    padding:11px 15px;font-size:11.5px;
+    font-family:"IBM Plex Mono",monospace;
+    letter-spacing:.1em;text-transform:uppercase;
+    background:var(--surface-2);border:1px solid var(--rule);
+    color:var(--ink-2);text-decoration:none;
+    transition:all .2s ease;cursor:pointer;
+  }
+  .share-btn:hover{background:var(--accent);color:var(--surface);border-color:var(--accent)}
+
+  header.top{background:var(--surface);border-bottom:1px solid var(--rule);position:relative}
+  .featured-image{width:100%;height:320px;object-fit:cover;display:block}
+  @media(min-width:800px){.featured-image{height:420px}}
+  header.top .wrap{padding:56px 24px 42px;display:flex;flex-direction:column;gap:26px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .eyebrow .tick{color:var(--accent)}
+  h1{
+    font-family:Spectral,Georgia,serif;font-weight:700;
+    font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.015em;
+    margin:0;text-wrap:balance;max-width:18ch;
+  }
+  .standfirst{
+    font-family:Spectral,Georgia,serif;font-size:clamp(1.05rem,1.9vw,1.26rem);
+    line-height:1.55;color:var(--ink-2);max-width:62ch;margin:0;
+  }
+  .byline{
+    display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:20px;
+    border-top:1px solid var(--rule-soft);font-size:13.5px;color:var(--muted);
+  }
+  .byline b{color:var(--ink-2);font-weight:600}
+
+  .intro{padding:50px 0 6px}
+  .intro p{margin:0 0 16px;max-width:66ch}
+  .intro p:last-child{margin-bottom:0}
+  .intro em{font-style:italic;color:var(--ink)}
+
+  .sec-head{
+    display:flex;align-items:baseline;gap:16px;margin:54px 0 8px;
+    padding-bottom:12px;border-bottom:1px solid var(--rule);
+  }
+  .sec-head h2{font-family:Spectral,Georgia,serif;font-size:1.6rem;font-weight:700;margin:0}
+  .sec-head .count{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin-left:auto;white-space:nowrap;
+  }
+  @media(max-width:700px){
+    .sec-head{flex-direction:column;align-items:flex-start;gap:6px}
+    .sec-head .count{margin-left:0;white-space:normal}
+  }
+
+  .colkey{
+    display:none;gap:0;margin-top:18px;
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--muted);
+  }
+  @media(min-width:900px){
+    .colkey{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);gap:0 22px;padding:0 22px 10px}
+  }
+
+  .rows{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .row{
+    background:var(--surface);border:1px solid var(--rule);box-shadow:var(--shadow);
+    display:grid;grid-template-columns:1fr;
+  }
+  @media(min-width:900px){
+    .row{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);}
+  }
+  .cell{padding:20px 22px}
+  @media(min-width:900px){
+    .cell + .cell{border-left:1px solid var(--rule-soft)}
+  }
+  @media(max-width:899px){
+    .cell + .cell{border-top:1px solid var(--rule-soft)}
+  }
+  .cell .mini{
+    display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:9px;
+  }
+  @media(min-width:900px){.cell .mini{display:none}}
+  .term{
+    font-family:Spectral,Georgia,serif;font-size:1.1rem;font-weight:600;
+    margin:0 0 6px;line-height:1.3;
+  }
+  .cell.left .term{color:var(--ink)}
+  .cell.right .term{color:var(--accent)}
+  .cell p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.55}
+  .cell.mid{background:var(--surface-2)}
+  .cell.mid p{color:var(--ink-2);font-size:14.5px}
+  .frames{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
+  .frame{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;padding:3px 8px;
+    background:var(--accent-soft);color:var(--accent);white-space:nowrap;
+  }
+
+  .caution{
+    margin-top:56px;background:var(--surface);border:1px solid var(--rule);
+    border-left:3px solid var(--counter);padding:26px 28px;box-shadow:var(--shadow);
+  }
+  .caution h3{font-family:Spectral,Georgia,serif;font-size:1.22rem;margin:0 0 10px;font-weight:600}
+  .caution p{margin:0 0 12px;font-size:15px;color:var(--ink-2);max-width:66ch;line-height:1.6}
+  .caution p:last-child{margin-bottom:0}
+
+  .how{margin-top:52px}
+  .how-grid{display:grid;grid-template-columns:1fr;gap:24px}
+  @media(min-width:780px){.how-grid{grid-template-columns:repeat(3,1fr);gap:34px}}
+  .step h3{font-family:Spectral,Georgia,serif;font-size:1.06rem;margin:0 0 7px;font-weight:600}
+  .step .n{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
+    color:var(--accent);display:block;margin-bottom:8px;
+  }
+  .step p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+
+  footer{margin-top:60px;padding:40px 0 64px;border-top:1px solid var(--rule)}
+  footer p{font-size:13px;color:var(--muted);line-height:1.65;max-width:72ch;margin:0 0 13px}
+  footer b{color:var(--ink-2);font-weight:600}
+  a{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  @media(prefers-reduced-motion:no-preference){
+    .row{transition:border-color .18s ease}
+    .row:hover{border-color:var(--accent)}
+  }
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--surface);color:var(--ink);padding:10px 16px;z-index:300;font:600 14px/1.2 "Public Sans",sans-serif;text-decoration:none;border:2px solid currentColor}
+.skip-link:focus{left:8px;top:8px}
+main:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+:where(img){height:auto}
+  .next-step{margin:44px 0 8px;padding:22px 24px;background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--accent)}
+  .next-step h2{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 10px}
+  .next-step p{margin:0 0 14px;font-size:15px;color:var(--ink-2)}
+  .next-step .ns-links{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+  .next-step .ns-btn{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:11px 16px;border:1px solid var(--rule);background:var(--surface-2);color:var(--ink)}
+  .next-step .ns-btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+  .next-step .ns-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .next-step .ns-btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+  .part-label{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:46px 0 6px}
+  .part-note{margin:14px 0 0;font-size:14.5px;color:var(--ink-2);max-width:70ch;line-height:1.6}
+  .cvpairs{display:grid;gap:14px;margin:18px 0 0}
+  .cvpair{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px 18px;display:grid;gap:8px}
+  @media(min-width:780px){.cvpair{grid-template-columns:1fr 1fr;gap:24px}}
+  .cvpair .k{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .cvpair p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.55}
+  .cvpair .after p{color:var(--ink)}
+  .method{display:grid;gap:22px;margin-top:20px}
+  @media(min-width:780px){.method{grid-template-columns:repeat(4,1fr);gap:26px}}
+  .cta-box{margin:46px 0 0;padding:24px;background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:6px}
+  .cta-box h3{font-family:Spectral,Georgia,serif;font-size:1.25rem;margin:0 0 10px;font-weight:600}
+  .cta-box p{margin:0 0 14px;font-size:15px;color:var(--ink-2);max-width:66ch}
+  .cta-box .btns{display:flex;flex-wrap:wrap;gap:10px}
+  .cta-box a.b{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:11px 18px;border:1px solid var(--ink);color:var(--ink)}
+  .cta-box a.b.primary{background:var(--ink);color:var(--surface)}
+  @media print{
+    :root{--ground:#fff;--surface:#fff}
+    body{background:#fff}
+    .skip-link,.reading-progress,.topnav,.share-buttons,.cta-box,.next-step,footer .newsletter-link{display:none!important}
+    .row,.cvpair,.step,.caution{break-inside:avoid}
+    a{color:inherit;text-decoration:none}
+    .part-label{break-after:avoid}
+    @page{size:A4;margin:12mm}
+    body{font-size:11px;line-height:1.45}
+    h1{font-size:26px!important}
+    .top{padding-top:0!important}
+    .intro{padding:16px 0 0!important}
+    .intro p,.part-note,.cvpair p,.step p,.caution p{font-size:11px!important;line-height:1.45!important}
+    .cell{padding:8px 10px!important}
+    .cell p{font-size:10.5px!important;line-height:1.4!important;margin:0 0 4px!important}
+    .cell .term{font-size:11.5px!important}
+    .row{margin-bottom:6px!important}
+    .part-label{margin:18px 0 4px!important}
+    .sec-head{margin:6px 0 8px!important}
+    .sec-head h2{font-size:17px!important}
+    .how{margin:14px 0 0!important}
+    .method{gap:10px!important}
+    .reading-meta span:last-child{display:none}
+    .cvpair{padding:8px 10px!important;gap:10px!important}
+    .cvpairs{gap:6px!important}
+    .caution{margin:14px 0 0!important;padding:12px 14px!important}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Service Leaver Translation Guide",
+      "description": "A guide for service leavers: translate Royal Navy logistics roles, training and monthly controls into civilian language, with CV lines you can adapt.",
+      "url": "https://kelroyjames.com/service-leaver-translation-guide",
+      "mainEntityOfPage": "https://kelroyjames.com/service-leaver-translation-guide",
+      "datePublished": "2026-10-21",
+      "author": {"@type": "Person", "name": "Kelroy James", "url": "https://kelroyjames.com/"},
+      "publisher": {"@type": "Person", "name": "Kelroy James", "url": "https://kelroyjames.com/"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kelroyjames.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Frameworks", "item": "https://kelroyjames.com/frameworks"},
+        {"@type": "ListItem", "position": 3, "name": "Service Leaver Translation Guide", "item": "https://kelroyjames.com/service-leaver-translation-guide"}
+      ]
+    }
+  ]
+}
+</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="12ac4e5a-0ec4-4c01-b1c4-6ed43553b568"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="reading-progress" aria-hidden="true">
+  <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<div class="wrap topnav">
+  <a href="/">&#8592; Kelroy James</a>
+  <div class="topnav-links">
+    <a href="/#work">Work</a>
+    <a href="/writing">Writing</a>
+    <a href="/background">Background</a>
+    <a href="/for-recruiters">For Recruiters</a>
+    <a href="/newsletter">Newsletter</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</div>
+<main id="main" tabindex="-1">
+
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow"><span class="tick">◆</span><span>Translation guide</span><span>Service leavers</span><span>Public sources only</span></div>
+    <h1>From the Service to the sector</h1>
+    <p class="standfirst">A step-by-step guide for logistics service leavers: name what you did, find the civilian equivalent and put it on a CV. Built on the Royal Navy's own published role descriptions.</p>
+    <div class="byline">
+      <span><b>Kelroy James</b></span>
+      <span>Royal Navy supply chain, 18 years</span>
+      <span>Role descriptions checked 21 October 2026</span>
+    </div>
+    <div class="reading-meta">
+      <span>📖 9 min read</span>
+      <span>⬇ PDF version below</span>
+    </div>
+    <div class="share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kelroyjames.com/service-leaver-translation-guide" target="_blank" class="share-btn" rel="noopener noreferrer">Share on LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="https://twitter.com/intent/tweet?url=https://kelroyjames.com/service-leaver-translation-guide&text=From%20the%20Service%20to%20the%20Sector" target="_blank" class="share-btn" rel="noopener noreferrer">Share on X<span class="sr-only"> (opens in a new tab)</span></a>
+      <a data-umami-event="share-email" href="mailto:?subject=From the Service to the Sector&body=Check this out: https://kelroyjames.com/service-leaver-translation-guide" class="share-btn">Share via Email</a>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <p>Analysis of the Veterans' Survey 2022 (GOV.UK, April 2025) found that just over half of veterans, 52.5%, had at some point taken a job below the level of their last military role. The figure for Royal Navy veterans was 52.8%, and one of the two most cited reasons was that employers did not recognise transferable military skills. The survey is classed as official statistics in development and its sample is self-selected, so the figures indicate a pattern and are best read as a guide.</p>
+    <p>That reason is a translation problem, and a service leaver can act on it. A title such as Leading Hand, or a task such as a stocktake, means little to a civilian reader, yet the work behind it nearly always has a civilian name. This guide gives a method, a translation of the logistics trades as the Royal Navy publishes them, a translation of the training most logisticians hold, and CV lines to adapt.</p>
+    <p><em>The vocabulary is usually the only thing missing. Work through the method on your own tasks, check the result against a published source, and only then decide what training you need.</em></p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="how">
+    <div class="sec-head"><h2>The method</h2><span class="count">About twenty minutes</span></div>
+    <div class="method">
+      <div class="step"><span class="n">ONE</span><h3>Record what you did</h3><p>Scope, scale and authority, with the consequence of failure. Write the task precisely, for example "checked each consignment against its paperwork before signing, on an account worth £Xm".</p></div>
+      <div class="step"><span class="n">TWO</span><h3>Say what it verified</h3><p>What would have gone wrong if you had skipped the task, and who relied on the result?</p></div>
+      <div class="step"><span class="n">THREE</span><h3>Find the civilian name</h3><p>Match it to the nearest civilian role or control language. A plausible match is enough to start a conversation.</p></div>
+      <div class="step"><span class="n">ONLY THEN</span><h3>Choose the training</h3><p>Close the gaps that are real. Leave the ones that are only gaps in vocabulary.</p></div>
+    </div>
+  </div>
+
+  <p class="part-label">Part 1</p>
+  <div class="sec-head"><h2>Your trade, as the Royal Navy describes it</h2><span class="count">royalnavy.mod.uk</span></div>
+  <div class="colkey"><span>Role, as published</span><span>Civilian reading</span><span>Civilian job titles to search</span></div>
+  <div class="rows">
+    <article class="row">
+      <div class="cell left"><span class="mini">Entry</span><p class="term">Supply Chain Rating</p><p>Manages the delivery of vital stores and equipment to Navy personnel worldwide; trains to NVQ level, with an Intermediate Apprenticeship in Warehousing and Storage.</p></div>
+      <div class="cell mid"><span class="mini">Civilian reading</span><p>First-line inventory and supply control: receiving, issuing and recording stock.</p></div>
+      <div class="cell right"><span class="mini">Search for</span><p>Inventory controller, stock controller, stores or warehouse coordinator, supply chain administrator.</p></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">First promotion</span><p class="term">Leading Hand</p><p>Runs a stores account, and sources and allocates key equipment.</p></div>
+      <div class="cell mid"><span class="mini">Civilian reading (my reading)</span><p>Personal accountability for an account of assets and its record.</p></div>
+      <div class="cell right"><span class="mini">Search for</span><p>Stock control supervisor, inventory team leader, materials coordinator.</p></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">Second promotion</span><p class="term">Petty Officer</p><p>Becomes a line manager, mentoring and supporting others.</p></div>
+      <div class="cell mid"><span class="mini">Civilian reading (my reading)</span><p>Supervising a team and approving the first-line checks it prepares: maker-checker.</p></div>
+      <div class="cell right"><span class="mini">Search for</span><p>Supply chain team leader, section manager, inventory or materials manager.</p></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">Officer</span><p class="term">Logistics Officer</p><p>Leads logistics teams across supply chain, personnel and finance, coordinating the movement of supplies and personnel worldwide. Chartered routes include CILT and CIPD.</p></div>
+      <div class="cell mid"><span class="mini">Civilian reading</span><p>Operational management across supply and finance.</p></div>
+      <div class="cell right"><span class="mini">Search for</span><p>Logistics manager, supply chain manager, operations manager.</p></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">Rating</span><p class="term">Writer</p><p>Responsible for HR, legal matters and financial administration for the ship’s company.</p></div>
+      <div class="cell mid"><span class="mini">Civilian reading</span><p>People administration and pay.</p></div>
+      <div class="cell right"><span class="mini">Search for</span><p>HR adviser, HR administrator, payroll.</p></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">Rating</span><p class="term">Catering Services Rating</p><p>Runs a commercial kitchen, including ordering, receiving and accounting for provisions.</p></div>
+      <div class="cell mid"><span class="mini">Civilian reading</span><p>Commercial food operations and stock accounting.</p></div>
+      <div class="cell right"><span class="mini">Search for</span><p>Kitchen supervisor, catering manager, food safety lead.</p></div>
+    </article>
+
+  </div>
+  <p class="part-note">The left column paraphrases the published careers pages (Logistics profession, Supply Chain Rating, Logistics and Personnel Officer, Writer and Catering Services Rating, read on 21 October 2026). Where the civilian reading says "my reading", it is my interpretation and is not on the careers pages. Civilian titles are search terms, and levels vary by employer. The pages describe the role at entry and at each promotion, so what you did at your own level may be wider.</p>
+
+  <p class="part-label">Part 2</p>
+  <div class="sec-head"><h2>Your training, translated</h2><span class="count">What you were certified to do</span></div>
+  <div class="colkey"><span>What you trained or qualified to do</span><span>What it is called outside</span><span>Where to look</span></div>
+  <div class="rows">
+    <article class="row">
+      <div class="cell left"><span class="mini">Training</span><p class="term">Stocktaking and stock verification</p></div>
+      <div class="cell mid"><span class="mini">Civilian name</span><p>Cycle counting, physical inventory verification, existence and completeness testing, and variance investigation.</p></div>
+      <div class="cell right"><span class="mini">Where to look</span><p>Inventory control and stock accuracy roles; inventory audit support in finance and audit teams.</p></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">Training</span><p class="term">Inventory and stores accounting</p></div>
+      <div class="cell mid"><span class="mini">Civilian name</span><p>Inventory management, materials management, asset register upkeep and reconciliation of physical stock to records.</p></div>
+      <div class="cell right"><span class="mini">Where to look</span><p>Inventory controller, materials planner, supply chain analyst. CILT and CIPS routes for progression.</p></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">Training</span><p class="term">Dangerous goods: air, sea and road</p></div>
+      <div class="cell mid"><span class="mini">Civilian name</span><p>Regulated goods compliance: classifying, packing, marking, documenting and moving hazardous cargo.</p></div>
+      <div class="cell right"><span class="mini">Where to look</span><p>Dangerous goods coordinator, hazmat or DG compliance, freight forwarding DG specialist.</p><div class="frames"><span class="frame">IATA DGR</span><span class="frame">IMDG Code</span><span class="frame">ADR</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">Training</span><p class="term">Movements and customs documentation</p></div>
+      <div class="cell mid"><span class="mini">Civilian name</span><p>Transport planning, freight forwarding, and import and export compliance.</p></div>
+      <div class="cell right"><span class="mini">Where to look</span><p>Freight and transport planner, customs compliance, trade compliance.</p></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">Training</span><p class="term">Supervising contractors and suppliers</p></div>
+      <div class="cell mid"><span class="mini">Civilian name</span><p>Supplier and contractor management, and contract governance.</p></div>
+      <div class="cell right"><span class="mini">Where to look</span><p>Supplier manager, contract manager, third-party risk.</p></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">Training</span><p class="term">Delivering training, for example dangerous goods awareness</p></div>
+      <div class="cell mid"><span class="mini">Civilian name</span><p>Safety-critical training delivery and competence assurance.</p></div>
+      <div class="cell right"><span class="mini">Where to look</span><p>Training coordinator, compliance trainer.</p></div>
+    </article>
+
+  </div>
+  <p class="part-note"><b>A note on dangerous goods.</b> IATA requires recurrent training at least every 24 months for air shipments, and an out-of-date certificate means retaking the initial course. For road transport, the statutory Dangerous Goods Safety Adviser is a separate exam-based qualification, with a certificate valid for five years and specific to transport modes, so holding military dangerous goods training does not make you a DGSA. Employers often want a current certificate from an approved civilian provider for the mode they use. Check the current exam and approval arrangements on GOV.UK before you book anything.</p>
+
+  <p class="part-label">Part 3</p>
+  <div class="sec-head"><h2>What you did every month, translated</h2><span class="count">Generic, public frameworks</span></div>
+  <div class="colkey"><span>On a unit</span><span>What the control does</span><span>What it is called outside</span></div>
+  <div class="rows">
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Monthly checks against a standard question set</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Answers a fixed set of control questions, with evidence, and raises exceptions.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Control self-assessment</p><p>First-line key control testing.</p><div class="frames"><span class="frame">COSO monitoring activities</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Approving checks that others prepared</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>A second person approves the first person’s work.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Maker-checker and supervisory review</p><div class="frames"><span class="frame">COSO control activities</span><span class="frame">ISO/IEC 27001 A.5.3</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Formal handover of an account</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>A certified baseline of the account’s condition at each change of custody.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Custody transfer and handover certification</p><div class="frames"><span class="frame">ISO/IEC 27001 A.5.3</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Preparing for external inspection</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Showing that records match the physical state before independent testers arrive.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Audit readiness and evidence preparation</p><div class="frames"><span class="frame">ISO 19011</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Inspection findings with an owner and a date</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Findings tracked to closure, with evidence of closure.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Issue management and corrective action tracking</p><div class="frames"><span class="frame">ISO 9001 clause 10</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Escalating losses above a limit</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Materiality decides who may clear a loss, and the escalation creates the trail.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Delegated authority and exception reporting</p><div class="frames"><span class="frame">COSO</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Controlled documents and need-to-know</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>The right version reaches the right people, with a record of who holds it.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Document control and information classification</p><div class="frames"><span class="frame">ISO/IEC 27001 A.5.12</span></div></div>
+    </article>
+
+    <article class="row">
+      <div class="cell left"><span class="mini">On a unit</span><p class="term">Keeping output going under disruption</p></div>
+      <div class="cell mid"><span class="mini">The control</span><p>Continuity is tested by real disruption, not only by the plan.</p></div>
+      <div class="cell right"><span class="mini">In assurance</span><p class="term">Operational resilience and business continuity</p><div class="frames"><span class="frame">ISO 22301</span></div></div>
+    </article>
+
+  </div>
+  <p class="part-note">The full fourteen-row version, with the framework references, is in <a href="/same-control-two-vocabularies">Same Control, Two Vocabularies</a>.</p>
+
+  <p class="part-label">Part 4</p>
+  <div class="sec-head"><h2>Say it on your CV</h2><span class="count">Adapt, and keep numbers you can defend</span></div>
+  <div class="cvpairs">
+    <div class="cvpair"><div class="before"><span class="k">Before</span><p>Maintained stores records and prepared the unit for inspection.</p></div><div class="after"><span class="k">After</span><p>Operated first-line inventory controls for an account of £X, reconciling physical stock to records monthly and supporting independent inspection.</p></div></div>
+    <div class="cvpair"><div class="before"><span class="k">Before</span><p>Carried out stocktakes.</p></div><div class="after"><span class="k">After</span><p>Ran cycle counts and investigated variances to root cause, bringing an account from [state] to [state].</p></div></div>
+    <div class="cvpair"><div class="before"><span class="k">Before</span><p>Supervised the section.</p></div><div class="after"><span class="k">After</span><p>Led a team of [n], approving the monthly control checks they prepared and escalating exceptions.</p></div></div>
+    <div class="cvpair"><div class="before"><span class="k">Before</span><p>Dangerous goods awareness.</p></div><div class="after"><span class="k">After</span><p>Held current dangerous goods training for [modes], and delivered awareness training to [n] personnel.</p></div></div>
+    <div class="cvpair"><div class="before"><span class="k">Before</span><p>Handed over the account.</p></div><div class="after"><span class="k">After</span><p>Certified the account’s condition at each change of custody, so ownership passed on a documented baseline.</p></div></div>
+    <div class="cvpair"><div class="before"><span class="k">Before</span><p>Dealt with contractors.</p></div><div class="after"><span class="k">After</span><p>Oversaw external contractors against contract requirements and verified their work to standard.</p></div></div>
+  </div>
+
+  <p class="part-label">Part 5</p>
+  <div class="sec-head"><h2>Other trades</h2><span class="count">First pass</span></div>
+  <p class="part-note">Engineering, warfare and healthcare are mapped in outline in <a href="/verified-not-self-reported">Independently Verified Skills Mapping</a>, and communications, personnel and operations are covered in the worksheet. Those mappings have not been checked by people who held the jobs. If you served in one of those trades, run the method on your own work and send me your best translation lines, and I will credit you only with your permission.</p>
+
+  <p class="part-label">Support</p>
+  <div class="sec-head"><h2>Where to get help</h2><span class="count">Career Transition Partnership</span></div>
+  <p class="part-note">The Career Transition Partnership, delivered by Reed in Partnership, supports leavers with transferable-skills identification, CV development, employment fairs and funded training. In most cases support is available from two years before discharge, so check your own eligibility with them. Use the CTP alongside this guide: do the translation first, then choose the course.</p>
+
+  <div class="caution">
+    <h3>Limits of this guide</h3>
+    <p>It is a translation aid for people describing their own experience. The frameworks named are pointers to where an equivalent control is written down, and they are not claims of conformity. Knowing that a handover certificate is a custody transfer control does not make a logistician an auditor, and the civilian job titles are search terms, not equivalence claims.</p>
+    <p>A caution also applies to the guide itself: naming a control is no evidence that it worked. Keep the figures you can defend in an interview, and say plainly which parts of a role you held.</p>
+  </div>
+
+  <div class="cta-box">
+    <h3>Take it with you</h3>
+    <p>A printable PDF of this guide, with the method and the tables, plus a worksheet to fill in with your own tasks.</p>
+    <div class="btns">
+      <a data-umami-event="guide-download" class="b primary" href="/downloads/service-leaver-translation-guide.pdf" download rel="noopener">Download the guide (PDF)</a>
+      <a data-umami-event="worksheet-download" class="b" href="/downloads/translate-your-own-skills-worksheet.pdf" download rel="noopener">Download the worksheet (PDF)</a>
+      <a data-umami-event="contact-email" class="b" href="mailto:kelroydbjames@gmail.com?subject=My%20trade%20and%20a%20task%20to%20translate&body=Trade%2Frank%3A%20%0A%0AA%20task%20I%20do%20that%20I%20cannot%20name%3A%20">Send me a task to translate</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+<aside class="next-step" aria-labelledby="ns-guide">
+<h2 id="ns-guide">Related evidence</h2>
+<p>The evidence behind this guide is in three related pages and a worksheet.</p>
+<p class="ns-links"><a class="ns-btn primary" href="/same-control-two-vocabularies">Read: Same Control, Two Vocabularies</a> <a class="ns-btn" href="/verified-not-self-reported">Read: Independently Verified Skills Mapping</a> <a class="ns-btn" href="/recognition-before-retraining">Read: Recognition Before Retraining</a> <a data-umami-event="contact-email" class="ns-btn" href="mailto:kelroydbjames@gmail.com?subject=Future%20role%20discussion">Discuss a future role</a></p>
+</aside>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p><b>Sources and scope.</b> Role descriptions paraphrased from the Royal Navy careers pages for the Logistics profession and the Supply Chain Rating, Logistics and Personnel Officer, Writer and Catering Services Rating roles (royalnavy.mod.uk, read 21 October 2026). Veterans' Survey 2022 (GOV.UK, 23 April 2025). IATA Dangerous Goods Regulations recurrent training pages (iata.org). Dangerous Goods Safety Adviser entry, UK regulated professions register (GOV.UK). Career Transition Partnership information from GOV.UK and Reed in Partnership. Civilian framework references are to ISO/IEC 27001:2022, ISO 9001, ISO 19011, ISO 22301, COSO and the IIA Three Lines Model.</p>
+    <p><b>Not official.</b> Views are my own and are based on general observations about logistics assurance and skills recognition. They draw only on published sources and do not represent the position of the Royal Navy, the Ministry of Defence or any organisation with which I work. Nothing here reproduces any organisation's internal policy, procedure or assurance output.</p>
+    <p><a href="/newsletter">Chain of Custody newsletter</a> · <a href="/privacy">Privacy</a></p>
+  </div>
+</footer>
+
+<script>
+// Reading progress indicator
+window.addEventListener('scroll', function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+</body>
+</html>
