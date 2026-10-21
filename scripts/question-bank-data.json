@@ -1,0 +1,498 @@
+{
+  "areas": [
+    {
+      "n": 1,
+      "title": "Knowing who you buy from",
+      "sub": "Supplier onboarding and change",
+      "questions": [
+        {
+          "id": "01",
+          "question": "Can you show who ultimately owns and controls each critical supplier, and when that was last checked?",
+          "evidence": [
+            "A beneficial ownership record for each critical supplier, with its source and date",
+            "Sanctions screening results against the UK, EU and US lists",
+            "A re-screening schedule, and evidence of its last run"
+          ],
+          "warning": "Ownership was captured once at onboarding and never refreshed.",
+          "anchored": [
+            "Home Office guidance on failure to prevent fraud (due diligence)",
+            "OFSI and OFAC sanctions guidance"
+          ]
+        },
+        {
+          "id": "02",
+          "question": "Does each supplier contract give you the right to obtain the documents your own regulators may ask for, including the supplier's export filings?",
+          "evidence": [
+            "A contract clause on record access and retention",
+            "A test request made to a supplier, and the answer it produced",
+            "A list of suppliers whose contracts lack the clause"
+          ],
+          "warning": "The right is assumed, and has never been exercised.",
+          "anchored": [
+            "ISO 9001:2015 clause 8.4.3, Information for external providers",
+            "CBP advance notice on supply chain visibility, September 2026"
+          ]
+        },
+        {
+          "id": "03",
+          "question": "When a supplier changes factory, sub-supplier or ownership, how do you find out, and how quickly?",
+          "evidence": [
+            "A contractual duty on the supplier to notify changes",
+            "A change log comparing the date notified with the date the change took effect",
+            "The re-assessments each change triggered"
+          ],
+          "warning": "Changes are discovered from shipping documents after the goods have moved.",
+          "anchored": [
+            "ISO/IEC 27001:2022 Annex A 5.22, Monitoring, review and change management of supplier services",
+            "ISO 9001:2015 clause 8.4"
+          ]
+        },
+        {
+          "id": "04",
+          "question": "Which suppliers are rated high risk, on what criteria, and does the rating change what you check?",
+          "evidence": [
+            "Documented risk criteria and the resulting supplier tiers",
+            "Evidence that high-risk suppliers receive extra checks, such as audits or sampling",
+            "The date each rating was last reviewed"
+          ],
+          "warning": "Every supplier answers the same questionnaire, whatever its risk.",
+          "anchored": [
+            "Home Office guidance on failure to prevent fraud (risk assessment, proportionate procedures)"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "title": "What the goods are, and where they come from",
+      "sub": "Origin, classification and forced labour",
+      "questions": [
+        {
+          "id": "05",
+          "question": "For a sample of imports, can you trace the declared country of origin back to evidence from the producer?",
+          "evidence": [
+            "Supplier origin declarations covering the goods and dates",
+            "The bill of materials and the processing location for the goods",
+            "A record of your own review before the origin was declared"
+          ],
+          "warning": "Origin is copied from the commercial invoice.",
+          "anchored": [
+            "19 CFR Part 134, country of origin marking",
+            "UK–EU Trade and Cooperation Agreement, rules of origin chapter"
+          ]
+        },
+        {
+          "id": "06",
+          "question": "If you claim preferential duty under a trade agreement, who holds the evidence behind the claim, and could you produce it within days?",
+          "evidence": [
+            "Supplier declarations with their validity periods",
+            "The file supporting any claim made on the importer's knowledge",
+            "Verification requests received, and how they were answered"
+          ],
+          "warning": "Preference is claimed by the broker by default, and nobody holds the evidence.",
+          "anchored": [
+            "UK–EU Trade and Cooperation Agreement, rules of origin chapter"
+          ]
+        },
+        {
+          "id": "07",
+          "question": "Who signs off the tariff classification of a new product, and is the reasoning written down?",
+          "evidence": [
+            "Classification decisions recorded with their rationale",
+            "Advance tariff rulings, where obtained",
+            "A trigger to review the classification when the product specification changes"
+          ],
+          "warning": "The classification is inherited from the supplier's paperwork.",
+          "anchored": [
+            "HMRC Advance Tariff Rulings",
+            "World Customs Organization Harmonized System"
+          ]
+        },
+        {
+          "id": "08",
+          "question": "Can you show that inputs at high risk of forced labour were checked before you bought them?",
+          "evidence": [
+            "Screening of inputs by product and region",
+            "Traceability from the finished product back to its raw materials",
+            "A product-level evidence file for each high-risk product"
+          ],
+          "warning": "There is a policy statement and a supplier code of conduct, and no evidence at product level.",
+          "anchored": [
+            "Modern Slavery Act 2015, section 54",
+            "EU Forced Labour Regulation (EU) 2024/3015, applying from 14 December 2027",
+            "US Uyghur Forced Labor Prevention Act"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Documents that must agree",
+      "sub": "Reconciling the record with the goods",
+      "questions": [
+        {
+          "id": "09",
+          "question": "For a sample of shipments, do the purchase order, commercial invoice, packing list, customs entry and goods receipt agree on quantity, value and description?",
+          "evidence": [
+            "Reconciliation workpapers for the sample",
+            "A log of the differences found",
+            "How, and by whom, each difference was closed"
+          ],
+          "warning": "Each document is checked by a different team, and nobody compares them.",
+          "anchored": [
+            "ISO 9001:2015 clause 8.4.2, Type and extent of control"
+          ]
+        },
+        {
+          "id": "10",
+          "question": "When the price paid differs from the value declared, who corrects the customs declaration?",
+          "evidence": [
+            "A procedure for post-entry amendments and disclosures",
+            "Examples of corrections made after price adjustments, rebates or assists",
+            "A routine report from finance to trade compliance"
+          ],
+          "warning": "Price adjustments are settled in finance and never reach customs.",
+          "anchored": [
+            "HMRC Notice 252, valuation of imported goods",
+            "19 CFR 162.74, prior disclosure"
+          ]
+        },
+        {
+          "id": "11",
+          "question": "Could you produce the full record for any entry from the last five years, including the documents your broker holds?",
+          "evidence": [
+            "A retention policy by record type",
+            "A test retrieval of randomly chosen entries",
+            "The broker's retention and hand-back terms"
+          ],
+          "warning": "The records sit with the broker, and nobody has ever asked for them.",
+          "anchored": [
+            "19 CFR Part 163, recordkeeping",
+            "HMRC customs record-keeping requirements"
+          ]
+        },
+        {
+          "id": "12",
+          "question": "Are goods received checked against what was declared to customs as well as against the purchase order?",
+          "evidence": [
+            "Goods-in checks against the shipping documents",
+            "Discrepancy reports routed to trade compliance",
+            "Examples where a short or substituted delivery led to a corrected declaration"
+          ],
+          "warning": "Short or substituted goods are resolved with the supplier and never with customs.",
+          "anchored": [
+            "19 CFR 162.74, prior disclosure",
+            "ISO 9001:2015 clause 8.6, Release of products and services"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "title": "The hand-offs between teams",
+      "sub": "Where controls go missing",
+      "questions": [
+        {
+          "id": "13",
+          "question": "When procurement onboards a supplier, what does trade compliance receive, and when?",
+          "evidence": [
+            "The workflow showing the hand-off and its timing",
+            "The checklist trade compliance completes",
+            "Examples where trade compliance stopped or changed an onboarding"
+          ],
+          "warning": "Trade compliance learns about a new supplier from its first shipment.",
+          "anchored": [
+            "UK Corporate Governance Code 2024, Provision 29 (material controls)"
+          ]
+        },
+        {
+          "id": "14",
+          "question": "If receiving, finance and customs each record a different quantity, whose figure prevails, and who records why?",
+          "evidence": [
+            "A defined escalation route for mismatches",
+            "Three-way match exceptions and their resolution",
+            "A decision log naming who decided"
+          ],
+          "warning": "The difference is written off without anyone tracing which record was wrong.",
+          "anchored": [
+            "ISO 9001:2015 clause 10.2, Nonconformity and corrective action"
+          ]
+        },
+        {
+          "id": "15",
+          "question": "Who owns each control that spans two teams, by name, and does each team know it?",
+          "evidence": [
+            "A control register with a named owner for every cross-team control",
+            "Owner attestations or sign-offs",
+            "Evidence that both teams were told"
+          ],
+          "warning": "The register lists a team or a system as the owner.",
+          "anchored": [
+            "UK Corporate Governance Code 2024, Provision 29",
+            "ISO/IEC 27001:2022 Annex A 5.2, Information security roles and responsibilities"
+          ]
+        },
+        {
+          "id": "16",
+          "question": "When someone in the chain leaves or changes role, how are their supplier knowledge and open issues handed over?",
+          "evidence": [
+            "Handover records for leavers and movers",
+            "Timely removal of system access",
+            "Open exceptions reassigned to a named person"
+          ],
+          "warning": "Open issues leave with the person.",
+          "anchored": [
+            "ISO/IEC 27001:2022 Annex A 5.11, Return of assets, and 6.5, Responsibilities after termination or change of employment"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Third parties acting for you",
+      "sub": "Brokers, forwarders and intermediaries",
+      "questions": [
+        {
+          "id": "17",
+          "question": "What instructions does your customs broker work from, and when did you last review what it declared in your name?",
+          "evidence": [
+            "Written broker instructions covering classification, valuation, origin and preference",
+            "A periodic review of a sample of the broker's entries",
+            "The findings of that review, and what changed"
+          ],
+          "warning": "The broker's entries are trusted because they have never been questioned.",
+          "anchored": [
+            "19 CFR Part 111, customs brokers",
+            "Home Office guidance on failure to prevent fraud (associated persons)"
+          ]
+        },
+        {
+          "id": "18",
+          "question": "Which agents, forwarders and intermediaries act on your behalf, and are they covered by your fraud and bribery procedures?",
+          "evidence": [
+            "A register of associated persons",
+            "Contract clauses and due diligence for each",
+            "Training or attestations, where proportionate"
+          ],
+          "warning": "The register covers suppliers and leaves out the intermediaries.",
+          "anchored": [
+            "Economic Crime and Corporate Transparency Act 2023, section 199",
+            "Bribery Act 2010, section 7"
+          ]
+        },
+        {
+          "id": "19",
+          "question": "Can you see the evidence your logistics providers hold about where your goods were, and when?",
+          "evidence": [
+            "Access to tracking and custody data, with its retention period",
+            "Exception reports for delays, transfers and seal breaks",
+            "Terms for handing the data back when the contract ends"
+          ],
+          "warning": "Custody data exists only in the provider's system and disappears with the contract.",
+          "anchored": [
+            "ISO 28000:2022, Security and resilience: security management systems"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Data and technology",
+      "sub": "From the triangle: IoT, AI and the record",
+      "questions": [
+        {
+          "id": "20",
+          "question": "Where sensor or tracking data supports a compliance claim, how do you know the device was working and the data unaltered?",
+          "evidence": [
+            "Device calibration and health records",
+            "Integrity controls on the data as it moves",
+            "Logs of who accessed or changed it"
+          ],
+          "warning": "The data is accepted because it came from a machine.",
+          "anchored": [
+            "ISO/IEC 27400:2022, IoT security and privacy",
+            "ISO/IEC 27001:2022 Annex A 8.15, Logging"
+          ]
+        },
+        {
+          "id": "21",
+          "question": "If an AI or automated tool screens suppliers, transactions or documents, who reviews its results, and how are its errors found?",
+          "evidence": [
+            "An inventory of the tools and what each decides",
+            "Records of human review",
+            "Testing for missed cases and false alarms, and a change log for the rules or models"
+          ],
+          "warning": "Nobody can say what the tool has missed.",
+          "anchored": [
+            "ISO/IEC 42001:2023",
+            "EU AI Act, Regulation (EU) 2024/1689, where the use is in scope"
+          ]
+        },
+        {
+          "id": "22",
+          "question": "For records shared on a common platform or ledger, who can write to them, and can a correction be told apart from the original entry?",
+          "evidence": [
+            "Defined write permissions",
+            "An audit trail that keeps the original alongside each amendment",
+            "Reconciliation of the shared record with the source documents"
+          ],
+          "warning": "Corrections overwrite the record and leave no trace.",
+          "anchored": [
+            "ISO/IEC 27001:2022 Annex A 5.33, Protection of records, and 8.15, Logging"
+          ]
+        },
+        {
+          "id": "23",
+          "question": "Where personal data is collected along the chain, from drivers, workers or sensors, are its purpose and retention defined?",
+          "evidence": [
+            "Records of processing that cover supply chain data",
+            "Privacy notices for the people concerned",
+            "A retention schedule, and evidence it is applied"
+          ],
+          "warning": "Location and identity data is kept indefinitely because it might be useful.",
+          "anchored": [
+            "UK GDPR, Article 30",
+            "ISO/IEC 27701"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "title": "Finding and fixing problems",
+      "sub": "Monitoring, correction and disclosure",
+      "questions": [
+        {
+          "id": "24",
+          "question": "Is there one log of the exceptions found across procurement, receiving, finance and customs, and does anyone review it?",
+          "evidence": [
+            "An exceptions log with owner, root cause and closure date",
+            "Minutes of the reviews that considered it",
+            "Trends reported to management"
+          ],
+          "warning": "Each team keeps its own list, and nobody sees the pattern.",
+          "anchored": [
+            "ISO 9001:2015 clause 9.3, Management review",
+            "Home Office guidance on failure to prevent fraud (monitoring and review)"
+          ]
+        },
+        {
+          "id": "25",
+          "question": "When an error is found in past declarations, how is the decision made to correct or disclose it, and how quickly?",
+          "evidence": [
+            "A written correction and disclosure procedure",
+            "Records of each decision and who made it",
+            "Time taken from discovery to correction"
+          ],
+          "warning": "Errors are fixed for future shipments and never corrected for past ones.",
+          "anchored": [
+            "19 CFR 162.74, prior disclosure",
+            "HMRC guidance on correcting errors in import declarations"
+          ]
+        }
+      ]
+    }
+  ],
+  "worksheet": [
+    {
+      "id": "01",
+      "label": "Ultimate ownership checked and current"
+    },
+    {
+      "id": "02",
+      "label": "Contract right to supplier documents"
+    },
+    {
+      "id": "03",
+      "label": "Notice of supplier changes"
+    },
+    {
+      "id": "04",
+      "label": "Risk rating changes the checks"
+    },
+    {
+      "id": "05",
+      "label": "Origin traced to the producer"
+    },
+    {
+      "id": "06",
+      "label": "Evidence behind preference claims"
+    },
+    {
+      "id": "07",
+      "label": "Classification decisions recorded"
+    },
+    {
+      "id": "08",
+      "label": "Forced labour checks on high-risk inputs"
+    },
+    {
+      "id": "09",
+      "label": "Shipment documents reconcile"
+    },
+    {
+      "id": "10",
+      "label": "Price changes reach customs"
+    },
+    {
+      "id": "11",
+      "label": "Five years of records retrievable"
+    },
+    {
+      "id": "12",
+      "label": "Receipts checked against the declaration"
+    },
+    {
+      "id": "13",
+      "label": "Procurement to trade compliance hand-off"
+    },
+    {
+      "id": "14",
+      "label": "Conflicting quantities resolved"
+    },
+    {
+      "id": "15",
+      "label": "Named owners for cross-team controls"
+    },
+    {
+      "id": "16",
+      "label": "Handover when people move"
+    },
+    {
+      "id": "17",
+      "label": "Broker instructions and review"
+    },
+    {
+      "id": "18",
+      "label": "Intermediaries covered by procedures"
+    },
+    {
+      "id": "19",
+      "label": "Access to logistics custody data"
+    },
+    {
+      "id": "20",
+      "label": "Sensor data integrity"
+    },
+    {
+      "id": "21",
+      "label": "Review of AI and automated screening"
+    },
+    {
+      "id": "22",
+      "label": "Write access and audit trail on shared records"
+    },
+    {
+      "id": "23",
+      "label": "Purpose and retention of personal data"
+    },
+    {
+      "id": "24",
+      "label": "One reviewed exceptions log"
+    },
+    {
+      "id": "25",
+      "label": "Correcting and disclosing past errors"
+    }
+  ]
+}
