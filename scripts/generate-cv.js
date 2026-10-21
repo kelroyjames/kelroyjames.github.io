@@ -29,13 +29,13 @@ const VARIANTS = {
   'operational-risk': {
     subtitle: 'Operational Risk & Resilience | Control Design & Testing | First-Line Risk Ownership',
     profile: 'Operational risk and supply chain assurance specialist who designs first-line controls that keep working after the person who built them has moved on. Operates the first line of a governance, assurance and compliance framework, owns the accounts, the loss position and the controls behind them, and finds where operational practice has drifted from the documented process, then closes the gap. Seeking operational risk and resilience roles, bringing Royal Navy logistics experience, ISO Lead Auditor qualifications and an MSc in progress.',
-    skills: 'Operational Risk & Resilience | Control Design & Testing | Loss Investigation & Root-Cause Analysis | First-Line Risk Ownership (1LOD) | Supply Chain Assurance | Customs & Movements Compliance | Lean Six Sigma | Security Management & Governance',
+    skills: 'Operational Risk & Resilience | Control Design & Testing | Control Investigation & Root-Cause Analysis | First-Line Risk Ownership (1LOD) | Supply Chain Assurance | Customs & Movements Compliance | Lean Six Sigma | Security Management & Governance',
     firstLabels: ['Compliance Recovery', 'Loss Reduction'],
   },
   'third-party-assurance': {
     subtitle: 'Third-Party & Supplier Assurance | Supply Chain Assurance | Contractor Oversight',
     profile: 'Supply chain assurance specialist who checks what suppliers and contractors report against the records and the physical goods. Owns the loss position and records for accounts valued between £10M and £25M, and reconciles enterprise data with the prime contractor and Defence Equipment and Support. Seeking supplier and third-party risk roles, bringing Royal Navy logistics experience, ISO Lead Auditor qualifications and an MSc in progress.',
-    skills: 'Third-Party & Contractor Assurance | Supply Chain Assurance | Loss Investigation & Root-Cause Analysis | Customs & Movements Compliance | Control Design & Testing | First-Line Risk Ownership (1LOD) | Operational Risk & Resilience | ISO/IEC 27001, 42001, 27701 Lead Auditor trained',
+    skills: 'Third-Party & Contractor Assurance | Supply Chain Assurance | Control Investigation & Root-Cause Analysis | Customs & Movements Compliance | Control Design & Testing | First-Line Risk Ownership (1LOD) | Operational Risk & Resilience | ISO/IEC 27001, 42001, 27701 Lead Auditor trained',
     firstLabels: ['Financial Control & Third-Party Reconciliation', 'Loss Reduction'],
   },
   'grc': {
@@ -226,7 +226,7 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand, variant })
   doc.moveDown(0.25 * SP);
   doc.font(FONT.bold).fontSize(F.body).fillColor(INK).text('Core Skills: ', { continued: true, align: expand ? 'justify' : 'left' });
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    V.skills || 'Operational Risk & Resilience | Supply Chain Assurance | Control Design & Testing | Third-Party & Contractor Assurance | Loss Investigation & Root-Cause Analysis | Governance, Risk & Compliance (Three Lines Model) | First-Line Risk Ownership (1LOD) | ISO/IEC 27001, 42001, 27701 Lead Auditor',
+    V.skills || 'Operational Risk & Resilience | Supply Chain Assurance | Control Design & Testing | Third-Party & Contractor Assurance | Control Investigation & Root-Cause Analysis | Governance, Risk & Compliance (Three Lines Model) | First-Line Risk Ownership (1LOD) | ISO/IEC 27001, 42001, 27701 Lead Auditor',
     { align: expand ? 'justify' : 'left' }
   );
 
