@@ -284,17 +284,12 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand, variant })
   // Education & Qualifications
   sectionHeading('Education & Qualifications');
   const educationItems = [
-    'ISO/IEC 27001:2022, 42001:2023 and 27701:2025 Lead Auditor training completed; Fellow of Management Systems Auditing (FellowMSA).',
     'MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA - in progress, April 2025 - March 2027; route to MCIPS.',
-    'Lean Six Sigma Green Belt, Star Global College of Workforce Development - February 2026.',
-    'MicroMasters, Supply Chain Management and Advanced Network Design, MIT Center for Transportation & Logistics - five core courses and advanced elective complete; comprehensive exam pending for full award.',
     'BSc (Hons) Logistics and Operations Management (2:1), Aston University.',
-    'Strategic Risk Leadership: Data, Empathy and Assurance, University of Illinois - in progress, from September 2026 (risk discovery, enterprise risk management tools, strategic internal auditing).',
-    'Information Assurance Analysis, Johns Hopkins University - February 2026, including AI in industrial control systems security and advanced network security.',
-    'Cyber Security: Technology and Governance, Royal Holloway, University of London - February 2026, including security management and governance.',
-    'Developing Industrial Internet of Things, University of Colorado Boulder - December 2025, including industrial IoT markets and security.',
-    'MicroMasters, Predictive Analytics using Python, University of Edinburgh - 2021 - 2022.',
-    'Professional Award in Cyber Security & OSINT, Abertay University - Distinction; CompTIA PenTest+ (valid to 2027).',
+    'MicroMasters, Supply Chain Management and Advanced Network Design, MIT Center for Transportation & Logistics - five core courses and advanced elective complete; comprehensive exam pending for full award.',
+    'ISO/IEC 27001:2022, 42001:2023 and 27701:2025 Lead Auditor training completed; Fellow of Management Systems Auditing (FellowMSA).',
+    'Lean Six Sigma Green Belt, Star Global College of Workforce Development - February 2026.',
+    'Further study: Strategic Risk Leadership, University of Illinois (in progress, from September 2026); Information Assurance Analysis, Johns Hopkins University (February 2026); Cyber Security: Technology and Governance, Royal Holloway, University of London (February 2026); Developing Industrial Internet of Things, University of Colorado Boulder (December 2025); MicroMasters, Predictive Analytics using Python, University of Edinburgh (2021 - 2022); Professional Award in Cyber Security & OSINT, Abertay University (Distinction); CompTIA PenTest+ (valid to 2027).',
   ];
   // KPMG copy only: pulled from the fuller "continuing education" list on
   // skills-expertise.html -- the two entries most likely to resonate with
