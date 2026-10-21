@@ -200,7 +200,7 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand, variant })
   doc.font(FONT.bold).fontSize(F.name).fillColor(INK).text('KELROY JAMES');
   doc.moveDown(0.15 * SP);
   doc.font(FONT.reg).fontSize(F.subtitle).fillColor(BLUE)
-    .text(V.subtitle || 'Operational Risk & Supply Chain Assurance | Third-Party & Supplier Assurance | Governance, Risk & Compliance');
+    .text(V.subtitle || 'Supply Chain Assurance & Operational Risk | First-Line Governance, Assurance & Compliance');
   doc.moveDown(0.15 * SP);
   doc.font(FONT.reg).fontSize(F.contact).fillColor(MUTED)
     .text(includePhone
@@ -220,13 +220,13 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand, variant })
   doc.moveDown(0.25 * SP);
   doc.font(FONT.bold).fontSize(F.body).fillColor(INK).text('Selected result: ', { continued: true, align: expand ? 'justify' : 'left' });
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    V.selected || 'identified and corrected £2.4M of misallocated expenditure on an adjacent account, tracing it to an unowned interface between the contractual and accounting routes.',
+    V.selected || 'identified £2.4M of misallocated expenditure on an adjacent account, tracing it to an unowned interface between the contractual and accounting routes, and passed the findings to finance for correction.',
     { align: expand ? 'justify' : 'left' }
   );
   doc.moveDown(0.25 * SP);
   doc.font(FONT.bold).fontSize(F.body).fillColor(INK).text('Core Skills: ', { continued: true, align: expand ? 'justify' : 'left' });
   doc.font(FONT.reg).fontSize(F.body).fillColor(INK).text(
-    V.skills || 'Operational Risk & Resilience | Supply Chain Assurance | Control Design & Testing | Third-Party & Contractor Assurance | Control Investigation & Root-Cause Analysis | Governance, Risk & Compliance (Three Lines Model) | First-Line Risk Ownership (1LOD) | ISO/IEC 27001, 42001, 27701 Lead Auditor',
+    V.skills || 'Operational Risk & Resilience | Supply Chain Assurance | Control Design & Testing | Third-Party & Contractor Assurance | Control Investigation & Root-Cause Analysis | Governance, Risk & Compliance (Three Lines Model) | First-Line Risk Ownership (1LOD) | ISO/IEC 27001, 42001, 27701 Lead Auditor trained',
     { align: expand ? 'justify' : 'left' }
   );
 
@@ -284,7 +284,7 @@ function buildDoc({ outPath, includePhone, singleWebsiteLink, expand, variant })
   // Education & Qualifications
   sectionHeading('Education & Qualifications');
   const educationItems = [
-    'ISO/IEC 27001:2022, 42001:2023 and 27701:2025 Lead Auditor; Fellow of Management Systems Auditing (FellowMSA).',
+    'ISO/IEC 27001:2022, 42001:2023 and 27701:2025 Lead Auditor training completed; Fellow of Management Systems Auditing (FellowMSA).',
     'MSc Supply Chain and Logistics Management (Defence Logistics Staff Course), University of Lincoln, accredited by CIPS, CILT and IEMA - in progress, April 2025 - March 2027; route to MCIPS.',
     'Lean Six Sigma Green Belt, Star Global College of Workforce Development - February 2026.',
     'MicroMasters, Supply Chain Management and Advanced Network Design, MIT Center for Transportation & Logistics - five core courses and advanced elective complete; comprehensive exam pending for full award.',
